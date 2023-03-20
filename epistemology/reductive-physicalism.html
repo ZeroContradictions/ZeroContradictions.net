@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-03-20 Mon 06:07 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Case For Reductive Physicalism</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="description" content="Mary's Room, p-Zombies, the Swampman, etc do not refute reductive physicalism. The Hard Problem of Consciousness is not a real problem." />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="../blog-posts.css" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html#epistemology"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Case For Reductive Physicalism</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#intro">1. What Reductive Physicalism Is</a></li>
+<li><a href="#properties-of-universe">2. Properties Of The Universe</a></li>
+<li><a href="#language-semantics">3. Language Semantics: Why We Don&rsquo;t Describe People And Human Brains With Chemistry And Physics</a>
+<ul>
+<li><a href="#physicalism-analogies">3.1. Two Analogies For Understanding Physicalism</a></li>
+</ul>
+</li>
+<li><a href="#cannot-defy-brain-structures">4. People Cannot Defy Their Brain Structures</a>
+<ul>
+<li><a href="#MFW-performative-contradiction">4.1. Why It Is A Performative Contradiction To Believe That People Can Have Free Will Independent Of Their Materialistic Minds</a></li>
+</ul>
+</li>
+<li><a href="#important-facts">5. Important Facts, Concepts, And Theorems That Are Neither Axioms Nor Performative Contradictions</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-intro" class="outline-2">
+<h2 id="intro"><span class="section-number-2">1.</span> What Reductive Physicalism Is</h2>
+<div class="outline-text-2" id="text-intro">
+<p>
+<a href="https://www.philosophybasics.com/branch_physicalism.html">https://www.philosophybasics.com/branch_physicalism.html</a>
+</p>
+
+<p>
+i
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach">Gödel, Escher, Bach: an Eternal Golden Braid (GEB)</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=16W7c0mb-rE">Kurzgesagt: Emergence</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-properties-of-universe" class="outline-2">
+<h2 id="properties-of-universe"><span class="section-number-2">2.</span> Properties Of The Universe</h2>
+<div class="outline-text-2" id="text-properties-of-universe">
+<ul class="org-ul">
+<li>Three dimensions and the flow of time</li>
+<li>Endless Expansion</li>
+<li>Atoms, subatomic particles, and sub-subatomic particles</li>
+<li>The properties of all the elements and their chemical structures</li>
+<li>The universal application of mathematics</li>
+<li>Energy</li>
+<li>Strong Nuclear Force</li>
+<li>Weak Nuclear Force</li>
+<li>Gravity</li>
+<li>Electromagnetic force</li>
+<li>Normal Force</li>
+<li>Friction</li>
+<li>Other physical forces</li>
+<li>Life and biology</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-language-semantics" class="outline-2">
+<h2 id="language-semantics"><span class="section-number-2">3.</span> Language Semantics: Why We Don&rsquo;t Describe People And Human Brains With Chemistry And Physics</h2>
+<div class="outline-text-2" id="text-language-semantics">
+<p>
+To help support my position, I am going to use analogies to computer science since there are so many convenient metaphors and similarities between how brains and computers both work.
+</p>
+
+<p>
+Although in theory it is possible to use pure physics to describe how human brains work, it&rsquo;s not very useful for explaining to a general audience about how brains work because in order to do so, you would need a flawless unabridged understanding of how the entire brain works. That&rsquo;s one reason why we don&rsquo;t study psychology or cognitive science in terms of physics. We do <b>not</b> have a complete comprehension of how the brain works.
+</p>
+
+<p>
+The other reason is that it would take too much effort to describe psychology and cognitive science in terms of physics. If an analogy is to do be made it&rsquo;s comparable to machine code versus higher-level human-friendly programming languages. No productive programmer would ever program only with machine code because it would take too much effort and complex understanding just to produce so little. Instead, we use human-friendly programming languages because they use words, syntax, APIs, etc. that make more sense to us humans, even though it is unquestionably helpful to understand at least some low-level details about how everything is running.
+</p>
+
+<p>
+Thus, when we study psychology, cognitive science, and the like, we need to use terms that make sense to you and me, which is why those fields have a lot of terminology and descriptions to learn (which are actually simplified translations of what the physics is doing). And of course, every psychologist and cognitive scientist learns at least some basics about the structures and functions of neurons, as well as the regions of the brain.
+</p>
+
+<p>
+But as humans learn more and more about how the brain works, we will eventually be able to create more precise physical descriptions of what the processes described psychology and cognitive science are metaphysically. This is a huge milestone because just as computer science students learn what happens behind the scenes in a high-level programming language, we would be learning what happens behind the scenes in our high-level languages: psychology and cognitive science.
+</p>
+
+<p>
+Another important connection to be made is that when humans made computers, machine code was invented first because computers had to be invented from the ground up. But that was too difficult to use and understand, so we invented higher-level languages like Fortran, C, Java, Python, etc.
+</p>
+
+<p>
+The reverse is happening with neuroscience. When humans finally tried understanding how their own brains work, they were not building machinery from the ground up. Instead, the machinery was already there, and over millions of years of evolution, it had evolved to be so complex, that there was no possible, sensible way to study the neurological machinery with machine code (physics that is) straight out of the gate. So in order to understand their brains, they had to use high-level language to understand it, first beginning with mapping the different regions of the brain (figured out by finding what stops working when each individual region fails/breaks/is_removed), and proceeding with trying to understand it at biological, biomolecular, chemical, and eventually physical means.
+</p>
+
+<p>
+Humans will never be able to fully understand how the brain works until they acquire exhaustive physical, chemical, and biomolecular explanations for what is happening behinds the scenes. But even after we reach an understanding of those processes, we will still probably continue to use human-friendly descriptions for what is happening. And if someone who wants a deeper understanding wants to dig deeper, they can always learn the physics and chemistry behind those processes (after they are discovered and understood of course).
+</p>
+
+<p>
+Machine code is to physics and chemistry, as programming languages are to psychology, cognitive science, and simplified to intermediate neuroscience. And advanced neuroscience would be akin to lower-level machine code.
+</p>
+
+<p>
+So when opponents of physicalism say that &ldquo;the brain cannot simply be understood as neurons firing around in different ways. It&rsquo;s so much more than that.&rdquo;, I personally interpret this as &ldquo;a computer cannot simply be understood as just merely being 1s and 0s. It&rsquo;s so much more than that.&rdquo; Of course you wouldn&rsquo;t learn and understand how a computer works starting straight from machine code (1s and 0s, not even assembly code), but you would understand that what&rsquo;s going on behind the scenes is fundamentally 1s and 0s. Same thing with human brains. We understand that they are essentially and metaphysically composed of neurons, but when we start learning and understanding it with basic understandings, we start from our higher-level explanations, which are farther removed from the basics.
+</p>
+
+<p>
+The hard problem of consciousness is irrelevant so long as experience always supervenes on observable physiological states. &ldquo;Mary is seeing red&rdquo; can be reduced to &ldquo;Mary&rsquo;s visual cortex is firing in a pattern which indicates a red experience.&rdquo; The same predictions can be made from either, so they can be said, by that standard, to mean the same thing.
+</p>
+</div>
+
+<div id="outline-container-physicalism-analogies" class="outline-3">
+<h3 id="physicalism-analogies"><span class="section-number-3">3.1.</span> Two Analogies For Understanding Physicalism</h3>
+<div class="outline-text-3" id="text-physicalism-analogies">
+<p>
+Computer science is to neuroscience, as high-level programming languages are to psychology and cognitive science, as assembly is to chemistry, as machine code is to physics.
+</p>
+
+<p>
+Neuroscience is to computer science, as psychology and cognitive science are to high-level programming languages, as physics and chemistry are to machine code and assembly.
+</p>
+
+<p>
+Seeing the brain as something different just because it&rsquo;s able to do all these amazing things is an illusion. Reality does not make a distinction. When it examines all the physical things are to see, it only sees just a bunch of neurons, regardless of what those neurons are capable of doing.
+</p>
+
+<p>
+Question: Where do Fallacy of Composition / Fallacy of Division come into play?
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-cannot-defy-brain-structures" class="outline-2">
+<h2 id="cannot-defy-brain-structures"><span class="section-number-2">4.</span> People Cannot Defy Their Brain Structures</h2>
+<div class="outline-text-2" id="text-cannot-defy-brain-structures">
+<p>
+Some more evidence in favor of materialism is how people cannot defy the physical structure of their brains. If Materialism was not true, then:
+</p>
+<ul class="org-ul">
+<li>People with dementia would be able to defy their dementia, but they cannot defy their dementia because the build up and clutter of bad proteins within their brains prevents them from doing what they used to do.</li>
+<li>People with OCD would be able to defy their compulsions by just merely wanting to defy them, but they cannot because their brains force them to do the compulsions.</li>
+<li>People with ADHD would be able to resist their impulsive behavior, concentrate, and have high volition, but this is not the case. However, they might be able to take a medication that affects their brain structures to be able to do what they want to do.</li>
+<li>People with brain damage to some area of the brain would still be able to function the same as they did before they got their brain damage.</li>
+<li>People with early onset gender dysphoria would be able to choose to never have gender dysphoric feelings, but they cannot control how they feel about their bodies.</li>
+<li>People with severe autism could choose to not be affected by their autism, but they don&rsquo;t (because they can&rsquo;t). If it was that easy to resist autism, then it wouldn&rsquo;t be a problem.</li>
+<li>People with suicidal thoughts who are unable to die by suicide even though they&rsquo;ve thought about it for years, since the brain evolved to be terrified of death and unable to kill itself.</li>
+<li>Et Cetera</li>
+</ul>
+<p>
+It is practical in most cases to <a href="./free-will.html#determinism-and-mathematics">pretend that Metaphysical Free Will exists</a> when living one&rsquo;s day-to-day life, even though it doesn&rsquo;t exist in any form at all. However, this pretending should <i>not</i> be done in all cases, especially ones where the problems to be solved require acknowledging the non-existence of MFW, such as resolving abnormalities in neurological structures that cause the mental disorders mentioned in the list above.
+</p>
+
+<p>
+There&rsquo;s a physicalist explanation to acquired savants too. <a href="https://en.wikipedia.org/wiki/Savant_syndrome#Acquired_cases">If you read the biographies of all the people on this list</a>, they always acquired their savant abilities after something <i>physical</i> happened to them (e.g. a concussion, a brain injury, a lightning strike, etc). In most cases, similar incidents would damage people&rsquo;s brains and reduce their mental abilities altogether, but in rarer cases like the ones listed, the incidents cause them to acquire special abilities instead. Whatever it is, it&rsquo;s probably just a rewiring of the neurons.
+</p>
+</div>
+
+<div id="outline-container-MFW-performative-contradiction" class="outline-3">
+<h3 id="MFW-performative-contradiction"><span class="section-number-3">4.1.</span> Why It Is A Performative Contradiction To Believe That People Can Have Free Will Independent Of Their Materialistic Minds</h3>
+<div class="outline-text-3" id="text-MFW-performative-contradiction">
+<p>
+The arguments in the previous section have proven that we live in a deterministic, materialistic universe. Since we live in a materialistic, deterministic universe, we therefore know what it&rsquo;s like to live in one. This raises the question: What would it be like to live in a non-deterministic universe? We can imagine what that might be like in the following thought experiment:
+</p>
+<ul class="org-ul">
+<li>By definition, a non-deterministic universe would mean that life would have Metaphysical Free Will. This means that agents are able to make decisions independently of external factors.</li>
+</ul>
+
+<p>
+The arguments in the previous section have proven that we live in a deterministic, materialistic universe. Since we live in a materialistic, deterministic universe, we therefore know what it&rsquo;s like to live in one. This raises the question: What would it be like to live in a non-deterministic universe? We can imagine what that might be like in the following thought experiment:
+</p>
+<ul class="org-ul">
+<li>By definition, a non-deterministic universe would mean that life would have Metaphysical Free Will. This means that agents are able to make decisions independently of external factors. That also includes that people are not bound to how its DNA or brains are programmed.</li>
+<li>By definition, a non-deterministic universe would mean that life would have Metaphysical Free Will. This means that agents are able to make decisions independently of external factors.</li>
+<li>Free will only concerns life. In our materialistic universe, life is matter that was created with the perfect mix of chemicals to be able to do all its functions and behave the way it does.</li>
+<li>In other words, in an idealist universe, it would be possible to create something that behaves just as life does in our universe, but is able to also not behave as life does in our universe.</li>
+<li>Such a concept would probably be deserving of a different word other than &ldquo;life&rdquo;. Perhaps it could be &ldquo;frilife&rdquo; (meaning free-will life).</li>
+<li>The minds of frilife would be able to act independently of how they are materialistically structured. No matter what structure frilife has, it would be acting independently according to how some supernatural force desires.</li>
+<li>The structure of the minds of frilife would therefore be completely useless and irrelevant (aside from sending signals throughout the body necessary to maintain basic life-sustaining processes like temperature regulation, pain, senses, et cetera).</li>
+<li>But there&rsquo;s a problem. If frilife was acting independently to how its mind is structured, what else would it be controlled by to decide how it should behave and function? Another materialistic structure? No, because the premises rule that out as impossible. And there is no other known force in the universe that could make it act independently of its structure. In conclusion (according to everything we currently know obviously), frilife is impossible because it creates a metaphysical contradiction.</li>
+<li>By trying to imagine such as a concept, the text above collectively forms a Proof by Contradiction.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-important-facts" class="outline-2">
+<h2 id="important-facts"><span class="section-number-2">5.</span> Important Facts, Concepts, And Theorems That Are Neither Axioms Nor Performative Contradictions</h2>
+<div class="outline-text-2" id="text-important-facts">
+<ul class="org-ul">
+<li>Primacy of Existence Before Consciousness (proven given that being conscious implies that one exists, and consciousness does not affect existence)</li>
+<li>Validity of Empiricism and the Senses: If someone claims that their senses cannot give their information about reality, but then shows that their senses do in fact give them information about reality, this is a proof by contradiction.</li>
+<li>Cause-and-Effect and Causality (Concept)</li>
+<li>Definitions of Free Will</li>
+<li>Proof of Hard Determinism / Compatibilist Determinism (depends on how they are defined)</li>
+<li>The Law of Evolution (Theorem)
+<ul class="org-ul">
+<li>The Egoism and the Intrinsic Selfishness of Life (Corollary)</li>
+<li>The Validity of the Senses (Corollary)</li>
+<li>The Validity of Reason (Corollary)</li>
+<li>Theory of Emotions (Corollaries of Evolution): Emotions drive people to do things that reproduce, the moral accounting system, the transfer of energy from father to mother to children, etc.</li>
+<li>The Relationship Between Emotions and Reproduction (Corollary): Emotions drive people to do things that cause them to reproduce.</li>
+<li>The Moral Accounting System (Corollary): Emotions keep track of what we owe and are owed within our personal relationships.</li>
+<li>The Flow of Energy (Corollary): Energy is Transferred from Father to Mother to Children.</li>
+<li>Understanding Why Humans Rule the World (Corollary): High Reasoning and Intelligence, Volition, Sophisticated Methods of Communication, Emotions, Optimal Limbs, Sufficiently Long Lifespan</li>
+</ul></li>
+<li>Value Comes From Sentient Beings Lemma</li>
+<li>Moral Relativism, the Moral Relativism Theorem, other ways for proving Moral Relativism and Subjectivism (for building necessary coherence).</li>
+<li>Validity of Reason, other ways for proving the validity of reason (for building necessary coherence).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Zero Contradictions</p>
+<p class="date">Created: 2023-03-20 Mon 06:07</p>
+</div>
+</body>
+</html>

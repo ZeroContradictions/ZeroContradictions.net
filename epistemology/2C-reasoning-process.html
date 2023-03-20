@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-01-31 Tue 19:18 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Philosophical Foundations Part 2C: The Reasoning Process And Scientific Method</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="description" content="[Make this the same as home page keywords description]" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="../blog-posts.css" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html#foundations"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Philosophical Foundations Part 2C: The Reasoning Process And Scientific Method</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#definitions">1. Definitions</a></li>
+<li><a href="#intro">2. Introduction To The Reasoning Process</a></li>
+<li><a href="#the-scientific-method">3. The Scientific Method</a></li>
+<li><a href="#reasoning-process">4. The Reasoning Process</a>
+<ul>
+<li><a href="#sense-perception">4.1. Step #1: Sense Perception</a>
+<ul>
+<li><a href="#extended-tetris-effect">4.1.1. The Extended Tetris Effect</a></li>
+</ul>
+</li>
+<li><a href="#concept-formation">4.2. Step #2: Concept Formation</a></li>
+<li><a href="#assertion-of-premises">4.3. Step #3: Assertion Of Premises</a></li>
+<li><a href="#logic-subprocess">4.4. Step #4: The Logic Sub-Process</a>
+<ul>
+<li><a href="#deductive-logic">4.4.1. Deductive Logic</a></li>
+<li><a href="#deductive-logic">4.4.2. Inductive Logic</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#explanatory-and-predictive-power">5. The Importance Of Explanatory And Predictive Power</a></li>
+<li><a href="#list-of-RSs">6. List Of Reasoning Skills</a>
+<ul>
+<li><a href="#input-reasoning skills">6.1. Knowledge Input</a></li>
+<li><a href="#input-reasoning skills">6.2. Reasoning Process</a></li>
+</ul>
+</li>
+<li><a href="#transferring-intuition-to-consciousness">7. Transferring Thoughts From The Subconsciousness Into The Consciousness</a>
+<ul>
+<li><a href="#mantras-for-using-reason">7.1. Mantras To Say To Invoke Using Reasoning Skills In Appropriate Situations</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-definitions" class="outline-2">
+<h2 id="definitions"><span class="section-number-2">1.</span> Definitions</h2>
+<div class="outline-text-2" id="text-definitions">
+<dl class="org-dl">
+<dt>Scientific Method</dt><dd>i</dd>
+<dt>Reasoning Process</dt><dd>i</dd>
+<dt>Science</dt><dd>i</dd>
+<dt>Religion</dt><dd>i</dd>
+<dt>Inductive Reasoning</dt><dd>i</dd>
+<dt>Deductive Reasoning</dt><dd>i</dd>
+<dt>Inductive Logic</dt><dd>The same thing as <b>Inductive Reasoning</b>, but with better wording in my opinion.</dd>
+<dt>Deductive Logic</dt><dd>The same thing as <b>Deductive Reasoning</b>, but with better wording in my opinion.</dd>
+<dt>Necessary Condition</dt><dd>i</dd>
+<dt>Sufficient Condition</dt><dd>i</dd>
+<dt>Argument</dt><dd>A list of premises followed by a conclusion.
+<ul class="org-ul">
+<li>Note: Statements are either true or false, and arguments are either valid or invalid. Arguments cannot be true or false.</li>
+</ul></dd>
+<dt>Deductive Argument</dt><dd>An argument that guarantees its conclusions based on its premises.</dd>
+<dt>Valid Argument</dt><dd>An argument such that any substitution of values for variables in it which makes the premises true also makes the conclusion true.
+<ul class="org-ul">
+<li>In other words, for a valid argument, it is impossible for the premises to be true while the conclusion is false.</li>
+<li>Validity is the relationship between the premises and the conclusion.</li>
+</ul></dd>
+<dt>Sound Argument</dt><dd>A valid argument with true premises.
+<ul class="org-ul">
+<li>It is possible for arguments to be valid, and have false premises.</li>
+<li>In order to determine if an argument&rsquo;s premises are true, you have to do some research.</li>
+<li>If any assignments of values to variables appearing in the argument makes all the premises true, then it also makes the conclusion true.</li>
+</ul></dd>
+<dt>Ampliative Argument</dt><dd>An argument that makes its conclusions probable, but not certain based on their premises. Arguably, every ampliative argument has to use at least some degree of faith.</dd>
+<dt>Strong Argument</dt><dd>i</dd>
+<dt>Weak Argument</dt><dd>i</dd>
+<dt>Cogent Argument</dt><dd>A type of <b>Strong Argument</b> where I.</dd>
+<dt>Uncogent Argument</dt><dd>I. Uncogent Arguments can be either <b>Strong Arguments</b> or <b>Weak Arguments</b>.</dd>
+<dt>Faith</dt><dd>i</dd>
+</dl>
+
+<dl class="org-dl">
+<dt>(Blind) Faith</dt><dd>High confidence in a belief, based on a perceived degree of warrant <i>without using reason</i>; the suspension of skepticism without using reason.</dd>
+<dt>Rationalized</dt><dd>Attempting to make something seem reasonable, even if actually isn&rsquo;t. This term can be applied to both metaphysics/epistemology or ethical / political philosophy, and while it can always describe someone&rsquo;s attitude or actions towards facts about the former, it seems less applicable to apply it to people&rsquo;s ethical or political opinions since morality is subjective, and most of the time when people do rationalize their ethical or political opinions, it is typically done in an attempt to justify oneself according to the Law of Egoism, in which case self-justification or self-rationalization may be better terms.</dd>
+<dt>Self-Justification / Self-Rationalization</dt><dd>The psychological tendency for life to justify its own existence, beliefs, and actions for the sake of its own continued existence, even if their beliefs are wrong, their existence doesn&rsquo;t accomplish anything meaningful according to rational beings, and their actions work against post-moral cooperation ethics.</dd>
+<dt>Qualitative Reasoning</dt><dd>i</dd>
+<dt>Quantitative Reasoning</dt><dd>i</dd>
+<dt>Bayes Theorem</dt><dd>i</dd>
+<dt>Correlation</dt><dd>i</dd>
+<dt>Causation</dt><dd>i</dd>
+<dt>Type I Error</dt><dd>i</dd>
+<dt>Type II Error</dt><dd>i</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-intro" class="outline-2">
+<h2 id="intro"><span class="section-number-2">2.</span> Introduction To The Reasoning Process</h2>
+<div class="outline-text-2" id="text-intro">
+<p>
+Most people tend to be more familiar with the Scientific Method than the Reasoning Process since the former is taught in public schools whereas the latter is generally not. That being said, the Scientific Method isn&rsquo;t too different from the Reasoning Process since it&rsquo;s really just the Reasoning Process, but broken up into more steps and geared towards writing scientific research papers. I will state the Scientific Method process here for reference, and then I will explain each of the steps of the Reasoning Process from an epistemological point of view and show how it&rsquo;s a more general process of thinking. The Reasoning Process is the only valid source of Sensory Knowledge, knowledge of reality.
+</p>
+</div>
+</div>
+
+<div id="outline-container-the-scientific-method" class="outline-2">
+<h2 id="the-scientific-method"><span class="section-number-2">3.</span> The Scientific Method</h2>
+<div class="outline-text-2" id="text-the-scientific-method">
+<ol class="org-ol">
+<li>Define a question</li>
+<li>Gather information and resources (observe)</li>
+<li>Form an explanatory hypothesis</li>
+<li>Test the hypothesis by performing an experiment and collecting data in a reproducible manner</li>
+<li>Analyze the data</li>
+<li>Interpret the data and draw conclusions that serve as a starting point for a new hypothesis</li>
+<li>Publish results</li>
+<li>Retest (frequently done by other scientists)</li>
+</ol>
+
+<p>
+The last step of the Scientific Method is to repeat the steps, because a proper Theory of Knowledge must be inductive, not deductive. Although forms of deductive reasoning exist, people are always bound to make mistakes. Making mistakes and understanding how they were made is part of learning, which is why the steps of both the Scientific Method and Reasoning Process are done recursively in a repetitive cycle.
+</p>
+
+<p>
+See: <a href="https://en.wikipedia.org/wiki/Scientific_method">https://en.wikipedia.org/wiki/Scientific_method</a>
+</p>
+
+<p>
+At some point, all Laws of Nature were originally deemed hypotheses. Until that point, people continue building confidence in them, or they lose confidence in it until they reject it.
+</p>
+
+<p>
+In every field, one learns the basics, and if they go further then they can start to do research in that field. But there are some fields where doing the basics is truly much different than what an expert would be expected to do:
+</p>
+<ul class="org-ul">
+<li>In mathematics, one first learns how to do math, then they move on to proving theorems and the like.</li>
+<li>In computer science, one first learns how to program, then they move on to learning what computers are doing and how they work.</li>
+<li>In linguistics, one first learns languages and the basics, then they start doing research and maybe they might even document languages.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-reasoning-process" class="outline-2">
+<h2 id="reasoning-process"><span class="section-number-2">4.</span> The Reasoning Process</h2>
+<div class="outline-text-2" id="text-reasoning-process">
+</div>
+<div id="outline-container-sense-perception" class="outline-3">
+<h3 id="sense-perception"><span class="section-number-3">4.1.</span> Step #1: Sense Perception</h3>
+<div class="outline-text-3" id="text-sense-perception">
+<ul class="org-ul">
+<li>Sense perception is the input data to the reasoning process. Without sense perception, it would be impossible to use reason because there would be no data to reason about.</li>
+</ul>
+
+<ul class="org-ul">
+<li>Since reason can never be separated from sense perception, then there is no meaningful such thing as &ldquo;pure reason&rdquo;.</li>
+<li>Although the senses can be invalid, this is not a problem as long as the mind can use reason to correct the sense-perception errors.</li>
+<li>Fallibilism: the principle that propositions concerning empirical knowledge can be accepted even though they cannot be proved with certainty.
+<ul class="org-ul">
+<li>Is Fallibilism a valid concept?</li>
+</ul></li>
+</ul>
+
+<p>
+Note: We have to establish reasoning first before we can later proclaim that the senses are the input for the reasoning process.<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>
+</p>
+</div>
+
+<div id="outline-container-extended-tetris-effect" class="outline-4">
+<h4 id="extended-tetris-effect"><span class="section-number-4">4.1.1.</span> The Extended Tetris Effect</h4>
+<div class="outline-text-4" id="text-extended-tetris-effect">
+<p>
+The Extended Tetris Effect and implications demonstrate the importance of ensuring that we are being fed high-quality sensory input for reasoning to good conclusions. <a href="../epistemology/extended-tetris-effect.html">My Blog Post On The Tetris Effect</a>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-concept-formation" class="outline-3">
+<h3 id="concept-formation"><span class="section-number-3">4.2.</span> Step #2: Concept Formation</h3>
+<div class="outline-text-3" id="text-concept-formation">
+<p>
+<a href="./1A-knowledge-and-concepts.html#nature-of-concepts">The Nature of Concepts</a>
+</p>
+
+<p>
+When false concepts are formed, this typically occurs when sensory knowledge is gained through invalid means like emotion or faith, through intellectual dishonesty (rationalizing instead of reasoning), or due to the nature of being a subject with limited knowledge and sensory experience of reality. When the latter happens, the resulting reasoning, ideas, actions can be considered rational since they follow the reasoning process, even if the results are contrary to reality, since reason has the potential to be wrong.
+</p>
+</div>
+</div>
+
+<div id="outline-container-assertion-of-premises" class="outline-3">
+<h3 id="assertion-of-premises"><span class="section-number-3">4.3.</span> Step #3: Assertion Of Premises</h3>
+<div class="outline-text-3" id="text-assertion-of-premises">
+<p>
+A rational mind doesn&rsquo;t merely recognize facts, it knows which facts are relevant.
+</p>
+<ul class="org-ul">
+<li>The assertion of premises in an argument is the assertion of propositions that the arguer believes to be true, according to their model of experience.</li>
+<li>Although emotions and instincts can also count as knowledge in their appropriate contexts, they can only establish true propositions.</li>
+<li>Reason is different from emotions and instincts because reason also includes the logic step, which is when logical operations are performed to connect propositions together and form new propositions (conclusions) that are true if all the premises are true.</li>
+<li>That being said, any propositions generated by emotions and instincts would be included in Step #3 of the reasoning process, following Step #2 concept formation and before Step #4 logic.</li>
+</ul>
+
+<p>
+See: <a href="./2D-reasoning-skills.html#premises-properties">Properties of Premises</a> for more details on premises.
+</p>
+
+<p>
+The reason why assertion of premises is a separate step from concept formation are that:
+</p>
+<ol class="org-ol">
+<li>Premises can be real or hypothetical,</li>
+<li>Stating premises should be the first step of making an argument,</li>
+<li>Implicit premises should be stated explicitly,</li>
+<li>Not all the concepts that one knows will be used in an argument, so stating the concepts that are relevant to an argument as premises helps other people understand arguments more clearly.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-logic-subprocess" class="outline-3">
+<h3 id="logic-subprocess"><span class="section-number-3">4.4.</span> Step #4: The Logic Sub-Process</h3>
+<div class="outline-text-3" id="text-logic-subprocess">
+<p>
+Since premises and logic can both be used to make conclusions, those conclusions are frequently used as premises for other later arguments. So although the Logic step of the Reasoning Process is being listed here as following the Assertion of Premises step, there is often the case that there is a lot of back and forth between these two steps, but it&rsquo;s typically done subconsciously.
+</p>
+
+<p>
+<a href="https://plato.stanford.edu/entries/frame-problem/">The Frame Problem</a>
+</p>
+
+<p>
+Rationality is more than just the absence of contradiction. It is conformance to norms of judgment/decision-making.
+</p>
+
+<p>
+See: <a href="https://en.wikipedia.org/wiki/Reason#Logical_reasoning_methods_and_argumentation">https://en.wikipedia.org/wiki/Reason#Logical_reasoning_methods_and_argumentation</a>
+</p>
+
+<p>
+See: <a href="https://en.wikipedia.org/wiki/Inductive_reasoning#Comparison_with_deductive_reasoning">https://en.wikipedia.org/wiki/Inductive_reasoning#Comparison_with_deductive_reasoning</a>
+</p>
+
+
+<div id="orgb689168" class="figure">
+<p><img src="https://commons.wikimedia.org/wiki/File:Argument_terminology_used_in_logic_(en).svg" alt="File:Argument_terminology_used_in_logic_(en).svg" class="org-svg" />
+</p>
+<p><span class="figure-number">Figure 1: </span>IIIIIIIIIIIIIII</p>
+</div>
+</div>
+
+<div id="outline-container-deductive-logic" class="outline-4">
+<h4 id="deductive-logic"><span class="section-number-4">4.4.1.</span> Deductive Logic</h4>
+<div class="outline-text-4" id="text-deductive-logic">
+<p>
+The more common term is &ldquo;Deductive Reasoning&rdquo;, but I prefer to say &ldquo;Deductive Logic&rdquo; instead because Induction and Deduction both occur within the Logic sub-process of the Reasoning Process.
+</p>
+
+<p>
+It&rsquo;s possible to make mistakes when doing deductive logic. You might have to try several attempts before you finally prove what you&rsquo;re trying to prove, the <i>process</i> for proving things is inductive.
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="syllogisms"></a>Syllogisms<br />
+<div class="outline-text-5" id="text-syllogisms">
+<p>
+Syllogisms are a form of deductive logic where &#x2026;.
+</p>
+
+<p>
+An example of a syllogism is:
+</p>
+<blockquote>
+<p>
+All men are mortal.
+</p>
+
+<p>
+Socrates is a man.
+</p>
+
+<p>
+Therefore Socrates is mortal.
+</p>
+</blockquote>
+</div>
+</li>
+
+<li><a id="sound-and-unsound-arguments"></a>Sound and Unsound Arguments<br />
+<div class="outline-text-5" id="text-sound-and-unsound-arguments">
+<dl class="org-dl">
+<dt>Valid Argument</dt><dd>An argument such that any substitution of values for variables in it which makes the premises true also makes the conclusion true.
+<ul class="org-ul">
+<li>In other words, for a valid argument, it is impossible for the premises to be true while the conclusion is false.</li>
+<li>Validity is the relationship between the premises and the conclusion.</li>
+</ul></dd>
+<dt>Sound Argument</dt><dd>A valid argument with true premises.
+<ul class="org-ul">
+<li>It is possible for arguments to be valid, and have false premises.</li>
+<li>In order to determine if an argument&rsquo;s premises are true, you have to do some research.</li>
+<li>If any assignments of values to variables appearing in the argument makes all the premises true, then it also makes the conclusion true.</li>
+</ul></dd>
+</dl>
+<p>
+i
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-deductive-logic" class="outline-4">
+<h4 id="deductive-logic"><span class="section-number-4">4.4.2.</span> Inductive Logic</h4>
+<div class="outline-text-4" id="text-deductive-logic">
+<p>
+The more common term is &ldquo;Inductive Reasoning&rdquo;, but I prefer to say &ldquo;Inductive Logic&rdquo; instead for the same reason why I prefer &ldquo;Deductive Logic&rdquo; over &ldquo;Deductive Reasoning&rdquo;.
+</p>
+
+<p>
+<a href="./2D-reasoning-skills.html#statistical-RSs">Statistical Reasoning Skills</a>
+</p>
+
+<p>
+See: <a href="./2E-razors-heuristics-proofs.html#philosophical-razors">Philosophical Razors</a> for more details on the Philosophical Razors.
+</p>
+
+<p>
+See: <a href="./2E-razors-heuristics-proofs.html#heuristics-for-problem-solving">Heuristics for Problem-Solving</a> for more details on heuristics oriented towards problem solving.
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=1rUCyg4Ppso">The Puzzle of Grue - Wireless Philosophy</a>
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="cogent-and-uncogent-arguments"></a>Cogent and Uncogent Arguments<br />
+<div class="outline-text-5" id="text-cogent-and-uncogent-arguments">
+<p>
+i
+</p>
+
+
+<p>
+Examples of Ampliative Arguments:
+</p>
+<ul class="org-ul">
+<li>Although we know that it took evolution X billion years to go from eukaryotic life and multi-cellular life, and we also know that it only took X hundred million years after the Earth and the solar system formed for life to appear on Earth, this is technically only an ampliative argument that the first life on a celestial body is probably easier to form than multi-cellular life.</li>
+<li>The reason why is this argument is not a deductive one is because it doesn&rsquo;t account for the possibility that this timeline actually could have been an extremely unlikely event that just happened instead of one of the more likely events.</li>
+<li>If we wanted to know the truth regarding which event truly takes less time to occur than the other, we would need more data points.</li>
+<li>But for now, our knowledge of life on Earth as the only known, proven life to exist in the universe is the only data point in our dataset.</li>
+<li>That said, and based on our current evidence (everything that we currently know about the universe), the most reasonable and most statistically likely proposition to conclude until we have more data is that it takes significantly longer for unicellular life to become multi-cellular life, than it does for single-celled life to ever appear in the first place.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-explanatory-and-predictive-power" class="outline-2">
+<h2 id="explanatory-and-predictive-power"><span class="section-number-2">5.</span> The Importance Of Explanatory And Predictive Power</h2>
+<div class="outline-text-2" id="text-explanatory-and-predictive-power">
+<p>
+i
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=UBVV8pch1dM">The Science of Thinking - Veritasium</a>: Veritasium explains why how our brains automate much of thinking by using heuristics and long-term memory, and the key to getting smarter is to force ourselves to think through things methodically step-by-step.
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=5eW6Eagr9XA">The Four Things it Takes to be an Expert</a>: Veritasium explains how repeated attempts, a valid consistent environment, timely feedback, and pushing the boundaries of our skills are the four steps to becoming an expert at anything.
+</p>
+</div>
+</div>
+
+<div id="outline-container-list-of-RSs" class="outline-2">
+<h2 id="list-of-RSs"><span class="section-number-2">6.</span> List Of Reasoning Skills</h2>
+<div class="outline-text-2" id="text-list-of-RSs">
+</div>
+<div id="outline-container-input-reasoning skills" class="outline-3">
+<h3 id="input-reasoning skills"><span class="section-number-3">6.1.</span> Knowledge Input</h3>
+<div class="outline-text-3" id="text-input-reasoning skills">
+<ul class="org-ul">
+<li>Habitually Doing Research Before Attempting A Task.</li>
+<li>Understanding That All Knowledge Is Ultimately Based On A Model Of Experience And The Limits Of Knowledge.</li>
+<li>Questioning Everything, Including The Foundation And Underlying Assumptions Of One&rsquo;s Own Knowledge.</li>
+<li>Being Able To Detect And Identify Bias, Acknowledge Multiple Perspectives, And Think Without Biases.</li>
+<li>Recognizing Unstated Assumptions And Values.</li>
+<li>Understanding The Importance Of Evidence And The Levels Of Certainty/Skepticism.</li>
+<li>Updating One&rsquo;s Belief System On The Basis Of Wider Experience.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-input-reasoning skills" class="outline-3">
+<h3 id="input-reasoning skills"><span class="section-number-3">6.2.</span> Reasoning Process</h3>
+<div class="outline-text-3" id="text-input-reasoning skills">
+<ul class="org-ul">
+<li>Gathering and connecting pertinent (relevant) information.</li>
+<li>Recognizing problems, and finding workable means for solving those problems.</li>
+<li>Habitually figuring out the best way to do/learn/use something before doing that action.</li>
+<li>Habitually starting with the basics and definitions before moving forward on a topic.
+<ul class="org-ul">
+<li>This is especially important because if the knowledge is wrong, then so is everything based upon it.</li>
+</ul></li>
+<li>Understanding the relevant methods, techniques, and criteria for making judgments.</li>
+<li>Understanding the reasoning process, its limits, and how it can be wrong.</li>
+<li>Understanding formal logic and inference rules.</li>
+<li>Understanding fallacies and how to avoid making them.</li>
+<li>Being able to transfer intuition (subconscious reasoning) into conscious thinking.</li>
+<li>Knowing how to form warranted conclusions, valid arguments, and sound arguments.</li>
+<li>Testing the conclusions and generalizations at which one arrives.</li>
+<li>Distinguishing between &rsquo;rational&rsquo; and &rsquo;rationalized&rsquo;, AKA the &ldquo;reason&rdquo; versus &ldquo;justification&rdquo; dichotomy.</li>
+<li>Using and comprehending language with accuracy, clarity, and discernment.</li>
+</ul>
+<p>
+In sum, Critical Thinking is &ldquo;a persistent effort to examine any belief or supposed form of knowledge in the light of the evidence that supports or refutes it and the further conclusions to which it tends.&rdquo; -Edward Glaser (1941)
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-transferring-intuition-to-consciousness" class="outline-2">
+<h2 id="transferring-intuition-to-consciousness"><span class="section-number-2">7.</span> Transferring Thoughts From The Subconsciousness Into The Consciousness</h2>
+<div class="outline-text-2" id="text-transferring-intuition-to-consciousness">
+<p>
+i
+</p>
+
+<p>
+People would ask questions so much more often if they knew and mastered the reasoning skill for accessing the thoughts formed by one&rsquo;s own intuition.
+</p>
+</div>
+
+<div id="outline-container-mantras-for-using-reason" class="outline-3">
+<h3 id="mantras-for-using-reason"><span class="section-number-3">7.1.</span> Mantras To Say To Invoke Using Reasoning Skills In Appropriate Situations</h3>
+<div class="outline-text-3" id="text-mantras-for-using-reason">
+<p>
+Note: These are situations where not saying the mantras would cause the person thinking/saying the mantras to be less likely to use the reasoning skill associated with that mantra.
+</p>
+<ul class="org-ul">
+<li>Use reason.</li>
+<li>Why am I feeling this way?</li>
+<li>What is causing me to feel this way?</li>
+<li>What am I subconsciously noticing?</li>
+<li>What is leading me to speculate this?</li>
+</ul>
+<p>
+The phrase &ldquo;Use reason&rdquo; for invoking the inclination to use reason to solve a problem might be considered a case where the habitual use of a mantra improves the brain&rsquo;s intelligence by elevating its ability to solve problems (in this case by habitually reminding it to do something that it otherwise wouldn&rsquo;t do)
+</p>
+
+<p>
+Other similar cases that might not exactly count as mantras since their wordings can vary might be: &ldquo;Why am I thinking this?&rdquo; or &ldquo;Why is mind noticing this conspicuous instance X?&rdquo;
+</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Another advantage to establishing the validity of the senses and empiricism later on is that it makes this philosophy more general. Futuristic robots that use physics to create consciousnesses of their own would very conceivably have different senses than humans do, as would the hypothetical non-human life that exists on other planets do.
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: Zero Contradictions</p>
+<p class="date">Created: 2023-01-31 Tue 19:18</p>
+</div>
+</body>
+</html>

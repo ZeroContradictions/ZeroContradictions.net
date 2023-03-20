@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-03-20 Mon 02:55 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ideal Forms Of Democracy</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="description" content="When and when not to use democracy; Why replacing FPTP will not improve democracy; Analysis of different democratic procedures, etc." />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="../blog-posts.css" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html#civilization"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Ideal Forms Of Democracy</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#intro">1. Why do we have democracy?</a></li>
+<li><a href="#democracy-in-private-entities">2. Democracy Within Private Entities</a></li>
+<li><a href="#meritocracy-and-sortition">3. Meritocracy Combined With Sortition</a></li>
+<li><a href="#electoral-process">4. Critique Of The Electoral Process</a></li>
+<li><a href="#parliaments-vs-presidencies">5. Why Parliamentary Democracies Tend To Be Better Than Presidential Democracies</a></li>
+<li><a href="#FPTP-wont-change-anything">6. Why Replacing FPTP Will Not Improve Democracy</a></li>
+<li><a href="#things-that-wont-improve-democracy">7. List Of Possible Changes To Democracies That Actually Wouldn&rsquo;t Improve The Democracies</a></li>
+<li><a href="#improving-democracy">8. Other Reasonable Reforms That Could Improve Democracies</a></li>
+<li><a href="#reason-systems-intro">9. Reason Systems As A Possible Alternative To Democracy</a>
+<ul>
+<li><a href="#reason-systems-rules">9.1. Rules For Reason Systems</a></li>
+<li><a href="#reason-systems-compromises">9.2. Reaching Compromises</a></li>
+<li><a href="#winners-of-debates">9.3. Important Question: Who determines / How is the winner of a debate determined?</a></li>
+</ul>
+</li>
+<li><a href="#reason-systems-vs-democracies">10. Reason Systems (Modern Improved Court Systems) Are Better Than Democracies</a>
+<ul>
+<li><a href="#improving-reason-systems">10.1. Improving Reason Systems</a></li>
+<li><a href="#example-conflicts-of-interests">10.2. Example Conflicts Of Interest</a></li>
+</ul>
+</li>
+<li><a href="#conclusion">11. Conclusion</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<p>
+Note: I haven&rsquo;t finished writing this file yet.
+</p>
+
+
+<div id="org964dc90" class="figure">
+<p><img src="../images/democracy-is-a-sham-whos-in-charge.jpg" alt="democracy-is-a-sham-whos-in-charge.jpg" />
+</p>
+</div>
+
+<div id="outline-container-intro" class="outline-2">
+<h2 id="intro"><span class="section-number-2">1.</span> Why do we have democracy?</h2>
+<div class="outline-text-2" id="text-intro">
+<p>
+How to govern society is one of the oldest philosophical problems, and while they&rsquo;re aren&rsquo;t any ideal solutions that can completely eliminate corruption, there are some pragmatic principles and and heuristics that we can follow to generate a better society.
+</p>
+
+<p>
+All political systems are oligarchies, regardless of how they present themselves. It&rsquo;s not possible for a single person to rule an entire country all by themselves because they need subordinates who will enforce their rule of law, and it&rsquo;s equally impossible for a democracy to work effectively unless it is a representatives and a hierarchy of other government officials.
+</p>
+
+<p>
+[I still need to finish this section.]
+</p>
+</div>
+</div>
+
+<div id="outline-container-democracy-in-private-entities" class="outline-2">
+<h2 id="democracy-in-private-entities"><span class="section-number-2">2.</span> Democracy Within Private Entities</h2>
+<div class="outline-text-2" id="text-democracy-in-private-entities">
+<p>
+Reason is superior to democracy since it is the best decision maker. Decisions should made with reason instead of democracy whenever possible.
+</p>
+
+<p>
+In situations where there is no single right answer and/or there are different competing values and value systems, democracies are often proposed as a potential solution.
+</p>
+
+<p>
+I used to be vehemently against democracy when I used to be an Ancap. I was parroting the Rhetoric of Exploitation used by other Ancaps to portray Democracy as an oppressive system that is used by the government to create the illusion that the society is fair, just, and ruled by the people.
+</p>
+
+<p>
+After I accepted that morality was subjective, I became less opposed to democracy since I now understood it to be a solution to resolving multiple different values, perspectives, and ideologies, as imperfect as it may be.
+</p>
+
+<p>
+Nevertheless, I agree with all the criticisms in this blog post <a href="https://thewaywardaxolotl.blogspot.com/2017/05/the-deep-state-and-myth-of-democracy.html">The Myth of Democracy</a>, and I still think that we can make a better system than anything that&rsquo;s ever been tried before.
+</p>
+
+<p>
+Approval Voting: For every choice/option/candidate, everybody votes yes or no to signal whether or not they approve of the option. The option(s) with the most approvals is/are selected. People can vote multiple times, vote once, or not vote at all. This method is quick, simple, will work for most situations, and is better than first past the post voting. <a href="https://www.youtube.com/watch?v=orybDrUj4vA">CGP Grey has a video</a> explaining how Approval Voting works.
+</p>
+
+<p>
+Single Transferable Voting: The single transferable vote (STV) is a voting system designed to achieve proportional representation through ranked voting in multi-seat organizations. Under STV, an elector (voter) has a single vote that is initially allocated to their most preferred candidate. Votes are totaled and a quota (the number of votes required to win a seat) derived. If their candidate achieves quota, he/she is elected and in some STV systems any surplus vote is transferred to other candidates in proportion to the voters&rsquo; stated preferences. If more candidates than seats remain, the bottom candidate is eliminated with his/her votes being transferred to other candidates as determined by the voters&rsquo; stated preferences. These elections and eliminations, and vote transfers if applicable, continue until there are only as many candidates as there are unfilled seats.
+</p>
+</div>
+</div>
+
+<div id="outline-container-meritocracy-and-sortition" class="outline-2">
+<h2 id="meritocracy-and-sortition"><span class="section-number-2">3.</span> Meritocracy Combined With Sortition</h2>
+<div class="outline-text-2" id="text-meritocracy-and-sortition">
+<p>
+Most importantly, the oligarchical structure of a society should be meritocratic.
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Meritocracy">Wikipedia: Meritocracy</a>
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Sortition">Wikipedia: Sortition</a>
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Weighted_voting">Wikipedia: Weighted Voting</a>
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Wisdom_of_the_crowd">Wikipedia: Wisdom of the Crowd</a>
+</p>
+
+<p>
+Shower Thought: The court system uses sortition for reaching verdicts in the form of randomly selected juries, yet sortition is not used for determining the laws as well.
+</p>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-electoral-process" class="outline-2">
+<h2 id="electoral-process"><span class="section-number-2">4.</span> Critique Of The Electoral Process</h2>
+<div class="outline-text-2" id="text-electoral-process">
+<p>
+i
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=LasGIVHyCGI">Campaign Technology - John Stossel</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=bwxllxMIzzY">Campaign Moments and Message - John Stossel</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=ZckwjLTW6lA">John Stossel: How Debates Are Won</a>
+</p>
+
+
+<div id="org33160cd" class="figure">
+<p><img src="../images/car-with-failed-bumper-stickers-1.jpg" alt="car-with-failed-bumper-stickers-1.jpg" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-parliaments-vs-presidencies" class="outline-2">
+<h2 id="parliaments-vs-presidencies"><span class="section-number-2">5.</span> Why Parliamentary Democracies Tend To Be Better Than Presidential Democracies</h2>
+<div class="outline-text-2" id="text-parliaments-vs-presidencies">
+<p>
+NOTE: Although parliamentary democracies tend to be better than presidential democracies, the presidential democratic system in the United States worked just fine until Jimmy Carter&rsquo;s presidency during the late 1970s.
+</p>
+
+<p>
+It probably wouldn&rsquo;t have made much difference if the United States had a parliament, until Carter&rsquo;s presidency, where at that point, the US would definitely be better off if it was using a parliamentary system instead.
+Because then Jimmy Carter could&rsquo;ve been voted out of office by the Parliament.
+</p>
+
+<p>
+Up until that point, presidential democracies were about as good as parliamentary ones. The reason why that changed was when:
+</p>
+<ol class="org-ol">
+<li>The country elected a weak head of government who couldn&rsquo;t leave office until his term was over,</li>
+<li>This was long before the Internet started, which caused democratic backsliding by isolating people into political ideologies in their own online Internet bubbles and echo chambers, and thus making the presidential system less stable since more attention started being focused on the President and viewing the Presidency as the key to fixing all the countries problems, and</li>
+<li>Power started shifting towards the Presidency, in large part because the Presidency and its executive orders have become the only fast and effective way to change the federal law of the land due to the democratic backsliding and inability of political cliques to compromise with each other and see the other&rsquo;s sides arguments instead of constructing strawmen.</li>
+</ol>
+
+<p>
+Although I haven&rsquo;t read the book itself, I agree with pretty much all the arguments against Presidential Democracies that are stated in this Wikipedia summary of the book: <a href="https://en.wikipedia.org/wiki/Bad_for_Democracy">Bad for Democracy: How the Presidency Undermines the Power of the People by Dana D. Nelson</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-FPTP-wont-change-anything" class="outline-2">
+<h2 id="FPTP-wont-change-anything"><span class="section-number-2">6.</span> Why Replacing FPTP Will Not Improve Democracy</h2>
+<div class="outline-text-2" id="text-FPTP-wont-change-anything">
+<p>
+Critics of First-Past-The-Post will argue that it&rsquo;s unfair because they perceive it to be a winner-takes-all system that denies minority parties from having any real power in the government. The People who hate FPTP the most are the ones who are tired of always siding with one side or the other.
+</p>
+
+<p>
+Theoretically, proportional representation or ranked voting would be more democratic because it would be more reflective of the will of the people, right? It wouldn&rsquo;t actually. And even if the elected government was more representative than it would be otherwise under FPTP, the democracy would still encounter the problems of <a href="https://thewaywardaxolotl.blogspot.com/2017/05/the-deep-state-and-myth-of-democracy.html">The Deep State and Myth of Democracy</a>. But if you&rsquo;re still not convinced that the Deep State has more power in the Government than the people do, I will explain here why FPTP would not be more representative of the people.
+</p>
+
+<p>
+Even if replacing FPTP with a proportional representation democracy does give those people more representation in the government, they overlook that their political opposites will also gain more representation too. This causes greater political disagreements that ultimately have to group together to form various political coalitions, which causes political gridlock that isn&rsquo;t any better than the 50/50 gridlock faced in FPTP systems.
+</p>
+
+<p>
+Generally speaking, when gridlock happens in one branch of government, a different branch or authority within the government that is not gridlocked can seize the opportunity to take the power for themselves, and the public will usually go along with it (e.g. the transfers of power from Congress to the Presidential and Judicial branches of the USFG).
+</p>
+
+<p>
+It&rsquo;s worth noting that these are potential disadvantages and that it depends on the specific implementation of PR system. Additionally, PR systems have their own advantages such as increased representation of minority groups, parties or ideas and giving voice to citizens who might not have representation in a first-past-the-post system.
+</p>
+
+<p>
+One of the reasons why the Weimar Republic failed was that it had a proportional representation democracy that caused gridlock within the legislature, thus causing political power to transfer to the executive branch in order to actually get anything done. Italy also faced similar gridlock when they switched from FPTP to a proportional representation system in 19##, and they had to rescind it in 20## since it made the government more unstable. When New Zealand switched to a proportional representation democracy, there was no majority in the parliament from 1996 to 2017.
+</p>
+
+
+<p>
+FPTP was more stable before the rise of the Internet caused echo-chambers, social bubbles, and a massive increase in divisiveness and partisanship in the public.
+</p>
+
+<p>
+Proportional representation already exists in FPTP, but in a different way. Instead of having proportional representation inside the government&rsquo;s legislature as a whole, political factions have proportional representation inside the main political parties. For example, the Republican Party in the United States consists of factions as the Pro-Trumpers, the Freedom Caucus (Libertarian-leaning), <span class="underline"><span class="underline"><span class="underline">__</span></span></span> etc. The Democratic Party of the United States consists of Democratic Socialists, moderate Blue Dog Democrats, <span class="underline"><span class="underline"><span class="underline">__</span></span></span> etc.
+</p>
+
+<p>
+So FPTP doesn&rsquo;t really reduce the range of acceptable political thought within the status quo after all.
+</p>
+
+<p>
+Once the coalitions form inside the political parties, they then elect their leaders and choose their direction according to their constituent percentages. Once there are exactly two solid factions competing against one another (Democrats vs Republicans), the result is less political gridlock&#x2026; except for when the Legislature and Presidency are not decisively controlled by the same party.
+</p>
+
+<p>
+When I was Libertarian, I used to believe that the United States would be better off it would eliminate FPTP since that would enable Libertarians to gain greater representation in the Government, but until I realized that opposing ideologies like the Social Democrats, the Green Party, the Neoliberals, the Pro-Trumpers, the Religious Right, etc would also gain greater representation, I realized that this would be a loss cause. The result would be political gridlock, and it wouldn&rsquo;t be any different than how the Libertarians already have their own small faction inside the Republican Party.
+</p>
+</div>
+</div>
+
+<div id="outline-container-things-that-wont-improve-democracy" class="outline-2">
+<h2 id="things-that-wont-improve-democracy"><span class="section-number-2">7.</span> List Of Possible Changes To Democracies That Actually Wouldn&rsquo;t Improve The Democracies</h2>
+<div class="outline-text-2" id="text-things-that-wont-improve-democracy">
+<ul class="org-ul">
+<li>Replace the first-past-the-post system with single transferable voting,</li>
+<li>Replace the two-party system with a multi-party system,</li>
+<li>Have an exceptionally high voter turnout rate,</li>
+</ul>
+
+<p>
+<img src="../images/CCP-vs-EU-elections.png" alt="CCP-vs-EU-elections.png" />
+Another thing that&rsquo;s worth pointing out is how Japan happens to be a democratic one-party state. Maybe Japan could switch to a non-FPTP system, but would it really make a difference if the country&rsquo;s genetics and social culture predispose it towards a conservative one-party state?
+</p>
+</div>
+</div>
+
+<div id="outline-container-improving-democracy" class="outline-2">
+<h2 id="improving-democracy"><span class="section-number-2">8.</span> Other Reasonable Reforms That Could Improve Democracies</h2>
+<div class="outline-text-2" id="text-improving-democracy">
+<p>
+Consider a list of ideas that could potentially improve how our democracies function:
+</p>
+<ul class="org-ul">
+<li>Implement voter-ID laws with <a href="./ideal-government.html#functions-of-citizens-IDs">government-issued ID cards</a> (free for all citizens),</li>
+<li>Have more educated voters (see: <a href="../epistemology/difficult-to-change-peoples-minds.html">Why It&rsquo;s So Difficult To Change People&rsquo;s Minds</a>),</li>
+<li><a href="./ideal-government.html#problem-of-governance">Restructure the government in such a way that discourages corruption and corporatacracy</a>,</li>
+<li>Completely eliminate gerrymandering: Remove party affiliations at the time of voter registration. Do not track home addresses on ballots. Voter ID is done through <a href="./ideal-government.html#functions-of-citizens-IDs">government-issued ID cards</a>, but does not require you to retain the information together. Now politicians don&rsquo;t know where you live and can&rsquo;t draw districts with biases,</li>
+<li>Replace the electoral college with the popular vote,</li>
+<li><a href="./age-of-adulthood.html">Lower the minimum voting age to 16 years old</a>?,</li>
+<li>Implement consecutive and/or lifetime term-limits for all political offices,</li>
+<li>Pass laws regulating campaign finance,</li>
+<li>Localism</li>
+<li>Perhaps the retirement age should also be the politician cut-off age? This could prevent the likelihood that people with dementia (e.g. Joe Biden) or people with perverse incentives get elected.</li>
+<li>Et Cetera</li>
+</ul>
+
+
+<div id="orgc60a1dd" class="figure">
+<p><img src="../images/countries-that-require-id-to-vote.png" alt="countries-that-require-id-to-vote.png" />
+</p>
+</div>
+
+
+<div id="org0a98c0a" class="figure">
+<p><img src="../images/how-gerrymandering-works.jpg" alt="how-gerrymandering-works.jpg" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-reason-systems-intro" class="outline-2">
+<h2 id="reason-systems-intro"><span class="section-number-2">9.</span> Reason Systems As A Possible Alternative To Democracy</h2>
+<div class="outline-text-2" id="text-reason-systems-intro">
+<p>
+Ever since I became disillusioned about democracy during my Ancap years, I thought it was really peculiar how the legislative and jury processes are so radically different from each other.
+</p>
+
+<p>
+In a democracy, decisions are allowed to be based on partisanship, emotions, conflicts of interest, and personal morals; and that&rsquo;s even strongly encouraged. The selection process for the people who make legislative decisions regarding society is also determined by election campaigns and voting.
+</p>
+
+<p>
+On the other hand, the decision-making process in the court system is completely different. People are forbidden to be selected to make the decisions if they will have a conflict of interest in deciding the verdict, or if they are likely to be influenced by their morals, emotions, and personal biases. In addition, the selection process for the people who make decisions is also determined by random selection (sortition), in contrast to the voting system used by democracies.
+</p>
+
+<p>
+It bugs me that most people never question why these decision making processes are so different from each other. Yes, they belong to different branches of government, but they are both making important decisions about society.
+</p>
+
+<p>
+Besides the appeal that a random selection of people on the jury can seem more fair and unbiased, I can&rsquo;t think of many other reasons why the decision-making processes for the legislature and court system should be much different from each other.
+</p>
+</div>
+
+<div id="outline-container-reason-systems-rules" class="outline-3">
+<h3 id="reason-systems-rules"><span class="section-number-3">9.1.</span> Rules For Reason Systems</h3>
+<div class="outline-text-3" id="text-reason-systems-rules">
+<p>
+For now, this concept will be called a &ldquo;reason system&rdquo; since &rsquo;logocracy&rsquo; is apparently already taken to mean &rsquo;rule of words&rsquo;, and there aren&rsquo;t any known Latin or Greek roots that could be agglutinated to form a better word.
+</p>
+<ol class="org-ol">
+<li>There is a public debate with widespread attention and such, and it forms the rules for a society.</li>
+<li>If there are any significant escalating disagreements, then an authority can schedule a textual debate.</li>
+<li>Debates are textual for the reasons outlined in a separate file (currently a section of <a href="../epistemology/best-media-formats.html">Philosophy Of Best Formats For Media</a>).</li>
+<li>Before the content debate, both sides may agree to debate what the best values are to avoid them later on.</li>
+<li>Fallacies are pointed out accordingly during the debate session. Making insults disqualifies those who make the insults.</li>
+<li>If both sides are using sound logic, the moderators may schedule a side debate about what the best values are.</li>
+<li>There is a similar structure to how jury systems work today. The best participants are selected for people with no pre-existing biases. And they are encouraged to evaluate all the evidence, and use reason to reach the correct conclusions. Every opposing viewpoint is heard before a decision is made, and etc.</li>
+<li>If someone has a point to make among a vast crowd of people, how is it decided when they will speak?</li>
+<li>Maybe there could be an electronic board that logs current debating topics and issues, and the points that each side must address and counter because those points were made against them.
+<ol class="org-ol">
+<li>If there is only one value that every side should agree to in a political reason system, it ought to be that self-ownership and all its corollaries can never be violated under any circumstances.</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-reason-systems-compromises" class="outline-3">
+<h3 id="reason-systems-compromises"><span class="section-number-3">9.2.</span> Reaching Compromises</h3>
+<div class="outline-text-3" id="text-reason-systems-compromises">
+<p>
+The other main reason why democracy is so prevalent in western societies today is that it is a way to make a compromise between opposing political ideologies, platforms, and ethics.
+</p>
+<ul class="org-ul">
+<li>Hence this is really the only reason why democrats would eventually let Donald Trump be the president of the US, or why republicans would let Barack Obama be the president of the US, or why any political faction would allow laws, legislation, politicians, etc. that they really detest to be in power.</li>
+<li>Private entities could probably use democracies as a means of compromise under limited circumstances.</li>
+</ul>
+
+<p>
+So how would a private entity or an anarchist society make compromises if they aren&rsquo;t using democracies?
+</p>
+<ul class="org-ul">
+<li>Is there any commonly-accepted term to describe a society or entity that makes decisions based on who wins a scheduled debate?</li>
+<li>In an ancap world, economic power is democratic in the sense that everybody choose who will provide their protection (they vote on who will protect them). Instead of compromises, everybody lives under their chosen defense agency, and the defense agencies might compromise their policies economically.</li>
+<li>The answer is that they don&rsquo;t. There is only one right answer on how to do things, so any time there is a compromise made between two opposing sides, it is either:
+<ol class="org-ol">
+<li>A compromise between the right answer and the wrong answer.</li>
+<li>Or even worse, a compromise between multiple wrong answers, because there&rsquo;s more ways to be wrong than there are to be right.</li>
+</ol></li>
+<li>Thus, there is no need to make compromises in a rational society. Only the right answer should be enacted. And the right answer will be determined by a reason system.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-winners-of-debates" class="outline-3">
+<h3 id="winners-of-debates"><span class="section-number-3">9.3.</span> Important Question: Who determines / How is the winner of a debate determined?</h3>
+<div class="outline-text-3" id="text-winners-of-debates">
+<ul class="org-ul">
+<li>Is it determined when one side is unable to make any further points that haven&rsquo;t already been made and simultaneously unable to counter any points made against them?</li>
+<li>Hypothetically speaking, a reason system could be vulnerable if all participants share identical cognitive biases and nobody ever thinks to propose something counter-intuitive to those biases or ideas that haven&rsquo;t already been proposed.</li>
+<li>Since reason systems have many similarities to jury systems, it is worth mentioning that jury systems decide between the defendant and the prosecutor by having the 6 or 12 person jury vote on the decision.</li>
+<li>Would a reason system use a similar voting system to a jury system?</li>
+<li>How would this problem be eliminated?</li>
+<li>NOTE: Most likely, the winner of a debate must be determined by a human being or a group of human beings. A computer programmed by humans or anything else without human-level reasoning would not be able to determine the winner.</li>
+<li>NOTE: Since we are working under the assumption that all participants have the same mission of finding the right answer even if they were initially wrong about it, the winner of a debate could be determined in scenarios where a participant admits that they were wrong and they change their decision to match that of their opponent.
+<ul class="org-ul">
+<li>Or at the very least, the debate ends because they don&rsquo;t have any points left to make.</li>
+<li>And if one side admits defeat, then the debate room reaches an agreement that they have lost and they re-affirms the winner to make it official.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-reason-systems-vs-democracies" class="outline-2">
+<h2 id="reason-systems-vs-democracies"><span class="section-number-2">10.</span> Reason Systems (Modern Improved Court Systems) Are Better Than Democracies</h2>
+<div class="outline-text-2" id="text-reason-systems-vs-democracies">
+<p>
+Since juries and court systems already have wide acceptance in modern western culture, pointing this out should make my ideas less controversial to the world.
+</p>
+
+<p>
+How could you possibly go wrong with a system that emphasizes reason, logic, and non-partisanship? On the other hand, you could easily imagine thousands of different ways how a system that allows emotions, partisanship, non-thorough evaluation of the evidence, and conflicts of self-interest to influence the decision making could go wrong. I don&rsquo;t see how a democratic republic could possibly have any advantages over a reason system at all.
+Not only does democracy enable people with conflicts of interest to participate in deciding the rules of society, but it encourages it.
+</p>
+</div>
+
+<div id="outline-container-improving-reason-systems" class="outline-3">
+<h3 id="improving-reason-systems"><span class="section-number-3">10.1.</span> Improving Reason Systems</h3>
+<div class="outline-text-3" id="text-improving-reason-systems">
+<p>
+One of the most unsettling things about the reason system is that the laws would be made without your peers, and even more frighteningly, if you are innocent and put on trial, it somehow feels a bit more scary to know that you are being judged by professional judges instead of your peers.
+</p>
+<ul class="org-ul">
+<li>Why is this?</li>
+<li>What role should one&rsquo;s peers play in judgment, if at all?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-example-conflicts-of-interests" class="outline-3">
+<h3 id="example-conflicts-of-interests"><span class="section-number-3">10.2.</span> Example Conflicts Of Interest</h3>
+<div class="outline-text-3" id="text-example-conflicts-of-interests">
+<p>
+Homeowners in big cities wanting to pass zoning laws to decrease the supply of housing and thus artificially increase the value of their property.
+</p>
+<ul class="org-ul">
+<li>The logic of pro-democracy supporters would be that homeowners should have a stake in deciding zoning laws just because they live in the city, but this is not reasonable because they have a conflict of interest.</li>
+<li>Even though the homeowners may in fact live in the city, it should be deemed inappropriate for them to have a stake in deciding the zoning laws of that city should be since they have a conflict of interest to increase their property values at the cost of anybody wanting affordable housing.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-conclusion" class="outline-2">
+<h2 id="conclusion"><span class="section-number-2">11.</span> Conclusion</h2>
+<div class="outline-text-2" id="text-conclusion">
+<p>
+i
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Zero Contradictions</p>
+<p class="date">Created: 2023-03-20 Mon 02:55</p>
+</div>
+</body>
+</html>

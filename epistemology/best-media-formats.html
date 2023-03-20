@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-03-20 Mon 06:06 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Philosophy Of Best Formats For Media</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="description" content="Different mediums and different formats of presentation confer different advantages." />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="../blog-posts.css" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html#epistemology"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Philosophy Of Best Formats For Media</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#advantages-to-various-formats">1. Differences And Advantages To Various Formats</a></li>
+<li><a href="#written-debates-advantages">2. Written Debates Are Superior To In-Person Debates (IMO)</a></li>
+<li><a href="#disadvantages-of-GUIs">3. Disadvantages Of GUI&rsquo;s</a></li>
+<li><a href="#diataxis-and-pedagogy">4. Diataxis and Pedagogy</a></li>
+<li><a href="#in-depth-works-most-people-never-finish">5. Examples Of Influential, In-Depth Works That Are Hundreds Or Thousands Of Pages Long That Few People Read From Start To Finish</a>
+<ul>
+<li><a href="#orgdc9a99d">5.1. Thinking About Summaries (Smaller Models Of Knowledge) Are Often More Important That Larger Ones</a></li>
+<li><a href="#org6309192">5.2. Some Works Are Too Rigorous For Most People To Comprehend</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<hr />
+<p>
+Note: I haven&rsquo;t finished writing this file yet.
+</p>
+
+<p>
+On my philosophy reading list, I still need to read Chapters 16, 17, 18, and 19 of Teaching by Principles. Once I finish reading those chapters, it will give me more knowledge and greater insight into improving this web page.
+</p>
+
+<div id="outline-container-advantages-to-various-formats" class="outline-2">
+<h2 id="advantages-to-various-formats"><span class="section-number-2">1.</span> Differences And Advantages To Various Formats</h2>
+<div class="outline-text-2" id="text-advantages-to-various-formats">
+<p>
+Would it be possible to create a format / medium that enables people to reap both the benefits of watching a movie and reading a book at the same time?
+</p>
+<ul class="org-ul">
+<li>Movies and visual mediums have the advantage of being visual for showing what&rsquo;s going on and what everything looks like.
+<ul class="org-ul">
+<li>They also feature music that sets the tone for many different scenes.</li>
+<li>They have shorter lengths of time.</li>
+<li>Their greatest disadvantage is that they take more time to produce.</li>
+</ul></li>
+<li>Reading and textual mediums have the advantage of showing what the characters are thinking about.
+<ul class="org-ul">
+<li>They are often times better for explaining some types of information, especially really dense ones that wouldn&rsquo;t fit into a fast-paced visual format.</li>
+<li>Books are often better than movies since they focus on telling a story instead of portraying visual effects. There are so many expensive movies that had terrible, boring plots.</li>
+<li>The reader is free to imagine what everything looks like, which could potentially be more entertaining.</li>
+<li>The reader could choose their own music to listen to for setting the tone. However, the quality would depend on their ability to select the right music for the appropriate scenes.</li>
+</ul></li>
+<li><p>
+Other Differences
+</p>
+<ul class="org-ul">
+<li>Books are also available in audio formats, which can give them an advantage over movies which are strictly visual.</li>
+<li>There are few bad books out there out of the best ones to read.</li>
+<li>Books tend to use more complicated language that would require dictionaries to understand.</li>
+<li>They are much cheaper to produce and purchase.</li>
+</ul>
+<p>
+Said format could feature music playing to set the tone at all times.
+</p>
+<ul class="org-ul">
+<li>It could be mainly visual, but display what the characters are thinking for short snippets.</li>
+<li>This might be very hard to do since it might feel weird to switch back and forth.</li>
+</ul></li>
+<li>Personally, I don&rsquo;t think 3D movies are worth the price (neurodivergence should be taken into account). Sometimes they cause motion sickness, the glasses don&rsquo;t fit well, they cost more, and I generally don&rsquo;t notice any difference between them and the 2D versions. In the end, I only memorize the plot and the action, not the 3D visual effects which I don&rsquo;t remember at all after just a few days.</li>
+</ul>
+
+<p>
+The best academic works are the ones that teach the greatest amount of information in the shortest length.
+</p>
+
+<p>
+Maybe one of the reasons why there are so many different formats for learning something (textbooks, webpages, lectures, interactive activities, learn by doing) even though some ways are probably better than others on average is because human comprehension is so low. Since human comprehension after learning something is low in general, it is hard to measure which learning methods work and which ones don&rsquo;t.
+</p>
+
+<p>
+Although repeating ideas in a written work is often viewed as a bad thing, sometimes it&rsquo;s necessary in order to firmly get the point across. This is the case for the groundedlibertarian.com and Larken Rose&rsquo;s The Most Dangerous Superstition (for the point and ideas the author is trying to convey, even though it is extremely flawed). The average human has a low comprehension rate around ~60%, so another reason why it might be necessary to repeat ideas is so that they don&rsquo;t forget them.
+</p>
+
+<p>
+Sign language and oral/written language is analogous to analog and digital. Even though digital technology has more advantages than analog technology, this doesn&rsquo;t mean that analog doesn&rsquo;t have any advantages over digital.
+</p>
+
+<p>
+Although being able to type faster is definitely useful, it often doesn&rsquo;t make programming, writing musings, etc. faster.
+Law: If amount-to-be-typed &gt; typing-speed, then faster typing speed is beneficial
+</p>
+
+<p>
+Audio presentations and podcasts are linear (one-way) audio streams organized in a coherent structure designed for human comprehension. Hearing is only well-equipped to intake sequential input, whereas vision is far far more capable of skipping around.
+</p>
+
+
+<p>
+Reference To Previous Things In Different Fields Of Knowledge:
+</p>
+<ul class="org-ul">
+<li>In programming, we typically create and call methods repeatedly to execute a group of instructions multiply times.</li>
+<li>In mathematics, we prove theorems and refer to them later in other proofs and calculations so that we don&rsquo;t have to prove the same concepts over and over again. The theorem proofs also reveal interesting facts about the universe.</li>
+<li>In logic, we prove propositions (which become theorems) and use them to deduce additional conclusions.</li>
+<li>In languages, we have pronouns that can refer to antecedents so that we don&rsquo;t have to the say antecedents over and over again.</li>
+</ul>
+
+
+<div id="org679fc64" class="figure">
+<p><img src="../images/infographics-latex-image.png" alt="infographics-latex-image.png" />
+</p>
+</div>
+
+
+<div id="org61b4964" class="figure">
+<p><img src="../images/pedagogy-learning-pyramid.png" alt="pedagogy-learning-pyramid.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-written-debates-advantages" class="outline-2">
+<h2 id="written-debates-advantages"><span class="section-number-2">2.</span> Written Debates Are Superior To In-Person Debates (IMO)</h2>
+<div class="outline-text-2" id="text-written-debates-advantages">
+<p>
+The nature of debates is that they are used to settle disagreements on topics. In most debates, the goal is not to convince the other debater. People usually debate to convince the audience.
+</p>
+<ul class="org-ul">
+<li>Part of the nature of winning a debate is that it relies on being able to give the right arguments on the fly at the perfect time.
+<ul class="org-ul">
+<li>Sometimes one side will have the better position, but they are able to defend it well since they don&rsquo;t have the right facts at the right time.</li>
+</ul></li>
+<li>Most stand-up debates usually feature political discussions, and they have no value because a lot of it is just pandering to different groups of people, the debaters tend to be of average intelligence, and the debaters of ignorant of evolutionary theory, human nature, economics, etc.</li>
+<li>The only other field that would have any topics worth debating about is the greater field of philosophy, but most issues in philosophy would be resolved by reason and science.</li>
+<li>Furthermore, in debates there often aren&rsquo;t any sources to check facts, and if there are sources provided, there are usually no resources to check the validity of the sources.</li>
+<li>Stand-up debates are never done in academia (excluding &ldquo;science&rdquo;), which hints at the futility of debates.
+<ul class="org-ul">
+<li>Academia settles disagreements through research, reason, and documents, papers, and other media featuring research and reason.</li>
+</ul></li>
+<li>Written mediums are the best way to debate. There is enough time for both sides to gather the research, reason, facts, and evidence to support their positions.
+<ul class="org-ul">
+<li>The important thing is to know how to argue and reason well. This skill is better than any other debating techniques.</li>
+<li>Opposing sides cannot interrupt each other, which is a bonus.</li>
+<li>Since written mediums they are not in-person, they also get less personal, which is good for avoiding personal conflicts</li>
+<li>Issues external to the debate topics such as speaker appearance, perceived confidence, intonation, and body language can interfere with the validity of the speakers&rsquo; positions.
+<ul class="org-ul">
+<li>In written mediums, these external factors are not present, so the content can be judged as it is by itself.</li>
+<li>The only external factor present in written mediums is how well the content is written, but given as much time as one needs, this can be perfected to eliminate the bias.</li>
+</ul></li>
+</ul></li>
+<li>However, the need for spoken debates will inevitably arise when people converse, so even though spoken debates are an inferior debating format, they still hold importance in being inevitable and essential for trying to convince someone in the spur of the moment.
+<ul class="org-ul">
+<li>Thus, it is still important to have at least some experience with a spoken debate as a tool of persuasion and social skills.</li>
+<li>A characteristic feature of cults is that they quote their authority-figures / leaders instead of explaining their beliefs when it gets difficult. It&rsquo;s the same thing that sends people away from religion. Why explain your beliefs when you could just quote the bible?</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-disadvantages-of-GUIs" class="outline-2">
+<h2 id="disadvantages-of-GUIs"><span class="section-number-2">3.</span> Disadvantages Of GUI&rsquo;s</h2>
+<div class="outline-text-2" id="text-disadvantages-of-GUIs">
+<ul class="org-ul">
+<li>You have to figure out what all the buttons do (if its not immediately obvious)</li>
+<li>You have to memorize where all the buttons are</li>
+<li>You often have to click several times to get to the buttons</li>
+<li>It is less flexible in its options</li>
+<li>It requires more system resources</li>
+</ul>
+
+<p>
+Maybe the best formats would use color codes to indicate how the reader should read the following text (e.g. read it like a paragraph, read it carefully, just skim the list and think about it a little, don&rsquo;t forget this, main point, etc)
+</p>
+<ul class="org-ul">
+<li>&ldquo;there is a list of what the next following sections will be&rdquo;</li>
+<li>&ldquo;there is a list of what the next following sections will be, and each of those subsections will contain their own subsections too (sub-subsections)&rdquo;</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-diataxis-and-pedagogy" class="outline-2">
+<h2 id="diataxis-and-pedagogy"><span class="section-number-2">4.</span> Diataxis and Pedagogy</h2>
+<div class="outline-text-2" id="text-diataxis-and-pedagogy">
+<p>
+The Diátaxis framework aims to solve the problem of structure in technical documentation. It adopts a systematic approach to understanding the needs of documentation users in their cycle of interaction with a product.
+</p>
+
+<p>
+Diátaxis identifies four modes of documentation - tutorials, how-to guides, technical reference and explanation. It derives its structure from the relationship between them.
+</p>
+
+<p>
+In Diátaxis, each of these modes (or types) answers to a different user need, fulfils a different purpose and requires a different approach to its creation.
+</p>
+
+<p>
+<a href="https://diataxis.fr/">https://diataxis.fr/</a>
+</p>
+
+<p>
+i
+</p>
+</div>
+</div>
+
+<div id="outline-container-in-depth-works-most-people-never-finish" class="outline-2">
+<h2 id="in-depth-works-most-people-never-finish"><span class="section-number-2">5.</span> Examples Of Influential, In-Depth Works That Are Hundreds Or Thousands Of Pages Long That Few People Read From Start To Finish</h2>
+<div class="outline-text-2" id="text-in-depth-works-most-people-never-finish">
+<ul class="org-ul">
+<li>Immanuel Kant&rsquo;s Critique of Pure Reason</li>
+<li>Immanuel Kant&rsquo;s Critique of Practical Reason</li>
+<li>Adam Smith&rsquo;s the Wealth of Nations</li>
+<li>Karl Marx and Friedrich Engel&rsquo;s Das Kapital</li>
+</ul>
+
+<ul class="org-ul">
+<li>Ted Kaczynski&rsquo;s Anti-Tech Revolution</li>
+<li>Robert Caro&rsquo;s The Power Broker (1974), a biography of New York urban planner Robert Moses</li>
+<li>Robert Caro&rsquo;s The Years of Lyndon Johnson, five volumes (1982, 1990, 2002, 2012, 202x)</li>
+</ul>
+
+<p>
+For all of these works and many more, the synposes, summaries, and outlines that people have given about them have been spread to more people than the actual works themselves. It follows that anybody who wishes to write works of similar lengths should be very conscious about how the synopses would be interpreted by people. Furthermore, the authors of these works have all written about minor topics inside these books that were not the main topic of discussion, and consequently, these minor topics have been omitted from the books&rsquo; summaries, even though they were really important ideas (e.g. Smith&rsquo;s support for Land Value Tax based on ground rent, i, i)
+</p>
+
+<p>
+Generally speaking, most people also won&rsquo;t read texts, especially really long ones, if they don&rsquo;t deem those texts to be worth reading in the first place. Aside from better understanding what the authors of those texts believed in, there&rsquo;s nothing to gain from reading them, and even then, fully understanding what person X believes is hardly worth it if most of their ideas are wrong to begin with, because there are infinitely many more ways to be wrong than there are to be correct. Some examples:
+</p>
+<ul class="org-ul">
+<li>There is very little reason for anybody to read Karl Marx&rsquo;s Das Kapital because most of it has been rejected by mainstream economists and the Labor Theory of Value can be easily disproven and rejected in favor of Marginalism instead, which does correctly describe how prices work.</li>
+<li>Although Immanuel Kant&rsquo;s analytic-synthetic distinction is novel, original, and an interesting idea to think about, it&rsquo;s not worth reading hundreds and hundreds of pages that elaborate on this idea with further conclusions because several premises that are encapsulated in the conceptual distinction are incorrect. However, there might/probably still be some more ideas worth thinking about in Kant&rsquo;s magnum opus, like his theory of characteristics (quantity, quality, etc) as shown in some outlines of his work.</li>
+<li>Immanuel Kant&rsquo;s Critique of Practical Reason is not worth reading because it assumes that morality is objective, when morality is actually subjective.</li>
+</ul>
+<p>
+So people will only spend dozens of hours reading a lengthy, extensive work if they already believe that it would be worth reading in the first place. Usually they will already agree with the claims and assertions presented within the texts&rsquo; summaries, in which case they would only be reading the books in order to better understand the specific ideas, arguments, and details.
+</p>
+</div>
+
+<div id="outline-container-orgdc9a99d" class="outline-3">
+<h3 id="orgdc9a99d"><span class="section-number-3">5.1.</span> Thinking About Summaries (Smaller Models Of Knowledge) Are Often More Important That Larger Ones</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+If someone spends literally decades of their life writing a Caro-esque biography or other work about somebody or something, the summarization of the work would definitely reach more minds than the actual several-thousands-pages-long work itself, because almost no one has enough time to read such a thing unless they were deeply interested in it or otherwise thought that they would get a lot of enjoyment/wisdom/understanding/etc out of it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6309192" class="outline-3">
+<h3 id="org6309192"><span class="section-number-3">5.2.</span> Some Works Are Too Rigorous For Most People To Comprehend</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+As an example, most of the people who have attempted to read The Art of Computer Programming by Donald Knuth report that they usually have to spend about 1-2 hours just to read 1-2 pages out of the entire volume of books which is approximately a thousand pages per book.
+</p>
+
+<p>
+Of course, while Donald Knuth has spent literally years writing this volume, as well as years and decades of his life thinking about computer science and programming, his brain has been wired to deal with such complex mathematical rigor as it relates to algorithms, data structures, and solving computer science problems in general.
+</p>
+
+<p>
+On the other hand, say a CS grad/undergrad student who hopes to learn more deeply about computer science will not have their brain wired as deeply as the author who wrote the books to think about these kinds of problems. Hence, because the author is so advanced and esoteric in his thinking, what he writes is not easily understandable to a less experienced audience. Hence, other books and volumes written by different authors that are easier to understand thus become more popular and more widely read by people interested in these subjects.
+</p>
+
+
+<p>
+i
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+i
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Zero Contradictions</p>
+<p class="date">Created: 2023-03-20 Mon 06:06</p>
+</div>
+</body>
+</html>

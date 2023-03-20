@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-03-20 Mon 02:03 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GeoLibertarian Arguments</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="description" content="An equal right to land is a negative right, and necessary for a truly free-market economy. Alloidal Libertarians contradict themselves." />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="../blog-posts.css" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html#journey"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">GeoLibertarian Arguments</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#land-and-negative-rights">1. Land And Negative Rights</a></li>
+<li><a href="#land-rights-and-productivity">2. Equal Land Rights Are Required For Everyone To Have An Equal Opportunity To Be Productive</a></li>
+<li><a href="#equal-rights-and-free-markets">3. Equal Land Rights Are Necessary For Truly Free-Markets</a></li>
+<li><a href="#GTP">4. The Georgist Theory of Property</a></li>
+<li><a href="#why-everyone-owns-land-equally">5. Why Everybody Owns Land Equally</a></li>
+<li><a href="#land-speculation-and-positive-negative-rights">6. Land Speculation Bestows Positive Rights</a></li>
+</ul>
+</div>
+</div>
+<p>
+I wrote these arguments in late-2020 shortly after I accepted Georgism and started identifying as a GeoLibertarian, hence the title of this post. Although <a href="./case-against-libertarianism.html">I&rsquo;m not Libertarian anymore</a>, I still endorse these arguments since they use sound reasoning and are consistent with my current philosophy. I also insist that a true Right-Libertarian who seeks to be compatible with the Libertarian conception of the Non-Aggression Principle would necessarily have to support Georgism in order for their ethical and political philosophy to be truly consistent with what they claim to support. These arguments show why Alloidal Libertarians support positive rights, unequal negative rights, and inefficient economics.
+</p>
+
+<div id="outline-container-land-and-negative-rights" class="outline-2">
+<h2 id="land-and-negative-rights"><span class="section-number-2">1.</span> Land And Negative Rights</h2>
+<div class="outline-text-2" id="text-land-and-negative-rights">
+<ol class="org-ol">
+<li>Negative rights do NOT entitle someone to the fruits of someone else&rsquo;s labor.</li>
+<li>Positive rights DO entitle someone to the fruits of someone else&rsquo;s labor.</li>
+<li>An equal right to land does NOT entitle someone to the fruits of someone else&rsquo;s labor (because land cannot be created by labor).</li>
+</ol>
+<p>
+<b><b>Conclusion:</b></b> Having an equal right to land is a negative right, not a positive right.
+</p>
+</div>
+</div>
+
+<div id="outline-container-land-rights-and-productivity" class="outline-2">
+<h2 id="land-rights-and-productivity"><span class="section-number-2">2.</span> Equal Land Rights Are Required For Everyone To Have An Equal Opportunity To Be Productive</h2>
+<div class="outline-text-2" id="text-land-rights-and-productivity">
+<ol class="org-ol">
+<li>There is a finite supply of land and natural resources on Earth. (At the same time, there is an ever increasing human population)</li>
+<li>A homesteading system that grants private ownership of land and natural resources some (but not most) people to claim most of the land and natural resources before anybody else could.</li>
+<li>Once all the land and natural resources are privately owned by a minority of people, that minority will gain massive amounts of unlabored economic value (while everyone else suffers undeserved economic inequality).</li>
+</ol>
+<p>
+<b><b>Conclusion:</b></b> If we want to ensure that <i>everybody</i> on Earth has a fair and equal opportunity to use land and natural resources for themselves, then land and natural resources should belong to <b>everyone</b>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-equal-rights-and-free-markets" class="outline-2">
+<h2 id="equal-rights-and-free-markets"><span class="section-number-2">3.</span> Equal Land Rights Are Necessary For Truly Free-Markets</h2>
+<div class="outline-text-2" id="text-equal-rights-and-free-markets">
+<ol class="org-ol">
+<li>Land is necessary in order to be productive (because it&rsquo;s one of the three factors of production: land, labor, and capital).</li>
+<li>If everyone had an equal right to land, then everyone would have a more equal opportunity to be as productive as anyone else.</li>
+<li>If everyone had an equal opportunity to be productive, then the economy as a whole would be more productive and more laissez-faire.</li>
+</ol>
+<p>
+<b><b>Conclusion:</b></b> If everyone had an equal right to land, the economy would be more free-market and more productive.
+</p>
+
+<ol class="org-ol">
+<li>When people have unequal rights to be productive<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>, the economy is less laissez-faire and less free-market.</li>
+<li>The current system of property rights leads to everybody not having an equal right to land.</li>
+<li>Land is necessary in order to be productive (because it&rsquo;s one of the three factors of production: land, labor, and capital).</li>
+<li>The current system of property rights thus leads to everyone not having have an equal right to be productive<sup><a id="fnr.1.100" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>.</li>
+</ol>
+<p>
+<b><b>Conclusion:</b></b> The current system of property rights leads to everyone not having an equal right to be productive<sup><a id="fnr.1.100" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>, which leads to an anti-free-market economy, thus contradicting Libertarian values.
+</p>
+</div>
+</div>
+
+<div id="outline-container-GTP" class="outline-2">
+<h2 id="GTP"><span class="section-number-2">4.</span> The Georgist Theory of Property</h2>
+<div class="outline-text-2" id="text-GTP">
+<ol class="org-ol">
+<li>Every person owns themself.</li>
+<li>Every person thus owns the labor that they produce.</li>
+<li>Every person thus owns anything produced by their labor.</li>
+<li>People can trade things that they create with their labor for things that other people create with their labor.</li>
+<li>Land is not created by labor.</li>
+<li>But land is necessary in order to be productive (because it&rsquo;s one of the three factors of production: land, labor, and capital).</li>
+<li>In order for everybody to have an equal right to be productive<sup><a id="fnr.1.100" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>, everybody must have an equal right to land.</li>
+<li>In order to have a free-market economy, everybody must have an equal right to be productive<sup><a id="fnr.1.100" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>, otherwise the economy is anti-free-market.</li>
+</ol>
+<p>
+<b><b>Conclusion:</b></b> In order to have a truly free-market economy, everybody must have an equal right to land. Likewise, no one should have unchecked ownership of land because they did not create the land, lest the economy be anti-free-market.
+</p>
+</div>
+</div>
+
+<div id="outline-container-why-everyone-owns-land-equally" class="outline-2">
+<h2 id="why-everyone-owns-land-equally"><span class="section-number-2">5.</span> Why Everybody Owns Land Equally</h2>
+<div class="outline-text-2" id="text-why-everyone-owns-land-equally">
+<p>
+If someone steals something and sells it to someone else, then the transaction is not valid because people cannot trade things that they don&rsquo;t rightfully own, and that property has to be returned to the original owner. Similarly, it makes no sense to buy, sell, and trade land since all land was eventually stolen at some point by the ancestors of one of the people making the trade.
+</p>
+
+<blockquote>
+<p>
+But if a landowner has to pay taxes on their land, then they don&rsquo;t truly own it.
+</p>
+</blockquote>
+<p>
+Correct, they don&rsquo;t truly own it. The rightful owners of the Earth&rsquo;s land is (collectively) everybody:
+</p>
+<ol class="org-ol">
+<li>If someone steals something and sells it to someone else, then the transaction is not valid, because people cannot trade things that they don&rsquo;t legally own.</li>
+<li>If stolen property is used within a transaction, then the transaction is invalid, and the property has to be returned to the original owner.</li>
+<li>All land was stolen at some point in human history.</li>
+<li>All landowners either stole their land from someone else, or they bought their land from someone who bought/inherit/stole it from someone else who got it from someone else and so on. The last person at the final end of the transaction stole that land.</li>
+<li>Before land was ever privately owned by anybody, land was not owned by anybody, which is essentially the same as everybody owning the land equally.</li>
+<li>Everybody was therefore the original owners of the Earth&rsquo;s land.</li>
+<li>If the land was initially stolen, but also passed onto today&rsquo;s owners through a combination of inheritance, theft, and trade, none of those transactions were valid because stolen property was used in the transactions, as established in [1].</li>
+<li>The land should therefore be returned to its original owners: Everybody.</li>
+</ol>
+<p>
+Occupying land prevents other people from using it. If land is owned equally, then a person who fences off land to prevent other people from using it (without giving due compensation) is effectively stealing that land from the commons.
+</p>
+
+
+<div id="org39b297a" class="figure">
+<p><img src="../images/owning-nature-georgist-comic.jpg" alt="owning-nature-georgist-comic.jpg" />
+</p>
+</div>
+
+<blockquote>
+<p>
+But if everybody owns land equally, then that must be the same thing as nobody owning any land at all?
+</p>
+</blockquote>
+<p>
+Technically yes, but that does not constitute an argument against equitable land ownership. Georgism still solves the Tragedy of the Commons with respect to land because Georgism explicitly allows <i>private</i> possession of land.
+</p>
+</div>
+</div>
+
+<div id="outline-container-land-speculation-and-positive-negative-rights" class="outline-2">
+<h2 id="land-speculation-and-positive-negative-rights"><span class="section-number-2">6.</span> Land Speculation Bestows Positive Rights</h2>
+<div class="outline-text-2" id="text-land-speculation-and-positive-negative-rights">
+<ol class="org-ol">
+<li>The value of land in residential areas depends on all the businesses, shops, services, etc in the community surrounding that land.</li>
+<li>Land speculators can claim land and do absolutely nothing with it.</li>
+<li>If the community surrounding the speculated land grows in size, then the speculated land gains value.</li>
+<li>Whenever someone is given a dollar that they didn&rsquo;t work for, someone else worked for a dollar that they didn&rsquo;t get.</li>
+<li>The land speculator did absolutely no labor to improve the value of the land that surrounds their speculative area (nor did they provide any restitution back to the surrounding community).</li>
+<li>It follows that the community surrounding the speculated land worked for a dollar that they didn&rsquo;t get.</li>
+</ol>
+
+<p>
+<b><b>Conclusion I:</b></b> The land speculator is able to siphon the fruits of the community&rsquo;s labor away from the community for himself (this is called rent-seeking). This is tantamount to invisible theft, similar to inflation, but stolen by a different means.
+</p>
+
+<p>
+<b><b>Conclusion II:</b></b> Conferring this value to the land speculators without them paying back to the community is a covert way of granting undeserved economic value (positive rights) to the land speculator.
+</p>
+
+<p>
+<b><b>Conclusion III:</b></b> Georgism (Land Value Taxation and a Citizen&rsquo;s Dividend) is necessary in order to avoid granting positive rights to land speculators (in addition to supporting negative rights in general).
+</p>
+
+<p>
+As for whether a land speculator should be entitled to compensation if the value of their land goes down, the answer is that they should not. A land speculator is a rent-seeker, someone who aims to gain wealth without producing any wealth. Rent-seekers do not deserve to be compensated if they lost wealth, especially since they didn&rsquo;t do anything to produce any wealth to begin with.
+</p>
+
+<p>
+Another reason is that the land speculator was taking land from the community without compensation. Why should the surrounding businesses compensate the land speculator if their land declined in value, when the land speculator was damaging the economic productivity of the surrounding businesses? Furthermore, if the land value went down, it&rsquo;s probably because either some sort of pollution made the land less valuable, or some local businesses closed down. In the case of the latter, maybe the businesses wouldn&rsquo;t have closed down if there was no land speculation that was unfairly digging into those businesses&rsquo; profits and productivity.
+</p>
+
+<p>
+Making it possible for people to rent-seek is equivalent to granting positive rights.
+</p>
+
+<p>
+There&rsquo;s nothing free market about some guy calling dibs on a plot of land.
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Having an equal right to be productive means having an equal opportunity to be as productive as anyone else.
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: Zero Contradictions</p>
+<p class="date">Created: 2023-03-20 Mon 02:03</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,259 @@
+/*** reset ***/
+html, body, div, span, h1, h2, h3, p, a, img, strong, ol, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+    display: block;
+}
+
+/*** ID Atttributes Used In Org-Mode HTML Output ***/
+#org-div-home-and-up {
+    font-size: 90%;
+    text-align: right;
+}
+
+#table-of-contents ul {
+    margin: 00px 00px 5px 00px;
+    font-size: 100%;
+    list-style-type: none;
+    text-decoration: underline;
+    color: #015EF4;
+    text-decoration-color: #015EF4;
+}
+#table-of-contents ul li {
+    margin: 00px 00px 5px 10px;
+}
+#table-of-contents ul li ul li {
+    margin: 00px 00px 5px 20px;
+}
+
+#content, #postamble {
+    font-size: 100%;
+}
+
+/*** universal ***/
+a {
+    /* color: blue; */
+    /* text-decoration-color: blue; */
+    color: #015EF4;
+    text-decoration-color: #015EF4;
+    font-weight: bold;
+    line-height: 1.3em;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    /* text-decoration-thickness: 2px; */
+}
+a:focus {
+    /* outline: thin dotted; */
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+/* a:visited { */
+/*   background: blue; */
+/*   color: purple; */
+/* } */
+
+p {
+    line-height: 1.3em;
+    text-align: justify;
+    margin: 0px 0px 5px 0px;
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+ul li, ol li {
+    margin: 00px 00px 05px 20px;
+    line-height: 1.3em;
+}
+
+.figure p, img {
+    img-align: center;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    max-width: 100%;
+    /* max-height: 900px; */
+}
+
+pre, code {
+    font-family: 'Inconsolata', sans-serif;
+}
+
+blockquote {
+    font-style: italic;
+    /* font-family: monospace, monospace; */
+}
+
+.org-dl {
+    line-height: 1.3em;
+    margin: 00px 00px 05px 00px;
+    /* max-width: 100%; */
+}
+
+.figure-number {
+    /* Customize this, if this should be changed. */
+}
+
+table {
+    max-width: 100%;
+    font-size: 0.9em;
+    margin: 15px auto 15px auto;
+}
+
+/* Note: For some reason, I can't center-align */
+/* text in the table cells, even with .org-left */
+/* th, td { */
+/*     text-align: center; */
+/*     vertical-align: center; */
+/* } */
+
+/* h1, h2, h3, h4, h5, h6 { */
+/*     font-family: 'PT Sans Narrow', sans-serif; */
+/*     font-weight: 700; */
+/* } */
+
+h1 {
+    text-align: center;
+    font-size: 2.0em;
+    border-top: 2px solid black;
+    max-width: 100%;
+    margin: 20px auto 0;
+    padding: 10px 0 0 0;
+}
+
+h2 {
+    font-size: 1.6em;
+    border-top: 2px solid black;
+    margin: 20px 00px 10px 00px;
+    padding: 15px 0 0 0;
+}
+
+h3 {
+    font-size: 1.25em;
+    border-top: 1px solid black;
+    margin: 10px 00px 10px 00px;
+    padding: 15px 0 0 0;
+}
+
+h4 {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 10px 00px 10px 00px;
+    padding: 15px 0 0 0;
+}
+
+h5 {
+    font-size: 1em;
+    margin: 10px 00px 10px 00px;
+    padding: 15px 0 0 0;
+}
+
+.outline-text-2 {
+    /* Controls text within level-1 org sections, but not the headers themselves */
+}
+
+.outline-text-3 {
+    /* Controls text within level-2 org sections, but not the headers themselves */
+}
+
+/** main **/
+html {
+    /* background-color: #eee8d5; */
+    /* background-color: #eee8d5; */
+    background-color: black;
+} /* controls background color behind rectangular text body */
+
+body {
+    margin: 0 auto 0 auto;
+    padding: 3%;
+    max-width: 20cm;
+    /* border: 1pt solid #93a1a1; */
+    /* background-color: #B0C4DE; */
+    background-color: #E9ECF5; /* color behind text */
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black; /* font color */
+    line-height: 1;
+}
+
+header {
+    width: 100%;
+    float: left;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 2px solid black
+}
+
+footer {
+    width: 100%;
+    float: left;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+/* /\* Homepage Color Scheme *\/ */
+/* Original Colors (November 2022 to January 2023) */
+/* - #B0C4DE;    Background Color */
+/* - #0088bb;    Banner Color */
+/* - red;        ZC Essay Links */
+/* - green;      Video Links */
+/* - mediumblue; External Links */
+/* - black;      Font */
+/* - green;      Author Logo */
+
+/* Improved Colors (November 2022 to January 2023) */
+/* - #E9ECF5;    Background Color */
+/* - #000000;    Font Color (black) */
+/* - #3F5EA2;    Banner Color */
+/* - #5D7DC0;    Banner Hover Color */
+/* - #EE0534;    ZC Essay Links */
+/* - #015EF4;    External Links */
+/* - #009C00;    Video Links (darker color works better on ghost white background) */
+/* - #00C600;    Video Links (brigther color works better on black background) */
+
+
+/* Font (black or white) */
+/* Background (black or #B0C4DE) */
+/* Navigation Bar (#0088BB) */
+/* Author Logo (green & white) */
+
+
+/* Nice Colors: */
+/* - #993955 */
+/* - #FF0A47; Sizzling Red */
+/* - #FF0A47; Sizzling Red */
+/* - #F5003D; Red Munsell */
+/* - #00A877; Green Munsell */
+/* - #08C4A9 */
+/* - #CCD6EB */
+/* - #A3C3D9 */
+/* - #E9ECF5; Ghost White */
+/* - #3F5EA2; Bdazzled Blue */
+/* - #1F75FE; Blue Crayola */
+/* - #007CF0; Azure */
+/* - #005FB8; Denim */
+/* - #C5D4E7; Beau Blue */

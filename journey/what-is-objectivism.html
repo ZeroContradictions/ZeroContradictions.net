@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-02-11 Sat 17:35 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>What is Objectivism?</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="description" content="A summary of Ayn Rand's Philosophy of Objectivism, and a comprehensive refutation of all the errors that she made." />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="../blog-posts.css" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html#journey"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">What is Objectivism?</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#summary-of-objectivism">1. Summary Of Objectivism</a></li>
+<li><a href="#disclaimer">2. Most People&rsquo;s Criticisms Of Objectivism And Why They&rsquo;re Wrong</a></li>
+<li><a href="#intro">3. Introduction To This Critique</a></li>
+<li><a href="#bad-axioms">4. Why Aristotle&rsquo;s Axioms And Ayn Rand&rsquo;s Axioms Are Very Poorly Chosen</a></li>
+<li><a href="#unclear-definitions">5. Ayn Rand Failed To Use Clear Definitions And Semantics In Her Philosophy</a></li>
+<li><a href="#philosophy-of-truth">6. Ayn Rand Didn&rsquo;t Have A Good Philosophy Of &ldquo;Truth&rdquo;</a></li>
+<li><a href="#free-will">7. Ayn Rand Was Wrong About Free Will, Materialism, and Reductive Physicalism</a></li>
+<li><a href="#knowledge-structure">8. The True Structure Of Knowledge</a></li>
+<li><a href="#epistemological-mistakes">9. Ayn Rand Made Several Epistemological Mistakes</a></li>
+<li><a href="#orga28ccc5">10. Ayn Rand Didn&rsquo;t Understand The Nature Of Emotions And Why They Exist</a></li>
+<li><a href="#ignorance-of-evolutionary-reasoning">11. Objectivism Doesn&rsquo;t Use Evolutionary Reasoning</a></li>
+<li><a href="#ignorance-of-biology">12. Ayn Rand Didn&rsquo;t Understand Biology</a>
+<ul>
+<li><a href="#race-denialism">12.1. Objectivism Denies Race Realism, a Scientifically Backed Position</a></li>
+</ul>
+</li>
+<li><a href="#individualism">13. A Fiercely Individualist Conception Of Morality Is Incompatible With Most Cultures</a></li>
+<li><a href="#why-life-is-selfish">14. Ayn Rand Didn&rsquo;t Understand <i>Why</i> Life Evolves To Be Selfish</a></li>
+<li><a href="#ignorance-of-game-theory">15. Objectivism Doesn&rsquo;t Use Game-Theoretic Reasoning</a></li>
+<li><a href="#objective-morality-nonsense">16. Ayn Rand Was Wrong About &ldquo;Objective Morality&rdquo;</a></li>
+<li><a href="#immoral-robot-poor-thought-experiment">17. Why The Immortal Robot Thought Experiment Is Inferior To A Simpler And More Insightful Thought Experiment</a></li>
+<li><a href="#purpose-of-government">18. Ayn Rand Didn&rsquo;t Understand The True Purpose Of Government</a></li>
+<li><a href="#cooperation-vs-collectivism">19. Ayn Rand Didn&rsquo;t Distinguish Between Cooperation Versus Collectivism</a></li>
+<li><a href="#wrong-about-libertarianism">20. Ayn Rand Was Wrong About Libertarianism</a></li>
+<li><a href="#equal-negative-land-rights">21. Why Georgism And Equal Land Rights Are Necessary For A Truly Free-Market Economy</a>
+<ul>
+<li><a href="#land-value-tax">21.1. Land Value Tax is Justified</a></li>
+</ul>
+</li>
+<li><a href="#ignorance-of-market-failures">22. Objectivism Does Not Address Market Failures Like Planned Obsolescence</a></li>
+<li><a href="#cornucopian-nonsense">23. Cornucopianism is Wrong</a></li>
+<li><a href="#debunking-ancapism">24. Debunking Anarcho-Objectivism</a></li>
+<li><a href="#net-negative-to-civilization">25. Objectivism Is A Net-Negative To Civilization</a></li>
+<li><a href="#conclusion">26. Conclusion</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-summary-of-objectivism" class="outline-2">
+<h2 id="summary-of-objectivism"><span class="section-number-2">1.</span> Summary Of Objectivism</h2>
+<div class="outline-text-2" id="text-summary-of-objectivism">
+<p>
+Objectivism is the Philosophy of Ayn Rand. The lines below give a summary of the philosophy&rsquo;s beliefs.
+</p>
+<ul class="org-ul">
+<li>I exist, I am aware, A is A. Nothing can violate these axioms and everything must obey the laws of reality.</li>
+<li>Reality is objective. Contradictions do not exist in reality. The supernatural must be rejected.</li>
+<li>The senses are the only means of perceiving reality and they are always valid (when coupled with reason).</li>
+<li>People have volition and they should be held accountable for their actions.</li>
+<li>Every second the brain runs thousands of calculations. Some of these calculations can be used to form concepts.</li>
+<li>Concepts are the abstract mental integration of properties, united by a specific definition.</li>
+<li>Sound reasoning is the only valid way to form objective knowledge about reality. Reason is grounded to reality and it is the only valid source of knowledge.</li>
+<li>Reason is a three step process consisting of sense perception, concept formation, and logic. Although humans can reason, proper reasoning must be learned by studying epistemology.</li>
+<li>Intuition is subconscious reasoning derived from the brain&rsquo;s subliminal calculations. Since intuition is subconscious, humans must use conscious reasoning to make the implicit explicit.</li>
+<li>Emotions give life meaning, but they are not a valid source of knowledge. Without emotion, intelligent life is meaningless.</li>
+<li>Reason and emotion should exist in harmony to validate each other, but humans should always follow reason before emotion because reason is the only rational way to guide one&rsquo;s life.</li>
+<li>All knowledge is based on the information that an individual has acquired about reality through sense-perception and reason. All knowledge is contextual within the context of reality.</li>
+<li>Implicitly stated in every scientific claim and discovery are the words: &ldquo;According to all available evidence and knowledge, this is the correct conclusion&rdquo;.</li>
+<li>There are four levels of certainty. Propositions can be impossible, possible, probable, and certain. Every individual is born tabula rasa.</li>
+<li>Evidence is necessary to deem an idea as &rsquo;possible&rsquo;. If there&rsquo;s no evidence, then it&rsquo;s not possible.</li>
+<li>Claims and arbitrary ideas that do not have evidence (such as an all-powerful, all-knowing deity) are impossible.</li>
+<li>Reason is the individual&rsquo;s primary tool of survival. The capacity to reason is what makes humans human.</li>
+<li>All life is goal oriented. The most objective values in life are derived from our need to live and survive.</li>
+<li>Every value must be a desirable goal that an organism strives to achieve. The alternative to not achieving any value is an undesireable outcome.</li>
+<li>Virtues are actions that obtain and maintain our values.</li>
+<li>That which furthers life is good. That which harms life is evil.</li>
+<li>It is necessary to see the world as black and white in order to have good ethics. Most people would never do something that is completely evil, so evil must begin in the grey areas.</li>
+<li>Therefore, we should only stay in the white areas and refuse to compromise into the grey areas. Likewise, the ends can never justify the means. And it is evil to show mercy for evil.</li>
+<li>Independence mandates that one must be able to think for oneself. Integrity mandates that one must hold true to their ideals.</li>
+<li>Actions are only virtuous if they further the individual&rsquo;s life, but a rational being does not desire harming, manipulating, or exploiting others.</li>
+<li>Everyone must be judged by their actions so that we determine who is good and who is evil.</li>
+<li>Work is required in order to live. Pride is moral ambitiousness and the crowning reward of following good virtues.</li>
+<li>Capitalism is the only economic system that maximizes wealth and respects self-ownership and non-aggression.</li>
+<li>All rights are ultimately derived from the non-aggression principle. Positive rights don&rsquo;t exist because they require the fruits of someone else&rsquo;s labor.</li>
+<li>The only purpose of government should be to ensure that ethics, consequences, and the use of force are used correctly and objectively.</li>
+<li>Art is a selective re-creation of reality according to an artist&rsquo;s metaphysical value-judgments.</li>
+<li>The goal of philosophy should be to discern objective reality and figure out how to live life on Earth.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-disclaimer" class="outline-2">
+<h2 id="disclaimer"><span class="section-number-2">2.</span> Most People&rsquo;s Criticisms Of Objectivism And Why They&rsquo;re Wrong</h2>
+<div class="outline-text-2" id="text-disclaimer">
+<p>
+Most people who criticized Ayn Rand and Objectivism criticize her support for selfishness, her condemnation of altruism, and her support for Capitalism and Libertarianism.
+</p>
+
+<p>
+Most criticisms against Objectivism are naive and misguided about human nature, but this blog post is not your typical criticism of Ayn Rand and Objectivism.
+</p>
+</div>
+</div>
+
+<div id="outline-container-intro" class="outline-2">
+<h2 id="intro"><span class="section-number-2">3.</span> Introduction To This Critique</h2>
+<div class="outline-text-2" id="text-intro">
+<p>
+For the record, I used to identify as an Objectivist myself, until I started thinking for myself and realizing that most of the philosophy&rsquo;s tenants are fallacious. I disagree with Rand on just about everything, but there are a few things that Ayn Rand and I agree on:
+</p>
+<ol class="org-ol">
+<li>There is no such thing as supernatural phenomena (including a supernatural God),</li>
+<li>The integration of Empiricism and Rationalism (Kant was actually the first major philosopher to do this, so that makes Ayn Rand&rsquo;s claim that Kant didn&rsquo;t contribute anything to modern philosophy even weirder),</li>
+<li>The standards for certainty, and arbitrary notions should be rejected,</li>
+<li>Rational egoism is the correct way to live (however we justify this differently, mine is more sound since it uses biological and evolutionary reasoning),</li>
+<li>Free markets and negative rights are good grounds for running a society (although she doesn&rsquo;t truly support the negative <b>equal</b> right to land nor does she propose a method that is sufficient for preventing land monopolies),</li>
+<li>Her proposed ethical virtues of: independence, integrity, honesty, justice, productiveness, egoism (or selfishness as she calls it), and pride, and</li>
+<li>Most of what she has to say about aesthetics.</li>
+</ol>
+<p>
+Aside from those things, I disagree with everything else in Objectivism, and this essay will back up all its claims with comprehensive arguments and links to other blog essays that go into more detail.
+</p>
+
+<p>
+To be fair, it can be very easy to think that Objectivism is a good philosophy when someone doesn&rsquo;t know much about philosophy to begin with. The less someone knows about the world, the more amazed they will be upon discovering ideas that are unfamiliar to them. This is the same reason why Jordan Peterson has a lot of influence when his ideas aren&rsquo;t very bright either to someone who is already a rational deep-thinker.
+</p>
+
+<p>
+Like most philosophers throughout history, Ayn Rand made mistake after mistake after mistake, and the biggest problem with her philosophy isn&rsquo;t that it doesn&rsquo;t use any evolutionary, biological, or game theoretic reasoning. <b>Game Theory and proper Evolutionary Theory make Objectivism obsolete.</b> Moreover, since Objectivism often incubates Anarcho-Capitalists, it is a net-negative to civilization.
+</p>
+
+<p>
+We have to recall that Ayn Rand only had a high school education, so she probably didn&rsquo;t have a very good understanding of physics, chemistry, biology, mathematics, et cetera. The development of Objectivism has thus suffered from Ayn Rand&rsquo;s lack of further formal education beyond what she received. Two of the most glaring examples of this are: 1. she didn&rsquo;t incorporate any Evolutionary Reasoning into the philosophy (biology), and 2. she failed to recognize that the universe is incompatibly deterministic and materialistic (proven by physics and chaos theory, a branch of mathematics).
+</p>
+
+<p>
+While I needed to start thinking about philosophy <b>somewhere</b> when I was a teenager, her writings lead me down the wrong path of believing that morality was objective (fortunately I only believed that for three years). That wrong turn will cause the naive beginner to run around in circles endlessly: searching, pondering, and chasing after something that doesn&rsquo;t exist (objective morality), while simultaneously turning away solutions to the world&rsquo;s greatest problems, like eugenic reproduction.
+</p>
+
+<p>
+The vast majority of Objectivists are not very smart. The smarter Objectivists tend to eventually reject the philosophy once they think for themselves and reach different conclusions. The Objectivism movement largely consists of and attracts normies who weren&rsquo;t deep-thinkers to begin with. They are mostly people who never thought about philosophy until they read some of Ayn Rand&rsquo;s fiction novels. This is the main reason why the ideology has had substantial memetic success.
+</p>
+
+<p>
+Even then, most Objectivists still don&rsquo;t become deep-thinkers even after learning Ayn Rand&rsquo;s philosophy, as they tend to be very dogmatic about defending their faulty epistemology and arbitrary morals. It is very rare for someone to leave the Objectivism cult, although I managed to escape myself. For context, I was introduced to Ayn Rand via thegroundedlibertarian .com, so I wasn&rsquo;t a typical normie who got introduced by reading her fiction novels to begin with.
+</p>
+
+<p>
+To see my critique of the GroundedLibertarian.com, the site that I learned Objectivism from and first got interested in philosophy, <a href="./critique-of-GL.html">see this post</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-bad-axioms" class="outline-2">
+<h2 id="bad-axioms"><span class="section-number-2">4.</span> Why Aristotle&rsquo;s Axioms And Ayn Rand&rsquo;s Axioms Are Very Poorly Chosen</h2>
+<div class="outline-text-2" id="text-bad-axioms">
+<p>
+To quote from the Ayn Rand Lexicon:
+</p>
+<blockquote>
+<p>
+An axiom is a proposition that defeats its opponents by the fact that they have to accept it and use it in the process of any attempt to deny it.
+</p>
+</blockquote>
+<p>
+<a href="http://aynrandlexicon.com/lexicon/axioms.html">Ayn Rand Lexicon: Axioms</a>
+</p>
+
+<p>
+Basically, Ayn Rand considers an &ldquo;axiom&rdquo; a useful proposition for building a foundationalist theory of epistemology that can be <a href="https://en.wikipedia.org/wiki/Performative_contradiction">proven by performative contradiction</a>. The fact that she didn&rsquo;t use the term &ldquo;performative contradiction&rdquo; is indicative of her philosophical illiteracy, even though it&rsquo;s a widely used term in epistemology. And if she was trying to choose a set of performative contradictions for proving the axioms of her philosophy, then she did a very poor job at that for several reasons.:
+</p>
+<ol class="org-ol">
+<li>For starters, the Axioms of Classical Logic are a far superior axiomatic system for philosophy.</li>
+<li>She made a good third axiom (&ldquo;A is A&rdquo;), but she formed the Law of Non-Contradiction (LNC) as a corrollary of the Identity Axiom.
+<ol class="org-ol">
+<li>The LNC is supposed to be a separate axiom. In order to establish the LNC from the Identity Axiom, you have to assume (or implicitly assume) what you&rsquo;re trying to prove.
+<ol class="org-ol">
+<li>If &ldquo;A = A&rdquo; is the <i>only</i> premise that you have, &ldquo;A ≠ ¬A&rdquo; can <i>not</i> follow from <i>only</i> that premise because you don&rsquo;t have enough information (or axioms). That&rsquo;s why &ldquo;A ≠ ¬A&rdquo; is an axiom.</li>
+<li>The proof &ldquo;A = A, thus A ≠ ¬A&rdquo; does not conclude &ldquo;A ≠ ¬A&rdquo; unless you implicitly assume &ldquo;A ≠ ¬A&rdquo;. In Rand&rsquo;s case, she implicitly assumed &ldquo;A ≠ ¬A&rdquo;.</li>
+<li>She probably didn&rsquo;t realized that she implicitly assume &ldquo;A ≠ ¬A&rdquo; since it&rsquo;s so axiomatic.</li>
+</ol></li>
+<li>Not only that, but the Law of the Excluded Middle has not been established yet, so the metaphysical concept of &ldquo;¬A&rdquo; and the propositional concept of &ldquo;false&rdquo; have not been established yet.</li>
+</ol></li>
+<li>Even weirder, even though the LNC is supposedly a corollary under her system, she claims that it can be used to prove the first two axioms.
+<ol class="org-ol">
+<li>That would mean that the LNC isn&rsquo;t really a corollary.</li>
+<li>It would also conclude the the first two axioms are actually supposed to be corollaries instead.</li>
+<li>A true axiom is supposed to be something that cannot be proven, but is presupposed to form knowledge. As such, it shouldn&rsquo;t be possible to prove an axiom by proof by contradiction.</li>
+</ol></li>
+<li>She forgot two of the axioms of classical logic, and she didn&rsquo;t state the Identity Axiom first.</li>
+<li>Her Axioms only work in Metaphysics. By contrast, the axioms of classical logic have both metaphysical and propositional versions of themselves.</li>
+<li>Her insistence that her first two axioms are valid relies on using proof by contradiction by assuming the opposite of those two &ldquo;axioms&rdquo;, and showing self-refutation.
+<ol class="org-ol">
+<li>This doesn&rsquo;t work without first establishing the Law of Identity, the Law of the Excluded Middle, and the Law of Non-Contradiction beforehand, in that order.</li>
+</ol></li>
+<li>She didn&rsquo;t state the other five performative contradictions together with the first two. There are no good reasons why shouldn&rsquo;t all be stated together.</li>
+<li>Her explanations about what an &ldquo;axiom&rdquo; also contributed making this all more confusing.
+<ol class="org-ol">
+<li>In one part she claimed that axiom is something that can&rsquo;t be proven because it&rsquo;s self-evident.</li>
+<li>And in another part, she claimed that the axioms can be proven when denying them creates a contradiction (proof by contradiction).</li>
+<li>Either axioms <i>can</i> be proven, or they <i>cannot</i> be proven.</li>
+</ol></li>
+<li>When Ayn Rand argues that it is necessary to deny materialism, accept the validity of the sense, accept the existence of free will, and deny the arbitrary in order to do anything within the next fields of philosophy (epistemology, ethics, and so forth), she is adhering to coherentism rather than foundationalism, even though her philosophy accepts three basic beliefs (albeit poorly chosen ones). She argues that if we use the next fields of philosophy, then it would be contradictory to accept the negation of each of the propositions listed in the first sense of this paragraph.</li>
+</ol>
+
+<p>
+Moreover, the human mind does not begin with these axioms when it begins to understand the world around it. Aristotle&rsquo;s axioms are only useful when a human mind sufficiently processes the world around itself, and starts over with just the axioms and builds upon that step by step.
+</p>
+</div>
+</div>
+
+<div id="outline-container-unclear-definitions" class="outline-2">
+<h2 id="unclear-definitions"><span class="section-number-2">5.</span> Ayn Rand Failed To Use Clear Definitions And Semantics In Her Philosophy</h2>
+<div class="outline-text-2" id="text-unclear-definitions">
+<p>
+Ayn Rand claims that &ldquo;God&rdquo; doesn&rsquo;t exist, without ever defining &ldquo;God&rdquo;. You have to define what you&rsquo;re talking about before you can claim that something doesn&rsquo;t exist. <a href="https://en.wikipedia.org/wiki/Theological_noncognitivism">Theological Non-Cognitivism</a> is a more general position that asserts that whether or not &ldquo;God&rdquo; exists depends on how &ldquo;God&rdquo; is defined.
+</p>
+
+<p>
+<a href="../epistemology/answering-why-and-how.html">Theological Non-Cognitivism And The How Before Why Problem</a>
+</p>
+
+<p>
+Why not say &ldquo;Egoism&rdquo; rather than &ldquo;Selfishness&rdquo;, when the latter term has negative connotations and is typically associated with the wrong definition that we want to convey?
+</p>
+
+<p>
+Ayn Rand never defined free will. It is necessary to have multiple definitions of Free Will in order to clear up most of the semantics that muddle making progress on this ever-ongoing debate.
+</p>
+
+<p>
+Ayn Rand&rsquo;s definition of &ldquo;concept&rdquo; relies on the definition of &ldquo;property&rdquo;, but she never defines what a &ldquo;property&rdquo; is. A more coherent and non-circular definition for concept is: &ldquo;Anything or any idea that the human mind can think about.&rdquo; Read more at: <a href="../epistemology/1A-knowledge-and-concepts.html">Philosophical Foundations Part 1A: Knowledge and Concepts</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-philosophy-of-truth" class="outline-2">
+<h2 id="philosophy-of-truth"><span class="section-number-2">6.</span> Ayn Rand Didn&rsquo;t Have A Good Philosophy Of &ldquo;Truth&rdquo;</h2>
+<div class="outline-text-2" id="text-philosophy-of-truth">
+<p>
+All Objectivists have subconsciously adopted the correspondence theory of truth, but they never bothered to question whether it&rsquo;s actually right or not.
+</p>
+
+<p>
+To put it most concisely, the reason why objective truth does not exist is that it&rsquo;s not possible to have absolute, omniscient knowledge of reality. Therefore, conscious minds can only have subjective, perspective-dependent models of that objective reality. No proposition can ever be truly be labeled as &ldquo;objectively true&rdquo; because it&rsquo;s always possible to be wrong about that said propositions if further knowledge of reality invalidates that proposition&rsquo;s truth value assignment.
+</p>
+
+<p>
+Truth is essentially the same thing as knowledge, because whatever people know is what they will assert to be &ldquo;true&rdquo;.
+</p>
+
+<p>
+Read More: <a href="../epistemology/1B-truth-and-abyss.html">Philosophy of Truth</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-free-will" class="outline-2">
+<h2 id="free-will"><span class="section-number-2">7.</span> Ayn Rand Was Wrong About Free Will, Materialism, and Reductive Physicalism</h2>
+<div class="outline-text-2" id="text-free-will">
+<p>
+<a href="../epistemology/free-will.html">Free Will and Determinism</a>
+<b>Free Will</b>: Free will in the sense that we can do what as we please exists, but that does not prove that human behavior is not deterministic since what we want to do is determined by deterministic factors. The universe and everything is deterministic due to its cause-and-effect nature.
+</p>
+<dl class="org-dl">
+<dt>Metaphysical Free Will</dt><dd>Determinism is false (MFW is the opposite of determinism). This does not exist and can be disproven by proof by contradiction.</dd>
+<dt>Epistemological Free Will</dt><dd>Everything in the universe, including life, ultimately behaves according to deterministic and cause-and-effect principles.</dd>
+<dt>Agency</dt><dd>The two conditions that: 1. you can choose to do as you want, and 2. you are able to do it within your current circumstances. Since being conscious is a requirement in order to be &rsquo;capable&rsquo; of doing something, Agency has to be conscious by definition.</dd>
+<dt>Power</dt><dd>Power is all about agency. i</dd>
+</dl>
+
+<p>
+<a href="../epistemology/reductive-physicalism.html">The Case For Reductive Physicalism</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-knowledge-structure" class="outline-2">
+<h2 id="knowledge-structure"><span class="section-number-2">8.</span> The True Structure Of Knowledge</h2>
+<div class="outline-text-2" id="text-knowledge-structure">
+<p>
+Knowledge is structured according to Empirically-Grounded Coherentism, <i>not</i> Foundationalism. There are several problems with believing that knowledge is structured according to foundationalism instead of coherentism.
+</p>
+
+<p>
+Read more: <a href="../epistemology/1D-empirically-grounded-coherentism.html#foundationalism-is-less-fundamental">Why Knowledge is Not Foundationalist</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-epistemological-mistakes" class="outline-2">
+<h2 id="epistemological-mistakes"><span class="section-number-2">9.</span> Ayn Rand Made Several Epistemological Mistakes</h2>
+<div class="outline-text-2" id="text-epistemological-mistakes">
+<p>
+Ayn Rand believed that it&rsquo;s possible to have direct knowledge of reality, but this is false.
+</p>
+
+<p>
+There is no straight-forward answer to whether the mind is tabula rasa or not: <a href="../epistemology/tabula-rasa-eval.html">Evaluating Tabula Rasa</a>
+</p>
+
+<p>
+Ayn Rand&rsquo;s Philosophy doesn&rsquo;t talk about important critical thinking skills (CTS), fluid vs crystallized intelligence, different types of intelligence, etc.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga28ccc5" class="outline-2">
+<h2 id="orga28ccc5"><span class="section-number-2">10.</span> Ayn Rand Didn&rsquo;t Understand The Nature Of Emotions And Why They Exist</h2>
+<div class="outline-text-2" id="text-10">
+<p>
+i
+</p>
+
+<p>
+Emotions exist to make people better at reproducing and raising offspring.
+</p>
+
+<p>
+Pain And Pleasure: Pain and pleasure are biological motivators that were evolutionarily developed to trigger and provide impetus for sentient organisms to do things that sustain their lives and reproduction.
+</p>
+
+<p>
+Read More: <a href="https://thewaywardaxolotl.blogspot.com/2022/02/motivation.html?view=classic">The Drive-Reduction Theory of Pain, Pleasure, and Motivation</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-ignorance-of-evolutionary-reasoning" class="outline-2">
+<h2 id="ignorance-of-evolutionary-reasoning"><span class="section-number-2">11.</span> Objectivism Doesn&rsquo;t Use Evolutionary Reasoning</h2>
+<div class="outline-text-2" id="text-ignorance-of-evolutionary-reasoning">
+<p>
+i
+</p>
+
+<p>
+Objectivists tend to think that technology and innovation makes evolution obsolete, but they are wrong about this. Humans cannot transcend evolution. Humans were created by evolution, so evolution applies to us just like all other living things. Love does not exist merely to make you feel good or to be an expression of your feeling. Love exists because it made your ancestors more efficient at creating and raising children who would live to adulthood to have children of their own. That is the truth whether you accept it or not. And you are foolish and anti-reason to disagree with this.
+</p>
+
+<p>
+The real reasons why humans are the dominant species (it&rsquo;s not just our superior intelligence): <a href="../epistemology/3-evolution-theorems.html#global-human-dominance">Why Humans Are Dominant Worldwide</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-ignorance-of-biology" class="outline-2">
+<h2 id="ignorance-of-biology"><span class="section-number-2">12.</span> Ayn Rand Didn&rsquo;t Understand Biology</h2>
+<div class="outline-text-2" id="text-ignorance-of-biology">
+<p>
+i
+</p>
+</div>
+
+<div id="outline-container-race-denialism" class="outline-3">
+<h3 id="race-denialism"><span class="section-number-3">12.1.</span> Objectivism Denies Race Realism, a Scientifically Backed Position</h3>
+<div class="outline-text-3" id="text-race-denialism">
+<p>
+i
+</p>
+
+<p>
+Read More: <a href="../FAQs/race-realism-FAQs.html">Race Realism FAQs</a>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-individualism" class="outline-2">
+<h2 id="individualism"><span class="section-number-2">13.</span> A Fiercely Individualist Conception Of Morality Is Incompatible With Most Cultures</h2>
+<div class="outline-text-2" id="text-individualism">
+<p>
+Most Libertarians are inclined to insist that race doesn&rsquo;t matter, that &ldquo;there&rsquo;s only individuals&rdquo;, that <a href="../FAQs/race-realism-FAQs.html">race realism</a> is pseudo-science, and that race and genetics don&rsquo;t matter for how individualistic, intelligent, hard-working a person can be, but there are several problems with believing this:
+</p>
+<ul class="org-ul">
+<li>Most academic research is fake, so whatever academia has to say race realism cannot be trusted.</li>
+<li>It would be contradictory to simultaneously understand evolutionary theory, to insist that racial differences don&rsquo;t matter, and to refuse to apply evolutionary theory under the ideological dogma that racial differences shouldn&rsquo;t matter. The hard fact is that race and genetics <i>do</i> matter.</li>
+<li><a href="../epistemology/free-will.html#determinism-vs-freedom">Metaphysical Free Will</a> does not exist. Due to the Metaphysical Nature of the Universe, everybody&rsquo;s destiny is already predetermined, and <a href="../epistemology/free-will.html#determinism-parents-and-children">this section contains a good, concise list of reasons</a> why that is the case.</li>
+<li>Prioritizing the an individualist moral code that emphasizes freedom above everything violates <a href="https://en.wikipedia.org/wiki/Is%E2%80%93ought_problem">Hume&rsquo;s Guillotine</a>, that is: What ought to be cannot be deduced from what is. Even if an ultra-individualist society where race doesn&rsquo;t matter might be favorable to Libertarians, that doesn&rsquo;t mean that such a society is destined to arise.</li>
+<li>Most of the World&rsquo;s Cultures are not inclined towards individualism (more on this in the next two paragraphs).</li>
+</ul>
+<p>
+There is plenty of evidence to prove that genes are the main factor controlling how individualist a person&rsquo;s personality is. In the serotonin transporter gene for example, East Asians are significantly more likely to have the short &ldquo;S&rdquo; allele compared to Europeans who are relatively more likely to have the longer &ldquo;L&rdquo; allele, which may be a contributing factor to the more collectivist culture in East Asia versus the more individualist culture in Europe. <a href="https://royalsocietypublishing.org/doi/10.1098/rspb.2009.1650">Source</a>
+</p>
+
+<p>
+Read More: <a href="../journey/case-against-libertarianism.html#individualism">Individualism, And The Problem With Idealizing It Too Far</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-why-life-is-selfish" class="outline-2">
+<h2 id="why-life-is-selfish"><span class="section-number-2">14.</span> Ayn Rand Didn&rsquo;t Understand <i>Why</i> Life Evolves To Be Selfish</h2>
+<div class="outline-text-2" id="text-why-life-is-selfish">
+<p>
+Again, Ayn Rand failed to apply any biological or evolutionary understanding to her philosophy.
+</p>
+
+<p>
+Selfishness must ultimately be defended using evolutionary reasoning, but Ayn Rand didn&rsquo;t use any evolutionary reasoning to defend selfishness because she wasn&rsquo;t very knowledgeable. This is understandable because she didn&rsquo;t have anything more than a measly high school education.
+</p>
+
+<p>
+While she was right that selfishness is better than altruism, she didn&rsquo;t apply the evolutionary reasoning why that is the case.
+</p>
+
+<p>
+The Egoist Tendency For Humans To Justify Themselves: Whether everybody accepts it or not, they are an egoist acting to achieve their own values, whatever those may be. However, Rand has not addressed that humans have a tendency to justify themselves, their values, and their actions at almost every cost since everybody acts according to egoist reasons. Sentient organisms will justify themselves even if their justifications are inconsistent with other aspects of their internalized moral philosophy, and this can be especially seen in humans.
+</p>
+
+<p>
+Even though Objectivists proclaim to be selfish, they&rsquo;re all still mostly humanists at heart. They don&rsquo;t understand life is intrinsically violent, they deny biological realism, they believe in recycled moral narratives, and they are oblivious to the <a href="./transhumanism-vs-anprimism.html#problems-caused-by-technology">negative consequences of technology</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-ignorance-of-game-theory" class="outline-2">
+<h2 id="ignorance-of-game-theory"><span class="section-number-2">15.</span> Objectivism Doesn&rsquo;t Use Game-Theoretic Reasoning</h2>
+<div class="outline-text-2" id="text-ignorance-of-game-theory">
+<p>
+i
+</p>
+
+<p>
+Read More: <a href="../journey/case-against-libertarianism.html#libertarians-and-game-theory">Libertarians Neglect Game Theory</a>
+</p>
+
+<p>
+Ayn Rand also believed that freedom and morality are objective. That is absolutely ridiculous because: 1. morality depends on values, and 2. values are subjective. Therefore, morality and freedom are also subjective.
+</p>
+</div>
+</div>
+
+<div id="outline-container-objective-morality-nonsense" class="outline-2">
+<h2 id="objective-morality-nonsense"><span class="section-number-2">16.</span> Ayn Rand Was Wrong About &ldquo;Objective Morality&rdquo;</h2>
+<div class="outline-text-2" id="text-objective-morality-nonsense">
+<p>
+See <a href="../FAQs/post-overton-FAQs.html">this FAQs page on why Objective Morality doesn&rsquo;t exist</a>.
+</p>
+
+<p>
+MORAL RELATIVISM: Moral relativism is a corollary that is derived from proving that all value is subjective. This theorem is a <b>very</b> big deal because it leads to very, very different conclusions. Proving the subjectivity of morality debunks the entire foundation of the Objectivist theory of ethics such that everything must be re-thought from the ground up. Although a lot of the ethical and political philosophical proposals end up the same in the end, they end up that way for different reasons, and it is especially important to understand <b>why</b> they are the way they are.
+</p>
+
+<p>
+One of the most glaring mistakes is that Rand failed to recognize reason can NOT serve as a basis for morality since morality is inherently subjective since it is based on value, which is also inherently subjective.
+</p>
+
+<p>
+Reason cannot serve as a basis for morality, and sometimes there are in fact legitimate cases where even emotions can be a valid source of knowledge. Even though the most important component of Ayn Rand&rsquo;s philosophy of Objectivism is Reason and Rationalism above all, it turns out that not even her conception of Rationalism is perfect, even though it&rsquo;s the most important part of the philosophy and up to this point, one of the last few remaining pieces of the philosophy that I agreed with until re-evaluating it just now.
+</p>
+
+<p>
+Another thing that she&rsquo;s overlooked is that reason isn&rsquo;t necessarily the <b>only</b> valid source of knowledge since evolutionary reasoning and natural intuition/instincts prove that emotions can also be a source of knowledge when it comes to ethics since emotions do partly serve the purpose of functioning as a moral accounting system. For that matter, natural fears such as spiders and falling from high heights should also be considered knowledge since they indicate to us that our ancestors had to avoid those things before they reproduced the next generation of humans, hence we should also avoid those things if we want to improve our odds of survival.
+</p>
+
+<p>
+VIEWING MORALITY AS BLACK AND WHITE: It is a <b>huge</b> mistake to view morality as black and white. Not only is morality subjective, but even if it were objective, there&rsquo;s far more ways to be wrong than there are ways to be right, so anybody who merely <b>thinks</b> that they are imposing supposedly objective morality is actually probably wrong. Many people would also use their belief that they are imposing the one and only true &ldquo;objective&rdquo; morality as a justification to rule with an iron fist.
+</p>
+
+<p>
+<a href="../FAQs/post-overton-FAQs.html#technology-and-moral-progress">How Technology Creates the Illusion of &ldquo;Moral Progress&rdquo;</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-immoral-robot-poor-thought-experiment" class="outline-2">
+<h2 id="immoral-robot-poor-thought-experiment"><span class="section-number-2">17.</span> Why The Immortal Robot Thought Experiment Is Inferior To A Simpler And More Insightful Thought Experiment</h2>
+<div class="outline-text-2" id="text-immoral-robot-poor-thought-experiment">
+<p>
+Rand&rsquo;s thought experiment of imagining an immortal and invincible robot and using that to make conclusions about value is less elegant and unnecessarily complicated.
+</p>
+
+<p>
+A simpler thought experiment that arrives at the same conclusions and provides better insight would be to imagine a universe that has no sentient life at all. This thought experiment takes less explaining to get the point across, and it is more readily apparent that all value ultimately originates from sentient life, hence a universe with no sentient life is a universe with no value at all.
+</p>
+
+<p>
+&ldquo;If there is no sentient life in the universe, then there is no Value either. It follows that all Value ultimately originates from sentient beings and their perspectives on reality. Since Value is necessarily perspective-dependent from the viewpoint of sentient being(s), it is thus impossible for Value to be objective by the definition of &rdquo;Objective&ldquo;. &rdquo;Objective Value&ldquo; is therefore an oxymoron.
+</p>
+
+<p>
+Moreover, recognizing that value must originate from the subjective perspectives of sentient organisms goes a huge step forward towards proving a very important and undeniable fact that Rand was never able to recognize: that all value is subjective. Since her thought experiment is less useful and more complicated, it doesn&rsquo;t contribute anything new to the field of philosophy.
+</p>
+
+<p>
+Morality is based on Value. If Objective Value doesn&rsquo;t exist, then it is necessarily the case that objective morality cannot exist either. <b>Morality is therefore subjective since it is based on Value, which is based on the perspectives(s) of sentient life.</b> QED.&ldquo;
+</p>
+
+<p>
+As a follow-up question, isn&rsquo;t the mental exercise written above (to imagine a universe with no sentient life) a better, more concise thought experiment than Ayn Rand&rsquo;s Immoral Robot thought experiment, since it manages to arrive at the same conclusions (when supplied with some additional reasoning), while simultaneously managing to also prove that morality is subjective?
+</p>
+</div>
+</div>
+
+<div id="outline-container-purpose-of-government" class="outline-2">
+<h2 id="purpose-of-government"><span class="section-number-2">18.</span> Ayn Rand Didn&rsquo;t Understand The True Purpose Of Government</h2>
+<div class="outline-text-2" id="text-purpose-of-government">
+<p>
+The first and foremost goal of government is to resolve Prisoner Dilemmas and Tragedies of the Commons. Government comes from the necessity to create a reasonable set of laws that would create a societal framework from which selfish individuals can cooperate together for greater mutual gain (than if they didn&rsquo;t cooperate together). Cooperation is the foundation of civilization, and the best legal code is the one that enables that to the greatest extent possible.
+</p>
+</div>
+</div>
+
+<div id="outline-container-cooperation-vs-collectivism" class="outline-2">
+<h2 id="cooperation-vs-collectivism"><span class="section-number-2">19.</span> Ayn Rand Didn&rsquo;t Distinguish Between Cooperation Versus Collectivism</h2>
+<div class="outline-text-2" id="text-cooperation-vs-collectivism">
+<p>
+While Rand was right to denounce collectivism, she didn&rsquo;t address how cooperation is an extension of selfishness, nor did she explain how leftists tend to conflate cooperation with collectivism as a way to fallaciously advocate for collectivism.
+</p>
+
+<p>
+Read More: <a href="../FAQs/post-overton-FAQs.html#cooperation-vs-collectivism">The Difference Between Cooperation Vs Collectivism</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-wrong-about-libertarianism" class="outline-2">
+<h2 id="wrong-about-libertarianism"><span class="section-number-2">20.</span> Ayn Rand Was Wrong About Libertarianism</h2>
+<div class="outline-text-2" id="text-wrong-about-libertarianism">
+<p>
+<a href="../journey/case-against-libertarianism.html">The Case Against Libertarianism And Anarchism</a>
+</p>
+
+<p>
+Aggression is subjective, so the Non-Aggression Principle is also subjective. When different countries all define &ldquo;aggression&rdquo; differently, it&rsquo;s no surprise why different countries have different laws.
+</p>
+</div>
+</div>
+
+<div id="outline-container-equal-negative-land-rights" class="outline-2">
+<h2 id="equal-negative-land-rights"><span class="section-number-2">21.</span> Why Georgism And Equal Land Rights Are Necessary For A Truly Free-Market Economy</h2>
+<div class="outline-text-2" id="text-equal-negative-land-rights">
+<p>
+Having an equal right to land is a negative right and is necessary for a truly free-market economy, and this can be proven by at least a few completely different syllogistic reasoning processes: <a href="../journey/geolibertarian-syllogisms.html">GeoLibertarian Syllogisms</a>
+</p>
+
+<p>
+The Georgist Theory of Property (GTP) can be stated using the following syllogistic reasoning:
+</p>
+<ol class="org-ol">
+<li>Every person owns themself.</li>
+<li>Every person thus owns the labor that they produce.</li>
+<li>Every person thus owns anything produced by their labor.</li>
+<li>People can trade things that they create with their labor for things that other people create with their labor.</li>
+<li>Land is not created by labor.</li>
+<li>But land is necessary in order to be productive (because it&rsquo;s one of the three factors of production: land, labor, and capital).</li>
+<li>In order for everybody to have an equal right to be productive<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>, everybody must have an equal right to land.</li>
+<li>In order to have a free-market economy, everybody must have an equal right to be productive<sup><a id="fnr.1.100" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>, otherwise the economy is anti-free-market.</li>
+</ol>
+<p>
+<b><b>Conclusion:</b></b> In order to have a truly free-market economy, everybody must have an equal right to land. Likewise, no one should have unchecked ownership of land because they did not create the land, lest the economy be anti-free-market.
+</p>
+</div>
+
+<div id="outline-container-land-value-tax" class="outline-3">
+<h3 id="land-value-tax"><span class="section-number-3">21.1.</span> Land Value Tax is Justified</h3>
+<div class="outline-text-3" id="text-land-value-tax">
+<p>
+The only reason why Ayn Rand was ever opposed to taxation in the first place was because it deprives people of the fruits of their labor. But land is <i>not</i> created by labor, so LVT is not a true tax and is actually a misnomer since Land Value Taxes don&rsquo;t deprive people of the fruits of their labor (when only the unimproved value of the land is taxed, otherwise it would be called a property tax). After connecting these two facts in my mind, I had to seriously question why I was against Land Value Tax at all in the first place, and it created cognitive dissonance for me:
+</p>
+<ol class="org-ol">
+<li>Taxation is slavery with extra steps if it deprives people of the fruits of their Labor.</li>
+<li>Land is not created by Labor.</li>
+</ol>
+<p>
+Conclusion: Land Value Taxes are not theft nor slavery because Land is not created by Labor.
+After I realized this, I started seriously investigating Georgism and why some people supported it, and now I&rsquo;ve been Georgist ever since. I then started learning about Urban Planning, and you would be absolutely amazed to find out just how terrible urban planning around the world has become due to anti-Georgist policies, and the amount of damage that that does on the World Economy is absolutely insane once you add up all the negative consequences.
+</p>
+
+<p>
+Unfortunately, some people are going to be stubborn and oppose Land Value Tax out of ideological reasons, rather than practical or economic reasons. To those people, I will ask: &ldquo;Why would you trust a naive fiction writer who never achieved anything more than a high school education over the consensus of all major economists that Land Value Tax is the best tax for human society?&rdquo;
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-ignorance-of-market-failures" class="outline-2">
+<h2 id="ignorance-of-market-failures"><span class="section-number-2">22.</span> Objectivism Does Not Address Market Failures Like Planned Obsolescence</h2>
+<div class="outline-text-2" id="text-ignorance-of-market-failures">
+<p>
+&ldquo;Capitalism&rdquo; isn&rsquo;t the be-all end-all solution to economics.
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=j5v8D-alAKE">The Problem of Planned Obsolescence</a>
+</p>
+
+<p>
+The right-to-repair is enormously important for preventing planned obsolescence in many cases, and it is best guaranteed by government regulations.
+</p>
+</div>
+</div>
+
+<div id="outline-container-cornucopian-nonsense" class="outline-2">
+<h2 id="cornucopian-nonsense"><span class="section-number-2">23.</span> Cornucopianism is Wrong</h2>
+<div class="outline-text-2" id="text-cornucopian-nonsense">
+<p>
+<a href="../FAQs/overpopulation-FAQs.html#malthusianism-cornucopnianism">Cornucopianism is Wrong</a>
+</p>
+
+<p>
+Overpopulation is a <i>real</i> concern. <a href="http://www.justopia.org/overpopulation---malthus-being-wrong-doesnt-make-you-right.html">And Malthus being wrong doesn&rsquo;t make you right.</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-debunking-ancapism" class="outline-2">
+<h2 id="debunking-ancapism"><span class="section-number-2">24.</span> Debunking Anarcho-Objectivism</h2>
+<div class="outline-text-2" id="text-debunking-ancapism">
+<p>
+Although Rand was not an Anarcho-Capitalist, many of her followers are Anarcho-Capitalists since Objectivism is a gateway into believing in Anarcho-Capitalist nonsense. I myself, was even an Objectivist before I became a misguided Ancap for 2 years.
+</p>
+
+<p>
+<a href="../journey/case-against-libertarianism.html#polycentric-law-problems">The Problems Concerning Polycentric Law</a>
+</p>
+
+<p>
+<a href="../journey/case-against-libertarianism.html#free-markets-circular-reasoning">Why Government is Necessary in order to Establish Free Markets.</a>
+</p>
+
+<p>
+Anarcho-Capitalists are just as ignorant as Communists, and their political ideology is equally dangerous to Modern Civilization. It makes me cringe with disgust to remember that I actually used to believe that Anarcho-Capitalism and Voluntaryism could actually work. Fortunately, Anarcho-Capitalism is not a mainstream ideology and it never will be.
+</p>
+</div>
+</div>
+
+<div id="outline-container-net-negative-to-civilization" class="outline-2">
+<h2 id="net-negative-to-civilization"><span class="section-number-2">25.</span> Objectivism Is A Net-Negative To Civilization</h2>
+<div class="outline-text-2" id="text-net-negative-to-civilization">
+<p>
+Although Objectivism may have been explicitly opposed to Anarchism and Anarcho-Capitalism, Objectivism still frequently incubates Anarcho-Capitalists since Objectivism is a Libertarian philosophy that is in favor of absolutist moralizing. The Anarcho-Objectivists are a case of <a href="https://thewaywardaxolotl.blogspot.com/2022/07/status-pyramid-schemes.html?view=classic">purity spiraling among the Objectivist community</a>. For that reason, Objectivism is a net-negative to civilization because Ancaps are, by far, more opposed to Georgism than literally every other political ideology out there, and are thus the greatest opponents to solving the greatest economic problems that are facing the modern world.
+</p>
+
+<p>
+So Objectivism is supposed to advocate for a very pro-free-market philosophy, it ironically promotes an extremely anti-free market philosophy since it&rsquo;s not possible to have free markets without a government to establish them, nor is it possible to have free markets without equal negative land rights for everybody.
+</p>
+</div>
+</div>
+
+<div id="outline-container-conclusion" class="outline-2">
+<h2 id="conclusion"><span class="section-number-2">26.</span> Conclusion</h2>
+<div class="outline-text-2" id="text-conclusion">
+<p>
+Objectivists are not deep-thinkers nor good philosophers. The people are on <a href="https://www.reddit.com/r/Objectivism/">r/Objectivism</a> like to pretend to be enlightened people who are good at philosophy, when in actuality, they&rsquo;re all just normies who are of average intelligence, are bad at philosophy, and lack critical thinking skills.
+</p>
+
+<p>
+They discovered Ayn Rand&rsquo;s Objectivism by reading fiction novels, and people who are introduced to philosophy via that way tend to not be intellectuals to begin with.
+</p>
+
+<p>
+There&rsquo;s also a filter effect at play here too. The smarter Objectivists don&rsquo;t tend to stay Objectivists forever, so they eventually reject the philosophy, and the pool of actual intellectuals (if any) within the Objectivist Community grows ever smaller.
+</p>
+
+<p>
+It is a shame that tens of millions of dollars are wasted every year promoting Objectivism by the Ayn Rand Institute and the Atlas Society, when all that money could be spent promoting quality philosophy and creating truly rational thinkers for tackling the greatest problems of the 21st century.
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Having an equal right to be productive means having an equal opportunity to be as productive as anyone else.
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: Zero Contradictions</p>
+<p class="date">Created: 2023-02-11 Sat 17:35</p>
+</div>
+</body>
+</html>

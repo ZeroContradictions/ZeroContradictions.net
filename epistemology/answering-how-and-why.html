@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-02-07 Tue 02:18 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Nature Of Answering "How?" And "Why?"</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="description" content="Attempting to explain &quot;Why&quot; things are the way before understanding &quot;How&quot; reality works leads to anti-scientific propositions." />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="../blog-posts.css" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html#epistemology"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">The Nature Of Answering &ldquo;How?&rdquo; And &ldquo;Why?&rdquo;</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#definitions">1. Definitions</a></li>
+<li><a href="#why-Qs-examples">2. Examples Of Why-Questions That Start Scientific Inquiries</a>
+<ul>
+<li><a href="#ultimate-philosophical-Qs">2.1. The Three Ultimate Philosophical Questions</a></li>
+</ul>
+</li>
+<li><a href="#why-Qs-to-how-Qs">3. Examples Of Why-Questions That Later Became Rephrased As How-Questions</a></li>
+<li><a href="#answering-why-questions">4. Answering Why Questions</a>
+<ul>
+<li><a href="#how-and-why-in-foreign-languages">4.1. &ldquo;<i>How</i>&rdquo; And &ldquo;<i>Why</i>&rdquo; In Other Languages</a></li>
+</ul>
+</li>
+<li><a href="#why-before-how-problem">5. The &ldquo;<i>Why</i>&rdquo; Before &ldquo;<i>How</i>&rdquo; Problem</a>
+<ul>
+<li><a href="#how-science-works">5.1. How Science Works</a></li>
+<li><a href="#how-religion-works">5.2. How Religion Works</a></li>
+</ul>
+</li>
+<li><a href="#philosophical-thinking-priorities">6. Prioritization Of Thinking In Philosophy</a></li>
+<li><a href="#wrong-philosophical-Qs">7. When People Get Stuck Asking The Wrong Philosophical Questions&#x2026;</a>
+<ul>
+<li><a href="#examples-of-wrong-philosophical-Qs">7.1. List Of Wrong Philosophical Questions That Are Commonly Asked</a></li>
+</ul>
+</li>
+<li><a href="#empirical-verification">8. Empirical Verification: How Would We Know What We Know If We Only Had Our Senses And The Techniques From The Knowledge We Currently Know To Figure Out Hard Science?</a>
+<ul>
+<li><a href="#street-epistemology">8.1. Street Epistemology: Checking Our Understanding</a></li>
+</ul>
+</li>
+<li><a href="#igtheism">9. My Thoughts On Theological Non-Cognitivism And Igtheism</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<p>
+Note: I haven&rsquo;t finished writing this file yet.
+</p>
+
+<div id="outline-container-definitions" class="outline-2">
+<h2 id="definitions"><span class="section-number-2">1.</span> Definitions</h2>
+<div class="outline-text-2" id="text-definitions">
+<dl class="org-dl">
+<dt>&ldquo;<i>How?</i>&rdquo;</dt><dd>i</dd>
+<dt>&ldquo;<i>Why?</i>&rdquo;</dt><dd>i</dd>
+<dt>make-believe (uncountable)</dt><dd><ul class="org-ul">
+<li>(childish) The quality or act of pretending; acting as if something is true when in fact one knows it is not.</li>
+<li>(childish) The action of pretending or imagining that things are better than they really are.</li>
+</ul></dd>
+<dt>Scientific Method</dt><dd>i</dd>
+<dt>Reasoning Process</dt><dd>i</dd>
+<dt>Science</dt><dd>i</dd>
+<dt>Religion</dt><dd>i</dd>
+<dt>The Religious / Make-Believe Approach (for Understanding the Universe)</dt><dd>Attempting to explain the &ldquo;<i>why</i>&rdquo; questions and then explain the &ldquo;<i>how</i>&rdquo; questions.</dd>
+<dt>The Scientific Approach (for Understanding the Universe)</dt><dd>Attempting to explain <i>how</i> things work <i>before</i> explaining <i>why</i> things work the way they do (if one can even get to the latter part).</dd>
+<dt>The Principle Of Explaining &ldquo;<i>How</i>&rdquo;? Before &ldquo;<i>Why</i>&rdquo;?</dt><dd>i</dd>
+<dt>word</dt><dd>definition</dd>
+<dt>word</dt><dd>definition</dd>
+<dt><a href="https://en.wikipedia.org/wiki/Interrogative_word">Interrogative Word</a></dt><dd>i</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-why-Qs-examples" class="outline-2">
+<h2 id="why-Qs-examples"><span class="section-number-2">2.</span> Examples Of Why-Questions That Start Scientific Inquiries</h2>
+<div class="outline-text-2" id="text-why-Qs-examples">
+<p>
+Often science begins with Why-questions. Here are some examples:
+</p>
+<ul class="org-ul">
+<li>Why are the animals and plants of this world the way they are?</li>
+<li>Why does lightning occur?</li>
+<li>Why is iron magnetic?</li>
+<li>Why are voiceless obstruents more common than voiced obstruents among the world&rsquo;s languages?</li>
+<li>Why are there so many similar species across Earth&rsquo;s continents?</li>
+<li>What do kidneys do?</li>
+<li>What causes fire?</li>
+<li>Why are humans the way they are?</li>
+</ul>
+<p>
+However, it is often the case that when answering <i>why</i> something happens we end up explaining how it happens. By the definition of &ldquo;<i>why</i>&rdquo;, someone could easily just state the motive, cause, or reason of whatever subject the question is asking about in a single stands or just a few words, but when the question is being asked with an expectation of an in-depth answer, answering with only a single sentence or a few words is not acceptable, thus very descriptive and comprehensive descriptions have to be given in order to answer the question. Nevertheless, it is still the case that in order to answer &ldquo;<i>why</i>&rdquo; questions, we must explain how things work and answer other questions along the way as they come up before we can answer the original &ldquo;<i>Why?</i>&rdquo; question.
+</p>
+
+<p>
+But in doing so, it also becomes possible to ask a similar question that is reworded such that it asks &ldquo;How?&rdquo; instead of &ldquo;Why?&rdquo; and leads to the exact same answer. And then when the answer is talk to future learners who are learning about the topic, The questions are more likely to be presented as asking &ldquo;How?&rdquo; instead of asking &ldquo;Why?&rdquo;, although sometimes they might still be asked with &ldquo;Why?&rdquo;, especially if it just feels more natural to ask the questions with that interrogative and/or The person asking the question has no idea where to start answering it or the concepts needed to explain the answer to the question that they want to know.
+another way to think of the difference between How and Why is that &ldquo;How?&rdquo; is the same question as &ldquo;Why?&rdquo; except that &ldquo;How?&rdquo; is asking for more detailed answer.
+</p>
+</div>
+
+<div id="outline-container-ultimate-philosophical-Qs" class="outline-3">
+<h3 id="ultimate-philosophical-Qs"><span class="section-number-3">2.1.</span> The Three Ultimate Philosophical Questions</h3>
+<div class="outline-text-3" id="text-ultimate-philosophical-Qs">
+<ul class="org-ul">
+<li>What is the basis of truth?</li>
+<li>What is the basis of value?</li>
+<li>What is the basis of agency?</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-why-Qs-to-how-Qs" class="outline-2">
+<h2 id="why-Qs-to-how-Qs"><span class="section-number-2">3.</span> Examples Of Why-Questions That Later Became Rephrased As How-Questions</h2>
+<div class="outline-text-2" id="text-why-Qs-to-how-Qs">
+<p>
+The Questions Shown Previously, but reworded to ask &ldquo;How?&rdquo; instead of &ldquo;Why?&rdquo;:
+</p>
+<ul class="org-ul">
+<li>How does Evolution work?</li>
+<li>How does lightning occur?</li>
+<li>Why is iron magnetic?</li>
+<li>Why are voiceless obstruents more common than voiced obstruents among the world&rsquo;s languages?</li>
+<li>Why are there so many similar species across Earth&rsquo;s continents?</li>
+<li>What do kidneys do?</li>
+<li>What causes fire?</li>
+<li>Why are humans the way they are?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-answering-why-questions" class="outline-2">
+<h2 id="answering-why-questions"><span class="section-number-2">4.</span> Answering Why Questions</h2>
+<div class="outline-text-2" id="text-answering-why-questions">
+<p>
+<a href="https://en.wikipedia.org/wiki/Four_causes">Wikipedia: Four Causes</a>
+</p>
+</div>
+
+<div id="outline-container-how-and-why-in-foreign-languages" class="outline-3">
+<h3 id="how-and-why-in-foreign-languages"><span class="section-number-3">4.1.</span> &ldquo;<i>How</i>&rdquo; And &ldquo;<i>Why</i>&rdquo; In Other Languages</h3>
+<div class="outline-text-3" id="text-how-and-why-in-foreign-languages">
+<p>
+Are there languages that make different semantic distinctions between their equivalent ways to asking <i>how</i> and/or <i>why</i>? if so, what kinds of semantic differences exist between those languages and English&rsquo;s way of saying things?
+Known Examples:
+</p>
+<ul class="org-ul">
+<li>¿Por qué? and ¿Para qué? in Spanish</li>
+<li>i</li>
+<li>i</li>
+<li>i</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-why-before-how-problem" class="outline-2">
+<h2 id="why-before-how-problem"><span class="section-number-2">5.</span> The &ldquo;<i>Why</i>&rdquo; Before &ldquo;<i>How</i>&rdquo; Problem</h2>
+<div class="outline-text-2" id="text-why-before-how-problem">
+</div>
+<div id="outline-container-how-science-works" class="outline-3">
+<h3 id="how-science-works"><span class="section-number-3">5.1.</span> How Science Works</h3>
+<div class="outline-text-3" id="text-how-science-works">
+<p>
+<a href="../epistemology/2C-reasoning-process.html">The Reasoning Process And Scientific Method</a>
+</p>
+
+
+
+
+<p>
+Science aims to describe the <i>how</i>&rsquo;s of how reality works <i>before</i> explaining the <i>why</i>&rsquo;s. What religion does instead is it skips over the <i>how</i>&rsquo;s and jumps straight to answering the <i>why</i> questions, and then it uses the fabricated answers to those <i>Why?</i> questions to answer the <i>How?</i> questions about how reality works. Religion fails to correctly understand the world precisely because it works in the opposite direction that Science does (Science would describe <i>how</i> reality works before it ever describes <i>why</i>, if it ever even gets to that point).
+</p>
+
+<p>
+More specifically, when science doesn&rsquo;t do a very good job of explaining the why&rsquo;s about realities, these why&rsquo;s relate to ontologies (e.g. gravity, creation of universe, forces of universe, chemical structure of universe, properties of universe, etc)
+</p>
+
+<p>
+The &ldquo;<i>Why</i>&rdquo; Before &ldquo;<i>How</i>&rdquo;? Razor is probably the simplest, the most general, and most general way to reject all supernatural phenomena (including God) in a single argument. And the simplicity of the argument could be fittingly explained after explaining the reasoning process and the criteria and nature of degrees of certainty/skepticism and why arbitrary statements are not epistemically valid.
+</p>
+</div>
+</div>
+
+<div id="outline-container-how-religion-works" class="outline-3">
+<h3 id="how-religion-works"><span class="section-number-3">5.2.</span> How Religion Works</h3>
+<div class="outline-text-3" id="text-how-religion-works">
+<p>
+The only way anyone could possibly explain <i>why</i> something works before describing <i>how</i> it works is if they fabricated a bunch of false made-up premises to explain the <i>why</i>&rsquo;s, and then used the understanding generated by those false made-up assumptions to explain the how&rsquo;s.
+</p>
+
+<p>
+But of course, the main purpose of religion besides helping people <b>think</b> they know why the world works the way it does is to give people a philosophy of sorts (obviously not a rational one though) for understanding why they should live their lives the way they do / think they should. So although religion uses fabricated nonsense to explain the &ldquo;<i>how</i>&rdquo; questions of life, it needs to create the fabrications for explaining the &ldquo;hows&rdquo; in such a way that it helps them live their lives. For example, religious people often believe that God favored monogamy, and so they make monogamy part of their religion and use the fabrication of God to help explain it. i
+</p>
+
+<p>
+During the Scientific Revolution and the Enlightenment humans had for the first time in many millennia started trying to explain the <i>how</i>&rsquo;s of Reality instead of the <i>why</i>&rsquo;s. And it is during this era that people started rejecting religion in mass for the first time, because they started rejecting the commonplace epistemic error of trying to explain Why before explaining How, and believing in religion as the fallacious conclusion.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-philosophical-thinking-priorities" class="outline-2">
+<h2 id="philosophical-thinking-priorities"><span class="section-number-2">6.</span> Prioritization Of Thinking In Philosophy</h2>
+<div class="outline-text-2" id="text-philosophical-thinking-priorities">
+<ol class="org-ol">
+<li>Putting &ldquo;<i>What Is</i>&rdquo; before &ldquo;<i>What Ought</i>&rdquo;.</li>
+<li>Putting &ldquo;<i>How?</i>&rdquo; before &ldquo;<i>Why?</i>&rdquo;.</li>
+<li>i</li>
+</ol>
+</div>
+</div>
+
+
+
+<div id="outline-container-wrong-philosophical-Qs" class="outline-2">
+<h2 id="wrong-philosophical-Qs"><span class="section-number-2">7.</span> When People Get Stuck Asking The Wrong Philosophical Questions&#x2026;</h2>
+<div class="outline-text-2" id="text-wrong-philosophical-Qs">
+<p>
+A critical reason why philosophical progress hasn&rsquo;t progressed very far historically is because people are asking the wrong questions, in large because people can only ask questions that come to their minds, not questions that they never would have thought to ask given their environment, education, and circumstances.
+</p>
+
+<p>
+Often times, people are asking the wrong questions:
+</p>
+<ul class="org-ul">
+<li>Is the mind tabula rasa? -The answer is too complicated to definitely say yes or no to this question.</li>
+<li>Which planet is the closest planet to Earth? -The answer depends on what you mean by the closest planet to Earth. There are four different questions that have more precise answers such that they each have clear, unambiguous answers.</li>
+<li>Should we obey the law? -The correct question to ask is: Is the law reasonable/justified? And the answer is no.</li>
+</ul>
+</div>
+
+<div id="outline-container-examples-of-wrong-philosophical-Qs" class="outline-3">
+<h3 id="examples-of-wrong-philosophical-Qs"><span class="section-number-3">7.1.</span> List Of Wrong Philosophical Questions That Are Commonly Asked</h3>
+<div class="outline-text-3" id="text-examples-of-wrong-philosophical-Qs">
+<p>
+<a href="../language/sapir-whorf-conways-law-semantics.html">How the Sapir-Whorf Effect Causes People to Ask the Wrong Philosophical Questions since they have come to subconsciously take the meanings of words for granted</a>:
+</p>
+<ul class="org-ul">
+<li>Is there a God? -We should ask: Define God?</li>
+<li>Is the mind tabula rasa? -We should ask: Is the mind ever tabula rasa, to what extent, and at what stages of developments?</li>
+<li>Do we have free will? -We should ask: How do we define free will? Besides determinism, what are the alternatives if we don&rsquo;t have free will? Is &rsquo;probability&rsquo; (define) one of them?
+<ul class="org-ul">
+<li>Perhaps it&rsquo;s wrong to ask if it&rsquo;s determinism or if it&rsquo;s free will. Maybe it&rsquo;s just probability and hence neither deterministic or free will.</li>
+</ul></li>
+<li>What ethics should we live under? -Is morality subjective or objective?
+<ul class="org-ul">
+<li>Should we obey the law? -We should ask: Is the law justified?</li>
+</ul></li>
+<li>&ldquo;Is X true?&rdquo; &#x2014;&gt; &ldquo;Suppose that yes, X. Then what? What changes in how I should live my life? If nothing, then it does not matter whether X or not X anyway.&rdquo;</li>
+</ul>
+
+
+<p>
+[must finish writing this]
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-empirical-verification" class="outline-2">
+<h2 id="empirical-verification"><span class="section-number-2">8.</span> Empirical Verification: How Would We Know What We Know If We Only Had Our Senses And The Techniques From The Knowledge We Currently Know To Figure Out Hard Science?</h2>
+<div class="outline-text-2" id="text-empirical-verification">
+<p>
+If you ask anyone &ldquo;Which is larger, the sun or the moon?&rdquo;
+</p>
+
+<p>
+Every educated person will say the sun and may even tell you that the sun is about 400 times the size of the moon, by diameter. An uneducated person will probably remember from school that the sun is bigger or they may not and go with what they see.
+</p>
+
+<p>
+Now you ask &ldquo;Well, they appear to be the same size. So, how do you know that the sun is bigger? How would people have figured this out during ancient times before telescopes and such were invented?&rdquo;
+</p>
+
+<p>
+At this point the uneducated person may find it puzzling and interesting. The educated person will be offended. &ldquo;Are you questioning my intelligence? You must be a conspiracy theorist.&rdquo;
+</p>
+
+<p>
+Very few people will actually know the observations which were needed for us to even question whether the sun and the moon were different sizes. Fewer still will know the experiments done and the body of empirical knowledge required to make us certain that the sun is larger. Yet, the educated people are all certain the sun is bigger. They are also certain they have arrived at this conclusion using rational decision making.
+</p>
+
+<p>
+There are a lot of educated people who are not very smart. Being mediocre and educated makes people indignant when they are questioned.
+</p>
+
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Problem_of_the_criterion">Wikipedia: Problem of the Criterion</a>
+</p>
+
+<p>
+The <a href="https://en.wiktionary.org/wiki/provenance#English">Provenance</a> of Belief
+</p>
+
+
+<p>
+<a href="https://en.wikipedia.org/wiki/What_the_Tortoise_Said_to_Achilles">Wikipedia: <i>What the Tortoise Said to Achilles</i></a>
+</p>
+</div>
+
+<div id="outline-container-street-epistemology" class="outline-3">
+<h3 id="street-epistemology"><span class="section-number-3">8.1.</span> Street Epistemology: Checking Our Understanding</h3>
+<div class="outline-text-3" id="text-street-epistemology">
+<p>
+<a href="https://streetepistemology.com/">Street Epistemology</a>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-igtheism" class="outline-2">
+<h2 id="igtheism"><span class="section-number-2">9.</span> My Thoughts On Theological Non-Cognitivism And Igtheism</h2>
+<div class="outline-text-2" id="text-igtheism">
+<p>
+The Wikipedia article on <a href="https://en.wikipedia.org/wiki/Theological_noncognitivism">Theological Non-Cognitivism</a>.
+</p>
+
+<p>
+I&rsquo;ve never agreed with the Transcendental Argument for God (TAG), but I&rsquo;ve always thought that the <a href="https://en.wikipedia.org/wiki/Existence_of_God#Cosmological_argument">Cosmological Argument</a> was the best argument for God, however it could only prove a non-supernatural Deistic God(s) at best. <a href="https://www.philosophybasics.com/branch_deism.html">Deism</a> is basically the position that God created the Universe, but no longer intervenes in its affairs. Nobody may completely understand why the universe was created, but even then, it is highly dishonest to conclude that an all-knowing, all-powerful magical man was the creator without evidence and for lack of a better explanation. Every supernatural definition of God is non-existent.
+</p>
+
+<p>
+Relevant Essay: <a href="https://expandingrationality.substack.com/p/the-homunculus-fallacy-and-its-inverse">The Homunculus Fallacy And Its Inverse</a>
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Zero Contradictions</p>
+<p class="date">Created: 2023-02-07 Tue 02:18</p>
+</div>
+</body>
+</html>

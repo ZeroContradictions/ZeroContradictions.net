@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-01-25 Wed 22:00 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Why Georgism And Population Control Both Imply Each Other</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="description" content="You can't have Georgism without (Eugenic) Population Control and vice versa. The two best ideas of the 20th century that didn't catch on." />
+<meta name="keywords" content="Georgism, EPC, license, reproduction, population, limit, supply, demand, finite, growth" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="../blog-posts.css" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html#economics"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Why Georgism And Population Control Both Imply Each Other</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#pop-dyanmics">1. Introduction To Population Dynamics</a></li>
+<li><a href="#why-georgism-implies-EPC">2. Why Georgism Implies EPC: The Georgist Approach To EPC</a>
+<ul>
+<li><a href="#georgism-to-EPC-syllogism">2.1. The Connection Between Georgism And EPC, Stated More Concisely</a></li>
+<li><a href="#georgism-wont-work-without-EPC">2.2. Why Georgism Will Not Function Correctly Without EPC</a></li>
+<li><a href="#EPC-makes-long-term-georgism-feasible">2.3. EPC Would Make Georgism And UBI More Feasible</a></li>
+</ul>
+</li>
+<li><a href="#EPC-implies-georgism">3. Why Eugenic Population Control Implies Georgism</a></li>
+<li><a href="#conclusion">4. Why This Matters</a>
+<ul>
+<li><a href="#reproduction-tax-conditions">4.1. Under what conditions would the Reproduction Tax not be applied?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-pop-dyanmics" class="outline-2">
+<h2 id="pop-dyanmics"><span class="section-number-2">1.</span> Introduction To Population Dynamics</h2>
+<div class="outline-text-2" id="text-pop-dyanmics">
+<p>
+No matter how much people may want to deny it, <a href="../FAQs/overpopulation-FAQs.html#why-DTT-is-wrong">Demographic Transition Theory is wrong</a>, and Overpopulation is a serious concern for humanity.
+</p>
+
+<p>
+If we don&rsquo;t regulate our population by ourselves soon, then the world population will exceed its carrying capacity, and <a href="https://thewaywardaxolotl.blogspot.com/2015/09/life-is-violent.html">humanity will eventually return to being limited by war, disease, and famine</a> just as it has been for all of human history. If this happens, <a href="../FAQs/overpopulation-FAQs.html#life-is-zero-sum">life will become a zero-sum game</a> because every existing organism can only exist at the cost of another. It doesn&rsquo;t have to be this way though.
+</p>
+
+<p>
+<a href="../FAQs/overpopulation-FAQs.html">Our Overpopulation FAQs</a> explains in comprehensive detail what overpopulation is, how/when it happens, why the world is destined to become overpopulated under its current management, the devastating consequences that will happen if the Earth faces overpopulation, and the fairest, most reasonable solution that we can implement to prevent that from happening.
+</p>
+
+<p>
+<a href="../FAQs/EPC-FAQs.html">Our EPC FAQs page</a> offers an introduction to what EPC is, explains its misconceptions, explains why it will be necessary to preserve modern civilization, and makes a proposal for how we should implement it in the fairest, most efficient, and most reasonable way possible (this is the same solution detailed on the Overpopulation FAQs page).
+</p>
+</div>
+</div>
+
+<div id="outline-container-why-georgism-implies-EPC" class="outline-2">
+<h2 id="why-georgism-implies-EPC"><span class="section-number-2">2.</span> Why Georgism Implies EPC: The Georgist Approach To EPC</h2>
+<div class="outline-text-2" id="text-why-georgism-implies-EPC">
+<p>
+<a href="https://en.wikipedia.org/wiki/Georgism">Georgism</a> is an economic ideology proposed by Henry George in 1879 that proposes that people who occupy land must compensate the rest of society for being able to occupy said land, since privately owning land without compensating society for the occupation of said land prevents everybody from being able to use it, while also enabling <a href="https://en.wikipedia.org/wiki/Rent-seeking">rent-seeking</a>. Keep in mind that when we&rsquo;re talking about land here, anything that is a <a href="https://en.wikipedia.org/wiki/Land_(economics)">naturally-occurring resource that exists in fixed supply</a> counts as land. The economic definition of land is thus not limited to geographic land, but also includes things like natural resources, atmosphere quality, geostationary orbits, portions of the electromagnetic spectrum, and even a license to have a biological human child, as I shall make the case in this essay.
+</p>
+
+<p>
+<a href="./georgism-elevator-pitch.html">See this webpage</a> for a quick overview of Georgism and all the undeniable benefits that it would bring to society if implemented.
+</p>
+
+<p>
+If we have a solid understanding of population dynamics from the previous section, and we don&rsquo;t want the population of our society to exceed the carrying capacity (<a href="https://thewaywardaxolotl.blogspot.com/2015/09/life-is-violent.html">in the interest of avoiding war, famine, and emigration</a>), then the next step is to establish what we should want the maximum population limit of our society to be. Since overpopulation can happen instantly if a sufficiently catastrophic disaster occurs, it&rsquo;s a good idea to leave some buffer room between the legal population limit that we declare and the maximum carrying capacity of our environment.
+</p>
+
+<p>
+Moreover, if our society has a legal maximum population limit by law, then we necessarily have to regulate how many children each citizen is allowed to have, lest we reach overpopulation, as well as the war, famine, and emigration that would inevitably result from that. We can achieve this regulation by mandating that every couple that wants to have a child to first obtain a reproduction license, which can be granted if a list of reasonable requirements are meant (e.g. stable career, no criminal history, two consenting parents, etc).
+</p>
+
+<p>
+Since there is a fixed supply of reproduction licenses that can be distributed out to everyone who wants to have children, and acquiring the right to have a child is a necessary resource for reproduction, reproduction licenses thus constitute economic land, by the definition given in this essay&rsquo;s introduction. Georgist economic reasoning thus concludes that the fairest solution would be to auction off the right to have a child to every member of society who wants to have a biological child. In essence, all the auction money collected from this would constitute the Reproduction Tax. The money collected from the auction winners would help fund government expenditures, and every auction winner would be allowed to have one child for each license that they had won in the auction. The more children that a person wants to have, the more money they would have to bid in the auctions. Enforcing Georgist principles as part of a legal code thus generates competition. Eventually, the auction price to buy a reproduction license would settle at a stable amount of money, determined by free-market forces.
+</p>
+
+<p>
+We&rsquo;ve established that reproduction licenses are economic land, and as expected, they even function like economic land too. Anybody who occupies geographic land for themselves prevents everybody else from being able to occupy that land. Likewise, if there is a fixed number of children that can be born each year, then every person who has a biological child is doing so at the cost of someone else not being able to have a child of their own. If we want to avoid rent-seeking and bestowing undeserved privileges to anybody who is fortunate enough to acquire land before everybody does, then we need to auction off the land. The auction revenue (Location Value Tax and Reproduction Tax in this case) is to fund the government&rsquo;s expenditures.
+</p>
+
+<p>
+So there we have it. Technically, Georgism by itself does not imply EPC because a person also needs to have a correct understanding of biology that leads them to propose legal population control limits on the society. <span class="underline">But once both the biological and economic understanding are combined, they complement each other extremely well.</span>
+</p>
+</div>
+
+<div id="outline-container-georgism-to-EPC-syllogism" class="outline-3">
+<h3 id="georgism-to-EPC-syllogism"><span class="section-number-3">2.1.</span> The Connection Between Georgism And EPC, Stated More Concisely</h3>
+<div class="outline-text-3" id="text-georgism-to-EPC-syllogism">
+<p>
+Let&rsquo;s restate all the premises and chain of reasoning of our argument more concisely:
+</p>
+<ol class="org-ol">
+<li>Infinite population growth is sustainable. All populations eventually reach their carrying capacities. When this happens, <a href="../FAQs/overpopulation-FAQs.html#life-is-zero-sum">life becomes a zero-sum game</a>.</li>
+<li>Therefore, there should a legal maximum population limit enforced by law, with some buffer room between this limit at the theoretical maximum carrying capacity of the Earth.</li>
+<li>Since this implies that people can only have a finite number of children each generation, it makes sense that there should be limits on who is having children and how many.</li>
+<li>That being said, there would thus be an <a href="https://en.wikipedia.org/wiki/Economic_rent">economic rent</a> for anybody who decides to have X number of children. If there is a maximum number of children who can be born each year or five years or so, then anybody who decides to have a child would be doing so at the cost of other people being unable to have children of their own.</li>
+<li>Thus, there is sound reasoning and solid justification for auctioning off the right to have children (which constitutes a reproduction tax set by market forces) for anybody who decides to have children. The reproduction tax is equal to the economic rent to have a child.</li>
+<li>Since there exists: 1. genetic variation in the population, 2. competition to purchase the right to have children at the auctioning price, 3. selection resulting from the winners of the auctions and legal requirements, and 4. reproduction, this means that evolution would take place, thus leading the genome to develop eugenic qualities. This is completely unlike the current world we live in where dysgenics and overpopulation are both developing due to the elimination of selectionary pressures on the human population.</li>
+<li>It follows that recognizing the need for population control <i>and</i> recognizing that a Georgist approach would be the fairest and most reasonable way to implement said population control would lead to an EPC system with Georgist characteristics.</li>
+</ol>
+
+<p>
+Some Georgists might object that if we limit the number of people who can be born each year on the basis that it is economic land (every married couple needs a license for each child that they have), then everybody also needs a license to live since the country has a legal maximum population size, and therefore only a finite number of people can live in the country at a time. But this does not follow because under the EPC system that we are proposing, there would be some amount of buffer room between the legal maximum population limit and the carrying capacity of the environment to avoid overpopulation, so if the carrying capacity dropped during an emergency, there wouldn&rsquo;t be a need to decide who gets to live and who doesn&rsquo;t, nor would it be necessary to kill off the most elderly members of the society in the event of an overpopulation crisis (when the population is dangerously higher than the carrying capacity).
+</p>
+
+<p>
+Moreover, since populations naturally reproduce up to the carrying capacities of their environments when the species is well-adapted to its environment, then the population would spend most of its time in an Evolutionarily Stable State (ESS), so there wouldn&rsquo;t be any need to worry about whether or not the population will have enough children up to the Legal Maximum Population Limit. But in the event that the population is significantly lower than the carrying capacity, then <a href="#reproduction-tax-conditions">there wouldn&rsquo;t be any need to tax reproduction at all</a>. Since the population of the EPC country would spend most of its time the legally maximum population limit with very fluctuation from one year to the next, the population size would be very constant for many years or decades, assuming that the government doesn&rsquo;t pass a law to change the maximum population birth rate, and no unexpected events like war occur.
+</p>
+
+<p>
+The other reason why Georgists should be in favor of EPC is that a Georgist society would eventually fail without it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-georgism-wont-work-without-EPC" class="outline-3">
+<h3 id="georgism-wont-work-without-EPC"><span class="section-number-3">2.2.</span> Why Georgism Will Not Function Correctly Without EPC</h3>
+<div class="outline-text-3" id="text-georgism-wont-work-without-EPC">
+<p>
+If there is a Georgist system in place where LVT is collected to fund government expenditures and the remaining money is distributed back to the population as a <a href="https://en.wikipedia.org/wiki/Citizen%27s_dividend">Citizen&rsquo;s Dividend</a> (CD) for every adult citizen, then it is destined that the factions and ethnic groups of society with the highest fertility rates could choose to have more children with the intent of receiving a greater percentage of the CD income that is to be delivered to all the citizens (e.g. the Amish). Without ensuring that everybody who has children is guaranteed to be a productive member of society, this makes it likely that a parasitic faction of society that has high fertility would be able to grow at the cost of everyone else.
+</p>
+
+<p>
+On the other hand, if Eugenic Population Control is mandated by the government and there is a Georgist Economic System in place, then it would not be possible for one ethnic/social group of society to have more children with the intent of collectively receiving a larger Citizen&rsquo;s Dividend compared to everybody outside the social group. People can only have children if they have a <a href="../FAQs/overpopulation-FAQs.html#overpop-solution">government license to do so</a>, which requires paying the auctioning price for a reproduction license.
+</p>
+
+<p>
+It is true that Georgism would likely expand the carrying capacity of the Earth by causing land to be used more efficiently and other factors. However, since Georgism would increase the wealth of any society that adopts it, <a href="../FAQs/overpopulation-FAQs.html#rising-wealth-and-fertility">we know for a fact that this would increase birth rates</a>. Furthermore, <a href="../FAQs/overpopulation-FAQs.html#if-no-pop-regulation">no political system will be invulnerable to the effects of overpopulation unless it enforces population control</a>, so it&rsquo;s true of every industrial technological society that population control will be necessary for long-term sustainability.
+</p>
+</div>
+</div>
+
+<div id="outline-container-EPC-makes-long-term-georgism-feasible" class="outline-3">
+<h3 id="EPC-makes-long-term-georgism-feasible"><span class="section-number-3">2.3.</span> EPC Would Make Georgism And UBI More Feasible</h3>
+<div class="outline-text-3" id="text-EPC-makes-long-term-georgism-feasible">
+<p>
+<a href="https://thewaywardaxolotl.blogspot.com/2020/04/the-case-against-ubi.html?view=classic">This post by Blithering Genius</a> suggests that UBI would accelerate the increase of dysgenics in the modern world.
+</p>
+
+<p>
+While that is true, it&rsquo;s unlikely that that would happen if LVT-funded UBI was accompanied with EPC. In <a href="./UBI-critique.html#LVT-eliminates-COLAs">my Critique on UBI</a>, I explain how production would not decrease if taxes are collected on land and natural resources instead of income (labor), sales, and property improvements, and how LVT would strongly incentivize the construction of more housing, thus equalizing the cost of living in all urban areas more closely to everywhere else and eliminating the necessity to have different UBIs for different areas. LVT makes UBI more feasible, and if we coupled that with EPC, then it just might work. But I will note that I&rsquo;m still skeptical of UBI since I wonder if there are better ways to equally distribute land values and guarantee equal land rights for everybody than Henry George&rsquo;s Citizen&rsquo;s Dividend proposal.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-EPC-implies-georgism" class="outline-2">
+<h2 id="EPC-implies-georgism"><span class="section-number-2">3.</span> Why Eugenic Population Control Implies Georgism</h2>
+<div class="outline-text-2" id="text-EPC-implies-georgism">
+<p>
+If we want to select for people who will generate more wealth for the rest of society to enjoy, then we need to eliminate rent-seeking, which is defined as gaining wealth without producing wealth. In order to eliminate rent-seeking (land speculation in particular), we need to have Georgist economic policies. If we do not eliminate rent seeking in our society, but we have auction prices as the main factor for determining who gets to have children, then it&rsquo;s entirely possible for someone to get rich by rent-seeking and to use that money to buy many reproduction licenses. But this is not what we want. Someone who acquires their wealth via rent-seeking is someone who did not generate any new wealth to society. If such a person is allowed to have children, then we are selecting for freeloaders, not productive people who will generate lots of wealth.
+</p>
+
+<p>
+Georgism eliminates rent-seeking with regards to land speculation. Thus, a society with a proper Eugenic Population Control system that selects for productivity must also have a Georgist legal code. Supporting EPC thus implies supporting Georgism.
+</p>
+</div>
+</div>
+
+<div id="outline-container-conclusion" class="outline-2">
+<h2 id="conclusion"><span class="section-number-2">4.</span> Why This Matters</h2>
+<div class="outline-text-2" id="text-conclusion">
+<p>
+Not only do EPC and Georgism both imply each other, but it&rsquo;s also not possible to have one without the other. A society cannot have effective EPC without Georgism, and there cannot be lasting Georgism without having EPC. In order for a society to have EPC or Georgism, it must have both of them.
+</p>
+
+<p>
+The Georgism-EPC Theorem also solves the question of how Reproduction Tax Rates should be set. The answer is that said tax rates would be determined by market forces, with respect to the supply of the reproduction licenses<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>, the demand for reproduction licenses<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>, and the price of reproduction licenses, all of which can be displayed on a supply-and-demand curve.
+</p>
+
+
+<div id="orgd547711" class="figure">
+<p><img src="../images/Maximum_taxation_with_perfectly_inelastic_supply.svg" alt="Maximum_taxation_with_perfectly_inelastic_supply.svg" class="org-svg" />
+</p>
+<p><span class="figure-number">Figure 1: </span>On this graph, the supply curve is a straight vertical line because there is a fixed supply of reproduction licenses.</p>
+</div>
+
+<p>
+If we want to succeed in accomplishing both ideas, we should start by more strongly promoting the one that will be easier to get into the Overton Window. Given how taboo and socially unacceptable it is to suggest eugenics or mandatory population control nowadays, it will definitely be easier to promote Georgism first since Georgism would benefit everybody, including normies. If we have Georgism, all we&rsquo;ll have left to do to get people on board with EPC is to help them understand biology and population dynamics, get them to overcome their moral intuitions, and show how Georgist reasoning can be applied to the EPC solution, as explained in this essay&#x2026; but unfortunately people probably won&rsquo;t get on board with this until a major catastrophe happens that causes the Earth and modern technology to have reached their brink with respect to overpopulation. I have hypothesized on the more likely way how overpopulation would take place in the future at <a href="../FAQs/overpopulation-FAQs.html#next-overpop-crisis">this link here</a>. Nevertheless, promoting Georgism and EPC to open-minded people is a step in the right direction.
+</p>
+
+<p>
+Note: I&rsquo;ve actually explained my reasoning to Georgists who are against EPC, and while they were noticeably disturbed and uncomfortable about how Georgism could imply EPC, they did have to concede that my reasoning was sound and consistent with Georgist Theory, even though they were still against eugenics and population control for moral reasons. While it&rsquo;s true that most people in general are morally opposed to EPC, I hypothesize that the fact that Georgists have had to admit that there is a connection between Georgism and population control would suggest that Georgists are probably going to be more receptive to EPC than the average person.
+</p>
+
+<p>
+Figure 1: <a href="https://en.wikipedia.org/wiki/File:Maximum_taxation_with_perfectly_inelastic_supply.svg">Maximum Taxation With Perfectly Inelastic Supply</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, by <a href="https://en.wikipedia.org/wiki/User_talk:VBGFscJUn3">Explodicle</a>.
+</p>
+</div>
+
+<div id="outline-container-reproduction-tax-conditions" class="outline-3">
+<h3 id="reproduction-tax-conditions"><span class="section-number-3">4.1.</span> Under what conditions would the Reproduction Tax not be applied?</h3>
+<div class="outline-text-3" id="text-reproduction-tax-conditions">
+<p>
+The conditions are easy to understand, provided that one has an understanding of both Georgism <i>and</i> population dynamics.
+</p>
+
+<p>
+If EPC was enacted in a country, and the number of people who apply for reproduction licenses is smaller than the number of babies that can be born within that year, then there would be no tax on reproduction. If this is the case, <i>and</i> the government wants to raise the birth rates of the country, then it makes perfect sense to not tax reproduction at all because that would decrease the birth rates and do the opposite of what we want to happen. This is just like how there is no need to tax land or natural resources in order to solve the tragedy of the commons with regards to scarce resources if there is plenty of valuable land for everybody.
+</p>
+
+<p>
+That being said, if the developed / Western World were to transition over to this proposed EPC scheme, it&rsquo;s likely that would be no reproduction taxes for a few decades since the West currently has below replacement fertility, a declining population, and is probably well below the maximum carrying capacity of the West. The last point will be especially true if we successfully transition to Georgism, since that would raise the maximum carrying capacity of the West because it would cause all resources to be used far more efficiently than they are now. Reproduction thus wouldn&rsquo;t start getting taxed unless there were more people applying for reproduction licenses than the legal supply of reproduction licenses, whatever year that starts to happen.
+</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Since there would be a fixed supply of reproduction licenses, reproduction licenses thus count as <a href="https://en.wikipedia.org/wiki/Land_(economics)">economic land</a>.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+The demand for reproduction licenses would consist of: 1. how many children the total population wishes that it could have, and 2. how much money prospective parents are willing to pay for each reproduction license.
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: Zero Contradictions</p>
+<p class="date">Created: 2023-01-25 Wed 22:00</p>
+</div>
+</body>
+</html>

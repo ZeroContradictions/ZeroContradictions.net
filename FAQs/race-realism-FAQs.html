@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-03-20 Mon 04:53 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Race Realism FAQs</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="description" content="Going over the common misconceptions of race realism and human biodiversity from a biological realist perspective." />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="../blog-posts.css" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html#FAQs"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Race Realism FAQs</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#intro">1. What is Race Realism?</a></li>
+<li><a href="#definitions">2. Definitions</a></li>
+<li><a href="#jaymans-race-realism-FAQs">3. JayMan&rsquo;s Race Realism FAQs</a></li>
+<li><a href="#social-construct">4. Isn&rsquo;t Race just a social construct?</a></li>
+<li><a href="#pseuodo-science">5. Hasn&rsquo;t Academia Debunked Race Realism As Anti-Scientific Pseudoscience?</a></li>
+<li><a href="#IQ-scores">6. Isn&rsquo;t it the case that there is no objective way to quantify and define &ldquo;intelligence&rdquo; with IQ scores?</a></li>
+<li><a href="#environmental-factors">7. Aren&rsquo;t most / all racial disparities better explained by environmental factors?</a>
+<ul>
+<li><a href="#intelligence-inheritability">7.1. Racial Disparities in Intelligence</a></li>
+<li><a href="#race-gap-crime-rates">7.2. The Race Realist Explanation for the Disparity in Crime Rates</a>
+<ul>
+<li><a href="#tribal-warfare">7.2.1. Wikipedia Articles Citing Tribal Warfare Between Native-Americans</a></li>
+<li><a href="#native-american-agriculture">7.2.2. Wikipedia Articles Citing Agriculture Practices Among Native-Americans</a></li>
+</ul>
+</li>
+<li><a href="#race-gap-academic">7.3. Racial Disparities in Academic Achievement and Educational Attainment</a></li>
+<li><a href="#race-gap-economics">7.4. Racial Disparities in Economic Status</a></li>
+<li><a href="#race-gap-single-parents">7.5. Racial Disparities in Single-Parent Households</a></li>
+</ul>
+</li>
+<li><a href="#averages-and-exceptions">8. Aren&rsquo;t there exceptionally smart people from all races?</a>
+<ul>
+<li><a href="#starting-tabula-rasa">8.1. But aren&rsquo;t all individuals are born with the same amount of knowledge?</a></li>
+</ul>
+</li>
+<li><a href="#races-better-than-others">9. Do Race Realists believe that some races are better than others?</a>
+<ul>
+<li><a href="#racial-preferences">9.1. But having a preference to be around people of one&rsquo;s own race is normal and natural.</a></li>
+</ul>
+</li>
+<li><a href="#not-racists-nazis-supremacists">10. Are all race realists racists, Nazis, and/or white supremacists?</a>
+<ul>
+<li><a href="#not-racist">10.1. Race realism does not imply racism.</a></li>
+<li><a href="#not-white-supremacist">10.2. Race realism does not imply white supremacy.</a></li>
+<li><a href="#nazism">10.3. Nazism is justified with pseudo-scientific beliefs.</a></li>
+</ul>
+</li>
+<li><a href="#race-realism-examples">11. Examples of Race Realism Among Humans</a></li>
+<li><a href="#racists">12. If race realists don&rsquo;t necessarily have to be racist, then why are so many of them racist?</a></li>
+<li><a href="#race-mixing">13. Are race realists against race-mixing?</a></li>
+<li><a href="#ethnostate">14. Do race realists want to construct an ethnostate?</a></li>
+<li><a href="#collectivism">15. Does race realism promote collectivism?</a></li>
+<li><a href="#why-race-realism-matters">16. Why does it matter that people come to terms with race realism?</a></li>
+<li><a href="#great-replacement">17. Isn&rsquo;t The Great Replacement Of White People Just A Myth?</a>
+<ul>
+<li><a href="#white-preservation-ethnostate">17.1. If the Great Replacement is Real, wouldn&rsquo;t the best way to stop it be to create an ethnostate?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<hr />
+<p>
+Note: I haven&rsquo;t finished writing this file yet.
+</p>
+
+<div id="outline-container-intro" class="outline-2">
+<h2 id="intro"><span class="section-number-2">1.</span> What is Race Realism?</h2>
+<div class="outline-text-2" id="text-intro">
+<p>
+<b>Race Realism</b>: Race Realism is a subcategory of Biological Realism. Being a race realist means acknowledging that:
+</p>
+<ol class="org-ol">
+<li>Race is defined as &ldquo;a statistical cluster of genetic variation characterized by phenotypic similarity&rdquo;, and</li>
+<li>All the genes of the various races in the world occur at different statistical frequencies for each race due to all the different evolutionary and selectionary pressures that persisted in their ancestral environments for many thousands of years, and</li>
+<li>Race is often a categorization scheme for human beings based on phenotypic similarity.</li>
+</ol>
+<p>
+That&rsquo;s it. But you have to understand what a &ldquo;statistical cluster&rdquo; is, and what that means with regards to race and genetics, as well as understanding that racial differences are continuous, not discrete like the distinction between species. [Race Realism] ≠ [Racism].
+</p>
+</div>
+</div>
+
+<div id="outline-container-definitions" class="outline-2">
+<h2 id="definitions"><span class="section-number-2">2.</span> Definitions</h2>
+<div class="outline-text-2" id="text-definitions">
+<dl class="org-dl">
+<dt>Evolution</dt><dd>The change in the heritable characteristics of biological populations over successive generations. Evolution is a three-step process consisting of: 1. Reproduction (to excess), 2. Variation (caused by mutations) in offspring, 3. Selection.</dd>
+<dt>Biological Realism</dt><dd>The unbiased application of the implications of evolutionary reasoning onto human beings, regarding race, sex, selfishness, eugenics/dysgenics, and intrinsic violence.</dd>
+<dt>Race Realism</dt><dd><a href="#intro">See the previous section.</a></dd>
+<dt>Race</dt><dd>A statistical cluster of genetic variation characterized by phenotypic similarity. Races are both social constructs and useful categories for describing biological realities.</dd>
+<dt>Statistical Cluster</dt><dd>A grouping of a set of objects in such a way that objects in the same group (called a cluster) are more similar (in some sense) to each other than to those in other groups (clusters). For more info, see: <a href="https://en.wikipedia.org/wiki/Cluster_analysis">Wikipedia: Cluster Analysis</a>.</dd>
+<dt>Mixed-Race</dt><dd>Having genes and ancestry from multiple different races. Note that being Mixed-Race cannot be well-defined unless two or more races are defined beforehand.</dd>
+<dt>Ethnicity / Ethnic Group</dt><dd>A grouping of people who identify with each other on the basis of shared attributes that distinguish them from other groups. Those attributes can include common sets of traditions, ancestry, language, history, society, culture, nation, religion, or social treatment within their residing area.</dd>
+<dt>Eugenostate</dt><dd>A state that enforces Eugenic Population Control, Laissez-Faire Eugenics, and Immigration restrictions, regardless of race or ethnicity.</dd>
+<dt>Ethnostate</dt><dd>An ethnonationalist state that enforces racial or ethnic homogeneity. Ethnostates could theoretically enforce eugenics policies as well, but <a href="https://thewaywardaxolotl.blogspot.com/2020/01/eugenostate-versus-ethnostate.html?view=classic">that would be harder to implement in an ethnostate for a number of reasons</a>. Ethnostates also require more complicated immigration policies than eugenostates.</dd>
+<dt>Racism</dt><dd>Irrational prejudice or discrimination based upon race or ethnicity.</dd>
+<dt>The West</dt><dd>Countries that have majority European populations and/or have been influenced by Western Culture, including Europe, the Americas, Australia, and New Zealand. Sometimes I use this term more generally to also include Japan, South Korea, and Taiwan since those countries have also been influenced by Western culture, and have decent genetics for modernity, as far as our policy objectives are concerned.</dd>
+<dt>The Great Replacement (of White People)</dt><dd>The phenomenon where white people are being replaced by foreign ethnicities within Western countries. It is very real and in several decades, it is projected to be finished by the end of the 21st century.</dd>
+<dt>White Preservationism</dt><dd>A movement to combat the Great Replacement by increasing white fertility rates in the Western World. From a eugenics standpoint, the goal of white preservationism is to preserve (most of) the (good) genes of Europeans, not necessarily to preserve white people as a distinctive race. Zero Contradictions supports white preservationism.</dd>
+<dt>White Supremacy</dt><dd>The racist belief that white people are superior to all other races. Zero Contradictions condemns white supremacy.</dd>
+<dt>Race Denialism</dt><dd>The denial of Race Realism, either with fallacies and/or a refusal to extend the implications of evolutionary reasoning onto human beings.</dd>
+<dt>Race Creationism</dt><dd>The same thing as Race Denialism, with the connotation that the belief is similar to religious dogma.</dd>
+<dt>Racial Solidarity (v1)</dt><dd>Solidarity between all the members of a race with each other.</dd>
+<dt>Racial Solidarity (v2)</dt><dd>Solidarity between people from different races with each other.</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-jaymans-race-realism-FAQs" class="outline-2">
+<h2 id="jaymans-race-realism-FAQs"><span class="section-number-2">3.</span> JayMan&rsquo;s Race Realism FAQs</h2>
+<div class="outline-text-2" id="text-jaymans-race-realism-FAQs">
+<p>
+<a href="https://jaymans.wordpress.com/jaymans-race-inheritance-and-iq-f-a-q-f-r-b/#clines">JayMan&rsquo;s Race, Inheritance, and IQ FAQs</a>: JayMan&rsquo;s FAQs page focuses more on the scientific evidence for race realism, whereas this FAQs page that you&rsquo;re currently reading focuses more on the misconceptions of Race Realism.
+</p>
+</div>
+</div>
+
+<div id="outline-container-social-construct" class="outline-2">
+<h2 id="social-construct"><span class="section-number-2">4.</span> Isn&rsquo;t Race just a social construct?</h2>
+<div class="outline-text-2" id="text-social-construct">
+<p>
+Yes, but that does not constitute an argument against race realism. Rather, it is a false dichotomy: the social construct of beauty does not mean that humans look identical and that their appearance is only a product of perception. Likewise, race is a social construct built on top of a biological reality.
+</p>
+
+<p>
+Framing race as nothing more than a social construct ignores that race is also a statistical cluster of genes. There are meaningful ways to categorize people into racial groups via <a href="https://en.wikipedia.org/wiki/Cluster_analysis">Cluster Analysis</a>, and it is valid to inquire into the differences between different human population groups. There are real differences, and that does have implications for social policy and understanding societal outcomes.
+</p>
+
+<p>
+Clusters <i>can</i> be arbitrary, but there&rsquo;s also mathematical ways to create reasonable, meaningful clusters that are helpful for conveying important information. For more info, see: <a href="https://en.wikipedia.org/wiki/K-means_clustering">Wikipedia:k-means clustering</a>
+</p>
+
+<p>
+For more information, see: <a href="https://jaymans.wordpress.com/jaymans-race-inheritance-and-iq-f-a-q-f-r-b/#racesocialconstruct">Race is a Social Construct, and Race <i>does</i> exist</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-pseuodo-science" class="outline-2">
+<h2 id="pseuodo-science"><span class="section-number-2">5.</span> Hasn&rsquo;t Academia Debunked Race Realism As Anti-Scientific Pseudoscience?</h2>
+<div class="outline-text-2" id="text-pseuodo-science">
+<p>
+No, and this question assumes that Academia can be trusted, even though there are multiple reasons why Academia cannot be trusted:
+</p>
+<ul class="org-ul">
+<li>Ideological Bias</li>
+<li>Perverse Incentives</li>
+<li>Social Circularity</li>
+<li>Naive/Fake Empiricism</li>
+<li>Statistical Manipulation (e.g. p-Hacking)</li>
+</ul>
+
+<p>
+For more information, the following sources go into more detail about why most modern Academic Research is fake:
+</p>
+<ul class="org-ul">
+<li><a href="https://ideasanddata.wordpress.com/2020/06/25/on-trusting-academic-experts/">Ideas and Data Blog: Why Most Academic Research is Fake</a></li>
+<li><a href="https://www.youtube.com/watch?v=42QuXLucH3Q">Veritasium: Why Most Academic Research is Wrong</a></li>
+<li><a href="https://thewaywardaxolotl.blogspot.com/2019/05/why-most-academic-research-is-fake.html?view=classic">Blithering Genius: Why Most Academic Research is Fake</a></li>
+<li><a href="https://www.labroots.com/trending/neuroscience/20533/research-true-cited">Research Less Likely to Be True is Cited More</a></li>
+<li><a href="https://www.youtube.com/watch?v=VPDK7cO-JPs">The Negative Effects Academia has had on Society</a></li>
+<li><a href="https://www.youtube.com/watch?v=cQWlnTyOSig">The Conflict Between College Rankings and Intellectually-Honest Research</a></li>
+<li><a href="https://jaymans.wordpress.com/2015/10/21/regression-to-the-mean/">JayMan: Regression to the Mean and the Breeder&rsquo;s Equation</a></li>
+<li><a href="https://www.youtube.com/watch?v=1tSqSMOyNFE">Veritasium: Regression to the Mean</a></li>
+<li><a href="https://thewaywardaxolotl.blogspot.com/2020/01/are-we-running-out-of-ideas.html">Why we have Passed Peak Idea Production</a></li>
+</ul>
+<p>
+If anything, the overwhelming amount of statistical evidence proves that not all races are created equally in terms of their abilities and, accomplishments, and actions.
+</p>
+</div>
+</div>
+
+<div id="outline-container-IQ-scores" class="outline-2">
+<h2 id="IQ-scores"><span class="section-number-2">6.</span> Isn&rsquo;t it the case that there is no objective way to quantify and define &ldquo;intelligence&rdquo; with IQ scores?</h2>
+<div class="outline-text-2" id="text-IQ-scores">
+<p>
+No. See: <a href="https://jaymans.wordpress.com/jaymans-race-inheritance-and-iq-f-a-q-f-r-b/#noIQ">this post for an extensive explanation why.</a>
+</p>
+
+<p>
+Read More: <a href="https://thewaywardaxolotl.blogspot.com/2019/02/the-iq-question.html?view=classic">The IQ Question</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-environmental-factors" class="outline-2">
+<h2 id="environmental-factors"><span class="section-number-2">7.</span> Aren&rsquo;t most / all racial disparities better explained by environmental factors?</h2>
+<div class="outline-text-2" id="text-environmental-factors">
+<p>
+No, if there are differences between races, then Occam&rsquo;s Razor concludes that race realism should be the null hypothesis and the simplest, default explanation for racial disparities and achievement gaps between races.
+</p>
+
+<p>
+See: <a href="https://thewaywardaxolotl.blogspot.com/2017/06/its-probably-mostly-genetic.html?view=classic">It&rsquo;s Probably Mostly Genetic - Blithering Genius</a>.
+</p>
+
+<p>
+See: <a href="https://jaymans.wordpress.com/jaymans-race-inheritance-and-iq-f-a-q-f-r-b/#poverty">Poverty and/or Discrimination are not the Main Causes of Racial Gaps Intelligence. - JayMan</a>
+</p>
+
+<p>
+See: <a href="https://gnew.substack.com/p/a-short-overview-of-reasons-for-a">An Overview of Reasons for a Genetic Black-White IQ Gap - Gnew</a>.
+</p>
+
+<p>
+See: <a href="https://en.metapedia.org/wiki/Arguments_regarding_the_existence_of_races">Metapedia: Arguments Regarding the Existence of Races</a>.
+</p>
+
+<p>
+See: <a href="https://theuntangler.wordpress.com/2021/12/19/evidence-of-genetic-factor-in-black-white-iq-gap/">The Black-White IQ Gap is Genetic - The Untangler</a>.
+</p>
+
+<p>
+See: <a href="https://theuntangler.wordpress.com/2022/02/21/race-exists/">Race Exists - The Untangler</a>.
+</p>
+</div>
+
+<div id="outline-container-intelligence-inheritability" class="outline-3">
+<h3 id="intelligence-inheritability"><span class="section-number-3">7.1.</span> Racial Disparities in Intelligence</h3>
+<div class="outline-text-3" id="text-intelligence-inheritability">
+<p>
+Studies consistently show intelligence is inheritable from parents to children. See:
+</p>
+<ul class="org-ul">
+<li><a href="https://noahcarl.substack.com/p/is-there-zero-evidence-for-hereditarianism">Noah Carl Substack: Evidence for Hereditarianism</a></li>
+<li><a href="https://ideasanddata.wordpress.com/2019/08/25/racial-ancestry-and-iq/">Ideas and IQ: Racial Ancestry and IQ</a></li>
+<li><a href="https://en.metapedia.org/wiki/Race_and_intelligence:_The_genetics_or_not_debate">Metapedia: Race and Intelligence: The Genetics Or Not Debate</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-race-gap-crime-rates" class="outline-3">
+<h3 id="race-gap-crime-rates"><span class="section-number-3">7.2.</span> The Race Realist Explanation for the Disparity in Crime Rates</h3>
+<div class="outline-text-3" id="text-race-gap-crime-rates">
+<p>
+See: <a href="https://notetoworld.org/index.php?loc=note&amp;key=297598bb-9677-4de7-a706-44bc410aec53">The Peopling of the Americas - T. K. Van Allen</a>
+</p>
+
+<p>
+And: <a href="https://hbdchick.wordpress.com/2012/01/25/outbreeding-self-control-and-lethal-violence/">Outbreeding, Self-Control And Lethal Violence - HBD Chick</a>
+</p>
+
+<p>
+And: <a href="https://hbdchick.wordpress.com/2012/11/21/violence-around-the-world/">Violence Around The World - HBD Chick</a>
+</p>
+
+<p>
+Although all the information in T. K. Van Allen&rsquo;s essay &ldquo;The Peopling of the Americas&rdquo; is factually true, the information is admittedly somewhat doubtful since it doesn&rsquo;t cite any sources to back up its claims about the scale of tribal warfare in the pre-colonial Americas or the fact that the Native Americans practiced extensive agriculture, so the next two sections provide many sources to verify the factuality of the essay&rsquo;s claims.
+</p>
+</div>
+
+<div id="outline-container-tribal-warfare" class="outline-4">
+<h4 id="tribal-warfare"><span class="section-number-4">7.2.1.</span> Wikipedia Articles Citing Tribal Warfare Between Native-Americans</h4>
+<div class="outline-text-4" id="text-tribal-warfare">
+<p>
+Most people are vastly unaware of just how much tribal warfare the Native Americans engaged against each since most public schools only teach the wars and conflicts between European settlers and Native Americans, so this list aims to debunk the myth that Native Americans had peaceful societies that lived off the land before the Europeans came. As always, refer to the sources cited in the Wikipedia articles for more information. Wikipedia may not be a valid source by itself, but the sources that it cites definitely are.
+</p>
+
+<ul class="org-ul">
+<li>The Iroquois engaged in wars, cannibalism, slavery, and torture with other Native Americans. <a href="https://en.wikipedia.org/wiki/Iroquois">Source</a></li>
+<li>&ldquo;A war party was considered successful if it took many prisoners without suffering losses in return; killing enemies was considered acceptable if necessary, but disapproved of as it reduced the number of potential captives. Taking captives were considered far more important than scalps. Additionally, war served as a way for young men to demonstrate their valor and courage. This was a prerequisite for a man to be made a chief, and it was also essential for men who wanted to marry. Haudenosaunee women admired warriors who were brave in war.&rdquo; <a href="https://en.wikipedia.org/wiki/Iroquois">Source</a></li>
+<li>&ldquo;At the time of the European arrival, the hegemonic Iroquois Confederacy, based in present-day New York and Pennsylvania, was regularly at war with Algonquian neighbors.&rdquo; <a href="https://en.wikipedia.org/wiki/Algonquian_peoples#Colonial_period">Source</a></li>
+<li>&ldquo;Blackfoot war parties would ride hundreds of miles on raids&#x2026; Warriors would strive to perform various acts of bravery called counting coup, in order to move up in social rank. The coups in order of importance were: taking a gun from a living enemy and or touching him directly; capturing lances, and bows; scalping an enemy; killing an enemy; freeing a tied horse from in front of an enemy lodge; leading a war party; scouting for a war party; stealing headdresses, shields, pipes (sacred ceremonial pipes); and driving a herd of stolen horses back to camp&rdquo; <a href="https://en.wikipedia.org/wiki/Blackfoot_Confederacy#Enemies_and_warrior_culture">Source</a></li>
+<li>&ldquo;Both the Salish-Tunaxe and the Semteuse were almost &rdquo;killed off in wars&ldquo; with the Blackfoot and further reduced by smallpox. Some of the survivors took refuge among the Salish. With the near extinction of the Salish-Tunaxe, the Salish extended their hunting grounds northward to Sun River. Between 1700 and 1750, they were driven back by pedestrian Blackfoot warriors armed with fire weapons. Finally, they were forced out of the bison range and west of the divide along with the Kutenai-Tunaxe.&rdquo; <a href="https://en.wikipedia.org/wiki/Confederated_Salish_and_Kootenai_Tribes#Forced_west_of_the_divide">Source</a></li>
+<li>&ldquo;The neighbors of the western Cree were Athapascans on the north and northwest, Blackfeet on the west, and Assiniboine on the south. With the Assiniboine they were closely associated from the time of the separation of that tribe from the parent Sioux prior to the opening of the country by exploration in the early years of the seventeenth century; nevertheless, there were rather frequent drunken brawls, with consequent murders, between the two tribes in the boisterous era of the fur-trade. They joined forces in pushing the Blackfeet, Bloods, and Piegan southwestward out of the plains bordering Saskatchewan river, and up to the termination of inter-tribal warfare remained constant enemies of these other Algonquians. The Cree inheritance of the historic Sioux hostility toward the Chippewa was not lessened by the friendly reception they accorded the renegade Assiniboine, for whom the Sioux entertained bitter hatred mixed with professed contempt. The Woods Cree had little, if any, part in this warfare with the Blackfeet and the Sioux; their operations were limited to dispossessing the Athapascans of their territory between the Saskatchewan and Athabasca lake. Peace river, according to Henry, received its name from the circumstance that the Cree and the Beavers settled their hostilities at Peace point. —The North American Indian, Volume 18 (1907)&rdquo; <a href="https://en.wikipedia.org/wiki/Iron_Confederacy#Early_expansion_and_the_fur_trade">Source</a></li>
+<li>&ldquo;The Hurons as well as other Iroquoian peoples were known for the fierce ways in which they waged war against one another. Warfare between the Hurons and the Iroquois became so intense that women could not work in the fields to till their corn outside the defence of their palisades without fear of being clubbed to death on the spot and their scalps taken&#x2026;&rdquo; <a href="https://en.wikipedia.org/wiki/Wyandot_people#War">Source</a></li>
+<li>&ldquo;The Comanche bands regularly waged war on neighboring tribes.&rdquo; <a href="https://en.wikipedia.org/wiki/Comanche_history">Source</a></li>
+<li>&ldquo;The Kalinago (Island Caribs) had a reputation as warriors who raided neighboring islands. According to the tales of Spanish conquistadors, the Kalinago were cannibals who regularly ate roasted human flesh. <a href="https://en.wikipedia.org/wiki/Kalinago">Source</a></li>
+<li>&ldquo;Up to half of all Yanomami males die violent deaths in the constant conflict between neighboring communities over local resources.&rdquo; <a href="https://en.wikipedia.org/wiki/Yanomami#Violence">Source</a></li>
+<li>&ldquo;After 1750, warfare and pressure from the Blackfoot, Crow, Lakota, Cheyenne, and Arapaho pushed Eastern Shoshone south and westward.&rdquo; <a href="https://en.wikipedia.org/wiki/Shoshone#History">Source</a></li>
+<li>&ldquo;The Paiutes, for example, were almost &rdquo;continually at war&ldquo; with the Klamath south and west of them.&rdquo; <a href="https://en.wikipedia.org/wiki/Northern_Paiute_people#Relations_with_other_tribes_and_European_settlers">Source</a></li>
+<li>&ldquo;Warfare was prevalent in the Maya world. Military campaigns were launched for a variety of reasons, including the control of trade routes and tribute, raids to take captives, scaling up to the complete destruction of an enemy state.&rdquo; <a href="https://en.wikipedia.org/wiki/Maya_civilization#Warfare">Source</a></li>
+<li>&ldquo;The Aztec state was in the center on political expansion and dominance of and exaction of tribute from other city states, and warfare was the basic dynamic force in Aztec politics. Aztec society was also centered on warfare: every Aztec male received basic military training from an early age and the only possibility of upwards social mobility for commoners was through military achievement — especially the taking of captives. Thus, only specifically chosen men served in the military.&rdquo; <a href="https://en.wikipedia.org/wiki/Aztec_warfare">Source</a></li>
+<li>Dozens civilizations rose and fell in Peru since tribal warfare caused so many civilizations to fall. <a href="https://en.wikipedia.org/wiki/Periodization_of_pre-Columbian_Peru">Periodization of Pre-Columbian Peru</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cherokee_military_history">Cherokee Military History</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Crow_Creek_massacre">The Crow Creek Massacre</a></li>
+</ul>
+<p>
+There&rsquo;s not a single historical account of Native American tribes that doesn&rsquo;t involve warfare with other tribes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-native-american-agriculture" class="outline-4">
+<h4 id="native-american-agriculture"><span class="section-number-4">7.2.2.</span> Wikipedia Articles Citing Agriculture Practices Among Native-Americans</h4>
+<div class="outline-text-4" id="text-native-american-agriculture">
+<p>
+There are several Wikipedia articles documenting agriculture among the Native-Americans for thousands of years:
+</p>
+<ul class="org-ul">
+<li><a href="https://en.wikipedia.org/wiki/Indigenous_peoples_of_the_Americas#Agriculture">https://en.wikipedia.org/wiki/Indigenous_peoples_of_the_Americas#Agriculture</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Agriculture_in_Mesoamerica">https://en.wikipedia.org/wiki/Agriculture_in_Mesoamerica</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Prehistoric_agriculture_on_the_Great_Plains">https://en.wikipedia.org/wiki/Prehistoric_agriculture_on_the_Great_Plains</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Eastern_Agricultural_Complex">https://en.wikipedia.org/wiki/Eastern_Agricultural_Complex</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Prehistoric_agriculture_in_the_Southwestern_United_States">https://en.wikipedia.org/wiki/Prehistoric_agriculture_in_the_Southwestern_United_States</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Incan_agriculture">https://en.wikipedia.org/wiki/Incan_agriculture</a></li>
+</ul>
+
+
+
+
+<div id="org9d6ad1b" class="figure">
+<p><img src="../images/average-racial-differences-between-africans-europeans-and-east-asians.jpg" alt="average-racial-differences-between-africans-europeans-and-east-asians.jpg" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-race-gap-academic" class="outline-3">
+<h3 id="race-gap-academic"><span class="section-number-3">7.3.</span> Racial Disparities in Academic Achievement and Educational Attainment</h3>
+<div class="outline-text-3" id="text-race-gap-academic">
+<p>
+i
+</p>
+</div>
+</div>
+
+<div id="outline-container-race-gap-economics" class="outline-3">
+<h3 id="race-gap-economics"><span class="section-number-3">7.4.</span> Racial Disparities in Economic Status</h3>
+<div class="outline-text-3" id="text-race-gap-economics">
+<p>
+i
+</p>
+</div>
+</div>
+
+<div id="outline-container-race-gap-single-parents" class="outline-3">
+<h3 id="race-gap-single-parents"><span class="section-number-3">7.5.</span> Racial Disparities in Single-Parent Households</h3>
+<div class="outline-text-3" id="text-race-gap-single-parents">
+<p>
+The rates of violent crime have been falling since the mid-1990s, in spite of a surge in single parenthood during the 70&rsquo;s and 80&rsquo;s. However, the theory that single parenthood causes criminality would predict the opposite, as it would predict an increase in violent crime following the increase in single parenthood by about 20 years. While this doesn&rsquo;t prove that single parenthood has no effect on crime rates, it&rsquo;s counter-evidence that needs to be considered, along with all the best explanations why crime rates fell during the 90s and onward.
+</p>
+
+<p>
+Instead of single-parent households causing higher crime rates, it could also be the case that people who grew up in single-parent / fatherless households are simply more likely to be less responsible and commit more crime because their parents&rsquo; genes were less responsible in the first place. Correlation does not imply causation, but genetic factors shouldn&rsquo;t be ruled out in favor of environmental factors just because the former is a more taboo explanation. A child with good genes would probably perform decently well even without a father present, although they would obviously be better with a father in all cases.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-averages-and-exceptions" class="outline-2">
+<h2 id="averages-and-exceptions"><span class="section-number-2">8.</span> Aren&rsquo;t there exceptionally smart people from all races?</h2>
+<div class="outline-text-2" id="text-averages-and-exceptions">
+<p>
+Yes for the most part, but this does not debunk race realism. Once again, a race is a statistical cluster of genes. That means that there can be statistical outliers to any generalized claim made about a race(s). Relatively high-IQ people can come from low-IQ races, and relatively low-IQ people can come from high-IQ races, but when this happens, those people are the statistical outliers of their respective races. Race realism is the recognition of statistical tendencies that are caused by historical evolutionary patterns, not dogmatic judgments.
+</p>
+
+<p>
+In fact, the possibility that statistical outliers may exist within a data set is precisely the reason why racism is irrational. Even if race A has consistently lower crime rates and consistently higher average IQs than race B, it would be dangerous to assume that that would be the case for <i>every single person</i> belonging to race A, and equally wrong to assume that <i>every single person</i> belonging to race B is going to be less intelligent or more likely to commit crimes that every single person from race A. The way how individuals should be treated should always be based on merit, not congenital demographic properties.
+</p>
+
+<p>
+Additionally, even if it is the case that Amerindians and Sub-Saharan Africans commit disproportionately more crimes than Europeans, East Asians, East Indians, etc, it can simultaneously be the case that most people from those races are law-abiding and don&rsquo;t commit any crimes. Similarly, the smartest people who ever lived may have been European or East Asian, but that does not conclude that every European or East Asian is going to be a genius. Generally speaking, the people who commit crimes and the people who have built humanity&rsquo;s greatest inventions tend to be on the extreme tail ends of the normal curve(s). For further explanation of these statistics, see: <a href="https://eternalanglo.com/contra-jared-taylor">https://eternalanglo.com/contra-jared-taylor</a>
+</p>
+</div>
+
+<div id="outline-container-starting-tabula-rasa" class="outline-3">
+<h3 id="starting-tabula-rasa"><span class="section-number-3">8.1.</span> But aren&rsquo;t all individuals are born with the same amount of knowledge?</h3>
+<div class="outline-text-3" id="text-starting-tabula-rasa">
+<p>
+Yes, but even though everybody might be born knowing virtually nothing (see: <a href="../epistemology/tabula-rasa-eval.html">Evaluating Tabula Rasa</a>), this does not prove that all individuals have equal intellectual ability because it ignores that some races are better at learning than others. Every expert was a beginner at some point, but some people (and some races, on average) are better at becoming experts and intellectuals than others.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-races-better-than-others" class="outline-2">
+<h2 id="races-better-than-others"><span class="section-number-2">9.</span> Do Race Realists believe that some races are better than others?</h2>
+<div class="outline-text-2" id="text-races-better-than-others">
+<p>
+This depends on what is meant by &ldquo;better&rdquo;, and in what context. A true race realist would never say that one race is always going to better than another in every single situation, because the whole reason why races are different from each other in the first place is because they each evolved genes and traits that enhanced their ancestors&rsquo; ability to reproduce in their respective environments. For example, it is going to be easier for Sub-Saharan Africans to live near the equator than Europeans because they have genetic resistance against diseases like skin cancer and malaria. On the other hand, it&rsquo;s going to be harder for black people to live in a place like pre-Industrial Europe since they would be more prone to Vitamin D deficiency, would probably have lactose intolerance, and other factors.
+</p>
+
+<p>
+If <a href="../economics/georgism-elevator-pitch.html">Georgism</a> and government-enforced EPC were implemented in order to the preserve industrial, technological civilization, then there is a consensus among race realists that Europeans and East Asians are going to be better at reproducing in the new environment <i>on average</i>, due to their higher intelligence and greater economic productivity. But that wouldn&rsquo;t mean that Asians and Europeans would always be better than all the other races in <i>all</i> situations. Moreover, if the <a href="./EPC-FAQs.html">eugenostate that we support</a> did exist, it could not forbid anybody who meets all of the <a href="./EPC-FAQs.html#reproduction-license-reqs">listed requirements</a> from having children, no exceptions.
+</p>
+
+<p>
+Lastly, even if it were the case that one race was always &ldquo;better&rdquo; than the others, that still would not be good grounds to treat people differently based on nothing but their race because we already explained that <a href="#averages-and-exceptions">there are statistical outliers for every race</a>.
+</p>
+</div>
+
+<div id="outline-container-racial-preferences" class="outline-3">
+<h3 id="racial-preferences"><span class="section-number-3">9.1.</span> But having a preference to be around people of one&rsquo;s own race is normal and natural.</h3>
+<div class="outline-text-3" id="text-racial-preferences">
+<p>
+This is true, and it&rsquo;s also true that racially homogeneous societies tend to perform better and have fewer social problems than racially diverse societies. But the facts are that: 1. we live in an increasingly globalized world where racial differences are declining, 2. globalization makes race-mixing inevitable and it requires different races to interact with each other. If humanity is to sustain a technologically prosperous world, then globalization is a must, and so is cooperation between various races. If given the choice, most people will choose modern society over primitive society.
+</p>
+
+<p>
+Preferring one&rsquo;s own race was almost certainly conferred a evolutionary advantages in pre-modern times, but racism and racial separation are simply not compatible with modern civilization. If one wishes to be successful in the modern world, it&rsquo;s more rational to cooperate with people of all races instead. We&rsquo;re all human after all.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-not-racists-nazis-supremacists" class="outline-2">
+<h2 id="not-racists-nazis-supremacists"><span class="section-number-2">10.</span> Are all race realists racists, Nazis, and/or white supremacists?</h2>
+<div class="outline-text-2" id="text-not-racists-nazis-supremacists">
+<p>
+The short answer is: No.
+</p>
+
+<p>
+I for one, am a race realist who believes that people should be judged not by the color of their skin, but by the content of their character. The next few subsections elaborate on this and why there is nothing contradictory about being a race realist and non-racist.
+</p>
+</div>
+
+<div id="outline-container-not-racist" class="outline-3">
+<h3 id="not-racist"><span class="section-number-3">10.1.</span> Race realism does not imply racism.</h3>
+<div class="outline-text-3" id="text-not-racist">
+<p>
+There are many race realists who are not racist (including myself), especially if they are in favor of a eugenostate instead of an ethnostate. A Eugenostate would treat all races equally under the law, but there would be competition regarding who is authorized to reproduce who is forbidden. So while it would be inevitable that some races would be more reproductively successful than others under a eugenostate, there would be legal limitations on people from any race from being able to have children. Eugenostates value equal opportunities, not equality of outcomes.
+</p>
+
+<p>
+Non-racist race-realists do not advocate that some races be given greater legal privileges than other races. We believe that all people from any race should be entitled to the same legal rights as anyone else. Racism is for the most part and in most cases, a form of irrational discrimination.
+</p>
+
+<p>
+Personally, I&rsquo;ve found that it tends to be the case most racists and race idealists have accomplished so little in the real world, that the only thing left that they have to be proud of is their race, because without that, they would have no pride at all.
+</p>
+
+<p>
+See: <a href="https://www.youtube.com/watch?v=50yEBDbYjQs">The Difference Between Race Realism And Race Idealism</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-not-white-supremacist" class="outline-3">
+<h3 id="not-white-supremacist"><span class="section-number-3">10.2.</span> Race realism does not imply white supremacy.</h3>
+<div class="outline-text-3" id="text-not-white-supremacist">
+<p>
+In fact, I (Zero Contradictions, the author of this blog) am half Western-European and half East-Asian. I am certainly not a white supremacist since I am mixed-race, as is most of my entire family since both of my parents, all my siblings, and all of my aunts and uncles are also hapas.
+</p>
+
+<p>
+Race Realism is about acknowledging that every race has genes that made them more reproductively successful in their ancestral environments. But now that we live in modernity, the statistical evidence makes it abundantly clear that some races are better adapted to modernity than others (on average).
+</p>
+
+<p>
+Read More: <a href="https://thewaywardaxolotl.blogspot.com/2017/05/does-evolutionary-theory-imply-genetic.html?view=classic">Why Evolutionary Theory Does <i>Not</i> Imply Genetic Tribalism?</a>
+</p>
+
+<p>
+Read More: <a href="https://thewaywardaxolotl.blogspot.com/2017/12/the-cuck-metaphor-and-alt-right.html?view=classic">The Cuck Metaphor and the Alt-Right</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-nazism" class="outline-3">
+<h3 id="nazism"><span class="section-number-3">10.3.</span> Nazism is justified with pseudo-scientific beliefs.</h3>
+<div class="outline-text-3" id="text-nazism">
+<p>
+Race Realism is a scientific position that is backed by empirical evidence, statistics, and a sound understanding of evolutionary theory. On the other hand, the Nazis were racists and they backed their beliefs up with propaganda and pseudoscience. The Nazis did not understand what &ldquo;race&rdquo; actually is (a statistical cluster of genetic variation characterized by a phenotype).
+</p>
+
+<p>
+For more information, visit the following section under this link: <a href="./EPC-FAQs.html">Didn&rsquo;t the Nazis Try to Implement Eugenics?</a>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-race-realism-examples" class="outline-2">
+<h2 id="race-realism-examples"><span class="section-number-2">11.</span> Examples of Race Realism Among Humans</h2>
+<div class="outline-text-2" id="text-race-realism-examples">
+<p>
+These examples are meant to show that race is far far more than just a social construction. Every race has genes that make the people of that race better adapted to survive and have higher reproductive success in the environmental conditions that the race of humans lived in. This is an incomplete list of examples:
+</p>
+<ul class="org-ul">
+<li>Blue-eyes enable people who live away from the Equator to see better during twilight and night-time when there&rsquo;s little light available. Natural selection selected for blue eyes since blue-eyed people were more productive and had more offspring since they could do more labor on days with very little sunlight. <a href="https://australianmuseum.net.au/learn/science/human-evolution/how-have-we-changed-since-our-species-first-appeared/">Source</a></li>
+<li>Having darker skin near the equator makes populations less prone to skin cancer from the sun&rsquo;s higher radiation near the equator.</li>
+</ul>
+
+<ul class="org-ul">
+<li>Blood type distributions strongly vary depending on one&rsquo;s race. This is still being researched, but the most likely for this is that different blood types offered different levels of immunity against certain diseases. <a href="https://web.archive.org/web/20100405093118/http://www.aboblood.com/">Source</a></li>
+<li>Bone density strongly varies depending on race, with Asians having the lowest bone densities, and Sub-Saharan Africans having the highest bone densities. <a href="https://americanbonehealth.org/races-ethnicities/10-things-to-know-about-racial-differences-in-bone-health/">Source</a></li>
+<li>Populations with epicanthic eyelids developed them as an adaptation due to either hash winters or as a protection against overexposure to ultraviolet radiation. <a href="https://en.wikipedia.org/wiki/Epicanthic_fold#Possible_evolutionary_function">Source</a></li>
+<li>East Asians tend to have shorter statures since this makes it easier to work in rice fields for several hours, days on end.</li>
+</ul>
+
+<ul class="org-ul">
+<li>Populations that cultivate rice, wheat, and other grains have gained the ability to digest starch thanks to an enzyme called amylase, found in saliva. <a href="https://www.npr.org/2013/09/27/226837803/modern-humans-still-evolving-and-faster-than-ever">Source</a></li>
+<li>Native Americans did not have immune systems that were adapted to Old World diseases, thus causing ~90% of them to die out when coming in contact with those diseases.
+<ul class="org-ul">
+<li>The descendants of the Native Americans who survived the Old World diseases were more adapted to surviving those diseases than the Native American populations had been historically. This is an example of a human race changing due to natural selection, and becoming more adapted to its environment.</li>
+<li>Even still, Native Americans have higher Covid death rates on average compared to other ethnic groups, hence why Peru has been one of the most devastated countries in the world by the COVID-19 pandemic, since Peruvians have a lot of Native American DNA. Compared to other ethnic groups, Native Americans are the least well adapted to COVID-19, due to their genetics.</li>
+</ul></li>
+</ul>
+
+<ul class="org-ul">
+<li>The Sherpa people in Nepal who have a gene of homo denisovan origin, which makes it easier to breathe at higher altitudes. <a href="https://australianmuseum.net.au/learn/science/human-evolution/the-denisovans/">Source</a></li>
+</ul>
+
+<ul class="org-ul">
+<li>The Inuit are adapted to a high-fat diet and cold climate due to a mutation that has been dated the Last Glacial Maximum (20,000 years ago). <a href="https://en.wikipedia.org/wiki/Recent_human_evolution#cite_note-63">Source</a></li>
+</ul>
+
+<ul class="org-ul">
+<li>How Europeans are able to digest lactose since being able to drink cow&rsquo;s milk provided their ancestors with another food source during times of food scarcity and famine. This caused natural selection in favor of lactose tolerant genes. <a href="https://en.wikipedia.org/wiki/Recent_human_evolution#cite_note-:27-14">Source</a></li>
+<li>How East Asian rice farming societies have nearly 0 percent of gene 7R, which exists at about 24% in Europeans and 70% in some Native American tribes. It&rsquo;s associated with impulse seeking, extroversion, and novelty. Rice farming requires a remarkable degree of cooperation and so those people with the 7R gene probably didn&rsquo;t breed or got kicked out. <a href="https://www.youtube.com/watch?v=2UL4rmBLOnw&amp;t=173">Source</a></li>
+<li>For the serotonin transporter gene, East Asians are significantly more likely to have the short &ldquo;S&rdquo; allele compared to Europeans who are relatively more likely to have the longer &ldquo;L&rdquo; allele, which may be a contributing factor to the more collectivist culture in East Asia versus the more individualist culture in Europe. <a href="https://royalsocietypublishing.org/doi/10.1098/rspb.2009.1650">Source</a></li>
+<li>How human population who live in areas that at high risk of malaria inherited genes that provide immunity against malaria when heterozygous, even though this causes sickle-cell anemia when both copies of the sickle cell gene are inherited. <a href="http://www.nbcnews.com/id/33916577/ns/technology_and_science-science/t/humans-still-evolving-our-brains-shrink/#.Xsqa7jl7nIU">Source</a></li>
+<li>Single-Cell Anemia and Resistance to Malaria tends to be more prevalent in Africans and other Tropical Populations. <a href="https://en.wikipedia.org/wiki/Sickle_cell_disease#Genetics">Source</a>
+<ul class="org-ul">
+<li>The comparatively lower prevalence of single-cell anemia in African Americans compared to other Africans due to genetic selection against malaria due to labor-intensive slavery and race-mixing in North America.</li>
+</ul></li>
+<li>Cystic Fibrosis, Tay Sachs, and other forms of genetic resistance to tuberculosis tend to be more prevalent in Europeans. <a href="https://en.wikipedia.org/wiki/Heterozygote_advantage#Cystic_fibrosis">Source</a></li>
+</ul>
+
+<ul class="org-ul">
+<li>There is a population in Papua New Guinea that evolved to have resistance against prion-caused brain disease in populations practicing mortuary cannibalism. <a href="https://www.sciencedaily.com/releases/2009/11/091120091959.htm">Source</a></li>
+<li>Australian Aboriginals living in the Central Desert, where the temperature can drop below freezing at night, have evolved the ability to reduce their core temperatures without shivering. <a href="https://en.wikipedia.org/wiki/Recent_human_evolution#cite_note-:24-67">Source</a></li>
+<li>Humans that lived in urban population centers evolved resistance to diseases, such as tuberculosis and leprosy. <a href="https://www.sciencedaily.com/releases/2010/09/100923104140.htm">Source</a></li>
+<li>There is evidence that subtle DNA differences can influence a person&rsquo;s ability to perceive tones, which in turn can influence whether a language is tonal or not. Conversely, it may be the case that tonal languages can exert some selection pressure in favor of genes that enable people to distinguish the tones. <a href="https://www.scientificamerican.com/article/a-gene-may-help-discern-language-tone-differences-is-it-shi-or-shi/">Source</a></li>
+</ul>
+
+<p>
+With so many examples showing how different human populations evolved different adaptations to become more physically fit in their environments, how could anyone reasonably deny that there weren&rsquo;t also different mental traits that evolved for different mental populations as well?
+</p>
+
+<p>
+For even more examples of race realism and Human Bio-Diversity (HBD), see: <a href="https://humanbiologicaldiversity.com/">HumanBiologicalDiversity.com</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-racists" class="outline-2">
+<h2 id="racists"><span class="section-number-2">12.</span> If race realists don&rsquo;t necessarily have to be racist, then why are so many of them racist?</h2>
+<div class="outline-text-2" id="text-racists">
+<p>
+The first half of the answer to this question has to do with memetics and how ideologies evolve over time. As explained in the essay, <a href="https://thewaywardaxolotl.blogspot.com/2018/11/the-rise-and-fall-of-alt-right.html?view=classic">The Rise and Fall of the Alt-Right</a>, the Alt-Right started out as an intellectual movement, but then it degenerated into a <a href="https://thewaywardaxolotl.blogspot.com/2014/07/the-communists-who-took-power-in.html?view=classic">Utopian Ideology</a> that got dumber and dumber since ideologies need to tap into human emotions in order to propagate most effectively. Since the ideology started spreading via emotions instead of reason, this caused all sorts of purity spiraling where the leaders and members of the movement started promoting more extremist and less rational ideas in an attempt to claim status over other members of the movement. <a href="https://thewaywardaxolotl.blogspot.com/2022/07/status-pyramid-schemes.html?view=classic">This other post &ldquo;Status Pyramid Schemes&rdquo;</a> talks more about how that process and the evolution of memetic ideologies works in general.
+</p>
+
+<p>
+Race realists like myself don&rsquo;t want a movement that is driven by emotions and deplorable claims to status. We want an ideology that is supported by reason and scientific evidence. We do have some ideas about how to start a philosophical movement that includes race realism without devolving into a virtue-signaling contest, but that will be a post for another time.
+</p>
+
+<p>
+The second reason why so many race realists tend to be racist is that racist people are more likely to support the idea of race realism, except that they don&rsquo;t have the intellectual or the bio-evolutionary understanding for the tenants of race realism. I <i>refuse</i> to associate with those kinds of people since they are anti-intellectual, believe in unequal rights, and do not have similar goals.
+</p>
+</div>
+</div>
+
+<div id="outline-container-race-mixing" class="outline-2">
+<h2 id="race-mixing"><span class="section-number-2">13.</span> Are race realists against race-mixing?</h2>
+<div class="outline-text-2" id="text-race-mixing">
+<p>
+No. I have mentioned on this page that I am mixed-race. It is true that most racists are against race-mixing to some degree, but as I have already written in this FAQ, racism is not the same thing as race realism. Some race realists are against race-mixing (e.g. Payton S. Gendron, the 2022 Buffalo shooter), but that is mainly because they don&rsquo;t understand that race-mixing is inevitable.
+</p>
+
+<p>
+In fact, if you go back far enough in history, everybody living today is &ldquo;mixed-race&rdquo; in a sense, and race-mixing was an important part of human evolution. Modern humans were formed from <a href="https://en.wikipedia.org/wiki/Interbreeding_between_archaic_and_modern_humans">interbreeding between homo sapiens, neanderthals, and denisovans</a>, to varying degrees for all the races of the world. And that doesn&rsquo;t even include all the races that have mixed, merged, split, appeared, or disappeared since then for all kinds of complicated historical and geographical reasons.
+</p>
+
+<p>
+A potential disadvantage to race mixing on a global scale could be that populations around the world would become less adapted to their environments, which could cause some concern in some areas, but none of these possible concerns will matter much in the modern world. Some examples:
+</p>
+<ul class="org-ul">
+<li>Immune Response: Immune systems are tend to be adapted to local conditions, parasites, and diet. However, conditions in the modern world conditions are completely different than they are from the past: parasites are either gone or global, and diet is totally different and globalized. So this doesn&rsquo;t matter much, as far as race-mixing is concerned.</li>
+<li>Organ Donation: Organ transplants tend to have greater compatibility with recipients people of the same race as the donor. But as the world continues to race mix more and more, this will become less of a problem over time, if it&rsquo;s a problem at all.</li>
+<li>Giving Birth: Mixed-race babies offspring are more prone to having failed deliveries in some cases, but this doesn&rsquo;t matter much either. It&rsquo;s a known fact that babies with genes that cause them to require C-sections to be delivered are becoming more and more common in the modern world, so even if race-mixing causes this to be a slight problem, it&rsquo;s as much of a problem as how the prevalence of C-sections have been increasing. Again, this isn&rsquo;t really a huge problem to worry about, compared to the problems that we have that already exist.</li>
+</ul>
+<p>
+For most traits, race won&rsquo;t matter when you take the parent&rsquo;s traits into account. Good looking parents have good looking children, smart parents have smart children, and tall parents have tall children.
+</p>
+
+<p>
+With all that being said, I have only ever encountered one rational argument against race-mixing. Should you find yourself in a situation where you can reasonably expect your children to face significant discrimination for being mixed-race, it may be better for your children to avoid breeding with another race if you can. But once again, this won&rsquo;t matter much tolerance for other races continues to increase. And it definitely won&rsquo;t be a problem in the long run if racial differences are destined to continue disappearing and humanity&rsquo;s racial admixture collapses into a single, globalized race.
+</p>
+</div>
+</div>
+
+<div id="outline-container-ethnostate" class="outline-2">
+<h2 id="ethnostate"><span class="section-number-2">14.</span> Do race realists want to construct an ethnostate?</h2>
+<div class="outline-text-2" id="text-ethnostate">
+<p>
+No, we want to construct a eugenostate, not an ethnostate. Anyone who supports an ethnostate instead of a eugenostate has a flawed understanding of what race actually is, and does not understand that some degree of race-mixing is inevitable. For a summary why, see: <a href="./EPC-FAQs.html#no-ethnostate">Does supporting Eugenics entail creating an Ethnostate?</a>
+</p>
+
+<p>
+For a more depth essay, see: <a href="https://thewaywardaxolotl.blogspot.com/2020/01/eugenostate-versus-ethnostate.html?view=classic">Eugenostate versus Ethnostate</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-collectivism" class="outline-2">
+<h2 id="collectivism"><span class="section-number-2">15.</span> Does race realism promote collectivism?</h2>
+<div class="outline-text-2" id="text-collectivism">
+<p>
+No, not at all. Race Idealists tend to be collectivists, but biological realists are not collectivists because we understand that altruism is self-defeating and cannot exist in human nature:
+</p>
+<ul class="org-ul">
+<li><a href="https://www.amazon.com/dp/B0BPXJ85W7">Debunking the Selfish Gene by T.K. Van Allen</a></li>
+<li><a href="https://thewaywardaxolotl.blogspot.com/2015/04/altruism-and-selfishness.html?view=classic">Altruism and Selfishness</a></li>
+<li><a href="https://thewaywardaxolotl.blogspot.com/2014/04/bees-are-not-social.html?view=classic">Bees are not Altruistic</a></li>
+<li><a href="https://www.youtube.com/watch?v=K97OP2p9JTQ">Pathological Altruism</a></li>
+<li><a href="https://thewaywardaxolotl.blogspot.com/2014/04/family-and-society.html?view=classic">Family, Transfers of Energy, and Exchanges of Labor</a></li>
+</ul>
+<p>
+For an essay that answers this question specifically in more depth, see: <a href="https://thewaywardaxolotl.blogspot.com/2014/04/killing-unicorns.html">Killing the Unicorns</a>. This essay explains what race is and isn&rsquo;t, and why races do not necessarily act as collective groups with unified collective interests.
+</p>
+</div>
+</div>
+
+<div id="outline-container-why-race-realism-matters" class="outline-2">
+<h2 id="why-race-realism-matters"><span class="section-number-2">16.</span> Why does it matter that people come to terms with race realism?</h2>
+<div class="outline-text-2" id="text-why-race-realism-matters">
+<p>
+Because race realism is <a href="#environmental-factors">the best explanation</a> for differences in crime rates, academic achievement, and success in the modern world. If we completely rule out the best explanation, we deny the influence of biology on human outcomes, and we make it evil to challenge the Left&rsquo;s denial of biology, then the Left has free reign to come up with any insane theory that accounts for the existence of the gaps. The Left has chosen to do this, and they have came up with all sorts of ridiculous explanations and anti-white / anti-Asian conspiracy theories to account for the achievement gaps between races. As a result, the Left is pursuing &ldquo;solutions&rdquo; to the achievement gaps that involve dismantling meritocracy and thwarting criminal justice at every opportunity with extreme zeal and steady progress. This is really bad if civilization is to have a decent future.
+</p>
+
+<p>
+On the other hand, if people can be convinced that the racial outcome gaps are caused by genetic differences instead of environment factors, then people will stop believing in hidden forces and conspiracies. The result is that meritocracy and criminal justice will be preserved, instead of dismantled in the name of &ldquo;racial equality&rdquo;. If we want to preserve civilization, then we need millions of people to come to terms with biological realism. It&rsquo;s the truth.
+</p>
+
+<p>
+TL;DR: Accepting race realism eliminates the justification for many of the detrimental social policies in the West, from &ldquo;anti-racism&rdquo; to mass immigration.
+</p>
+</div>
+</div>
+
+<div id="outline-container-great-replacement" class="outline-2">
+<h2 id="great-replacement"><span class="section-number-2">17.</span> Isn&rsquo;t The Great Replacement Of White People Just A Myth?</h2>
+<div class="outline-text-2" id="text-great-replacement">
+<p>
+No, not at all. The people who are claiming that the Great Replacement Theory is just a myth are following the typical leftist tactic of denying that something bad is happening, but if it is happening, then it&rsquo;s actually a good thing. Anybody who claims the Great Replacement is a myth is a liar, and I say that as someone who is less European than the average American (as of 2023).
+</p>
+
+<p>
+Statistics consistently show that countries with historically European populations are becoming less and less European. This trend has been happening for decades. People can pretend that this isn&rsquo;t a problem or that it won&rsquo;t lead to the perishing of white people all they want, but it is undeniable that if the trend continues for several decades, white people will be replaced by other races by and large, unless something happens to reverse the trend and increase the fertility levels of white people.
+</p>
+
+
+<div id="org055e089" class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/White_America_%28of_one_race%29_from_1960_to_2020.gif" alt="White_America_%28of_one_race%29_from_1960_to_2020.gif" />
+</p>
+<p><span class="figure-number">Figure 1: </span>White America of one race (or alone) in population number, overall percentage nationally and percentage state wise from 1960 to 2020.</p>
+</div>
+
+<p>
+&ldquo;A report by the U.S. Census Bureau projects a decrease in the ratio of Whites between 2010 and 2050, from 79.5% to 74.0%.[145] At the same time, Non-Hispanic Whites are projected to no longer make up a majority of the population by 2045, but will remain the largest single ethnic group. In 2050 they will compose 46.3% of the population. Non-Hispanic whites made up 85% of the population in 1960.[146] However, white Americans overall are still projected to make up over 70% of the population in 2050.&rdquo; <a href="https://en.wikipedia.org/wiki/Demographics_of_the_United_States#Projections">Source</a>
+</p>
+
+
+<div id="org76061d1" class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/a/af/White_or_European_Canadians_from_2001_to_2016.gif" alt="White_or_European_Canadians_from_2001_to_2016.gif" />
+</p>
+<p><span class="figure-number">Figure 2: </span>White/European Canadians from 2001 to 2016, nationally and provincial in Canada in percentages.</p>
+</div>
+
+<p>
+<a href="https://en.metapedia.org/wiki/White_demographics">More Statistics On White Demographics</a>
+</p>
+
+<p>
+The first thing that we should do to prevent the Great Replacement is to tighten immigration into Western Countries. We already have limited resources, so there is no reason to allow more than a trickle of useful immigrants into the West.
+</p>
+
+<p>
+<a href="https://eternalanglo.com/">Eternal Anglo</a> is a good data analytics blog that covers the fertility rates of different races in different countries.
+</p>
+
+<p>
+Figure 1: <a href="https://en.wikipedia.org/wiki/File:White_America_(of_one_race)_from_1960_to_2020.gif">White America (of one race) from 1960 to 2020</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, by <a href="https://en.wikipedia.org/wiki/User:Tweedledumb2?rdfrom=commons:User:Tweedledumb2">Tweedledumb2</a>.
+</p>
+
+<p>
+Figure 2: <a href="https://commons.wikimedia.org/wiki/File:White_or_European_Canadians_from_2001_to_2016.gif">White or European Canadians from 2001 to 2016</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, by <a href="https://en.wikipedia.org/wiki/User:Tweedledumb2?rdfrom=commons:User:Tweedledumb2">Tweedledumb2</a>.
+</p>
+</div>
+
+<div id="outline-container-white-preservation-ethnostate" class="outline-3">
+<h3 id="white-preservation-ethnostate"><span class="section-number-3">17.1.</span> If the Great Replacement is Real, wouldn&rsquo;t the best way to stop it be to create an ethnostate?</h3>
+<div class="outline-text-3" id="text-white-preservation-ethnostate">
+<p>
+I define White Preservationism as: A movement to combat the Great Replacement by increasing white fertility rates in the Western World. To me, the goal of white preservationism should be to preserve (most of) the (good) genes of Europeans, not necessarily to preserve white people as a distinctive race.
+</p>
+
+<p>
+Some people might argue that white preservationism is best achieved with an ethnostate, but I don&rsquo;t see any reason why that should be necessary if the fertility rates of white people were increased in general. I don&rsquo;t care about preserving distinctive races since I&rsquo;m more interested in having a population with eugenic qualities, since race mixing is inevitable anyway.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Zero Contradictions</p>
+<p class="date">Created: 2023-03-20 Mon 04:53</p>
+</div>
+</body>
+</html>

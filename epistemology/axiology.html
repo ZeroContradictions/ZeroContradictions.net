@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-03-20 Mon 06:03 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Nature Of Value (Axiology)</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="description" content="Properties of Values and Value Judgments, Intrinsic vs Extrinsic Value, Hierarchy of Values, Rationality and Irrationality of Values, etc." />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="../blog-posts.css" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html#axiology"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">The Nature Of Value (Axiology)</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#intro">1. What Are Values?</a></li>
+<li><a href="#properties-of-values">2. Properties Of Values</a></li>
+<li><a href="#hierarchy-of-values">3. Ranking And Comparing Value</a>
+<ul>
+<li><a href="#intrinsic-extrinsic-value">3.1. Intrinsic and Instrumental Value</a></li>
+<li><a href="#maslows-hierarchy-is-made-up">3.2. Maslow&rsquo;s Hierarchy Of Needs Is Made-Up</a></li>
+</ul>
+</li>
+<li><a href="#rationality-of-values">4. How Theories Of Value May Be Rational Or Irrational</a>
+<ul>
+<li><a href="#coordinated-by-reason">4.1. Can Values Be Rational (Coordinated By Reason)?</a></li>
+</ul>
+</li>
+<li><a href="#descriptive-vs-prescriptive">5. Descriptive Ethics Versus Prescriptive Ethics</a></li>
+<li><a href="#absurdism-existentialism-nihilism">6. Absurdism, Existentialism And Nihilism</a></li>
+<li><a href="#reproduction-ultimate-value">7. Why Reproduction Is The Best Ultimate Value</a>
+<ul>
+<li><a href="#why-reproduction-is-ultimate">7.1. List Of Reasons And Advantages To Designating Reproduction As The Most Fundamental Value For All Life</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<hr />
+<p>
+Note: I plan to add to this file and improve it some more at some point in the future.
+</p>
+
+<div id="outline-container-intro" class="outline-2">
+<h2 id="intro"><span class="section-number-2">1.</span> What Are Values?</h2>
+<div class="outline-text-2" id="text-intro">
+<p>
+Axiology (from Greek axia: &ldquo;value, worth&rdquo;; and -logia: &ldquo;study of&rdquo;) is the philosophical study of value. <a href="https://en.wikipedia.org/wiki/Axiology">https://en.wikipedia.org/wiki/Axiology</a>
+</p>
+
+<p>
+Values are &#x2026;
+</p>
+
+<p>
+Value must be goals that we strive to keep.
+</p>
+
+<p>
+Values are generated from motivation.
+</p>
+
+<p>
+Life is intuitively the most important value.
+</p>
+
+<p>
+Theorem: The existence of intrinsic value implies the existence of objective value, and vice versa.
+</p>
+</div>
+</div>
+
+<div id="outline-container-properties-of-values" class="outline-2">
+<h2 id="properties-of-values"><span class="section-number-2">2.</span> Properties Of Values</h2>
+<div class="outline-text-2" id="text-properties-of-values">
+<p>
+Entirely dependent on the perspective(s) of sentient beings or unions of egoists.
+</p>
+
+<p>
+Must have an undesirable alternative, and a desirable alternative worth striving for.
+</p>
+
+<p>
+All value is instrumental, extrinsic, and relative.
+</p>
+
+<p>
+Value for a sentient being or union of egoists exists in a hierarchy, which can be modeled by a graph known in discrete mathematics as <span class="underline"><span class="underline"><span class="underline">__</span></span></span>.
+</p>
+
+<p>
+Values can conflict with each other, even if those values are all held by the same individual, especially if evolution is responsible for those beings having conflicting values. This happens all the time.
+</p>
+
+<p>
+Life and physiological needs <b>tend</b> (but not necessarily) to be at the top of near the top of the Personal Hierarchy of Values for most individuals because evolution selected selfish genes that favored the continuation, preservation, and reproduction of life that is an expression of those genes.
+</p>
+
+<p>
+Although morality is relative and subjective, we should still strive to have consistent, non-contradictory values whenever possible.
+</p>
+</div>
+</div>
+
+<div id="outline-container-hierarchy-of-values" class="outline-2">
+<h2 id="hierarchy-of-values"><span class="section-number-2">3.</span> Ranking And Comparing Value</h2>
+<div class="outline-text-2" id="text-hierarchy-of-values">
+<p>
+It is nonsensical and impractical to quantify things, people, memories, etc by numbers, except in the case of prices within a market economy. Generally speaking, value in one object or another can only be ranked on a scale with other objects, and the value of different objects can be compared against each other of course.
+</p>
+
+<p>
+Almost no one (maybe even everyone) would value all their possessions according to weighted ranks, although whole number or even integer ranks are reasonable. And it does get harder and harder to rank every item in one’s possessions for ever, to the point where doing so would become pointless at some, especially for the least important items a person owns.
+</p>
+
+<p>
+However since there are no good evolutionary reasons to rank the objects in one’s possessions according to real numbers, although it makes perfect sense to rank things relative to other things, based on how much we need / like / want things that we may or may not have.
+</p>
+
+<p>
+The reason why currency becomes necessary to compare the values of many different things is because the complexity is needed in order to replace the bartering system, especially since prices are based on how the community (many different individuals instead of just one) that interacts with those markets values all the different things available to be traded in the market.
+</p>
+</div>
+
+<div id="outline-container-intrinsic-extrinsic-value" class="outline-3">
+<h3 id="intrinsic-extrinsic-value"><span class="section-number-3">3.1.</span> Intrinsic and Instrumental Value</h3>
+<div class="outline-text-3" id="text-intrinsic-extrinsic-value">
+<ul class="org-ul">
+<li>Intrinsic Value is valuing something for its own sake.</li>
+<li>Extrinsic Value (AKA Instrumental Value) is valuing something as a means to an end.</li>
+<li>Some things can have both instrumental and intrinsic value.</li>
+<li>The distinction is important to make sure that we have our priorities in order, that is, that we don&rsquo;t incorrectly value instrumental value over intrinsic value.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-maslows-hierarchy-is-made-up" class="outline-3">
+<h3 id="maslows-hierarchy-is-made-up"><span class="section-number-3">3.2.</span> Maslow&rsquo;s Hierarchy Of Needs Is Made-Up</h3>
+<div class="outline-text-3" id="text-maslows-hierarchy-is-made-up">
+<ul class="org-ul">
+<li>The &ldquo;exceptions&rdquo; to Maslow&rsquo;s Hierarchy of Needs are not exceptions. They are contradictions. A true scientific theory would never have exceptions that contradict the theory itself.</li>
+<li>It would be more accurate to say that there is a tendency for physiological needs to rank above other needs, but this is by no means a law, just a strong tendency.</li>
+<li>Additionally, it would make the most sense to place Life and Reproduction at the top of the value hierarchy, from a Darwinian perspective.</li>
+<li>i</li>
+</ul>
+
+<p>
+The fact that people can create entirely different hierarchies of needs according to their values serves as a contradiction to Maslow&rsquo;s Hierarchy of Needs.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-rationality-of-values" class="outline-2">
+<h2 id="rationality-of-values"><span class="section-number-2">4.</span> How Theories Of Value May Be Rational Or Irrational</h2>
+<div class="outline-text-2" id="text-rationality-of-values">
+<p>
+Values by themselves are not irrational, but when forming any general theory of value, there are various ways how said theory may rational or irrational:
+</p>
+<ul class="org-ul">
+<li>It could generate two conflicting value judgments, i.e. a contradiction.</li>
+<li>It could have false or unquestioned assumptions.</li>
+<li>It could be justified by fallacious reasoning.</li>
+<li>It could generate no value judgments at all, in which case it would be empirically vacuous, like a scientific theory that makes no predictions.</li>
+</ul>
+
+<p>
+Also, rationality is more than the absence of contradiction. It is conformance to norms of judgment/decision-making.
+Values are about projecting what we want to become true onto the real world, that is how we want to change objective reality.
+Values are about making what we want to be true to become true in the real world.
+</p>
+</div>
+
+<div id="outline-container-coordinated-by-reason" class="outline-3">
+<h3 id="coordinated-by-reason"><span class="section-number-3">4.1.</span> Can Values Be Rational (Coordinated By Reason)?</h3>
+<div class="outline-text-3" id="text-coordinated-by-reason">
+<p>
+If so, would this imply that morality could be loosely based on reason, as follows?:
+    Reason -&gt; Values -&gt; Morality
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-descriptive-vs-prescriptive" class="outline-2">
+<h2 id="descriptive-vs-prescriptive"><span class="section-number-2">5.</span> Descriptive Ethics Versus Prescriptive Ethics</h2>
+<div class="outline-text-2" id="text-descriptive-vs-prescriptive">
+<p>
+It becomes easier to realize that ethics and morality are subjective when thinking about descriptive ethics rather than prescriptive ethics. If someone is always focusing on what should be right or should be wrong (what they think anyway), they’re far less likely to step back and realize that their moral perspective is one of many, as are their own subjective values. So there is no right answer.
+</p>
+
+<p>
+When I started considering what people think should be right, I started leaning more towards believing that morality was subjective. Along the way, I wondered if values could be determined via reason, and therefore so could the morals based on those values, but I later determined that not even values could be objectively chosen via reason, although there is a set of values that makes more sense than others.
+</p>
+</div>
+</div>
+
+<div id="outline-container-absurdism-existentialism-nihilism" class="outline-2">
+<h2 id="absurdism-existentialism-nihilism"><span class="section-number-2">6.</span> Absurdism, Existentialism And Nihilism</h2>
+<div class="outline-text-2" id="text-absurdism-existentialism-nihilism">
+<p>
+i
+</p>
+
+
+<div id="orga2f80ab" class="figure">
+<p><img src="../images/philosophies-proposed-meanings-of-life.png" alt="philosophies-proposed-meanings-of-life.png" />
+</p>
+</div>
+
+
+<div id="org37f4847" class="figure">
+<p><img src="../images/existentialism-absurdism-nihilism.jpg" alt="existentialism-absurdism-nihilism.jpg" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-reproduction-ultimate-value" class="outline-2">
+<h2 id="reproduction-ultimate-value"><span class="section-number-2">7.</span> Why Reproduction Is The Best Ultimate Value</h2>
+<div class="outline-text-2" id="text-reproduction-ultimate-value">
+<blockquote>
+<p>
+&ldquo;Reproduction is your natural purpose, but you are not forced to accept it. You are free to accept it or reject it. God can’t make that choice for you. Neither can I.
+If you choose reproduction as your purpose, then you will be a reproducing machine struggling to reproduce. You will have a purpose, but that purpose will not be transcendent and cosmic. It will be biological and personal.
+If you reject your natural purpose, then you will still be a reproducing machine. Your nature will not change. You will still go through the motions of a reproducing machine: eating, sleeping, avoiding danger, pursuing love and sex, etc. But you will not reproduce.
+The choice is yours.&rdquo;
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>Van Allen, T. K.. Immanentizing the Abyss. Kindle Edition.</li>
+</ul>
+
+<p>
+So basically, Blithering Genius doesn&rsquo;t believe that there is any epistemic foundation for establishing that reason is valid. It simply is valid because otherwise there would be nothing left to use. Similarly, life doesn&rsquo;t really have any true purpose. However, the history and theory of evolution, the human body&rsquo;s intrinsic design to reproduce, and human psychology all suggest that humans are designed to reproduce, so reproduction might as well be the ultimate value for life since that is what life is designed for. Just as the reasoning process is designated as the only true source of knowledge, people can still make the irrational choice to reject reason, even if that would mean that they have no mental mechanisms left for thinking. Likewise, people can reject that reproduction is the ultimate goal for life, even if that would also be a rejection of how their body is designed and what their DNA evolved to do.
+</p>
+</div>
+
+<div id="outline-container-why-reproduction-is-ultimate" class="outline-3">
+<h3 id="why-reproduction-is-ultimate"><span class="section-number-3">7.1.</span> List Of Reasons And Advantages To Designating Reproduction As The Most Fundamental Value For All Life</h3>
+<div class="outline-text-3" id="text-why-reproduction-is-ultimate">
+<ul class="org-ul">
+<li>All life is designed to reproduce because all life evolved to reproduce. Even if someone chooses not to have children, there is no denying that their bodies, desires, and even their DNA were all shaped by millions of years of continuous reproduction.</li>
+<li>Holding reproduction as the main value to strive for avoids the misfortunes of Evolutionary Mismatch (as long as artificial barriers to reproduction are installed).</li>
+<li>Having and raising children gives meaning to human lives, which gives them a goal to strive towards when fulfilling the power process<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>. It is natural for humans to want and like raising children.</li>
+<li>Valuing reproduction is compatible with many biological, social, and psychological desires: the desires to have love, sex, children, raise them.</li>
+<li>Having children and passing one&rsquo;s genes onto them is a way of ensuring a form of immortality, which has psychological benefits. DNA is the most intrinsic thing about any organism because every organism is an expression of what the DNA did in its environment.</li>
+<li>The perception of immortality and having offspring that will continue the human species for a countless number of future generations gives humans something to look forwards to, having children and descendants that will forever continue the memory of human civilization and all good things that humans have done within their lives.</li>
+<li>Reproduction and selection in humans is great for selecting good genes and excluding/de-selecting bad genes for future generations.</li>
+<li>Aside from rewarding the most productive people and couples with more children, continuing human reproduction in the proposed manner of artificial barriers and incentives to continue to human civilization maintains genetic variation, which will help sustain the future human population through many crises.</li>
+<li>If humans are designed to be reproducing machines that survive, struggle, and thrive, we might as well do it gloriously: forming empires with giant temples and monuments, colonizing the stars, keeping a massive archive of everything we&rsquo;ve done and achieved, and doing everything we can to prolong and further human civilization.</li>
+<li>Those who make the greatest ideas own the future.</li>
+<li>Those who reproduce own the future (in terms of genetics).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+The &ldquo;Power Process&rdquo; is a term coined by the Unabomber (Ted Kaczynski) to mean ------&#x2013;&#x2014;.
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: Zero Contradictions</p>
+<p class="date">Created: 2023-03-20 Mon 06:03</p>
+</div>
+</body>
+</html>

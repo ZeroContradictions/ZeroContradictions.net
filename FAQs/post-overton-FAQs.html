@@ -1,0 +1,1347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-02-18 Sat 02:36 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Post-Overton, Selfishness, And Altruism FAQs</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="description" content="Going over the common misconceptions of morality, selfishness, altruism from game-theoretical bio-realist perspective." />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="../blog-posts.css" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html#FAQs"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Post-Overton, Selfishness, And Altruism FAQs</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#definitions">1. Definitions</a></li>
+<li><a href="#origin-of-morality">2. Where does morality come from?</a>
+<ul>
+<li><a href="#memetics">2.1. How is morality related to memetic traditions?</a></li>
+</ul>
+</li>
+<li><a href="#justification-for-morality">3. How is morality justified?</a></li>
+<li><a href="#why-not-objective">4. Why isn&rsquo;t morality objective?</a></li>
+<li><a href="#reason-and-morality">5. Why can&rsquo;t the human ability to reason be a basis for objective morality?</a></li>
+<li><a href="#platonism">6. Isn&rsquo;t Ethics like Mathematics, existing in a Platonic realm and being &ldquo;objective but not empirical&rdquo;?</a></li>
+<li><a href="#necessary-evil">7. But there&rsquo;s no such thing as a necessary evil.</a></li>
+<li><a href="#definition-of-selfishness">8. Wouldn&rsquo;t a more coherent definition of the word &ldquo;selfishness&rdquo; be &ldquo;pursuing your own interests at the expense of others&rdquo;?</a></li>
+<li><a href="#altruism-and-evolution">9. Isn&rsquo;t Altruism part of human evolution?</a>
+<ul>
+<li><a href="#reciprocal-altruism">9.1. What about Reciprocal Altruism?</a></li>
+<li><a href="#kin-selection-theory-bogus">9.2. What about Kin Selection Theory providing a basis for Altruism?</a></li>
+<li><a href="#bees-and-ants-arent-altruistic">9.3. Aren&rsquo;t worker ants and worker bees examples of altruism existing in Nature, since they can&rsquo;t reproduce and thus only work for the good of their species?</a></li>
+</ul>
+</li>
+<li><a href="#helping-others">10. Doesn&rsquo;t helping out your friends and family count as altruism?</a></li>
+<li><a href="#helping-everybody">11. Shouldn&rsquo;t we help everybody?</a></li>
+<li><a href="#evolution-effects-on-morality">12. How Has Evolution Affected Human Morality?</a></li>
+<li><a href="#cynicalism-is-not-selfishness">13. Isn&rsquo;t it misguided to have such a cynical view of human nature?</a></li>
+<li><a href="#humans-are-biological-species">14. Do you view humans to simply be a biological species, like any other?</a></li>
+<li><a href="#living-post-overton">15. How do Post-Overtons live their lives?</a>
+<ul>
+<li><a href="#post-overtonism-and-crimes">15.1. Aren&rsquo;t post-overton people more likely to commit theft, murder, rape, and other crimes?</a></li>
+</ul>
+</li>
+<li><a href="#selfishness-and-morality">16. Isn&rsquo;t selfishness immoral?</a></li>
+<li><a href="#why-we-should-be-selfish">17. Why should we be selfish?</a></li>
+<li><a href="#selfishness-and-civilization">18. Wouldn&rsquo;t a selfish civilization fail?</a></li>
+<li><a href="#why-selfish-society">19. Why do you want to live in a more selfish society?</a></li>
+<li><a href="#altruism-and-civilization">20. Isn&rsquo;t Altruism integral human civilization?</a>
+<ul>
+<li><a href="#cooperation-vs-collectivism">20.1. The Difference Between Cooperation Vs Collectivism</a></li>
+</ul>
+</li>
+<li><a href="#purpose-of-government">21. Why do post-overton people support having a government?</a></li>
+<li><a href="#max-stirner">22. What do post-overtons think of Max Stirner?</a></li>
+<li><a href="#cooperation-not-objectively-moral">23. Why Is Cooperation Not Objectively Moral, Even If Would Produce The Greatest Amount Of Wealth?</a></li>
+<li><a href="#moral-progress">24. Isn&rsquo;t the moral progress that has been happening gradually throughout history evidence that morality is objective?</a></li>
+<li><a href="#morality-and-technology">25. Aren&rsquo;t technological advancement and improvements in the human standard of living driven by improving morality?</a></li>
+<li><a href="#morality-and-inferiors">26. Aren&rsquo;t people who treat their inferiors more moral than those who don&rsquo;t?</a></li>
+<li><a href="#the-NAP">27. Isn&rsquo;t the Libertarian Non-Aggression Principle (NAP) the objective origin of morality?</a></li>
+<li><a href="#utilitarianism">28. Isn&rsquo;t Negative Utilitarianism / Average Utilitarianism the best way to define morality?</a></li>
+<li><a href="#meaningless-of-standpoint-theory">29. The Meaninglessness of the Standpoint Theory of Truth</a></li>
+<li><a href="#mirror-neurons">30. Doesn&rsquo;t morality ultimately originate from mirror neurons and the materialist / psychological conditions of the human brain?</a></li>
+<li><a href="#universally-preferable">31. Isn&rsquo;t morality the same thing as &ldquo;universally preferable behavior&rdquo;?</a></li>
+<li><a href="#not-an-appeal-to-people">32. Isn&rsquo;t it an appeal to the people fallacy to say that morality is subjective?</a></li>
+<li><a href="#not-a-subjectivist-fallacy">33. Isn&rsquo;t it a subjectivist fallacy to insist that morality is perspective-dependent?</a></li>
+<li><a href="#orgbcce87f">34. How Can You Be Moral Without Believing In God?</a></li>
+<li><a href="#dangerous-black-and-white-morals">35. Why Is It Dangerous To Have A Black-And-White Sense Of Morality?</a></li>
+<li><a href="#not-everybody-wants-tech-society">36. Surely Everybody Wants To Live In A Prosperous, Technologically-Advanced Society, Right?</a></li>
+<li><a href="#technology-and-moral-progress">37. How Does Technology Create The Illusion Of Moral Progress?</a>
+<ul>
+<li><a href="#illusions-in-moralist-communities">37.1. Changes/Possibilities/Examples Enabled By Technology That Various Moralist Communities Would Claim To Be &ldquo;Moral Progress&rdquo; According To Their Perceptions Of The World</a></li>
+<li><a href="#ideologies-future-progress">37.2. Examples Where Utopian Ideologies Believe That Future Moral Progress Can Be Made By Technological Improvements</a></li>
+<li><a href="#colonizing-mars">37.3. Most Utopian Ideologists Want To Colonize Mars</a></li>
+<li><a href="#moral-progress-without-tech">37.4. Historical Examples Of &ldquo;Moral Progress&rdquo; That Weren&rsquo;t Caused By Advancing Technology</a></li>
+</ul>
+</li>
+<li><a href="#post-overton-summary">38. Comprehensive Summary Why Morality Is Relative And Subjective</a>
+<ul>
+<li><a href="#when-life-becomes-zero-sum">38.1. When Life Becomes Zero-Sum</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<hr />
+<p>
+Note: I haven&rsquo;t finished writing this file yet.
+</p>
+
+<div id="outline-container-definitions" class="outline-2">
+<h2 id="definitions"><span class="section-number-2">1.</span> Definitions</h2>
+<div class="outline-text-2" id="text-definitions">
+<p>
+For clarity, these are the definitions that will be used throughout this FAQs post:
+</p>
+<dl class="org-dl">
+<dt>Morality (platonic)</dt><dd>i</dd>
+<dt>Morality (inter-subjective)</dt><dd>i</dd>
+<dt>Morality (subjective)</dt><dd>i</dd>
+<dt>Post-Overton</dt><dd>The philosophical position that game theory, the intrinsic selfishness of life, and <a href="../FAQs/post-overton-FAQs.html#memetics">memetics</a> are the best way to understand morality. It is similar to moral relativism since it posits that morality can only be based on subjective values (which are perspective-dependent), but it&rsquo;s different since it also embraces the game-theoretic assumptions of selfishness and rationality, as well as the <a href="../FAQs/post-overton-FAQs.html#when-life-becomes-zero-sum">zero-sum nature of life</a>. Post-Overtons believe that the only legitimate rights are legal rights.</dd>
+<dt>Post-Moralism</dt><dd>The same thing as Post-Overton, but with a different name.</dd>
+</dl>
+
+<dl class="org-dl">
+<dt>Amoralism</dt><dd>i</dd>
+<dt>Moral Objectivism</dt><dd>i</dd>
+<dt>Moral Relativism</dt><dd>i</dd>
+<dt>Moral Nihilism</dt><dd>i</dd>
+<dt>Moral Realism</dt><dd>i</dd>
+<dt>Good</dt><dd>i</dd>
+<dt>Evil</dt><dd>i</dd>
+</dl>
+
+<dl class="org-dl">
+<dt>Selfishness</dt><dd>Acting for your own benefit, regardless of others.</dd>
+<dt>Altruism</dt><dd>Acting for the benefit of other, at some cost to oneself.</dd>
+</dl>
+
+<dl class="org-dl">
+<dt>Cynicalism</dt><dd>Selfishness, except that you take what you can, and give nothing back. A cynical person does not use a moral accounting system, nor are they interested in cooperating during a prisoner&rsquo;s dilemma.
+<ul class="org-ul">
+<li>NOTE: We are aware that we are defining Cynicalism in a non-standard way, but we are doing so because we believe that the most common definition of &ldquo;Cynicalism&rdquo; is too closely related to the definition for &ldquo;Selfishness&rdquo;, and we think that &ldquo;Cynicalism&rdquo; would be better used to convey a shade of meaning that most people tend to mistakenly associate with the headword &ldquo;Selfishness&rdquo;. By explicitly defining &ldquo;Selfishness&rdquo; and &ldquo;Cynicalism&rdquo;, we can contrast the two definitions to show what &ldquo;Selfishness&rdquo; is not what most people think it is.</li>
+</ul></dd>
+<dt>Moral Accounting System (MAS)</dt><dd>The system of emotions in a human&rsquo;s brain (and some other species&rsquo; brains too) that motivates people to do give-and-take behavior, or exchanges of labor. Evolution caused the MAS to develop in humans since they are more reproductively successful when they engage in give and take behavior within human tribes. The MAS is the primary reason why people are not <b>cynical</b>, and the behavior that MASs encourage does not count as &ldquo;reciprocal altruism&rdquo; since &ldquo;reciprocal altruism&rdquo; is an oxymoron.</dd>
+<dt>Collaboration/Cooperation</dt><dd>When rational individuals work together for mutual benefit. When people are collaborating, the group is <b>never</b> places above the individuals for the sake of the group. Cooperation requires trust (the expectation of reciprocity), and every individual who <b>collaborates</b> does so with the expectation that they will get something in return.</dd>
+<dt>Collectivism</dt><dd>When individuals place the collective above the individual for the sake of the collective.</dd>
+<dt>Utopian Ideology</dt><dd>Any naive ideology that people will believe in order to claim moral superiority and maintain the illusion of knowledge. <b>Utopian Ideologies</b> typically use the <b>Rhetoric of Exploitation</b>, simple-minded worldviews, moral narratives, visionary fantasies, and effective memetic propagations to delude people and spread the ideology. Read more: <a href="https://thewaywardaxolotl.blogspot.com/2014/07/the-communists-who-took-power-in.html?view=classic">Utopian Ideology</a></dd>
+<dt>The Rhetoric of Exploitation</dt><dd>A Classic Tactic used by Utopian Ideologists to replace rationalist thinking with rhetoric and self-righteous nonsense. The key is to use selective metaphors and phrases and portray the &ldquo;oppressors&rdquo; as having agency and the &ldquo;victims&rdquo; as having no agency. Read more: <a href="https://thewaywardaxolotl.blogspot.com/2013/12/the-rhetoric-of-exploitation_21.html?view=classic">The Rhetoric of Exploitation</a></dd>
+<dt>Meme</dt><dd>i</dd>
+<dt>Memetic System</dt><dd>i</dd>
+<dt>Tradition</dt><dd>i</dd>
+<dt>Fashion</dt><dd>i</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-origin-of-morality" class="outline-2">
+<h2 id="origin-of-morality"><span class="section-number-2">2.</span> Where does morality come from?</h2>
+<div class="outline-text-2" id="text-origin-of-morality">
+<p>
+Morality originates from one&rsquo;s personal values, in a 5-step processed described at this link: <a href="https://thewaywardaxolotl.blogspot.com/2020/07/what-is-morality.html?view=classic">What is Morality?</a>
+</p>
+
+<p>
+Other problems with <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">_</span></span></span></span></span>.
+</p>
+</div>
+
+<div id="outline-container-memetics" class="outline-3">
+<h3 id="memetics"><span class="section-number-3">2.1.</span> How is morality related to memetic traditions?</h3>
+<div class="outline-text-3" id="text-memetics">
+<p>
+To a large extent, culture is arbitrary. But it is also the case that many customs and taboos originated because they helped increase the reproductive success of the people who practiced them, in which case they would be known as <a href="https://thewaywardaxolotl.blogspot.com/2015/12/god-is-telomeme.html?view=classic">traditions</a>.
+</p>
+
+<p>
+Over time, many of these traditions and taboos came to be collective values of the practicing cultures, and a substantial basis for what is &ldquo;moral&rdquo; and &ldquo;immoral&rdquo;. The traditions then propagate onto the next generations via the individual internalization of collective values for every individual.
+</p>
+
+<p>
+More Information: <a href="https://thewaywardaxolotl.blogspot.com/2020/07/what-is-morality.html?view=classic">What is Morality? - Blithering Genius</a>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-justification-for-morality" class="outline-2">
+<h2 id="justification-for-morality"><span class="section-number-2">3.</span> How is morality justified?</h2>
+<div class="outline-text-2" id="text-justification-for-morality">
+<p>
+All justifications for morality inevitably either appeal to intuition or beg the question.
+</p>
+</div>
+</div>
+
+<div id="outline-container-why-not-objective" class="outline-2">
+<h2 id="why-not-objective"><span class="section-number-2">4.</span> Why isn&rsquo;t morality objective?</h2>
+<div class="outline-text-2" id="text-why-not-objective">
+<p>
+Several reasons. This FAQs page disproves many arguments in favor of objective morality, but for a non-FAQs-style format, see the following sections and pages:
+</p>
+<ul class="org-ul">
+<li><a href="#post-overton-summary">Post-Overton: Why Objective Morality is Absolute Nonsense</a></li>
+<li><a href="#technology-and-moral-progress">How Technology Creates the Illusion of &ldquo;Moral Progress&rdquo;</a></li>
+<li><a href="https://thewaywardaxolotl.blogspot.com/2020/07/what-is-morality.html?view=classic">What is Morality?</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-reason-and-morality" class="outline-2">
+<h2 id="reason-and-morality"><span class="section-number-2">5.</span> Why can&rsquo;t the human ability to reason be a basis for objective morality?</h2>
+<div class="outline-text-2" id="text-reason-and-morality">
+<p>
+Two reasons. First, this assumption relies on a misunderstanding of how reason and knowledge work. There is no such thing as &ldquo;pure reason&rdquo;: <a href="../epistemology/axiology.html">Axiology: The Nature of Value</a>
+</p>
+
+<p>
+Second, this assumption also makes the mistake of assuming that values can be based on sensory knowledge instead of emotional knowledge. <a href="../epistemology/axiology.html#rationality-of-values">Values can be coordinated with reason</a>, but reason and sensory knowledge alone cannot form an objective basis for morality.
+</p>
+
+<p>
+Read More: <a href="https://stateofthenihil.wordpress.com/2019/09/22/reason-is-not-the-basis-for-morality/">Reason is Not the Basis for Morality - StateOfTheNihil</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-platonism" class="outline-2">
+<h2 id="platonism"><span class="section-number-2">6.</span> Isn&rsquo;t Ethics like Mathematics, existing in a Platonic realm and being &ldquo;objective but not empirical&rdquo;?</h2>
+<div class="outline-text-2" id="text-platonism">
+<p>
+No, and it is dishonest to claim that because: 1. mathematics <i>is</i> empirical, and 2. morality is subjective. Here&rsquo;s a short proof that morality is subjective:
+</p>
+
+<blockquote>
+<p>
+All values ultimately originate from sentient organisms. If there are no sentient life in the universe, then there is no value either.
+Suppose we introduce only one sentient organism into a universe with no existing life. It follows that all of the value in the universe is necessarily rated according to the single perspective of that living organism. Now suppose we introduce a second living organism with completely opposite goals from the first organism (e.g. a predator-prey relationship for instance). Now all the value in the universe is ranked according to two diametrically-opposed points of view.
+&ldquo;Objective value&rdquo; is therefore an oxymoron. How could value conceivable be objective if it is necessarily dependent on the perspective of sentient organisms?
+Morality is based on value. If objective value doesn&rsquo;t exist, then objective morality doesn&rsquo;t exist either. Morality is therefore subjective since it is based on value, which is based on the perspectives(s) of sentient life. QED.
+</p>
+</blockquote>
+
+<p>
+Also, the existence of a Platonic Realm for Mathematics or Ethics is metaphysically impossible and has no explanatory power for the following reasons: <a href="../epistemology/1B-truth-and-abyss.html#platonism">Arguments Against Platonism</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-necessary-evil" class="outline-2">
+<h2 id="necessary-evil"><span class="section-number-2">7.</span> But there&rsquo;s no such thing as a necessary evil.</h2>
+<div class="outline-text-2" id="text-necessary-evil">
+<p>
+This question assumes that &ldquo;evil&rdquo; is well-defined and objective, but it isn&rsquo;t.
+</p>
+</div>
+</div>
+
+<div id="outline-container-definition-of-selfishness" class="outline-2">
+<h2 id="definition-of-selfishness"><span class="section-number-2">8.</span> Wouldn&rsquo;t a more coherent definition of the word &ldquo;selfishness&rdquo; be &ldquo;pursuing your own interests at the expense of others&rdquo;?</h2>
+<div class="outline-text-2" id="text-definition-of-selfishness">
+<p>
+No, not at all. i
+</p>
+
+<p>
+The phrases &ldquo;regardless of others&rdquo;, &ldquo;without regard for others&rdquo;, or &ldquo;in disregard of others&rdquo; all simply mean that you are concerned with yourself, and not concerned with other people. In other words, you are acting for your benefit, not theirs. On the other hand, a prepositional phrase like &ldquo;at the expense of others&rdquo; has very different semantics since it would imply that you can only benefit yourself if others are negatively affected by your actions.
+</p>
+
+<p>
+i
+</p>
+</div>
+</div>
+
+<div id="outline-container-altruism-and-evolution" class="outline-2">
+<h2 id="altruism-and-evolution"><span class="section-number-2">9.</span> Isn&rsquo;t Altruism part of human evolution?</h2>
+<div class="outline-text-2" id="text-altruism-and-evolution">
+<p>
+No, it isn&rsquo;t. All of the so-called examples of altruism in human evolution are misunderstandings of how evolution actually works:
+</p>
+<ul class="org-ul">
+<li><a href="https://www.amazon.com/dp/B0BPXJ85W7">Debunking the Selfish Gene by T.K. Van Allen</a></li>
+<li><a href="https://thewaywardaxolotl.blogspot.com/2015/04/altruism-and-selfishness.html?view=classic">Altruism and Selfishness</a></li>
+<li><a href="https://thewaywardaxolotl.blogspot.com/2014/04/bees-are-not-social.html?view=classic">Bees are not Altruistic</a></li>
+<li><a href="https://www.youtube.com/watch?v=K97OP2p9JTQ">Pathological Altruism</a></li>
+<li><a href="https://thewaywardaxolotl.blogspot.com/2014/04/family-and-society.html?view=classic">Family, Transfers of Energy, and Exchanges of Labor</a></li>
+</ul>
+<p>
+If anything, altruism is self-defeating, and any attempt to establish altruism in nature would be quickly erased as soon as evolution takes back the helm and reinstates selfishness. Altruism cannot evolve, due to the free-rider problem.
+</p>
+</div>
+
+<div id="outline-container-reciprocal-altruism" class="outline-3">
+<h3 id="reciprocal-altruism"><span class="section-number-3">9.1.</span> What about Reciprocal Altruism?</h3>
+<div class="outline-text-3" id="text-reciprocal-altruism">
+<p>
+If Altruism is defined as &ldquo;acting to benefit others&rdquo;, then Reciprocal Altruism is an oxymoron. If it&rsquo;s guaranteed that you&rsquo;re going to get helped back, then it&rsquo;s not really altruism. It&rsquo;s selfishness and cooperation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-kin-selection-theory-bogus" class="outline-3">
+<h3 id="kin-selection-theory-bogus"><span class="section-number-3">9.2.</span> What about Kin Selection Theory providing a basis for Altruism?</h3>
+<div class="outline-text-3" id="text-kin-selection-theory-bogus">
+<p>
+<a href="https://thewaywardaxolotl.blogspot.com/2019/07/kin-selection-theory-is-wrong.html?view=classic">Why Kin Selection Theory is Wrong</a>
+</p>
+
+<p>
+The nutshell summary is that parents care for their children because they have strong selfish incentives to do so for their own reproductive success, kin altruism between siblings is best explained as the parents&rsquo; selfish behavior being expressed in the children as part of their extended phenotype (cooperative children are easier to raise than non-cooperative children), stotting/pronking is a demonstration to predators to try catching someone else in the herd instead of the pronker, and other purported examples of kin altruism are debunked on a case-by-case basis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-bees-and-ants-arent-altruistic" class="outline-3">
+<h3 id="bees-and-ants-arent-altruistic"><span class="section-number-3">9.3.</span> Aren&rsquo;t worker ants and worker bees examples of altruism existing in Nature, since they can&rsquo;t reproduce and thus only work for the good of their species?</h3>
+<div class="outline-text-3" id="text-bees-and-ants-arent-altruistic">
+<p>
+It is true that worker bees and worker ants who can&rsquo;t reproduce, but once again, this is a misunderstanding of how evolution works in <a href="https://en.wikipedia.org/wiki/Haplodiploidy">haplodiploid species like ants, bees, and wasps</a>. Evolution is selecting for the genes of the Queens, not the worker ants. The Queen has control over which eggs get fertilized with sperm stored from mating, so the drones are pure extensions of the Queen because they only carry her genes. A male&rsquo;s genes are from its mother, a worker&rsquo;s genes are from its mother and its father&rsquo;s mother. In bees and ants, all genes pass through a female body at least every second generation. Usually, that female body was a Queen. This means that all ant genes are selected for their ability to help Queens reproduce. Thus, this is <i>not</i> a case of altruism existing in Nature.
+</p>
+
+<p>
+In other cases when organisms ostensibly sacrifice themselves for the survival of the species, they do so because it ensures the survival of their children, not their species, which increases their reproductive success. If organisms did sacrifice themselves for their own species, but not their children, then their genes would die out, and altruism would cease to exist within that species.
+</p>
+
+<p>
+For more information, read: <a href="https://thewaywardaxolotl.blogspot.com/2014/04/bees-are-not-social.html?view=classic">Bees are not Altruistic</a>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-helping-others" class="outline-2">
+<h2 id="helping-others"><span class="section-number-2">10.</span> Doesn&rsquo;t helping out your friends and family count as altruism?</h2>
+<div class="outline-text-2" id="text-helping-others">
+<p>
+Usually no, and this is also a misunderstanding of what true altruism actually is. When people are helping out their family and friends, that is typically people doing transactions between their <i>moral accounting systems</i>. For more information, see: <a href="https://thewaywardaxolotl.blogspot.com/2014/04/family-and-society.html?view=classic">Family, Transfers of Energy, and Exchanges of Labor</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-helping-everybody" class="outline-2">
+<h2 id="helping-everybody"><span class="section-number-2">11.</span> Shouldn&rsquo;t we help everybody?</h2>
+<div class="outline-text-2" id="text-helping-everybody">
+<p>
+No, in fact it is a Fallacy of Composition to assume that being able to help others implies that we can collectively help the entire world.
+</p>
+
+<p>
+[elaborate]
+</p>
+</div>
+</div>
+
+<div id="outline-container-evolution-effects-on-morality" class="outline-2">
+<h2 id="evolution-effects-on-morality"><span class="section-number-2">12.</span> How Has Evolution Affected Human Morality?</h2>
+<div class="outline-text-2" id="text-evolution-effects-on-morality">
+<ul class="org-ul">
+<li>Evolution selected for egoism and selfishness over altruism. Hence, altruism is a losing reproductive strategy whenever there is a competing pro-selfishness strategy.</li>
+<li>Since mutual cooperation among selfishness individuals enables each individual to gain more than if they each worked alone, humans have evolved a moral accounting system to keep track of what they owe and what they are owed from their respective communities.</li>
+<li>Humans have a natural intuition that life is good and life should be preserved in many cases, even when it&rsquo;s not very practical (e.g. pro-lifers being against abortion, people against death penalties, people against suicide, assisted suicide, or even suicide with dignity, etc).</li>
+<li>Humans are more likely to favor their children, spouses, family, friends, and other people in their social networks and communities over outsiders, in terms of perks, special advice/tips/tricks, and goods (cronyism/tribalism/favoritism).</li>
+<li>Humans are tribalistic, and develop their own internal labels for who to designate within their in-groups and out-groups.</li>
+<li>Humanists view love as sacred, even though it doesn&rsquo;t exist merely to make humans feel good. Likewise, people may feel spiteful and vengeful when their partners cheat or break up with them. Regarding cheating, this implicitly causes humans to value consent.</li>
+<li>Many humans favor utilitarian and hedonistic ideologies, although they may be less inclined to favor those if they became post-overton and/or recognized evolution&rsquo;s applications to human nature.</li>
+<li>Going beyond this point, this also affect the human intuitions of how rewards and punishments should work.</li>
+<li>The necessity of human societies in the modern world (and lack of understanding of evolutionary reasoning) has caused people to adopt altruistic moralist ideologies, whose adoptions are further amplified.</li>
+<li>Humans have grown to dislike loneliness and favor being in communities and groups.</li>
+<li>Humans will tend to justify themselves, even if doing so is hypocritical or wrong from the collective moral perspective.</li>
+<li>Human have developed a complex range of emotions. Two such emotions are hate and anger. Even self-identified humanists and other utopian ideologists who live in peaceful societies have an intentionally ignored and unrecognized evolutionary desire to hate and be mad at <b>some</b> people. But their ideology leaves few people left to hate, so they hate nazis and other people they perceive to be &ldquo;backwards&rdquo; or &ldquo;ignorant&rdquo; and will even expand the definitions of people who can fall into those groups so that they have more people to release their natural hatred and anger against.</li>
+<li>The negative consequences of technology are not viewed as humiliating because technological progress is viewed as necessary (albeit technology is more of a memetic thing). The humiliation faced by people who get laid off, put out of business, or whose professions become obsolete is ignored in favor of the technological progress of society. Similarly, society views it as moral to forcibly educate children in public schools about curriculum that they hate, because it&rsquo;s viewed as necessary for the modern world.</li>
+</ul>
+<p>
+More Info: <a href="https://thewaywardaxolotl.blogspot.com/2017/09/evolution-and-morality.html?view=classic">Evolution and Morality - Blithering Genius</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-cynicalism-is-not-selfishness" class="outline-2">
+<h2 id="cynicalism-is-not-selfishness"><span class="section-number-2">13.</span> Isn&rsquo;t it misguided to have such a cynical view of human nature?</h2>
+<div class="outline-text-2" id="text-cynicalism-is-not-selfishness">
+<p>
+We don&rsquo;t equate selfishness to &ldquo;cynicalism&rdquo;, hence why we define the two differently. If someone is selfish, then they are prioritizing the pursuit of their self interests first and foremost, but they will often have to obey their moral accounting systems as a means to an end.
+</p>
+
+<p>
+We define cynicalism as being selfish, except that you don&rsquo;t adhere to your moral accounting system. If someone helps out a cynical person, the cynical person would accept the help, but then they wouldn&rsquo;t help the helper back.
+</p>
+
+<p>
+[Elaborate]
+</p>
+</div>
+</div>
+
+<div id="outline-container-humans-are-biological-species" class="outline-2">
+<h2 id="humans-are-biological-species"><span class="section-number-2">14.</span> Do you view humans to simply be a biological species, like any other?</h2>
+<div class="outline-text-2" id="text-humans-are-biological-species">
+<p>
+Yes. <a href="https://thewaywardaxolotl.blogspot.com/2014/02/we-cannot-transcend-evolution.html?view=classic">Humans cannot transcend evolution</a>, and just because humans have lots of technology and are the most intelligent form of life ever known to have existed, that doesn&rsquo;t mean that humans aren&rsquo;t susceptible to the same population dynamics and other biological realities that all other animals must face. It is still the case that genes are largely responsible for predetermining every person&rsquo;s destiny, that whoever has the most children is destined to have their genes become more common in the future, and that human populations have the potential to exceed their carrying capacities to the point of causing war, disease, and famine in order to decrease their populations.
+</p>
+</div>
+</div>
+
+<div id="outline-container-living-post-overton" class="outline-2">
+<h2 id="living-post-overton"><span class="section-number-2">15.</span> How do Post-Overtons live their lives?</h2>
+<div class="outline-text-2" id="text-living-post-overton">
+<p>
+i
+</p>
+</div>
+
+<div id="outline-container-post-overtonism-and-crimes" class="outline-3">
+<h3 id="post-overtonism-and-crimes"><span class="section-number-3">15.1.</span> Aren&rsquo;t post-overton people more likely to commit theft, murder, rape, and other crimes?</h3>
+<div class="outline-text-3" id="text-post-overtonism-and-crimes">
+<p>
+Nope, in a civilized society, ideologically post-overton people are no more likely to commit crime than purportedly &ldquo;altruistic&rdquo; people.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-selfishness-and-morality" class="outline-2">
+<h2 id="selfishness-and-morality"><span class="section-number-2">16.</span> Isn&rsquo;t selfishness immoral?</h2>
+<div class="outline-text-2" id="text-selfishness-and-morality">
+<p>
+No, there is no such thing as objective morality, so it would be nonsensical to insist that selfishness is &ldquo;objectively immoral&rdquo;. Selfishness is not subjectively immoral either because morality depends on perspective, and from the perspective of any selfish person, being selfish is the &ldquo;moral&rdquo; thing for them to be. Not to mention that being altruistic interferes with the balance of nature, and is ultimately self-defeating since altruistic genes and memes die off pretty quickly.
+</p>
+</div>
+</div>
+
+<div id="outline-container-why-we-should-be-selfish" class="outline-2">
+<h2 id="why-we-should-be-selfish"><span class="section-number-2">17.</span> Why should we be selfish?</h2>
+<div class="outline-text-2" id="text-why-we-should-be-selfish">
+<p>
+Because we have no other choice. We can only do what we want to do, so in that sense, we&rsquo;re always being selfish. Some people might want to be nicer than others, and some might want to be cruel. Regardless, all voluntary acts are based on desires.
+</p>
+
+<p>
+<a href="../epistemology/free-will.html#determinism-vs-free-will">Desires are not chosen</a>. A serial killer chooses to kill, but does not choose to want to kill. Likewise, a philanthropist chooses to help the poor, but does not choose to want to help the poor. Both are acting on their desires. Both are psychologically selfish.
+</p>
+
+<p>
+<a href="#altruism-and-evolution">Life also evolved to be selfish. Altruism cannot evolve due to the free-rdire problem.</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-selfishness-and-civilization" class="outline-2">
+<h2 id="selfishness-and-civilization"><span class="section-number-2">18.</span> Wouldn&rsquo;t a selfish civilization fail?</h2>
+<div class="outline-text-2" id="text-selfishness-and-civilization">
+<p>
+No, not at all. Collaboration, Cooperation, and Selfishness are the foundations of human civilization, not Altruism and Collectivism.
+</p>
+</div>
+</div>
+
+<div id="outline-container-why-selfish-society" class="outline-2">
+<h2 id="why-selfish-society"><span class="section-number-2">19.</span> Why do you want to live in a more selfish society?</h2>
+<div class="outline-text-2" id="text-why-selfish-society">
+<p>
+i
+</p>
+
+<p>
+Altruism creates an economic and biological free rider problem, which makes society weaker and has no altruistic resolution.
+</p>
+</div>
+</div>
+
+<div id="outline-container-altruism-and-civilization" class="outline-2">
+<h2 id="altruism-and-civilization"><span class="section-number-2">20.</span> Isn&rsquo;t Altruism integral human civilization?</h2>
+<div class="outline-text-2" id="text-altruism-and-civilization">
+<p>
+No, not at all. Collaboration, Cooperation, and Selfishness are integral of human civilization, not Altruism and Collectivism.
+</p>
+
+<p>
+Even if people were altruistic, the calculation problem (Hayek) makes altruism untenable. You have the knowledge to act selfishly, but not the knowledge to act altruistically.
+</p>
+
+<p>
+Furthermore, every altruistic civilization is doomed to fail. Watch <a href="https://www.youtube.com/watch?v=K97OP2p9JTQ">Pathological Altruism</a> to see why.
+</p>
+</div>
+
+<div id="outline-container-cooperation-vs-collectivism" class="outline-3">
+<h3 id="cooperation-vs-collectivism"><span class="section-number-3">20.1.</span> The Difference Between Cooperation Vs Collectivism</h3>
+<div class="outline-text-3" id="text-cooperation-vs-collectivism">
+<p>
+First, we have to define <b>collectivism</b>: when individuals place the collective above the individual for the sake of the collective.
+</p>
+
+<p>
+Next, we have to define <b>cooperation</b>. Cooperation is when rational individuals work together for mutual benefit as a way to achieve their self-interests, however, they <b>never</b> place the group above the individuals for the sake of the group. And then we need to explain why <b>cooperation</b> is both different and better than collectivism. Cooperation requires trust (the expectation of reciprocity), and every individual who <b>collaborates</b> does so with the expectation that they will get something in return.
+</p>
+
+<p>
+Typically, most collectivists will take examples of <b>cooperation</b> and erroneously classify those examples as situations where collectivism is a good thing, in order to promote actual instances of collectivism, such as socialism, pious religions, and authoritarianism. When collectivists frame cooperation as collectivism, they often portray it as being based on empathy or affection instead of trust since they don&rsquo;t understand that cooperation is based on selfishness.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-purpose-of-government" class="outline-2">
+<h2 id="purpose-of-government"><span class="section-number-2">21.</span> Why do post-overton people support having a government?</h2>
+<div class="outline-text-2" id="text-purpose-of-government">
+<p>
+The primary goal of government is to resolve Prisoner Dilemmas and Tragedies of the Commons. Government comes from the necessity to create a reasonable set of laws that would create a societal framework from which selfish individuals can cooperate together for greater mutual gain (than if they didn&rsquo;t cooperate together). Cooperation is the foundation of civilization, and the best legal code is the one that enables that to the greatest extent possible.
+</p>
+
+<p>
+Read More: <a href="../journey/case-against-libertarianism.html#problems-with-deontological-ethics">The Problems With Deontological Ethics</a>
+</p>
+
+<p>
+Read More: <a href="../epistemology/free-will.html#accountability-for-actions">The Nature of Determinism and Free Will: Why People Should Be Held Accountable For Their Actions</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-max-stirner" class="outline-2">
+<h2 id="max-stirner"><span class="section-number-2">22.</span> What do post-overtons think of Max Stirner?</h2>
+<div class="outline-text-2" id="text-max-stirner">
+<p>
+Stirner&rsquo;s concept of a <a href="https://en.wikipedia.org/wiki/Union_of_egoists">Union of Egoists</a> is merely a way of solving the prisoner&rsquo;s dilemmas that every society has to solve.
+</p>
+</div>
+</div>
+
+<div id="outline-container-cooperation-not-objectively-moral" class="outline-2">
+<h2 id="cooperation-not-objectively-moral"><span class="section-number-2">23.</span> Why Is Cooperation Not Objectively Moral, Even If Would Produce The Greatest Amount Of Wealth?</h2>
+<div class="outline-text-2" id="text-cooperation-not-objectively-moral">
+<p>
+Since Libertarians and Ancaps are strong proponents of contract theory ethics, they believe that it is unthinkable and wickedly immoral for anybody to break any contract or agreement that two or more parties agrees to. That being said, their moral dogmas prevent them from realizing that the omnipresent possibility that anybody could defect from an agreement is precisely why it isn&rsquo;t objectively correct that cooperation is always the best choice for the agents in the prisoner&rsquo;s dilemma. Even if cooperation would lead to higher wealth and overall well-being for all the parties involved, cooperation is still <b>not</b> going to be the best option if it&rsquo;s possible that the other side could and/or would defect.
+</p>
+
+<p>
+People who argue that cooperation is &ldquo;objectively moral&rdquo; don&rsquo;t understand the prisoner&rsquo;s dilemma. In the prisoner&rsquo;s dilemma, the choices are selfishness or altruism. There is no (viable) cooperation choice, because reciprocity is not ensured. That&rsquo;s why the prisoner&rsquo;s dilemma has to be solved to create cooperation.
+</p>
+
+<p>
+If cooperating together was the objectively best choice, i.e. it offers the greatest individual reward for each player and defection is guaranteed to not happen, then prisoner&rsquo;s dilemmas wouldn&rsquo;t exist at all in the first place. Conversely, if prisoner&rsquo;s dilemmas didn&rsquo;t exist, then there would be no inquiry as to why someone would choose anything less than the option with the greatest potential reward and what can be done to achieve that.
+</p>
+
+<p>
+i
+</p>
+</div>
+</div>
+
+<div id="outline-container-moral-progress" class="outline-2">
+<h2 id="moral-progress"><span class="section-number-2">24.</span> Isn&rsquo;t the moral progress that has been happening gradually throughout history evidence that morality is objective?</h2>
+<div class="outline-text-2" id="text-moral-progress">
+<p>
+No, it isn&rsquo;t. &ldquo;Moral progress&rdquo; is an illusion, and the creation of the illusion is explained in this blog post: <a href="#technology-and-moral-progress">How Technology Creates the Illusion of &ldquo;Moral Progress&rdquo;</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-morality-and-technology" class="outline-2">
+<h2 id="morality-and-technology"><span class="section-number-2">25.</span> Aren&rsquo;t technological advancement and improvements in the human standard of living driven by improving morality?</h2>
+<div class="outline-text-2" id="text-morality-and-technology">
+<p>
+No, this is backwards. &ldquo;Moral progress&rdquo; is an illusion, and the illusion is created by technological advancements, as explained in this blog post: <a href="#technology-and-moral-progress">How Technology Creates the Illusion of &ldquo;Moral Progress&rdquo;</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-morality-and-inferiors" class="outline-2">
+<h2 id="morality-and-inferiors"><span class="section-number-2">26.</span> Aren&rsquo;t people who treat their inferiors more moral than those who don&rsquo;t?</h2>
+<div class="outline-text-2" id="text-morality-and-inferiors">
+<p>
+No, and this is a very naive and misguided understanding of human nature. i
+</p>
+
+<p>
+[Elaborate]
+</p>
+</div>
+</div>
+
+<div id="outline-container-the-NAP" class="outline-2">
+<h2 id="the-NAP"><span class="section-number-2">27.</span> Isn&rsquo;t the Libertarian Non-Aggression Principle (NAP) the objective origin of morality?</h2>
+<div class="outline-text-2" id="text-the-NAP">
+<p>
+No, and for several reasons.
+</p>
+
+<p>
+<a href="../journey/case-against-libertarianism.html#NAP">It Is Misleading To Think Of The Libertarian NAP As A Single Principle</a>.
+</p>
+
+<p>
+[Elaborate]
+</p>
+</div>
+</div>
+
+<div id="outline-container-utilitarianism" class="outline-2">
+<h2 id="utilitarianism"><span class="section-number-2">28.</span> Isn&rsquo;t Negative Utilitarianism / Average Utilitarianism the best way to define morality?</h2>
+<div class="outline-text-2" id="text-utilitarianism">
+<p>
+No. Utilitarianism is defined as maximizing &ldquo;well-being&rdquo;, and &ldquo;well-being&rdquo; is subjective. That&rsquo;s why there&rsquo;s many different types of Utiliarianism.
+</p>
+
+<p>
+[Elaborate]
+</p>
+
+<p>
+[The Connection Between The Various Types Of Utiliarianism With The Various Types Of Hedonism]
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Question</th>
+<th scope="col" class="org-left">Mainstream</th>
+<th scope="col" class="org-left">Efilism</th>
+<th scope="col" class="org-left">Zero Contradictions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">If Life Violent?</td>
+<td class="org-left">It shouldn&rsquo;t be</td>
+<td class="org-left">Yes, and life is worse thing ever.</td>
+<td class="org-left">Yes, but this isn&rsquo;t necessarily a &ldquo;bad&rdquo; thing.</td>
+</tr>
+
+<tr>
+<td class="org-left">Hedonism/Utilitarianism?</td>
+<td class="org-left">Positive &amp; Negative Utilitarianism</td>
+<td class="org-left">Supremacy of Negative Utilitarianism</td>
+<td class="org-left">N/A, they balance out, and it&rsquo;s subjective.</td>
+</tr>
+
+<tr>
+<td class="org-left">Altruism?</td>
+<td class="org-left">Yes.</td>
+<td class="org-left">Yes, absolutely.</td>
+<td class="org-left">No, because nature is intrinsically selfish.</td>
+</tr>
+</tbody>
+</table>
+
+
+<hr />
+<p>
+Most people and all Efilists are Utilitarians. The difference is that most people will assign some value to positive hedonism, whereas Efilists will assign either no value to positive hedonism or value it as completely subordinate to Utilitarianism (Positive Hedonism is only valuable if Negative Hedonism is satisfied). In addition, Efilists recognize that life is inherently violent.
+</p>
+
+<p>
+Positive and Negative Utilitarianism only differ by the type of hedonism that they favor.
+</p>
+<hr />
+</div>
+</div>
+
+<div id="outline-container-meaningless-of-standpoint-theory" class="outline-2">
+<h2 id="meaningless-of-standpoint-theory"><span class="section-number-2">29.</span> The Meaninglessness of the Standpoint Theory of Truth</h2>
+<div class="outline-text-2" id="text-meaningless-of-standpoint-theory">
+<p>
+Slavery and the Holocaust are some of people&rsquo;s favorite sacred moral narratives. When people are abusing the <a href="https://thewaywardaxolotl.blogspot.com/2013/12/the-rhetoric-of-exploitation_21.html?view=classic">The Rhetoric of Exploitation</a>, they will often compare injustices to slavery or the Holocaust. When people who oppose these comparisons hear them, they will often respond by saying &ldquo;That&rsquo;s offensive to Holocaust Survivors or Actual Slaves&rdquo;. But if we&rsquo;re going to take the <a href="https://en.wikipedia.org/wiki/Standpoint_theory">Standpoint (STFU) Theory of Truth</a> for granted, then there are plenty of examples for showing how ridiculous it is. If you look hard enough, you can find an example of someone who went through a heinous tragedy who compares a different phenomenon to the hardship that they experienced:
+</p>
+<ul class="org-ul">
+<li>Example of a slave who claimed that taxation is worse than slavery: <a href="https://en.wikipedia.org/wiki/Frederick_Douglass">Former Slave: Frederick Douglass</a></li>
+<li>Example of a Holocaust survivor who compared modern slaughterhouses to the Holocaust: <a href="https://en.wikipedia.org/wiki/Alex_Hershaft">Vegan Holocaust Survivor: Alex Hershaft</a></li>
+<li>Example of a Holocaust survivor who compared the COVID-19 lockdowns to the Holocaust: <a href="https://www.reddit.com/r/CoronavirusCirclejerk/comments/qii20e/92_yearold_holocaust_survivor_compares_covid/">92 year-old Holocaust survivor compares COVID response to Nazi Germany.</a></li>
+<li>Example of a Holocaust survivor who compared Islamic indoctrination as using the same indoctrination tactics used in Nazi Germany: [I can&rsquo;t remember the name of the person who made this comparison, but if I find it, I&rsquo;ll post it here.]</li>
+<li>Example of a Holocaust survivor who opposes critical race theory: <a href="https://www.foxnews.com/media/holocaust-survivor-endured-nazi-medical-experiments-opposes-critical-race-theory-indoctrination">https://www.foxnews.com/media/holocaust-survivor-endured-nazi-medical-experiments-opposes-critical-race-theory-indoctrination</a></li>
+</ul>
+<p>
+The point of making this list was to show that it&rsquo;s rather meaningless to compare perceived hardships to sacred moral narratives like slavery or the Holocaust because dozens of other perceived forms of oppression can be compared to these sacred moral narratives as well. Conversely, it&rsquo;s equally meaningless to attempt to use standpoint theory to argue against such comparisons since we can always find someone who went through the actual hardships who agrees with the comparison.
+</p>
+
+<p>
+To quote from <a href="https://thewaywardaxolotl.blogspot.com/2017/09/violet.html?view=classic">Blithering Genius on Standpoint Theory</a>:
+</p>
+<blockquote>
+<p>
+Standpoint theory is basically the belief that marginalized groups have special insight &#x2013; their experiences are more truthy. In other words: complete bullshit. It isn&rsquo;t a theory of knowledge. It&rsquo;s a rhetorical trick to &ldquo;win&rdquo; a debate by retreating into the swamp of relativism and solipsism. It&rsquo;s like saying &ldquo;You can&rsquo;t see your privilege because you are a white male, so let me tell you about it&rdquo;. Or, in other words, &ldquo;Listen and Believe&rdquo;. Or in other other words, STFU. ― Blithering Genius
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-mirror-neurons" class="outline-2">
+<h2 id="mirror-neurons"><span class="section-number-2">30.</span> Doesn&rsquo;t morality ultimately originate from mirror neurons and the materialist / psychological conditions of the human brain?</h2>
+<div class="outline-text-2" id="text-mirror-neurons">
+<p>
+No, and there is plenty of evidence to demonstrate why this argument is false, fallacious, and not evidence in favor of &ldquo;moral realism&rdquo;.
+</p>
+</div>
+</div>
+
+<div id="outline-container-universally-preferable" class="outline-2">
+<h2 id="universally-preferable"><span class="section-number-2">31.</span> Isn&rsquo;t morality the same thing as &ldquo;universally preferable behavior&rdquo;?</h2>
+<div class="outline-text-2" id="text-universally-preferable">
+<p>
+No, and this is demonstrably false.
+</p>
+
+<p>
+For example, most people in Japan, the United States, and Europe view the <a href="https://en.wikipedia.org/wiki/Assassination_of_Shinzo_Abe">Assassination of Shinzo Abe</a> to be a &ldquo;morally bad&rdquo; thing since they like Japan, but most people in China and Korea view his assassination to be a &ldquo;morally good&rdquo; thing because they hate Japan. If it was truly the case that it is &ldquo;universally preferable&rdquo; to condemn murder, then why are there hundreds of millions people who applaud the assassination and celebrate the assassin as a hero?
+</p>
+
+
+
+<blockquote>
+<p>
+No intelligent human society can logically sustain a rule that says one human deserves to enslave another for very long.
+</p>
+</blockquote>
+<p>
+Sure they can. If there&rsquo;s no technology that can do the labor more efficiently than slave labor AND it&rsquo;s necessary for society&rsquo;s continuity, then why not? They could even further justify it by pointing out that slaves can become free eventually if they work hard enough, as had many Roman slaves.
+</p>
+
+<blockquote>
+<p>
+Nobody can logically defend the position that NAP-violations can be morally good.
+</p>
+</blockquote>
+<p>
+Of course they can. For the same reason why Libertarians can&rsquo;t agree on whether abortion violates the NAP or not. Or how Libertarians can&rsquo;t agree on whether blackmailing is NAP-compliant. Or how Ancaps may drop-kick people out who disagree with their interpretation of the NAP. The bottom line is that &ldquo;Aggression&rdquo; is subjective, so the NAP is also subjective.
+</p>
+
+<blockquote>
+<p>
+Only creatures that have the mental capacity to conceive of abstract rules can be bound and protected by said rules - and only if they reciprocate.
+</p>
+</blockquote>
+<p>
+That is very arbitrary. By the same logic, a newborn infant or a person with severe dementia may not be protected by the Libertarian NAP if they lack the mentally ability to understand it. Most people would disagree and insist that those humans deserve the same legal protections as more mentally capable humans.
+</p>
+
+<blockquote>
+<p>
+In moral terms, the only important criteria is if they&rsquo;re able to understand and reciprocate rules. Moral rules, if they exist, are a subset of these that ought to be universally upheld.
+</p>
+</blockquote>
+<p>
+According to who, and why? For starters, this claim doesn&rsquo;t make any sense since your definition of morality has been easily debunked.
+</p>
+
+<blockquote>
+<p>
+The second part of that statement doesn&rsquo;t necessarily follow the first.
+</p>
+</blockquote>
+<p>
+Yes it does. Life is an energy-stealing game, that&rsquo;s what it&rsquo;s all about.
+</p>
+
+<blockquote>
+<p>
+Thinking about morality merely in terms of energy balances is unproductive and nonsensical.
+</p>
+</blockquote>
+<p>
+What? Not only does this claim not make any sense, but no explanation is given as to why it&rsquo;s true. Moreover, it makes way more sense to think of morality from a biological perspective than to think about it in terms of a definition that contradicts the nature of biology and game theory, like the definition that you gave.
+</p>
+
+<blockquote>
+<p>
+It is retarded to define &ldquo;good&rdquo; as &ldquo;optimizing, or fairly utilizing, the energy available.
+</p>
+</blockquote>
+<p>
+The reasoning for this is missing. No reasons have been given for why we should think of morality from a psychological point-of-view, rather than a biological game-theoretic point-of-view. The latter yields a definition of morality that doesn&rsquo;t contradict reality, whereas the former does.
+</p>
+
+<blockquote>
+<p>
+&ldquo;Modern moral theory says you aren&rsquo;t obligated to help him.
+</p>
+</blockquote>
+<p>
+Modern Liberals disagree. Who&rsquo;s to say that your beliefs are more correct than theirs, besides yourself?
+</p>
+
+<blockquote>
+<p>
+Other species are not subject to the same moral protections as us, since they can neither conceive nor reciprocate moral norms.
+</p>
+</blockquote>
+
+<p>
+If that&rsquo;s true, then human babies, severely retarded people, and the mentally disabled elderly do not have the same legal protections as everyone else, which contradicts most people&rsquo;s moral intuitions, at least in today&rsquo;s world anyway. Though I am indifferent since I understand that literally nothing is objectively immoral.
+</p>
+
+<blockquote>
+<p>
+&ldquo;but even so using more energy in the ecosystem doesn&rsquo;t necessarily harm other species.
+</p>
+</blockquote>
+<p>
+Yes it does. The Industrial Revolution was powered by fossil fuels, which fundamentally changed the Earth, caused tons of pollution, and lead to the sixth largest mass extinction event in the Earth&rsquo;s history. As another example, humans have had to breed literally billions of livestock animals inside slaughterhouses in order to generate enough meat to feed the planet, and yet it still isn&rsquo;t enough, in part because the human population won&rsquo;t stop growing.
+</p>
+
+<blockquote>
+<p>
+Animals shouldn&rsquo;t breed if there isn&rsquo;t enough energy around to sustain themselves. Just like a mother is being cruel/evil if she has babies that she cannot feed.
+</p>
+</blockquote>
+
+<p>
+And yet animals will still breed anyway irregardless. If there&rsquo;s a famine and civilization collapses, the most reasonable thing to do from a biological/evolutionary/game-theoretic point-of-view is to take what you can and give nothing back. Because that is what will maximize your reproductive success. And all the organisms that follow that strategy will spread their genes to a greater extent, whereas the most altruistic ones who choose to have fewer offspring will have their kind die out. You don&rsquo;t seem to understand biology or evolutionary theory very well&#x2026;
+</p>
+
+<blockquote>
+<p>
+&ldquo;Humans aren&rsquo;t fighting over the last bits of air, land, water, etc.
+</p>
+</blockquote>
+
+<p>
+That&rsquo;s literally what they&rsquo;ve done all throughout modern history, with the main exception being the modern era.
+</p>
+
+<blockquote>
+<p>
+Our competitions are chosen / voluntary.
+</p>
+</blockquote>
+<p>
+No, they aren&rsquo;t. If competition was truly voluntary, then there would be no competition at all because everyone would avoid it. One of the most fundamental principles of geopolitics is that selfish players (countries in this case) will compete against each other for scarce resources. And there are no permanent friends, only temporary allies for as long as the right conditions for cooperation hold true.
+</p>
+
+<blockquote>
+<p>
+Having one more human born on this planet won&rsquo;t hurt any existing human.
+</p>
+</blockquote>
+<p>
+If it&rsquo;s exactly <b>one</b> human, then probably not. But it isn&rsquo;t. The world population is increasing by several tens of millions of humans every year. Only a fool would say that there&rsquo;s no way this continuing trend could ever go wrong on a planet with finite resources. Unlimited population growth is unsustainable, and that&rsquo;s what we&rsquo;re heading towards.
+</p>
+
+<blockquote>
+<p>
+The energies in our ecosystems aren&rsquo;t that scarce.
+</p>
+</blockquote>
+<p>
+Yes they are, and they always have been. And it will only become more apparent as the world population continues to grow. If that continues, all it will take is another major crisis or two to make the world&rsquo;s food/resource supplies trip up and unable to keep up. Then you&rsquo;ll catch a glimpse of how biological systems have <b>always</b> worked.
+</p>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-not-an-appeal-to-people" class="outline-2">
+<h2 id="not-an-appeal-to-people"><span class="section-number-2">32.</span> Isn&rsquo;t it an appeal to the people fallacy to say that morality is subjective?</h2>
+<div class="outline-text-2" id="text-not-an-appeal-to-people">
+<p>
+No, Appeal to the People might be a valid fallacy for epistemological or scientific reasoning, but Appeal to the People is <i>not</i> a legitimate Fallacy when reasoning about ethical or political philosophy. Epistemology and Science are based on sensory knowledge, whereas Ethics and Politics are based on emotional/value knowledge. If anything, it is a Fallacy here by trying to apply sensory knowledge outside of its scope of appropriate use. Realizing this greater philosophical understanding for myself was one of the reasons why I stopped being an Ancap a few years ago.
+</p>
+</div>
+</div>
+
+<div id="outline-container-not-a-subjectivist-fallacy" class="outline-2">
+<h2 id="not-a-subjectivist-fallacy"><span class="section-number-2">33.</span> Isn&rsquo;t it a subjectivist fallacy to insist that morality is perspective-dependent?</h2>
+<div class="outline-text-2" id="text-not-a-subjectivist-fallacy">
+<p>
+No, anyone who argues that this is a Subjectivist Fallacy lacks a massive epistemological understanding about the limits of human reason. Truly objective conclusions are impossible when reasoning about morality because morality is based on value, and value is subjective. The Subjectivist Fallacy never applies when reasoning about value, so neither does it apply when reasoning about morality.
+</p>
+
+<p>
+Moreover, it can simultaneously be true for both: 1. a zebra to value the preservation of its own life over the starvation and eventual death of a hungry lion, and 2. a starving lion to value eating the zebra over any pain that the zebra might feel from being eaten alive. There are absolutely no contradictions in correctly asserting that morality is subjective.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbcce87f" class="outline-2">
+<h2 id="orgbcce87f"><span class="section-number-2">34.</span> How Can You Be Moral Without Believing In God?</h2>
+<div class="outline-text-2" id="text-34">
+<p>
+i
+</p>
+<hr />
+</div>
+</div>
+
+<div id="outline-container-dangerous-black-and-white-morals" class="outline-2">
+<h2 id="dangerous-black-and-white-morals"><span class="section-number-2">35.</span> Why Is It Dangerous To Have A Black-And-White Sense Of Morality?</h2>
+<div class="outline-text-2" id="text-dangerous-black-and-white-morals">
+<p>
+It is a <b>huge</b> mistake to view morality as black and white. Even if morality was objective, there&rsquo;s far more ways to be wrong than there are ways to be right, so anybody who merely <b>thinks</b> that they are imposing supposedly objective morality is statistically most likely to be wrong. Many people would also use their belief that they are imposing the one and only true &ldquo;objective&rdquo; morality as a justification to rule with an iron fist.
+</p>
+
+<p>
+i
+</p>
+
+<p>
+i
+</p>
+</div>
+</div>
+
+<div id="outline-container-not-everybody-wants-tech-society" class="outline-2">
+<h2 id="not-everybody-wants-tech-society"><span class="section-number-2">36.</span> Surely Everybody Wants To Live In A Prosperous, Technologically-Advanced Society, Right?</h2>
+<div class="outline-text-2" id="text-not-everybody-wants-tech-society">
+<p>
+Contrary to popular belief, not everybody wants to live in a technologically-advanced society where everybody lives harmoniously with each other. Many people assume that everybody wants exactly this, and that this implies the existence of an objectively-correct morality, but there are some notably interesting ideologies that oppose it, so it would be a logical and philosophical mistake to assume that this is a universal moral premise that everybody has.
+</p>
+
+<p>
+Anybody who assumes this has not thought enough about the philosophical nature of problems, how and why problems arise, nor have they questioned the best type of well-being (form of utilitarianism). Two such counter-examples ideologies that disagree with this popular and naive premise are Efilism and Anarcho-Primitivism.
+</p>
+
+<p>
+Efilists disagree because they believe in absolute [negative-utilitarianism] that not even the existence of the smallest quantity of pain can ever be morally justified. Efilists recognize that wherever life exists, problems will never go away. Efilists thus believe that the most morally correct thing to do would be to eliminate all life so that problems will stop existing forever.
+</p>
+
+<p>
+It is also naive to believe that technology is the solution to all problems. It is literally impossible for life to exist without problems, because once again, problems will never go away for as long as life continues to exist. That being said, Anarcho-Primitivists (Anprims) believe that technology causes more problems than it solves.
+</p>
+
+<p>
+Both of these ideologies have their short fallings, but in some ways, these two ideologies are more enlightened than the conventional Humanist worldview of the West. There might even be more ideologies that oppose this premise than just the two counter-examples that I have mentioned here, but the bottom line is that since not everybody agrees that a harmonious, technologically-advanced society would be a utopia where maximal morality is achieved, the premise that everybody wants to achieve that cannot be assumed as a basis for objective morality.
+</p>
+</div>
+</div>
+
+<div id="outline-container-technology-and-moral-progress" class="outline-2">
+<h2 id="technology-and-moral-progress"><span class="section-number-2">37.</span> How Does Technology Create The Illusion Of Moral Progress?</h2>
+<div class="outline-text-2" id="text-technology-and-moral-progress">
+<p>
+&ldquo;Moral Progress&rdquo; is an illusion created by the advancement of technology. Without technology, we wouldn&rsquo;t have seen any improvements in material conditions for humans, and likewise there would never be any such collective illusion of moral progress among the public. At the same time, humans only started to care about moral progress when they stopped being focused on just merely surviving 24/7, something that has only been made possible by the advent of technology. A human who is focused on survival 24/7 would never have any time to think nor care about what&rsquo;s moral because they&rsquo;re only focused on what helps them survive, as well as what helps their community survive since the community aids the survival.
+</p>
+
+<p>
+Large-scale cooperation facilitated by Capitalism and the Rule of Law has made it possible for more people than ever to not have to live in abject poverty.
+</p>
+<ul class="org-ul">
+<li>The widespread adoption of vaccines and modern medicine has made it possible to eradicate many diseases that have historically plagued human societies.</li>
+<li>In modern post-WWII times, war has been quite uncommon compared to its historical presence, but this has only been made possible due to the establishment of improved living conditions around the world (thus reducing the need to compete for resources worldwide), free trade (which reduces conflicts between nations), and the intense favorability to avoid the gruesome potential for destruction and nuclear war that has never been seen before.</li>
+<li>Modern contraception and birth control made it possible to not have children born into undesirable conditions.</li>
+<li>The automobile relieved the pressure on land values and land rent by making it possible for people to move out of the cities and into the suburbs, although this has only been a temporary fix since the core problem has yet to be resolved by universal LVT.</li>
+</ul>
+</div>
+
+
+
+<div id="outline-container-illusions-in-moralist-communities" class="outline-3">
+<h3 id="illusions-in-moralist-communities"><span class="section-number-3">37.1.</span> Changes/Possibilities/Examples Enabled By Technology That Various Moralist Communities Would Claim To Be &ldquo;Moral Progress&rdquo; According To Their Perceptions Of The World</h3>
+<div class="outline-text-3" id="text-illusions-in-moralist-communities">
+<ul class="org-ul">
+<li>Vegan diets only being made possible since humans don&rsquo;t rely on hunting and gathering anymore, clothing made from plants or plant materials instead of animal hides and fabrics, et cetera (according to vegans&rsquo; perspectives).</li>
+<li>Gender reassignment surgeries / sex change operations / hormone therapies that make it possible for gender dysphoric people to change their bodies to be more like the opposite sex and less like the biological sex that they were born to.</li>
+<li>Dating websites and dating apps have made it easier than ever for homosexuals and bisexuals to find a partner, and they are now the leading method for finding a partner in many parts of the world.</li>
+<li>Anti-natalists view contraception and abortion as some of the most important technological inventions ever.</li>
+<li>Capitalists view technology favorably because technology has caused capitalism to progress and improve people&rsquo;s standard of living.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-ideologies-future-progress" class="outline-3">
+<h3 id="ideologies-future-progress"><span class="section-number-3">37.2.</span> Examples Where Utopian Ideologies Believe That Future Moral Progress Can Be Made By Technological Improvements</h3>
+<div class="outline-text-3" id="text-ideologies-future-progress">
+<ul class="org-ul">
+<li>The technological ability to create synthetic pills that could supply humans with necessary vitamins and minerals that can only be found in animals and not plants (some nutrition-conscious vegans have argued that this should replace eating animal products as the way to acquire those nutrients for humans and other necessarily omnivorous species).</li>
+<li>Ancaps often argue that their fantasy worlds will have amazing technologies like seasteading, blockchains, and more that will enable them to live in a super &ldquo;ethical&rdquo; utopia that has never been seen before. But if new/innovative technologies are necessary to make such utopias possible, then hypothetical &ldquo;moral improvements&rdquo; like the kinds alluded to by ancaps are only made possible by advancing technologies, as it has always been the case.</li>
+<li>Efilists believe that humanity should destroy the Earth and render it uninhabitable for all sentient life, but this never would have been possible in previous eras because the necessary technology for accomplishing this goal never existed prior to modernity.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-colonizing-mars" class="outline-3">
+<h3 id="colonizing-mars"><span class="section-number-3">37.3.</span> Most Utopian Ideologists Want To Colonize Mars</h3>
+<div class="outline-text-3" id="text-colonizing-mars">
+<p>
+People from all kinds of different ideologies want to colonize Mars not only because it gives them something to work towards as a means of fulfilling their needs for the power process, but also because they perceive Mars as a place of opportunity and free of foreign interference to set up whatever so-called utopia and utopian ideology that they believe in. Examples:
+</p>
+<ul class="org-ul">
+<li>Ancaps who want Mars to be a so-called Ancapistan paradise.</li>
+<li>Communists and Anarcho-Communists who want Mars to be a so-called (Anarcho)-Communist paradise.</li>
+<li>Some Esperanto Speakers who would like Esperanto to become the language of Mars.</li>
+</ul>
+
+<p>
+<a href="../journey/transhumanism-vs-anprimism.html#futurist-fantasies">Moreover, it&rsquo;s also extremely unlikely that humanity will ever colonize Mars since the Laws of Physics and Economic Realities make it very impractical to colonize other planetary bodies.</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-moral-progress-without-tech" class="outline-3">
+<h3 id="moral-progress-without-tech"><span class="section-number-3">37.4.</span> Historical Examples Of &ldquo;Moral Progress&rdquo; That Weren&rsquo;t Caused By Advancing Technology</h3>
+<div class="outline-text-3" id="text-moral-progress-without-tech">
+<ul class="org-ul">
+<li>The replacement of monarchies by democracies.</li>
+<li>The abolition of many cruel punishments.</li>
+<li>The progression of human rights (e.g. freedom of expression, right to fair trial, etc).</li>
+<li>The decline of religious persecution, racial segregation, racism, sexism, homophobia, xenophobia, ableism, etc.</li>
+<li>The decline of European colonialism (it became too expensive to rule overseas colonies, and the local populations began protesting and fighting for independence). It should be noted however that European colonialism seems to have been mostly beneficial in most (but not all) cases since technologies caused declines in infant mortality rates, starvation, diseases, and other factors that have limited the local populations.</li>
+</ul>
+
+<p>
+Interestingly, anarcho-primitivists are some of the few people who would actually argue that the progression of technology has actually caused a significant regression in moral progress, whereas virtually everyone else enthusiastically views technology as a way to continue &ldquo;moral progress&rdquo;. Besides anarcho-primitivists, some of the most extreme communists and socialists might would believe that humanity has not made much if any moral progress since they hate capitalism so much, even though capitalism has been largely beneficial for humanity.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-post-overton-summary" class="outline-2">
+<h2 id="post-overton-summary"><span class="section-number-2">38.</span> Comprehensive Summary Why Morality Is Relative And Subjective</h2>
+<div class="outline-text-2" id="text-post-overton-summary">
+<p>
+Post-Overtonism is the philosophical position that game theory, the intrinsic selfishness of life, and <a href="../FAQs/post-overton-FAQs.html#memetics">memetics</a> are the best way to understand morality. It is similar to moral relativism since it posits that morality can only be based on subjective values (which are perspective-dependent), but it&rsquo;s different since it also embraces the game-theoretic assumptions of selfishness and rationality, as well as the <a href="../FAQs/post-overton-FAQs.html#when-life-becomes-zero-sum">zero-sum nature of life</a>. Post-overtons believe that the only legitimate rights are legal rights.
+</p>
+
+<p>
+It is valuable to one&rsquo;s cognitive understanding to find multiple different ways to prove the same thing, since each method can reveal something new or showcase powerful intuitions for why the conclusion is correct and <a href="../epistemology/1D-empirically-grounded-coherentism.html">builds coherence within one&rsquo;s belief system</a>.
+</p>
+
+<p>
+When someone has a fallacious and/or inconsistent belief system, finding different ways to prove the same conclusion is also essential for helping the necessary amount of contradictions build up in the believer&rsquo;s mind, so that they can ultimately reject their previous, fallacious beliefs.
+</p>
+
+<p>
+This is a list of ways for proving that morality is relative / subjective:
+</p>
+<ol class="org-ol">
+<li>The most direct and straight-forward way of proving that morality is subjective is to start by showing that all value is subjective and that morality is necessarily based on value. Since morality is based on value, and all value is subjective, morality also has to be subjective. Objective value is an oxymoron because all value is perspective-dependent, but &ldquo;objective&rdquo; means perspective-independent. Objective value does not exist (because it can&rsquo;t), so objective morality doesn&rsquo;t exist either.</li>
+<li>Morality cannot progress anyways because most so-called &ldquo;moral progress&rdquo; is actually improvements in technology and the standard of living. The main reason why slavery ended was because machines were invented that could do the labor instead. Slavery would still be legal today if it wasn&rsquo;t for the Industrial Revolution, for the same reason why the Founding Fathers of the United States owned slaves themselves despite disliking the idea of slavery. If it never became possible to replace slave labor with machines and people who worked over 80 hours a week (before labor unions and further technological advancement/automation), the same moral attitude held by the Founding Fathers would still persist to this day because slavery would still be necessary to do all the labor without the availability of machines.
+<ul class="org-ul">
+<li>Since free trade can help prevent war, it must be acknowledged that technology was needed to facilitate free trade like the steam engine (and more sophisticated engines later on), shipping container, man-made Suez and Panama Canals, and more have made it easier to facilitate free trade which prevents the likelihood of war since the mid-20th century.</li>
+<li>NOTE: Although &ldquo;moral progress&rdquo; is strongly correlated with technological progress, it is still the case that technological progress and the mostly &ldquo;good&rdquo; things that it can accomplish can still improve human societies in ways that are pleasing to nearly everyone&rsquo;s subjective moral preferences.</li>
+<li>See <a href="./objective-morality-nonsense.html#technology-and-moral-progress">this post</a> for more details.</li>
+</ul></li>
+<li>How can there ever be any true &ldquo;moral progress&rdquo; when virtually all &ldquo;moral progress&rdquo; can, is, or will only be made possible by technological improvements? If the technology that caused the moral improvements was historically absent for most of human history, how could previous human societies have been moral if it wasn&rsquo;t technologically possible for them to be moral?</li>
+<li>Even today, there are people like Anarcho-Capitalists who argue that their fantasy worlds will have amazing technologies like sea-steading, blockchains, and more that will enable them to live in a super &ldquo;ethical&rdquo; utopia that has never been seen before. But if new/innovative technologies are necessary to make such utopias possible, then hypothetical &ldquo;moral improvements&rdquo; like the kinds alluded to by AnCaps are only made possible by advancing technologies, as it has always been the case. (I can give you some more examples if you&rsquo;d like about how most moral progress is really only technological progress)</li>
+<li>Life is a zero-sum game. Whether it be competition for energy and resources, competition for mates and reproducing offspring, or competition for virtually anything else, life is ultimately a game of competition between selfish individuals striving to accomplish their own goals and objectives. Everybody may want to win, but not everybody can win at life because for every winner, there will be a loser. Whether moral objectivists accept it or not, picking the winners and losers of life is completely subjective.</li>
+<li>Most people would believe that there are at least some situations where it is immoral to force someone else to conform to your own morality. This suggests that morality is not objective.</li>
+<li>Although Mathematics is always enforced by reality without the help of moral agents, morality is not enforced by the material world under any circumstances, and it must necessarily be enforced by moral agents who decide to enforce it however THEY want to do so.
+<ul class="org-ul">
+<li>If everybody chooses not to follow the objective morality, then nobody will follow it. And if nobody chooses to enforce the objective morality, then the objective morality will not be enforced at all.</li>
+<li>On the other hand, it is NOT optional to obey mathematics, unlike morality. Those who attempt to manipulate the universe in some way by making the wrong mathematical calculations (or even no calculations at all) to inform their decisions will necessarily face the consequences of their actions due to their failure to make and be informed by the right mathematical calculations.</li>
+</ul></li>
+<li>Reason is incapable of determining objective morality. Since value and the prioritization of values is subjective, it is impossible for reason to objectively determine which values should be prioritized over others. If moral values cannot be objectively prioritized, objective morality cannot exist.</li>
+<li><p>
+If morality was supposedly objective then why has it made the least amount of progress compared to all the other sciences and fields of human knowledge? It is undeniable that a moral objectivist would have to agree that most of the world does not follow the supposedly objective moral standard that they claim to exist, since most of the world is divided by religion, state and legal institutions, and cultural philosophies/ethics. This does not decisively prove that morality is not objective, but it is still additional evidence to prove the point that morality is subjective nonetheless. One should also recognize that:
+</p>
+<ul class="org-ul">
+<li>What&rsquo;s &ldquo;moral&rdquo; in one time period is not moral in a later one.</li>
+<li>What&rsquo;s &ldquo;moral&rdquo; in one culture is not moral in another.</li>
+<li>What&rsquo;s &ldquo;moral&rdquo; to one moral agent is not moral to another.</li>
+</ul>
+<p>
+It doesn&rsquo;t seem coincidental that nobody can agree on what objective morality is.
+</p></li>
+</ol>
+
+<ol class="org-ol">
+<li>Game Theory is excellent for demonstrating how morality depends on perspective.</li>
+<li>If determinism is true and humans don&rsquo;t truly have free will, then how could any real moral progress ever truly happen if everything in the past and future were/are determined to happen?</li>
+<li>Although Ayn Rand wrote that rationalizing is anti-virtuous and irrational thing to do, this statement condemning rationalization is only true when not dealing with ethics. Just about everyone will rationalize their existence if necessary because humans and animals alike all evolved to do that. Rationalizing is not anti-virtuous, it is part of nature, on principle of selfish genes and egoism.</li>
+<li><p>
+So Sam Harris argues that the only viable moral framework for an objective &ldquo;science of morality&rdquo; is one where &ldquo;morally good&rdquo; things pertain to increases in the &ldquo;well-being of conscious creatures&rdquo; (he should have written &ldquo;sentient&rdquo; creatures instead, because morality applies to sentient beings just as much as conscious ones).
+</p>
+<ul class="org-ul">
+<li>HOWEVER, he has not considered that &ldquo;well-being&rdquo; is still subjective. Although someone like Blithering Genius would argue in favor of maintaining the high-standard of living and mostly desirable material conditions of modernity (presumably in the interest of overall &ldquo;well-being&rdquo;?), someone else like an Efilist like Gary Inmendham would argue that the best &ldquo;well-being&rdquo; for all the sentient life on Earth at large would be if they all the sentient life was destroyed or euthanized and that the Earth was rendered uninhabitable for all future life.</li>
+<li>Efilists would argue that the greatest well-being is the complete absence of suffering, no matter how much pleasure life may receive overall. And other people argue that the positive value of pleasure exceeds the negative value of pain, or that the total value of pleasure versus pain always adds up to zero. Sam Harris&rsquo;s argument in favor of objective morality still fails because &ldquo;well-being&rdquo; is subjective to interpretation.</li>
+<li>And since Sam Harris is presumably against a hypothetical Benevolent World Explosion proposal, how would he decisively argue that it would be an objectively &ldquo;bad&rdquo; thing to do? How would he irrefutably argue that the existence of pleasure overrides or equals out the existence of pain? What makes his conception of &ldquo;well-being&rdquo; any better than the Efilist conception of &ldquo;well-being&rdquo;? If it&rsquo;s immoral to euthanize the entire Earth since some/most sentient organisms want to live, how is it not immoral for everyone to continue bringing children into this world if it&rsquo;s inevitable that at least some of them won&rsquo;t want to be alive at all?</li>
+<li>In the book, Harris acknowledges that &ldquo;there could, in principle, be a species compared to which we are relatively unimportant (although he doubts such a species exists).&rdquo; (according to Wikipedia&rsquo;s article on the Moral Landscape). But if this were hypothetically true, then couldn&rsquo;t this have the potential to create a moral conflict that would demonstrate the relativity of morality? The humans would want to live, but the theoretically more important species could argue that they have a right to use the humans and their world as they wish because they are more important. The biological and Darwininan tendency is for the individual to always justify themself. The humans will justify their existence against the more important species (the hyper-intelligent aliens), and the aliens will justify themselves against the humans. There is no right moral answer here.</li>
+</ul>
+
+<ul class="org-ul">
+<li>It still subjective to value a net increase in total happiness over a net decrease in total suffering. Assuming that positive (classical) utilitarianism is a self-evident criteria for judging objective morality completely disregards negative utilitarians who believe that any total reduction pain should be prioritized over any total increase in happiness.</li>
+<li>Who&rsquo;s to say that positive utilitarianism is objectively better than negative utilitarianism? Some extreme negative utilitarians like the people on r/Efilism would argue that it would better to euthanize all the sentient life on Earth and render the Earth to be permanently uninhabital because even 8+ billion happy people could never justify even a single person who is suffering.</li>
+</ul></li>
+<li><p>
+Anybody who defines &ldquo;objective&rdquo; morality as maximizing well-being basically believes in some form of utilitarianism. The definition for Utilitarianism is:
+</p>
+<blockquote>
+<p>
+Utilitarianism is a family of normative ethical theories that prescribe actions that maximize happiness and well-being for all affected individuals.
+</p>
+</blockquote>
+<p>
+However, defining &ldquo;objective&rdquo; morality in terms of well-being does NOT work because well-being is subjective too. There are several different types of Utilitarianism, so it would be very arbitrary of you to label ONLY ONE form of Utilitarianism as the &ldquo;objective&rdquo; one, out of many different conceived versions.
+The main reason why moral objectivists have a strong tendency to leans towards believing some kind of Utilitarian framework is that their false conception of objective morality forces them to find some sort of supposedly objective aggregation onto an absolute scale, and it is necessary for them to do this, which results in an insoluble problem.
+Also, if it is truly the case that all pain and pleasure metaphysically balance out in reality, then such a fact would make Utilitarianism a very questionable basis for morality, much less an &ldquo;objective&rdquo; one.
+</p></li>
+<li>Defending the fundamental subjectivity of morality can NOT be debunked as a Subjectivist Fallacy. The real fallacy at play here is the insistence of the moral objectivists about applying an objective method for making decisions (reason) to a fundamentally subjective idea (values). Once again, there is no such thing as objective value, for the reasons that I&rsquo;ve already explained. The moral objectivists are making a fallacy because they aren&rsquo;t acknowledging the limitations of reason.</li>
+<li>Nobody can ever do anything with a 100% guarantee that their actions will always be an unequivocally good thing. Examples:
+<ul class="org-ul">
+<li>ProtonMail and security services helping both innocent people who want privacy AND criminals at the same time.</li>
+<li>The United States arming the Taliban to fight the Soviets during the Cold War, but later on the Taliban uses the same weapons to fight against the American invasion and occupation of Afghanistan.</li>
+<li>Helping people develop good public speaking skills. They could use those skills for &ldquo;good&rdquo; things or &ldquo;bad&rdquo; things, and you can never know for sure. Hitler for example, probably had at least some practice and feedback developing good public speaking skills.</li>
+<li>Ending world hunger, but then triggering a global overpopulation crisis.</li>
+<li>Helping people become better programmers, but then they become hackers instead, or help China develop a national surveillance and social credit system that monitors everybody 24/7.</li>
+</ul></li>
+</ol>
+
+<p>
+There are other problems with believing in objective morality:
+</p>
+<ul class="org-ul">
+<li>If morality were objective, then where is it, what is it, etc? If the origin and existence of morality cannot be identified in reality, then it is absurd.
+<ul class="org-ul">
+<li>On the other hand, moral relativists have a clear answer to what morality is and where it comes from. We would answer that morality originates from subjective values, and it only exists in one&rsquo;s mind.</li>
+</ul></li>
+<li>Why are objective moral values and imperatives subjectively valuable and imperative? If they are objective, then why I am free to ignore them or reject them? Why should I try to be morally good?</li>
+<li>There is a subtle contradiction embedded in moral realism, which depends on the existence of personal, subjective value, but also assumes the existence of objective values, which are both subjective (we somehow want to be good, but this also conflicts with our other desires, so we sometimes choose to be evil). This is hard to explain, however.</li>
+</ul>
+
+
+<p>
+i
+</p>
+
+
+<div id="orgfb9e05e" class="figure">
+<p><img src="../images/bad-guys-vs-anti-bad-guys-meme.jpg" alt="bad-guys-vs-anti-bad-guys-meme.jpg" />
+</p>
+</div>
+
+
+<div id="org959415e" class="figure">
+<p><img src="../images/russell-emotive-conjugation.jpg" alt="russell-emotive-conjugation.jpg" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-when-life-becomes-zero-sum" class="outline-3">
+<h3 id="when-life-becomes-zero-sum"><span class="section-number-3">38.1.</span> When Life Becomes Zero-Sum</h3>
+<div class="outline-text-3" id="text-when-life-becomes-zero-sum">
+<p>
+Without cooperation, life becomes zero-sum when the population reaches the carrying capacity of the environment. If either of those conditions are not meant (not possible to cooperate with others, or population is below environment&rsquo;s carrying capacity), then life can be &ldquo;positive sum&rdquo;. The point in recognizing the conditions for life to be zero-sum is to show further evidence why morality is not objective. When life does become zero-sum, it&rsquo;s every man for himself.
+</p>
+<ul class="org-ul">
+<li>For every prey that gets eaten alive, there is a predator who doesn&rsquo;t starve to death.</li>
+<li>For every prey that escapes, there is a predator who ends up starving to death.</li>
+<li>For every guy who misses a job opportunity, someone else will get it instead.</li>
+<li>For every male that doesn&rsquo;t get to mate with the prized female, some other victorious male does.</li>
+<li>For every slave, there is a slave owner who profits big time.</li>
+<li>For every guy who lost money on the stock market, someone else gained money because for every buyer, there is a seller and vice versa.</li>
+<li>For every guy who lost scarce, precious resources, someone else acquired those valuable resources and used them to survive another day, become more reproductively successful, and have more offspring than the loser.</li>
+<li>And so forth.</li>
+</ul>
+<p>
+When there are winners who can only come at the expense of losers, it&rsquo;s in everyone&rsquo;s self-interest to be a winner rather than a loser. In such cases, people are <b>not</b> obligated to care about whether that causes someone else to incur negative consequences. Evolution is the game that runs literally everything, so that&rsquo;s the game everybody <b>has to</b> play, even if it comes at the cost of others.
+</p>
+
+<p>
+Now, life doesn&rsquo;t always have to be a zero-sum game. When individuals cooperate with each other, they can both become better off if they manage to solve the prisoner&rsquo;s dilemma between each other. Unfortunately, it isn&rsquo;t always guaranteed that the other side won&rsquo;t defect, and that&rsquo;s why cooperating is not an objectively good choice.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Zero Contradictions</p>
+<p class="date">Created: 2023-02-18 Sat 02:36</p>
+</div>
+</body>
+</html>

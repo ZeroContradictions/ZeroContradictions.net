@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-03-20 Mon 06:07 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Free Will And Determinism</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="description" content="Defining Different Definitions of Free Will and Determinism, and arguing in favor of hard determinism." />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="../blog-posts.css" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html#epistemology"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Free Will And Determinism</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#definitions">1. Definitions For Discussing Free Will</a></li>
+<li><a href="#free-will-compatibilism-chart">2. Chart Regarding Free Will And Compatibilism / Incompatibilism</a></li>
+<li><a href="#determinism-vs-free-will">3. Determinism Versus Free Will</a></li>
+<li><a href="#determinism-parents-and-children">4. The Deterministic Effects That Parents Have Over Their Children</a>
+<ul>
+<li><a href="#spatio-temporal-envelopes">4.1. Spatio-Temporal Envelopes</a></li>
+</ul>
+</li>
+<li><a href="#agency-is-circumstantial">5. Agency Is Always Circumstantial</a></li>
+<li><a href="#accountability-for-actions">6. Why People Should Be Held Accountable For Their Actions</a></li>
+<li><a href="#determinism-and-mathematics">7. Determinism And Free Will From A Mathematical Perspective</a></li>
+<li><a href="#debunking-objectivisms-free-will">8. Debunking the Objectivism&rsquo;s Commentary On Free Will</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<p>
+Note: I will be expanding this file in the future when I have time for it.
+</p>
+
+<div id="outline-container-definitions" class="outline-2">
+<h2 id="definitions"><span class="section-number-2">1.</span> Definitions For Discussing Free Will</h2>
+<div class="outline-text-2" id="text-definitions">
+<p>
+Before we can even talk about this topic, we have to define some definitions for determinism and free will<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>:
+</p>
+<dl class="org-dl">
+<dt>Determinism</dt><dd>The doctrine that events are determined completely by previously existing causes. Determinism suggests that only one course of events is possible given the materialist configuration of the Universe at a given time t.</dd>
+<dt>Metaphysical Free Will (MFW)</dt><dd>The doctrine that agents are able to make decisions independently of external factors. Zero Contradictions argues that MFW is false.</dd>
+<dt>Hard Determinism</dt><dd>The doctrine that <i>all</i> events, including human action, are ultimately determined by causes external to the will of agents. In other words, Determinism is true, and MFW is false. Since Zero Contradictions argues that MFW is false, Hard Determinism is effectively the same thing as Determinism.</dd>
+<dt>Libertarian Free Will (LFW)</dt><dd>Determinism does not exist. LFW is the exact opposition of Hard Determinism. <a href="https://en.wikipedia.org/wiki/Libertarianism_(metaphysics)">Libertarian Free Will</a> does not exist in reality, and can be <a href="./reductive-physicalism.html#MFW-performative-contradiction">disproven by proof by performative contradiction</a>.</dd>
+<dt>Compatibilism</dt><dd>The doctrine that Determinism and Metaphysical Free Will both coexist. Zero Contradictions argues that Compatibilism is false because MFW is false.</dd>
+<dt>Epistemic Free Will (EFW)</dt><dd>The ability of a subject to <b>consciously choose</b> to do what it wants, regardless of whether it can actually fulfill its desires or not, and also regardless of whether Determinism is true or false.</dd>
+<dt>Agency</dt><dd>The satisfaction of two conditions that: 1. a subject can choose to do as it wants, and 2. it is able to do it within its current circumstances. Agency exists on a spectrum, from a subject not being able to accomplish any of its desires, to the subject being able to do everything that it desires.</dd>
+</dl>
+
+<dl class="org-dl">
+<dt>Power</dt><dd>The same thing as agency.</dd>
+</dl>
+
+<dl class="org-dl">
+<dt>Desire</dt><dd>To want something. Desire is a precursor to Epistemic Free Will because Desires are necessary for Values to exist. <i>All</i> sentient organisms have desires.</dd>
+<dt>Volition</dt><dd>The same thing as Epistemic Free Will (EFW).</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-free-will-compatibilism-chart" class="outline-2">
+<h2 id="free-will-compatibilism-chart"><span class="section-number-2">2.</span> Chart Regarding Free Will And Compatibilism / Incompatibilism</h2>
+<div class="outline-text-2" id="text-free-will-compatibilism-chart">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">Free Will DNE</th>
+<th scope="col" class="org-left">Free Will Exists</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Incompatibilism</td>
+<td class="org-left">Hard Determinism<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup></td>
+<td class="org-left">Libertarianism (Metaphysical)</td>
+</tr>
+
+<tr>
+<td class="org-left">Compatibilism</td>
+<td class="org-left">N/A</td>
+<td class="org-left">Compatibilism</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-determinism-vs-free-will" class="outline-2">
+<h2 id="determinism-vs-free-will"><span class="section-number-2">3.</span> Determinism Versus Free Will</h2>
+<div class="outline-text-2" id="text-determinism-vs-free-will">
+<p>
+It is not necessary to acquire any more proof that Metaphysical Free Will doesn&rsquo;t exist:
+</p>
+<ol class="org-ol">
+<li>Suggesting that the universe isn&rsquo;t cause-and-effect, requires that a non-cause could &ldquo;cause something&rdquo;. How could something happen if it wasn&rsquo;t caused to happen? If one argues that the universe random but not deterministic, then that would mean that &ldquo;randomness&rdquo; affects the outcome of the universe. The problem with this being the case is that if &ldquo;randomness&rdquo; is affecting the Universe&rsquo;s outcome, then the outcome of the Universe would still be deterministic because the effects of the randomness would be determined by cause-and-effect, so Determinism would still be true.</li>
+<li><a href="#determinism-parents-and-children">There are undeniable instances of determinism in the Universe</a>. Since the definition of Libertarian Free Will requires that Determinism does not exist, Libertarianism is easily refuted.</li>
+<li>There are only two reasons why anybody would ever (purposely) do anything in their life:
+<ol class="org-ol">
+<li>They want to.</li>
+<li>They are forced to.</li>
+<li>They did it accidentally (but of course, nobody would argue that free will existed here anyway).</li>
+</ol></li>
+<li>If MFW exists, then <a href="./reductive-physicalism.html#MFW-performative-contradiction">a performative contradiction arises</a>.</li>
+<li>There is <a href="#determinism-and-mathematics">mathematics for better understanding the deterministic nature of the universe</a>.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-determinism-parents-and-children" class="outline-2">
+<h2 id="determinism-parents-and-children"><span class="section-number-2">4.</span> The Deterministic Effects That Parents Have Over Their Children</h2>
+<div class="outline-text-2" id="text-determinism-parents-and-children">
+<p>
+The point of this list is to demonstrate that the circumstances surrounding every person&rsquo;s childhood are predetermined, and those circumstances have lasting effects on how every person lives the rest of their lives. No one ever has any Epistemic Free Will over the circumstances that they grew up with. When parents decide to have children, they effectively have the power to:
+</p>
+<ul class="org-ul">
+<li>Choose where the children live, and in what conditions</li>
+<li>Choose the native language(s) that the children speak, and potentially also their second language(s) too.
+<ul class="org-ul">
+<li>This indirectly affects which people the children can make friends with, their economic and educational opportunities, and the media that they can access</li>
+</ul></li>
+<li>Choose what the children eat (since they are the ones with the responsibility to feed them)</li>
+<li>Choose the children&rsquo;s education</li>
+<li>Indoctrinate the children with their beliefs, including religion, politics, and other cults</li>
+<li>Choose the activities that the children do</li>
+<li>Choose the children&rsquo;s names</li>
+<li>Choose how many siblings the children have, and extend their family histories to the children</li>
+<li>Inseminate the children with whatever genes they have, which can affect things including but not limited to: the children&rsquo;s interests, the children&rsquo;s intelligence, the children&rsquo;s looks, the children&rsquo;s physical condition, and the children&rsquo;s quality of life.</li>
+</ul>
+<p>
+When parents have the power to raise their children however they want, they could easily trap those children in a box, and they would never be able to escape until they become adults.
+</p>
+
+
+<div id="orgf5b85a8" class="figure">
+<p><img src="../images/parents-indoctrinating-children.jpg" alt="parents-indoctrinating-children.jpg" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-spatio-temporal-envelopes" class="outline-3">
+<h3 id="spatio-temporal-envelopes"><span class="section-number-3">4.1.</span> Spatio-Temporal Envelopes</h3>
+<div class="outline-text-3" id="text-spatio-temporal-envelopes">
+<p>
+The facts stated in the previous list are best understood through the concept of &rsquo;spatiotemporal envelopes&rsquo;, which are defined as time intervals of various defined lengths through which prior events affect posterior events or chains of sequential posterior events across the designated three-dimensional space and time. Spatiotemporal envelopes may overlap each other, and shorter consecutive spatiotemporal envelopes can be merged to form longer ones. Every individual is endowed with a spatiotemporal envelope that comprises their entire life through which they had, have, and/or will have affected their environment and the people around them.
+</p>
+
+<p>
+[This section is unfinished]
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-agency-is-circumstantial" class="outline-2">
+<h2 id="agency-is-circumstantial"><span class="section-number-2">5.</span> Agency Is Always Circumstantial</h2>
+<div class="outline-text-2" id="text-agency-is-circumstantial">
+<p>
+[This section still needs to be written]
+</p>
+
+<p>
+i
+</p>
+
+<p>
+<a href="https://thewaywardaxolotl.blogspot.com/2022/07/circles-of-control-and-freedom.html?view=classic">Freedom only exists within a system of constraints.</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-accountability-for-actions" class="outline-2">
+<h2 id="accountability-for-actions"><span class="section-number-2">6.</span> Why People Should Be Held Accountable For Their Actions</h2>
+<div class="outline-text-2" id="text-accountability-for-actions">
+<p>
+It&rsquo;s precisely because people don&rsquo;t have free will what people should be held accountable when they understood what they did, in order to discourage this behavior in the future or serve as an example. If people truly had free will, such environmental factors wouldn&rsquo;t influence them.
+</p>
+
+<p>
+As explained in this section, <a href="../civilization/ideal-government.html#goals-of-government">the goal of government is to solve game-theoretic problems</a>. If negative feedback is not given when people do something bad (i.e. break the prisoner&rsquo;s dilemmas of society), then that creates an environment where they have no deterrence from doing bad stuff.
+</p>
+
+<p>
+And people certainly should be held accountable for their non-coerced choices. If a murderer murders someone, they can hardly appeal to determinism to claim that &ldquo;they couldn&rsquo;t help it&rdquo; and became a victim of some grand mechanism no one has any control over. The murderer was still violating the rights of the victim. Not even the insanity / mental illness plea should be a valid cop-out for committing crimes. It is constantly abused, and we have to hold individuals responsible for their actions, or society breaks down. We each get dealt a hand of cards in life, and that&rsquo;s the hand each person has to play.
+</p>
+
+<p>
+Read More: <a href="../journey/case-against-libertarianism.html#problems-with-deontological-ethics">The Problems With Deontological Ethics</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-determinism-and-mathematics" class="outline-2">
+<h2 id="determinism-and-mathematics"><span class="section-number-2">7.</span> Determinism And Free Will From A Mathematical Perspective</h2>
+<div class="outline-text-2" id="text-determinism-and-mathematics">
+<p>
+In principle, if someone somehow knew absolutely everything there was to know about the current state of the Universe, it is possible that they would be able to predict everyone&rsquo;s choices in the future with 100% accuracy, but there would still remain choices. They may be predetermined on a very fundamental, physical level, but for practical purposes, it does not make a lot of difference whether we assume those choices to be predetermined or not. And it is not cognitively understandable to reduce someone&rsquo;s psychological choices down to physics.
+</p>
+
+<p>
+Mathematics has a very interesting branch called <a href="https://en.wikipedia.org/wiki/Chaos_theory">&ldquo;Chaos Theory&rdquo;</a>, which studies models in which small variations in initial conditions lead to dramatic changes in the outcomes. Empirical evidence proves that the Universe as a whole is fairly chaotic, and there are many <a href="https://en.wikipedia.org/wiki/Butterfly_effect">Butterfly Effects</a> that could&rsquo;ve changed the course of history in ways that people could never predict with any meaningful accuracy.
+</p>
+
+<p>
+Relevant Video: <a href="https://www.youtube.com/watch?v=fDek6cYijxI">Chaos: The Science of the Butterfly Effect</a>
+</p>
+
+<p>
+What this implies is that it is extremely hard, if not altogether impossible, to predict choices people will make in the future, since one of the most important conditions of being a philosophical subject is to have limited knowledge of reality.
+</p>
+
+<p>
+When people go about their daily lives, it should not matter whether Metaphysical Free Will exists. <a href="#determinism-vs-free-will">It cannot logically</a>, but that is not very important. What is important is that people have <a href="#agency-is-circumstantial">agency</a>. If choices cannot be accurately predicted in practice, then they might as well be considered &ldquo;free&rdquo; in the true, fundamental sense, as far as practical considerations go.
+</p>
+
+<p>
+In fact, if we want to be successful in life, then <a href="https://www.youtube.com/watch?v=3LopI4YeC4I">it is psychologically better for us that we behave as if we do have Metaphysical Free Will</a>, in spite of the Universe&rsquo;s deterministic nature. If we act as if life is deterministic and that we have no agency to change the future, then we will be less likely to accomplish our goals. Another way to think about our epistemic free will is that it is the Universe&rsquo;s deterministic nature flowing through us. Our brains and bodies may be materialistic and thus deterministic as well, but each of us is still part of reality, so each of us can still act to change reality to the best of our abilities.
+</p>
+</div>
+</div>
+
+<div id="outline-container-debunking-objectivisms-free-will" class="outline-2">
+<h2 id="debunking-objectivisms-free-will"><span class="section-number-2">8.</span> Debunking the Objectivism&rsquo;s Commentary On Free Will</h2>
+<div class="outline-text-2" id="text-debunking-objectivisms-free-will">
+<p>
+<a href="../journey/critique-of-GL.html#free-will">Debunking the Grounded Libertarian&rsquo;s Commentary On Free Will</a>
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+The noun phrase &ldquo;Free Will&rdquo; tends to be categorized more often as an epistemological concept, whereas determinism is seen more as a metaphysical concept. But &ldquo;metaphysics&rdquo; is a rather misleading concept to begin with since it leads people into believing in Platonism, for which there isn&rsquo;t very strong evidence to support.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Technically, Hard Determinism is not the same thing as Materialistic Physicalism. It&rsquo;s possible to be a hard determinist <i>and</i> devoutly religious at the same time, as some religious and superstitious people believe that nobody has any free will because everybody&rsquo;s actions are ultimately determined by some God. Such people are not materialists or physicalists, so that&rsquo;s an example of how Hard Determinism and Materialistic Physicalism are not necessarily the same thing. I&rsquo;ve added this footnote because I had previously never thought of this.
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: Zero Contradictions</p>
+<p class="date">Created: 2023-03-20 Mon 06:07</p>
+</div>
+</body>
+</html>

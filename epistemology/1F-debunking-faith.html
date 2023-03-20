@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-03-20 Mon 06:00 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>1F: Debunking Faith And Why Assuming God Is Not A Legitimate Axiom</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="description" content="[Make this the same as home page keywords description]" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="../blog-posts.css" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html#foundations"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">1F: Debunking Faith And Why Assuming God Is Not A Legitimate Axiom</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#faith-and-performative-contradictions-1">1. Why It&rsquo;s Not Possible To Prove Faith By Performative Contradiction, Plus Some Other Text Debunking It</a></li>
+<li><a href="#faith-and-performative-contradictions-2">2. Debunking Faith (Written Differently, But Reaches The Same Conclusion)</a></li>
+<li><a href="#reason-comes-first">3. It Is Necessary To Use Reason To Define Faith, But Unnecessary To Use Faith To Define Reason</a></li>
+<li><a href="#problems-with-god-as-axiom">4. The Problems With Adding God As An Axiom</a>
+<ul>
+<li><a href="#further-reading">4.1. Further Reading</a></li>
+</ul>
+</li>
+<li><a href="#validity-of-reason">5. All The Different Ways / Puzzle Pieces For Proving That The Reasoning Process Is The Only Source Of Sensory Knowledge</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-faith-and-performative-contradictions-1" class="outline-2">
+<h2 id="faith-and-performative-contradictions-1"><span class="section-number-2">1.</span> Why It&rsquo;s Not Possible To Prove Faith By Performative Contradiction, Plus Some Other Text Debunking It</h2>
+<div class="outline-text-2" id="text-faith-and-performative-contradictions-1">
+<p>
+The whole point in the proof of reason by performative contradiction is to prove that reason itself IS valid.
+</p>
+
+<p>
+However, the proof by performative contradiction assumes that reason is valid since it attempts to use reason to invalidate reason itself.
+</p>
+
+<p>
+If reason was hypothetically invalid, then the entire proof would fall apart as a circular reasoning fallacy because it would be assuming a false premise.
+</p>
+
+<p>
+Does this mean that we have to accept &ldquo;Reason is valid&rdquo; as an axiom? If so, then that would defeat the purpose of doing the proof of reason by performative contradiction in the first place.
+</p>
+
+<p>
+Moreover, if reason can be justified by performative contradiction, then wouldn&rsquo;t it follow that faith can also be similarly validated by having faith that faith is not valid?
+</p>
+
+<p>
+We already know that faith is <i>never</i> a valid source of knowledge under any circumstances, so it <i>has to</i> be invalid and erroneous to prove faith by performative contradiction. Let&rsquo;s define &rsquo;faith&rsquo; under one definition and try to find the error:
+</p>
+<ul class="org-ul">
+<li>Faith is defined as having confidence or trust in a belief (the confidence is sufficiently high enough or higher such that the believer believes the belief). So we can break down the performative contradiction using the definition &rsquo;faith&rsquo;:
+<ul class="org-ul">
+<li>Proposition I: I have high confidence that [having high confidence in believing something] is not a valid source of knowledge.</li>
+<li>Conclusion I: It is valid to have high confidence in something because having high confidence that high confidence is false is a performative contradiction, as shown by Proposition I.</li>
+</ul></li>
+</ul>
+<p>
+If the definition of &rsquo;faith&rsquo; is simply &ldquo;high confidence&rdquo; (in which case &ldquo;faith&rdquo; and &ldquo;confidence&rdquo; would be exact synonyms), then at best, the only thing that this performative contradiction accomplishes is that it debunks skepticism since skepticism insists that we should not have confidence, let alone high confidence, in anything. There are other ways to debunk skepticism that are easier to read and understand since those definitions have simpler semantics, however it might be more desirable to include this statement in the foundationalist framework instead since the semantics can be more nuanced between &rsquo;confidence&rsquo; and &rsquo;high confidence&rsquo;, compared to just understanding that &ldquo;true statements exist&rdquo;.
+</p>
+
+<p>
+Since &rsquo;faith&rsquo; is synonymous with &rsquo;confidence&rsquo; under this particular definition, there would be exactly two possible scenarios whenever someone claims to have faith in something that is false/bogus/contradictory/etc:
+</p>
+<ol class="org-ol">
+<li>The believer does <b>not</b> have evidence or reasoning to support their beliefs, in which case their claim would be be dismissed by Hitchen&rsquo;s Razor and/or Appeal to Ignorance since the burden of proof fall on the person making the claim by faith (confidence).</li>
+<li>The believer <b>does</b> have evidence or reasoning to support their beliefs, in which case their belief and their confidence in the belief would be ultimately justified by reason, not faith.</li>
+</ol>
+<p>
+Since there are only two possible options, and the only way the believer&rsquo;s claim could have any chance at being valid is if the claim is ultimately justified by some evidence or reasoning, this reaffirms that reason is the only true source of knowledge.
+</p>
+
+<p>
+On the other hand, if we are: 1. using a definition of &rsquo;faith&rsquo; that establishes that &rsquo;faith&rsquo; does <b>not</b> use reason or evidence, and we have already established that 2. reason IS valid, then we can reject &rsquo;faith&rsquo; on the simple basis that it doesn&rsquo;t use reason. This would mean that we are done. It also means that even if someone did attempt to prove that &rsquo;faith&rsquo; (defined as confident belief(s) without reason or evidence) is a valid source of knowledge by performative contradiction, their chain of reasoning would break down the same way a circular reasoning fallacy falls apart when all the premises are set to false.
+</p>
+
+<p>
+We have thus shown that it is fallacious to justify faith by performative contradiction. The main purpose in doing this was to show that proving the validity of reason by performative contradiction would not make faith valid in the same manner.
+</p>
+
+<p>
+So regardless of which definition of &rsquo;faith&rsquo; is chosen, whether that be the definition favored by religious people (confidence or trust in a belief) or the definition favored by atheists and religious skeptics (belief without evidence), faith in of itself is NOT a valid source of knowledge if it is the case that reason is a valid source of knowledge.
+</p>
+</div>
+</div>
+
+<div id="outline-container-faith-and-performative-contradictions-2" class="outline-2">
+<h2 id="faith-and-performative-contradictions-2"><span class="section-number-2">2.</span> Debunking Faith (Written Differently, But Reaches The Same Conclusion)</h2>
+<div class="outline-text-2" id="text-faith-and-performative-contradictions-2">
+<dl class="org-dl">
+<dt>Confidence in X</dt><dd>The belief that X is likely to be true.</dd>
+<dt>(Blind) Faith</dt><dd>High confidence in a belief, based on a perceived degree of warrant <i>without using reason</i>; the suspension of skepticism without using reason.</dd>
+</dl>
+
+<p>
+We shall evaluate the definition of faith. One of the hardest parts about answering this question is figuring out how to differentiate different definitions and define what I am talking about.
+</p>
+
+<p>
+To make a distinction between &rsquo;confidence&rsquo; and &rsquo;faith&rsquo;, the definition of &rsquo;faith&rsquo; will have to entail believing in something without using reason. &rsquo;Confidence in X&rsquo; may entail believing in X, with or without reason.
+</p>
+
+<p>
+In order to perceive a belief as having a high degree of warrant in the first place, that warrant would have to be assigned by the mind&rsquo;s reasoning mechanism based on the beliefs that the mind believes is true before it determines the belief in question of being deserving of faith.
+</p>
+
+<p>
+When people are using faith in a religious or ideological context, many of them will entirely skip using the reasoning mechanism all together by believing in the belief because they want it to be true, even if it actually isn&rsquo;t.
+</p>
+
+<p>
+And then there are religious people who do explicitly say that they are using the reasoning process to believe in their religion, but they will often use &rsquo;faith&rsquo; as part of their belief. Religious people often use the word &rsquo;faith&rsquo; when they are discussing religion because their religions include the belief that people who don&rsquo;t believe in God(s) will go to Hell. Hence, they need a word that they will productively use a lot in order to express this belief of theirs, and also as a means to express their worship of the deity or deities. But if their &rsquo;faith&rsquo; is based on fallacious reasoning rather than merely believing in the deity because they want/wish the beliefs were true, then that &rsquo;faith&rsquo; of theirs is not &rsquo;faith&rsquo; in the traditional sense, the sense that is often contrasted against reason and thus doesn&rsquo;t use reason itself.
+</p>
+
+<p>
+If faith is defined similarly to the definition above, but without the prepositional phrase &ldquo;<b>without using reason</b>&rdquo;, then someone who has faith in X under that definition is actually using the reasoning process to designate high confidence based on warrant, since warranting something of high confidence requires using evidence and the reasoning process.
+</p>
+
+<p>
+On the other hand, if faith is defined exactly as the definition above, including with the prepositional phrase &ldquo;<b>without using reason</b>&rdquo;, then someone who has faith in X under this definition is truly not using any reason to believe in X (reason is completely absent from their justification for X). Their justification of X is thus invalid because existence precedes consciousness, and wanting something to be true does not make it true.
+</p>
+
+
+<div id="org9355d34" class="figure">
+<p><img src="../images/have-faith-2.jpg" alt="have-faith-2.jpg" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-reason-comes-first" class="outline-2">
+<h2 id="reason-comes-first"><span class="section-number-2">3.</span> It Is Necessary To Use Reason To Define Faith, But Unnecessary To Use Faith To Define Reason</h2>
+<div class="outline-text-2" id="text-reason-comes-first">
+<p>
+We had to spend some time thinking about reason in the previous paragraph when we were determining whether faith is a valid source of knowledge or not because it was necessary for us distinguish the difference between faith from reason in order to answer the question at hand. On the other hand, it&rsquo;s not necessary at all to think about faith when defining reason and determining whether or not reason is a valid source of knowledge. To illustrate, the reasoning process is defined as follows:
+</p>
+
+<p>
+THE REASONING PROCESS
+</p>
+<ol class="org-ol">
+<li>INPUT (the senses)</li>
+<li>CONCEPT FORMATION</li>
+<li>ASSERTION OF PREMISES</li>
+<li>LOGIC</li>
+</ol>
+
+<p>
+We could define &rsquo;faith&rsquo; in order to distinguish the difference between &rsquo;faith&rsquo; and reason if we wanted to, but this wouldn&rsquo;t improve our understanding of what reasoning is. This further substantiates that reason is the only valid way to make conclusions and that faith is not a valid way to understand anything. We have gained additional evidence that reason is the only possible faculty that we have available, which would mean that it is the only tool we could use if we did attempt to prove that reason is valid by performative contradiction.
+</p>
+
+<p>
+If you give an argument for a belief and someone defeats your argument, then you should admit that you don&rsquo;t have a good justification for that belief. If you cling to the belief instead, and desperately seek another justification for it, then obviously that belief is based on faith, not reason.
+</p>
+</div>
+</div>
+
+<div id="outline-container-problems-with-god-as-axiom" class="outline-2">
+<h2 id="problems-with-god-as-axiom"><span class="section-number-2">4.</span> The Problems With Adding God As An Axiom</h2>
+<div class="outline-text-2" id="text-problems-with-god-as-axiom">
+<p>
+In general, when we use axioms we make it pretty important that they are assumptions. That&rsquo;s why the axioms of Euclidean geometry only apply to Euclidean geometry, and not say hyperbolic geometry or spherical geometry.
+</p>
+<ul class="org-ul">
+<li>Merely stating something as an axiom doesn&rsquo;t mean they are true.</li>
+<li>Axioms still have to be justified. And you want as few as possible in order to have parsimony. Mathematicians have spent tremendous effort to base every branch of mathematics on as few axioms as possible.</li>
+<li>Axioms have to be compatible with other axioms, which forces you to pick one or the other. For example, you could have an axiom that 1 = 2, but this is incompatible with the standard axioms of math, if you want to have that axiom, then you can&rsquo;t have math because it would break all of mathematics. Choosing axioms thus comes down to which one is more compelling or useful. An axiom for assuming God would run into similar problems.</li>
+<li>Even if God was assumed as an axiom, Occam&rsquo;s Razor would suggest that this is a poor idea, since all it&rsquo;s doing is adding unnecessary assumptions.</li>
+</ul>
+</div>
+
+<div id="outline-container-further-reading" class="outline-3">
+<h3 id="further-reading"><span class="section-number-3">4.1.</span> Further Reading</h3>
+<div class="outline-text-3" id="text-further-reading">
+<p>
+<a href="../epistemology/answering-why-and-how.html#why-before-how-problem">The How Before Why Problem</a>
+</p>
+
+<p>
+TL;DR: Religion works backwards compared to the scientific method, when it attempts to explain <i>why</i> things are the way they are, <i>before</i> understanding <i>how</i> things work.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-validity-of-reason" class="outline-2">
+<h2 id="validity-of-reason"><span class="section-number-2">5.</span> All The Different Ways / Puzzle Pieces For Proving That The Reasoning Process Is The Only Source Of Sensory Knowledge</h2>
+<div class="outline-text-2" id="text-validity-of-reason">
+<ol class="org-ol">
+<li>The reasoning process (summarized as empirical sense perception, concept formation, premise formation, and logic) is the only way to form (valid) conclusions that that are backed by evidence. It is metaphysically impossible to use anything but reason to accomplish this, and there are no other alternatives or ways to forming conclusions that are backed by evidence.
+<ol class="org-ol">
+<li>Faith (as it is formally defined in this philosophy) cannot prove anything, nor does it guarantee anything. Once again, existence precedes consciousness, and wanting something to be true does not make it true. Furthermore, it is necessary to define reason and distinguish it from faith when determining whether or not faith is truly a valid source of knowledge, but it&rsquo;s not necessary to think about faith at all when defining reason and determining whether or not reason is a valid source of knowledge.</li>
+<li>It is true that intuition is also a source of knowledge, however intuition is defined as subconscious reasoning, so it still follows that the reasoning is the only epistemic mechanism that is available to humans for making decisions, conclusions, and beliefs about the world and how to interact with it.</li>
+<li>It is true that reason alone is not sufficient to make sound conclusions about ethics without understanding evolution, human nature, emotions and more. However, it is also true that emotions are not a valid source of knowledge when they are used outside the scopes of ethics and aesthetics, nor are emotions valid when they contradict the evolutionary understanding of human nature.</li>
+<li>None of the functions that the human mind is born with / capable of that are listed inside the <a href="./tabula-rasa-eval.html#senses-of-human-beings">Tabula Rasa Evaluation</a> webpage can replace the functionality and usefulness of human reasoning. Instead, all those other natural capabilities (reflexes, instincts, desires, language, memory, etc) can only be (and are supposed to be) used <b>with</b> reason in order to accomplish objectives set by the human mind.</li>
+</ol></li>
+<li>Reason developed as an evolutionary way to hunt food, avoid dangers, and extract more energy from the environment.</li>
+<li>It is a performative contradiction to deny, doubt, or question the validity of reason.</li>
+</ol>
+<p>
+Note: This is true for sensory knowledge, but not for emotional knowledge or value knowledge.
+</p>
+
+<p>
+Note: Just because it is a performative contradiction to use reason to reject the validity of reason, that still doesn&rsquo;t necessarily mean that everybody <i>must</i> follow reason because evidently they can still reject reason, even if it&rsquo;s irrational. This also does not imply that reason is a firm foundation for belief either, especially since reason is dependent on one&rsquo;s sense perception and experiences beforehand. It is just as much of a fallacy for someone to believe that they can pull reason out of logic, which is very much what the performative contradiction does, hence other methods are needed to validate and clearly explain why reason is the only valid source of sensory knowledge.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Zero Contradictions</p>
+<p class="date">Created: 2023-03-20 Mon 06:00</p>
+</div>
+</body>
+</html>
