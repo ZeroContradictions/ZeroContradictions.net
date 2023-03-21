@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-03-20 Mon 06:03 -->
+<!-- 2023-03-20 Mon 09:57 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Philosophical Foundations Part 2E: Rational Ignorance, Razors, Heuristics, Proofs, and Proof Strategies</title>
@@ -229,7 +229,11 @@
 <li><a href="#proofs-intro">4.1. Introduction to Proofs</a></li>
 <li><a href="#proof-writing-advice">4.2. Advice For Improving Proof-Writing Skills</a></li>
 <li><a href="#types-of-proofs">4.3. Types Of Proofs</a></li>
-<li><a href="#tips-for-proving-certain-things">4.4. Tips For Proving Certain Things</a></li>
+<li><a href="#tips-for-proving-certain-things">4.4. Tips For Proving Certain Things</a>
+<ul>
+<li><a href="#semantics-notes-on-quantifiers">4.4.1. Brief Semantics Notes on Quantifiers</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#universal-quantifier-proof-strategies">5. Universal Quantifier Proof Strategies</a>
@@ -396,7 +400,7 @@ When it comes to quantifying or ranking simplicity which would be especially use
 </p>
 
 
-<div id="orgebb5043" class="figure">
+<div id="org5ee961f" class="figure">
 <p><img src="../images/occams-razor.jpg" alt="occams-razor.jpg" />
 </p>
 </div>
@@ -637,6 +641,30 @@ One common way to show that two things are equal to each is to show that one ele
 To show that there is only one unique something in a specific case, it is common to assume that there are two different somethings in that case, and then show that they are equal to each other. Then it must be the case that there is only one unique something since they are both are equal to each other.
 </p>
 </div>
+
+<div id="outline-container-semantics-notes-on-quantifiers" class="outline-4">
+<h4 id="semantics-notes-on-quantifiers"><span class="section-number-4">4.4.1.</span> Brief Semantics Notes on Quantifiers</h4>
+<div class="outline-text-4" id="text-semantics-notes-on-quantifiers">
+<p>
+Most (all?) natural languages would have a way to define the scope that a negative particle is applied to. In English, we could approximate this with: &ldquo;It is not the case that&#x2026;&rdquo;
+</p>
+<ol class="org-ol">
+<li>Everyone lives on Earth.</li>
+<li>Everyone does not live on the Moon.</li>
+<li>No one lives on the Moon.</li>
+</ol>
+
+<p>
+Notes
+</p>
+<ul class="org-ul">
+<li>Sentence #2 may sound weird in English, but that is actually how most natural languages would negate the translation of that sentence.</li>
+<li>Sentence #3 is a common feature of languages in the Standard Average European sprachbund. It uses a negative indefinite pronoun without using verbal negation.</li>
+<li>It is worth noting that the sentence #3 is three syllables shorter than the second one.</li>
+<li>Even under optimal conditions, the second sentences would still most likely be at least one syllable shorter than the first one in most cases. Its higher linguistic economy was probably one factor of several that contributed to its spread in usage.</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 
@@ -724,7 +752,7 @@ Goal: (∃x.P(x))
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Zero Contradictions</p>
-<p class="date">Created: 2023-03-20 Mon 06:03</p>
+<p class="date">Created: 2023-03-20 Mon 09:57</p>
 </div>
 </body>
 </html>
