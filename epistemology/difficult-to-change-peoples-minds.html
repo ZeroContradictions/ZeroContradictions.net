@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-03-20 Mon 05:39 -->
+<!-- 2023-03-30 Thu 08:18 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Why It's So Difficult To Change People's Minds</title>
@@ -220,13 +220,16 @@
 </li>
 <li><a href="#hub-and-spoke-networks">4. Modeling Belief Networks As Hub-And-Spoke Diagrams</a>
 <ul>
-<li><a href="#belief-networks-examples">4.1. Examples of Opposing Ideologies For Demonstrating How Belief Networks Work</a>
+<li><a href="#belief-maps-and-propositional-logic">4.1. Belief Maps And Propositional Logic</a></li>
+<li><a href="#what-belief-maps-dont-show">4.2. Selective Attention And Selective Ignorance: What Belief Maps Don&rsquo;t Show</a></li>
+<li><a href="#software-for-mapping-belief-networks">4.3. Software For Mapping Belief Networks</a></li>
+<li><a href="#belief-networks-examples">4.4. Examples of Opposing Ideologies For Demonstrating How Belief Networks Work</a>
 <ul>
-<li><a href="#religion-vs-atheists">4.1.1. Religious Versus Atheist Beliefs</a></li>
-<li><a href="#conservatives-vs-liberals">4.1.2. Conservative Versus Modern Liberal Beliefs</a></li>
-<li><a href="#georgism-vs-ancapism">4.1.3. Georgist Versus Ancap Beliefs</a></li>
-<li><a href="#objectivism-belief-network-map">4.1.4. Objectivism Belief Network Map</a></li>
-<li><a href="#pragmatopianism-versus-efilism">4.1.5. Pragmatopian Versus Efilist Beliefs</a></li>
+<li><a href="#religion-vs-atheists">4.4.1. Religious Versus Atheist Beliefs</a></li>
+<li><a href="#conservatives-vs-liberals">4.4.2. Conservative Versus Modern Liberal Beliefs</a></li>
+<li><a href="#georgism-vs-ancapism">4.4.3. Georgist Versus Ancap Beliefs</a></li>
+<li><a href="#objectivism-belief-network-map">4.4.4. Objectivism Belief Network Map</a></li>
+<li><a href="#pragmatopianism-versus-efilism">4.4.5. Pragmatopian Versus Efilist Beliefs</a></li>
 </ul>
 </li>
 </ul>
@@ -276,9 +279,12 @@ I am definitely not the first person to recognize how futile it usually is to ar
 </p>
 
 <p>
-<a href="https://waitbutwhy.com/2019/08/story-of-us.html">The Story of Us blog series by WaitButWhy</a> gives a lot of appealing visuals, text and metaphors for describing the current state of political discussion in the modern world, but it fails to dig deep into the epistemological reasons why people are so strongly inclined to not change their minds when they disagree with others. This essay is an attempt to describe what that series and most other works have failed to recognize.
+<a href="https://web.archive.org/web/20210910060619mp_/https://waitbutwhy.com/2019/09/stories.html">The Story of Us blog series by WaitButWhy</a> gives a lot of appealing visuals, text and metaphors for describing the current state of political discussion in the modern world, but it fails to dig deep into the epistemological reasons why people are so strongly inclined to not change their minds when they disagree with others. This essay is an attempt to describe what that series and most other works have failed to recognize.
 </p>
 
+<p>
+&ldquo;Anyone can prattle nonsense, and they&rsquo;ll always be able to find people to believe it, especially if they can dress it up in superstitious flummery. Careful reasoning and experience of the world are needed.&rdquo; -<a href="https://en.wikipedia.org/wiki/Wang_Chong">Wang Chong</a>
+</p>
 
 
 <p>
@@ -359,7 +365,7 @@ Relevant Article: <a href="https://waitbutwhy.com/2019/10/idea-labs-echo-chamber
 </p>
 
 
-<div id="org3b9f8dc" class="figure">
+<div id="org7073834" class="figure">
 <p><img src="../images/psychology-of-belief-flowchart--anticitizenX.png" alt="psychology-of-belief-flowchart--anticitizenX.png" />
 </p>
 </div>
@@ -411,7 +417,7 @@ Thus, when people criticize opposing ideologies, what will often happen is that 
 </p>
 
 
-<div id="orgd5c167e" class="figure">
+<div id="org3474a81" class="figure">
 <p><img src="../images/coherentist-belief-system-1.png" alt="coherentist-belief-system-1.png" />
 </p>
 </div>
@@ -461,8 +467,61 @@ Often times, when people construct their own Internet Wikis (e.g. <a href="https
 </p>
 </div>
 
+
+
+<div id="outline-container-belief-maps-and-propositional-logic" class="outline-3">
+<h3 id="belief-maps-and-propositional-logic"><span class="section-number-3">4.1.</span> Belief Maps And Propositional Logic</h3>
+<div class="outline-text-3" id="text-belief-maps-and-propositional-logic">
+<p>
+When drawing the directed edges between all the different nodes in someone’s belief network, we can label each some these edges with boolean operations, because the combination of these beliefs and the format of these boolean operations is equivalent to the formal arguments for people, explicitly list out the propositions that they used to reach their conclusions. If the directed edges to not have any boolean operations on them then that only indicates that one believe implies the belief where the arrow is pointing.
+</p>
+
+<p>
+If there is a directed edge from belief 1 to belief 2 and a directed edge from belief 2 to belief 1, then that probably indicates that the relationship between those two beliefs (or two propositions, if we think of them as propositions instead) is a biconditional.
+</p>
+</div>
+</div>
+
+<div id="outline-container-what-belief-maps-dont-show" class="outline-3">
+<h3 id="what-belief-maps-dont-show"><span class="section-number-3">4.2.</span> Selective Attention And Selective Ignorance: What Belief Maps Don&rsquo;t Show</h3>
+<div class="outline-text-3" id="text-what-belief-maps-dont-show">
+<p>
+Another thing to keep in mind is that selective attention (or perhaps selective ignorance) of contradictions is as important to belief networks as the belief nodes themselves.
+</p>
+
+<p>
+Because if the selective ignorance of some contradictions was never realized in the first place, then many of the core belief network hubs and nodes never would’ve appeared in the first place. And this is especially important to note because although we can map belief network nodes as a graph, we would often have no idea how these beliefs network nodes were formed in the first place, if we are not aware of the selective attention and selective ignorance of some important concepts in the first place.
+</p>
+
+<p>
+That being said, when belief maps are created, it is important to keep separate notes, or a separate diagram, explicitly detailing how the believers’ stream of sensory input, selective attention, and thought process played out.
+</p>
+
+<p>
+For example, many Anarcho-Communists would have a node in their belief network that if people don&rsquo;t work under Capitalism, then they will die, but if they were to draw belief maps representing their own beliefs, they wouldn&rsquo;t think to add a node or note to the diagram that they&rsquo;re ignoring that literally every economic ideology requires people to work, lest they die. Like how people are guaranteed to die on a deserted island if they didn&rsquo;t work to find food, water, and shelter at all.
+</p>
+
+<p>
+The main reason why exposure to other people with different ideologies/beliefs is important is mainly because it enables us to focus our attention on beliefs that may have been ignored by our selective ignorance / attention. To a somewhat lesser extent, it can also expose us to different logic/reasoning that can improve the correspondence of our belief networks with reality.
+</p>
+
+<p>
+When people outline their arguments and premises, propositions, and conclusion format, what they are doing is that they are taking different notes from their belief that work, and saying them in an explicit format instead of an implicit one. However, one limitation is that they do not list all of the assumed implicit premises and selective attention. Biases that were used to help them reach the conclusion that they are stating.
+</p>
+</div>
+</div>
+
+<div id="outline-container-software-for-mapping-belief-networks" class="outline-3">
+<h3 id="software-for-mapping-belief-networks"><span class="section-number-3">4.3.</span> Software For Mapping Belief Networks</h3>
+<div class="outline-text-3" id="text-software-for-mapping-belief-networks">
+<p>
+<a href="https://www.graphviz.org/doc/info/command.html">GraphViz Software For Mapping Belief Networks</a>
+</p>
+</div>
+</div>
+
 <div id="outline-container-belief-networks-examples" class="outline-3">
-<h3 id="belief-networks-examples"><span class="section-number-3">4.1.</span> Examples of Opposing Ideologies For Demonstrating How Belief Networks Work</h3>
+<h3 id="belief-networks-examples"><span class="section-number-3">4.4.</span> Examples of Opposing Ideologies For Demonstrating How Belief Networks Work</h3>
 <div class="outline-text-3" id="text-belief-networks-examples">
 <p>
 i
@@ -470,7 +529,7 @@ i
 </div>
 
 <div id="outline-container-religion-vs-atheists" class="outline-4">
-<h4 id="religion-vs-atheists"><span class="section-number-4">4.1.1.</span> Religious Versus Atheist Beliefs</h4>
+<h4 id="religion-vs-atheists"><span class="section-number-4">4.4.1.</span> Religious Versus Atheist Beliefs</h4>
 <div class="outline-text-4" id="text-religion-vs-atheists">
 <p>
 i
@@ -483,7 +542,7 @@ Pro-life people frequently repeat that there are many contraceptives available, 
 </div>
 
 <div id="outline-container-conservatives-vs-liberals" class="outline-4">
-<h4 id="conservatives-vs-liberals"><span class="section-number-4">4.1.2.</span> Conservative Versus Modern Liberal Beliefs</h4>
+<h4 id="conservatives-vs-liberals"><span class="section-number-4">4.4.2.</span> Conservative Versus Modern Liberal Beliefs</h4>
 <div class="outline-text-4" id="text-conservatives-vs-liberals">
 <p>
 i
@@ -492,7 +551,7 @@ i
 </div>
 
 <div id="outline-container-georgism-vs-ancapism" class="outline-4">
-<h4 id="georgism-vs-ancapism"><span class="section-number-4">4.1.3.</span> Georgist Versus Ancap Beliefs</h4>
+<h4 id="georgism-vs-ancapism"><span class="section-number-4">4.4.3.</span> Georgist Versus Ancap Beliefs</h4>
 <div class="outline-text-4" id="text-georgism-vs-ancapism">
 <p>
 <a href="../journey/geolibertarian-arguments.hmtl">Geolibertarian Arguments</a>
@@ -503,7 +562,7 @@ This image shows the following belief map for why Georgists believe that Land Va
 </p>
 
 
-<div id="orgd8a8e8a" class="figure">
+<div id="org1304c3d" class="figure">
 <p><img src="../images/graphs-of-LVT-outcomes--ALL.jpg" alt="graphs-of-LVT-outcomes--ALL.jpg" />
 </p>
 </div>
@@ -515,7 +574,7 @@ Georgists also have a second belief map of beliefs and arguments for why they be
 </div>
 
 <div id="outline-container-objectivism-belief-network-map" class="outline-4">
-<h4 id="objectivism-belief-network-map"><span class="section-number-4">4.1.4.</span> Objectivism Belief Network Map</h4>
+<h4 id="objectivism-belief-network-map"><span class="section-number-4">4.4.4.</span> Objectivism Belief Network Map</h4>
 <div class="outline-text-4" id="text-objectivism-belief-network-map">
 <p>
 This image shows the following belief map for Objectivists:
@@ -529,7 +588,7 @@ This image shows the following belief map for Objectivists:
 </div>
 
 <div id="outline-container-pragmatopianism-versus-efilism" class="outline-4">
-<h4 id="pragmatopianism-versus-efilism"><span class="section-number-4">4.1.5.</span> Pragmatopian Versus Efilist Beliefs</h4>
+<h4 id="pragmatopianism-versus-efilism"><span class="section-number-4">4.4.5.</span> Pragmatopian Versus Efilist Beliefs</h4>
 <div class="outline-text-4" id="text-pragmatopianism-versus-efilism">
 <p>
 <a href="../journey/geolibertarian-arguments.hmtl">Geolibertarian Arguments</a>
@@ -626,7 +685,7 @@ i
 </p>
 
 
-<div id="orga000f83" class="figure">
+<div id="org7e6e4a5" class="figure">
 <p><img src="../images/what-I-want-to-be-true.webp" alt="what-I-want-to-be-true.webp" />
 </p>
 </div>
@@ -862,6 +921,8 @@ Not only that, but in many cases, if a person leaves their ideology, then they a
 </p>
 </div>
 
+
+
 <div id="outline-container-strive-for-social-status" class="outline-3">
 <h3 id="strive-for-social-status"><span class="section-number-3">11.1.</span> Most People Strive For Social Status And Moral Purity Instead Of Reason</h3>
 <div class="outline-text-3" id="text-strive-for-social-status">
@@ -893,9 +954,16 @@ There is plenty of evidence to prove that genes are the main factor controlling 
 It is well-known <b>that men</b> tend to be right-leaning, whereas women to be more left-leaning. This suggests that biological differences can influence people&rsquo;s political beliefs. There are also studies showing that testosterone treatments can make people become more right-leaning: <a href="https://www.openicpsr.org/openicpsr/project/155441/version/V1/view">Testosterone Administration Induces A Red Shift in Democrats.</a> It should also be noted that <a href="https://www.prri.org/spotlight/libertariangotw/">approximately two-thirds of all Libertarians are men</a>. This extremely skewed sex distribution should be very indicative of just how important biological sex and other genetic factors are for determining what ideologies someone is inclined to believe in (and why fringe ideologies like Libertarianism will never be popular).
 </p>
 
+
 <p>
 Also: <a href="https://www.newswars.com/study-left-leaning-men-more-conservative-after-testosterone-boosts/">Study: Left-Leaning Men More Conservative After Testosterone Boosts</a>
 </p>
+
+<p>
+With regards to personality tests like the <a href="https://en.wikipedia.org/wiki/Big_Five_personality_traits">Big Five Personality Test</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/20371797/">liberals tend to score low on conscientiousness, but high on imagination, whereas political conservatives tend to have the opposites of those traits.</a>
+</p>
+
+
 
 <p>
 I am skeptical of some of the findings mentioned in this article, but it does cite some interesting findings: <a href="https://www.businessinsider.com/psychological-differences-between-conservatives-and-liberals-2018-2">psychological differences correlate differently between liberals and conservatives.</a>
@@ -986,7 +1054,7 @@ With respect to the outline above, I recommend the following sources for beginne
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Zero Contradictions</p>
-<p class="date">Created: 2023-03-20 Mon 05:39</p>
+<p class="date">Created: 2023-03-30 Thu 08:18</p>
 </div>
 </body>
 </html>
