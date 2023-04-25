@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-04-24 Mon 23:33 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Philosophy of Geopolitics</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="description" content="_____________" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="../blog-posts.css" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html#civilization"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Philosophy of Geopolitics</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#intro">1. Introduction To Geopolitics</a></li>
+<li><a href="#buffer-zones">2. Buffer Zones</a></li>
+<li><a href="#government-people-and-collective-interests">3. Do Governments Represent The Collective Values And Interests Of The People?</a></li>
+<li><a href="#why-russia-should-collapse">4. Why The US And NATO Should Want Russia To Collapse</a></li>
+<li><a href="#why-defend-taiwan">5. Why Taiwan Is Worth Defending With Cold, Dead Hands</a></li>
+<li><a href="#orgabe33e0">6. Some History Musings And Analysis Regarding The Soviet Union</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<p>
+NOTE: I haven&rsquo;t finished writing this file yet. I will add more content to this file some more when I have more time.
+</p>
+
+<div id="outline-container-intro" class="outline-2">
+<h2 id="intro"><span class="section-number-2">1.</span> Introduction To Geopolitics</h2>
+<div class="outline-text-2" id="text-intro">
+<p>
+i
+</p>
+</div>
+</div>
+
+<div id="outline-container-buffer-zones" class="outline-2">
+<h2 id="buffer-zones"><span class="section-number-2">2.</span> Buffer Zones</h2>
+<div class="outline-text-2" id="text-buffer-zones">
+<p>
+Small states that exist because competition from neighboring powers prevents them from getting conquered:
+</p>
+<ol class="org-ol">
+<li>Belgium</li>
+<li>Switzerland (also due to its mountainous geography)</li>
+<li>Democratic Republic of the Congo</li>
+<li>Thailand</li>
+<li>Uruguay</li>
+<li>North Korea (buffer zone between China and Liberal South Korea)</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-government-people-and-collective-interests" class="outline-2">
+<h2 id="government-people-and-collective-interests"><span class="section-number-2">3.</span> Do Governments Represent The Collective Values And Interests Of The People?</h2>
+<div class="outline-text-2" id="text-government-people-and-collective-interests">
+<p>
+i
+</p>
+
+<p>
+i
+</p>
+
+<p>
+Countries are just sports teams.
+It&rsquo;s just Russia&rsquo;s government wanting the War, China&rsquo;s government wanting to invade Ukraine, and they brainwash their people into supporting their wars.
+Corruption and the American Establishment versus the People.
+</p>
+
+<p>
+Do the governments really represent the collective desires of the people? -Not really. Except when the governments are brainwashing the people to support X or Y action.
+Aside from whatever the people may be brainwashed / manipulated by the governments, the average person only wants to do what they want and raise their families.
+</p>
+
+<p>
+It seems that perhaps governments only represent the collective desires of the people when they brainwash the people into following their desires.
+</p>
+
+<p>
+The rich are still at the top, and the poor are still at the bottom.
+</p>
+
+<p>
+Perhaps we should only identify by what class we&rsquo;re in, not by what country we&rsquo;re in.
+</p>
+
+<p>
+When the leaders of two countries fight a war, to them it&rsquo;s not a war, it&rsquo;s just a videogame.
+Remember: &ldquo;When elephants fight against each other, it&rsquo;s the grass that suffers&rdquo;
+</p>
+<ul class="org-ul">
+<li>The proxy wars backed by the Soviet Union were the turning point when wars no longer represented the interests of the people in the Soviet Union.</li>
+<li>The Iraq War was the turning point when wars no longer represented the interests of the people in the West.</li>
+</ul>
+
+
+<p>
+<img src="../images/chess-pawns-and-kings-comic.png" alt="chess-pawns-and-kings-comic.png" />
+Source: <a href="https://existentialcomics.com/comic/467">Existential Comics: The Rise of the Pawns</a>
+</p>
+
+
+<p>
+To a large extent, I do agree that governments&rsquo; decisions are less representative of the people as they used to be historically. But I also believe that even when governments do things that are widely unpopular among the public (e.g. Russia invading Ukraine, or China wanting to invade Taiwan), that the actions do correspond to a vague, subconscious desire of the public will (e.g. (perceived) national security) and that the manifestations of geopolitical and foreign affairs are the formation of the intrinsic selfish, violent, and competitive nature of life at a higher level. Societies can only eliminate violence within a society by expelling it outwards, and many of the aggressive acts on the international stage are just manifestations of that.
+</p>
+</div>
+</div>
+
+<div id="outline-container-why-russia-should-collapse" class="outline-2">
+<h2 id="why-russia-should-collapse"><span class="section-number-2">4.</span> Why The US And NATO Should Want Russia To Collapse</h2>
+<div class="outline-text-2" id="text-why-russia-should-collapse">
+<p>
+There are several geopolitical reasons why the US government should want Russia to collapse:
+</p>
+<ul class="org-ul">
+<li>Russia is still an empire with an imperial mindset. It is the last European country to still maintain most of its colonial territory, and the Russian head of government (Vladimir Putin) is well-known for wanting to restore the USSR. It is therefore in the US&rsquo;s interest to make Russia fall apart.</li>
+<li>Russia is China&rsquo;s greatest ally, and China is currently the main geopolitical opponent of the US. Arguably, the Cold War was tri-polar (between the US, the USSR, and China) instead of bipolar. Although the USSR collapsed, China never did, so in a sense, the Cold War never really ended because there&rsquo;s still two global factions competing against each other: The US and its allies versus China and its allies.</li>
+<li>Since Russia is the successor of the Soviet Union, Russia holds one of the five veto votes on the UN Security Council and has the largest nuclear arsenal of any country in the world. The collapse of Russia would make it easier for the US to lead a global government.</li>
+<li>Russia is the only other country in the world besides the US that reserves the right to make a claim to Antarctica. If Russia breaks down, then it will be easier for the US to make a claim to Antarctica that is harder to oppose. The US has the strongest claims to Marie Byrd Land, which just happens to be the most colonizable region of Antarctica if climate change continues to warm Antarctica and make it more habitable by humans.</li>
+<li>Russian airspace is among the most valuable airspace in the world since the country is so large and in a strategic location for airspace, so if Russia falls apart, then it will be easier to route airlines through that airspace if it doesn&rsquo;t violate Russian sovereignty.</li>
+<li>If Russia collapses, it will be easier to access natural resources in Russian territory without strengthening the Russo-Chinese sphere of influence.</li>
+<li>Russia annexed Crimea in 2014, which was a clear violation of Ukraine&rsquo;s territorial integrity.</li>
+<li>Russia invaded Ukraine in 2022 because they were afraid that Ukraine would join NATO, because they wanted more buffer space between them and Europe, because they saw Ukrainians as belonging to the same ethnic group, because Putin wanted a distraction to boost his popularity, etc, among other reasons.</li>
+<li>The sooner Russia collapses, the sooner the world economy can stop suffering the economic consequences and hardships caused by the Russian Invasion of Ukraine.</li>
+<li>The collapse of the Russian Federation would be a huge blow to North Korea, Iran, Syria, Cuba, Venezuela, Nicaragua, other opponents of the US, and especially China.</li>
+</ul>
+<p>
+I strongly disagree that Poland and the Baltic states joining NATO was the work of government elites in the US and NATO. Every country that ever joined NATO did so with the strong democratic approval of all its citizens and all the member states of NATO. Poland and other Eastern European countries joined NATO because they wanted to protect themselves from Russia, who has a long history of invading its neighbors. Gaining NATO membership guarantees that a country will never be attacked ever again, since it controls a strong nuclear arsenal and is the most powerful military alliance in the World.
+</p>
+
+<p>
+I&rsquo;m sure that there&rsquo;s corrupt and ulterior motives why the elites in the US want to give aid to Ukraine, like how it would benefit the military industrial complex to supply Ukraine with more weapons and equipment, but I still believe that most of the reasons the US has for opposing Russia since the fall of the USSR are geopolitical in Nature, not so much for supporting the interests of the deep state.
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-why-defend-taiwan" class="outline-2">
+<h2 id="why-defend-taiwan"><span class="section-number-2">5.</span> Why Taiwan Is Worth Defending With Cold, Dead Hands</h2>
+<div class="outline-text-2" id="text-why-defend-taiwan">
+<p>
+Taiwan obviously won&rsquo;t be able to defend itself against the much larger People&rsquo;s Liberation Army.
+</p>
+
+<p>
+If Taiwan falls, not only does that country fall, but South Korea and Japan also become at risk of falling to Chinese hegemony because their trade routes flow through the Taiwan Strait between China and Taiwan. If China conquers Taiwan, they could block off Japan and South Korea&rsquo;s national trading routes from the rest of the world, which would endanger their sovereignty and all the people living in those countries. With the combined population of Japan, South Korea and Taiwan, <i>that is ~200 million people of the free world who will be at risk of falling under authoritarian rule</i>, <b>if</b> the United States does not intervene to defend Taiwan.
+</p>
+
+<p>
+Additionally, if the United States does end up going to war with China over Taiwan, the US won&rsquo;t have to fight alone. In the event of a war, India would definitely seize the opportunity to invade Tibet with full force at the same time to open another front in the War against China since: 1. the countries have a contentious border dispute, 2. they are strong enemies against each other, and 3. the best time to attack China is when they&rsquo;re distracted with invading Taiwan. Japan, South Korea, and maybe even the Phillipines would also be strongly incentivized to defend Taiwan as well since it would be in their national security interests. And if China attacks the US, the United States could summon Article 5 of NATO. So not only defending Taiwan make sense in the name of freedom, but if China were to attack Taiwan, the odds would be strongly in favor of the US.
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-orgabe33e0" class="outline-2">
+<h2 id="orgabe33e0"><span class="section-number-2">6.</span> Some History Musings And Analysis Regarding The Soviet Union</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+The Soviet Union was essentially a Communist Empire that was a continuation of the earlier Russian Empire. That being said, it can and should be argued that the although the European colonial empires lost all of their colonies by the 1980s, with the exceptions of Macau and Hong Kong during the late 1990s, that the USSR was actually the last European-founded empire to lose most of its territory, since the USSR didn&rsquo;t fall until 1991, and didn&rsquo;t start losing most of its territories / puppet states until 1989-1991.
+</p>
+
+<p>
+Although each member of the Soviet Union was called a Soviet Socialist Republic (SSR), each SSR was equivalent to a colony, albeit the colonies were not separated by oceans, and were all continuously connected by land mass.
+</p>
+
+<p>
+When viewing the Soviet Union as a Communist Empire, and knowing that the Siloviki of the Russian elite still strongly adhere to an outdated geopolitical strategy from 1900 that focused on world domination by aiming to dominate as much of the Eurasian continent as much as possible, it becomes more clear that the Siloviki of the Russian Federation&rsquo;s political elite are basically trying to apply a colonial geopolitical strategy to a modern world where nearly every country has advanced technology (and thus can&rsquo;t be easily conquered without a fight, also depends on geography), where peace/influence/diplomacy are the usual norm in geopolitics, where many countries are allied with nuclear weapons, and where globalization makes colonization less feasible. The massive failure of the Russian invasion of Ukraine is a clear indication that applying a colonial geopolitical strategy simply won&rsquo;t work anywhere in the world anymore.
+</p>
+
+<p>
+It should be noted that the Portuguese Empire held on to its overseas colonies considerably longer than other colonial powers did, and this was because the Portuguese Empire was ruled by a dictator who held an iron fist over the Empire, which didn&rsquo;t cease until he died in 1974/1975. The Soviet Union was also ruled by an iron fist, and it didn&rsquo;t fall until 1991, thus making it the last European-founded empire to fall in the 20th century.
+</p>
+
+<p>
+With these factors being said, one can analyze that ruling an empire with an iron fist will absolutely help the empire last longer. This is the same reason why other countries ruled by dictators like China, North Korea, Cuba, Cambodia, Russia, Cameroon, etc have not fallen. Even though other regimes ruled by iron fists have collapsed, that doesn&rsquo;t imply that every regime that is ruled by an iron fist must collapse, especially if said regime is very strategic and mindful about what it must do to maintain its reign and power.
+</p>
+
+<p>
+Given the Sino-Soviet Split that happened in 1961, and also given that the People&rsquo;s Republic of China (PRC) never fell after the Soviet Union fell in 1991, it can be argued to an extent that the Cold War never ended.
+</p>
+
+<p>
+Yes, most of the Communist countries around the world did collapse after the Soviet Union fell in 1991, but Communist China never fell, so the Tri-Polar World Order that had existed ever since 1961 got reduced to a (dual) polar world order in 1991 between China and the United States, which still continues to this day (2022).
+</p>
+
+<p>
+There is also the great possibility that China and the Russian Federation will ally together to form an alliance of their own, which would be a continuation of the old Cold War conflict, but this time lead by China with Russia following behind as the junior partner of the alliance.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Zero Contradictions</p>
+<p class="date">Created: 2023-04-24 Mon 23:33</p>
+</div>
+</body>
+</html>
