@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-06-18 Sun 21:45 -->
+<!-- 2023-06-23 Fri 06:02 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Rational Ignorance, Razors, Heuristics, Proofs, and Proof Strategies</title>
@@ -238,15 +238,15 @@
 </li>
 <li><a href="#universal-quantifier-proof-strategies">5. Universal Quantifier Proof Strategies</a>
 <ul>
-<li><a href="#proving-universals">5.1. To prove a universal statement (∀x.P(x)):</a></li>
-<li><a href="#proving-universals-in-domain">5.2. There are some variations of this. This strategy handles a universal quantifier over a restricted domain:</a></li>
-<li><a href="#proving-universal-implications">5.3. This strategy combines the universal quantifier and implication strategies: this is a very common kind of statement.</a></li>
+<li><a href="#proving-universals">5.1. To prove a universal statement (∀x.P(x))</a></li>
+<li><a href="#proving-universals-in-domain">5.2. To prove a universal statement (∀x.P(x)) over a restricted domain</a></li>
+<li><a href="#org1bba996">5.3. To prove a universal statement and implication</a></li>
 </ul>
 </li>
 <li><a href="#existential-quantifier-proof-strategies">6. Existential Quantifier Proof Strategies</a>
 <ul>
-<li><a href="#proving-existentials">6.1. To prove a statement of the form (∃x.P (x)):</a></li>
-<li><a href="#proving-existentials-in-domain">6.2. To prove a statement of the form (∃x ∈ A.P (x)):</a></li>
+<li><a href="#proving-existentials">6.1. To prove a statement of the form (∃x. P(x))</a></li>
+<li><a href="#proving-existentials-in-domain">6.2. To prove a statement of the form (∃x ∈ A. P(x))</a></li>
 </ul>
 </li>
 </ul>
@@ -261,7 +261,7 @@ Note: I haven&rsquo;t finished writing this file yet.
 <h2 id="rational-ignorance"><span class="section-number-2">1.</span> Rational Ignorance</h2>
 <div class="outline-text-2" id="text-rational-ignorance">
 <p>
-<a href="https://en.wikipedia.org/wiki/Rational_ignorance">Wikipedia: Rational Ignorance</a>
+<a href="https://en.wikipedia.org/wiki/Rational_ignorance">Wikipedia: Rational Ignorance</a>.
 </p>
 
 <p>
@@ -400,7 +400,7 @@ When it comes to quantifying or ranking simplicity which would be especially use
 </p>
 
 
-<div id="org30bcf44" class="figure">
+<div id="orge6f9c15" class="figure">
 <p><img src="../images/occams-razor.jpg" alt="occams-razor.jpg" />
 </p>
 </div>
@@ -531,15 +531,11 @@ Most homo sapiens can pass the mirror test, but a majority of them cannot pass t
 <h2 id="heuristics-affecting-ideologies"><span class="section-number-2">3.</span> How Heuristics Affects Different People&rsquo;s Ideologies</h2>
 <div class="outline-text-2" id="text-heuristics-affecting-ideologies">
 <p>
-<a href="https://thewaywardaxolotl.blogspot.com/2017/11/rationality-and-freedom.html?view=classic">Rationality and Freedom</a>
+See: <a href="https://thewaywardaxolotl.blogspot.com/2017/11/rationality-and-freedom.html">Rationality and Freedom</a>.
 </p>
 
 <p>
-[elaborate]
-</p>
-
-<p>
-<a href="../epistemology/difficult-to-change-peoples-minds.html">Why It&rsquo;s So Difficult To Change People&rsquo;s Minds</a>
+See: <a href="../epistemology/difficult-to-change-peoples-minds.html">Why It&rsquo;s So Difficult To Change People&rsquo;s Minds</a>.
 </p>
 </div>
 </div>
@@ -574,10 +570,10 @@ Most homo sapiens can pass the mirror test, but a majority of them cannot pass t
 <li>Expand out unfamiliar terms.</li>
 <li>Replacing generic statements with statements about generic objects.</li>
 <li>Including implicit information.</li>
+<li>Practice using the guidelines above.</li>
 </ol>
 <p>
-#. Practice using the guidelines above.
-Example Step by Step Proof: <a href="https://loopspace.mathforge.org/CountingOnMyFingers/NatureOfProof/">https://loopspace.mathforge.org/CountingOnMyFingers/NatureOfProof/</a>.
+<a href="https://loopspace.mathforge.org/CountingOnMyFingers/NatureOfProof/">Example Step by Step Proof</a>.
 </p>
 </div>
 </div>
@@ -673,40 +669,49 @@ Notes
 <div class="outline-text-2" id="text-universal-quantifier-proof-strategies">
 </div>
 <div id="outline-container-proving-universals" class="outline-3">
-<h3 id="proving-universals"><span class="section-number-3">5.1.</span> To prove a universal statement (∀x.P(x)):</h3>
+<h3 id="proving-universals"><span class="section-number-3">5.1.</span> To prove a universal statement (∀x.P(x))</h3>
 <div class="outline-text-3" id="text-proving-universals">
 <p>
 Goal: (∀x.P(x))
 </p>
 <ul class="org-ul">
-<li>Let k be an arbitary object.</li>
+<li>Let k be an arbitrary object.</li>
 <li>Goal: P(k)</li>
 </ul>
+
+<p>
+There are some variations of this.
+</p>
 </div>
 </div>
 
 <div id="outline-container-proving-universals-in-domain" class="outline-3">
-<h3 id="proving-universals-in-domain"><span class="section-number-3">5.2.</span> There are some variations of this. This strategy handles a universal quantifier over a restricted domain:</h3>
+<h3 id="proving-universals-in-domain"><span class="section-number-3">5.2.</span> To prove a universal statement (∀x.P(x)) over a restricted domain</h3>
 <div class="outline-text-3" id="text-proving-universals-in-domain">
 <p>
 Goal: (∀x ∈ A.P (x))
 </p>
 <ul class="org-ul">
-<li>Let k be an arbitary object.</li>
+<li>Let k be an arbitrary object.</li>
 <li>Assume: k ∈ A</li>
 <li>Goal: P(k)</li>
 </ul>
 </div>
 </div>
-
-<div id="outline-container-proving-universal-implications" class="outline-3">
-<h3 id="proving-universal-implications"><span class="section-number-3">5.3.</span> This strategy combines the universal quantifier and implication strategies: this is a very common kind of statement.</h3>
-<div class="outline-text-3" id="text-proving-universal-implications">
+<div id="outline-container-org1bba996" class="outline-3">
+<h3 id="org1bba996"><span class="section-number-3">5.3.</span> To prove a universal statement and implication</h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+Goal: (∀x ∈ A.P (x) → Q(x))
+</p>
+<p>
+:CUSTOM<sub>ID</sub>: proving-universal-implications
+</p>
 <p>
 Goal: (∀x ∈ A.P (x) → Q(x))
 </p>
 <ul class="org-ul">
-<li>Let k be an arbitary object.</li>
+<li>Let k be an arbitrary object.</li>
 <li>Assume: P(k)</li>
 <li>Goal: Q(k)</li>
 </ul>
@@ -719,7 +724,7 @@ Goal: (∀x ∈ A.P (x) → Q(x))
 <div class="outline-text-2" id="text-existential-quantifier-proof-strategies">
 </div>
 <div id="outline-container-proving-existentials" class="outline-3">
-<h3 id="proving-existentials"><span class="section-number-3">6.1.</span> To prove a statement of the form (∃x.P (x)):</h3>
+<h3 id="proving-existentials"><span class="section-number-3">6.1.</span> To prove a statement of the form (∃x. P(x))</h3>
 <div class="outline-text-3" id="text-proving-existentials">
 <p>
 Goal: (∃x.P(x))
@@ -732,7 +737,7 @@ Goal: (∃x.P(x))
 </div>
 
 <div id="outline-container-proving-existentials-in-domain" class="outline-3">
-<h3 id="proving-existentials-in-domain"><span class="section-number-3">6.2.</span> To prove a statement of the form (∃x ∈ A.P (x)):</h3>
+<h3 id="proving-existentials-in-domain"><span class="section-number-3">6.2.</span> To prove a statement of the form (∃x ∈ A. P(x))</h3>
 <div class="outline-text-3" id="text-proving-existentials-in-domain">
 <p>
 Note: This is the version for statements with a restricted quantifier.
@@ -752,7 +757,7 @@ Goal: (∃x.P(x))
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Zero Contradictions</p>
-<p class="date">Created: 2023-06-18 Sun 21:45</p>
+<p class="date">Created: 2023-06-23 Fri 06:02</p>
 </div>
 </body>
 </html>
