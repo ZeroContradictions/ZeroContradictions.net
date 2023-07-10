@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-07-10 Mon 06:04 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Thoughts On "Social Justice"</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="description" content="The nature of discrimination, the origin of &quot;diversity&quot;, and miscellaneous thoughts on &quot;racial oppression&quot; and transgender people." />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="../blog-posts.css" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="./index.html"> UP </a>
+ |
+ <a accesskey="H" href="./index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Thoughts On &ldquo;Social Justice&rdquo;</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#nature-of-discrimination">1. The Nature of Discrimination</a>
+<ul>
+<li><a href="#right-to-discriminate">1.1. The Right To Discriminate Is Fundamental To Life</a></li>
+<li><a href="#diversity-and-discrimination">1.2. Valuing Diversity Implies Valuing Discrimination</a></li>
+<li><a href="#lookism">1.3. Lookism Will Probably Never Go Away</a></li>
+</ul>
+</li>
+<li><a href="#origin-of-need-for-equal-representation">2. The Origin Of The Need For <del>Diversity</del> Equal Representation</a></li>
+<li><a href="#list-of-reasons">3. Reasons Why The Supposed Racial Oppression Of Minorities In The United States Is A Myth</a>
+<ul>
+<li><a href="#affirmative-action-is-racist">3.1. Thoughts On <del>Affirmative Action</del> Racism</a></li>
+</ul>
+</li>
+<li><a href="#good-images-social-justice">4. Good Memes and Graphs Relating To &ldquo;Social Justice&rdquo;</a></li>
+<li><a href="#thoughts-on-trannies">5. Thoughts On Transgender People</a>
+<ul>
+<li><a href="#important-distinctions-trannies">5.1. Important Distinctions To Make Regarding Transgender People</a></li>
+<li><a href="#medical-treatment-for-trannies">5.2. Regarding The Medical Treatment Of Gender Dysphoria, Identity, And Transgender People</a></li>
+<li><a href="#preferred-pronouns-are-absurd">5.3. Preferred Pronouns Are Absurd</a></li>
+<li><a href="#laws-and-social-rules-for-trannies">5.4. Thoughts On Laws And Social Rules Regarding Transgender People</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<hr />
+<p>
+Note: I might add more sections to this page in the future.
+</p>
+
+<div id="outline-container-nature-of-discrimination" class="outline-2">
+<h2 id="nature-of-discrimination"><span class="section-number-2">1.</span> The Nature of Discrimination</h2>
+<div class="outline-text-2" id="text-nature-of-discrimination">
+</div>
+<div id="outline-container-right-to-discriminate" class="outline-3">
+<h3 id="right-to-discriminate"><span class="section-number-3">1.1.</span> The Right To Discriminate Is Fundamental To Life</h3>
+<div class="outline-text-3" id="text-right-to-discriminate">
+<p>
+Every single one of us has the right to discriminate, and we use it every day.
+</p>
+
+<p>
+We discriminate when we decide who we are friends with and who we are not friends with. We discriminate when we decide which employer we work for. We discriminate when we buy this brand over that brand, and we discriminate when we choose which gym we go to, which bank we deposit our money in, who we have sex with, whether we worship God instead of Allah (or no God at all), etc.
+</p>
+
+<p>
+Discrimination is not inherently bad, but of course some people abuse it. That&rsquo;s &ldquo;wrong&rdquo; (subjectively speaking), but they still have that right, in much the same way we all have a right to say things which are clearly wrong (&ldquo;2+2=5&rdquo;) or abominable (e.g. pro-slavery, Communism, etc).
+</p>
+</div>
+</div>
+
+<div id="outline-container-diversity-and-discrimination" class="outline-3">
+<h3 id="diversity-and-discrimination"><span class="section-number-3">1.2.</span> Valuing Diversity Implies Valuing Discrimination</h3>
+<div class="outline-text-3" id="text-diversity-and-discrimination">
+<p>
+Valuing diversity should imply valuing discrimination, otherwise what value is there to be gained from having diversity? If there is variation, but no selection, there will be no improvements in the ideas or output. Likewise, if there is no diversity, then there would be no value to discriminating. If there is no variation, then there is nothing to select from.
+</p>
+
+<p>
+If the left-wing worldview is taken to its logical conclusion, it actually would lead to complete racial segregation. On the one hand, they don&rsquo;t believe that there are any important differences between people of different races, but if that&rsquo;s the case, then there can&rsquo;t be any possible benefit to diversity because we&rsquo;re all the same. And yet they celebrate diversity, even though they have no reason why it would make anybody&rsquo;s life better.
+</p>
+
+<p>
+At the same time, there are these supposed disadvantages that are created by being a minority, so the logical conclusion should be that the best thing to do would be to segregate people by race, so that they don&rsquo;t face that disadvantage of being a minority.
+</p>
+
+<p>
+If other cultures and peoples are so insightful, then why don&rsquo;t the leftists live in those countries? The vast majority of them wouldn&rsquo;t live anywhere else but the West, except maybe Japan and other Western-influenced countries.
+</p>
+
+<p>
+Relevant Video: <a href="https://www.youtube.com/watch?v=5Kt0ngIgw50">Don&rsquo;t Be A Racist Jerk!!</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-lookism" class="outline-3">
+<h3 id="lookism"><span class="section-number-3">1.3.</span> Lookism Will Probably Never Go Away</h3>
+<div class="outline-text-3" id="text-lookism">
+<p>
+<a href="https://en.wikipedia.org/wiki/Lookism">Lookism</a> will probably be the last form of discrimination to ever be eliminated (if people are going to insist that we should eliminate all forms of irrational discrimination). Not even the most hard-core leftists who claim to be obsessed with eliminating all forms of discrimination have recognized Lookism as a prevalent form of discrimination that exists basically everywhere.
+</p>
+
+<p>
+In some cases, <a href="https://en.wikipedia.org/wiki/Height_discrimination">heightism</a> can be classified as a subtype of lookism. Heightism is another form of discrimination that leftists don&rsquo;t address, even though addressing it logically ought to be part of their worldview.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-origin-of-need-for-equal-representation" class="outline-2">
+<h2 id="origin-of-need-for-equal-representation"><span class="section-number-2">2.</span> The Origin Of The Need For <del>Diversity</del> Equal Representation</h2>
+<div class="outline-text-2" id="text-origin-of-need-for-equal-representation">
+<p>
+When leftists use the word &ldquo;diversity&rdquo;, sometimes what they&rsquo;re really talking about is their desire for &ldquo;equal representation&rdquo; of population subgroups into positions of power and influence, which shall be the topic of this section. In my opinion, equal representation is one of the few practical cases where &ldquo;diversity&rdquo; makes any sense, provided that it&rsquo;s practical, increases political stability, <i>and</i> it&rsquo;s not reasonably unachievable due to <a href="./race-FAQs.html#environmental-factors">genetic and biological differences</a>.
+</p>
+
+<p>
+The need for equal representation originates whenever there is a sizable portion of the population that is distinctly different from the rest of the population. In an ethnically homogenous country like Japan, Korea, Tunisia, etc, it wouldn&rsquo;t make sense for the people in those countries to promote ethnic diversity in their leadership (government positions, corporation CEOs, representation in STEM, etc) because they are ethnically homogenous. An ethnically diverse government and corporate elite would not be representative of those countries.
+</p>
+
+<p>
+Theoretically at some point, some differences in a country&rsquo;s population could become so small that the differences would basically become a non-issue, from the collective perspective of the entire population. It probably depends on the context of the situation, but it could be as small as 95/5, 98/2, 99/1, perhaps even 999/1. Trans Rights Activists who are in favor of stating pronouns believe that a population split of less than 99/1 is still big enough to warrant mandating everyone to state their pronouns, but <a href="#preferred-pronouns-are-absurd">I disagree on this for practical reasons</a>. In the most general form, this question could be rephrased as:
+</p>
+<blockquote>
+<p>
+&ldquo;How big would the ratio have to be to make it reasonable for the majority of the population to do X to accommodate the minority of the population? 999999/1? 9999/1? 999/1? 995/5?&rdquo;
+</p>
+</blockquote>
+
+<p>
+In a country that is racially and/or linguistically diverse like India, the United States, Nigeria, DRC, etc, there are great efforts to promote equal representation in government, STEM jobs and research, the corporate world, etc, because the populations are diverse. Since the United States has had a sizable black population of about ~15% for over 200 years, black people in the United States felt excluded since the country <i>still</i> never had a black president until 2009, (and even then Barack Obama was/is technically half white). If black people have always made up an average of about ~13% of the population of the US for the ~220 years for which the US has existed with a president as the head of government (starting with the enforcement of the US Constitution in 1789) up to the start of Obama&rsquo;s presidency in 2009, then 220 * 0.13 = 28.60 years for which it would be proportionately &ldquo;fair&rdquo; for the US to have a black president, if we are working under the thesis that the goal of &ldquo;diversity&rdquo; (equal representation) is to represent every faction of the population equally. Of course, while the historical reason why the United States never had a black president during the 19th and 20th centuries can be mainly attributed to the social and legal inequality of blacks in comparison to whites, the US is still very unlikely to have proportionally as many black presidents as there are black people in the national population for the 21st century and beyond <a href="./race-FAQs.html#environmental-factors">since black people have less suitable genetics for Modernity</a>. In some cases, the drive for equal representation of all races has gone too far in Western countries to the point where it has lead to <a href="https://thewaywardaxolotl.blogspot.com/2022/10/white-erasure-in-advertising.html">white people being nearly erased from advertising and much of the country&rsquo;s mass media</a>.
+</p>
+
+<p>
+As another example, religion is a very polarizing topic in Nigeria where the population is split in nearly equal halves between Christianity and Islam. If the government and/or president of Nigeria was constantly represented by only one religion but not the other, this would disrupt the balance of power and national stability of the country. Thus, the Nigerian government must alternate between Christian-partisan and Islam-partisan leadership, lest the other side will feel excluded, perhaps even to the point where they will riot over it. Diversity between the two religions would be a less pressing issue if the country was split 95/5, 90/10, or even 80/20 on religion.
+</p>
+
+<p>
+Since every human society has two biological sexes, there will always be at least one way to divide every human society into at least two separate and nearly equally-sized demographics. So even if a human society was ethnically homogenous, there could always persist a demand for the less represented sex to gain representation in a field of power and/or influence, provided that the society is reasonably egalitarian. As of 2023, the United States has never had a female president in the entirety of its 247 years of existence and 234 years for which it has had a president. Even then, it is difficult to imagine that the US will ever have enough female presidents leading over enough years to ever have a completely equal number of years over which it has had male presidents, especially since it simply isn&rsquo;t biologically natural for women to be social leaders at the same rate as men are.
+</p>
+</div>
+</div>
+
+<div id="outline-container-list-of-reasons" class="outline-2">
+<h2 id="list-of-reasons"><span class="section-number-2">3.</span> Reasons Why The Supposed Racial Oppression Of Minorities In The United States Is A Myth</h2>
+<div class="outline-text-2" id="text-list-of-reasons">
+<ol class="org-ol">
+<li>&ldquo;Oppressed&rdquo; racial minorities aren&rsquo;t leaving the United States. If anything, they&rsquo;re immigrating to the United States.</li>
+<li>Historically, <a href="./race-FAQs.html#tribal-warfare">American Indians</a>, Native Hawaiians, and others fought lots of wars with each other. So why was it any different from white Europeans arrived to the New World and did the same thing? Even if the American Indians did somehow manage to build more powerful civilizations with more advanced technology, they still would&rsquo;ve eventually died out as soon as they came in contact with Old World diseases.</li>
+<li>The best explanation for different crime rates between different races is that they&rsquo;re caused by their different genetics, since that&rsquo;s what the definition of a race is and also since this would be the conclusion of Occam&rsquo;s Razor. The homicide rates of blacks and Hispanics in the United States match those of sub-Saharan Africa and Latin America respectively. It makes perfect sense that <a href="./race-FAQs.html#race-gap-crime-rates">races whose populations have been historically and predominantly limited by tribal warfare</a> (e.g. sub-Saharan Africans and American Indians) evolved to be more violent and have naturally higher crime rates than racial populations that were primarily limited by diseases and famines instead (e.g. Europeans and East Asians).</li>
+<li>Ghettos are largely caused by genetics: <a href="https://thewaywardaxolotl.blogspot.com/2017/06/its-probably-mostly-genetic.html">It&rsquo;s Probably Mostly Genetic</a>.</li>
+<li>The Asian minority in the US used to be very oppressed, but now it&rsquo;s among the most successful and well-off for its size. If Asians can rise from the bottom to the top, this is evidence that nothing was really preventing other minorities from doing the same, besides genetic tendencies and variations of course.</li>
+<li>The average black or Hispanic person in the US is lives a far better life than someone of the same ethnic group but lives in a different country.</li>
+<li>Even after 50+ years of time to recover socially and economically, plus a variety of affirmative action policies / propaganda, blacks still don&rsquo;t have the same prosperity as whites. At some point, a rational-minded person will have to ask: Is this really an issue that can be fixed by &ldquo;improving&rdquo; the environmental circumstances? Or is it the case that blacks will never achieve the same prosperity as whites without intervention since race realism is a thing?</li>
+<li>~67% of blacks in the US are raised by single parents. Obviously, this has a huge impact on how most of the blacks would develop later on in life. But how could racism be feasibly attributed to causing most blacks to be raised by single parents, and thus experiencing poorer life outcomes as a result of that?</li>
+<li>The population of Africa skyrocketed after the Europeans colonized the continent, which implies that European colonization was largely a good thing since it largely ended war, disease, and famine in Africa for the time being.</li>
+<li>Racial disparities in wealth, academic achievement, educational attainment, crime rates, etc are better explained by <a href="./race-FAQs.html">Race Realism</a>.</li>
+</ol>
+</div>
+
+
+
+
+<div id="outline-container-affirmative-action-is-racist" class="outline-3">
+<h3 id="affirmative-action-is-racist"><span class="section-number-3">3.1.</span> Thoughts On <del>Affirmative Action</del> Racism</h3>
+<div class="outline-text-3" id="text-affirmative-action-is-racist">
+<p>
+The best way to stop discrimination on the basis of race is to stop discriminating on the basis of race.
+</p>
+
+<p>
+Eliminating affirmative action will make it possible for the country to educate more doctors, thus lowering the price of healthcare.
+This will benefit everyone across the board.
+In the future, if a person of color does become a doctor, they won&rsquo;t have to wonder if they&rsquo;re the best the school had to offer, or the &ldquo;best adjusted for race&rdquo;.
+</p>
+
+
+<div id="org45b5a26" class="figure">
+<p><img src="./images/affirmative-action-implies-blacks-have-no-merits.jpg" alt="affirmative-action-implies-blacks-have-no-merits.jpg" width="500px" />
+</p>
+</div>
+
+<p>
+This person is basically saying black people have no merits and they need a rigged system to get jobs. Affirmative action sounds so stupid and absurdly racist when the quiet part is spoken out loud.
+Pro-AA people believe that the only way blacks and Hispanics can achieve a Harvard education is if they are given preferential treatment and access.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-good-images-social-justice" class="outline-2">
+<h2 id="good-images-social-justice"><span class="section-number-2">4.</span> Good Memes and Graphs Relating To &ldquo;Social Justice&rdquo;</h2>
+<div class="outline-text-2" id="text-good-images-social-justice">
+
+<div id="org4e4d1c3" class="figure">
+<p><img src="./images/leftist-guide-to-racism.jpg" alt="leftist-guide-to-racism.jpg" />
+</p>
+</div>
+
+
+<div id="org6f9b43d" class="figure">
+<p><img src="./images/dooku.jpg" alt="dooku.jpg" />
+</p>
+</div>
+
+
+<div id="org5ddc899" class="figure">
+<p><img src="./images/understanding-left-wing-bullshit.png" alt="understanding-left-wing-bullshit.png" width="600px" />
+</p>
+</div>
+
+
+<div id="orgab736e4" class="figure">
+<p><img src="./images/circle-of-diversity-end-game.jpg" alt="circle-of-diversity-end-game.jpg" width="500px" />
+</p>
+</div>
+
+
+<div id="org9d3f155" class="figure">
+<p><img src="./images/medias-focus-on-interracial-crime-statistics.jpg" alt="medias-focus-on-interracial-crime-statistics.jpg" width="500px" />
+</p>
+</div>
+
+<p>
+<a href="https://thewaywardaxolotl.blogspot.com/2016/02/black-history.html">Black History: Africa Largely Benefitted From European Colonization More Than It Suffered</a>.
+</p>
+
+
+<div id="orgf03944b" class="figure">
+<p><img src="./images/population-of-africa-graph.jpg" alt="population-of-africa-graph.jpg" />
+</p>
+</div>
+
+
+<div id="orge0ce310" class="figure">
+<p><img src="./images/africa-too-many-ethnicities-to-partition.jpg" alt="africa-too-many-ethnicities-to-partition.jpg" width="500px" />
+</p>
+</div>
+
+<p>
+The borders of Africa are blamed for separating so many ethnicities, religions, languages, etc across Africa by country borders. But at the same time, the leftist humanists are strongly in favor of some sort of diverse, multi-ethnic utopia where all people of all races live in harmony and prosperity with each other. If they believe that that would be both possible and favorable, then why do they still blame the way the borders of Africa were drawn for separating various demographics of people between state lines?
+</p>
+
+
+<div id="org7eba621" class="figure">
+<p><img src="./images/what-if-black-countries.jpg" alt="what-if-black-countries.jpg" />
+</p>
+</div>
+
+<p>
+There are some things to nitpick about this image, but it&rsquo;s still a good meme:
+</p>
+<ul class="org-ul">
+<li>Ethiopia did get invaded and arguably colonized by Fascist Italy during WWII, although it probably wasn&rsquo;t long or brutal enough to significantly affect the country&rsquo;s development. Ethiopia did avoid colonization during the Age of Colonization.</li>
+<li>The photos in the meme are obviously cherry-picked, but they are still presumably from the titled countries nonetheless.</li>
+<li>The people running the Haitian government are mulattoes, not completely black. The Haitian Revolution was the most successful slave uprising in history though.</li>
+<li>Haiti is vulnerable to earthquakes and hurricanes, so the state of the country is partially attributed to environmental factors. However:
+<ul class="org-ul">
+<li>Taiwan deals with typhoons and earthquakes constantly and its completely fine.</li>
+<li>Sri Lanka deals with droughts, cyclones, landslides, earthquakes, etc and its completely fine.</li>
+<li>Parts of the United States which face a lot more much stronger natural disasters, stay (almost) completely unharmed when they happen, in large part because the country has better infrastructure.</li>
+<li>Hawaii deals with many more earthquakes and hurricanes than Haiti plus having many active volcanoes, is almost the exact same size as Haiti, has 10 times less people than Haiti, and is around 4 times farther away from America than Haiti is (America is the closest significant landmass with people on it to Hawaii while Haiti literally shares a landmass with the Dominican Republic).</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-thoughts-on-trannies" class="outline-2">
+<h2 id="thoughts-on-trannies"><span class="section-number-2">5.</span> Thoughts On Transgender People</h2>
+<div class="outline-text-2" id="text-thoughts-on-trannies">
+</div>
+<div id="outline-container-important-distinctions-trannies" class="outline-3">
+<h3 id="important-distinctions-trannies"><span class="section-number-3">5.1.</span> Important Distinctions To Make Regarding Transgender People</h3>
+<div class="outline-text-3" id="text-important-distinctions-trannies">
+<ul class="org-ul">
+<li>Trans women are not women, and trans men are not men. This fact is true and will always no matter how many surgeries, hormones, or therapy a person receives.</li>
+<li>The best and most non-controversial way to define &ldquo;woman&rdquo; is via genetics. In mammals, the <a href="https://en.wikipedia.org/wiki/Y_chromosome">Y chromosome contains the gene SRY</a>, which triggers male development.
+<ul class="org-ul">
+<li>A woman is an adult human female, who does not have a Y chromosome that contains the gene SRY. It&rsquo;s that simple.</li>
+</ul></li>
+<li><a href="https://en.wikipedia.org/wiki/Gender_dysphoria">Gender dysphoria</a> is maladaptive, and it is classified as a mental disorder according to the DSM-5. Its occurrence in the modern era is likely yet another negative consequence of modern civilization, technology, and evolutionary mismatch.</li>
+<li><a href="https://en.wikipedia.org/wiki/Gender_dysphoria_in_children">Early-onset gender dysphoria</a> should be distinguished from late-onset gender dysphoria.</li>
+<li>There are two groups that we need to separate, body dysmorphia vs gender dysmorphia. Neither side cares to do this for political reasons.
+<ul class="org-ul">
+<li>Conservatives want to equate the increased number of kids that only want to change how they outwardly identify (gender dysmorphia) with the still tiny number who want medical treatment (body dysmorphia).</li>
+<li>Progressives are scared to differentiate the two because they might get canceled etc for trying to divide the movement etc.</li>
+</ul></li>
+<li>LGB (drop the T) should be popularized as an acronym, because being gay or bisexual is not the same as being transgender.</li>
+<li>Intersex people are to transgender people as albino people are to white people. They are completely different things. Bringing up intersex people as an excuse for multiple sexes existing is just a Red Herring Fallacy.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-medical-treatment-for-trannies" class="outline-3">
+<h3 id="medical-treatment-for-trannies"><span class="section-number-3">5.2.</span> Regarding The Medical Treatment Of Gender Dysphoria, Identity, And Transgender People</h3>
+<div class="outline-text-3" id="text-medical-treatment-for-trannies">
+<ul class="org-ul">
+<li>The medical field should be focusing on how to treat gender dysphoria (i.e. to cure it; to make it go away), not focus on affirming the illness.</li>
+<li>Trans people may feel that gender reassignment surgeries, hormonal therapies, etc may help them feel better, but I would like to see some more long-term studies on this. There aren&rsquo;t many out there since trans-people are a recent phenomenon with not a lot of people to study.</li>
+<li>The long-term effects of puberty-blockers, hormonal therapies, sex reassignment surgeries, etc are still very unknown and dangerous (especially for children), and yet they&rsquo;re becoming more common anyway due to leftist ideology and big pharma.</li>
+<li>It could be that some transgender people choose to transition because they want attention and/or because they&rsquo;re bored because they&rsquo;re not able to go through the <a href="./industrial-society-and-its-future-manifesto.html#power-process">power process</a> in today&rsquo;s world.
+<ul class="org-ul">
+<li>Some people who transition due to late-onset gender dysphoria are motivated to transition in part because it&rsquo;s a fetish for them.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-preferred-pronouns-are-absurd" class="outline-3">
+<h3 id="preferred-pronouns-are-absurd"><span class="section-number-3">5.3.</span> Preferred Pronouns Are Absurd</h3>
+<div class="outline-text-3" id="text-preferred-pronouns-are-absurd">
+<ul class="org-ul">
+<li>Pronouns are supposed to make speaking more convenient. Forcing people to remember everybody&rsquo;s pronouns makes them inconvenient, which defeats the purpose of using pronouns.</li>
+<li>The only reason all this pronoun nonsense has any traction is because it&rsquo;s imposed from the top down. TRAs may argue that language changes and evolves, and so adding made-up pronouns shouldn&rsquo;t be an issue, but the problem with this argument is that the language change is not organic or natural in this case, hence why it <i>is</i> an issue. It&rsquo;s being forced on people against their common sense (and self-preservation), and people face consequences if they fail to submit to their rules.</li>
+<li>Even if we do use someone&rsquo;s preferred pronouns, <a href="https://www.reddit.com/r/Conservative/comments/14j0141/upset_with_the_accuracy/">they might still get upset anyway</a>.</li>
+<li>If you have 30 people in a room and only one or two (or zero) have &rsquo;preferred pronouns,&rsquo; making it mandatory for everyone to announce their pronouns during group introductions is both tokenistic and a huge time-waster.</li>
+<li>Even among strangers, group introductions are annoying and unproductive as hell, no one remembers anything and most people aren&rsquo;t even trying to pay attention.</li>
+<li>How often do people hear their own pronouns anyway? If you&rsquo;re in the room to hear them, it&rsquo;s usually just &ldquo;you&rdquo;. Requiring people to use preferred pronouns requires third parties to police what people say on the trans-person&rsquo;s behalf. Why should people care how others describe them when they aren&rsquo;t there?</li>
+<li>If an employer is hiring people and they see a list of pronouns on an applicant&rsquo;s resume, they are wise to toss the resume and moving on. It&rsquo;s a red flag that such people can and will play the identity card at the slightest inconvenience, and that their company is guaranteed to lose when the lawsuit comes, even if no laws were broken and no harm was caused.</li>
+<li>The &rsquo;inclusive&rsquo; language were females are called &rsquo;people who menstruate, &rsquo;menstruators&rsquo;, &rsquo;people with vulvas&rsquo;, etc is arguably dehumanizing and demeaning, although <a href="https://www.menstrual-matters.com/maths-people/">I guess there are some arguably good reasons for using this language</a>.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-laws-and-social-rules-for-trannies" class="outline-3">
+<h3 id="laws-and-social-rules-for-trannies"><span class="section-number-3">5.4.</span> Thoughts On Laws And Social Rules Regarding Transgender People</h3>
+<div class="outline-text-3" id="text-laws-and-social-rules-for-trannies">
+<ul class="org-ul">
+<li>Trans people will never go away, unless governments make it illegal for people to get trans surgeries, hormonal &ldquo;treatments&rdquo;, etc.</li>
+<li>People should be required to use the restroom designed for their urinary tracts.</li>
+<li>It should be illegal for puberty-blockers, hormonal therapies, sex reassignment surgeries, etc to be given to children who are not legal adults. Note that I think <a href="./age-of-adulthood.html">society should reconsider the age of adulthood</a>, although it wouldn&rsquo;t be that much different.</li>
+<li>Trans women should be forbidden from being able to play in women&rsquo;s sports because even if they take hormone therapies and surgeries to make them more similar to women, they will still have an unfair biological advantage against them that enables them to win competitions in women&rsquo;s sports. If trans women want to play in athletic sports competitions, then they must compete in men&rsquo;s sports instead.
+<ul class="org-ul">
+<li>I&rsquo;m not even saying that trans women should be forbidden from playing in any sports at all. I&rsquo;m just saying that they should compete in the same competitions meant for their biological sex.</li>
+</ul></li>
+<li>Trans people who won&rsquo;t date other trans people make up a minority of trans people, but they are still hypocrites. I&rsquo;m not sure if I can fully blame them though if having gender dysphoria is beyond their control though.</li>
+<li>Every trans person should disclose that they are trans before going on a date with someone. Not just because it&rsquo;s lying/unethical for them to not do so, but also because it&rsquo;s in the interest of their own personal safety (they wouldn&rsquo;t to piss an violent or unstable person off by lying to them).</li>
+<li>Society&rsquo;s (and especially leftists&rsquo;) obsession with gender identity is yet another instance of modern world&rsquo;s denial of <a href="./index.html#bio-realism">biological realism</a>.</li>
+<li>The obsession with gender identity takes away from focusing on more important problems, like suicidal problems, economic problems, overpopulation, etc.</li>
+<li>Trans people deserve the same rights and respect that everybody else has.
+<ul class="org-ul">
+<li>In practice though, this often doesn&rsquo;t happen because they often look ugly, they can&rsquo;t fully pass as the sex and gender that they&rsquo;re trying to present as, and people also dislike them for redirecting so much of the public&rsquo;s attention, culture, and politics.</li>
+<li>Even if this is the case, that is still not a good reason to deny transgender people respect and decency when they&rsquo;re minding their own business.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Zero Contradictions</p>
+<p class="date">Created: 2023-07-10 Mon 06:04</p>
+</div>
+</body>
+</html>

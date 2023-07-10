@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-07-10 Mon 06:03 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Programming Project Ideas</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Programming Project Ideas</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#CS-todo-list">1. Tasks For Improving Computer Science Knowledge</a>
+<ul>
+<li><a href="#orgc685e76">1.1. MIT OCW Courses To Take</a>
+<ul>
+<li><a href="#org89353d5">1.1.1. Programming Languages And Algorithms</a></li>
+<li><a href="#org885eaf5">1.1.2. Natural Language Processing &amp; Artificial Intelligence Courses</a></li>
+<li><a href="#org1c6a884">1.1.3. Other Computer Science Courses</a></li>
+<li><a href="#orgd06a59e">1.1.4. Relevant Course Descriptions</a></li>
+</ul>
+</li>
+<li><a href="#org3976f63">1.2. Optional</a></li>
+</ul>
+</li>
+<li><a href="#command-shell">2. Finishing CS253 P7 Smash Shell</a>
+<ul>
+<li><a href="#orgc0b175a">2.1. CS253 P7 Smash To-Do&rsquo;s:</a></li>
+</ul>
+</li>
+<li><a href="#org9f5f8da">3. Todo List Written Before I Abandoned Hopes Of Becoming A Software Engineer / Computer Scientist As First Job Out Of College</a>
+<ul>
+<li><a href="#org97c9e69">3.1. Reasons Why Software Development May Not Be The Right Job For Me</a></li>
+</ul>
+</li>
+<li><a href="#personal-programming-project-ideas">4. Personal Programming Project Ideas</a></li>
+<li><a href="#tasks-for-improving-emacs">5. Emacs Lisp Programming Tasks for Improving Emacs</a>
+<ul>
+<li><a href="#changes-to-make-to-dired">5.1. Changes That I Want To Make To Dired</a></li>
+</ul>
+</li>
+<li><a href="#things-to-report-or-program-in-xfce">6. Things To Report Or Program In Xfce</a></li>
+<li><a href="#misc-programming-notes">7. Programming Notes To Record Somewhere</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-CS-todo-list" class="outline-2">
+<h2 id="CS-todo-list"><span class="section-number-2">1.</span> Tasks For Improving Computer Science Knowledge</h2>
+<div class="outline-text-2" id="text-CS-todo-list">
+<ul class="org-ul">
+<li>Create small Python programs.</li>
+<li>&ldquo;Mathematical Methods for Modeling Language Phonology&rdquo; Video (using Manim Python library) For Summer 2023 Math Exposition?
+<ul class="org-ul">
+<li>Create a gif in Python and Manim to illustrate what the next overpopulation crisis will look like, instead of what cornucopians think it would look like. display it in overpopulation.org section #next-overpop-crisis</li>
+</ul></li>
+<li>MIT OCW Course 18.404: Theory of Computation.</li>
+<li>Read: Computer Organization And Design: The Hardware-Software Interface</li>
+<li>Read: Computer Architecture: Quantitative Approach</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>MIT OCW Course 6.1010: Fundamentals of Programming (6.009).</li>
+<li>MIT OCW Course 6.4100: Artificial Intelligence (6.034).</li>
+<li>MIT OCW Course 6.3900: Machine Learning (6.036).
+<ul class="org-ul">
+<li>Complete MATH 254 Workbook.</li>
+</ul></li>
+<li>MIT OCW Course 6.1210: Introduction to Algorithms (6.006).
+<ul class="org-ul">
+<li>Learn how to write pseudo-code.</li>
+<li>Learn runtimes and algorithms for CS321 data structures.</li>
+</ul></li>
+<li>MIT OCW Course 6.1220: Design and Analysis of Algorithms [J] (6.046).</li>
+<li>MIT OCW Course 6.1910: Computation Structures (6.004).</li>
+<li>MIT OCW Course 6.1100: Computer Language Engineering (Programming Languages?).
+<ul class="org-ul">
+<li>MIT OCW Course 6.1910: Computation Structures (6.004).</li>
+</ul></li>
+<li>Natural Language Processing.</li>
+<li>Acquire the same knowledge taught in a CS230 Ethical Issues in Computing course.</li>
+<li>Develop Emacs programs, modes, tweaks, etc for customizing your Emacs setup.</li>
+<li>Contribute your desired changes to Xfce.</li>
+<li>Create the more advanced programming projects that you&rsquo;ve been wanting to develop.</li>
+<li>Apply for a computer science internship / job, preferably in computational linguistics, when the time is right:
+<ul class="org-ul">
+<li>You want/need to move on from your current part-time job.</li>
+<li>You know that you are qualified enough to get such a job, or at least a related job that would be better than the one you have now.</li>
+<li>You have completed everything or almost everything on this list, and you know for certain that you are ready to work as a full-time computer scientist, software developer, and/or computational linguist. If you have done most of the above, then you should definitely email the BSU CS Department right away and ask them to start emailing you CS internship offers for any employers or leads who might hire you.</li>
+</ul></li>
+</ul>
+</div>
+
+<div id="outline-container-orgc685e76" class="outline-3">
+<h3 id="orgc685e76"><span class="section-number-3">1.1.</span> MIT OCW Courses To Take</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>18.404: Theory of Computation</li>
+<li>6.1010: Fundamentals of Programming (6.009)</li>
+<li>6.1210: Introduction to Algorithms (6.006)</li>
+<li>6.1910: Computation Structures (6.004)
+<ul class="org-ul">
+<li>6.1900: Introduction to Low-level Programming in C and Assembly (6.0004)</li>
+</ul></li>
+<li>6.3900: Machine Learning (6.036)</li>
+<li>6.4100: Artificial Intelligence (6.036)</li>
+<li>6.9500: Introduction to MATLAB (6.057)</li>
+</ul>
+</div>
+
+<div id="outline-container-org89353d5" class="outline-4">
+<h4 id="org89353d5"><span class="section-number-4">1.1.1.</span> Programming Languages And Algorithms</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<ul class="org-ul">
+<li>6.1100: Computer Language Engineering
+<ul class="org-ul">
+<li>6.1910: Computation Structures (6.004)</li>
+</ul></li>
+<li>6.1120: Dynamic Computer Language Engineering
+<ul class="org-ul">
+<li>6.1020: Elements of Software Construction</li>
+</ul></li>
+<li>6.1220: Design and Analysis of Algorithms [J] (6.046)
+<ul class="org-ul">
+<li>6.1210: Introduction to Algorithms (6.006)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org885eaf5" class="outline-4">
+<h4 id="org885eaf5"><span class="section-number-4">1.1.2.</span> Natural Language Processing &amp; Artificial Intelligence Courses</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<ul class="org-ul">
+<li>6.3000: Signal Processing (6.003)</li>
+<li>6.8610 / 6.6811: Quantitative Methods for Natural Language Processing
+<ul class="org-ul">
+<li>6.3900: Machine Learning (6.036)</li>
+</ul></li>
+<li>6.8620[J]: Spoken Language Processing (6.345)
+<ul class="org-ul">
+<li>6.3000: Signal Processing (6.003)</li>
+</ul></li>
+<li>6.8630[J] Natural Language and the Computer Representation of Knowledge
+<ul class="org-ul">
+<li>6.4100 Artificial Intelligence (6.036)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1c6a884" class="outline-4">
+<h4 id="org1c6a884"><span class="section-number-4">1.1.3.</span> Other Computer Science Courses</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<ul class="org-ul">
+<li>6.5080 / 6.5081: Multi-Core Programming (6.836 / 6.816)
+<ul class="org-ul">
+<li>6.1210: Introduction to Algorithms (6.006)</li>
+</ul></li>
+<li>6.5831: Database Systems (6.814)
+<ul class="org-ul">
+<li>6.1800: Computer Systems Engineering (6.033)</li>
+</ul></li>
+<li>6.5120: Formal Reasoning About Programs
+<ul class="org-ul">
+<li>6.1020: Elements of Software Construction</li>
+</ul></li>
+<li>6.1800: Computer Systems Engineering (6.033)
+<ul class="org-ul">
+<li>6.1910: Computation Structures (6.004)
+<ul class="org-ul">
+<li>6.1900: Introduction to Low-level Programming in C and Assembly</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd06a59e" class="outline-4">
+<h4 id="orgd06a59e"><span class="section-number-4">1.1.4.</span> Relevant Course Descriptions</h4>
+<div class="outline-text-4" id="text-1-1-4">
+<p>
+6.1010 Fundamentals of Programming (6.009)
+Introduces fundamental concepts of programming. Designed to develop skills in applying basic methods from programming languages to abstract problems. Topics include programming and Python basics, computational concepts, software engineering, algorithmic techniques, data types, and recursion.  Lab component consists of software design, construction, and implementation of design. Enrollment may be limited.
+</p>
+
+<p>
+Further Info: <a href="http://catalog.mit.edu/subjects/6/">http://catalog.mit.edu/subjects/6/</a>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3976f63" class="outline-3">
+<h3 id="org3976f63"><span class="section-number-3">1.2.</span> Optional</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>Continue learning computer science with Zybooks, GeeksForGeeks, or MIT OpenCourseware?</li>
+<li>Read Python for Computational Linguistics textbook(s)?</li>
+<li>Read Python for Data Science Textbook?</li>
+<li>Learn how to use Python libraries that are relevant to doing data science and/or computational linguistics.</li>
+<li>Finish Filling Out This Job Application Draft For A Job Doing Computational Linguistics: <a href="https://uhg.taleo.net/careersection/10000/mysubmissions.ftl?lang=en">https://uhg.taleo.net/careersection/10000/mysubmissions.ftl?lang=en</a></li>
+<li>Determine What Compensation You Should Look For In Jobs; Research How To Determine How Much Compensation And What Kinds You Should Ask Prospective Employers For</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-command-shell" class="outline-2">
+<h2 id="command-shell"><span class="section-number-2">2.</span> Finishing CS253 P7 Smash Shell</h2>
+<div class="outline-text-2" id="text-command-shell">
+<p>
+Review Everything You&rsquo;ve Learned In CS253
+Review C Library Functions (Since They Are Used In P7 Final Project)
+Read P7 Project Assignment Description PDF
+Review Git-Notes; Review CSHU250 As Necessary; View Ohshitgit.Com If You Ever Mess Something Up
+Use Magit/VC To Sync The Project&rsquo;s Contents On Github; Practice Using Git/Magit
+Use Project Minor Mode And Keybindings To Help Manage Project
+</p>
+
+<p>
+COMPLETE CS253 P7 SMASH ASSIGNMENT
+</p>
+<ul class="org-ul">
+<li>HOW TO DO AUTOCOMPLETION WHILE TYPING SOMETHING OUT IN EMACS?</li>
+<li>REVIEW ASSIGNMENT DESCRIPTION.</li>
+<li>REVIEW HOW TO PROGRAM IN C.</li>
+<li>PRACTICE USING GDB and GUD FOR DEBUGGING YOUR C CODE.</li>
+<li>USE C AND BREAKPOINTS TO DEBUG YOUR SOURCE CODE.</li>
+<li>USE THE MEMORY LEAK DEBUGGER, IF NECESSARY.</li>
+<li>REVIEW GIT</li>
+<li>LEARN MAGIT</li>
+</ul>
+</div>
+
+<div id="outline-container-orgc0b175a" class="outline-3">
+<h3 id="orgc0b175a"><span class="section-number-3">2.1.</span> CS253 P7 Smash To-Do&rsquo;s:</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>Exclude arguments from each matrix command.</li>
+<li>File redirection pipes.</li>
+<li>Implement ctrl-c signal.</li>
+<li>Complete other tasks listed in the project description.</li>
+</ul>
+<p>
+What options are there for programming that won&rsquo;t have to deal with OOP libraries and APIs?
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9f5f8da" class="outline-2">
+<h2 id="org9f5f8da"><span class="section-number-2">3.</span> Todo List Written Before I Abandoned Hopes Of Becoming A Software Engineer / Computer Scientist As First Job Out Of College</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+READ RUST AND SUCH TABS
+WOULD KNOWING SQL BE ENJOYABLE ENOUGH AND MAKE ME SKILLED ENOUGH TO GET A DECENTLY HIGH-PAYING JOB?
+READ LEARN PROGRAMMING TABS
+FIGURE OUT BEST WAY TO GAIN EXPERIENCE CODING
+READ PYTHON BEGINNER&rsquo;S PROJECT TABS
+START USING VISUAL STUDIO CODIUM?
+LOOK FOR UNCANNY THOUGHT&rsquo;S ORIGINAL YOUTUBE VIDEO LINKS ON VISUAL STUDIO CODIUM; WATCH THEM
+SETUP VIM KEYBINDINGS AND OTHER SETTINGS
+REMEMBER: YOU CAN ALWAYS LEARN TO PROGRAM IN VISUAL STUDIO CODIUM, AND ONLY SWITCH TO EMACS LATER IF YOU CAN FIGURE OUT HOW TO MAKE IT WORK.
+BROWSE <a href="https://discord.com/channels/334891772696330241/973598253620789308">#resume-review OF CS-CAREER-QUESTIONS CHANNEL</a> TO GET A SENSE OF WHAT YOU&rsquo;RE GOING UP AGAINST.
+TRY TO SETUP ORG-ROAM; CREATE BELIEF NETWORK DIAGRAMS?
+SETUP EMACS FOR DOING THE BEGINNER C / PYTHON PROGRAMMING PROJECTS
+COMPLETE BEGINNER PYTHON PROGRAMMING PROJECTS
+WHAT TO DO AFTER THE BEGINNER PYTHON PROGRAMMING PROJECTS? WHAT&rsquo;S YOUR PATH AND PLAN TO BECOME PROFICIENT IN MACHINE LEARNING?
+REORGANIZE CODING BOOKMARKS
+MAKE A PLAN FOR LEARNING PYTHON TO THE POINT THAT YOU CAN CREATE MACHINE LEARNING PROJECTS IN IT
+</p>
+</div>
+
+<div id="outline-container-org97c9e69" class="outline-3">
+<h3 id="org97c9e69"><span class="section-number-3">3.1.</span> Reasons Why Software Development May Not Be The Right Job For Me</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Maybe I should write some introspection about why programming / software development may not be the right job for me, just to put the question to rest?
+</p>
+<ul class="org-ul">
+<li>Maybe I only like the idea of programming and what it could potentially do, but I don&rsquo;t actually like doing it myself.</li>
+<li>Algorithms seem to bore me instead of interesting me.</li>
+<li>I can&rsquo;t seem to find programming to be as enjoyable as math or linguistics.</li>
+<li>I like philosophy and problem solving, but it just seems unappealing to me to look at code and figure out how it works.</li>
+<li>I am very conscientious, but programming feels like it would be too stressful for me.
+<ul class="org-ul">
+<li>Debugging?</li>
+<li>Reading through lots of stuff that I don&rsquo;t understand?</li>
+</ul></li>
+<li>It could be too hard on my eyes?</li>
+<li>Maybe I&rsquo;m too easily distracted to focus on coding, whatever it may be?</li>
+<li>I don&rsquo;t enjoy reading code?</li>
+<li>I haven&rsquo;t been able to motivate myself to program on my own for years, so why do I still think that I&rsquo;m made to do that stuff? Is that just religious instruction?</li>
+<li>How do I come to terms with the idea that I just shouldn&rsquo;t do programming for a career?</li>
+<li>A lot of machine learning / data science stuff is working with particular data sets, but what if that actually bores me?
+<ul class="org-ul">
+<li>If it does bore me, then why?</li>
+</ul></li>
+<li>Since many smart people are able to program, I feel left out by not being able to do it or to able to specialize in it myself.</li>
+<li>i</li>
+<li>i</li>
+<li>i</li>
+<li>i</li>
+<li>If I want things to &ldquo;just work&rdquo; most or all the time, that might be a strong sign that software development is not right for me.</li>
+</ul>
+<p>
+If I&rsquo;m not going to do software development for a living, then what else should I do instead?
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-personal-programming-project-ideas" class="outline-2">
+<h2 id="personal-programming-project-ideas"><span class="section-number-2">4.</span> Personal Programming Project Ideas</h2>
+<div class="outline-text-2" id="text-personal-programming-project-ideas">
+<ol class="org-ol">
+<li>Design a web application / software program that could automatically count and generate syllables after specifying all the phonotactical constraints of the language, dialect, and sociolect in sufficient enough detail. This would be a worthwhile investment if there was a need to count and generate syllables for thousands of different languages, dialects, sociolects, et cetera.
+<ul class="org-ul">
+<li>What Python libraries would be needed for doing this?</li>
+</ul></li>
+<li>Build a truth table generator of some sort in various forms in python?</li>
+<li>Read through open tabs on software that uses Python, Gitlab, Emacs coding/debugging stuff,</li>
+<li>Create a gif in Python and Manim to illustrate what the next overpopulation crisis will look like, instead of what cornucopians think it would look like. display it in overpopulation.org section #next-overpop-crisis</li>
+<li>&ldquo;Mathematical Methods for Modeling Language Phonology&rdquo; Video (using Manim Python library) For Summer 2023 Math Exposition?</li>
+<li>Build an equivalent application to the p7-smash command shell in Rust?</li>
+<li>Write a Python program that retrieves data from the Ebembe Language excel workbook.</li>
+<li>Create an algorithm that figures out which abbreviations are the most intuitive, or tries to figure out how natural language speakers would abbreviate words in their languages (given their specific dialect).
+<ul class="org-ul">
+<li>Abbreviated words seem to be most intuitive when only the first syllable is used, it&rsquo;s clearly identifiable and unlikely to be ambiguous, and it typically features a distinct onset and distinct coda.</li>
+</ul></li>
+<li>Create better screenshot program for Linux, similar to the one on MacOS.</li>
+<li>Finish creating Smash in C (estimated time: 2 days).
+<ol class="org-ol">
+<li>Re-familiarize yourself with C programming language and systems programming.</li>
+<li>Re-familiarize yourself with Git; learn magit mode, vc mode, and project/projectile mode commands and keybindings until you have the basics and intermediates down from CSHU-271 (estimated time: 1-2 days)</li>
+</ol></li>
+<li>Create a Python bot for writing Wiktionary entries, using the Ebembe corpus data.
+<ol class="org-ol">
+<li>Practice using Git and Agile Development to do this task.</li>
+<li>Learn how to create neural networks using Python.</li>
+<li>Think of other Lexicography projects that use Python?: <a href="https://dictionaryapi.com/">https://dictionaryapi.com/</a></li>
+</ol></li>
+<li>Install Pi-Hole on Raspberry Pi with touchscreen monitor.</li>
+<li>Learn how to compile applications from source.</li>
+<li>How hard or feasible would it be to program hardware drivers for my ergonomic mouse?</li>
+<li>For what you want to program, it&rsquo;s probably best for you to learn Python (Manim, NLP programming libraries, easy for short programs), C (good for editing existing Linux and Xfce programs, and uses procedural programming, although APIs are cryptic), Rust (easy to program in), and Golang (rising in popularity and used many younger programmers).</li>
+<li>Learn relevant Python-SQL libraries.</li>
+<li>How to understand the task manager?</li>
+<li><p>
+Write a python program that automatically re-labels downloaded files to your filename specification standards (this should be straight-forward, as it only involves case-toggling and search-and-replace function calls); store the original filenames somewhere somehow. You can later write a program with similar functionality in Elisp or C, as a later project for those languages.
+</p>
+<ol class="org-ol">
+<li><a href="https://www.freecodecamp.org/news/python-projects-for-beginners/#bulk-file-re-namer-python-project">https://www.freecodecamp.org/news/python-projects-for-beginners/#bulk-file-re-namer-python-project</a></li>
+<li>Learn python mode commands and keybindings</li>
+</ol>
+<p>
+Question: What documentation do I read if I need to read more about how Python works and/or Python&rsquo;s software libraries? And where do I read it?
+</p></li>
+<li>Create a custom Python extension for Ulauncher.</li>
+<li>Tweak DockBarX with Python: <a href="https://github.com/M7S/dockbarx">https://github.com/M7S/dockbarx</a></li>
+<li>Python programming projects for Raspberry Pi: <a href="https://raspberrytips.com/python-projects-on-raspberry-pi/">https://raspberrytips.com/python-projects-on-raspberry-pi/</a></li>
+<li>Complete CS 321 (Data Structures) Projects, mostly according to the specifications, but in Python instead of Java (if possible). If this is not very practical to do in Python, then find something else to do instead.</li>
+<li>Create/Train an AI algorithm and/or bot to respond to reddit posts and comments regarding people who ask questions or make arguments that assume these most common misconceptions.</li>
+<li>A data structure could then be invented to store information essential to producing and/or recognizing sounds, which could progress the field of Natural Language Processing.</li>
+<li>Edit gThumb&rsquo;s source code so that scrolling on the image will zoom in and out, instead of switching pictures in the images browser (lower panel). Perhaps you could make it toggle for this.</li>
+<li>In Okular, clicking a location in the vertical scroll bar should jump to that page/location in the pdf, not slowly scroll up until it gets to that point.</li>
+<li>Creating a tool that will automatically generate graphics similar to the ones shown in Carneades&rsquo;s Philosophy Youtube videos?</li>
+<li>Improve espeak to make it sound more human/natural? (even if this is far beyond your abilities or free time, you could still figure out what would need to be done to improve it) <a href="https://itsfoss.com/espeak-text-speech-linux/">https://itsfoss.com/espeak-text-speech-linux/</a></li>
+<li>Fine-tweaking the QMK source code for my ZSA Moonlander to do something really specific that I can&rsquo;t program with ZSA&rsquo;s Oryx Webapp.</li>
+<li>Rewrite programs written in OOP code in functional programming or Rust instead.</li>
+</ol>
+
+<p>
+Someone could potentially make a lot of money if they created a way for people to create their own blog&rsquo;s that had similar layouts to zerocontradictions.github.io.
+Any useful web browser extensions?
+</p>
+</div>
+</div>
+
+<div id="outline-container-tasks-for-improving-emacs" class="outline-2">
+<h2 id="tasks-for-improving-emacs"><span class="section-number-2">5.</span> Emacs Lisp Programming Tasks for Improving Emacs</h2>
+<div class="outline-text-2" id="text-tasks-for-improving-emacs">
+<ol class="org-ol">
+<li>ANY MACROS TO THINK OF, RECORD, AND SAVE AS FUTURE EMACS COMMANDS WITH THEIR OWN KEYBINDINGS?
+<ul class="org-ul">
+<li>Create a keybinding or macro for double-spacing or single-spacing lines within the region.</li>
+<li>SEE IF YOU CAN RECORD MACRO OR SOME OTHER SOLUTION THAT: 1. DOUBLE-SPACES, 2. SINGLE SPACES, 3. ADDED DASH-BULLETS TO A HIGHLIGHTED REGION OF TEXT</li>
+<li>IF IT DOESN&rsquo;T WORK OUT, MAYBE YOU CAN VIEW THE MACRO CODE WHILE USING EDIT-KBD-MACRO, AND WRITE EQUIVALENT ELISP CODE THAT WOULD DO THE SAME, OR ASK CHATGPT?</li>
+</ul></li>
+<li>Modify insert-from-kill-ring.el so that pressing &rsquo;q&rsquo; and &lt;enter&gt; exits that lisp program by doing nothing.</li>
+<li>Modify insert-from-kill-ring.el to display the first line from each kill-ring entry on only one line. Preceding this, the number of the kill ring entry will be displayed at the beginning of the line in the following format: ##:\t[FIRST_LINE_OF_TEXT_OF_KILL_RING_ENTRY_#]</li>
+<li>Has anyone ever considered editing the <b>info</b> pages for Emacs so that they are displayed with org-mode instead, thus eliminating one less set of keybindings for learning, and also so that the folding headers functionality of org-mode can be gained when reading the <b>info</b> documentation? It shouldn&rsquo;t be too difficult to create a parser that can edit all the <b>info</b> file to make them display in org-mode instead, right?
+<ul class="org-ul">
+<li>Or maybe there&rsquo;s already packages that do this, that I don&rsquo;t know about?</li>
+</ul></li>
+<li>Modify the Emacs windows &lt;swap-buffers&gt; function to use Colemak homerow letters for swapping buffers between windows instead of Qwerty&rsquo;s homerow letters.</li>
+<li>The hybrid relative and absolute numbering should be modified. Since the main motivation and advantage for relative line numbering is to make vertical motion more efficient, there are no advantages for using it for the very top and very bottom line numbers of the screen, since &rsquo;H&rsquo; and &rsquo;L&rsquo; would both be used to navigate to those areas respectively, not numbered motion. In other words, three lines would be displaying absolute line numbers (or just two if the cursor is at the very top or very bottom line of the screen), and all other lines would display relative line numbers.</li>
+<li>The line numbering in org-mode should account for when the collapse of &ldquo;:PROPERTIES:&rdquo;, &ldquo;:CUSTOM<sub>ID</sub>:&rdquo;, and &ldquo;:END:&rdquo; affect the displayed line numbering.</li>
+<li>Create a function that can toggle whether the line numbering displayed in the left numbering column shows what lines the headers are on in the buffer, or what relative line numbers would have to be entered to navigate to those parts of the buffer, if all the sections, functions, etc remain collapsed.</li>
+<li>Maybe I want a command that will only toggle between absolute and relative numbers, instead of doom/toggle-line-numbers, which toggles between relative, absolute, and no line numbers.</li>
+<li>It would be cool if there were commands that scroll by the number of visual lines given in the prefix arguments, instead of scrolling by logical lines. This would may scrolling files much easier when long lines are wrapped around the window edge, because then you could just look at the number line and know exactly how many lines to scroll up or down without even thinking about it.</li>
+<li>Similar to the evil-everywhere package, perhaps someone could create a colemak-everywhere package/module which replaces everywhere where keys were placed to fit Qwerty homerow keys with Colemak homerow keybindings and key presses?</li>
+<li>Pressing enter while I&rsquo;m typing a bulleted list should not create a bullet that gets indented on the next line. Instead, it should just create a new bullet that is on the same level as the current one.</li>
+<li>The way how Emacs org-mode presents which text is italicized or not is not parsed correctly in cases where the slashes are before the end of the ending square bracket, [[LINK][like in this /example/]. &ldquo;Example&rdquo; should be italicized in the previous sentence, but it isn&rsquo;t, although it is italicized in HTML exports.</li>
+<li>Could I build my own major emacs mode to keep track of my own personal streaks for doing certain things everyday? Then I could be motivating myself to do goals, based on how I define them, on my own terms, and it could even have multiple streaks for different daily tasks as well as what I define to be fair and honest times when I miss a day. Does such a streak counter application exist at all? Maybe this could even be sold as some smartphone app?</li>
+<li>Create a command that can re-arrange the items, commas, and spaces within a list each time the command is executed forwards or backwards?
+<ul class="org-ul">
+<li>That said, absolute numbering should thus be used for the current line, as well as the top line on the screen and the bottom line on the screen.</li>
+</ul></li>
+<li>Create a command that only capitalizes the first word and content words, &rsquo;I&rsquo;, and any other words that should be capitalized; but not words like &rsquo;a&rsquo;, &rsquo;an,&rsquo;, &rsquo;the&rsquo;, &rsquo;to&rsquo;, et cetera. It should not affect acronyms.</li>
+<li>Configure Emacs to switch to other quote (&rsquo;&rsquo;&ldquo;&rdquo;) when % is pressed</li>
+<li>Configure minibuffer to not display certain commands and stay blank.</li>
+<li>Maybe I could create a user-defined function and command that can automatically format text to fit the requirements outlined in my standard text file formatting standards.</li>
+<li>Develop an emacs command tool that can highlight selected uses of the verb &ldquo;to be&rdquo; and its other conjugations. E-prime is probably a bad idea, but it might strengthen writing in some cases if forms of &ldquo;to be&rdquo; are rewritten to use less frequent and more creative verbs instead.</li>
+<li>Write some minor mode for typing latin text in emacs, such that macrons appear over the long vowels (when pressing the vowel key twice) and that latin text is spell checked.</li>
+<li>Typing a vowel&rsquo;s letter twice to put a macron over it, and backspacing will simply delete the macron without deleting the entire letter.</li>
+<li>It would be convenient if there was somehow even greater compatibility between PageUp and PageDown buttons in the mouse layer of the ZSA Moonlander and Ctrl+b and Ctrl+f commands for moving back and forward within Emacs buffers.
+<ul class="org-ul">
+<li>For example, I wish that it was still possible to move forward and backwards pages in Firefox using Ctrl+b and Ctrl+f. The main benefit to this is that page navigation would be improved having to switch between the base layer and the mouse layer before and after pressing PageUp and PageDown. Of course, I could also program PageUp and PageDown into the keyboard if I hold a key down or double-tap, but I would dislike the added complexity that this alternative would involve.</li>
+</ul></li>
+<li>For tasks or sequences of tasks that have to be done often (e.g. guardar y lavar los platos; lavar, secar, recuperar, guardar la ropa; hacer ejercicio, ducharse y secarse; etc), puedo crear una comanda de emacs que puede añadir cada de esas líneas a mi lista de tareas automáticamente</li>
+<li>Make the insert state the default starting state for vim after creating a new file? If the file is new, there really isn&rsquo;t anything useful to use the normal state commands on since the file is empty.</li>
+<li>When new sections are added in org-mode, emacs should automatically insert a blank newline between the sections to help separate things.
+<ul class="org-ul">
+<li>Perhaps there could even be an option to toggle this in case there are times where it is unfavorable to have a blank newline for separation.</li>
+</ul></li>
+<li>I don&rsquo;t know when this would be desired though. Maybe to keep information packed and dense, alignment of text, aesthetics, or something else?</li>
+<li>A list of English words (with nouns proceeded by &rsquo;the&rsquo;) piped through DeepL into Spanish or French could be a great way to create a text dictionary. Then you could create a program that creates a new file and places the words side by side separated by some ASCII characters of your choosing, and perhaps even footnotes after a semicolon.</li>
+<li>A command that queries dictionary entries from wiktionary.org.</li>
+<li>Create a fully functional Emacspeak module for Doom-Emacs.</li>
+<li>Create keymap containing keybindings for switching to the buffers that you use the most? (e.g. 2-todo.txt, virtues-and-long-goals.org, 5-thoughts.org, 0-new-wordstock.org, [current-project-fil-1], [current-project-fil-2], etc)? Examples: 0-new-wordstock-english.txt : &rsquo;SPC n w&rsquo; (new word), 1-vocabulario-palabras-español.txt : &rsquo;SPC p n&rsquo; (palabra nueva), oraciones-interesantes-para-examinar.txt : &rsquo;SPC o n&rsquo; (oración nueva)
+<ul class="org-ul">
+<li>QUESTION: Or would it make more sense to create bookmarks folder(s) for accessing these files?</li>
+</ul></li>
+<li>Has anyone ever created an Emacs command that will display all of someone&rsquo;s keybindings on an image of their keyboard inside an Emacs buffer? If not, would it be worth creating such a thing for my own use? I imagine thousands of other people would find such a program useful since it could help people visualize the most efficient keybindings that they could map onto their keys.</li>
+<li>Change light-blue color theme to underline current line with some sort of indicative color (similar to underwater theme), rather than highlighting current line to cyan?</li>
+<li>Display darker line number color instead of the faint gray color used in the light-blue theme.</li>
+</ol>
+</div>
+
+<div id="outline-container-changes-to-make-to-dired" class="outline-3">
+<h3 id="changes-to-make-to-dired"><span class="section-number-3">5.1.</span> Changes That I Want To Make To Dired</h3>
+<div class="outline-text-3" id="text-changes-to-make-to-dired">
+<ol class="org-ol">
+<li>Display relative line numbers in dired by default (to make vertical motion easier)</li>
+<li>When I rename files that to similar but different names, how do I stop dired from preventing me from renaming the file since it thinks I am giving it the same name?
+<ul class="org-ul">
+<li>In the suggestions, the old name appears, so when I press enter, dired thinks I am selecting the suggestion, when that&rsquo;s not what I want</li>
+</ul></li>
+<li>In dired, I wish &rsquo;gg&rsquo; and &rsquo;G&rsquo; would go to the top and bottom of every the directory files list, just as they do when editing text files. This might be resolved with evil-collection.</li>
+<li>Learn how to create symbolic links and hard links in dired.</li>
+<li>Remap the navigation keybindings in info mode so that they are exactly the same as dired-mode? This will generate less confusion.</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-things-to-report-or-program-in-xfce" class="outline-2">
+<h2 id="things-to-report-or-program-in-xfce"><span class="section-number-2">6.</span> Things To Report Or Program In Xfce</h2>
+<div class="outline-text-2" id="text-things-to-report-or-program-in-xfce">
+<ol class="org-ol">
+<li>Learn how to report issues on Gitlab.</li>
+<li>Report bug in xfce-screenshooter to xfce development team</li>
+<li>I wish that the xfce screen timeout timer would always reset upon awakening the computer from sleep/suspend mode, so that it wouldn&rsquo;t be necessary to reset it upon starting the computer again.</li>
+<li>The icons on the desktop still go offscreen when there is a monitor that is smaller than the main monitor placed to the left. This needs to be fixed.</li>
+<li>Fix topmenu panel plugin for xfce.</li>
+<li>Create a variant of the Xfce time-out plug-in that counts upward as the minutes and seconds go by (instead of downwards), and when the time is up, the panel icon flashes. The stopwatch continues counting upwards until you click on it or use some chosen keyboard command. If you need/want to work a bit longer, then you can post-pone the time-out, and it will increase the length of the break that you should take to rest your eyes, while accounting for the additional time that you postponed the upwards-counting stopwatch. This behavior makes more sense than the current Xfce time-out plugin because it won&rsquo;t block out the entire screen, will be less annoying, and it makes sense that you should want to take longer breaks that are at least several minutes long if you know that your eyes will need it, and you should take longer breaks if you have been working longer.</li>
+<li>If I&rsquo;m in XfDashboard / Mission Control / Task View, it would be convenient if I could just press one of the numbers on the keyboard to switch to that desktop</li>
+<li>It would be really cool if you could just press a keyboard shortcut to switch two maximized windows between two different monitors.</li>
+<li>I wish that the windows wouldn&rsquo;t automatically shift to the left monitor when I plug in my second monitor. I also wish that the windows would return to their original positions on the main monitor when the second monitor is unplugged.</li>
+<li>Would it be possible to place the icons from HaikuOS into my main OS? It is possible that they might be the best icons I have ever seen.</li>
+<li>I wish that Thunar would have the name fields be longer by default, without me having to readjust that column&rsquo;s width when resizing the window width.</li>
+<li>I wish that Thunar would have a viewing option similar to the column view on MacOS Finder how folders would be displayed in one column, and the next column(s) would display the contents of the selected folder(s).</li>
+<li>I wish that Ulauncher and Xfce&rsquo;s app launcher would both know how to find and execute app image files.</li>
+<li>I think I would prefer xfce to display the file renaming textbox inside the file manager&rsquo;s window itself on the line of the file to be renamed, instead of opening a new pop-up window that will disappear (in only a few seconds if it&rsquo;s a quick rename, which probably makes things a bit more annoying).</li>
+<li>It would be nice if xfce gave the option to eject removable media whose icons are displayed on the Desktop.</li>
+<li>I also wish that Xfce would give the option to select a set of files, right click, and the option to place all the files in a new folder appears in the right-click menu.</li>
+<li>I wish Xfce would show the volume meter when I&rsquo;m adjusting the volume, but it&rsquo;s annoying, redundant, and unnecessary/unhelpful to display previous changes in the system volume in the notification center&rsquo;s list of notifications.
+<ul class="org-ul">
+<li>I would also rather have the notification bell icon inside the panel to display not display a red dot every time there&rsquo;s a new notification. It distracts me.
+<ul class="org-ul">
+<li>But currently, the only way to get rid of it is to turn on &ldquo;Do Not Disturb&rdquo;, which also distracts me since the notification bell icon is crossed out.</li>
+</ul></li>
+</ul></li>
+<li>From now on, you&rsquo;ll have to navigate your files using file manager on the external hard drive partition that stores backups of your files by date and time, instead of using the CronoPete GUI for retrieving files since it is glitchy and doesn&rsquo;t work. (2022 October 28)</li>
+<li>Something to program in Xfce in the future?: I wish &rsquo;SUPER + 1/2/3/4/&#x2026;&rsquo; would switch to that numbered tab in the file manager and maybe just all apps in general</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-misc-programming-notes" class="outline-2">
+<h2 id="misc-programming-notes"><span class="section-number-2">7.</span> Programming Notes To Record Somewhere</h2>
+<div class="outline-text-2" id="text-misc-programming-notes">
+<p>
+Most programming is just explaining to a dumb machine what to do&#x2026;
+You could classify software as solving the problem of the &ldquo;what&rdquo; and the hardware solving the problem of &ldquo;how&rdquo;&#x2026;
+Though it is a continual thing. Both software and hardware (tho I would imagine more so for software especially in like high end games) have a number of layers where each is responsible for telling lower ones what to do&#x2026;&#x2026;
+On the second point&#x2026; No, cos hardware does not make you only make one kind of app&#x2026; There are millions of things you could do (as a programmer) and describe them in another million ways (not including multiple programming languages)
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Zero Contradictions</p>
+<p class="date">Created: 2023-07-10 Mon 06:03</p>
+</div>
+</body>
+</html>

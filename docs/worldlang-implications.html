@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-07-10 Mon 06:04 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Implications Of Adopting A Worldlang</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="description" content="The effects and implications of adopting an Universal Auxiliary Language (worldlang), and why it would be a better solution than universal translators." />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="../blog-posts.css" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="./index.html"> UP </a>
+ |
+ <a accesskey="H" href="./index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">The Implications Of Adopting A Worldlang</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#intro">1. What Is A Worldwide Auxiliary Language (Worldlang)?</a></li>
+<li><a href="#viable-candidates">2. Viable, Well-Constructed Candidates For A Worldlang</a></li>
+<li><a href="#consequences-summary">3. The Consequences And Implications Of Adopting A Worldlang</a></li>
+<li><a href="#why-technology-is-inferior-solution">4. Why Universal Translators Are An Inferior Solution</a></li>
+<li><a href="#effects-on-other-languages">5. To What Extent Would Other Languages Die Off Because Of This?</a></li>
+<li><a href="#wont-break-into-different-dialects">6. Why A Worldlang Is Unlikely To Break Into Different Dialects Or Different Languages</a>
+<ul>
+<li><a href="#resistance-to-language-change">6.1. Ensuring Resistance To Language Change</a></li>
+</ul>
+</li>
+<li><a href="#modeling-populations-with-DEs">7. Modeling Populations Of Language Speakers Using Differential Equations</a></li>
+<li><a href="#phonetic-writing-systems">8. Regarding Phonetic Writing Systems</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-intro" class="outline-2">
+<h2 id="intro"><span class="section-number-2">1.</span> What Is A Worldwide Auxiliary Language (Worldlang)?</h2>
+<div class="outline-text-2" id="text-intro">
+<dl class="org-dl">
+<dt>Lingua Franca</dt><dd>A <a href="https://en.wikipedia.org/wiki/Lingua_franca">Lingua Franca</a> is a language that people who do not share the same native language use to communicate with each other, particularly when it is a third language that is distinct from both of the speakers&rsquo; native languages.</dd>
+<dt>Conlang</dt><dd>A <a href="https://en.wikipedia.org/wiki/Conlang">Conlang</a> is a language whose phonology, grammar, and vocabulary, instead of having developed naturally, are consciously devised for some purpose.</dd>
+<dt>Worldlang</dt><dd>A <a href="https://en.wikipedia.org/wiki/International_auxiliary_language">Worldwide Auxiliary Language (Worldlang)</a> is a conlang that was created to facilitate communication between people who have different native languages. Worldlangs are typically designed to have phonology, grammar, and vocabulary that is easy to learn by second language (SL) learners.</dd>
+<dt>International Auxiliary Language (IAL)</dt><dd>The same thing as a worldlang. This is more the traditional and historical term used. It&rsquo;s also less commonly called a Universal Auxiliary Language (UAL).</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-viable-candidates" class="outline-2">
+<h2 id="viable-candidates"><span class="section-number-2">2.</span> Viable, Well-Constructed Candidates For A Worldlang</h2>
+<div class="outline-text-2" id="text-viable-candidates">
+<ul class="org-ul">
+<li><a href="https://www.pandunia.info/eng/">Pandunia</a> is a worldlang that has been designed by Risto Kupsala since 2007.</li>
+<li><a href="https://www.globasa.net/eng">Globasa</a>: is a worldlang that has been designed by Hector Ortega since 2017.</li>
+</ul>
+<p>
+Both languages have great similarities in phonology, grammar, and vocabulary, and it is debatable which is better. However, Globasa has a larger community and more texts and translations.
+</p>
+
+<hr />
+<p>
+Historical Lingua Francas:
+</p>
+<ul class="org-ul">
+<li>Spoken Language Lingua Franca: Latin, French, English, thousands of others.</li>
+<li>Written Language Lingua Franca: <a href="https://en.wikipedia.org/wiki/Classical_Chinese#Historical_use">Classical Chinese Characters</a>.</li>
+<li>Sign Language Lingua Franca: <a href="https://en.wikipedia.org/wiki/Plains_Indian_Sign_Language">Great Plains Amerindian Sign Language</a>.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-consequences-summary" class="outline-2">
+<h2 id="consequences-summary"><span class="section-number-2">3.</span> The Consequences And Implications Of Adopting A Worldlang</h2>
+<div class="outline-text-2" id="text-consequences-summary">
+<ol class="org-ol">
+<li>There would be more international and intercultural communication than ever before.
+<ul class="org-ul">
+<li>The main people that would be excluded from the worldlang would be uncontacted humans (explain), and humans that are deaf or hard or hearing (they would be able to read it, but not speak it)</li>
+<li>Sign languages would probably be unaffected by a spoken worldlang because sign languages offer advantages to deaf and hard-of-hearing people that a spoken worldlang could never offer.</li>
+</ul></li>
+<li>There would be fewer translation costs for companies and regimes around the world, so there would be money saved in those areas and a significantly lower need for interpreters.</li>
+<li>It would be easier and cheaper to publish books, websites, movies, videogames, and other media to a wider international audience.
+<ul class="org-ul">
+<li>This might lead to fewer media being published in natural languages.</li>
+</ul></li>
+<li>Linguistic minorities would be less economically disadvantaged, less educationally disadvantaged, and less isolated from the rest of the world.
+<ul class="org-ul">
+<li>Hopefully it would also discourage discrimination against minorities.</li>
+</ul></li>
+<li>It would cause the world to have a much higher number of interracial marriages and mixed-race children, thus causing new races to appear while the populations of the original human races decline in population faster than without a worldlang.
+<ul class="org-ul">
+<li>For further information on the effects that would result from this, see: <a href="./race-FAQs.html#race-mixing">The Effects of Race-Mixing on Humans</a>.</li>
+</ul></li>
+<li>Minority and endangered languages might become more endangered or climb closer towards extinction if the worldlang becomes the dominant language (depending on how the worldlang is implemented).
+<ul class="org-ul">
+<li>The only minority languages that would almost certainly not be threatened by a spoken worldlang would be sign languages and uncontacted human languages.</li>
+</ul></li>
+<li>It might increase literacy rates for speakers of languages that have writing systems that are difficult to learn, or no writing systems at all.</li>
+<li>Languages from all over the world would likely borrow more vocabulary and adopt similar syntactic structures from the worldlang, thus making languages more similar to each other. This would be akin to how so many languages are borrowing from English.</li>
+<li>Conversely, the worldlang would borrow more vocabulary and syntactic constructions from languages all over the world, thus becoming even more representative of human languages.</li>
+<li>The worldlang would likely dominate discourse in the scientific communities.</li>
+<li>Code switching would arise in communities that were traditionally monolingual.</li>
+<li>Cultures that were traditionally multilingual might speak fewer languages if it became really successful, unless the culture valued the multiple languages so highly that it continued to learn and speak them afterwards anyway, in addition to the worldlang (if it were adopted in that community).</li>
+<li>If the writing system that is most commonly used to write the International Auxiliary language was the Latin Alphabet (this would the most likely one), then there would be a higher international recognition of Latin Alphabet characters if the worldlang was used truly everywhere.</li>
+<li>People would on average, know fewer languages.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-why-technology-is-inferior-solution" class="outline-2">
+<h2 id="why-technology-is-inferior-solution"><span class="section-number-2">4.</span> Why Universal Translators Are An Inferior Solution</h2>
+<div class="outline-text-2" id="text-why-technology-is-inferior-solution">
+<p>
+What would a universal near-instantaneous language translator be like, if we assume that it would function similarly to the Babelfish from The Hitchhiker&rsquo;s Guide To The Galaxy? Here is a reasonable prediction:
+</p>
+<ul class="org-ul">
+<li>It would be connected to the listener&rsquo;s ears and listen for non-native languages. When the native language(s) are heard, it isn&rsquo;t activated.
+<ul class="org-ul">
+<li>It might even be implanted into human heads far into the future if the technology becomes available and practical. But when it first gets implemented, it would definitely have to be external component.</li>
+<li>Typing and texting on machines should be easier to implement within existing computer and smartphone software. Content would be sent from the original language to the receivers, and the receivers would translate that into whatever language the computer user(s) understand.</li>
+<li>It would need a decent CPU and speakers.</li>
+</ul></li>
+<li>It doesn&rsquo;t exist yet, so we don&rsquo;t completely know what it would be like, and it would have to be capable of instantaneously translating between about ~23 languages to cover over ~50% of the world&rsquo;s population, a few hundred languages for ~96%, and ~6000 languages to cover 100% of the world&rsquo;s population.</li>
+<li>Even if the technology for such a thing does get developed, it would likely be far more expensive to produce it on a worldwide industrial scale than it would be to have everybody learn a constructed worldlang.</li>
+</ul>
+
+<p>
+Other Things To Note:
+</p>
+<ol class="org-ol">
+<li>Learning a foreign language has cognitive benefits whereas having a computer translate for you wouldn&rsquo;t have any cognitive benefits at all.
+<ul class="org-ul">
+<li>As living standards continue to increase around the world, and people live longer lives, mental disorders that don&rsquo;t normally appear until the late stages of life (such as Alzheimer&rsquo;s Disease and other types of dementia) will continue to become more prevalent.
+<ul class="org-ul">
+<li>Studies have consistently shown that monolingual people are more likely to get Alzheimer&rsquo;s Disease at earlier ages than bilingual and multilingual people, with a difference of five years on average.</li>
+<li>Having a world of monolingual people who have to rely on machine translations to communicate with the rest of the world would slightly exacerbate the number of people who have Alzheimer&rsquo;s Disease and such until a cure is developed for Alzheimer&rsquo;s Disease and other diseases that can be delayed for some years by fluently speaking at least two languages.</li>
+</ul></li>
+</ul></li>
+<li>If a computer is translating the language that it is hearing to the language that it is outputting through the speakers, there would inevitably be slight delays in the translations since languages have different word orders. For example:
+<ul class="org-ul">
+<li>Languages that differ in word order among the subjects, objects, and verbs.
+<ul class="org-ul">
+<li>English versus Arabic/Gaelic/Cebuano/etc (SVO and VSO)</li>
+<li>English versus Hindi/Russian/Turkish/etc (SVO and SOV)</li>
+<li>Hindi/Russian/Turkish/etc versus Arabic/Gaelic/Cebuano/etc (SOV and VSO)</li>
+<li>Et Cetera</li>
+</ul></li>
+<li>Languages that differ in word order among the components of a noun phrase: nouns, adjectives, numerals,
+<ul class="org-ul">
+<li>English versus Spanish/French/Portuguese/etc (nouns and adjectives)</li>
+<li>English versus Chinese/Finish (relative clauses)</li>
+<li>English versus Korean (nouns and numerals)</li>
+<li>English versus Swahili (nouns, adjectives, and numerals)</li>
+<li>Et Cetera</li>
+</ul></li>
+</ul></li>
+<li>It is likely that the only way to avoid the delay that will inevitably occur when a machine is translating languages is if humans eventually have bionic chips installed into their brains that allow them to instantly understand other foreign languages, but at that rate, humans might as well be communicating through some sort of telepathy if we have that kind of technology and that associated level of understanding about how the brain works.
+<ul class="org-ul">
+<li>Important: There might not even be a much of a need to speak spoken languages or sign languages at that point. And if that&rsquo;s the case, then the language barrier between deaf and hearing people would end too.</li>
+</ul></li>
+</ol>
+<p>
+Having everybody learn a worldlang would take time in everybody&rsquo;s lives to master until fluency, but it would probably be worth it if the worldlang is easy to learn. On average, it would probably take a couple hundred hours at most depending on the person&rsquo;s native language and other factors.
+</p>
+
+<p>
+Maybe it is case that universal language translators will eventually be developed in the future for most or even all humans languages, but the world would have to wait at least a few decades before that technology became available everywhere.
+</p>
+</div>
+</div>
+
+<div id="outline-container-effects-on-other-languages" class="outline-2">
+<h2 id="effects-on-other-languages"><span class="section-number-2">5.</span> To What Extent Would Other Languages Die Off Because Of This?</h2>
+<div class="outline-text-2" id="text-effects-on-other-languages">
+<p>
+My main concern about all this regarding all this is if it would cause more languages to die off. I would personally hope that people still continue to learn foreign languages even if there is a universal language, if only for personal enjoyment than anything else.
+</p>
+
+<p>
+Question: Who would take an advantage from such a decision to adopt a worldlang?
+</p>
+<ul class="org-ul">
+<li>Big nations like the US, UK and other nations with English as their national language? Not really&#x2026;</li>
+<li>TESOL? Not really&#x2026;</li>
+<li>Teachers of English, French and other national languages? Not really&#x2026;</li>
+<li>Professors of all these languages, translators, interpreters? Not really&#x2026;</li>
+<li>People who master one or more foreign languages and for whom this language knowledge is a basis for their profession and income? Not really&#x2026;</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-wont-break-into-different-dialects" class="outline-2">
+<h2 id="wont-break-into-different-dialects"><span class="section-number-2">6.</span> Why A Worldlang Is Unlikely To Break Into Different Dialects Or Different Languages</h2>
+<div class="outline-text-2" id="text-wont-break-into-different-dialects">
+<p>
+It is very unlikely that an international auxiliary language would break off into thousands of mutually-unintelligible dialects within just a few years.
+</p>
+
+<p>
+First off, <i>languages diverge from each other due to <b>isolation</b>.</i> So unless communication between the world&rsquo;s communities using the worldlang were to suddenly stop for some reason (perhaps <a href="https://www.youtube.com/watch?v=3AoDTlbRRkw">due to the collapse of modern civilization</a>), and as long as there is frequent communication between different communities, it is significantly unlikely that there would ever be enough isolation to cause the worldlang to diverge into multiple mutually-unintelligible dialects within a short time period. It is indeed inevitable the worldlang would change to some extent and there would inevitably be some divergence and linguistic variation among the communities adopting the worldlang, but there would probably never be enough language change to create a dialect continuum, unless significant isolation were to exist between some communities of the world.
+</p>
+
+<p>
+Second, the dynamics of slower-than-ever language change in the modern era has made it more feasible than ever for lingua francas and constructed languages to be resistant to language change for multiple reasons:
+</p>
+<ul class="org-ul">
+<li>Literacy: Reading media that was written decades to centuries ago is likely causes people to produce more conservative language (as opposed to modern language), especially since written language tends to be more conservative than spoken language. Written language is also often seen as more formal and authoritative, so there is more pressure to use standard forms of language in writing.</li>
+<li>Education: Education in a standard dialect also reduces language change, and can even cause non-standard dialects to die out or become more similar to the standard dialect. There are hundreds of examples of this (e.g. Standard Japanese, Standard French, Standard German, Beijing Mandarin, etc). This is particularly true in formal educational settings, where students are taught to use standard grammar and vocabulary.</li>
+<li>Standardization: The standardization of language through the development of dictionaries, grammars, and <a href="https://en.wikipedia.org/wiki/List_of_language_regulators">language regulators</a> also slow down language change. Since these institutions often prescribe rules for language use and promote a standard form of the language, this can limit the variation and innovation that occurs in spoken language.</li>
+<li>Speech Language Pathologists (SLPs) can also help to correct <a href="https://en.wikipedia.org/wiki/Speech_sound_disorder">speed sound disorders</a> and other <a href="https://en.wikipedia.org/wiki/Speech_disorder">speech impairments</a> in children (e.g. training children to avoid merging interdental fricatives with labio-dental fricatives or alveolar plosives in English). Interventions like this further help to reduce linguistic divergence.
+<ul class="org-ul">
+<li>Side Note: I can personally vouch that training with my SLPs during elementary and middle school helped to eliminate my rhotacism, sigmatism, and mispronunciation of interdental fricatives during my childhood, thus making my idiolect (way of speaking) more similar to the rest of the English-speaking world.</li>
+</ul></li>
+<li>Media: The media, including television, radio, and the internet, also slow down language change. This is because media outlets are incentivized to use standardized language in order to reach wider audiences and improve their public perceptions, which in turn influences language use in the broader society in favor of standardization.</li>
+</ul>
+
+<p>
+And thirdly, if this were really a huge concern, then why hasn&rsquo;t English and other modern lingua francas diverged into hundreds of mutually-unintelligible languages/dialects?
+</p>
+</div>
+
+<div id="outline-container-resistance-to-language-change" class="outline-3">
+<h3 id="resistance-to-language-change"><span class="section-number-3">6.1.</span> Ensuring Resistance To Language Change</h3>
+<div class="outline-text-3" id="text-resistance-to-language-change">
+<p>
+Important: The extensive use of written text nowadays probably causes people who live in such societies to use less liberal and more conservative speech production. Since text written decades, or even a couple of centuries ago is frequently being beamed into people&rsquo;s minds, our minds are less likely to use grammatical structures that deviate from the language usage used when the text was first written. However, since the English spelling system was standardized and has largely not changed for the past 500+ years, pronunciation still changes because the writing system does not reflect sound-for-sound production. Thus, people reading text will pronounce it however they are most accustomed to pronouncing it. There is no way to read written text with a different grammatical structure however since the structure is inherent to the text itself. This means that pronunciation is changing faster than grammar. Language in the modern world can also change as the lexicon changes and new texts are produced and read to reflect those changes.
+</p>
+
+<p>
+As an example, almost nobody around my area uses the word &ldquo;lest&rdquo; in their English, so I never learned how to use it and how it invokes the subjunctive verb form until I was about 17 years old. I started encountering the usage of &rsquo;lest&rsquo; in older English writing, like Shakespeare&rsquo;s, Winston Churchill&rsquo;s, other historical English writers, etc, and with practice, I too, also learned how to use &rsquo;lest&rsquo; and its subjunctive verb conjugations. i
+</p>
+
+<p>
+The creation of written text not only largely set spelling in stone, but it also set much of languages&rsquo; grammars in stone as well.
+</p>
+
+<p>
+So, since both spelling and grammar (and to a lesser extent, phonology influenced by spelling) are changing far slower today than they used to have changed historically, this factor and the other factor of global communication are two keys that reduce language change.
+</p>
+
+<p>
+Furthermore, education in a standard dialect also reduces language change, and can even cause non-standard dialects to die out or become more similar to the standard dialect. There are hundreds of examples with this (e.g. Standard Japanese, Standard French, Standard German, Beijing Mandarin, etc.
+</p>
+
+<p>
+An analogy to show how a lack of education in a standard dialect would be to compare how the sound of a word changes during the children&rsquo;s game: Telephone, where children whisper language from one person to the next, and the language gradually changes each time, except that in the real world, the language change would be diachronic (happening from one generation to the next), whereas synchronic variation would occur from traveling from one area to another and the dialects spoken in those areas.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-modeling-populations-with-DEs" class="outline-2">
+<h2 id="modeling-populations-with-DEs"><span class="section-number-2">7.</span> Modeling Populations Of Language Speakers Using Differential Equations</h2>
+<div class="outline-text-2" id="text-modeling-populations-with-DEs">
+<p>
+Try to model the populations of language speakers using differential equations like the population model
+</p>
+
+<p>
+δP/δt = kP(1 - P/T)(1 - P/C)
+</p>
+<ul class="org-ul">
+<li>T = threshold = 50 million speakers</li>
+<li>C = carrying capacity = world population</li>
+</ul>
+<p>
+In order to model the things as they are, I would need to create an ordinary differential equation where the auxiliary-language population increases faster if it is increasing faster than natural-language populations. And the threshold would be changed to 10 million.
+</p>
+<ul class="org-ul">
+<li>Thus, there might have to be factors representing the populations and derivatives of other language populations.</li>
+<li>If this is the case, we&rsquo;re probably looking at a exact differential equation. There are multiple dependent variables that all depend on each other, but still only one independent variable (time).</li>
+</ul>
+
+<p>
+I came up with this model back in 2020, but as my skepticism of academic research and mathematical models loomed in 2021-2022, I am less certain about to what extent this model could accurately predict the future populations of language speakers.
+</p>
+</div>
+</div>
+
+<div id="outline-container-phonetic-writing-systems" class="outline-2">
+<h2 id="phonetic-writing-systems"><span class="section-number-2">8.</span> Regarding Phonetic Writing Systems</h2>
+<div class="outline-text-2" id="text-phonetic-writing-systems">
+<p>
+Even writing systems that are said to be completely phonetic aren&rsquo;t completely phonetic though. Any writing system that is mostly phonetic that is used to write a language that has multiple dialects/sociolects is guaranteed to not have a perfect, one-to-one isomorphism between the strings representing the allophonic pronunciations of the language&rsquo;s dialects and the strings representing the writing system itself since sound changes will eventually cause the pronunciations across the dialects to deviate from the more conservative pronunciations that formed the basis for the writing system. This can be observed across Spanish, German, Hangul, Hiragana, and basically any language that uses an alphabet, abuguida, or syllabary.
+</p>
+
+<p>
+Examples:
+</p>
+<ul class="org-ul">
+<li><i>ll</i> vs <i>y</i> in Spanish</li>
+<li><i>z</i> vs <i>s</i> in Spanish</li>
+<li>How the middle consonant within tri-consonantal coda clusters is usually deleted in American English, even though that consonant will still be written in the writing.</li>
+<li>&lt;wh&gt; is pronounced as [w] in most English dialects, although some conservative dialects still preserve it as [hw] or even as<a href="https://en.wikipedia.org/wiki/Voiceless_labial%E2%80%93velar_fricative"> [ʍ] </a>.</li>
+<li>Hiragana characters used in Middle Japanese that are obsolete in Modern Japanese.</li>
+<li>Hiragana yotsugana characters that are obsolete in Standard Japanese, but still present in some Japanese dialects on Kyushu Island.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Zero Contradictions</p>
+<p class="date">Created: 2023-07-10 Mon 06:04</p>
+</div>
+</body>
+</html>
