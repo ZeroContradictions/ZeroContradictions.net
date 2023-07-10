@@ -1,0 +1,1431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-07-09 Sun 11:32 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Political Philosophy</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="description" content="Defining an ideal government and its legal code, and the best solutions to the game-theoretic problems that every society must face." />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="../blog-posts.css" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Political Philosophy</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#intro">1. Prerequisites For Understanding This Political Philosophy</a></li>
+<li><a href="#constitutional-principles">2. The Constitutional Principles Of The Government</a>
+<ul>
+<li><a href="#practicality-of-constitutions">2.1. The Practicality of Constitutions</a></li>
+<li><a href="#goals-of-government">2.2. Political Philosophy And The Goals Of Government</a>
+<ul>
+<li><a href="#PDs">2.2.1. Prisoner&rsquo;s Dilemmas</a></li>
+<li><a href="#free-rider-problems">2.2.2. Free-Rider Problems</a></li>
+<li><a href="#forms-of-planned-obsolescence">2.2.3. Forms of Planned Obsolescence</a></li>
+</ul>
+</li>
+<li><a href="#legal-practices-to-use">2.3. Rules And Legal Practices To Use</a></li>
+<li><a href="#chestertons-fence">2.4. Chesterton&rsquo;s Fence</a></li>
+<li><a href="#geopolitical-stability">2.5. Geopolitical Stability</a></li>
+<li><a href="#functions-of-government">2.6. Functions Of The Government</a></li>
+<li><a href="#defining-the-people">2.7. Defining Who &ldquo;The People&rdquo; Are</a></li>
+<li><a href="#rights-of-citizens">2.8. Rights of the Citizens</a>
+<ul>
+<li><a href="#free-speech">2.8.1. The Importance of Free Speech</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#problem-of-governance">3. The Problem of Governance</a>
+<ul>
+<li><a href="#trust-in-government">3.1. Public Trust In The Government</a></li>
+<li><a href="#public-accountability">3.2. Ensuring Accountability To The People</a></li>
+<li><a href="#politicians-syllogism-fallacy">3.3. Preventing The Politician&rsquo;s Syllogism Fallacy</a></li>
+<li><a href="#preventing-regulatory-capture">3.4. Preventing Regulatory Capture</a></li>
+<li><a href="#legislative-system">3.5. The Legislative System</a></li>
+<li><a href="#judicial-system">3.6. The Judicial System</a></li>
+<li><a href="#checks-and-balances">3.7. Check And Balances</a>
+<ul>
+<li><a href="#creating-democratic-system">3.7.1. Creating A Democratic System</a></li>
+<li><a href="#ensuring-intregity-to-the-people">3.7.2. Ensuring The Government&rsquo;s Integrity To The People</a></li>
+<li><a href="#veto-system">3.7.3. Creating A Veto System</a></li>
+<li><a href="#must-read-legislation-bills">3.7.4. Legislatures Must Read The Bills They Are Voting On</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#government-revenue">4. Government Revenue</a>
+<ul>
+<li><a href="#revenue-federal-state-local">4.1. How The Federal, State, And Local Governments Collect Revenue</a>
+<ul>
+<li><a href="#revenue-federal">4.1.1. How The Federal Government Will Collect Revenue</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#foreign-policy-and-immigration">5. Foreign Policy and Immigration</a></li>
+<li><a href="#legal-penalties">6. The Penalties For Breaking The Laws</a>
+<ul>
+<li><a href="#drug-war">6.1. Why The Drug War Should End</a></li>
+<li><a href="#corporal-punishment-and-humiliation">6.2. Why Corporal Punishment And Humiliation Can Sometimes Be More Practical Punishments Than Making Prisoners Spend Years In Prison</a></li>
+</ul>
+</li>
+<li><a href="#functions-of-citizens-IDs">7. Functions Of Government-Issued Citizen ID Cards</a></li>
+<li><a href="#solutions-to-market-failures">8. Solutions For Solving Market Failures</a>
+<ul>
+<li><a href="#managing-land-titles">8.1. Managing Land And Natural Resource Titles</a></li>
+<li><a href="#collecting-LVT">8.2. Collecting Natural Resource Taxes From The Title Owners</a></li>
+<li><a href="#taxing-natural-resources-extraction">8.3. Taxing Natural Resources at the Point of Extraction</a></li>
+<li><a href="#preventing-planned-obsolescence">8.4. Preventing Planned Obsolescence</a></li>
+<li><a href="#innovation-bounty-systems">8.5. The Patent / Proof / Innovation Bounty Systems</a></li>
+<li><a href="#socially-induced-market-failures">8.6. Fixing Socially-Induced Market Failures</a></li>
+</ul>
+</li>
+<li><a href="#urban-planning">9. Urban Planning</a></li>
+<li><a href="#climate-change">10. Addressing Global Warming And Climate Change</a>
+<ul>
+<li><a href="#climate-change-most-ideal-solution">10.1. The Most Ideal Way For Humanity To Solve Climate Change</a></li>
+<li><a href="#climate-change-best-solution">10.2. The Most Likely Way How Humanity Will Solve Climate Change</a></li>
+<li><a href="#overpopulation-vs-climate-change">10.3. Overpopulation is a Bigger Problem Than Climate Change</a></li>
+</ul>
+</li>
+<li><a href="#energy">11. Energy</a>
+<ul>
+<li><a href="#nuclear-energy-future">11.1. The Future Of Energy Will Probably Be Nuclear</a></li>
+</ul>
+</li>
+<li><a href="#laissez-faire-eugenostate">12. Enforcing EPC: Why And How</a>
+<ul>
+<li><a href="#reproduction-license-reqs">12.1. The Requirements For Being Granted A Reproduction License</a></li>
+<li><a href="#EPC-enforcement">12.2. How This System Would Be Enforced</a>
+<ul>
+<li><a href="#most-likely-enforcement">12.2.1. The Most Likely Way How Population Control Would Be Enforced</a></li>
+</ul>
+</li>
+<li><a href="#practicality-of-EPC">12.3. The Practicality And Feasibility Of This System</a></li>
+</ul>
+</li>
+<li><a href="#education-system">13. The Education System</a></li>
+<li><a href="#healthcare-system">14. The Healthcare System</a>
+<ul>
+<li><a href="#public-healthcare-skepticism">14.1. Why I&rsquo;m Skeptical Of Public Healthcare</a></li>
+<li><a href="#reducing-free-market-healthcare-costs">14.2. Ideas For Reducing The Long-Term Cost Of Healthcare Via A Free-Market Healthcare System</a></li>
+</ul>
+</li>
+<li><a href="#academia">15. Regulating Academia</a></li>
+<li><a href="#global-government">16. Global Government</a>
+<ul>
+<li><a href="#global-government-functions">16.1. Functions Of Global Government</a></li>
+<li><a href="#global-government-structure">16.2. How The Global Government Should Be Structured</a>
+<ul>
+<li><a href="#worldlang-benefits">16.2.1. The Benefits of Adopting a Worldlang</a></li>
+</ul>
+</li>
+<li><a href="#objections-to-global-government">16.3. Addressing Objections To Having A Global Government</a>
+<ul>
+<li><a href="#why-global-government">16.3.1. Why should there be a global government? Can&rsquo;t nation-state governments suffice?</a></li>
+<li><a href="#global-government-responsiveness">16.3.2. But aren&rsquo;t smaller-scale governments more responsive and representative?</a></li>
+<li><a href="#government-levels-authoritarianism">16.3.3. Aren&rsquo;t higher levels of government more authoritarian?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#conclusion">17. Conclusion</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<p>
+NOTE: I haven&rsquo;t finished writing this page.
+</p>
+
+<div id="outline-container-intro" class="outline-2">
+<h2 id="intro"><span class="section-number-2">1.</span> Prerequisites For Understanding This Political Philosophy</h2>
+<div class="outline-text-2" id="text-intro">
+<p>
+If you want to understand this political and ethical philosophy, the best way to start would be to read the book and <a href="../index.html#bio-realism">all the essays listed on the biological realism section of the website</a>.
+This political philosophy is based on understanding the implications that evolutionary theory has for the human race and human societies. Humans are a biological species, so they cannot be understood without a very firm understanding of biology.
+</p>
+
+<p>
+We also recommend reading <a href="../epistemology/axiology.html">our philosophy of value</a> and our <a href="../FAQs/post-overton-FAQs.html#problems-with-deontological-ethics">essay on the superiority of consequentialist ethics</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-constitutional-principles" class="outline-2">
+<h2 id="constitutional-principles"><span class="section-number-2">2.</span> The Constitutional Principles Of The Government</h2>
+<div class="outline-text-2" id="text-constitutional-principles">
+<p>
+How to govern society is one of the oldest philosophical problems, and while there aren&rsquo;t always perfect solutions to every problem, there are still pragmatic and heuristic approaches that we can take.
+</p>
+</div>
+
+<div id="outline-container-practicality-of-constitutions" class="outline-3">
+<h3 id="practicality-of-constitutions"><span class="section-number-3">2.1.</span> The Practicality of Constitutions</h3>
+<div class="outline-text-3" id="text-practicality-of-constitutions">
+<p>
+The de facto power of the United States Constitution is weaker than the de jure power of the Constitution, but this isn&rsquo;t surprising. At the end of the day, a Constitution is just a piece of paper created by the government to limit what the government can do. If the government had the power to create the constitution and enforce it, then it can just as easily have the power to stop enforcing parts of it or even ignore it completely.
+</p>
+
+<p>
+If government has to exist, then it&rsquo;s reasonable to have a document of rules describing what the government must aim to do, as well as what it can and cannot do. Even most anarchists have implicit rules for their societies, and they would have to have a document that explicitly states the rules of their &ldquo;societies&rdquo; if they were actually serious about their ideas. So, it&rsquo;s still worth creating a Constitution that states the explicit rules of society and figuring out the best characteristics that a Constitution should have.
+</p>
+
+<p>
+Conclusion: In order for a Constitution to have the true power and enforcement that its authors intended it to have, Constitutions must be enforced <b>directly</b> by the people instead of the government. It cannot be stressed enough that the citizens much be vigilant to veto, rebel, and reform if the legal system ever proposes an anti-constitutional update to the legal code, lest <a href="https://thewaywardaxolotl.blogspot.com/2017/05/the-deep-state-and-myth-of-democracy.html">a deep state will form</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-goals-of-government" class="outline-3">
+<h3 id="goals-of-government"><span class="section-number-3">2.2.</span> Political Philosophy And The Goals Of Government</h3>
+<div class="outline-text-3" id="text-goals-of-government">
+<p>
+The foremost goal of government is to resolve <a href="https://en.wikipedia.org/wiki/Prisoner's_dilemma">Prisoner&rsquo;s Dilemmas</a>, <a href="https://en.wikipedia.org/wiki/Tragedy_of_the_commons">Tragedies of the Commons</a>, and <a href="https://en.wikipedia.org/wiki/Free-rider_problem">Free-Rider Problems</a>. Government comes from the necessity to create reasonable sets of laws that will create a societal framework from which selfish individuals can cooperate together for greater mutual gain (than if they didn&rsquo;t cooperate together). Cooperation is the foundation of civilization, and the best legal code is the one that enables that to the greatest extent possible.
+</p>
+
+<p>
+The relationship between a government and its citizens is called a &ldquo;social contract&rdquo;, but it shall instead be called an <b>Implicit Mutual Social Agreement (IMSA)</b> in this essay. Every time the word &ldquo;contract&rdquo; is used, some people complain that it&rsquo;s not really a contract because they never signed it. And while they&rsquo;re right about that, they&rsquo;re missing the point. The idea is that if you want the benefits that society gives you, then you have to comply with society&rsquo;s rules, even if you don&rsquo;t like all the rules. You can&rsquo;t have your cake and eat it too. If you&rsquo;re going to break the IMSA, then society is justified to prosecute you.
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Original_position">Thought Experiment: The Veil of Ignorance</a>.
+</p>
+</div>
+
+
+<div id="outline-container-PDs" class="outline-4">
+<h4 id="PDs"><span class="section-number-4">2.2.1.</span> Prisoner&rsquo;s Dilemmas</h4>
+<div class="outline-text-4" id="text-PDs">
+<p>
+The Societal Prisoner&rsquo;s Dilemma (SCP) is the most fundamental game theoretical problem that every society must solve. Once a community of humans surpasses roughly <a href="https://en.wikipedia.org/wiki/Dunbar%27s_number">Dunbar&rsquo;s Number</a>, it becomes possible for humans to take advantage of others without other people being able to suspect it because not everybody knows each other. This creates incentives for every individual to either: 1. kill, abuse, and steal from other people when it makes them better off, or 2. be bound to also kill, abuse, and steal from other people as a reaction to other people who are doing the same thing. The resolution of the SCP requires an enforced legal code that enables cooperation. Societies cannot exist without cooperation, and cooperation between strangers cannot exist unless the Societal Prisoner&rsquo;s Dilemma is solved.
+</p>
+
+<p>
+In the absence of a law enforcement that would punish people for committing crimes, every person has an incentive to kill, abuse, and steal from other people because these actions make it easier to gain the resources for supporting oneself and one&rsquo;s desires, compared to if they had labored and traded with other people instead. If only one person is defecting while everybody else is cooperating with each other, then this scenario is analogous to either of the two scenarios in the <a href="https://en.wikipedia.org/wiki/Prisoner's_dilemma">standard Prisoner&rsquo;s Dilemma</a> where one party cooperates while the other defects from the other, except that there could be any number of people cooperating and defecting at the same time.
+</p>
+
+<p>
+When it&rsquo;s easy and feasible for one person to defect from cooperating with everybody else (Anarchy &amp; Lawlessness), everybody else is also incentivized to defect from everybody else too. If this happens, then this scenario is analogous to how the two parties involved in the standard Prisoner&rsquo;s Dilemma are both defecting from each other, except that this defection applies to <b>everybody</b> in the area of lawlessness, not just two people.
+</p>
+
+<p>
+Obviously, neither of these scenarios are desirable in comparison to a prosperous society where each person&rsquo;s labor produces wealth that is guaranteed to not be stolen or abused by other people, and where people can safely trade commodities and money to make each other better off with the guarantee that the other side will be punished if they don&rsquo;t hold up their side of the trade. Read More: <a href="../civilization/case-against-libertarianism.html#ancaps-and-game-theory">Why cooperation isn&rsquo;t necessary in every person&rsquo;s best interests</a>.
+</p>
+
+<p>
+The best scenario (as well as the only scenario that can create a functioning society) is when every person cooperates with each other. In practice, this can only be achieved by a government that imposes the rule of law, which effectively eliminates every person&rsquo;s incentive to defect, since the penalties and punishments for defecting (breaking the law) are too costly and the probability of getting caught breaking the law are near ~100%. Note that the exact probability doesn&rsquo;t matter as long as it&rsquo;s reasonably high enough to punish nearly all defectors and to discourage other from defecting. The imposition of this law is involuntary by definition because <b>every</b> person has to abide by it whether they like it or not. On the other hand, a &ldquo;voluntary&rdquo; imposition of law would be an oxymoron because every person would disobey the voluntary law and defect in the Societal Prisoner&rsquo;s Dilemma when it suits their self-interests. Law can thus only be involuntary and involuntarily imposed.
+</p>
+
+<p>
+The previously mentioned scenario comes with an important caveat that doesn&rsquo;t exist in the standard Prisoner&rsquo;s Dilemma. When the government enforces the rule of law, some members of the government may choose to &ldquo;defect&rdquo; from the rest of the society by abusing their power to better achieve their self-interests. Such is the Nature of Game Theory and the intrinsic selfishness of life. But this is still better and more functional than an Anarchist world where literally <b>everybody</b> is defecting from each other, not just a handful of people who are in control of a strong government. Even if the government defects from the people whose interests it&rsquo;s supposed to represent, that&rsquo;s still fewer people defecting and thus a more prosperous society, compared to the alternative (Anarchy). How to govern society is one of the oldest philosophical problems, and while there aren&rsquo;t any ideal solutions that can completely eliminate corruption, there are some pragmatic principles and heuristics that we can follow to generate a better society.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-free-rider-problems" class="outline-4">
+<h4 id="free-rider-problems"><span class="section-number-4">2.2.2.</span> Free-Rider Problems</h4>
+<div class="outline-text-4" id="text-free-rider-problems">
+<p>
+A free-rider problem is a situation where most people do the necessary contributions for making the community thrive, while a minority of people reap the benefits of the majority&rsquo;s effort while contributing nothing in return.
+</p>
+
+<p>
+When a minority of a people can benefit by doing nothing, this incentivizes everybody else who is doing their part to reconsider that they could also do nothing instead, while getting the same benefits, for everybody else gains. When this happens, the free-rider problem becomes more similar to a tragedy of the commons, but they were different initially.
+</p>
+
+<p>
+Examples of Free-Rider Problems:
+</p>
+<ul class="org-ul">
+<li><a href="../FAQs/EPC-FAQs.html#welfare-states-unsustainable">Welfare States</a></li>
+<li><a href="../civilization/case-against-libertarianism.html#voluntary-self-protection">Voluntary Self-Protection</a></li>
+<li><a href="../FAQs/overpopulation-FAQs.html#overpop-free-rider-problem">Overpopulation</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-forms-of-planned-obsolescence" class="outline-4">
+<h4 id="forms-of-planned-obsolescence"><span class="section-number-4">2.2.3.</span> Forms of Planned Obsolescence</h4>
+<div class="outline-text-4" id="text-forms-of-planned-obsolescence">
+<p>
+Planned Obsolescence is a serious market failure that results from the mismatch of corporate and consumer values.
+</p>
+
+<p>
+Read more: <a href="../economics/thoughts-on-economics.html#planned-obsolescence">The Various Forms of Planned Obsolescence</a>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-legal-practices-to-use" class="outline-3">
+<h3 id="legal-practices-to-use"><span class="section-number-3">2.3.</span> Rules And Legal Practices To Use</h3>
+<div class="outline-text-3" id="text-legal-practices-to-use">
+<ul class="org-ul">
+<li>Parliamentary Democracy Instead of Presidential Democracy</li>
+<li>Jus Sangris, instead of Jus Solis</li>
+<li>Common Law versus Civil Law? Civil Law might be better if you don&rsquo;t want political power to get transferred away from the legislature to the judiciary branch, over time.</li>
+<li><a href="../civilization/age-of-adulthood.html">Determining What The Age Of Adulthood Should Be</a></li>
+<li>i</li>
+<li>i</li>
+</ul>
+<p>
+I am no legal expert, but if I had a better understanding of all the major differences between the world&rsquo;s legal systems, I would certainly use that knowledge to improve this post. This map leaves me with many questions on how all the world&rsquo;s legal systems differ: <a href="https://upload.wikimedia.org/wikipedia/commons/9/92/Map_of_the_Legal_systems_of_the_world_%28en%29.png">Legal Systems of the World</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-chestertons-fence" class="outline-3">
+<h3 id="chestertons-fence"><span class="section-number-3">2.4.</span> Chesterton&rsquo;s Fence</h3>
+<div class="outline-text-3" id="text-chestertons-fence">
+<p>
+<a href="https://en.wikipedia.org/wiki/G._K._Chesterton#Chesterton's_fence">Chesterton&rsquo;s Fence</a> is the principle that reforms should not be made until the reasoning behind the existing state of affairs is understood.
+</p>
+
+<p>
+i
+</p>
+</div>
+</div>
+
+<div id="outline-container-geopolitical-stability" class="outline-3">
+<h3 id="geopolitical-stability"><span class="section-number-3">2.5.</span> Geopolitical Stability</h3>
+<div class="outline-text-3" id="text-geopolitical-stability">
+<p>
+<a href="../civilization/geopolitics.html">Any proposal must be geopolitically stable</a>. A network of city states would fail since it wouldn&rsquo;t be geopolitically stable, so it is not viable.
+</p>
+
+<p>
+There are lots of ideas that would not be geopolitically stable, and yet people think they&rsquo;re immoral anyway. A realist couldn&rsquo;t care less if people think that measures that ensure geopolitical stability are &ldquo;immoral&rdquo; (e.g. the selective service system, not allowing secession, maintaining a strong global military presence, etc). If the alternative is geopolitical instability, then those moralistic ideas are not worth any consideration because they would lead to war, conflict, and the country&rsquo;s downfall.
+</p>
+
+<p>
+Private cities are similar in concept to the nation-states that exist today, except that nation-states are bigger, <a href="../civilization/case-against-libertarianism.html#freedom-and-population-density">have more laws</a>, and characterized by local geography, socio-ethnolinguistic groups, history, cultures, etc. If someone doesn&rsquo;t like the country that they are currently living in, they (usually) have a choice to leave and migrate to another.
+</p>
+</div>
+</div>
+
+<div id="outline-container-functions-of-government" class="outline-3">
+<h3 id="functions-of-government"><span class="section-number-3">2.6.</span> Functions Of The Government</h3>
+<div class="outline-text-3" id="text-functions-of-government">
+<ul class="org-ul">
+<li>Establishing a legal code that solves game theoretic problems that collectively benefit (most) of society.</li>
+<li>Collecting Natural Resource Taxes (LVT) to fund the Government and redistribute the excess revenue as the Citizen&rsquo;s Dividend.</li>
+<li>Providing the Police Force, Courts, Detention Centers, Military, and Border Guards.</li>
+<li>Establishing alliances with other governments, as it serves the country&rsquo;s interests.</li>
+<li>Ensuring that everybody who is unauthorized to have (more) children has mandatory contraception.</li>
+<li>Settling disputes.</li>
+<li>Urban Planning.</li>
+<li>Providing Monetary Rewards For Innovations Instead Of Patents.</li>
+<li>Collecting Census Data on the Country&rsquo;s Population.</li>
+<li>The Public Education Safety Net.</li>
+<li>The Healthcare Safety Net.</li>
+</ul>
+
+<p>
+It&rsquo;d be nice if we could have a society that fixes problems <i>before</i> they happen, instead of <i>after</i> they happen. Unfortunately, most people are only inclined to do the latter since the former option requires thinking on a much higher level than what most people can do. We live in a <a href="../epistemology/free-will.html">determinsitic, cause-and-effect universe</a>. Since people have selective attentions, they tend to only focus on things <i>after</i> they happen since there has to be something that causes them to think about those problems in the first place.
+</p>
+</div>
+</div>
+
+<div id="outline-container-defining-the-people" class="outline-3">
+<h3 id="defining-the-people"><span class="section-number-3">2.7.</span> Defining Who &ldquo;The People&rdquo; Are</h3>
+<div class="outline-text-3" id="text-defining-the-people">
+<p>
+&ldquo;We the People&rdquo; is a commonly repeated phrase when talking about American history and values, but who are &ldquo;The People&rdquo; exactly? Constitutions always say that the government must serve the people, but they never define who the &ldquo;people&rdquo; are. For example, slaves weren&rsquo;t considered part of &ldquo;the people&rdquo; in the US until 1865, and neither were Native Americans until 1924. Some more examples include:
+</p>
+<ul class="org-ul">
+<li>Foreign-born citizens? They weren&rsquo;t sometime in the past, but now they are.</li>
+<li>Men? Or men <i>and</i> women? (women didn&rsquo;t gain suffrage in Western countries until the 1900s)</li>
+<li>Illegal Aliens?</li>
+<li>Mixed race people with ancestry of one of the ethnic groups of an ethnically homogenous country?</li>
+<li>Citizens of very closely allied countries?</li>
+</ul>
+<p>
+The &ldquo;people&rdquo; could even be re-framed to mean special interest groups of the country that get special privileges.
+</p>
+
+<p>
+We&rsquo;ve concluded that <a href="https://zerocontradictions.github.io/FAQs/race-realism-FAQs.html#ethnostates">ethnostate</a> governments are more preferable because <a href="https://zerocontradictions.github.io/FAQs/EPC-FAQs.html#ethnostates">ethnically homogenous societies tend to have slight eugenic advantages</a>, and they <a href="../FAQs/race-realism-FAQs.html#races-and-society">tend to be more socially and politically stable</a>, although they aren&rsquo;t always possible (as the link explains).
+</p>
+
+<p>
+Relevant: <a href="../civilization/thoughts-on-social-justice.html#origin-of-need-for-equal-representation">The Origin Of The Need For Equal Representation</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-rights-of-citizens" class="outline-3">
+<h3 id="rights-of-citizens"><span class="section-number-3">2.8.</span> Rights of the Citizens</h3>
+<div class="outline-text-3" id="text-rights-of-citizens">
+<p>
+Any proposed set of rights should <a href="../epistemology/axiology.html#intro">protect and reinforce each other</a> to the maximum extent possible, rather than contradicting each other.
+People may argue that population control violates people&rsquo;s autonomy, but if the benefit is that it confers more protection to all other rights, then it&rsquo;s a reasonable change to make.
+</p>
+</div>
+
+
+
+<div id="outline-container-free-speech" class="outline-4">
+<h4 id="free-speech"><span class="section-number-4">2.8.1.</span> The Importance of Free Speech</h4>
+<div class="outline-text-4" id="text-free-speech">
+<p>
+See: <a href="../civilization/case-against-libertarianism.html#free-speech">The Purpose of Free Speech</a>.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-problem-of-governance" class="outline-2">
+<h2 id="problem-of-governance"><span class="section-number-2">3.</span> The Problem of Governance</h2>
+<div class="outline-text-2" id="text-problem-of-governance">
+</div>
+<div id="outline-container-trust-in-government" class="outline-3">
+<h3 id="trust-in-government"><span class="section-number-3">3.1.</span> Public Trust In The Government</h3>
+<div class="outline-text-3" id="text-trust-in-government">
+<p>
+[this section is still in development]
+</p>
+
+<p>
+When people say &ldquo;Never trust the government&rdquo; or ask &ldquo;Do you trust the government?&rdquo;, what do they even mean? Government is very complex. There&rsquo;s local, state, and federal levels, different branches of government, different agencies and departments of government, and many different people who all work for the government.
+</p>
+
+<p>
+When conservatives say &ldquo;Never trust the government&rdquo;, they still usually trust government entities like the FDA, the USPS, local utilities, other government agencies, and probably many favored politicians. And when libertarians and anarchists say the tagline, they typically have even less trust and approval for the government as a whole (as it currently exists) compared to conservatives, but even they will still depend on at least a few functions of government to do things that they need.
+</p>
+
+<p>
+So what specifically about the government should not be trusted? Any particular departments, agencies, or people filling administrative roles? And generally speaking, what aspects of government can be trusted?
+</p>
+
+<p>
+Also, how does one define &ldquo;trust&rdquo;? Certainly there are different levels of trust, so what levels of trust can be applied to each component of the government? Are there different types of trust, or are they all the same thing?
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=rStL7niR7gs">CGP Grey: Rules for Rulers</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-public-accountability" class="outline-3">
+<h3 id="public-accountability"><span class="section-number-3">3.2.</span> Ensuring Accountability To The People</h3>
+<div class="outline-text-3" id="text-public-accountability">
+<p>
+A politician can do what&rsquo;s best for the constituents in their district, but that won&rsquo;t necessarily be what&rsquo;s best for the entire world as a whole. For example, a local lawmaker/governor might criticize a local company for outsourcing labor that would take jobs away from their constituents (particularly in the short-term), even if that actually might be what&rsquo;s best for the entire world as a whole. The company wins because it reduces its labor costs, the newly hired laborers overseas win because they acquire higher-paying jobs, and the community that initially lost jobs will eventually win in the long-term too (assuming that laid-off workers can find new jobs) since they can purchase cheaper goods and services. Conceptually, this concept can be expanded to other assets too, like determining which localities gets the most government funding and infrastructure, who gets the new Fortune 500 facility, etc. This is one reason why government often works against the people, and unfortunately it happens very often. A more efficient government/reason-system ought to not do this.
+</p>
+
+<p>
+All political systems are oligarchies, regardless of how they present themselves. Leaders of centralized systems know almost nothing about a lot of things, rather than a lot about a few things. It&rsquo;s not possible for a single person to rule an entire country all by themselves because they need subordinates who will enforce their rule of law. Likewise, it&rsquo;s equally impossible for a democracy to work effectively unless it has representatives and a hierarchy of other government officials. It has to be that way, but it also creates problems with running the society.
+</p>
+
+<p>
+Bureaucracies have a tendency to shift to self perpetuation over time. There are a few things that can be done to mitigate that. For starters, public sector unions are almost always bad since they&rsquo;re focused on promoting the interests of their workers, i.e. they&rsquo;re focused on perpetuating the bureaucracy, so perhaps they should be outlawed.
+</p>
+
+<p>
+It is easier for public figures to voice opposition to bad ideas when they have no political power.
+Al Gore criticized the Patriot Act, but if he had won the 2000 US presidential election, then he would have surveilled the country too by abusing governmental power, just like George W. Bush did. The legislation for the Patriot Act was already written up waiting for the signal. 9/11 was that signal. As for when the Coronavirus left China, there was no legislation waiting for it since no one was expecting it. But the spread of the virus outside of China and its over-estimated perception of deadliness was still the signal for every politician to go full tyrant.
+</p>
+</div>
+</div>
+
+<div id="outline-container-politicians-syllogism-fallacy" class="outline-3">
+<h3 id="politicians-syllogism-fallacy"><span class="section-number-3">3.3.</span> Preventing The Politician&rsquo;s Syllogism Fallacy</h3>
+<div class="outline-text-3" id="text-politicians-syllogism-fallacy">
+<p>
+The <a href="https://en.wikipedia.org/wiki/Politician%27s_syllogism">Politician&rsquo;s Syllogism Fallacy</a> goes as follow:
+</p>
+<ol class="org-ol">
+<li>Something must be done.</li>
+<li>This is something.</li>
+<li>Therefore, it must be done.</li>
+</ol>
+<p>
+The underlying assumption that doing something is always better than doing nothing, regardless of certainty or cost.
+</p>
+
+<p>
+Similar to how &ldquo;just doing what the teacher wants&rdquo; may not be what&rsquo;s best for the student, politicians who are &ldquo;just doing what their constituents want&rdquo; may not necessarily be what&rsquo;s best for the country.
+</p>
+
+<p>
+i
+</p>
+</div>
+</div>
+
+<div id="outline-container-preventing-regulatory-capture" class="outline-3">
+<h3 id="preventing-regulatory-capture"><span class="section-number-3">3.4.</span> Preventing Regulatory Capture</h3>
+<div class="outline-text-3" id="text-preventing-regulatory-capture">
+<p>
+<a href="https://en.wikipedia.org/wiki/Regulatory_capture">Wikipedia: Regulatory Capture</a>.
+</p>
+
+<p>
+i
+</p>
+
+<p>
+Yet another example showing why the current government policies of subsidizing electric vehicles (EVs) via tax credits doesn&rsquo;t work: <a href="https://dailycaller.com/2022/08/15/ford-f150-lightning-price-increases/">Ford Raises Electric Truck Price By Up To $8,500 After Democrats Pass $7,500 EV Tax Credit</a>.
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-legislative-system" class="outline-3">
+<h3 id="legislative-system"><span class="section-number-3">3.5.</span> The Legislative System</h3>
+<div class="outline-text-3" id="text-legislative-system">
+<p>
+Politicians over 65 years of age must take mental competency tests before they can run for office.
+</p>
+</div>
+</div>
+
+<div id="outline-container-judicial-system" class="outline-3">
+<h3 id="judicial-system"><span class="section-number-3">3.6.</span> The Judicial System</h3>
+<div class="outline-text-3" id="text-judicial-system">
+<p>
+Principle: Always fix the legal system before fixing the judicial system. The judicial system is supposed to check the legal system, not the other way around.
+</p>
+
+<p>
+A judicial court system should interpret the Constitution and other founding political documents by the intent of the writers&rsquo; of the documents&rsquo;, not the words or language of the document since that is vulnerable to being misinterpreted via semantics.
+</p>
+</div>
+</div>
+
+<div id="outline-container-checks-and-balances" class="outline-3">
+<h3 id="checks-and-balances"><span class="section-number-3">3.7.</span> Check And Balances</h3>
+<div class="outline-text-3" id="text-checks-and-balances">
+<p>
+How would checks and balances work ideally, according to game theory?
+</p>
+<ul class="org-ul">
+<li>What makes checks effective?</li>
+<li>What makes balances effective?</li>
+</ul>
+</div>
+
+
+<div id="outline-container-creating-democratic-system" class="outline-4">
+<h4 id="creating-democratic-system"><span class="section-number-4">3.7.1.</span> Creating A Democratic System</h4>
+<div class="outline-text-4" id="text-creating-democratic-system">
+<p>
+<a href="../misc/industrial-society-and-its-future-manifesto.html#strategy">From Industrial Society And Its Future</a> by Dr. Ted Kaczynski:
+</p>
+<blockquote>
+<p>
+Paragraph #187: On the more sophisticated level the ideology should address itself to people who are intelligent, thoughtful and rational. The object should be to create a core of people who will be opposed to the industrial system on a rational, thought-out basis, with full appreciation of the problems and ambiguities involved, and of the price that has to be paid for getting rid of the system. It is particularly important to attract people of this type, as they are capable people and will be instrumental in influencing others. These people should be addressed on as rational a level as possible. Facts should never intentionally be distorted and intemperate language should be avoided. This does not mean that no appeal can be made to the emotions, but in making such appeal care should be taken to avoid misrepresenting the truth or doing anything else that would destroy the intellectual respectability of the ideology.
+</p>
+
+<p>
+Paragraph #188: On a second level, the ideology should be propagated in a simplified form that will enable the unthinking majority to see the conflict of technology vs. nature in unambiguous terms. But even on this second level the ideology should not be expressed in language that is so cheap, intemperate or irrational that it alienates people of the thoughtful and rational type. Cheap, intemperate propaganda sometimes achieves impressive short-term gains, but it will be more advantageous in the long run to keep the loyalty of a small number of intelligently committed people than to arouse the passions of an unthinking, fickle mob who will change their attitude as soon as someone comes along with a better propaganda gimmick. However, propaganda of the rabble-rousing type may be necessary when the system is nearing the point of collapse and there is a final struggle between rival ideologies to determine which will become dominant when the old world-view goes under.
+</p>
+</blockquote>
+
+<p>
+Read More: <a href="../civilization/thoughts-on-democracy.html">Thoughts on Democracy</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-ensuring-intregity-to-the-people" class="outline-4">
+<h4 id="ensuring-intregity-to-the-people"><span class="section-number-4">3.7.2.</span> Ensuring The Government&rsquo;s Integrity To The People</h4>
+<div class="outline-text-4" id="text-ensuring-intregity-to-the-people">
+<p>
+One Proposal for Preventing Gerrymandering in a Democratic Republic: Remove party affiliations at the time of voter registration. Do not track home addresses on ballots. Voter ID is done through the driver&rsquo;s license authenticity, but does not require you to retain the information together. Now politicians don&rsquo;t know where you live and can&rsquo;t draw districts with biases.
+</p>
+</div>
+</div>
+
+<div id="outline-container-veto-system" class="outline-4">
+<h4 id="veto-system"><span class="section-number-4">3.7.3.</span> Creating A Veto System</h4>
+<div class="outline-text-4" id="text-veto-system">
+<ul class="org-ul">
+<li>Liberal democracies should offer voters yes/no propositions to vote for on a city, state, or national level.</li>
+</ul>
+
+<ul class="org-ul">
+<li>Among eligible participating voters, if there are two people who would disapprove of some legislation for every person who does not disapprove, then the legislation is vetoed. Although a skeptic might argue that percentages are arbitrary, two-thirds (or approximately 66.66%) is the lowest majority ratio that is higher than 50% (or half of the population) <i>and</i> only uses integers.</li>
+<li>Hopefully, the system for direct democratic vetoes against the reason/legal system would not devolve to have people joining political organizations akin to the political parties that exist today. Vetoing is a yes/no process, so the nature of the process could prevent such political organizations from forming for collectively vetoing or not vetoing legislation.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-must-read-legislation-bills" class="outline-4">
+<h4 id="must-read-legislation-bills"><span class="section-number-4">3.7.4.</span> Legislatures Must Read The Bills They Are Voting On</h4>
+<div class="outline-text-4" id="text-must-read-legislation-bills">
+<p>
+For every <i>x</i> number of pages that a legislation document has and every <i>y</i> number of pages that added amendments have, there should be a minimum of <i>d</i> number of days between when it was proposed and when it is passed.
+</p>
+<ul class="org-ul">
+<li>The purpose of this regulation is to guarantee that the members of the reason system have enough time to read the legislation and carefully evaluate it before making a decision on it.</li>
+<li>If this rule is always enforced without exception, the worst case scenario would be that the members of the reason system simply don&rsquo;t read the legislation like they&rsquo;re supposed to.</li>
+<li>But at least it&rsquo;s guaranteed that they will have enough time to read it like they are doing their jobs. This is still an improvement over the existing government which has no such rule.</li>
+</ul>
+
+<p>
+Read More: <a href="https://www.anthonygalli.com/p/make-bills-read-again-8bd963eedeb8">Make Bills Read Again - Anthony Galli</a>.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-government-revenue" class="outline-2">
+<h2 id="government-revenue"><span class="section-number-2">4.</span> Government Revenue</h2>
+<div class="outline-text-2" id="text-government-revenue">
+<p>
+<a href="../economics/georgism-elevator-pitch.html">Georgism Elevator Pitch</a>
+</p>
+
+<p>
+Much of the Government&rsquo;s income would come from Location Value Taxes.
+</p>
+
+<p>
+Additionally, <a href="https://en.wikipedia.org/wiki/Georgism#Sources_of_economic_rent_and_related_policy_interventions">Natural Resources</a> (oil, coal, iron, natural gas, stocks of fish, etc) will be taxed at the point of extraction.
+</p>
+
+<p>
+The Reproduction Tax would also be a source of government revenue: <a href="../economics/georgism-EPC-connection.html">Why Georgism And EPC Both Imply Each Other</a>
+</p>
+</div>
+
+<div id="outline-container-revenue-federal-state-local" class="outline-3">
+<h3 id="revenue-federal-state-local"><span class="section-number-3">4.1.</span> How The Federal, State, And Local Governments Collect Revenue</h3>
+<div class="outline-text-3" id="text-revenue-federal-state-local">
+</div>
+
+<div id="outline-container-revenue-federal" class="outline-4">
+<h4 id="revenue-federal"><span class="section-number-4">4.1.1.</span> How The Federal Government Will Collect Revenue</h4>
+<div class="outline-text-4" id="text-revenue-federal">
+<p>
+<i>For the purposes of general taxation (and preferably for most everything else) the Federal government shall have no interaction with individuals or private businesses.</i>
+</p>
+
+<p>
+What that means in English is that the federal government can only collect its tax revenue from the state governments. It does so in proportion to their population according to the census. The states then figure out how to raise the money internally through LVT, pigouvian taxes, and other taxes on natural resources.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-foreign-policy-and-immigration" class="outline-2">
+<h2 id="foreign-policy-and-immigration"><span class="section-number-2">5.</span> Foreign Policy and Immigration</h2>
+<div class="outline-text-2" id="text-foreign-policy-and-immigration">
+<p>
+Foreign aid to other countries is generally a bad thing because it is altruistic and highly susceptible to corruption, but it can still be strategic if it&rsquo;s a political favor that wins foreign and geopolitical interests.
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-legal-penalties" class="outline-2">
+<h2 id="legal-penalties"><span class="section-number-2">6.</span> The Penalties For Breaking The Laws</h2>
+<div class="outline-text-2" id="text-legal-penalties">
+<p>
+Anybody who kills a parent (accidentally or unintentionally) will be legally liable to pay child support for all of that parent&rsquo;s child&rsquo;s expenses until the children become <a href="../civilization/age-of-adulthood.html">legal adults or 18 years old</a>. This includes drunk drivers and people who text while driving, if they accidentally kill a parent.
+</p>
+
+<p>
+Pedophiles should be required to pay for the mental health expenses of their victims.
+</p>
+
+<p>
+A person who intentionally takes the life of another cannot claim a legal right to life, lest it would be contradictory to grant the murderer a legal right to life as well.
+</p>
+
+<p>
+Crime rates go down when more people get incarcerated. The reason why there&rsquo;s a negative correlation between incarceration rates and crime rates is because it prevents repeat offenders from being able to commit more crimes.
+</p>
+
+<p>
+In recent years, there has been a lot of talk in Western public discourse about how governments should place a greater focus on rehabilitation instead of punishment. That is very important, but it won&rsquo;t be an end-all-be-all solution to everything. In the long-run, the most important thing that could be done for preventing crimes before they happen will be for the government to <a href="#laissez-faire-eugenostate">implement laissez-faire eugenic control of reproduction</a>.
+</p>
+</div>
+
+
+<div id="outline-container-drug-war" class="outline-3">
+<h3 id="drug-war"><span class="section-number-3">6.1.</span> Why The Drug War Should End</h3>
+<div class="outline-text-3" id="text-drug-war">
+<blockquote>
+<p>
+&ldquo;If you look at the drug war from a purely economic point of view, the role of the government is to protect the monopoly held by the drug cartels&rdquo; &#x2013; Milton Friedman
+</p>
+</blockquote>
+
+<p>
+The easiest thing that could be done to instantly reduce incarceration rates without having any negative effects on society would be to decriminalize or legalize all the illegal drugs. <a href="https://en.wikipedia.org/wiki/Drug_policy_of_Portugal">Portugal did this in 2000</a>, and it worked very successfully.
+</p>
+
+<p>
+<a href="https://fee.org/articles/want-to-stop-gun-violence-end-the-war-on-drugs/">Drug legalization / decriminalization would also dramatically reduce gun violence</a>.
+</p>
+
+<p>
+See: <a href="https://www.youtube.com/watch?v=wJUXLqNHCaI">Why the War on Drugs is a Huge Failure - Kurzgesagt</a>
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-corporal-punishment-and-humiliation" class="outline-3">
+<h3 id="corporal-punishment-and-humiliation"><span class="section-number-3">6.2.</span> Why Corporal Punishment And Humiliation Can Sometimes Be More Practical Punishments Than Making Prisoners Spend Years In Prison</h3>
+<div class="outline-text-3" id="text-corporal-punishment-and-humiliation">
+<p>
+It doesn&rsquo;t make sense to punish taxpayers by forcing them to pay money that is used to imprison people who broke the law. Why should a lazy criminal have their existence be funded by good, productive people who are actually contributing to society? Imprisoning someone for several years is a detriment to everybody in society.
+</p>
+
+<p>
+A better way to punish the criminals without wasting taxpayers&rsquo; money is to use corporal punishment instead of prison sentences more often. This way, the lawbreakers are punished, and the taxpayers don&rsquo;t have to pay the price for keeping the lawbreakers locked up in prison. Physical punishment works in Singapore, and Singapore has some of the lowest per capita crime rates in the world (although race and economic factors undoubtedly help with this too). The people who get punished may be unable to work for a few days while they heal from the injury and are experiencing the pain, but then they&rsquo;ll have to go back to work in order to sustain themselves, and taxpayers won&rsquo;t have to subsidize their existence.
+</p>
+
+<p>
+Western opposition to corporal punishment is just a cultural thing. In Singapore, there is at least a sizable amount of public support for corporal punishment. And after all, aren&rsquo;t some crimes deserving of corporal punishment, like rape, massive pyramid schemes, torturing, or severe physical abuse?
+</p>
+
+<p>
+<span class="underline">People cannot imagine what it&rsquo;s like to spend 5 years in prison.</span> Especially if it&rsquo;s often far longer than that, it completely ruins someone&rsquo;s life. People cannot intuitively understand how bad that is. And once the prisoners finally leave the prison, how are they supposed to get back into the real world and return to a normal lifestyle? They could go back to the outside world, but it would be completely alien to them because it wouldn&rsquo;t be the same world they had left before they were incarcerated. Some recently released prisoners wouldn&rsquo;t even want to go back out into the real world because they&rsquo;ve become so familiar with the prison world, hence why people often get re-incarcerated immediately after they leave prison.
+</p>
+
+<p>
+<span class="underline">Physical punishment also invokes primal instincts,</span> which could increase its effectiveness and people&rsquo;s willingness to commit crimes. If the brain can be roughly divided into about three parts, then the fear of corporal punishment and strong desire to avoid it works off the most basic structures within the human brain. Both of these proposed punishments are based on incentives, and utilize both psychological and economic principles. Being soft on crime causes crime. And making people spend several years in prison when it&rsquo;s a very costly and ineffective punishment counts as being soft on crime.
+</p>
+
+<p>
+Performing physical punishment publicly could improve its intended effects. Being caned in the townsquare for everybody would humiliate the person being punished. This converts corporal punishment from a purely psychological force for discouraging/preventing crime into a social force as well. It could even become a eugenic force if it discourages people from working with the penalized people. This would cause they would make less money, and thus they would have fewer children.
+</p>
+
+<p>
+Alternatively, a prisoner could be offered assisted suicide. Then the taxpayers don&rsquo;t have to subsidize their existence, and the prisoner then has no further opportunities to pass their genes onto the next generation. In most cases, it would be better for everybody if people serving multiple life sentences in prison were sentenced to death instead, but the main reason why this doesn&rsquo;t happen is because it conflicts with people&rsquo;s moral dogmas.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-functions-of-citizens-IDs" class="outline-2">
+<h2 id="functions-of-citizens-IDs"><span class="section-number-2">7.</span> Functions Of Government-Issued Citizen ID Cards</h2>
+<div class="outline-text-2" id="text-functions-of-citizens-IDs">
+<p>
+Every Citizen is provided an ID card for free.
+</p>
+<ul class="org-ul">
+<li>Standard citizen recognition tool that nearly every country provides its citizens, critical to establishing contracts between members of society (especially job applications, land/rent leasing, etc)</li>
+<li>Paying taxes</li>
+</ul>
+
+<ul class="org-ul">
+<li>Reproduction License for X number of children</li>
+<li>2/3 direct democratic veto card?</li>
+<li>Identifying to police force for incidents/calls</li>
+<li>Attending court system as defender/accuser/witness/etc</li>
+<li>Applying to work on reason system (legal/urban<sub>planning</sub>/court/etc), police system, etc)</li>
+<li>Standard Education Certification (perhaps this card could then be granted upon completing such standard education at around ~16 years old?)</li>
+<li>Driver&rsquo;s License Certification</li>
+<li>Attendance of public education institutions</li>
+<li>Traveling to the territories of foreign political bodies</li>
+<li>Tracking criminals and criminal records</li>
+</ul>
+<p>
+Every government-issued ID contains built-in security features such as check-sums for the ID number, authenticity features found on driver&rsquo;s licenses, etc.
+</p>
+</div>
+</div>
+
+<div id="outline-container-solutions-to-market-failures" class="outline-2">
+<h2 id="solutions-to-market-failures"><span class="section-number-2">8.</span> Solutions For Solving Market Failures</h2>
+<div class="outline-text-2" id="text-solutions-to-market-failures">
+</div>
+<div id="outline-container-managing-land-titles" class="outline-3">
+<h3 id="managing-land-titles"><span class="section-number-3">8.1.</span> Managing Land And Natural Resource Titles</h3>
+<div class="outline-text-3" id="text-managing-land-titles">
+<p>
+This solves a Tragedy of the Commons with respect to Land And Natural Resources.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-collecting-LVT" class="outline-3">
+<h3 id="collecting-LVT"><span class="section-number-3">8.2.</span> Collecting Natural Resource Taxes From The Title Owners</h3>
+<div class="outline-text-3" id="text-collecting-LVT">
+<p>
+Taxes will be collected from the title owners of the Land, to encourage land to be used more efficiently.
+</p>
+</div>
+</div>
+
+<div id="outline-container-taxing-natural-resources-extraction" class="outline-3">
+<h3 id="taxing-natural-resources-extraction"><span class="section-number-3">8.3.</span> Taxing Natural Resources at the Point of Extraction</h3>
+<div class="outline-text-3" id="text-taxing-natural-resources-extraction">
+<p>
+Natural Resources (oil, coal, iron, natural gas, stocks of fish, etc) will be taxed at the point of extraction, which will encourage resources to be used more efficiently.
+</p>
+</div>
+</div>
+
+<div id="outline-container-preventing-planned-obsolescence" class="outline-3">
+<h3 id="preventing-planned-obsolescence"><span class="section-number-3">8.4.</span> Preventing Planned Obsolescence</h3>
+<div class="outline-text-3" id="text-preventing-planned-obsolescence">
+<p>
+<a href="https://www.youtube.com/watch?v=j5v8D-alAKE">The Problem of Planned Obsolescence</a>
+</p>
+
+<p>
+The right-to-repair is enormously important for preventing planned obsolescence in many cases, and it is best guaranteed by government regulations.
+</p>
+</div>
+</div>
+
+<div id="outline-container-innovation-bounty-systems" class="outline-3">
+<h3 id="innovation-bounty-systems"><span class="section-number-3">8.5.</span> The Patent / Proof / Innovation Bounty Systems</h3>
+<div class="outline-text-3" id="text-innovation-bounty-systems">
+<p>
+<a href="https://www.youtube.com/watch?v=X0uv5jFaJFk">PolyMatter: The Case Against Patents</a>.
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=H4bxzKR7MQs">PolyMatter: How to Fix the Broken Patent System</a>.
+</p>
+
+<p>
+As concluded by the videos above, a portion of the government revenue would be set aside to provide monetary awards and official recognition to anybody who manages to create a major innovation and document it.
+</p>
+
+<p>
+The branch of government that is responsible for describing problems to be solved for monetary rewards and distributing the rewards to the winners would also provide rewards for people who solve major mathematical and/or scientific problems. Currently, there are no monetary rewards for completing many unsolved mathematical problems, but providing rewards could incentivize more people to attempt completing them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-socially-induced-market-failures" class="outline-3">
+<h3 id="socially-induced-market-failures"><span class="section-number-3">8.6.</span> Fixing Socially-Induced Market Failures</h3>
+<div class="outline-text-3" id="text-socially-induced-market-failures">
+<p>
+The popular misguided perceptions that city rankings and college rankings are useful for choosing which schools to attend are both examples of socially-induced market failures. These are both useful examples of behavioral economics.
+</p>
+
+<p>
+Companies with critical mass (e.g. Facebook, Twitter, Discord, Reddit, etc) have overwhelming advantages over startup competitors. Even if it&rsquo;s possible for people to create open-source alternatives to rival these companies, it is often the case that nobody will use them if nobody else uses them since those companies have already achieved the necessary critical mass.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-urban-planning" class="outline-2">
+<h2 id="urban-planning"><span class="section-number-2">9.</span> Urban Planning</h2>
+<div class="outline-text-2" id="text-urban-planning">
+<p>
+The reason system would have a commission responsible for urban planning in the urban / metropolitan area, and the members of the commission would be elected similarly to how jury members are elected. Any decisions passed by the urban planning commission can be proposed by the reason system, and if they are not vetoed, then they are executed with legal authority.
+</p>
+<ul class="org-ul">
+<li>Theoretically, Location Value Tax would eliminate most of the need for zoning and would eliminate most gentrification.</li>
+</ul>
+
+
+<p>
+Relevant Video: <a href="https://www.youtube.com/watch?v=b_Gu3YfB6es">City Beautiful: Why Did Humans Invent Cities?</a>.
+</p>
+
+<p>
+Relevant Video: <a href="https://www.youtube.com/watch?v=JcgGiHZoWBc">City Beautiful: Why Car-Centric Urban Planning is Inferior</a>.
+</p>
+
+<p>
+Relevant: <a href="https://www.reddit.com/r/fuckcars/wiki/faq">Why Cars And Car-Centric Urban Planning Suck FAQs</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-climate-change" class="outline-2">
+<h2 id="climate-change"><span class="section-number-2">10.</span> Addressing Global Warming And Climate Change</h2>
+<div class="outline-text-2" id="text-climate-change">
+</div>
+
+
+<div id="outline-container-climate-change-most-ideal-solution" class="outline-3">
+<h3 id="climate-change-most-ideal-solution"><span class="section-number-3">10.1.</span> The Most Ideal Way For Humanity To Solve Climate Change</h3>
+<div class="outline-text-3" id="text-climate-change-most-ideal-solution">
+<p>
+The most ideal solution to climate change would be for a global government that to regulate how much of the atmosphere can be altered and in what way(s). Different countries likely have differing opinions on how the atmosphere should change since it would affect climates, crop types/growths, ocean depth levels (and thus affect coastal lands), and much more.
+</p>
+</div>
+</div>
+
+<div id="outline-container-climate-change-best-solution" class="outline-3">
+<h3 id="climate-change-best-solution"><span class="section-number-3">10.2.</span> The Most Likely Way How Humanity Will Solve Climate Change</h3>
+<div class="outline-text-3" id="text-climate-change-best-solution">
+<p>
+Since we don&rsquo;t have a global government for effectively regulating and enforcing pollution and CO<sub>2</sub> emission policies, the next best solution to global warming is to alter the Earth&rsquo;s atmosphere to block out more heat / sunlight, which would lower the global temperature to counter the rising temperatures of recent decades. Without a global government, any attempt to do things like climate pledges will succumb to a global Tragedy of the Commons. That&rsquo;s why the best solution we have now will be to block slightly more sunlight out of the atmosphere, since it could reduce global warming without facing game-theoretical dilemmas to its implementation.
+</p>
+
+<p>
+Doing what we can to prevent climate change is a no-brainer. The Earth has been facing record-breaking temperatures for the past two centuries thanks to the changes in the atmosphere caused by the Industrial Revolution. And since humans evolved during the Ice Age when the planet was much cooler, it makes sense that we would want to keep the Earth at a cooler temperature than the temperatures that we are predicting decades from now.
+</p>
+
+<p>
+We will have to be careful about this since technology in general is unpredictable and this technology has never been tried before, but if we don&rsquo;t do this, the Earth&rsquo;s climate and environment is going to continue to negatively change to the detriment of us humans and all other living species. Fortunately though, we have observed the effects of how sending tons of volcanic ash into the Earth&rsquo;s atmosphere can cause global temperatures to drop by blocking out sunlight, so we at least have some idea of how to go about this and some of the possible outcomes.
+</p>
+
+<p>
+Although this proposal would end (or even reverse) global warming, it might not completely prevent climate and environmental change. One example is that coral reefs would still be harmed by the increased acidity of the ocean water since the quantity of carbon-dioxide in the atmosphere and oceans would continue to increase (although they would still benefit from global temperatures no longer increasing or even decreasing). Pollution taxes (a carbon tax in this case) would still be reasonable, even if the atmosphere was altered to block out more sunlight. Developed countries that have already emitted a lot of carbon dioxide should be taxed more since they&rsquo;ve already made up their share for causing causing climate change.
+</p>
+
+<p>
+Other Topics Related To Solving Climate Change:
+</p>
+<ul class="org-ul">
+<li><a href="https://en.wikipedia.org/wiki/Solar_geoengineering">Wikipedia: Solar Engineering</a>.</li>
+<li><a href="https://en.wikipedia.org/wiki/Climate_engineering">Wikipedia: Climate Engineering</a>.</li>
+<li><a href="https://en.wikipedia.org/wiki/Passive_daytime_radiative_cooling">Wikipedia: Passive Daytime Radiative Cooling</a>.</li>
+<li><a href="https://en.wikipedia.org/wiki/Weather_modification">Wikipedia: Weather Modification</a>.</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-overpopulation-vs-climate-change" class="outline-3">
+<h3 id="overpopulation-vs-climate-change"><span class="section-number-3">10.3.</span> Overpopulation is a Bigger Problem Than Climate Change</h3>
+<div class="outline-text-3" id="text-overpopulation-vs-climate-change">
+<p>
+Overpopulation is a thousand times more problematic than pollution or climate change is. They all exacerbate each other, but once there&rsquo;s overpopulation, it&rsquo;s basically <a href="../FAQs/overpopulation-FAQs.html#if-no-pop-regulation">game over for civilization</a>. Overpopulation causes Civilizations to fight wars with each other over scarce resources, until they finally collapse from nearly decimating each other.
+</p>
+
+<p>
+Civilization rose and fall in the Mayan world many times over thousands of years. There was a constant cycle of growing civilization, overpopulation, and collapse. Life continued that way in the Americans for thousands of years until the Europeans came and build a civilization that wouldn&rsquo;t collapse and fall&#x2026; but maybe we should wait several more decades to see if another collapse happens.
+</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+<div id="outline-container-energy" class="outline-2">
+<h2 id="energy"><span class="section-number-2">11.</span> Energy</h2>
+<div class="outline-text-2" id="text-energy">
+</div>
+
+<div id="outline-container-nuclear-energy-future" class="outline-3">
+<h3 id="nuclear-energy-future"><span class="section-number-3">11.1.</span> The Future Of Energy Will Probably Be Nuclear</h3>
+<div class="outline-text-3" id="text-nuclear-energy-future">
+<p>
+Nuclear energy is a clean source of abundant, reliable energy that produces no carbon emissions.
+</p>
+
+
+<p>
+It does require storing nuclear waste in places where it can remain permanently, and it can have occasional nuclear accidents, but those are both becoming less of problems over time as we figure out better solutions and safer technologies.
+</p>
+
+<p>
+Yet another example showing why the current government policies of subsidizing electric vehicles (EVs) via tax credits don&rsquo;t work: <a href="https://dailycaller.com/2022/08/15/ford-f150-lightning-price-increases/">Ford Raises Electric Truck Price By Up To $8,500 After Democrats Pass $7,500 EV Tax Credit</a>.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-laissez-faire-eugenostate" class="outline-2">
+<h2 id="laissez-faire-eugenostate"><span class="section-number-2">12.</span> Enforcing EPC: Why And How</h2>
+<div class="outline-text-2" id="text-laissez-faire-eugenostate">
+<p>
+In order to prevent war, disease, and famine, there must be a maximum population limit enforced for the country&rsquo;s total number of citizens. In order to enforce that population limit, anybody who wants to have children must acquire a Reproduction License for each child that they want to have.
+</p>
+</div>
+
+<div id="outline-container-reproduction-license-reqs" class="outline-3">
+<h3 id="reproduction-license-reqs"><span class="section-number-3">12.1.</span> The Requirements For Being Granted A Reproduction License</h3>
+<div class="outline-text-3" id="text-reproduction-license-reqs">
+<ul class="org-ul">
+<li>The parent must be law-abiding and have no criminal record.</li>
+<li>The parent must have a high school education [at least] and must have reached the <a href="../civilization/age-of-adulthood.html">legal age of adulthood</a>.</li>
+<li>The parents must sign a contractual legal agreement with the government pledging responsibility for raising the child by themselves, and both parents must meet all of these requirements.</li>
+</ul>
+
+<ul class="org-ul">
+<li>One of the parents in the child-bearing agreement must be employed in a full-time job.</li>
+<li>A <a href="https://en.wikipedia.org/wiki/Legality_of_incest#Degrees_of_relationship">degree of consanguinity</a> between the parents that is too low will be forbidden (incest is prohibited).</li>
+<li>The parent must have paid all their <a href="../economics/georgism-elevator-pitch.html">taxes</a> (if any).</li>
+<li>The parent must pay the Reproduction Tax for having a child, which is set according to market rates with respect to the <a href="../economics/georgism-EPC-connection.html">Supply, Demand, and Price of Reproduction Licenses</a>.</li>
+</ul>
+
+<p>
+For more information about how these requirements were chosen, see: <a href="../FAQs/EPC-FAQs.html#why-laissez-faire-is-best">Why Laissez Faire Eugenics is best</a>.
+</p>
+
+<p>
+Read More: <a href="../FAQs/EPC-FAQs.html">Eugenics And Reproduction Licenses FAQs</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-EPC-enforcement" class="outline-3">
+<h3 id="EPC-enforcement"><span class="section-number-3">12.2.</span> How This System Would Be Enforced</h3>
+<div class="outline-text-3" id="text-EPC-enforcement">
+<p>
+There are various ways to do it, but ultimately, the enforcement will depend on how <a href="../FAQs/EPC-FAQs.html#not-authoritarian">&ldquo;authoritarian&rdquo;</a> the government has to be in order to enforce the Law. Ideally, the population would be compliant and none of the more drastic measures would be necessary. But if the measures are necessary, we still view them as being more favorable than having to deal with <a href="../overpopulation-FAQs.html#overpop-threat">the horrendous consequences of overpopulation</a>, when it eventually happens.
+</p>
+</div>
+
+<div id="outline-container-most-likely-enforcement" class="outline-4">
+<h4 id="most-likely-enforcement"><span class="section-number-4">12.2.1.</span> The Most Likely Way How Population Control Would Be Enforced</h4>
+<div class="outline-text-4" id="text-most-likely-enforcement">
+<p>
+The government will start with the least authoritarian and least invasive methods for enforcing population control. If those methods work for enforcing the law, then they will become the status quo. It will be a felony for anyone to have children without a reproduction license, so there will already be strong incentives for people to comply with the law.
+</p>
+
+<p>
+If unlicensed children are born, but the parents would still be responsible for paying for the child&rsquo;s existence, and paying back society for the incurred costs. This could be done by fining the parents at a fee that is 50% higher than the cost of a reproduction license. If they are unable to pay that, then they will be placed in a debtor&rsquo;s prison until they pay off their debt to society. They will also be monitored with regular birth control testing to ensure that they don&rsquo;t break the law again.
+</p>
+
+<p>
+More Detailed Answer: <a href="../FAQs/overpopulation-FAQs.html#how-to-enforce-EPC">Overpopulation FAQs Enforcement</a>.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-practicality-of-EPC" class="outline-3">
+<h3 id="practicality-of-EPC"><span class="section-number-3">12.3.</span> The Practicality And Feasibility Of This System</h3>
+<div class="outline-text-3" id="text-practicality-of-EPC">
+<p>
+For more information and any questions, see:
+</p>
+<ul class="org-ul">
+<li><a href="../FAQs/overpopulation-FAQs.html">Overpopulation And Population Control FAQs</a>.</li>
+<li><a href="../FAQs/EPC-FAQs.html">EPC And Reproduction Licenses FAQs</a>.</li>
+</ul>
+
+<p>
+For understanding the necessity of population control for sustaining future civilization specifically, see:
+</p>
+<ul class="org-ul">
+<li><a href="../FAQs/EPC-FAQs.html#why-implement-eugenics">Overpopulation FAQs: How is overpopulation a serious threat to humanity?</a>.</li>
+<li><a href="../FAQs/EPC-FAQs.html#why-implement-eugenics">Reproduction Licenses FAQs: How is dysgenics a serious threat to humanity?</a>.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-education-system" class="outline-2">
+<h2 id="education-system"><span class="section-number-2">13.</span> The Education System</h2>
+<div class="outline-text-2" id="text-education-system">
+<p>
+There will be a public education system and a voucher system. This will be similar to health insurance in the United States where healthcare is provided by private companies, but there will be a public safety net for everybody else. Parents who don&rsquo;t want to enroll their children into the public education system would not have to pay taxes to fund it, and would only have to pay for their children&rsquo;s private education expenses.
+</p>
+
+<p>
+There&rsquo;s a good argument for a government-provided safety net for education. Public education can have a unifying effect on the collective values of society, which helps reduce the variance of the society&rsquo;s values. In a society, you want to distribute the risks of life among everybody, and that&rsquo;s why safety nets on a collective level are a good idea.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-healthcare-system" class="outline-2">
+<h2 id="healthcare-system"><span class="section-number-2">14.</span> The Healthcare System</h2>
+<div class="outline-text-2" id="text-healthcare-system">
+<p>
+See: <a href="https://www.youtube.com/watch?v=sKjHvpiHk3s">Singapore&rsquo;s World-Class Healthcare System</a>.
+</p>
+</div>
+
+<div id="outline-container-public-healthcare-skepticism" class="outline-3">
+<h3 id="public-healthcare-skepticism"><span class="section-number-3">14.1.</span> Why I&rsquo;m Skeptical Of Public Healthcare</h3>
+<div class="outline-text-3" id="text-public-healthcare-skepticism">
+<p>
+It can be argued that a public healthcare system could make the general population healthier on average, but this ignores the fact that a public healthcare system would subsidize people who don&rsquo;t take care of their health. This means that healthy people would have to pay the cost of that since it&rsquo;s not possible to subsidize every demographic within an economy. Subsidizing is redistribution basically.
+</p>
+
+<p>
+Moreover, a public healthcare system would increase the dysgenics of the population. As mentioned in <a href="https://en.wikipedia.org/wiki/Recent_human_evolution#Early_Modern_Period_to_present">this Wikipedia article on Recent Human Evolution</a>, people who smoke tend to have fewer children since smokers have shorter lifespans. By providing healthcare to smokers and other people with unhealthy lifestyles, we are helping their undesirable genes stay in the gene pool by greatly reducing that selectionary pressure on the population, and that certainly isn&rsquo;t good for society in the long-term.
+</p>
+
+<p>
+If we&rsquo;re focused on achieving a society that will last thousands or tens of thousands of years or so, then it would be better if the people who live the unhealthy lifestyles die off naturally via natural selection. In the long term, that would result in a much healthier population where healthy people don&rsquo;t have to subsidize unhealthy lifestyles.
+</p>
+
+<p>
+Side Note: Vaccine manufacturers should be mandated by law to completely and publicaly disclose the contents of the vaccines they produce.
+</p>
+</div>
+</div>
+
+<div id="outline-container-reducing-free-market-healthcare-costs" class="outline-3">
+<h3 id="reducing-free-market-healthcare-costs"><span class="section-number-3">14.2.</span> Ideas For Reducing The Long-Term Cost Of Healthcare Via A Free-Market Healthcare System</h3>
+<div class="outline-text-3" id="text-reducing-free-market-healthcare-costs">
+<ul class="org-ul">
+<li>Allow importation of drugs and medical services/devices (huge deal).</li>
+<li>Allow competition across state lines for healthcare (huge deal).</li>
+<li>End the practice where local hospitals can veto the establishment of new hospitals (called Certificate of Public Need).</li>
+<li>Reduce or streamline the licensing requirements for certain healthcare practitioners.</li>
+<li>End all taxes on medicine and healthcare.</li>
+<li>Change from allowing companies to have 20 year monopolies after a drug is designed to instead have a bounty system allowing generics and name brand competitors to compete right away.</li>
+<li>Lessen FDA restrictions, reduce the threshold for over the counter drugs.</li>
+<li>Increase immigration for healthcare workers and doctors especially. A higher supply of immigrant doctors would decrease the cost for healthcare.</li>
+<li>Get rid of all price caps and price controls so that the long term supply equilibrium is met, stabilizing costs?</li>
+<li>Implement policies that increase full employment so that people can more likely afford healthcare through policies like eliminating the corporate tax, reducing income taxes, and getting rid of capital gains taxes and estate taxes.</li>
+<li>Legalize all the drugs (marijuana, methadone, etc.). See: <a href="https://www.youtube.com/watch?v=wJUXLqNHCaI">Why the War on Drugs is a Huge Failure - Kurzgesagt</a>.</li>
+<li>Encourage Direct Primary Care instead of Insurance. This would enable people to pay once for their treatment, with no insurance needed.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-academia" class="outline-2">
+<h2 id="academia"><span class="section-number-2">15.</span> Regulating Academia</h2>
+<div class="outline-text-2" id="text-academia">
+<p>
+The following Internet articles and essays explain the ongoing problems with Academia and why the current Academic system is broken:
+</p>
+<ul class="org-ul">
+<li><a href="https://thewaywardaxolotl.blogspot.com/2019/05/why-most-academic-research-is-fake.html">Blithering Genius: Why Most Academic Research is Fake</a></li>
+<li><a href="https://ideasanddata.wordpress.com/2020/06/25/on-trusting-academic-experts/">Ideas and Data Blog: Why Most Academic Research is Fake</a></li>
+<li><a href="https://www.youtube.com/watch?v=42QuXLucH3Q">Veritasium: Why Most Academic Research is Wrong</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Replication_crisis">Wikipedia: The Replicability Crisis</a></li>
+<li><a href="https://www.labroots.com/trending/neuroscience/20533/research-true-cited">Research Less Likely to Be True is Cited More</a></li>
+<li><a href="https://www.youtube.com/watch?v=VPDK7cO-JPs">The Negative Effects Academia has had on Society</a></li>
+<li><a href="https://www.youtube.com/watch?v=cQWlnTyOSig">The Conflict Between College Rankings and Intellectually-Honest Research</a></li>
+</ul>
+
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=1tSqSMOyNFE">Veritasium: Regression to the Mean</a></li>
+<li><a href="https://thewaywardaxolotl.blogspot.com/2020/01/are-we-running-out-of-ideas.html">Why we have Passed Peak Idea Production</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-global-government" class="outline-2">
+<h2 id="global-government"><span class="section-number-2">16.</span> Global Government</h2>
+<div class="outline-text-2" id="text-global-government">
+</div>
+<div id="outline-container-global-government-functions" class="outline-3">
+<h3 id="global-government-functions"><span class="section-number-3">16.1.</span> Functions Of Global Government</h3>
+<div class="outline-text-3" id="text-global-government-functions">
+<ul class="org-ul">
+<li>Similar functions already done by the United Nations and the world&rsquo;s superpowers regarding global affairs</li>
+</ul>
+
+<ul class="org-ul">
+<li>Any situation where states would otherwise have an incentive to pass bad things over their borders and onto their neighbors / the rest of the world, outside their territories.</li>
+<li>Border Disputes</li>
+<li>International Space Station</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-global-government-structure" class="outline-3">
+<h3 id="global-government-structure"><span class="section-number-3">16.2.</span> How The Global Government Should Be Structured</h3>
+<div class="outline-text-3" id="text-global-government-structure">
+<p>
+Global government is important for equally distributing countries&rsquo; natural resources. It is tremendously unfair that the citizens in countries with abundant natural resources in proportion to their populations (e.g. Qatar, Kuwait, Saudi Arabia, etc) get to have their lives subsidized by the government&rsquo;s ability to sell the abundant natural resources that are present on their lands, instead of having those natural resources be own equally by the entire world&rsquo;s population and managed by a global government. This contributes to increasing the dysgenics of the world&rsquo;s population.
+</p>
+</div>
+
+<div id="outline-container-worldlang-benefits" class="outline-4">
+<h4 id="worldlang-benefits"><span class="section-number-4">16.2.1.</span> The Benefits of Adopting a Worldlang</h4>
+<div class="outline-text-4" id="text-worldlang-benefits">
+<p>
+<a href="../language/worldlang-implications.html">The Implications Of Adopting A Worldwide Auxiliary Language (Worldlang)</a>.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-objections-to-global-government" class="outline-3">
+<h3 id="objections-to-global-government"><span class="section-number-3">16.3.</span> Addressing Objections To Having A Global Government</h3>
+<div class="outline-text-3" id="text-objections-to-global-government">
+<p>
+Many people have objections against global government that will be addressed in this section.
+</p>
+</div>
+
+<div id="outline-container-why-global-government" class="outline-4">
+<h4 id="why-global-government"><span class="section-number-4">16.3.1.</span> Why should there be a global government? Can&rsquo;t nation-state governments suffice?</h4>
+<div class="outline-text-4" id="text-why-global-government">
+<p>
+Global government is <i>necessary</i> in order to resolve critical game theoretical problems on a global scale. Solving game-theoretic problems is exactly what a government is supposed to do, and a global government simply does that a global scale. Some examples of game-theoretic problems that are best resolved by global government are:
+</p>
+<ul class="org-ul">
+<li>Overpopulation</li>
+<li>Global warming and carbon emissions</li>
+<li>Enforcing Georgism and the conservation of the Earth&rsquo;s natural resources</li>
+<li>Regulating the pollution done by each country</li>
+<li>Preventing wars to the fullest extent possible (wars could potentially destroy modern civilization)</li>
+<li>Resolving geopolitical conflicts in order to ensure geopolitical stability</li>
+<li>Et Cetera</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-global-government-responsiveness" class="outline-4">
+<h4 id="global-government-responsiveness"><span class="section-number-4">16.3.2.</span> But aren&rsquo;t smaller-scale governments more responsive and representative?</h4>
+<div class="outline-text-4" id="text-global-government-responsiveness">
+<p>
+It depends on the situation. But even if this premise is true, it doesn&rsquo;t refute the fact that a global government is still <i>necessary</i> in order to resolve critical game theoretical problems on a global scale, lest everyone on Earth shall face potentially catastrophic consequences.
+</p>
+
+<p>
+We&rsquo;re going to have some type of de facto global power structure no matter what happens.
+Today, that is currently the United Nations, combined with the influence of the Chinese and American superpowers, and other international organizations.
+An explicit, limited government is better than a hidden web of power, or a balance of power between hostile societies.
+</p>
+
+<p>
+Also, moving problems somewhere else doesn&rsquo;t accomplish anything. If nation-state governments are less effective for solving a game-theoretic problem instead of a global government, then a global government should take care of the problem instead.
+</p>
+</div>
+</div>
+
+<div id="outline-container-government-levels-authoritarianism" class="outline-4">
+<h4 id="government-levels-authoritarianism"><span class="section-number-4">16.3.3.</span> Aren&rsquo;t higher levels of government more authoritarian?</h4>
+<div class="outline-text-4" id="text-government-levels-authoritarianism">
+<p>
+Maybe, but the same could be said about literally any scale of government. Local governments can be extremely authoritarian, state governments can be extremely authoritarian, national governments can be extremely authoritarian, etc. The key thing to notice here is that even though it&rsquo;s obvious that bigger governments have the power to be authoritarian on a greater scale than smaller governments, it still made more sense to build higher and higher levels of government throughout the history of Humanity. City-states became empires, nation states formed in the following millennia, and United Nations have been formed less than a century ago. So although a global government might have the potential to be more authoritarian than any other type of government that has previously been known, this is not a good argument because it could also be applied against any other type of government as well before those larger scale forms of government were first created.
+</p>
+
+<p>
+The intuition that bigger levels of government are more authoritarian follows from the principle that <a href="../civilization/case-against-libertarianism.html#freedom-and-population-density">more people implies more potential for conflict, and more laws to resolve said conflict</a>. But this is true only up to a point.
+For every population, there is some optimal level of government for sufficiently resolving all the game-theoretic conflicts within the society of interest.
+Beyond that level, it&rsquo;s mostly up to genetics (some populations are naturally more likely to defect or be corrupt than others) and the ruling government/regime as to how authoritarian the government shall be.
+Small countries, like Venezuela or North Korea, can rule with an iron fist.
+On the other hand, larger countries like India, Indonesia, or the United States aren&rsquo;t dictatorships and they have to grant high levels of autonomy to many of their subregions, lest they wouldn&rsquo;t be able to govern as effectively.
+</p>
+
+<p>
+Aside from general corruption, higher levels of government become particularly authoritarian when they try to enforce laws that would be better resolved at lower levels of governments.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-conclusion" class="outline-2">
+<h2 id="conclusion"><span class="section-number-2">17.</span> Conclusion</h2>
+<div class="outline-text-2" id="text-conclusion">
+<p>
+There is no easy solution to the Problem of Governance because every political system is vulnerable to corruption. At the same time, government is necessary for solving game theoretic problems that occur due to human nature.
+</p>
+
+<p>
+The best we can do to achieve this Pragmatopian government structure is to <a href="../epistemology/difficult-to-change-peoples-minds.html">expand rationality</a>, educate people about <a href="../epistemology/3-understanding-evolution.html">biological realism and game theory</a>, and persuade more people to realize that <a href="https://thewaywardaxolotl.blogspot.com/2020/07/what-is-morality.html">morality is an illusion</a>. If the culture won&rsquo;t accept this form of government, then there is no hope of it ever being implemented.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Zero Contradictions</p>
+<p class="date">Created: 2023-07-09 Sun 11:32</p>
+</div>
+</body>
+</html>

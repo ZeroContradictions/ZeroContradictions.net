@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-06-18 Sun 21:45 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Standards In An Ideal World</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="description" content="If we had to start over and decide the best units and standards for measuring everything, here's what Zero Contradictions proposes." />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="../blog-posts.css" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Standards In An Ideal World</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#language">1. Language &amp; Writing System</a></li>
+<li><a href="#mathematics">2. Mathematics</a></li>
+<li><a href="#time">3. Keeping Track Of Time</a>
+<ul>
+<li><a href="#time-reference-points">3.1. Most Reasonable Reference Points For Numbering The Years</a></li>
+</ul>
+</li>
+<li><a href="#units">4. Units</a></li>
+<li><a href="#transportation-infrastructure">5. Transportation Infrastructure</a></li>
+<li><a href="#capital-and-lowercase-letters">6. Fields Where Distinguishing Between Capital And Lowercase Letters Is Important</a></li>
+<li><a href="#org6b2e44a">7. Analogies Between Biological Taxonomy Ranks And Linguistic Taxonomy</a></li>
+<li><a href="#numbering-base-systems">8. Comparison Of Different Numbering Base Systems</a>
+<ul>
+<li><a href="#base-10">8.1. Base-10: Best For Humankind</a></li>
+<li><a href="#base-2">8.2. Base-2: Best For Computers &amp; Technology</a></li>
+<li><a href="#base-6">8.3. Base-6: Best For Mathematics</a></li>
+<li><a href="#base-16">8.4. Base-16: Best For Hexadecimal</a></li>
+<li><a href="#base-12">8.5. Base-12: Not Much Better Than Base-10</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-language" class="outline-2">
+<h2 id="language"><span class="section-number-2">1.</span> Language &amp; Writing System</h2>
+<div class="outline-text-2" id="text-language">
+<ul class="org-ul">
+<li><b>Ideal Constructed International Auxiliary Language</b> - Contains features that are common cross-linguistically and can be learned as a second language in a minimal amount of time. Used as an international auxiliary language.</li>
+<li><b>Language Phonemes</b> - The phonemes should be common and easy to pronounce cross-linguistically.</li>
+<li><b>Writing System</b> - A phonetic, featural alphabet where the strokes should indicate the phonetic properties of the phonemes that the letters represent.</li>
+<li><b>Alphabet Character Strokes</b> - Every letter should be written using only one to two strokes and nothing more.</li>
+<li><b>Alphabet Size</b> - There should be around 32 letters in the alphabet (around the median number of phonemes that would be found inside a natural language).</li>
+<li><b>Alphabet Order</b> - The letters should be ordered logically so that the phonemes are in a logical order, modeled after the phonetic properties of the letter&rsquo;s phonemes.</li>
+<li><b>Punctuation Standards</b> - Punctuation should be simple, intuitive, and precise.</li>
+<li><b>Keyboard Standard</b> - The standard keyboard should be a symmetrical, ergonomic, ortholinear keyboard that organizes the keys based on letter frequency to optimize typing speed.</li>
+<li><b>Kinsey Scale</b> - Uses numbers 0 to 10 or 0 to 12 so that the numbers are always integers.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-mathematics" class="outline-2">
+<h2 id="mathematics"><span class="section-number-2">2.</span> Mathematics</h2>
+<div class="outline-text-2" id="text-mathematics">
+<ul class="org-ul">
+<li><b>Improved Mathematical Notations</b> - Mathematical notations could be more intuitive and make it easier to understand mathematics.
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=sULa9Lc4pck">The Triangle Of Power</a> - A more practical way to understand the relationship between exponents, logarithms, and n-roots.</li>
+<li><b>Pictographical Representations Of Trigonometric Functions</b>: sin(), cos(), and tan()
+<ul class="org-ul">
+<li>These would be similar to the ones shown in the video linked above.</li>
+<li>How would the less commonly used trigonometric functions be represented?</li>
+</ul></li>
+</ul></li>
+<li><b>Numbering System</b> - Decimal base-10 numbering system since it is the most ergonomic and most practical for humans | Binary base-2 for computers and electronics | Heximal base-6 numbering system in some instances, since it is easiest to represent decimals, fractions, detect prime numbers, and use in general</li>
+<li><b>Numbering System Digits</b> - Every digit should be written using only one stroke and nothing more</li>
+<li><b>Symbols</b> - τ radians would be equivalent to 180° and π radians would be equivalent to 360°.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-time" class="outline-2">
+<h2 id="time"><span class="section-number-2">3.</span> Keeping Track Of Time</h2>
+<div class="outline-text-2" id="text-time">
+<ul class="org-ul">
+<li><b>Calendar</b> - Lunisolar Calendar with 12 or 13 months in every year around the sun</li>
+<li><b>Timezones</b> - None, get rid of them. Regions like China, India, and most of continental Western Europe do just fine with having a single timezone covering over their entire regions. Timezones are just time with unnecessary extra steps, and they make time more confusing, rather than less confusing. For more info, see: <a href="https://www.youtube.com/watch?v=2W32bZgtqms">Polymatter: The Case Against Timezones</a>
+<ul class="org-ul">
+<li>But if there are going to be timezones, and if the UTC region were to be decided by the entire world population and a democratic consensus, it seems that it would probably be centered around China, Indochina, and Korea since that vertical region of the world would be the most densely populated of the 24 regions.</li>
+</ul></li>
+<li><b>Date Formats</b> - Year/Month/Day or YYYY/MM/DD is the best format for understanding when things happened in the past and sorting dates chronologically. Any other date format will sort files out of order when running through a sorting algorithm.</li>
+<li><b>Daily Time</b> - Days and years; humans are still calibrated to live and work their lives according to days, so days are unquestionably logical. Years are also indisputably logical since the state of the Earth is based in part by seasons.</li>
+<li><a href="https://kunimune.home.blog/2019/11/07/introducing-the-danseiji-projections/">The Danseiji Map Projections</a> - Unique and Recently Invented Map Projection.</li>
+</ul>
+</div>
+
+<div id="outline-container-time-reference-points" class="outline-3">
+<h3 id="time-reference-points"><span class="section-number-3">3.1.</span> Most Reasonable Reference Points For Numbering The Years</h3>
+<div class="outline-text-3" id="text-time-reference-points">
+<p>
+Note that all of these points are so far back that they are estimations, none of them are perfectly exact:
+</p>
+<ul class="org-ul">
+<li>Possible starting points for timeline:</li>
+<li>The very beginning of universe</li>
+<li>The Creation of solar system</li>
+<li>Written history versus non-written history</li>
+<li>Christ&rsquo;s birth</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-units" class="outline-2">
+<h2 id="units"><span class="section-number-2">4.</span> Units</h2>
+<div class="outline-text-2" id="text-units">
+<ul class="org-ul">
+<li><b>Seconds</b> - Divide the Day into 20 hours (2 * [2 * 5]), then divide the hour into 100 minutes, then divide the minute into 100 seconds, then divide the second into 100 centiseconds. Then all units of time will work according to a base-10 numbering system. Base-10 multiples of years will of course be used for longest periods of human time.</li>
+<li><b>Length / Distances</b> - Meters</li>
+<li><b>Weights</b> - Grams for everyday use | Kilograms for scientific use</li>
+<li><b>Spacial Volume</b> - Milliliters for everyday use</li>
+<li><b>Temperature Scale</b> - Fahrenheit for everyday use (Celsius is meant for water, whereas most people use temperature to measure the weather or atmosphere) | Kelvin for scientific use</li>
+<li><b>Angles</b> - Radians | Centiradians | Deciradians | Gradians</li>
+<li><b>Sound Volume</b> - Decibels</li>
+<li><b>Electric Current</b> - Amperes</li>
+<li><b>Luminous Intensity</b> - Candelas</li>
+<li><b>Amount Of Substance</b> - Moles</li>
+<li><b>Other Standards As Described By The International Organization Of Standards</b></li>
+<li><b>Star Classification</b> - The Hertzsprung-Russel Diagram could categorize stars alphabetically, instead of having random letters taken from the older, inferior star classification system.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-transportation-infrastructure" class="outline-2">
+<h2 id="transportation-infrastructure"><span class="section-number-2">5.</span> Transportation Infrastructure</h2>
+<div class="outline-text-2" id="text-transportation-infrastructure">
+<ul class="org-ul">
+<li><b>High-Speed Rail</b> - for Densely Populated Areas</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-capital-and-lowercase-letters" class="outline-2">
+<h2 id="capital-and-lowercase-letters"><span class="section-number-2">6.</span> Fields Where Distinguishing Between Capital And Lowercase Letters Is Important</h2>
+<div class="outline-text-2" id="text-capital-and-lowercase-letters">
+<ul class="org-ul">
+<li><b>Physics</b>: uppercase letters denote functions, lowercase letters denote variables</li>
+<li><b>Set Theory</b>: lowercase letters denote elements, capital letters denote sets</li>
+<li><b>Computer Science</b>: camel case is used for variable and function names; constants are written in all caps</li>
+<li><b>Linguistics</b>: capital letters are used for glossing, lowercase letters for translations; mixed uses in IPA</li>
+<li><b>Biology</b>: capital letters denote dominant traits, lowercase letters denote recessive traits</li>
+<li><b>Calligraphy</b>: both cases are used for elegance</li>
+<li><b>Communication</b>: capital letters are used for emphasis or yelling, lowercase leters for regular text/speech</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6b2e44a" class="outline-2">
+<h2 id="org6b2e44a"><span class="section-number-2">7.</span> Analogies Between Biological Taxonomy Ranks And Linguistic Taxonomy</h2>
+<div class="outline-text-2" id="text-7">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Biological Taxonomic Ranks</td>
+<td class="org-left">Example With Relatives Of Homo Sapiens</td>
+<td class="org-left">Linguistic Taxonomic Terminology</td>
+<td class="org-left">Example With Relatives Of Western American English</td>
+<td class="org-left">Example With Relatives Of United States Spanish</td>
+</tr>
+
+<tr>
+<td class="org-left">Life</td>
+<td class="org-left">Life</td>
+<td class="org-left">Human Language</td>
+<td class="org-left">Human Language</td>
+<td class="org-left">Human Language</td>
+</tr>
+
+<tr>
+<td class="org-left">Domain</td>
+<td class="org-left">Eukaryotes</td>
+<td class="org-left">Language Family</td>
+<td class="org-left">Indo-European Language Family</td>
+<td class="org-left">Indo-European Language Family</td>
+</tr>
+
+<tr>
+<td class="org-left">Kingdom</td>
+<td class="org-left">Animalia</td>
+<td class="org-left">Language Family Branch</td>
+<td class="org-left">Germanic Kingdom</td>
+<td class="org-left">Italic Kingdom</td>
+</tr>
+
+<tr>
+<td class="org-left">Phylum</td>
+<td class="org-left">Chordata</td>
+<td class="org-left">Sub Branch</td>
+<td class="org-left">Western Germanic Phylum</td>
+<td class="org-left">Romance Phylum, Faliscan, Umbrian and Oscan</td>
+</tr>
+
+<tr>
+<td class="org-left">Class</td>
+<td class="org-left">Mammalia</td>
+<td class="org-left">Division</td>
+<td class="org-left">North Sea Germanic (English, Scots, Frisian, Low German)</td>
+<td class="org-left">Western Romance</td>
+</tr>
+
+<tr>
+<td class="org-left">Order</td>
+<td class="org-left">Primates</td>
+<td class="org-left">Subdivision</td>
+<td class="org-left">N/A</td>
+<td class="org-left">N/A</td>
+</tr>
+
+<tr>
+<td class="org-left">Family</td>
+<td class="org-left">Hominidae (Great Apes)</td>
+<td class="org-left">Language Continuum</td>
+<td class="org-left">N/A</td>
+<td class="org-left">N/A</td>
+</tr>
+
+<tr>
+<td class="org-left">Genus</td>
+<td class="org-left">Homo</td>
+<td class="org-left">Language</td>
+<td class="org-left">Anglic Languages (Old English Dialects and Descendents)</td>
+<td class="org-left">Iberian Romance (Spanish, Galician, Portuguese, Catalan, Etc)</td>
+</tr>
+
+<tr>
+<td class="org-left">Species</td>
+<td class="org-left">Homo Sapiens</td>
+<td class="org-left">Dialect Continuum</td>
+<td class="org-left">Modern English, Modern Scots, Tok Pisin</td>
+<td class="org-left">Modern Spanish, Catalan (Analogy of Portuguese and Galician)</td>
+</tr>
+
+<tr>
+<td class="org-left">Race</td>
+<td class="org-left">Germans, Yamato, Han Chinese, Et Cetera</td>
+<td class="org-left">Dialect</td>
+<td class="org-left">American English, British English, Etc</td>
+<td class="org-left">United States Spanish, Castillian Spanish, Etc</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+At least with languages, it seems less useful, less intuitive, and more complicated to use more than five or six major taxonomic rankings for describing the lineages of languages, dialects, their cousins, and other relatives. Of course, sometimes in biology, the main eight taxonomic ranks are sometimes not descriptive enough, so sub and sub sub rankings are required for description too, and the same easily applies to linguistics as far as taxonomic classification is concerned.
+Proto-Indo-European -&gt; Germanic -&gt; Western Germanic -&gt; English and Scots -&gt; English and Scots Dialects
+Proto-Indo-European -&gt; Romance -&gt; Western Romance -&gt; Iberian Romance (e.g. Portuguese and Galician) -&gt; Portuguese and Galician Dialects
+</p>
+
+<p>
+Analogies used for thinking about the degree of relatedness between two language samples:
+</p>
+<ul class="org-ul">
+<li>American English versus British English, United States Spanish versus Castillian Spanish</li>
+<li>Scots versus English, or Portuguese versus Galician</li>
+<li>Spanish versus Italian, or Spanish versus Portuguese, or High German versus Dutch, or English versus Tok Pisin</li>
+<li>English versus German, Spanish versus Romanian</li>
+<li>Spanish versus German</li>
+<li>Spanish versus Hindi</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-numbering-base-systems" class="outline-2">
+<h2 id="numbering-base-systems"><span class="section-number-2">8.</span> Comparison Of Different Numbering Base Systems</h2>
+<div class="outline-text-2" id="text-numbering-base-systems">
+<p>
+There are only four numbering systems that would be practical for humanity to use for the rest of its existence. They are base-2, base-6, base-10, and base-16. Any other bases would either be too large, too small, or too impractical (when considering the factors that make up each base). This is a list of each of their advantages.
+</p>
+</div>
+
+<div id="outline-container-base-10" class="outline-3">
+<h3 id="base-10"><span class="section-number-3">8.1.</span> Base-10: Best For Humankind</h3>
+<div class="outline-text-3" id="text-base-10">
+<ul class="org-ul">
+<li>Contains the second most logical set of factors since five is the next most logical number to factor into a base if one skips number three</li>
+<li>Gives the best balance between base-6 and base-16 when considering the number of digits required to represent a number versus the number of unique digits needed to represent numbers</li>
+<li>The square of 10 (100) gives the best balance between precision and minimalism, which is especially important for percentages, temperatures, counting, etc.</li>
+<li>Humans have 10 fingers, which naturally gives it a tendency to be more favorable by humans compared to other bases</li>
+<li>It is the also best numbering system to map onto keyboards and numberpads since the vast majority of humans have 10 fingers</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-base-2" class="outline-3">
+<h3 id="base-2"><span class="section-number-3">8.2.</span> Base-2: Best For Computers &amp; Technology</h3>
+<div class="outline-text-3" id="text-base-2">
+<ul class="org-ul">
+<li>Most-efficient for just about anything relating to computing and boolean logic</li>
+<li>Can count the farthest on ten fingers</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-base-6" class="outline-3">
+<h3 id="base-6"><span class="section-number-3">8.3.</span> Base-6: Best For Mathematics</h3>
+<div class="outline-text-3" id="text-base-6">
+<ul class="org-ul">
+<li>Best for fractions, especially one-third, one-sixth, and one-seventh compared to base-10</li>
+<li>Best for prime numbers, due to its inclusion of factors 2 and 3 within its base; 2 out of 6 of ending numbers indicates prime number versus 4 out of 10 for base-10</li>
+<li>Contains the most logical set of factors since base-6 can be easily divided by the first three natural numbers: one, two, and three</li>
+<li>6 is a perfect number</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-base-16" class="outline-3">
+<h3 id="base-16"><span class="section-number-3">8.4.</span> Base-16: Best For Hexadecimal</h3>
+<div class="outline-text-3" id="text-base-16">
+<ul class="org-ul">
+<li>Most efficient base for humans to convert numbers between base-2 and human notation</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-base-12" class="outline-3">
+<h3 id="base-12"><span class="section-number-3">8.5.</span> Base-12: Not Much Better Than Base-10</h3>
+<div class="outline-text-3" id="text-base-12">
+<p>
+Base-12 is a commonly advocated numbering system, but it doesn&rsquo;t really offer any worthwhile advantages for humans compared to base-10. It is argued that it would be able to represent one-third, one-fourth, and one-sixth more simply than base-10 in decimal notation, but these slight improvements are not worth the trade-off of having to represent one-fifth with four repeating digits. Base-12 would be the best numbering system for an unknown alien civilization with 12 fingers (using the above reasoning), but base-10 is still the best numbering system for humankind.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Zero Contradictions</p>
+<p class="date">Created: 2023-06-18 Sun 21:45</p>
+</div>
+</body>
+</html>

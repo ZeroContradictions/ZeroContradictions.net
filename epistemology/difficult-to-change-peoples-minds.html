@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-07-03 Mon 09:59 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Why It's So Difficult To Change People's Minds</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="description" content="Belief structures, echo chambers, heuristics, censorship, identities, and more make it difficult for people to change their minds." />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="../blog-posts.css" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Why It&rsquo;s So Difficult To Change People&rsquo;s Minds</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#intro">1. Introduction</a></li>
+<li><a href="#how-coherentism-and-belief-systems-work">2. How Coherentism, Belief Systems, and Echo Chambers Work</a>
+<ul>
+<li><a href="#explanation-why-not-more-popular">2.1. Every Ideology Has Their Own Explanation Why They&rsquo;re Not More Popular</a></li>
+</ul>
+</li>
+<li><a href="#culture-and-social-confirmation">3. The Current Culture And The Need For Social Confirmation</a>
+<ul>
+<li><a href="#most-popular-arguments">3.1. Culture Determines The Most Popular Beliefs And Arguments, Not Rational Thought</a></li>
+</ul>
+</li>
+<li><a href="#hub-and-spoke-networks">4. Modeling Belief Networks As Hub-And-Spoke Diagrams</a>
+<ul>
+<li><a href="#belief-maps-and-propositional-logic">4.1. Belief Maps And Propositional Logic</a></li>
+<li><a href="#what-belief-maps-dont-show">4.2. Selective Attention: What Belief Maps Don&rsquo;t Show</a></li>
+<li><a href="#cores-value-nodes">4.3. Core Values and Theory of Value</a></li>
+<li><a href="#software-for-mapping-belief-networks">4.4. Software For Mapping Belief Networks</a></li>
+<li><a href="#belief-networks-examples">4.5. Examples of Opposing Ideologies For Demonstrating How Belief Networks Work</a>
+<ul>
+<li><a href="#religion-vs-atheists">4.5.1. Religious Versus Atheist Beliefs</a></li>
+<li><a href="#conservatives-vs-liberals">4.5.2. Conservative Versus Modern Liberal Beliefs</a></li>
+<li><a href="#georgism-vs-ancapism">4.5.3. Georgist Versus Ancap Beliefs</a></li>
+<li><a href="#objectivism-belief-network-map">4.5.4. Objectivism Belief Network Map</a></li>
+<li><a href="#pragmatopianism-versus-efilism">4.5.5. Pragmatopian Versus Efilist Beliefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#selective-attention-ignorance-and-contradictions">5. Selective Attention, Selective Ignorance, And Recognizing Contradictions</a></li>
+<li><a href="#heuristics-affecting-ideologies">6. How Heuristics Affect Different People&rsquo;s Ideologies</a>
+<ul>
+<li><a href="#apophrenia-and-confirmation-bias">6.1. Apophrenia and Confirmation Bias: When People Selectively Perceive Patterns That Cohere With Their Beliefs, Rather Than Contradicting Them</a></li>
+<li><a href="#ridiculous-ideas">6.2. Why Ideologues Come Up With Ridiculous Ideas</a></li>
+</ul>
+</li>
+<li><a href="#rational-ignorance-and-appeals-to-authority">7. Rational Ignorance And Appeals To Authority</a></li>
+<li><a href="#censorship-and-strawmen">8. Censorship, Strawmen, And The Ideological Turing Test</a></li>
+<li><a href="#sapir-whorf-effect">9. The Sapir-Whorf Effect Affects People&rsquo;s Subconscious Thoughts</a></li>
+<li><a href="#ignorance-of-epistemology">10. Most People Never Bother To Think About Epistemology</a>
+<ul>
+<li><a href="#slow-philosophical-progress">10.1. Philosophical Progress Has Historically Been Very Slow</a></li>
+<li><a href="#provenance-of-belief">10.2. Empirical Verification and the Problem of the Criterion</a></li>
+<li><a href="#disagreement-on-arguments-and-fallacies">10.3. People Even Disagree On What Counts As An Argument Or A Fallacy</a></li>
+</ul>
+</li>
+<li><a href="#identities-and-ideologies">11. Most People&rsquo;s Identities Are Strongly Connected To Their Ideologies</a>
+<ul>
+<li><a href="#strive-for-social-status">11.1. Most People Strive For Social Status And Moral Purity Instead Of Reason</a></li>
+</ul>
+</li>
+<li><a href="#biological-differences">12. Genetic and Hormonal Differences Affect People&rsquo;s Beliefs</a></li>
+<li><a href="#changing-peoples-minds">13. What It Takes To Change People&rsquo;s Minds</a></li>
+<li><a href="#best-belief-system">14. What is the Best Belief System?</a>
+<ul>
+<li><a href="#recommended-media">14.1. What best essays/videos/books do you recommend for better understanding this information?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<hr />
+<p>
+Note: I haven&rsquo;t finished writing this file yet. It takes time to write stuff, and a lot of what is displayed here may not flow very well from paragraph to paragraph.
+</p>
+
+<div id="outline-container-intro" class="outline-2">
+<h2 id="intro"><span class="section-number-2">1.</span> Introduction</h2>
+<div class="outline-text-2" id="text-intro">
+<p>
+I am definitely not the first person to recognize how futile it usually is to argue with someone else who believes in a different ideology.
+</p>
+
+<p>
+<a href="https://web.archive.org/web/20210910060619mp_/https://waitbutwhy.com/2019/09/stories.html">The Story of Us blog series by WaitButWhy</a> gives a lot of appealing visuals, text and metaphors for describing the current state of political discussion in the modern world, but it fails to dig deep into the epistemological reasons why people are so strongly inclined to not change their minds when they disagree with others. This essay is an attempt to describe what that series and most other works have failed to recognize.
+</p>
+
+<p>
+&ldquo;Anyone can prattle nonsense, and they&rsquo;ll always be able to find people to believe it, especially if they can dress it up in superstitious flummery. Careful reasoning and experience of the world are needed.&rdquo; --<a href="https://en.wikipedia.org/wiki/Wang_Chong">Wang Chong</a>
+</p>
+
+
+<p>
+i
+</p>
+</div>
+</div>
+
+<div id="outline-container-how-coherentism-and-belief-systems-work" class="outline-2">
+<h2 id="how-coherentism-and-belief-systems-work"><span class="section-number-2">2.</span> How Coherentism, Belief Systems, and Echo Chambers Work</h2>
+<div class="outline-text-2" id="text-how-coherentism-and-belief-systems-work">
+<p>
+<a href="../epistemology/1D-empirically-grounded-coherentism.html#how-coherentism-works">How Coherentism Works</a>
+</p>
+
+<p>
+Every person has their own coherentist network of facts within their minds, which was formed from their social networks: online websites like Youtube, Twitter, Reddit, Facebook, the Internet in general, whatever influential books they&rsquo;ve read, their friends, their own personal experiences, and whatever conclusions they make up on their own from all of that and their life experiences. Each person&rsquo;s social network is usually an echo chamber or bubble, since most people prefer information that conforms with their own narratives, instead of what is true of reality.
+</p>
+
+<p>
+<a href="https://thewaywardaxolotl.blogspot.com/2014/11/social-delusions.html">Social Delusions</a>
+</p>
+
+<p>
+The dominant, collective moral narrative of each online network selects for whatever information conforms best with the moral narrative of the users using the network. i
+</p>
+
+<p>
+So everybody and every ideology has a different network of facts stored in their minds that they consider to be true. Nearly all these stored mental facts were cherry-picked to a great degree to fit their existing belief systems, rather than to challenge them.
+</p>
+
+<p>
+Within these online networks, people usually promote articles with misleading headlines, as long as the headlines fit their narrative, even if they haven&rsquo;t actually read the article and if reading the article wouldn&rsquo;t actually support (and might even contradict) their narrative.
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Texas_sharpshooter_fallacy">Wikipedia: The Texas Sharpshooter Fallacy</a>
+</p>
+
+<p>
+[Defining belief systems]
+</p>
+
+<p>
+We have many other beliefs that we believe in that are all connected in similar networks, besides just ideological ones. The beliefs within the ideological belief system are a subset of one&rsquo;s entire belief system, that is their entire mental model of reality from the perspective of them as a subject.
+</p>
+
+<p>
+<a href="https://davidwees.com/content/what-is-conceptual-understanding/">https://davidwees.com/content/what-is-conceptual-understanding/</a>
+</p>
+
+<p>
+[market segmentation and belief networks]
+</p>
+
+<p>
+Aside from the fact that most people never seriously think about epistemology to any great extent, another reason why most people are so unaware of how all belief systems have coherentist structures is that most people don&rsquo;t usually make many significant changes to their ideologies or belief systems within their lifetimes. People who have uprooted their entire ideological belief systems once or twice in their lives are somewhat common, but people who have done it even more than that are even rarer, and of those people, very few of them analyze the structures of their belief systems from an epistemic point of view. I, however, have changed my belief system many times as a young adult, as I have detailed in <a href="../misc/journey.html">my political/philosophical misc</a>. I went through many ideologies as I chased after understanding, and each time, I felt even more confident in my beliefs. i
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Coherence_(linguistics)">Wikipedia: Coherence (Linguistics)</a>
+</p>
+
+<p>
+In normies circles, people often parrot sentences and sound bites that supposedly highlight/expose contradictions in their opponents&rsquo; beliefs, whether they actually do that or not.
+</p>
+
+<p>
+This is a type of low-level thinking.
+</p>
+
+<p>
+Since everybody has a different coherentist belief network for everything that they believe in, debating is mostly pointless, because everybody thinks that they’re right since every person has strong coherence within their belief networks. People can occasionally persuade people with different beliefs in the belief networks of their interlocutors, but this has a very low probability of succeeding since the coherentism within every person&rsquo;s belief network gives everybody a strong sense that they are right and everybody else is wrong.
+</p>
+
+<p>
+Relevant Article: <a href="https://waitbutwhy.com/2019/10/idea-labs-echo-chambers.html">WaitButWhy: Idea Labs And Echo Chambers</a>
+</p>
+</div>
+
+<div id="outline-container-explanation-why-not-more-popular" class="outline-3">
+<h3 id="explanation-why-not-more-popular"><span class="section-number-3">2.1.</span> Every Ideology Has Their Own Explanation Why They&rsquo;re Not More Popular</h3>
+<div class="outline-text-3" id="text-explanation-why-not-more-popular">
+<p>
+Every ideology has their own narrative for why their beliefs are not more popular, whether it&rsquo;s true or not. If they didn&rsquo;t, this would be a major source of incoherence that would break many of the connections inside the ideology&rsquo;s belief network, and that incoherence would pose a threat to the ideology&rsquo;s propagation and continued existence.
+</p>
+<ul class="org-ul">
+<li>If you ask Communists, they will say that the Capitalist system and Pro-Western propaganda have brainwashed everybody into supporting Capitalism and wage slavery, and the CIA is responsible for overthrowing foreign attempts to establish Communism in other countries during the Cold War, supposedly because it is in the interest of the Capitalist system, and not for geopolitical interests.</li>
+<li>If you ask Ancaps, they will say that it is because the government brainwashed everybody into believing in state of them with the help of the public education system.</li>
+<li>If you ask Efilists, they will say that it is because everybody’s DNA or biological code programmed everybody to ignore all the suffering in life, embrace Natalism, and ignore Antinatalist, Pro-Mortalist, and Efilist thinking. And they are actually right that life is wired to some extent to be Natalist, but they are wrong that DNA is the puppeteer, and the organism is the puppet. Once again, this is the rhetoric of exploitation, it’s not even true that DNA contains all the biological programming for organisms since the cell is the correct medium of inheritance.</li>
+<li>If you ask Feminists, they will say that the Patriarchy is so well entrenched into the mainstream culture that it causes everybody to reject Feminism and the so-called equality of the sexes.</li>
+<li>If you ask Objectivists, they will say that it is because the majority of the world is religious, and so the atheist beliefs of Objectivism are unappealing to them. They will also say that the explicitly pro-selfishness preaching of Objectivism is unattractive to the modern, altruistic and irrational culture.</li>
+</ul>
+<p>
+The exception to this rule is when someone strongly believes in a very mainstream ideology. In which case, they would have a node in their belief network that their belief network is the most popular or one of the most popular ideologies because it&rsquo;s the most correct. While this is basically an Appeal to the People Fallacy, most people find it reassuring when other people (especially a majority) agree with their beliefs.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-culture-and-social-confirmation" class="outline-2">
+<h2 id="culture-and-social-confirmation"><span class="section-number-2">3.</span> The Current Culture And The Need For Social Confirmation</h2>
+<div class="outline-text-2" id="text-culture-and-social-confirmation">
+<p>
+Most humans beings need some form of social confirmation and approval of their beliefs in order to feel mentally healthy stable. As a result, it really is necessary to be socially isolated to some extent in order to independently arrive at the truth about human nature, because socialized people have strong social incentives to shun the truth in order to conform with the moral values of their community, culture, and society. Someone may be inclined to accept some or many of the truths of the <a href="#best-belief-system">most rational belief system</a> (as I was during my teen years), but the disagreement of the dominant culture with those truths about human nature creates incoherence within the minds of most rational people in society. The need to be accepted by one&rsquo;s culture and community thus strays people away from the truth.
+</p>
+</div>
+
+<div id="outline-container-most-popular-arguments" class="outline-3">
+<h3 id="most-popular-arguments"><span class="section-number-3">3.1.</span> Culture Determines The Most Popular Beliefs And Arguments, Not Rational Thought</h3>
+<div class="outline-text-3" id="text-most-popular-arguments">
+<p>
+The most popular arguments are the ones that are accepted the most by the current culture, not the most reasonable arguments.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-hub-and-spoke-networks" class="outline-2">
+<h2 id="hub-and-spoke-networks"><span class="section-number-2">4.</span> Modeling Belief Networks As Hub-And-Spoke Diagrams</h2>
+<div class="outline-text-2" id="text-hub-and-spoke-networks">
+<p>
+(These are not to be confused with <a href="https://en.wikipedia.org/wiki/Bayesian_network">Bayesian Networks</a>, which are also often called belief networks.)
+</p>
+
+<p>
+Thus, when people criticize opposing ideologies, what will often happen is that they have one argument that they think is a silver bullet that they can utter that will automatically win the debate in their favor. Sometimes this actually does happen, and it&rsquo;s easier to happen the more ridiculous the opposing person&rsquo;s claim is. When the supposed silver bullet doesn&rsquo;t convince the other person that they&rsquo;re wrong (and there is no censorship to shut the debate down), what usually ensues is a lengthy debate where the opposing ideologist recites other beliefs connected to the belief node that is under attack. This makes it very challenging to refute even a single belief, because the debaters aren&rsquo;t just attacking a single belief, they&rsquo;re also attacking the entire network of beliefs that all back up and support that one belief node.
+</p>
+
+
+<div id="orgdad722e" class="figure">
+<p><img src="../images/coherentist-belief-system-1.png" alt="coherentist-belief-system-1.png" />
+</p>
+</div>
+
+<p>
+This is why when people convert to new ideologies, it can be gradual process when they&rsquo;re slowly discarding beliefs from their former worldview (they&rsquo;re removing the <a href="https://en.wiktionary.org/wiki/spoke#English">spokes</a> within their belief network), or a really rapid process where a multitude beliefs are discarded all at once when a particular belief gets disproven (one of the central <a href="https://en.wiktionary.org/wiki/hub#English">hubs</a> of the belief network). Perhaps even a new ideology is introduced, although this part will probably be a more lengthy process since it usually takes time to adapt and get used to a new ideology.
+</p>
+
+<p>
+One of the reasons why I like to write <a href="../index.html#FAQs">FAQs pages for addressing people&rsquo;s questions</a> is that I believe from <a href="../misc/contact.html#FAQs-pages-are-best">my own personal experiences</a> that they are a really effective way to address multiple spoke beliefs of an individual&rsquo;s belief system at once.
+</p>
+
+
+
+<p>
+For faster results it is probably more efficient to attack the hubs of an ideological belief system rather than the spokes, when it&rsquo;s possible. But unfortunately, that is usually harder to do because the hubs that have the mass connection. We can think of the relative worth of dismantling other people’s beliefs in terms of a cost benefit analysis. If you manage to dismantle one of the beliefs that are relatively more well-connected than other ideas, then there is a greater reward for doing so, but the same time it can also be more difficult, because the greater number of connections to that central belief can also make it very difficult to let go of. Conversely, attacking beliefs, or the more minor ones could be easier since they have your connections to the other beliefs, but there is also a small payoff for disproving them due to their fewer connections.
+</p>
+
+<p>
+So generally speaking, there is never a right way to dismantle someone else&rsquo;s belief system. One can start the spoke beliefs, or one can start the hub beliefs. They both have payoffs that tend to correlate proportionally to the number of collections that they have, so the best beliefs to refute are the ones that you think you will have the best shot at.
+</p>
+
+<p>
+When people ask questions about things that they are unsure of relating to their ideologies to other believers of the ideology, it is typically because they are seeking coherence for the ideology regarding one of the weaker nodes of their belief network. these moments are often great times to strike at the ideology and expose contradictions within the belief system, if there are any.
+The rejection or further propagation of the ideology depends on its ability to generate coherent, sounding explanations for times like these where coherent is lacking.
+</p>
+
+<p>
+The strive and curiosity for knowledge is largely driven by the strive for or seeking coherence, which is to strive to have a representative model of reality that is as accurate as can be.
+</p>
+
+<p>
+We have already established that in order to validly believe anything there needs to be at least some evidence, but regarding the need for coherence which causes ideologues to often come up with crazy ideas in order to increase the coherence of their ideological belief systems, a lot of ideologues for site, their belief systems, and what they have observed as the evidence in favor of those crazy ideas.
+</p>
+
+<p>
+This reveals that whatever a believer considered &ldquo;evidence&rdquo; is any fragment beliefs of their beliefs systems what should happen forms, according to their life experiences as a subject and process.
+Evidence seems to be nearly synonymous with beliefs.
+</p>
+
+<p>
+It can be very difficult and time consuming to draw complete belief, not work, maps, showing all of a person&rsquo;s ideological beliefs, especially if they have dozens or even hundreds of beliefs with hundreds of connections between them.
+</p>
+
+<p>
+Often times, when people construct their own Internet Wikis (e.g. <a href="https://www.wikipedia.org/">Wikipedia</a>, <a href="https://www.conservapedia.com/Main_Page">Conservapedia</a>, <a href="https://rationalwiki.org/wiki/Main_Page">&ldquo;Rational&rdquo; Wiki</a>, <a href="https://en.metapedia.org/wiki/Main_Page">Metapedia</a>, etc), the Wiki writers are just constructing articles that show the maps and details linking all of their beliefs together. Another example would be how this website and all its links illustrate what Zero Contradictions&rsquo; belief network looks like, except for the remaining out-of-date content.
+</p>
+
+<p>
+The goal of debating is to attack each and all of the nodes in the opponent&rsquo;s belief network, but more so to change the belief networks of the audience members.
+</p>
+</div>
+
+
+<div id="outline-container-belief-maps-and-propositional-logic" class="outline-3">
+<h3 id="belief-maps-and-propositional-logic"><span class="section-number-3">4.1.</span> Belief Maps And Propositional Logic</h3>
+<div class="outline-text-3" id="text-belief-maps-and-propositional-logic">
+<p>
+When drawing the directed edges between all the different nodes in someone’s belief network, we can label each some these edges with boolean operations, because the combination of these beliefs and the format of these boolean operations is equivalent to the formal arguments for people, explicitly list out the propositions that they used to reach their conclusions. If the directed edges to not have any boolean operations on them then that only indicates that one believe implies the belief where the arrow is pointing.
+</p>
+
+<p>
+If there is a directed edge from belief 1 to belief 2 and a directed edge from belief 2 to belief 1, then that probably indicates that the relationship between those two beliefs (or two propositions, if we think of them as propositions instead) is a biconditional.
+</p>
+
+<p>
+For example, if (A ^ B ^ C) -&gt; D, then (~A v ~B v ~C) could make D undecided, but we would need software that can convey a 3-to-1 edge connection from A, B, and C to D.
+</p>
+</div>
+</div>
+
+<div id="outline-container-what-belief-maps-dont-show" class="outline-3">
+<h3 id="what-belief-maps-dont-show"><span class="section-number-3">4.2.</span> Selective Attention: What Belief Maps Don&rsquo;t Show</h3>
+<div class="outline-text-3" id="text-what-belief-maps-dont-show">
+<p>
+Another thing to keep in mind is that selective attention (or perhaps selective ignorance) of contradictions is as important to belief networks as the belief nodes themselves.
+</p>
+
+<p>
+If the selective ignorance of some contradictions was never realized in the first place, then many of the core belief network hubs and nodes never would&rsquo;ve appeared in the first place. And this is especially important to note because although we can map belief network nodes as a graph, we would often have no idea how these beliefs network nodes were formed in the first place, if we are not aware of the selective attention and selective ignorance of some important concepts in the first place.
+</p>
+
+<p>
+That being said, when belief maps are created, it is important to keep separate notes, or a separate diagram, explicitly detailing how the believers&rsquo; stream of sensory input, selective attention, and thought process played out.
+</p>
+
+<p>
+For example, many Anarcho-Communists would have a node in their belief network that if people don&rsquo;t work under Capitalism, then they will die, but if they were to draw belief maps representing their own beliefs, they wouldn&rsquo;t think to add a node or note to the diagram that they&rsquo;re ignoring that literally every economic ideology requires people to work, lest they die. Like how people are guaranteed to die on a deserted island if they didn&rsquo;t work to find food, water, and shelter at all.
+</p>
+
+<p>
+The main reason why exposure to other people with different ideologies/beliefs is important is mainly because it enables us to focus our attention on beliefs that may have been ignored by our selective ignorance / attention. To a somewhat lesser extent, it can also expose us to different logic/reasoning that can improve the correspondence of our belief networks with reality.
+</p>
+
+<p>
+When people outline their arguments and premises, propositions, and conclusion format, what they are doing is that they are taking different notes from their belief that work, and saying them in an explicit format instead of an implicit one. However, one limitation is that they do not list all of the assumed implicit premises and selective attention. Biases that were used to help them reach the conclusion that they are stating.
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-cores-value-nodes" class="outline-3">
+<h3 id="cores-value-nodes"><span class="section-number-3">4.3.</span> Core Values and Theory of Value</h3>
+<div class="outline-text-3" id="text-cores-value-nodes">
+<p>
+<a href="../epistemology/axiology.html">Since there is ultimately no a priori justification for anything</a>, values and theories of values will often be the most central hubs of a person&rsquo;s belief network.
+</p>
+
+<p>
+If one can be convinced to change their theory of value, then the section of their belief network that they choose to argue for and defend will change to a different section.
+</p>
+
+<p>
+People will often believe what they <i>want</i> to believe, not what is true.
+</p>
+</div>
+</div>
+
+<div id="outline-container-software-for-mapping-belief-networks" class="outline-3">
+<h3 id="software-for-mapping-belief-networks"><span class="section-number-3">4.4.</span> Software For Mapping Belief Networks</h3>
+<div class="outline-text-3" id="text-software-for-mapping-belief-networks">
+<p>
+<a href="https://www.graphviz.org/doc/info/command.html">GraphViz Software For Mapping Belief Networks</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-belief-networks-examples" class="outline-3">
+<h3 id="belief-networks-examples"><span class="section-number-3">4.5.</span> Examples of Opposing Ideologies For Demonstrating How Belief Networks Work</h3>
+<div class="outline-text-3" id="text-belief-networks-examples">
+<p>
+i
+</p>
+</div>
+
+<div id="outline-container-religion-vs-atheists" class="outline-4">
+<h4 id="religion-vs-atheists"><span class="section-number-4">4.5.1.</span> Religious Versus Atheist Beliefs</h4>
+<div class="outline-text-4" id="text-religion-vs-atheists">
+<p>
+i
+</p>
+
+<p>
+Pro-life people frequently repeat that there are many contraceptives available, so there should be no excuse if a woman got pregnant from consensual sex. They repeat this frequently, because this justification is a major node within their belief network for opposing the legality of abortions.
+</p>
+</div>
+</div>
+
+<div id="outline-container-conservatives-vs-liberals" class="outline-4">
+<h4 id="conservatives-vs-liberals"><span class="section-number-4">4.5.2.</span> Conservative Versus Modern Liberal Beliefs</h4>
+<div class="outline-text-4" id="text-conservatives-vs-liberals">
+<p>
+i
+</p>
+</div>
+</div>
+
+<div id="outline-container-georgism-vs-ancapism" class="outline-4">
+<h4 id="georgism-vs-ancapism"><span class="section-number-4">4.5.3.</span> Georgist Versus Ancap Beliefs</h4>
+<div class="outline-text-4" id="text-georgism-vs-ancapism">
+<p>
+<a href="../civilization/case-against-libertarianism.html">Geolibertarian Arguments</a>
+</p>
+
+
+
+<p>
+This image shows the following belief map for why Georgists believe that Land Value Tax would strongly benefit the economy:
+</p>
+
+
+<div id="org6c71ba3" class="figure">
+<p><img src="../images/graphs-of-LVT-outcomes--ALL.jpg" alt="graphs-of-LVT-outcomes--ALL.jpg" />
+</p>
+</div>
+
+<p>
+Georgists also have a second belief map of beliefs and arguments for why they believe Land Value Tax is justified, which has many connected nodes to the belief map show above.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-objectivism-belief-network-map" class="outline-4">
+<h4 id="objectivism-belief-network-map"><span class="section-number-4">4.5.4.</span> Objectivism Belief Network Map</h4>
+<div class="outline-text-4" id="text-objectivism-belief-network-map">
+<p>
+This image shows the following belief map for Objectivists:
+<a href="../images/objectivism-belief-map.pdf">Objectivism Belief Network Map</a>
+</p>
+
+<p>
+<a href="https://www.atlassociety.org/post/the-logical-structure-of-objectivism">Source</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-pragmatopianism-versus-efilism" class="outline-4">
+<h4 id="pragmatopianism-versus-efilism"><span class="section-number-4">4.5.5.</span> Pragmatopian Versus Efilist Beliefs</h4>
+<div class="outline-text-4" id="text-pragmatopianism-versus-efilism">
+<p>
+i
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-selective-attention-ignorance-and-contradictions" class="outline-2">
+<h2 id="selective-attention-ignorance-and-contradictions"><span class="section-number-2">5.</span> Selective Attention, Selective Ignorance, And Recognizing Contradictions</h2>
+<div class="outline-text-2" id="text-selective-attention-ignorance-and-contradictions">
+<p>
+The cognitive phenomenon of Selective Attention prevents people from recognizing contradictions and implicit assumptions within their own belief networks.
+</p>
+
+<p>
+Something that might be a contradiction in one belief network may not be a contradiction in another belief network and vice versa.
+</p>
+
+<p>
+Belief networks can make things that are contradictions in reality seem like they are <i>not</i> contradictions within the believer&rsquo;s worldview.
+</p>
+
+<p>
+Belief networks can also make things that aren&rsquo;t contradictions in reality seem like they <i>are</i> contradictions.
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=_bnnmWYI0lM">Selective Attention Test 1</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=vJG698U2Mvo">Selective Attention Test 2</a>
+</p>
+
+<p>
+It can be particularly difficult to catch circular reasoning fallacies since all the statements in the fallacy give coherence to each other, albeit in an illegitimate way.
+</p>
+
+<p>
+Note that although &ldquo;selective ignorance&rdquo; is patterned after &ldquo;selective attention&rdquo;, it often technically isn&rsquo;t &ldquo;selective&rdquo; because ignorance is often unintentional.
+</p>
+
+<p>
+For that matter, &ldquo;selective attention&rdquo; often isn&rsquo;t intentionally selective / non-selective of certain things, but eeeeeeeeeeee
+</p>
+</div>
+</div>
+
+<div id="outline-container-heuristics-affecting-ideologies" class="outline-2">
+<h2 id="heuristics-affecting-ideologies"><span class="section-number-2">6.</span> How Heuristics Affect Different People&rsquo;s Ideologies</h2>
+<div class="outline-text-2" id="text-heuristics-affecting-ideologies">
+<p>
+i
+</p>
+
+<p>
+<a href="https://thewaywardaxolotl.blogspot.com/2017/11/rationality-and-freedom.html">Rationality and Freedom</a>
+</p>
+</div>
+
+<div id="outline-container-apophrenia-and-confirmation-bias" class="outline-3">
+<h3 id="apophrenia-and-confirmation-bias"><span class="section-number-3">6.1.</span> Apophrenia and Confirmation Bias: When People Selectively Perceive Patterns That Cohere With Their Beliefs, Rather Than Contradicting Them</h3>
+<div class="outline-text-3" id="text-apophrenia-and-confirmation-bias">
+<p>
+<a href="https://en.wikipedia.org/wiki/Confirmation_bias">Wikipedia: Confirmation Bias</a>
+</p>
+
+
+<p>
+It seems that a lot of people are aware of what confirmation bias is, but almost no one understands <i>why</i> it occurs, (<a href="#ignorance-of-epistemology">since most people are ignorant of epistemology</a>). Since coherence is necessary in order to form strong belief systems, this causes ideologues to make up bad ideas that aren&rsquo;t grounded in reality in order to increase the coherence of what they believe and prevent them from recognizing how their ideologies contradict reality.
+</p>
+
+<p>
+Since most people are unaware that belief systems are structured to coherentism, every time they see or hear something that they perceive to reaffirm their belief system, they only interpret what they have seen as more evidence for believing that they are right. They aren&rsquo;t aware that Ideologies cause people to look for patterns that conform with their beliefs, instead of patterns that contradict their beliefs. Every person has an ideological filter that causes them to interpret events according to their ideology, instead of what the events are actual signs of.
+</p>
+
+<p>
+Example: The 2022 Buffalo Shooting
+</p>
+<ul class="org-ul">
+<li>Conservatives pointed out how: 1. the shooter&rsquo;s manifesto stated that he was always authoritarian left-leaning, 2. that he did the attack to provoke lawmakers to past more gun control laws that would supposedly encourage white people to fight for their rights, 3. they interpreted his race realism facts and study citations as racist garbage (mainly because most people never got to see the manifesto since it was censored), etc.</li>
+<li>Leftists used the manifesto as evidence that white supremacy is a serious issue, despite how remarkably rare incidents like these are, many leftists lied by saying that the shooter was a conservative (even though the manifesto says that he was left-leaning), etc.</li>
+</ul>
+
+<p>
+i
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Apophenia">Wikipedia: Apophenia</a>
+</p>
+
+<p>
+Ideologies cause people to look for patterns that conform with their beliefs, instead of patterns that contradict their beliefs.
+Every person has an ideological filter that causes them to interpret events according to their ideology, instead of what the events are actual signs of.
+</p>
+
+<p>
+i
+</p>
+
+
+
+<p>
+Ignorance and hubris are things that plague all humankind. Please don&rsquo;t be so uncouth as to imply you are the clean one and others are muddied up. It makes you sound ignorant and hubristic.
+Alternative hypothesis: A person likes some ideas better than others, they use them to explain the world in terms they are familiar with. They dislike ideas that uproot these ideas. And thus they find whoever says these other ideas distasteful. This process is called cognitive dissonance.
+</p>
+</div>
+</div>
+
+<div id="outline-container-ridiculous-ideas" class="outline-3">
+<h3 id="ridiculous-ideas"><span class="section-number-3">6.2.</span> Why Ideologues Come Up With Ridiculous Ideas</h3>
+<div class="outline-text-3" id="text-ridiculous-ideas">
+<p>
+It seems that a lot of people are aware of what confirmation bias is, but almost no one understands <i>why</i> it occurs, (<a href="#ignorance-of-epistemology">since most people are ignorant of epistemology</a>). Since coherence is necessary in order to form strong belief systems, this causes ideologues to make up bad ideas that aren&rsquo;t grounded in reality in order to increase the coherence of what they believe and prevent them from recognizing how their ideologies contradict reality. In order for memes and ideologies to reproduce themselves, they need to have strong links that reinforce the other ideas inside the believers&rsquo; belief systems, and crazy, ridiculous ideas can do just that. Some examples:
+</p>
+<ul class="org-ul">
+<li>Thomas Aquinas came up with his <a href="https://en.wikipedia.org/wiki/Five_Ways_(Aquinas)">Five Arguments in Favor of God</a> because it was a way to increase the coherence of the Christian belief system, which is why the arguments gained a lot of popularity. In my opinion, the only argument that made any sense was the Cosmological Argument, <a href="../epistemology/answering-why-and-how.html#igtheism">which I explain here</a>.</li>
+<li>How many Democrats believe that Republicans want Voter ID laws because they want to prevent minorities from voting, even though the real reason is that Republicans are concerned with voter fraud.</li>
+<li>How leftists will insist that conservatives are anti-immigration only because they are racist, when they&rsquo;re actually concerned with crimes committed by illegal immigrants, and they believe that the country&rsquo;s resources and welfare should be preserved only for the country&rsquo;s citizens.</li>
+<li>How many far-leftists believe that right-wingers want people to have more children only to &ldquo;create more wage slaves and feed Capitalism&rsquo;s need for endless growth&rdquo;.</li>
+<li>Many hard-core Communists claim that all the information about North Korea being a dictatorship instead of a democracy was fabricated by western and mainstream media outlets. <a href="https://www.reddit.com/r/communism101/comments/101k7yq/north_korea_and_democracy/j2nz9hw/">Example</a>. This belief is effective for reinforcing the belief in Communism because it gives the believers a reason to easily discredit the vast majority of information out there.</li>
+<li>How Libertarians came up with Cornucopianism to compensate with their belief that population control and other governmental measures are not necessary to regulate the population, even though <a href="../FAQs/overpopulation-FAQs.html#overpop-threat">it makes no historical or biology sense</a> and greatly overestimates the potential of technology.</li>
+<li>How <a href="https://www.reddit.com/r/GoldandBlack/comments/y2x12y/canada_seeking_to_expand_euthanasia_to_mature/is58oqu/?context=3">this Ancap came up with the conspiracy theory</a> that the world&rsquo;s governments want to depopulate the Earth as an explanation for why bad events are happening (from his POV).</li>
+<li>How people instinctively reject race realism because they don’t know any better and due to how memetics tends to work.</li>
+<li>Being taught all sorts of great things about individualism and independence is a factor that leads people (particularly Libertarians) to naïvely reject race realism because in theory everybody should be equal in an ideal individualist world.</li>
+<li>How leftists think that that conservatives want to ban abortion because they &ldquo;want to control women&rsquo;s bodies&rdquo;, even though the real reason is that conservatives believe that unborn infants as having a right to life.</li>
+<li>Creationists who insist that dinosaur bones were constructed and planted in the ground to provide evidence for evolution.</li>
+<li><a href="https://www.reddit.com/r/Efilism/comments/z611sj/im_not_familiar_with_this_blithering_genius_what/">These Efilists</a> who assume that Blithering Genius was a religious person and &ldquo;pretends everyone else doesn&rsquo;t have feelings&rdquo; since it&rsquo;s easier for them to believe that, since actually confronting his arguments against Efilism would weaken the coherence of their belief systems.</li>
+<li>i</li>
+<li>i</li>
+</ul>
+<p>
+Interestingly, many of the craziest, most delusional lies tend to be brainstormed when political ideologues and utopian ideologists are trying to brainstorm propositions that they believe to be true (even if there&rsquo;s little to no evidence regarding the actual truth) in order to maintain the coherency of whatever crazy, ridiculous nonsense that they believe.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-rational-ignorance-and-appeals-to-authority" class="outline-2">
+<h2 id="rational-ignorance-and-appeals-to-authority"><span class="section-number-2">7.</span> Rational Ignorance And Appeals To Authority</h2>
+<div class="outline-text-2" id="text-rational-ignorance-and-appeals-to-authority">
+<p>
+Most people cannot be bothered to read books and sometimes they can&rsquo;t even be bothered to read long essays because they think that it will take up too much of their time, that it could be a waste of their time, and/or they&rsquo;re intellectually lazy. In the last case, they&rsquo;re not even using <i>rational</i> ignorance, as that would be better categorized as ignorance and intellectual laziness.
+</p>
+
+
+<p>
+<a href="https://brittonicmemetics.wordpress.com/2022/11/17/hard-limits-of-rational-persuasion/">Brittonic Memetics: The Limits of Persuasion</a>
+</p>
+
+
+
+<p>
+To make everything worse, the chief intellectual authority that most people defer to when they are ignorant about something is Academia, even though the intellectual honesty of Academia has been corrupted by: Ideological Bias, Perverse Incentives, Social Circularity, Naive/Fake Empiricism, Statistical Manipulation (e.g. p-Hacking):
+</p>
+<ul class="org-ul">
+<li><a href="https://ideasanddata.wordpress.com/2020/06/25/on-trusting-academic-experts/">Ideas and Data Blog: Why Most Academic Research is Fake</a></li>
+<li><a href="https://www.youtube.com/watch?v=42QuXLucH3Q">Veritasium: Why Most Academic Research is Wrong</a></li>
+<li><a href="https://thewaywardaxolotl.blogspot.com/2019/05/why-most-academic-research-is-fake.html">Blithering Genius: Why Most Academic Research is Fake</a></li>
+<li><a href="https://www.labroots.com/trending/neuroscience/20533/research-true-cited">Research Less Likely to Be True is Cited More</a></li>
+<li><a href="https://www.youtube.com/watch?v=VPDK7cO-JPs">The Negative Effects Academia has had on Society</a></li>
+<li><a href="https://www.youtube.com/watch?v=cQWlnTyOSig">The Conflict Between College Rankings and Intellectually-Honest Research</a></li>
+<li><a href="https://jaymans.wordpress.com/2015/10/21/regression-to-the-mean/">JayMan: Regression to the Mean and the Breeder&rsquo;s Equation</a></li>
+<li><a href="https://www.youtube.com/watch?v=1tSqSMOyNFE">Veritasium: Regression to the Mean</a></li>
+<li><a href="https://thewaywardaxolotl.blogspot.com/2020/01/are-we-running-out-of-ideas.html">Why we have Passed Peak Idea Production</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-censorship-and-strawmen" class="outline-2">
+<h2 id="censorship-and-strawmen"><span class="section-number-2">8.</span> Censorship, Strawmen, And The Ideological Turing Test</h2>
+<div class="outline-text-2" id="text-censorship-and-strawmen">
+<p>
+The censorship of ideas is another important factor at play for making it more difficult to change people&rsquo;s minds. As long as alternative beliefs are never mentioned and those things are kept out of consciousness, people are never going to even think about heretic ideas. Inside many of these networks, they will hear the worst strawmen constructions of the other side, so they will typically respond with fallacious rebuttals to heretic ideas if they do hear them.
+</p>
+
+<p>
+There are many people who wouldn&rsquo;t know how to refute arguments against their belief system if they stepped outside of their ideological bubbles and encountered criticisms from other people who disagree with them. And for other topics/ideologies, they will only be familiar with the strawman version of those opposing belief systems. This is why most ideologists fail the <a href="https://www.youtube.com/watch?v=6z7y7FLhYGE">Ideologial Turing Test</a>, a test analogous to a kind of Turing test: instead of judging whether a chatbot had accurately imitated a person, the test would judge whether a person had accurately stated the views of ideological opponents to the opponents&rsquo; satisfaction.
+</p>
+
+
+
+<p>
+Smokescreens, and the propagation of misleading statistics are also reasons why it&rsquo;s so difficult to change people&rsquo;s minds. A lot of stuff is often intentionally taken out of context, whether that be for quotes or video.
+</p>
+
+<p>
+<a href="https://brittonicmemetics.wordpress.com/2023/02/05/smokescreens/">Smokescreens - Brittonic Memetics</a>
+</p>
+
+<p>
+<a href="https://thewaywardaxolotl.blogspot.com/2020/06/george-floyd-and-madness-of-crowds.html">George Floyd and the Madness of Crowds</a>
+</p>
+
+
+
+<p>
+Alloidal Libertarians always joke about who will build the roads, but they&rsquo;re naively assuming that car-centric urban planning is the best when they say this, even though <a href="https://www.reddit.com/r/fuckcars/wiki/faq">it definitely isn&rsquo;t</a>. Alloidal Libertarians are focused on the <i>wrong</i> solutions to achieving the best public transportation, and their ignorance of good urban planning practices is a major reason why they fail to understand Georgism. Alloidal Libertarians are clueless about urban planning because they don&rsquo;t recognize the grave economic, political, and environmental importance of it, and it is not a topic that is usually discussed in Libertarians circles to any significant, in-depth extent.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sapir-whorf-effect" class="outline-2">
+<h2 id="sapir-whorf-effect"><span class="section-number-2">9.</span> The Sapir-Whorf Effect Affects People&rsquo;s Subconscious Thoughts</h2>
+<div class="outline-text-2" id="text-sapir-whorf-effect">
+<p>
+i
+</p>
+
+<p>
+Basically, language (words and definitions in particular) have the potential to influence people&rsquo;s thoughts, and they won&rsquo;t even realize it if their selective attention is directed somewhere else.
+</p>
+
+<p>
+Read More: <a href="../language/sapir-whorf-conways-law-semantics.html#conways-law-and-sapir-whorf">Conway&rsquo;s Law &amp; The Sapir-Whorf Effect</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-ignorance-of-epistemology" class="outline-2">
+<h2 id="ignorance-of-epistemology"><span class="section-number-2">10.</span> Most People Never Bother To Think About Epistemology</h2>
+<div class="outline-text-2" id="text-ignorance-of-epistemology">
+<p>
+i
+</p>
+
+<p>
+Most people don&rsquo;t understand fallacies like: False Equivocations, Post Hoc Ergo Propter Hoc, Appeal to Authority, Correlation &amp; Causation, etc. As a result, people form many beliefs that they would otherwise not believe in if they were more knowledgeable about what counts as a valid argument or not.
+</p>
+
+<p>
+<a href="../epistemology/answering-why-and-how.html">The Nature Of Answering &ldquo;How?&rdquo; And &ldquo;Why?&rdquo;</a>
+</p>
+
+<p>
+Since knowledge is formed as models of subjective experience of reality, truth and knowledge are both relative. A lot of the disagreements that happen between people can be attributed to how people have more informative models of reality than other people.
+</p>
+
+<p>
+Additionally, many people think that reason alone would reach their ideologies as the correct conclusion or truth about reality, but that is wrong because: 1. there is no such thing as pure reason, or reason that isn&rsquo;t constrained by sense perception and limited knowledge about reality, 2. there is no ultimate grounding for reality.
+</p>
+</div>
+
+<div id="outline-container-slow-philosophical-progress" class="outline-3">
+<h3 id="slow-philosophical-progress"><span class="section-number-3">10.1.</span> Philosophical Progress Has Historically Been Very Slow</h3>
+<div class="outline-text-3" id="text-slow-philosophical-progress">
+<p>
+It is also the case that many People Don&rsquo;t Have The Time To Deeply Read/Research The Necessary Knowledge For Creating A Sound Philosophy.
+</p>
+
+<p>
+<a href="../epistemology/1D-tabula-rasa-and-ECG.html#philosophical-progress">Why Progress In Philosophical Knowledge Has Been So Historically Slow</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-provenance-of-belief" class="outline-3">
+<h3 id="provenance-of-belief"><span class="section-number-3">10.2.</span> Empirical Verification and the Problem of the Criterion</h3>
+<div class="outline-text-3" id="text-provenance-of-belief">
+<p>
+Most people never seriously think about the origin behind where their beliefs come from, and how they can verify that their beliefs are correct.
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Problem_of_the_criterion">The Problem of the Criterion</a>
+</p>
+
+<p>
+<a href="../epistemology/answering-why-and-how.html#empirical-verification">Empirical Verification and the Problem of the Criterion</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-disagreement-on-arguments-and-fallacies" class="outline-3">
+<h3 id="disagreement-on-arguments-and-fallacies"><span class="section-number-3">10.3.</span> People Even Disagree On What Counts As An Argument Or A Fallacy</h3>
+<div class="outline-text-3" id="text-disagreement-on-arguments-and-fallacies">
+<p>
+When I was an Ancap, I mistakenly thought that many people&rsquo;s support for Democracy was an Appeal to the People Fallacy for their beliefs, and when I was Efilist-leaning, I thought that most people were using Appeal to Nature Fallacies to justify their beliefs, but as it turns out, neither of these are fallacies for different reasons.
+</p>
+
+<p>
+i
+</p>
+
+<p>
+Many Ancaps mistakenly believe that it&rsquo;s a Fallacy to Appeal to the People when justifying current political systems. The problem with this is that Appeal to the People might be a valid fallacy for epistemological or scientific reasoning, but Appeal to the People is <i>not</i> a legitimate Fallacy when reasoning about ethical or political philosophy. Epistemology and Science are based on sensory knowledge, whereas Ethics and Politics are based on value knowledge. If anything, it&rsquo;s a Fallacy to apply sensory knowledge outside of its scope of appropriate use. Realizing this greater philosophical understanding for myself was one of the reasons why I stopped being an Ancap a few years ago.
+</p>
+
+<p>
+Many vegans and Efilists accuse their opponents of Appealing to Nature, but Appealing to Nature is actually not a valid fallacy if resisting Nature is futile and self-defeating, it&rsquo;s just reality.
+</p>
+
+<p>
+Many theists favor the Transcendental Argument for God (TAG), and they think it&rsquo;s a fallacy to not believe in God, lest people don&rsquo;t have a foundation for objective truth, objective morals, etc.
+</p>
+
+<p>
+i
+</p>
+
+<p>
+<a href="../FAQs/post-overton-FAQs.html#problems-with-deontological-ethics">When Appeal To The Consequences Is Not A Valid Fallacy</a>
+</p>
+
+<p>
+<a href="https://expandingrationality.substack.com/p/the-homunculus-fallacy-and-its-inverse">Most people who believe in God don&rsquo;t realize that using God as an explanation for everything is an Inverse Homunculus Fallacy</a>.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-identities-and-ideologies" class="outline-2">
+<h2 id="identities-and-ideologies"><span class="section-number-2">11.</span> Most People&rsquo;s Identities Are Strongly Connected To Their Ideologies</h2>
+<div class="outline-text-2" id="text-identities-and-ideologies">
+<p>
+<a href="https://thewaywardaxolotl.blogspot.com/2014/07/the-communists-who-took-power-in.html">Utopian Ideologies</a>
+</p>
+
+<p>
+i
+</p>
+
+<p>
+Ideologies are selected based on their ability to propagate themselves, not based on reason. For that reason, ideologies tend to make people very emotional because emotions are better for creating action, which is the propagation of said memes in this case.
+</p>
+
+<p>
+For many people, their ideology makes up so much of their personality, that if their ideology was taken away from them, they wouldn&rsquo;t have any or much personality left.
+</p>
+
+<p>
+Not only that, but in many cases, if a person leaves their ideology, then they also lose many friends and important nodes of their social network, which disincentivizes people from wanting to discard their current belief systems.
+</p>
+</div>
+
+
+
+<div id="outline-container-strive-for-social-status" class="outline-3">
+<h3 id="strive-for-social-status"><span class="section-number-3">11.1.</span> Most People Strive For Social Status And Moral Purity Instead Of Reason</h3>
+<div class="outline-text-3" id="text-strive-for-social-status">
+<p>
+<a href="https://thewaywardaxolotl.blogspot.com/2022/07/status-pyramid-schemes.html">Status Pyramid Schemes</a>
+</p>
+
+
+
+<p>
+People like to play ideological purity contests and other stupid games over who truly has the moral high ground.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-biological-differences" class="outline-2">
+<h2 id="biological-differences"><span class="section-number-2">12.</span> Genetic and Hormonal Differences Affect People&rsquo;s Beliefs</h2>
+<div class="outline-text-2" id="text-biological-differences">
+<p>
+For some people, it is likely that no matter how much argumentation they hear of the other side, they will not be persuaded to the other side due to genetic and hormonal differences.
+</p>
+
+<p>
+There is plenty of evidence to prove that genes are the main factor controlling how individualist a person&rsquo;s personality is. In the serotonin transporter gene for example, East Asians are significantly more likely to have the short &ldquo;S&rdquo; allele compared to Europeans who are relatively more likely to have the longer &ldquo;L&rdquo; allele, which may be a contributing factor to the more collectivist culture in East Asia versus the more individualist culture in Europe. <a href="https://royalsocietypublishing.org/doi/10.1098/rspb.2009.1650">Source</a>. <a href="../civilization/case-against-libertarianism.html#individualism">In my Case Against Libertarianism essay</a>, I explain how the number of individualist genes puts an upper bound on the number of people who are inclined towards Libertarianism and other very individualist ideologies.
+</p>
+
+<p>
+It is well-known that men tend to be right-leaning, whereas women to be more left-leaning. This suggests that biological differences can influence people&rsquo;s political beliefs. There are also studies showing that testosterone treatments can make people become more right-leaning: <a href="https://www.openicpsr.org/openicpsr/project/155441/version/V1/view">Testosterone Administration Induces A Red Shift in Democrats</a>. It should also be noted that <a href="https://www.prri.org/spotlight/libertariangotw/">approximately two-thirds of all Libertarians are men</a>. This extremely skewed sex distribution should be very indicative of just how important biological sex and other genetic factors are for determining what ideologies someone is inclined to believe in (and why fringe ideologies like Libertarianism will never be popular).
+</p>
+
+<p>
+People who are chronically depressed, are more likely to be an Efilist or an Antinatalist, so if depression is genetic, then that&rsquo;s another example of how a genetic factor that can influence what people believe.
+</p>
+
+<p>
+More articles talking about how genetics and biological factors influence political beliefs:
+</p>
+<ul class="org-ul">
+<li><a href="https://www.printfriendly.com/p/g/aPSKzV">A literature review by New York University and the University of Wisconsin found evidence from twin studies that political ideology is about 40 per cent genetic</a>.</li>
+<li><a href="https://www.pewresearch.org/short-reads/2013/12/09/study-on-twins-suggests-our-political-beliefs-may-be-hard-wired/">Study on twins suggests our political beliefs may be hard-wired - Pew Research Center</a>.</li>
+<li><a href="https://www.sciencedaily.com/releases/2022/06/220602095055.htm">Brain scans remarkably good at predicting political ideology - Science Daily</a>.</li>
+<li><a href="https://www.newswars.com/study-left-leaning-men-more-conservative-after-testosterone-boosts/">Left-Leaning Men More Conservative After Testosterone Boosts</a>.</li>
+</ul>
+
+<p>
+With regards to personality tests like the <a href="https://en.wikipedia.org/wiki/Big_Five_personality_traits">Big Five Personality Test</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/20371797/">liberals tend to score low on conscientiousness, but high on imagination, whereas political conservatives tend to have the opposites of those traits</a>.
+</p>
+
+
+
+<p>
+I am skeptical of some of the findings mentioned in this article, but it does cite some interesting findings: <a href="https://www.businessinsider.com/psychological-differences-between-conservatives-and-liberals-2018-2">psychological differences correlate differently between liberals and conservatives</a>.
+</p>
+
+<p>
+I hypothesize that there are probably other examples where genes influence or determine people&rsquo;s ideological beliefs that have yet to be discovered.
+</p>
+
+<p>
+Since it is the case that genes, hormones, and other biological factors can influence people&rsquo;s support for one ideology over another, it&rsquo;s harder to change someone&rsquo;s worldview if the worldview that you are trying to persuade them towards is contrary to what their biology naturally inclines them to believe.
+</p>
+</div>
+</div>
+
+<div id="outline-container-changing-peoples-minds" class="outline-2">
+<h2 id="changing-peoples-minds"><span class="section-number-2">13.</span> What It Takes To Change People&rsquo;s Minds</h2>
+<div class="outline-text-2" id="text-changing-peoples-minds">
+<p>
+Ultimately, the key to rejecting any ideology is to keep letting the contradictions pile up in a person&rsquo;s until the entire belief system is rejected. With every additional contradiction, a connection(s) between two or more belief nodes is destroyed, which makes it easier to disconnect the other belief nodes if the believer is exposed to even more contradictions.
+</p>
+
+<p>
+<a href="https://streetepistemology.com/">Street Epistemology</a> is a way to help people reflect on the quality of their reasoning through civil conversation. Street Epistemology tends to be more effective at changing people&rsquo;s minds because it&rsquo;s a great way to get people to explicitly question the implicit assumptions of their belief systems, that they normally take for granted. For persuading leftists specifically, Brittonic Memetics has written a post with great advice and applied street epistemology on how to do that: <a href="https://brittonicmemetics.wordpress.com/2020/05/22/fixing-receptive-leftists/">A Guide to Fixing Receptive Leftists</a>.
+</p>
+
+<p>
+If the person in question is philosophically inclined, then a discussion about epistemology and why people believe what they believe could be appropriate and fruitful. In which, I recommend sharing this article, and perhaps the other essays in my <a href="../index.html#foundations">Philosophical Foundations series</a> (in progress) and the <a href="../index.html#epistemology">epistemology links on this blog&rsquo;s homepage</a>.
+</p>
+
+<p>
+For counter-intuitive ideas like Georgism, visuals and diagrams are helpful for gaining the intuition and spatial reasoning for better understanding them. When I&rsquo;ve seen Ancaps debate Georgists on Reddit, I&rsquo;ve noticed that some of the Ancaps will often spend literally hours and hours arguing, criticizing, and insulting Georgists back and forth in lengthy text threads. It is likely that one of the primary reasons the Ancaps don&rsquo;t understand what the Georgists are saying is because they don&rsquo;t comprehend the spatial reasoning for understanding why Land Value Tax would encourage a more efficient use of land and denser urban planning that would in turn lead to greater economic growth. The spatial reasoning is not easy to understand from just reading about it, especially if one has preconceived notions and misconceptions about what the other person is saying. That being said, <a href="../economics/georgism-elevator-pitch.html#visual-infographics">the spatial reasoning for Georgism is better understood by looking at and reading diagrams like the ones shown in these images (especially the second one)</a>. A picture is worth a thousand words.
+</p>
+
+<p>
+The purpose of debates is typically not to convince the other debater, but rather to convince the audience listening to the debate, if there is one. Typically, the people who are debating are both highly convinced of what they believe in. The audience on the other hand, is more likely to consist of people who are more unsure of what to believe. Additionally, the audience consists of more people, so that means that there are more potential minds for each debater to persuade onto their side, instead of the only one person that they are debating.
+</p>
+</div>
+</div>
+
+<div id="outline-container-best-belief-system" class="outline-2">
+<h2 id="best-belief-system"><span class="section-number-2">14.</span> What is the Best Belief System?</h2>
+<div class="outline-text-2" id="text-best-belief-system">
+<p>
+This essay raises the question what is the best networking facts for anybody to believe in, especially given that there is a limited knowledge of the world that every person can attain within their lifetime?
+</p>
+
+<p>
+One of the problems is that people&rsquo;s opinions about what the best facts are is tainted by their moral narratives that preach what people are to know about reality instead of how reality is (most people&rsquo;s ideologies disobey the Is-Ought Distinction or Hume&rsquo;s Guillotine when they many of their underlying assumptions are examined more closely in detail).
+</p>
+
+<p>
+Some objective facts that most people can agree on are the hard (universal) sciences. However, those sciences are not particularly relevant for figuring out how to structure of a human society. There is also a lot of debate in the human-centric sciences, due to people&rsquo;s partisanship and ideologies in academia. Unfortunately, this is even true for world-centric sciences like biology.
+</p>
+
+<p>
+I recommend that the best knowledge that we can have is:
+</p>
+<ol class="org-ol">
+<li>Biological and Evolutionary Knowledge: Evolution has many implications for humans and morality. People greatly underestimate the implications evolution have on humans that has a biological species.</li>
+<li>Memetic Systems: Understanding how memes and memetic systems propagate is very valuable because it enables people to better understand why people have different traditions and beliefs believe in. Even if someone is unable to see how memetics affects their own ideologies, beliefs, language, and behavior, they will surely be able to recognize the patterns in other.</li>
+<li>Game Theory: The Foundation of Civilization is Cooperation. A solid understanding of game theory is necessary in order to understand how to achieve cooperation within human societies.</li>
+<li>The Effects of Technology: Most people tend to think of technology as a solution to problems, instead of being a cause of problems. This is a very naive view, as technology has had many negative effects on society, especially with how it has caused evolutionary mismatch, <a href="../FAQs/overpopulation-FAQs.html">unprecedented overpopulation</a>, <a href="../FAQs/EPC-FAQs.html">dysgenics</a>, and the replacement of old problems with new problems that are arguably not much better than the old ones.</li>
+<li>Epistemology: The key to building critical thinking skills is to study Epistemology, the study of knowledge. When one understands how knowledge works and how it is gained, that enables the individual to gain and process knowledge more efficiently.</li>
+</ol>
+</div>
+
+<div id="outline-container-recommended-media" class="outline-3">
+<h3 id="recommended-media"><span class="section-number-3">14.1.</span> What best essays/videos/books do you recommend for better understanding this information?</h3>
+<div class="outline-text-3" id="text-recommended-media">
+<p>
+With respect to the outline above, I recommend the following sources for beginners:
+</p>
+<ol class="org-ol">
+<li><a href="../index.html#bio-realism">Blithering Genius&rsquo;s Essays on Biological and Evolutionary Realism</a>.</li>
+<li>ZC&rsquo;s collection of links on: 1. <a href="../index.html#culture">culture</a>, 2. <a href="../index.html#sociology">sociology</a>, and 3. <a href="../index.html#axiology">axiology / morality</a>.</li>
+<li><a href="https://thewaywardaxolotl.blogspot.com/2014/07/game-theory-and-society.html">Game Theory &amp; Society</a>, and <a href="https://thewaywardaxolotl.blogspot.com/2020/12/a-paradox-of-rationality-and-cooperation.html">A Paradox of Rationality &amp; Cooperation</a>, and <a href="https://ncase.me/trust/">The Evolution of Trust (Interactive Game)</a> by Nicky Case, and <a href="https://www.youtube.com/watch?v=VTBPPc-IexI">The Prisoner&rsquo;s Dilemma of Marriage</a></li>
+<li><a href="../misc/index.html#industrial-society-and-its-future-manifesto.html">Industrial Society And Its Future</a> by Theodore John Kaczynski, <a href="https://thewaywardaxolotl.blogspot.com/2015/01/technology-and-progress.html">Technology and Progress</a> by Blithering Genius, <a href="https://notetoworld.org/index.php?loc=note&amp;key=a915b0bf-ae51-4452-9f03-1b680e6c645d">The Problem of Recognizing Problems</a>, and <a href="https://www.amazon.com/dp/B0BPXKWDVC">Futurist Fantasies</a> by T.K. Van Allen.</li>
+<li>ZC&rsquo;s <a href="../index.html#foundations">Philosophical Foundations series</a> and the <a href="../index.html#epistemology">epistemology links on this blog&rsquo;s home page</a>.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Zero Contradictions</p>
+<p class="date">Created: 2023-07-03 Mon 09:59</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-07-09 Sun 12:08 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Thoughts On Democracy</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="description" content="When and when not to use democracy; Why replacing FPTP will not improve democracy; Analysis of different democratic procedures, etc." />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="../blog-posts.css" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Thoughts On Democracy</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#intro">1. Why Do We Have Democracy?</a>
+<ul>
+<li><a href="#electoral-process">1.1. Problems With The Electoral Process</a></li>
+<li><a href="#why-people-really-say-go-vote">1.2. What Most People Really Mean When They Say &ldquo;Go Vote&rdquo;</a></li>
+</ul>
+</li>
+<li><a href="#parliaments-vs-presidencies">2. Why Parliamentary Democracies Tend To Be Better Than Presidential Democracies</a></li>
+<li><a href="#FPTP-wont-change-anything">3. Why Replacing FPTP Will Not Improve Democracy</a></li>
+<li><a href="#meritocracy-and-sortition">4. Meritocracy Combined With Sortition</a></li>
+<li><a href="#decision-making">5. Decision Making In Legislatures Versus Juries</a></li>
+<li><a href="#improving-democracy">6. Other Reasonable Reforms That Could Improve Democracies</a></li>
+<li><a href="#big-tent-stategy">7. Big Tent Strategy</a>
+<ul>
+<li><a href="#nazis-big-tent">7.1. The Nazis Gained Power By Being Moderate, And Then Radicalizing</a></li>
+<li><a href="#ancaps-big-tent">7.2. Ancaps Who Have To Be Big Tent To Appeal To Moderate Libertarians</a></li>
+<li><a href="#efilists-big-tent">7.3. Efilists Who Have To Be Big Tent In Order To Appeal To Anti-Natalists</a></li>
+<li><a href="#political-factions-big-tent">7.4. Political Factions That Have To Work Within A More Moderate Coalition</a></li>
+<li><a href="#religious-branches">7.5. All The World&rsquo;s Major Religions Evolved Into Various Different Branches</a></li>
+<li><a href="#intragroup-conflict">7.6. Intragroup Conflict</a></li>
+<li><a href="#big-tent-final-thoughts">7.7. Conclusion</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<hr />
+<p>
+Note: I haven&rsquo;t finished writing this file yet.
+</p>
+
+<div id="outline-container-intro" class="outline-2">
+<h2 id="intro"><span class="section-number-2">1.</span> Why Do We Have Democracy?</h2>
+<div class="outline-text-2" id="text-intro">
+<p>
+How to govern society is one of the oldest philosophical problems, and while there aren&rsquo;t any perfect solutions that can completely eliminate corruption, there are some pragmatic principles and heuristics that we can follow to generate a better society.
+</p>
+
+<p>
+The main reason why democracy is so prevalent in western societies today is that it&rsquo;s a way to form compromises between opposing political ideologies, platforms, and ethics. This is the only reason why the Democrats would let Donald Trump be the president of the US, or why Republicans would let Joe Biden be the president of the US, or why any political faction would put up with laws, legislation, politicians, etc. that they detest.
+</p>
+
+
+<p>
+All political systems are oligarchies, regardless of how they present themselves. Leaders of centralized systems know almost nothing about a lot of things, rather than a lot about a few things. It&rsquo;s not possible for a single person to rule an entire country all by themselves because they need subordinates who will enforce their rule of law. Likewise, it&rsquo;s equally impossible for a democracy to work effectively unless it has representatives and a hierarchy of other government officials. It has to be that way, but it also creates problems with running the society.
+</p>
+
+<p>
+<a href="../images/democracy-is-a-sham-whos-in-charge.jpg">Relevant Humorous Meme</a>
+</p>
+
+<p>
+Related: <a href="https://thewaywardaxolotl.blogspot.com/2015/05/democracy-is-tragedy-of-commons.html">Democracy is a Tragedy of the Commons</a>.
+</p>
+</div>
+
+
+<div id="outline-container-electoral-process" class="outline-3">
+<h3 id="electoral-process"><span class="section-number-3">1.1.</span> Problems With The Electoral Process</h3>
+<div class="outline-text-3" id="text-electoral-process">
+<p>
+<a href="https://www.youtube.com/watch?v=LasGIVHyCGI">Campaign Technology - John Stossel</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=bwxllxMIzzY">Campaign Moments and Message - John Stossel</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=ZckwjLTW6lA">How Debates Are Won - John Stossel</a>
+</p>
+
+<p>
+<a href="../images/car-with-failed-bumper-stickers-1.jpg">Someone&rsquo;s car with bumper stickers for all the previous failed US presidential campaigns</a>
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-why-people-really-say-go-vote" class="outline-3">
+<h3 id="why-people-really-say-go-vote"><span class="section-number-3">1.2.</span> What Most People Really Mean When They Say &ldquo;Go Vote&rdquo;</h3>
+<div class="outline-text-3" id="text-why-people-really-say-go-vote">
+<p>
+When most people tell others to &ldquo;go vote&rdquo;, they don&rsquo;t really mean &ldquo;go vote&rdquo;. What they&rsquo;re really saying is &ldquo;go vote for my guy&rdquo;. For example, young people tend to vote Democrat, so Democrats will send out hordes of people to college campuses to sign people up, drive them to polls, etc, while Republicans will try to keep college students from voting by making it arbitrarily difficult. Likewise, &ldquo;Pro-voting&rdquo; organizations typically target young people and POC, but you&rsquo;ll never see them visiting rural America or manufacturing and construction sites to get those demographics to vote, and it&rsquo;s not hard to figure out why. None of it is driven by genuine pro or anti voting sentiment. It&rsquo;s all just gamesmanship.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-parliaments-vs-presidencies" class="outline-2">
+<h2 id="parliaments-vs-presidencies"><span class="section-number-2">2.</span> Why Parliamentary Democracies Tend To Be Better Than Presidential Democracies</h2>
+<div class="outline-text-2" id="text-parliaments-vs-presidencies">
+<p>
+Although I haven&rsquo;t read the book itself, I agree with pretty much all the arguments against Presidential Democracies that are stated in this Wikipedia summary of the book: <a href="https://en.wikipedia.org/wiki/Bad_for_Democracy">Bad for Democracy: How the Presidency Undermines the Power of the People by Dana D. Nelson</a>.
+</p>
+
+<p>
+Although parliamentary democracies tend to be better than presidential democracies, it probably wouldn&rsquo;t have made much historical difference if the United States had a parliament until the 1970s. During Jimmy Carter&rsquo;s presidency, the US could&rsquo;ve removed Jimmy Carter from office if it had a parliamentary democracy instead.
+</p>
+
+<p>
+Up until that point, presidential democracies were about as good as parliamentary ones. The reason why that changed was when:
+</p>
+<ol class="org-ol">
+<li>The country elected a weak head of government who couldn&rsquo;t leave office until his term was over,</li>
+<li>This was long before the Internet started. The Internet has caused democratic backsliding by isolating people into political ideologies in their own online Internet bubbles and echo chambers, This makes the presidential system less stable since more attention started being focused on the President and viewing the Presidency as the key to fixing all the countries problems, and</li>
+<li>Power started shifting towards the Presidency, in large part because the Presidency and its executive orders have become the only fast and effective way to change the federal law of the land due to the democratic backsliding and inability of political cliques to compromise with each other.</li>
+</ol>
+
+<p>
+Another downside of presidential democracies is that they caused people to focus less on state and local elections, and only focus on one big election at the national level. Since people have selective attention, and can therefore only focus on a few elections at a time, it is disadvantageous to the democracy’s functioning when everybody focuses on just one election for only one office every four years. It would be better if people focused on the state and local elections that could potentially affect them even more. Parliamentary democracies are better for this.
+</p>
+</div>
+</div>
+
+<div id="outline-container-FPTP-wont-change-anything" class="outline-2">
+<h2 id="FPTP-wont-change-anything"><span class="section-number-2">3.</span> Why Replacing FPTP Will Not Improve Democracy</h2>
+<div class="outline-text-2" id="text-FPTP-wont-change-anything">
+<p>
+Critics of First-Past-The-Post argue that it&rsquo;s unfair because they perceive it to be a winner-takes-all system that denies minority parties from having any real power in the government. In particular, the people who hate FPTP the most are the ones who are tired of always siding with one side or the other. Theoretically, proportional representation or ranked voting would be more democratic because it would be more reflective of the will of the people. A lot of this assumes that democracy doesn&rsquo;t or wouldn&rsquo;t encounter the problems of <a href="https://thewaywardaxolotl.blogspot.com/2017/05/the-deep-state-and-myth-of-democracy.html">The Deep State and Myth of Democracy</a>. Putting that aside though, I argue that FPTP would not be more representative of the people.
+</p>
+
+<p>
+For starters, most under-represented ideologues who are keen to replace FPTP overlook that their democratically under-represented political opposites will also gain more representation too if FPTP is replaced. This would cancel out almost anything that they could hope to gain. For instance, when I was Libertarian, I used to believe that the United States would be better off it eliminated FPTP since that would enable Libertarians to gain greater representation in the Government, but once I realized that opposing ideologies like the Social Democrats, Green Party members, Neoliberals, Pro-Trumpers, the Religious Right, etc would also gain greater representation, I realized that this would be a loss cause. The result would only be political gridlock, and it wouldn&rsquo;t be any different than how the Libertarians already have their own small faction inside the Republican Party. The same reasoning applies to other democratically under-represented political factions.
+</p>
+
+<p>
+Proportional representation already exists in FPTP, but in a different way. Instead of having proportional representation inside the government&rsquo;s legislature as a whole, political factions have proportional representation inside the main political parties. For example, the <a href="https://en.wikipedia.org/wiki/Factions_in_the_Republican_Party_(United_States)#Liberal_Republicans">Republican Party in the United States consists of factions</a> such as conservatives (represented in Congress by the Republican Study Committee and the Freedom Caucus), moderates (represented in Congress by the Republican Governance Group), libertarians (represented in Congress by the Republican Liberty Caucus), Pro-Trumpers, etc. Likewise, <a href="https://en.wikipedia.org/wiki/Factions_in_the_Democratic_Party_(United_States)">the Democratic Party of the United States consists of factions</a> like the Blue Dog Coalition representing conservative and moderate Democrats, the New Democrat Coalition representing moderate and liberal Democrats, and the Congressional Progressive Caucus representing liberal and progressive Democrats.
+</p>
+
+<p>
+So FPTP doesn&rsquo;t really reduce the range of acceptable political thought within the status quo after all. Once the coalitions form inside the political parties, they then elect their leaders and choose their direction according to their constituent percentages. Once there are exactly two solid factions competing against one another (Democrats vs Republicans), the result is less political gridlock&#x2026; except for when the Legislature and Presidency are not decisively controlled by the same party, in the case of a Presidential Democracy. There are also other cases where proportional representation caused political grid-locking:
+</p>
+<ul class="org-ul">
+<li>One of the reasons why the Weimar Republic failed was that it had a proportional representation democracy that caused gridlock within the legislature, thus causing political power to transfer to the executive branch in order to actually get anything done.</li>
+<li>When New Zealand switched to a proportional representation democracy, there was no majority in the parliament from 1996 to 2017.</li>
+<li>Italy also faced similar gridlock when <a href="https://www.britannica.com/place/Italy/Political-process">they switched from FPTP to a proportional representation system in 1993</a>, and <a href="https://en.wikipedia.org/wiki/Italian_electoral_law_of_2017">they had to rescind it</a> to a <a href="https://en.wikipedia.org/wiki/Mixed_electoral_system">mixed electoral system</a> in 2017 since it made the government more unstable.</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-meritocracy-and-sortition" class="outline-2">
+<h2 id="meritocracy-and-sortition"><span class="section-number-2">4.</span> Meritocracy Combined With Sortition</h2>
+<div class="outline-text-2" id="text-meritocracy-and-sortition">
+<p>
+Most importantly, the oligarchical structure of a society should be meritocratic.
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Meritocracy">Wikipedia: Meritocracy</a>.
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Sortition">Wikipedia: Sortition</a>.
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Weighted_voting">Wikipedia: Weighted Voting</a>.
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Wisdom_of_the_crowd">Wikipedia: Wisdom of the Crowd</a>.
+</p>
+
+<p>
+The court system uses sortition for reaching verdicts in the form of randomly selected juries, yet sortition is not used for determining the laws as well.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-decision-making" class="outline-2">
+<h2 id="decision-making"><span class="section-number-2">5.</span> Decision Making In Legislatures Versus Juries</h2>
+<div class="outline-text-2" id="text-decision-making">
+<p>
+It is peculiar how the legislative and jury processes are so radically different from each other. In a democracy, decisions are allowed to be based on partisanship, emotions, conflicts of interest, and personal morals. And that&rsquo;s even strongly encouraged. The selection process for the people who make legislative decisions regarding society is also determined by election campaigns and voting.
+</p>
+
+<p>
+On the other hand, the decision-making process in the court system is completely different. People are forbidden to be selected to make the decisions if they will have a conflict of interest in deciding the verdict, or if they are likely to be influenced by their morals, emotions, and personal biases. In addition, the selection process for the people who make decisions is also determined by random selection (sortition), in contrast to the voting system used by democracies.
+</p>
+
+<p>
+It&rsquo;s odd that most people never question why these decision making processes are so different from each other. Yes, they belong to different branches of government, but they are both making important decisions about society. Besides the appeal that a random selection of people on the jury can seem more fair and unbiased, I can&rsquo;t think of many other reasons why the decision-making processes for the legislature and court system should be much different from each other.
+</p>
+
+<p>
+How many things can go wrong with a system that emphasizes reason, logic, and non-partisanship? On the other hand, you could easily imagine thousands of different ways how a system that allows emotions, partisanship, non-thorough evaluation of the evidence, and conflicts of self-interest to influence the decision making could go wrong. Democratic legislatures should work more similarly to the judicial system.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-improving-democracy" class="outline-2">
+<h2 id="improving-democracy"><span class="section-number-2">6.</span> Other Reasonable Reforms That Could Improve Democracies</h2>
+<div class="outline-text-2" id="text-improving-democracy">
+<p>
+Consider a list of ideas that could potentially improve how our democracies function:
+</p>
+<ul class="org-ul">
+<li>Implement voter-ID laws with <a href="../civilization/political-philosophy.html#functions-of-citizens-IDs">government-issued ID cards</a> (free for all citizens)</li>
+<li>Have more educated voters (see: <a href="../epistemology/difficult-to-change-peoples-minds.html">Why It&rsquo;s So Difficult To Change People&rsquo;s Minds</a>)</li>
+<li><a href="../civilization/political-philosophy.html#problem-of-governance">Restructure the government in such a way that discourages corruption and corporatocracy</a></li>
+<li>Completely eliminate gerrymandering: Remove party affiliations at the time of voter registration. Do not track home addresses on ballots. Voter ID is done through <a href="../civilization/political-philosophy.html#functions-of-citizens-IDs">government-issued ID cards</a>, but does not require you to retain the information together. Now politicians don&rsquo;t know where you live and can&rsquo;t draw districts with biases</li>
+<li>Replace the electoral college with the popular vote</li>
+<li><a href="../civilization/age-of-adulthood.html">Lower the minimum voting age to 16 years old</a>?</li>
+<li><a href="https://www.anthonygalli.com/p/term-limits-for-all-4-branches-of">Implement consecutive and/or lifetime term-limits for all legislative and bureacratic offices</a></li>
+<li>Pass laws regulating campaign finance</li>
+<li>There should be the politician cut-off age around the retirement age
+<ul class="org-ul">
+<li>This would prevent the likelihood that people with dementia (e.g. Joe Biden) or people with perverse incentives get elected</li>
+</ul></li>
+<li>Localism</li>
+<li>Et Cetera</li>
+</ul>
+
+
+<div id="org67e165d" class="figure">
+<p><img src="../images/countries-that-require-id-to-vote.png" alt="countries-that-require-id-to-vote.png" width="600px" />
+</p>
+</div>
+
+
+<div id="org4cf6f1f" class="figure">
+<p><img src="../images/how-gerrymandering-works.jpg" alt="how-gerrymandering-works.jpg" width="500px" />
+</p>
+</div>
+
+
+
+<p>
+In situations where there is no single right answer and/or there are different competing values and value systems, democracies are often proposed as a potential solution. However, Reason is a superior decision maker to Democracy, so decisions should made with Reason instead of Democracy whenever possible.
+</p>
+
+<p>
+Democracy an be a solution for resolving multiple different values, perspectives, and ideologies, as imperfect as it may be. Nevertheless, I agree with all the criticisms in this blog post <a href="https://thewaywardaxolotl.blogspot.com/2017/05/the-deep-state-and-myth-of-democracy.html">The Myth of Democracy</a>, and I believe that we can make a system with similarities to democracy that is still better than anything that&rsquo;s ever been tried before.
+</p>
+
+<p>
+Approval Voting: For every choice/option/candidate, everybody votes yes or no to signal whether or not they approve of the option. The option(s) with the most approvals is/are selected. People can vote multiple times, vote once, or not vote at all. This method is quick, simple, will work for most situations, and is better than first past the post voting. <a href="https://www.youtube.com/watch?v=orybDrUj4vA">CGP Grey has a video</a> explaining how Approval Voting works.
+</p>
+
+<p>
+Single Transferable Voting: The single transferable vote (STV) is a voting system designed to achieve proportional representation through ranked voting in multi-seat organizations. Under STV, an elector (voter) has a single vote that is initially allocated to their most preferred candidate. Votes are totaled and a quota (the number of votes required to win a seat) derived. If their candidate achieves quota, he/she is elected and in some STV systems any surplus vote is transferred to other candidates in proportion to the voters&rsquo; stated preferences. If more candidates than seats remain, the bottom candidate is eliminated with his/her votes being transferred to other candidates as determined by the voters&rsquo; stated preferences. These elections and eliminations, and vote transfers if applicable, continue until there are only as many candidates as there are unfilled seats.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-big-tent-stategy" class="outline-2">
+<h2 id="big-tent-stategy"><span class="section-number-2">7.</span> Big Tent Strategy</h2>
+<div class="outline-text-2" id="text-big-tent-stategy">
+<p>
+Although revolutionaries of small nascent movements usually want to start being radical from the very beginning, they often start off by downplaying their ambitions and forming Big Tent coalitions because they have to. When they&rsquo;re downplaying their ambitions, they&rsquo;re essentially <a href="https://en.wikipedia.org/wiki/Motte-and-bailey_fallacy">Motte-and-Baileying</a> everybody on what they really want to do. Unless they start off as a Big Tent, they will be too small to actually change anything and make stuff happen. Once the revolutionaries become big enough to the point where they don&rsquo;t have to rely on being coalition movements anymore, they transition towards their extremist ulterior motives because that was the plan all along. The only purpose served by the Big Tent was to gain the momentum necessary for accomplishing that.
+</p>
+</div>
+
+<div id="outline-container-nazis-big-tent" class="outline-3">
+<h3 id="nazis-big-tent"><span class="section-number-3">7.1.</span> The Nazis Gained Power By Being Moderate, And Then Radicalizing</h3>
+<div class="outline-text-3" id="text-nazis-big-tent">
+<p>
+A notable historical example is how the Nazis attempted a revolutionary strategy when they attempted to overthrow the government during the Beer Hall Putsch in 1923. The revolutionary approach had failed, so they decided to obtain power via reformist and legal means instead. In the May 1928 federal election, they only achieved 2.6% of the vote, but then they formed a temporary alliance with the larger and less extremist German National People&rsquo;s Party (DNVP). This alliance (as well as the onset of the Great Depression and other things) contributed to weakening the DNVP&rsquo;s share of the vote in the September 1930 election to 7%, while boosting the Nazis to win 18.2% of the vote that same year. By temporarily using a moderated Big Tent approach, the Nazis gained the propulsion that they needed to seize power and start radicalizing towards their true ambitions.
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Sturmabteilung#Night_of_the_Long_Knives">Wikipedia Excerpt about how Ernst Röhm wanted to create an even more radical version of the Nazi Party, which was one reason why Hitler purged him and other members of the Sturmabteilung</a>.
+</p>
+
+<p>
+After their victory in the 1933 election, some of the Nazis were plotting to create an even more radical version of the Nazi Party that would seize power via a coup d&rsquo;état and start a war. Hitler wouldn&rsquo;t allow this though, so he ordered the assassination of Ernst Röhm in order to maintain his grip on power. It&rsquo;s possible that might have prevented the Nazis from starting WWII on an earlier date. If that&rsquo;s true, then it was a smart move for the Nazis to take a moderate position on politics for the time being while gradually radicalizing.
+</p>
+</div>
+</div>
+
+<div id="outline-container-ancaps-big-tent" class="outline-3">
+<h3 id="ancaps-big-tent"><span class="section-number-3">7.2.</span> Ancaps Who Have To Be Big Tent To Appeal To Moderate Libertarians</h3>
+<div class="outline-text-3" id="text-ancaps-big-tent">
+<p>
+A second example: When I used to be an Ancap in college, the club president (also an Ancap) and I (the vice president) were trying to recruit Libertarians to join the Libertarian chapter on our college campus. We both agreed that if our club ever did get big enough, we were going to transition it away from being a Libertarian club to being an Ancap / Voluntaryist club. Although we both wanted to start an Anarchist club from the beginning, there&rsquo;s no chance that ever would&rsquo;ve gained much traction because that would&rsquo;ve been too extremist for anybody to ever consider joining, so we had to settle for a moderate Libertarian club that was open to anybody and hope that it would recruit enough members and transition towards being an Anarcho-Capitalist club instead. We actually gathered a couple dozen members, but eventually I left the club after I rejected Anarchism and Libertarianism. I don&rsquo;t know what happened to it after that.
+</p>
+</div>
+</div>
+
+<div id="outline-container-efilists-big-tent" class="outline-3">
+<h3 id="efilists-big-tent"><span class="section-number-3">7.3.</span> Efilists Who Have To Be Big Tent In Order To Appeal To Anti-Natalists</h3>
+<div class="outline-text-3" id="text-efilists-big-tent">
+<p>
+A third example of this would be how Amanda Sukenick and other Efilists are trying to co-opt the much larger Anti-Natalism movement and &ldquo;Efilize the Anti-Natalism movement from within&rdquo;, in an effort to recruit more potential Efilists. If the Efilism movement ever grows large enough, Sukenick is definitely going to stop promoting Anti-Natalist activism and start pushing Efilist activism instead. <a href="https://www.youtube.com/watch?v=_eqYl6H-8lI">She has said all this on video</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-political-factions-big-tent" class="outline-3">
+<h3 id="political-factions-big-tent"><span class="section-number-3">7.4.</span> Political Factions That Have To Work Within A More Moderate Coalition</h3>
+<div class="outline-text-3" id="text-political-factions-big-tent">
+<p>
+All political factions that are apart of a larger, more moderate coalition are also using the Big Tent Strategy to gain power and achieve some of their objectives, even though it requires sacrificing their more radical yearnings. Every faction in the coalition is only part of the coalition for convenience, and if any of the factions see an opportunity to persuade, influence, or manipulate the others towards their cause, they&rsquo;ll readily do so. Whenever a bunch of factions unite together to form a coalition, each faction is hoping to eventually out-compete the other factions for control of the entire coalition once the coalition&rsquo;s goal is finished.
+</p>
+</div>
+</div>
+
+<div id="outline-container-religious-branches" class="outline-3">
+<h3 id="religious-branches"><span class="section-number-3">7.5.</span> All The World&rsquo;s Major Religions Evolved Into Various Different Branches</h3>
+<div class="outline-text-3" id="text-religious-branches">
+<p>
+Religions (and ideologies in general) have a tendency to branch off into different subgroups over time.
+</p>
+<ul class="org-ul">
+<li>Judaism branched off into Christianity, which branched off into Catholicism, Eastern Orthodox, Protestantism, Coptic Orthodox, Ethiopian Orthodox, Mormonism, Jehovah&rsquo;s Witnesses, Christian Scientism, Seventh Day Adventists, etc.</li>
+<li>Islam branched off into Sunni Islam, Shiism, Ibadi Islam, etc.</li>
+<li>Hinduism branched into many different local beliefs.</li>
+<li>Buddhism branched into Theravada, Mahayana, Vajrayana Buddhism.</li>
+</ul>
+<p>
+In a sense, each one of these major world religions can be considered a big tent of sorts, especially from the perspectives of outsiders. But internally within each tent, some (perhaps most) of the people in each of the different sects don&rsquo;t see members of the other sects as belonging to the same religion. For instance, many Sunni Muslims don&rsquo;t consider Shiite Muslims to be true Muslims and they view them as belonging to an entirely different religion. The same goes for how Catholics often view Protestants, how Christians often view Mormons or Jehovah&rsquo;s Witnesses, and so on. Just like every big tent, there are different factions inside the tent that gatekeep and insist that the other factions under the tent are not true believers. On the other hand, outsiders that oppose the big tent movements in question will tend to view and treat all the factions of the tent as belonging to the same ideology, as outsiders are less likely to understand what makes each of the different factions different from each other.
+</p>
+
+<p>
+Ideologies need labels in order to propagate effectively since labels define the &ldquo;in-group&rdquo; and the &ldquo;out-group&rdquo;. Being able to identify with an already established label can help an ideology propagate better (as opposed to a newly made-up label), which may help to explain why Shiites are likely to identify themselves as legitimate Muslims and why Protestants view their religion as having more similarities than differences to Catholicism, even though Shiism and Protestantism both branched off an already established religion whose members are more likely to see the new movements as being heresy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-intragroup-conflict" class="outline-3">
+<h3 id="intragroup-conflict"><span class="section-number-3">7.6.</span> Intragroup Conflict</h3>
+<div class="outline-text-3" id="text-intragroup-conflict">
+<p>
+<a href="https://en.wikipedia.org/wiki/Intragroup_conflict">Wikipedia: Intragroup Conflict</a>.
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Narcissism_of_small_differences">Wikipedia: The Narcissism of Small Differences</a>.
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Sectarianism">Wikipedia: Sectarianism</a>.
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Neotribalism">Wikipedia: Neotribalism</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-big-tent-final-thoughts" class="outline-3">
+<h3 id="big-tent-final-thoughts"><span class="section-number-3">7.7.</span> Conclusion</h3>
+<div class="outline-text-3" id="text-big-tent-final-thoughts">
+<p>
+When a big tent movement arises, it&rsquo;s pretty typical for the tent&rsquo;s ideology and ideals to evolve over time or get watered down, especially if it propagates to many different peoples in high numbers. The bigger the tent, the more likely some faction and/or another is going to diverge into a distinctly different ideology that only has veins of similarity to the original big tent. At the same time however, a lot of what enables a successful big tent movement to propagate effectively comes from its number of members. Big Tents are best at accomplishing short-term coalition goals and propagating core ideas to a somewhat wider range of people, but they will always have the downside that the perceived differences between the tent&rsquo;s members will come to outweigh their similarities and cause the tent to evolve, diverge, or fall apart entirely from within.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Zero Contradictions</p>
+<p class="date">Created: 2023-07-09 Sun 12:08</p>
+</div>
+</body>
+</html>

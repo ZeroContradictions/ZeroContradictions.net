@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-06-04 Sun 02:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>How I Learned To Program The Worst Way Possible</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="description" content="I always wanted to be a programmer, but unfortunately I encountered numerous obstacles before I finally got to where I wanted to be." />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="../blog-posts.css" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html#journey"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">How I Learned To Program The Worst Way Possible</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orge535746">1. Introduction</a></li>
+<li><a href="#org8c0fb0e">2. Early High School</a></li>
+<li><a href="#orge73c88d">3. Late High School</a></li>
+<li><a href="#orgbc3a947">4. College</a></li>
+<li><a href="#org86b3e62">5. After Graduating College</a>
+<ul>
+<li><a href="#org46e307a">5.1. Why Object-Oriented Programming (OOP) Is A Bad Idea</a></li>
+</ul>
+</li>
+<li><a href="#org6177611">6. How I Wish Things Would&rsquo;ve Gone</a></li>
+<li><a href="#org07c58ef">7. Where I Am Now</a>
+<ul>
+<li><a href="#org5f6ea55">7.1. Object-Oriented Programming Is Overrated</a></li>
+<li><a href="#org3e3fe29">7.2. eeeeeeeeeeee</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge535746" class="outline-2">
+<h2 id="orge535746"><span class="section-number-2">1.</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+I always knew that I wanted to be a programmer / software engineer ever since I was 14 years old. When I heard my first explanation of what a computer scientist is and what a computer scientist does, I immediately thought that that would be the perfect job for me when I became an adult. But unfortunately, I encountered numerous obstacles before I finally got to where I wanted to be.
+</p>
+
+<p>
+While I&rsquo;m glad that I finally got where I wanted to be and had all the right environmental conditions by the time I was about 23 years old,
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8c0fb0e" class="outline-2">
+<h2 id="org8c0fb0e"><span class="section-number-2">2.</span> Early High School</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>I attended my ninth grade year at a Technical Charter High School.</li>
+<li>I first started doing HTML and learning really basic programming concepts with Alice in ninth grade when I was 14 years old, but that was hardly close to &ldquo;real&rdquo; programming at all.</li>
+<li>In March 2014, my parents bought me a book called &ldquo;Learn C++ in 24 Hours&rdquo;, and it is frankly a horrible book to learn how to program from compared to all the other books out there. I suppose that it was better than nothing, but there are several problems with the book:
+<ul class="org-ul">
+<li>Many of the things that it says that are great about C++ are very vague and could be applied to other programming languages as well.</li>
+<li>It didn&rsquo;t teach how to access library functions, which is the bulk of the actual language. No introductory teaching of a programming language can be considered complete if it doesn&rsquo;t even teach how to access library functions.</li>
+<li>It is misguiding to have people believe that you can learn an entire programming language in just a single day, but as I was 14 years old at the time, I didn&rsquo;t know any better.</li>
+<li>i</li>
+</ul></li>
+<li>I wrote my first programs on an iPad. And I didn&rsquo;t even have a physical keyboard to type on since my parents couldn&rsquo;t afford to buy me a real computer since we lived paycheck to paycheck.
+<ul class="org-ul">
+<li>Since the iPad didn&rsquo;t have any software that could run a C++ compiler on it, I used an online C++ compiler as a work-around since that could run in the iPad&rsquo;s Safari web browser on the iPad. That was the only way that I could think of to be able to compile code on a device that was never made for programming to begin with. Sometimes, the work that I typed into the online compiler didn&rsquo;t get saved, but sometimes it did if the code was saved into as web browser cookies. I only typed really short programs due to the limitations I had.</li>
+</ul></li>
+<li>When my grandmother gave my parents the money to buy me a computer, I didn&rsquo;t even get the computer that I wanted because I was given a 15&ldquo; mid-2012 MacBook Pro, when I wanted a computer that ran Linux instead.
+<ul class="org-ul">
+<li>To be fair, it had great specs for being a first computer, but it still wasn&rsquo;t what I wanted.</li>
+</ul></li>
+<li>I switched my keyboard layout from Qwerty to Dvorak, then to Colemak when I was 16 years old, so I learned how to type on a keyboard three times over.</li>
+<li>When I first heard of Emacs at 15 years old, I was told that it had a really really high learning curve, but based on the online testimonies of the people that I heard from the people who use it, I knew that that was exactly what I wanted to use as my text editor, but I was mislead into believing that I couldn&rsquo;t use Emacs on the keyboard that I had due to a phenomenon known as the <a href="https://en.wikipedia.org/wiki/Emacs#Emacs_pinky">Emacs Pinky</a>. And while this was true to a great extent, there were some things that could&rsquo;ve been done to make my life easier.</li>
+<li>i</li>
+<li>i</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge73c88d" class="outline-2">
+<h2 id="orge73c88d"><span class="section-number-2">3.</span> Late High School</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>i</li>
+<li>i</li>
+</ul>
+
+
+<p>
+I tried to get into electives that would teach programming, but my high school didn&rsquo;t offer any.
+I couldn&rsquo;t get into the only class that taught programming, due to how the electives were set up.
+In general, I&rsquo;m sad that I wasn&rsquo;t able to get any of the electives that I really wanted.
+If I could go back, I wish I had studied Mandarin as a second foreign language, but none of the staff in my high school told me that I could study a second foreign language with my elective courses if I wanted to.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgbc3a947" class="outline-2">
+<h2 id="orgbc3a947"><span class="section-number-2">4.</span> College</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>i</li>
+<li>i</li>
+</ul>
+
+
+<div id="orgd421d28" class="figure">
+<p><img src="../images/ real-programmers-write-code-with-pencil-and-paper.jpg" alt=" real-programmers-write-code-with-pencil-and-paper.jpg" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org86b3e62" class="outline-2">
+<h2 id="org86b3e62"><span class="section-number-2">5.</span> After Graduating College</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>i</li>
+<li>i</li>
+</ul>
+</div>
+
+<div id="outline-container-org46e307a" class="outline-3">
+<h3 id="org46e307a"><span class="section-number-3">5.1.</span> Why Object-Oriented Programming (OOP) Is A Bad Idea</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+The many downsides and few benefits to OOP are very analogous to reasons why the UNIX Philosophy isn&rsquo;t necessarily a good thing.
+</p>
+<ul class="org-ul">
+<li>i</li>
+</ul>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Family_resemblance">Ludwig Wittgenstein&rsquo;s Concept of Family Resemblance</a> is a good reason why it&rsquo;s the OOP practice of separating everything into objects is not a good idea.
+</p>
+
+
+
+
+
+
+
+
+<p>
+Now I&rsquo;m about 24 years old, and it&rsquo;s only 10 years after I first thought that I wanted to program for a living that I seem certain that I don&rsquo;t want to do it for a living anymore.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6177611" class="outline-2">
+<h2 id="org6177611"><span class="section-number-2">6.</span> How I Wish Things Would&rsquo;ve Gone</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>Late 2014: I should&rsquo;ve switched to Colemak, and I should&rsquo;ve learned how to use Vim on my Macbook. I also should&rsquo;ve switched back to writing everything in print, instead of writing in cursive.</li>
+<li>2015: I use VMware or Virtual Box to run Ubuntu or Linux Mint on a virtual machine on my Macbook. Or better yet, my father would&rsquo;ve used my grandmother&rsquo;s money to buy me the best laptop for using Linux instead, and I use Libre Office or Google Docs within Linux for completing all my school assignments.</li>
+<li>2015: I read the Unix Programming Environment.</li>
+<li>2015: I install Spacemacs and learn how to use Emacs and Org-Mode.</li>
+<li>2015: I read the Pro Git book and learn how to use Git.</li>
+<li>2015: I discover BG&rsquo;s blog and youtube channel (or maybe the GroundedLibertarian.com), start thinking about philosophy, and write my thoughts down with Emacs into .org files.</li>
+<li>2015: I complete the Duolingo Esperanto tree, discover the Indo-European language family, and read an introductory book on linguistics, perhaps from the local library. I don&rsquo;t waste a hundred hours creating a useless conlang.</li>
+<li>2015: I complete Remembering the Hanzi or Remembering the Kanji, before learning how Mandarin or Japanese. I also spend my high school electives learning Mandarin, so that I could be learning two languages during high school.</li>
+<li>2015: I learn about neurodivergence, and I get formally/officially diagnosed with Autism and ADHD, and I am prescribed a medication to help with my ADHD.</li>
+<li>201#: i</li>
+<li>2016: I apply for Boise State University</li>
+<li>2017: I double-major in Mathematics and Linguistics at Boise State University, with a CS minor.</li>
+<li>2018: I discover Georgism and become Georgist.</li>
+<li>2018: I read Andre Kornai&rsquo;s book on Mathematical Linguistics, after completing my Discrete Mathematics course in college.</li>
+<li>201#: i</li>
+<li>201#: i</li>
+<li>2020: I start using libgen or ZLibrary as soon as either becomes available, and I start downloading and reading helpful books from those online libraries.</li>
+<li>2021: I start studying for and completing the exams needed to become an actuary.</li>
+<li>202#: i</li>
+<li>202#: i</li>
+<li>202#: i</li>
+<li>202#: i</li>
+</ul>
+
+<p>
+Every time he typed up a homework assignment in LaTeX, it would look really phenomenal, as if it came straight out of a math textbook, except that he wrote all of it himself.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org07c58ef" class="outline-2">
+<h2 id="org07c58ef"><span class="section-number-2">7.</span> Where I Am Now</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>i</li>
+<li>i</li>
+</ul>
+
+<p>
+<a href="../misc/emacs-and-keyboard-setup.html">My Workstation Setup</a>
+</p>
+</div>
+
+<div id="outline-container-org5f6ea55" class="outline-3">
+<h3 id="org5f6ea55"><span class="section-number-3">7.1.</span> Object-Oriented Programming Is Overrated</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=QM1iUe6IofM">Object-Oriented Programming is Bad</a></li>
+<li><a href="https://www.youtube.com/watch?v=IRTfhkiAqPw">Object-Oriented Programming is Embarrassing</a></li>
+<li><a href="https://www.youtube.com/watch?v=V6VP-2aIcSc">Object-Oriented Programming is Garbage: 3800 SLOC example</a></li>
+<li><a href="https://www.youtube.com/watch?v=0iyB0_qPvWk">Object-Oriented Programming is Good*</a></li>
+<li><a href="https://caseymuratori.com/blog_0015">Semantic Compression Programming</a></li>
+<li><a href="https://brianwill.github.io/">https://brianwill.github.io/</a></li>
+<li><a href="https://www.youtube.com/watch?v=wGCWlI4A5z4">Critique of Code Aesthetic&rsquo;s Nesting Code: From C to C++ to Rust</a></li>
+<li>i
+&lt;li&gt;&lt;a href=&ldquo;<a href="https://fgiesen.wordpress.com/category/computer-architecture/">https://fgiesen.wordpress.com/category/computer-architecture/</a>&rdquo;&gt;Ryg&rsquo;s Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&ldquo;videos&rdquo; href=&ldquo;<a href="https://www.youtube.com/@code_report/videos">https://www.youtube.com/@code_report/videos</a>&rdquo;&gt;code_report&rsquo;s Youtube Channel&lt;/a&gt;&lt;/li&gt;</li>
+<li>i</li>
+<li>i</li>
+<li>i</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3e3fe29" class="outline-3">
+<h3 id="org3e3fe29"><span class="section-number-3">7.2.</span> eeeeeeeeeeee</h3>
+<div class="outline-text-3" id="text-7-2">
+<p>
+i
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Zero Contradictions</p>
+<p class="date">Created: 2023-06-04 Sun 02:41</p>
+</div>
+</body>
+</html>
