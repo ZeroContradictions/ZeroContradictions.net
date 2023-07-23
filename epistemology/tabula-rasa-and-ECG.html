@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-07-23 Sun 22:50 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tabula Rasa And The Münchhausen Trilemma</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="description" content="[Make this the same as home page keywords description]" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="../blog-posts.css" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../"> UP </a>
+ |
+ <a accesskey="H" href="../"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Tabula Rasa And The Münchhausen Trilemma</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#evaluating-tabula-rasa">1. Evaluating Tabula Rasa</a>
+<ul>
+<li><a href="#intro">1.1. Is The Human Mind Tabula Rasa?</a></li>
+<li><a href="#arguments-for-tabula-rasa">1.2. Arguments In Favor Of Tabula Rasa</a></li>
+<li><a href="#arguments-against-tabula-rasa">1.3. Arguments Against Tabula Rasa</a></li>
+<li><a href="#natal-mental-abilities">1.4. What Is The Human Mind Born With?</a>
+<ul>
+<li><a href="#senses-of-human-beings">1.4.1. Senses Of The Human Being</a></li>
+</ul>
+</li>
+<li><a href="#natal-human-abilities-info">1.5. More Information On What Humans Are Born With</a></li>
+<li><a href="#conclusions-on-tabula-rasa">1.6. Conclusions On Tabula Rasa</a></li>
+</ul>
+</li>
+<li><a href="#empirical-verification">2. Problem of the Criterion and Empirical Verification</a></li>
+<li><a href="#axioms-intro">3. Introduction To Axioms</a></li>
+<li><a href="#munchhausen-trilemma">4. The Münchhausen Trilemma</a></li>
+<li><a href="#EGC-and-foundationalism">5. Why It&rsquo;s Still Important To Create A Rigorous Axiomatic Foundation</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-evaluating-tabula-rasa" class="outline-2">
+<h2 id="evaluating-tabula-rasa"><span class="section-number-2">1.</span> Evaluating Tabula Rasa</h2>
+<div class="outline-text-2" id="text-evaluating-tabula-rasa">
+</div>
+<div id="outline-container-intro" class="outline-3">
+<h3 id="intro"><span class="section-number-3">1.1.</span> Is The Human Mind Tabula Rasa?</h3>
+<div class="outline-text-3" id="text-intro">
+<p>
+Tabula Rasa is defined as the epistemological idea that individuals are born without built-in mental content and that therefore all knowledge comes from experience or perception.
+</p>
+
+<p>
+Mental contents are those items that are thought of as being &ldquo;in&rdquo; the mind, and capable of being formed and manipulated by mental processes and faculties. Examples include thoughts, concepts, memories, emotions, percepts and intentions.
+</p>
+</div>
+</div>
+
+<div id="outline-container-arguments-for-tabula-rasa" class="outline-3">
+<h3 id="arguments-for-tabula-rasa"><span class="section-number-3">1.2.</span> Arguments In Favor Of Tabula Rasa</h3>
+<div class="outline-text-3" id="text-arguments-for-tabula-rasa">
+<p>
+Humans are not born with a built-in understanding of how reality works, so humans are tabula rasa regarding anything about how reality functions and how to interpret it.
+</p>
+
+<p>
+Humans do not develop the concept of object permanence until one year of age (on average).
+</p>
+
+<p>
+Humans do not develop the concept of the conservation of matter until around 7 years of age (on average).
+</p>
+
+<p>
+Furthermore, humans have to learn (either by themself or from someone else): mathematics, physics, chemistry, astronomy, philosophy, and other non-universal sciences in order to fully understand reality.
+Even today, even the smartest humans don&rsquo;t have a complete understanding of how reality works.
+It is very unlikely that humans will ever be able to know everything.
+</p>
+</div>
+</div>
+
+<div id="outline-container-arguments-against-tabula-rasa" class="outline-3">
+<h3 id="arguments-against-tabula-rasa"><span class="section-number-3">1.3.</span> Arguments Against Tabula Rasa</h3>
+<div class="outline-text-3" id="text-arguments-against-tabula-rasa">
+<p>
+Chickens can learn object permanence after just one day of life.
+Yet, human infants don&rsquo;t understand the concept of object permanence because their brains are developed enough yet.
+It&rsquo;s a matter of development, not learning.
+The human brain grows to three times its original size at birth after one year of life.
+Human brains are far, far more complex, so of course they take longer to develop than a chicken brain.
+</p>
+
+<p>
+Perhaps, you don&rsquo;t need to be taught that object permanance is a thing, you just eventually become able to process that there&rsquo;s more than what you can sense at the moment.
+Suppose you have a computer:
+</p>
+<ul class="org-ul">
+<li>It has a slow processor and can&rsquo;t run the &ldquo;object permanance program&rdquo;.</li>
+<li>But then you put a much faster processor in it so that it can run the program.</li>
+<li>The computer always had the program, it just couldn&rsquo;t process it.</li>
+<li>The trouble is that the brain has a lot of unknowns so making broad statements like whether or not the tabula rasa is correct can&rsquo;t really be definitively proven, which is why psychology is honestly just an extension of philosophy.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-natal-mental-abilities" class="outline-3">
+<h3 id="natal-mental-abilities"><span class="section-number-3">1.4.</span> What Is The Human Mind Born With?</h3>
+<div class="outline-text-3" id="text-natal-mental-abilities">
+<ul class="org-ul">
+<li><a href="#senses-of-human-beings">Sense Perception</a></li>
+<li>The Ability To Desire Things The Mind Wants</li>
+<li>The Ability To Move</li>
+<li>Reflexes</li>
+<li>Instincts (Innate Behaviors)
+<ul class="org-ul">
+<li>Breathing</li>
+<li>Breast Feeding (disappears after infants finish weaning)</li>
+<li>Natural Instinctive Preference For Straight And Horizontal Lines, Colors, Conformity</li>
+<li><a href="https://en.wikipedia.org/wiki/Arachnophobia">Fear Of Spiders</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Acrophobia">Fear Of Heights</a></li>
+</ul></li>
+<li>Limited Social Interaction Skills (eye contact, showing/perceiving emotions, etc)</li>
+<li>The Ability To Form Concepts (takes time to develop)</li>
+<li>The Ability To Reason (takes time to develop)</li>
+<li>The Ability To Emote (takes time to develop)</li>
+<li>The Ability To Use And Understand Language (takes time to develop)</li>
+<li>The Ability To Memorize Information (takes time to develop)</li>
+<li>Sexual Attraction (takes time to develop)</li>
+</ul>
+</div>
+
+<div id="outline-container-senses-of-human-beings" class="outline-4">
+<h4 id="senses-of-human-beings"><span class="section-number-4">1.4.1.</span> Senses Of The Human Being</h4>
+<div class="outline-text-4" id="text-senses-of-human-beings">
+<p>
+Contrary to popular belief, humans actually have far more than just five senses.
+The ranges of our senses and how they work are as follows:
+</p>
+<ul class="org-ul">
+<li>Vision (Seeing)
+<ul class="org-ul">
+<li>Detects light (Energy) within the electromagnetic spectrum</li>
+</ul></li>
+<li>Audition (Hearing)
+<ul class="org-ul">
+<li>Detects vibrations (mainly in the atmosphere)</li>
+</ul></li>
+<li>Somatosensation (Feeling)
+<ul class="org-ul">
+<li>Pressure</li>
+<li>Pain</li>
+<li>Vibration</li>
+<li>Itchiness</li>
+<li>Heat</li>
+<li>Coldness (Lack of Heat)</li>
+</ul></li>
+<li>Olfaction (Smelling)</li>
+<li>Gustation (Tasting)
+<ul class="org-ul">
+<li>Chemoreceptors</li>
+</ul></li>
+<li>Proprioception</li>
+<li>Balance</li>
+<li>Tension Sensors</li>
+<li>Hunger &amp; Thirst</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-natal-human-abilities-info" class="outline-3">
+<h3 id="natal-human-abilities-info"><span class="section-number-3">1.5.</span> More Information On What Humans Are Born With</h3>
+<div class="outline-text-3" id="text-natal-human-abilities-info">
+<ul class="org-ul">
+<li>Humans are born with a capacity to learn and master human language. We know that <a href="https://en.wikipedia.org/wiki/Formalism_(linguistics)">linguistic formalism</a> is definitely valid to some extent, even though <a href="https://en.wikipedia.org/wiki/Functional_linguistics">functionalism</a> plays a bigger role in how humans learn and speak language.</li>
+<li><a href="https://www.youtube.com/watch?v=-O5kNPlUV7w">Humans have a natural preference for straight, horizontal and vertical lines, color, and other features indicating good, safe surroundings and environment</a>.</li>
+<li>Humans can be born with a fear of spiders. One could see a spider and instantly be frightened by it despite not knowing exactly what it is or why they are frightened by its appearance. How is it that they are able to see a spider and be afraid of it without ever having seen one before if tabula rasa is true?
+<ul class="org-ul">
+<li>The same above applies to a fear of heights. And both fears are prevalent in humans because they were selected by evolution. But of course, there are still humans around that have genetics that don&rsquo;t predispose them to these fears.
+<ul class="org-ul">
+<li>Most humans are born with a natural preference and attraction for the sex they are attracted to. If humans were completely tabula rasa, then how is it possible that they are attracted to some specific subgroups of humans, but not others? We know that sexual orientation is determined at birth.</li>
+<li>Humans are born with a not-yet-developed, but somewhat functional ability for social interaction. Babies will often imitate things that they see (like sticking their tongue out if they see someone looking at them do it).</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-conclusions-on-tabula-rasa" class="outline-3">
+<h3 id="conclusions-on-tabula-rasa"><span class="section-number-3">1.6.</span> Conclusions On Tabula Rasa</h3>
+<div class="outline-text-3" id="text-conclusions-on-tabula-rasa">
+<ul class="org-ul">
+<li>There is no straight-forward answer to whether the mind is tabula rasa or not because the answer depends on <a href="../epistemology/knowledge">what one defines as being &ldquo;knowledge&rdquo;</a>. Regardless, virtually all (if not, all) knowledge must ultimately be learned from experience.</li>
+<li>It&rsquo;s also a misleading question to an extent because a human brain grows three times its birth size within the first year of life. An infant&rsquo;s mind is significantly different in size, structure, and capabilities compared to a more developed mind.</li>
+<li>Evolution has determined that it is important that humans be born with skills relating to human interaction and social skills than being able to understand reality. Babies have natural social instincts for interacting with their parents, even if they otherwise don&rsquo;t have knowledge instincts.</li>
+<li>Humans are certainly born with natural instincts, as are many animals, but most people would not consider this to be knowledge.</li>
+<li>Regardless of whether or not the human mind is born tabula rasa, it is definitely certain that most (if not all) knowledge can never be innately known by newborns.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-empirical-verification" class="outline-2">
+<h2 id="empirical-verification"><span class="section-number-2">2.</span> Problem of the Criterion and Empirical Verification</h2>
+<div class="outline-text-2" id="text-empirical-verification">
+<p>
+How would we know what we know about the hard sciences, if we could only rely on our senses, the techniques from the knowledge we currently know, and nothing else?
+</p>
+
+<p>
+If you ask anyone &ldquo;Which is larger, the Sun or the Moon?&rdquo;, every educated person will say the Sun and they may even tell you that the Sun is about 400 times the size of the moon, by diameter.
+An uneducated person will probably remember from school that the sun is bigger or they may not and go with what they see.
+</p>
+
+<p>
+Now you ask &ldquo;Well, they appear to be the same size. So, how do you know that the sun is bigger? How would people have figured this out during ancient times before telescopes and such were invented?&rdquo;
+</p>
+
+<p>
+At this point the uneducated person may find it puzzling and interesting. The educated person will be offended. &ldquo;Are you questioning my intelligence? You must be a conspiracy theorist.&rdquo;
+</p>
+
+<p>
+Very few people will actually know the observations which were needed for us to even question whether the sun and the moon were different sizes.
+Fewer still will know the experiments done and the body of empirical knowledge required to make us certain that the sun is larger.
+Yet, the educated people are all certain the sun is bigger.
+They are also certain they have arrived at this conclusion using rational decision making.
+</p>
+
+<p>
+There are a lot of educated people who are not very smart.
+Being mediocre and educated makes people indignant when they are questioned.
+</p>
+
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Problem_of_the_criterion">Wikipedia: Problem of the Criterion</a>
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/What_the_Tortoise_Said_to_Achilles">Wikipedia: <i>What the Tortoise Said to Achilles</i></a>
+</p>
+
+<p>
+<a href="https://streetepistemology.com/">Street Epistemology</a>: A Method for Checking Our Understanding
+</p>
+</div>
+</div>
+
+<div id="outline-container-axioms-intro" class="outline-2">
+<h2 id="axioms-intro"><span class="section-number-2">3.</span> Introduction To Axioms</h2>
+<div class="outline-text-2" id="text-axioms-intro">
+<p>
+An axiom or postulate is a statement that is taken to be true, to serve as a premise or starting point for further reasoning and arguments.
+Axioms are the most basic conceptual foundation in all proofs, hence they cannot be proven by referencing even more basic statements, since there are none by definition.
+It is thought that in principle every theory could be axiomatized in this way and formalized down to the bare language of logical formulas.
+</p>
+
+<p>
+Note that the order in which axioms are listed matters because previous axioms state concepts that later axioms have to refer to.
+It would not make sense to establish the Identity Axiom <i>after</i> the Law of Non-Contradiction.
+</p>
+
+<p>
+There are a few reasons why the human brain tends to implicitly assumes axioms so often:
+</p>
+<ol class="org-ol">
+<li>Brains aren&rsquo;t programmed to recognize assumptions unless it&rsquo;s trying to find them, due to selective attention.</li>
+<li>It probably speeds up mental calculations if the brain doesn&rsquo;t have to consciously realize axioms all the time. This becomes a bad thing when you must recognize them, but fortunately, the brain is never forbidden from bringing them into its consciousness.</li>
+<li><a href="../epistemology/difficult-to-change-minds#apophrenia-and-confirmation-bias">Many subconscious assumptions are necessary uphold a coherentist belief system</a> (even if they have no proper justification).</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-munchhausen-trilemma" class="outline-2">
+<h2 id="munchhausen-trilemma"><span class="section-number-2">4.</span> The Münchhausen Trilemma</h2>
+<div class="outline-text-2" id="text-munchhausen-trilemma">
+<p>
+<a href="https://en.wikipedia.org/wiki/M%C3%BCnchhausen_trilemma">Wikipedia: The Münchhausen Trilemma</a>.
+</p>
+
+<p>
+<a href="https://stateofthenihil.wordpress.com/2020/12/04/the-munchhausen-trilemma/">StateOfTheNihil&rsquo;s Solution to the Münchhausen Trilemma</a>.
+</p>
+
+<p>
+Foundationalism, coherentism, and infinitism all share the underlying assumption that beliefs are justified solely by other beliefs, in a chain of reasoning.
+This is where things start to fall apart.
+Beliefs are not just justified by other beliefs, but also by their relation to subjective experience.
+</p>
+
+<p>
+The other problem with infinitism is that if justification is just a chain of beliefs that extends indefinitely, then it is impossible to know what is justified.
+You can&rsquo;t demonstrate the chain or conceptualize it.
+You can only assert it.
+</p>
+
+<p>
+Knowledge may seem to be foundationalist since complex concepts depend on simpler concepts, but there&rsquo;s no reason why this can&rsquo;t be explained by coherentism instead.
+It&rsquo;s not possible to have a purely foundationalist theory of epistemology, though it is possible to start off from a foundationalist-like series of axioms and theorems that cohere to other epistemological knowledge to the point where the entire theory of epistemology justifies and re-affirms the axioms and theorems themselves, which would ultimately be coherentism, not foundationalism.
+</p>
+
+<p>
+It&rsquo;s possible to create new beliefs that are not soundly grounded within a set of basic beliefs, axioms, and assumptions.
+For example, <a href="https://skeptics.stackexchange.com/questions/8380/did-some-cultures-believe-that-photography-can-steal-your-soul">many American Indians believe that photography could steal a person&rsquo;s soul</a>.
+They did not establish this new belief as something that follows from what they already believed.
+If they cannot explain <i>how</i> what they believe works, yet they choose to hold the beliefs anyway, then they have chosen to believe in something that does not follow from an epistemic foundation because they had to make a new assumption for explaining what they were perceiving.
+More generally, whenever someone <a href="../language/sapir-whorf-theory#why-before-how-problem">tries to understand <i>why</i> before understanding <i>how</i></a>, they are breaking the rules of foundationalism and how it&rsquo;s supposed to work.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-EGC-and-foundationalism" class="outline-2">
+<h2 id="EGC-and-foundationalism"><span class="section-number-2">5.</span> Why It&rsquo;s Still Important To Create A Rigorous Axiomatic Foundation</h2>
+<div class="outline-text-2" id="text-EGC-and-foundationalism">
+<p>
+It&rsquo;s not possible to build a purely foundationalist theory of epistemology, though it is possible to create a set of <a href="https://en.wikipedia.org/wiki/Axiom">axioms</a> and theorems that cohere to other epistemological knowledge to the point where the entire theory of epistemology justifies and re-affirms the axioms and theorems themselves.
+Every great theory begins with a minimal, yet sufficient set of carefully chosen axioms that implicates a framework of non-contradictory conclusions.
+</p>
+
+<p>
+Knowledge tends to look as if it&rsquo;s structured according to foundationalism when first acquiring it, but every foundationalist system eventually evolves into a coherentist structured system as the acquisition of knowledge progresses.
+In fact, one of the most defining characteristics of formal education is precisely that it is structured in a foundationalist format, starting from simpler concepts to higher-level concepts.
+Structuring curriculum in this manner optimizes the acquisition of knowledge.
+</p>
+
+
+<p>
+<a href="../epistemology/performative-contradictions">The foundationalist framework that I am proposing</a> is easy to understand since it can be readily formulated by an understanding of classical logic.
+This framework also works as something that secular, logical people with different backgrounds can quickly learn and make references to when discussing philosophy.
+Without a common framework of agreed-upon knowledge, people with completely different life experiences (and educations) may not be able to communicate anything meaningful at all.
+So a foundationalist framework provides a common point of reference.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Zero Contradictions</p>
+<p class="date">Created: 2023-07-23 Sun 22:50</p>
+</div>
+</body>
+</html>
