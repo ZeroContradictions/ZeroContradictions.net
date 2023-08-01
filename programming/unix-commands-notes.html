@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-06-04 Sun 03:34 -->
+<!-- 2023-07-31 Mon 09:17 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Unix/Linux Commands, Syntax, And Notes</title>
@@ -193,7 +193,7 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
-<link rel="stylesheet" type="text/css" href="../blog-posts.css" />
+<link rel="stylesheet" type="text/css" href="/blog-posts.css" />
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         displayAlign: "center",
@@ -218,9 +218,9 @@
 </head>
 <body>
 <div id="org-div-home-and-up">
- <a accesskey="h" href="../index.html#programming"> UP </a>
+ <a accesskey="h" href="/"> UP </a>
  |
- <a accesskey="H" href="../index.html"> HOME </a>
+ <a accesskey="H" href="/"> HOME </a>
 </div><div id="content" class="content">
 <h1 class="title">Unix/Linux Commands, Syntax, And Notes</h1>
 <div id="table-of-contents" role="doc-toc">
@@ -331,9 +331,6 @@
 <li>grep -n expression file-name : global regular expression printer (search files and print line numbers and lines containing search expression); -y: case independent</li>
 <li>grep -nr expression file-directory : search the directory recursively for the expression</li>
 <li>grep -n &ldquo;first.*last&rdquo; file-name : (search files and print line numbers and lines beginning and ending with the patterns specified)</li>
-</ul>
-
-<ul class="org-ul">
 <li>The syntax for &#x2013;include is identical. Note that the star is escaped with a backslash to prevent it from being expanded by the shell (quoting it, such as &#x2013;include=&ldquo;*.{cpp,h}&rdquo;, would work just as well). Otherwise, if you had any files in the current working directory that matched the pattern, the command line would expand to something like grep pattern -r &#x2013;include=foo.cpp &#x2013;include=bar.h rootdir, which would only search files named foo.cpp and bar.h, which is quite likely not what you wanted.</li>
 <li>grep pattern &#x2026;: &#x2026;</li>
 <li>script file-name : start new session and record all terminal input and output into filename; ctrl+d / exit to stop recording</li>
@@ -353,9 +350,6 @@
 <li>split file-name : a file into smaller files</li>
 <li>wget  &#x2013;recursive  &#x2013;no-clobber  &#x2013;page-requisites  &#x2013;html-extension  &#x2013;convert-links  &#x2013;no-parent  www.website-to-download.domain</li>
 <li>curl wttr.in : Display a local weather report in the terminal.</li>
-</ul>
-
-<ul class="org-ul">
 <li>objdump -d program-name : this shows the memory addresses and assembly instructions needed to run everything in the program</li>
 <li>scp sourcepath/filename destinationpath:sourcepath/optionalNewFilename : secure copy program for copying files to/from remote machines; use -r to copy directories (recursively)</li>
 <li>locate filename : find filenames inside a database of all file-names, which is updated by the system once a day; the database must be generated first</li>
@@ -498,13 +492,7 @@ Notice that these characters have different meanings than when used directly in 
 <li>cal -3 : print the calendar of last month, this month, and next month</li>
 <li>curl : transfer a URL</li>
 <li>history | tail -20 : print the last 20 commands</li>
-</ul>
-
-<ul class="org-ul">
 <li>timeout ## : run the process, and kill it after ## seconds if it hasn&rsquo;t ended already</li>
-</ul>
-
-<ul class="org-ul">
 <li>&lt;command-with-misaligned-output&gt;  |  column -t
 <ul class="org-ul">
 <li>The -s argument marks the separator between columns on the input. Here it&rsquo;s the forward slash, because no filename, group ID, user ID, or file mode will ever have a forward slash in it.</li>
@@ -853,14 +841,14 @@ Distributions customize the manual section to their specifics, which often inclu
 for loops:
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #859900; font-weight: bold;">for</span> variable<span style="color: #859900; font-weight: bold;"> in</span> list-of-words
-<span style="color: #859900; font-weight: bold;">do</span>
+<pre class="src src-bash"><span style="color: #a020f0;">for</span> variable<span style="color: #a020f0;"> in</span> list-of-words
+<span style="color: #a020f0;">do</span>
     commands
-<span style="color: #859900; font-weight: bold;">done</span> <span style="color: #268bd2; background-color: #232626;"># </span><span style="color: #268bd2; background-color: #232626;">denotes the end of a for loop</span>
-<span style="color: #859900; font-weight: bold;">for</span> variable<span style="color: #859900; font-weight: bold;"> in</span> list-of-words; <span style="color: #859900; font-weight: bold;">do</span> commands; <span style="color: #859900; font-weight: bold;">done</span>
-<span style="color: #859900; font-weight: bold;">for</span> ((<span style="color: #6c71c4;">i</span>=<span style="color: #d33682; font-weight: bold;">0</span>; i&lt;<span style="color: #d33682; font-weight: bold;">10</span>; i++))
+<span style="color: #a020f0;">done</span> <span style="color: #b22222;"># </span><span style="color: #b22222;">denotes the end of a for loop</span>
+<span style="color: #a020f0;">for</span> variable<span style="color: #a020f0;"> in</span> list-of-words; <span style="color: #a020f0;">do</span> commands; <span style="color: #a020f0;">done</span>
+<span style="color: #a020f0;">for</span> ((<span style="color: #a0522d;">i</span>=<span style="color: #008b8b;">0</span>; i&lt;<span style="color: #008b8b;">10</span>; i++))
     &gt; do
-    &gt;   echo $<span style="color: #6c71c4;">i</span>
+    &gt;   echo $<span style="color: #a0522d;">i</span>
     &gt; done
 </pre>
 </div></li>
@@ -868,45 +856,45 @@ for loops:
 while loops:
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #859900; font-weight: bold;">while</span> command
-<span style="color: #859900; font-weight: bold;">do</span>
+<pre class="src src-bash"><span style="color: #a020f0;">while</span> command
+<span style="color: #a020f0;">do</span>
     commands
-<span style="color: #859900; font-weight: bold;">done</span>
-<span style="color: #859900; font-weight: bold;">while</span> command; <span style="color: #859900; font-weight: bold;">do</span> commands; <span style="color: #859900; font-weight: bold;">done</span>
+<span style="color: #a020f0;">done</span>
+<span style="color: #a020f0;">while</span> command; <span style="color: #a020f0;">do</span> commands; <span style="color: #a020f0;">done</span>
 </pre>
 </div></li>
 <li><p>
 until loops:
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #859900; font-weight: bold;">until</span> command
-<span style="color: #859900; font-weight: bold;">do</span>
+<pre class="src src-bash"><span style="color: #a020f0;">until</span> command
+<span style="color: #a020f0;">do</span>
     commands
-<span style="color: #859900; font-weight: bold;">done</span>
-<span style="color: #859900; font-weight: bold;">until</span> command; <span style="color: #859900; font-weight: bold;">do</span> commands; <span style="color: #859900; font-weight: bold;">done</span>
+<span style="color: #a020f0;">done</span>
+<span style="color: #a020f0;">until</span> command; <span style="color: #a020f0;">do</span> commands; <span style="color: #a020f0;">done</span>
 </pre>
 </div></li>
 <li><p>
 if statements:
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #859900; font-weight: bold;">if</span> command <span style="color: #268bd2; background-color: #232626;"># </span><span style="color: #268bd2; background-color: #232626;">Use [ ] brackets to treat the stuff in between as a test without using the test command itself</span>
-<span style="color: #859900; font-weight: bold;">then</span>
+<pre class="src src-bash"><span style="color: #a020f0;">if</span> command <span style="color: #b22222;"># </span><span style="color: #b22222;">Use [ ] brackets to treat the stuff in between as a test without using the test command itself</span>
+<span style="color: #a020f0;">then</span>
     commands
-<span style="color: #859900; font-weight: bold;">else</span> <span style="color: #268bd2; background-color: #232626;"># </span><span style="color: #268bd2; background-color: #232626;">elif can be used short for else if command, then ...</span>
+<span style="color: #a020f0;">else</span> <span style="color: #b22222;"># </span><span style="color: #b22222;">elif can be used short for else if command, then ...</span>
     commands
-<span style="color: #859900; font-weight: bold;">fi</span> <span style="color: #268bd2; background-color: #232626;"># </span><span style="color: #268bd2; background-color: #232626;">denotes the end of an if statement</span>
+<span style="color: #a020f0;">fi</span> <span style="color: #b22222;"># </span><span style="color: #b22222;">denotes the end of an if statement</span>
 </pre>
 </div></li>
 <li><p>
 case statements:
 </p>
 <div class="org-src-container">
-<pre class="src src-bash"><span style="color: #859900; font-weight: bold;">case</span> word<span style="color: #859900; font-weight: bold;"> in</span> pattern
+<pre class="src src-bash"><span style="color: #a020f0;">case</span> word<span style="color: #a020f0;"> in</span> pattern
              pattern) commands;;
                       pattern) commands;;
                       ...
-                      <span style="color: #859900; font-weight: bold;">esac</span> <span style="color: #268bd2; background-color: #232626;"># </span><span style="color: #268bd2; background-color: #232626;">case spelled backwards</span>
+                      <span style="color: #a020f0;">esac</span> <span style="color: #b22222;"># </span><span style="color: #b22222;">case spelled backwards</span>
 </pre>
 </div></li>
 </ul>
@@ -1215,7 +1203,7 @@ case statements:
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Zero Contradictions</p>
-<p class="date">Created: 2023-06-04 Sun 03:34</p>
+<p class="date">Created: 2023-07-31 Mon 09:17</p>
 </div>
 </body>
 </html>
