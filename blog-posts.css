@@ -17,23 +17,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 
 /*** ID Atttributes Used In Org-Mode HTML Output ***/
 #org-div-home-and-up {
-    font-size: 90%;
-    text-align: right;
-}
-
-#table-of-contents ul {
-    margin: 00px 00px 5px 00px;
-    font-size: 100%;
-    list-style-type: none;
-    text-decoration: underline;
-    color: #015EF4;
-    text-decoration-color: #015EF4;
-}
-#table-of-contents ul li {
-    margin: 00px 00px 5px 10px;
-}
-#table-of-contents ul li ul li {
-    margin: 00px 00px 5px 20px;
+    font-size: 110%;
+    font-weight: bold;
 }
 
 #content, #postamble {
@@ -41,25 +26,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 }
 
 /*** universal ***/
-a {
-    color: #015EF4;
-    text-decoration-color: #015EF4;
-    font-weight: bold;
-    line-height: 1.3em;
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
-a:focus {
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-}
-
 p {
     line-height: 1.3em;
     text-align: left;
     margin: 0px 0px 5px 0px;
+}
+
+a {
+    color: #0051D4;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+a:focus {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
 }
 
 sub, sup {
@@ -75,6 +58,22 @@ sup {
 
 sub {
     bottom: -0.25em;
+}
+
+#table-of-contents ul {
+    margin: 00px 00px 5px 00px;
+    font-size: 100%;
+    list-style-type: none;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: #0051D4;
+    text-decoration-thickness: 1px;
+}
+#table-of-contents ul li {
+    margin: 00px 00px 5px 10px;
+}
+#table-of-contents ul li ul li {
+    margin: 00px 00px 5px 20px;
 }
 
 ul li, ol li {
@@ -153,7 +152,7 @@ body {
     margin: 0 auto 0 auto;
     padding: 3%;
     max-width: 20cm;
-    background-color: #E9ECF5; /* color behind text */
+    background-color: #F4F5F6; /* color behind text */
     font-size: 100%;
     font-family: Arial, Helvetica, sans-serif;
     color: black; /* font color */
