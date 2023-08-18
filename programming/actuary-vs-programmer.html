@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-08-13 Sun 15:06 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Actuary Versus Programmer</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="description" content="___________________________________________________" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="/blog-posts.css" />
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8XK8JC00G"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-S8XK8JC00G'); </script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="/"> UP </a>
+ |
+ <a accesskey="H" href="/"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Actuary Versus Programmer</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#why-I-want-to-be-an-actuary">1. Why I Think I&rsquo;m Better Off Being An Actuary</a></li>
+<li><a href="#software-engineer-cons">2. Reasons Why I Don&rsquo;t Want To Be A Software Engineer Anymore</a>
+<ul>
+<li><a href="#not-passionate-about-coding">2.1. I&rsquo;m not passionate about it.</a></li>
+<li><a href="#poorly-written-code">2.2. I don&rsquo;t want to have to work with poorly written code.</a></li>
+<li><a href="#programming-process-and-rewards">2.3. Regarding the process and rewards</a></li>
+<li><a href="#developer-hiring-process">2.4. Regarding the hiring process</a></li>
+<li><a href="#programming-genetics-factors">2.5. Genetics factors?</a></li>
+</ul>
+</li>
+<li><a href="#academia-cons">3. Reasons Why I Don&rsquo;t Want To Work In Academia</a></li>
+<li><a href="#why-I-thought-software-engineer">4. Reasons Why I Thought I Wanted To Be A Software Engineer</a></li>
+<li><a href="#actuary-possible-cons">5. General Potential Disadvantages Of Being An Actuary</a></li>
+<li><a href="#what-motivates-me">6. What Motivates Me?</a></li>
+<li><a href="#actuary-and-my-planned-lifestyle">7. How Would Being An Actuary Fit Into My Planned Lifestyle?</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-why-I-want-to-be-an-actuary" class="outline-2">
+<h2 id="why-I-want-to-be-an-actuary"><span class="section-number-2">1.</span> Why I Think I&rsquo;m Better Off Being An Actuary</h2>
+<div class="outline-text-2" id="text-why-I-want-to-be-an-actuary">
+<p>
+<a href="../programming/programming-journey">On this page</a>, I talk about my experience programming.
+I mentioned how I changed my major from computer science to mathematics because I both enjoyed and performed better in my math classes than in my CS classes.
+I also discussed how I wanted to make a living doing research in academia, until <a href="#academia-cons">I became black-pilled about how academia works</a> and how stressful it would be.
+I then thought that being a software engineer would be the next best career for me, but I honestly hadn&rsquo;t given enough consideration into getting a career that revolves around mathematics instead.
+If I&rsquo;m better at mathematics than most people and I enjoy it more than writing programs and thinking about CS (I have a comparative advantage at doing mathematics), then it would be more practical to get a job that revolves around math instead.
+</p>
+
+<p>
+I never had a good understanding of what actuaries do until I was 20 years old, and I didn&rsquo;t start to seriously consider becoming one until <a href="../programming/programming-journey#after-college">I finally realized how unsuited I am for software development</a>.
+The main reason why I am writing this file is so that I can remember for future reference why I eventually decided that I&rsquo;m better off being an actuary instead of a software engineer.
+</p>
+<ul class="org-ul">
+<li>Actuaries tend to have better work-life balance, higher job satisfaction, and better job security during recessions than software developers do. This is important to me since I&rsquo;m interested in having a family life, and time to think and write about any interesting philosophy/knowledge that my mind craves.</li>
+<li>An ideal job would have me doing analytical work where I get to do deep-thinking and make big decisions that affect the direction that the company takes.
+<ul class="org-ul">
+<li>For this reason, becoming a CAS actuary might be the better choice. I&rsquo;ve anecdotally heard that their higher than average salaries (compared to SOA actuaries) could be arguably attributed to how they arguably tend to play more decisive role in their company&rsquo;s decision making and profits.</li>
+</ul></li>
+<li>Knowing that my job plays an important role in insurance (and thus also the world&rsquo;s economy and the general functioning of society) is much more appealing to me.</li>
+<li>On the other hand, being a mindless drone who does what he&rsquo;s told for a subject that he has little interest in is much less appealing to me. It seems to me that this is more likely to be the case for software engineering and code monkey jobs.</li>
+<li>It would be very fun for me to get paid to do calculus, linear algebra, differential equations, statistics, probability distributions, etc for my job.</li>
+<li>Some jobs will literally pay for actuaries to study for their actuarial exams. It&rsquo;s very attractive for me to choose a job that literally pays me to learn more mathematics (and financial/economics related stuff). Learning new things is my favorite hobby to do.
+<ul class="org-ul">
+<li>It would it make it easier for me to study the Black-Scholes stochastic partial differential equations for making better investments. I would definitely be closer to understanding them on my own if I approach them after familiarizing myself with the content from exams P, FM, and IFM.</li>
+</ul></li>
+<li>The financial knowledge that I attain from studying for the exams and doing actuarial tasks may enable me to make better, wiser investments on the stock market, thus increasing my income, retirement funds, and ability to be a breadwinner for my children and family. It may also enable me to write more original blog posts and content for my website, since I would become more knowledgeable about insurance, economics, mathematics, and statistics.</li>
+<li>Another (bonus) benefit to me choosing to be an actuary instead of a programmer is that the Frogstar B discord server already has a lot of people in at her work as software engineers, so it will probably benefit our intellectual movement if we have more people who work in different fields, including someone who will be knowledgeable about insurance, statistics, and financial related stuff to help increase the variety of conversation, topics, and knowledge flowing within online community.</li>
+<li>I could still do programming as a side hobby, but this time, it would be specifically focused on doing projects that I am passionate about creating (e.g. a program for modeling phonotactics, python bot for processing spreadsheet data and automating the creation and (improved) editing of wiktionary/wikipedia entries, debate software, Emacs Lisp?).</li>
+<li>Since being an actuary will require working with data, and since the primary advantage of Lisp is its ability to blend code and data together, being an actuary may give me a great excuse for making time to learn Lisp in further detail, whether that be to write programs that I&rsquo;ve been dying to write in Emacs, or to write better programs related to my job, instead of Visual Basic (VBA), which is among the world&rsquo;s most disliked programming languages.</li>
+<li>Even if I somehow don&rsquo;t enjoy the work that I do as an actuary, it would still make more sense to do it anyway, compared to working as a programmer / software engineer, if I&rsquo;m simply better at mathematics and finances than computer science.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-software-engineer-cons" class="outline-2">
+<h2 id="software-engineer-cons"><span class="section-number-2">2.</span> Reasons Why I Don&rsquo;t Want To Be A Software Engineer Anymore</h2>
+<div class="outline-text-2" id="text-software-engineer-cons">
+</div>
+<div id="outline-container-not-passionate-about-coding" class="outline-3">
+<h3 id="not-passionate-about-coding"><span class="section-number-3">2.1.</span> I&rsquo;m not passionate about it.</h3>
+<div class="outline-text-3" id="text-not-passionate-about-coding">
+<ul class="org-ul">
+<li>I wouldn&rsquo;t necessarily be programming stuff that I want to program. Instead, I would be programming whatever my boss assigns me to do. In other cases, I would just be debugging and fixing software issues from bug reports or ticket issues.</li>
+<li>I doubt that I&rsquo;ll ever find programming to be as enjoyable as mathematics or linguistics.</li>
+<li>I doubt that I would be able to enjoy what I&rsquo;m doing if I don&rsquo;t believe that it would be making a positive difference in the world that aligns with my worldview.</li>
+<li>Debugging is too stressful for me. I don&rsquo;t like reading through lots of stuff that I don&rsquo;t understand.
+<ul class="org-ul">
+<li>It&rsquo;s said that most software developers spend ~80% of their time debugging, so if I was mostly debugging, then perhaps that would actually be a very undesirable job for me to do.</li>
+<li>Other people probably don&rsquo;t have this problem, but I&rsquo;m often afraid to ask for help online, since it often feels like that I could just solve with problems with a bit more effort. Other times, I&rsquo;m afraid to ask my questions because Q&amp;A websites have policies against people asking duplicate questions, and I&rsquo;m afraid that I might violate them, even if my problems are unique and legitimate.</li>
+</ul></li>
+<li>Although I like problem solving, it&rsquo;s unappealing for me to look at code and figure out how it works, especially if functions and APIs are hiding what the code is actually doing. Unfortunately, this is very common, and it&rsquo;s often a consequence of <a href="#poorly-written-code">people who write poorly written code</a>.
+<ul class="org-ul">
+<li>If there are bugs inside the functions that I&rsquo;m using, I don&rsquo;t want to have navigate through layers and layers of code just to find the problem. I&rsquo;m more okay with reading code that is written continuously from left to right, top to bottom, even if it involves really long functions. That kind of code feels more natural because it&rsquo;s like reading a book.</li>
+<li>To me, this makes a lot of programming and debugging feel analogous to working with problems for which there isn&rsquo;t enough information to solve the actual issue at hand. Problems like those are among the most frustrating, at least in my opinion.</li>
+<li>Another problem is that it can even be difficult for someone to work with their own code several years, months, or even weeks after they wrote it themselves. Quality comments and good naming conventions can help with this, but it could still be difficult regardless. I doubt I would enjoy going through the process of thinking something through very deeply, and having to go work my mind through that same process again multiple times. Due to my cerebral wiring, I prefer to do complicated tasks all at once, one step at a time.</li>
+</ul></li>
+<li>It&rsquo;s possible that I&rsquo;m too easily distracted to focus on coding, when I have to do it. I&rsquo;ve never had this problem with math for some reason. Whenever I had to do math classes and CS classes in the same semester in college, <a href="../programming/programming-journey#college">I always felt more motivated to do the math courses first</a>.</li>
+<li>It seems that I only like the idea of programming and what it could potentially do, but I don&rsquo;t actually like doing it myself.</li>
+<li>I typically want things to &ldquo;just work&rdquo; most or all the time, which may be a strong sign that software development is not right for me.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-poorly-written-code" class="outline-3">
+<h3 id="poorly-written-code"><span class="section-number-3">2.2.</span> I don&rsquo;t want to have to work with poorly written code.</h3>
+<div class="outline-text-3" id="text-poorly-written-code">
+<ul class="org-ul">
+<li>Although I enjoy learning stuff, it feels pointless for me to learn data structures, algorithms, and trivial programming APIs, libraries, etc.
+<ul class="org-ul">
+<li>ELABORATE ON THIS.</li>
+<li>At least for me, a lot of programming feels too far removed from doing mathematical thinking.</li>
+<li>Algorithms usually bore me instead of interesting me.</li>
+<li>A lot of it involves learning and using APIs that could become outdated or otherwise broken in the future.</li>
+<li>I wouldn&rsquo;t enjoy writing specific, sequential algorithms to do tasks.
+<ul class="org-ul">
+<li>Why is this? What are the words for describing this feeling?</li>
+</ul></li>
+<li>ELABORATE ON THIS.</li>
+<li>ELABORATE ON THIS.</li>
+</ul></li>
+<li>As a software engineer, I would have to work with other people&rsquo;s code, even if it&rsquo;s poorly written. I&rsquo;m very autizmo, so it&rsquo;s very difficult for me to tolerate and withstand inefficiency.</li>
+<li>Most of the software engineer using object-oriented programming, which is <a href="../programming/programming-journey#OOP-is-overrated">inefficient, slow, and prone to errors</a>. I would rather not work with that infrastructure if I could avoid it.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-programming-process-and-rewards" class="outline-3">
+<h3 id="programming-process-and-rewards"><span class="section-number-3">2.3.</span> Regarding the process and rewards</h3>
+<div class="outline-text-3" id="text-programming-process-and-rewards">
+<ul class="org-ul">
+<li>I don&rsquo;t like the idea of coding proprietary software that I wouldn&rsquo;t have any ownership over, especially if it&rsquo;s just to compete and get an edge over other companies.<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup></li>
+<li>Most jobs only pay programmers to write proprietary software, so more often than not, I would have to make a living by writing proprietary software.
+<ul class="org-ul">
+<li>There are some jobs that pay to write open-source software, but I can only deduce that they are a pitiful minority.</li>
+</ul></li>
+<li>While I technically wouldn&rsquo;t have ownership over what I create as a mathematician or actuary, doing mathematics to solve problems still seems more appealing to me because I view one of the great rewards of doing math as being able to solve the problems at hand. I&rsquo;m sure I would get similar satisfaction as an programmer, but it wouldn&rsquo;t feel as satisfying to me because I hate debugging and I wouldn&rsquo;t be able to own the source code even if it works perfectly.</li>
+<li>i</li>
+<li>[ELABORATE]</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-developer-hiring-process" class="outline-3">
+<h3 id="developer-hiring-process"><span class="section-number-3">2.4.</span> Regarding the hiring process</h3>
+<div class="outline-text-3" id="text-developer-hiring-process">
+<ul class="org-ul">
+<li>Many job interviews require the candidates to dredge through completing repeated <a href="https://leetcode.com/">LeetCode</a> problems. These types of questions and job interviews are pretty brutal, especially if you don&rsquo;t enjoy writing algorithms in the first place. Another problem is that
+<ul class="org-ul">
+<li>I am very Black-pilled about the job market and interview process for programming and software development related jobs.
+<ul class="org-ul">
+<li>This wouldn&rsquo;t be much to worry about for someone who is a good programmer, but I&rsquo;m not good at programming because I don&rsquo;t even enjoy programming.</li>
+</ul></li>
+</ul></li>
+<li>Although it has a much larger job market, it&rsquo;s also a much more competitive and cut-throat one. It&rsquo;s not unheard of for people to have to do dozens or even hundreds of job applications and interviews, just to get their foot in the door.</li>
+<li>Programming jobs are more vulnerable to layoffs during recessions, whereas actuarial jobs are not because the need for insurance never goes away from society.</li>
+<li>[ELABORATE]</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-programming-genetics-factors" class="outline-3">
+<h3 id="programming-genetics-factors"><span class="section-number-3">2.5.</span> Genetics factors?</h3>
+<div class="outline-text-3" id="text-programming-genetics-factors">
+<p>
+My father likes computers, and he did program for a while during his teen years and early 20s.
+He also failed to finish a computer science minor in college (<a href="../programming/programming-journey#college">just like I did</a>, except that I was closer to finishing), he never continue programming simply because it is not one of his major interest.
+It feels that I&rsquo;m going down a similar route.
+While programming seemed interesting when I was first introduced to it, I doubt that I would be interested in working with it as my primary occupation, although I wouldn&rsquo;t mind using it to a limited extent.
+<i><a href="https://en.wikipedia.org/wiki/The_Son_Also_Rises_(book)">The Son Also Rises</a></i> suggests that if my father wasn&rsquo;t able to become a successful programer, perhaps I won&rsquo;t either.
+Then again, I am much better at mathematics than my father is.
+He dropped out of calculus in college, and he never took any higher-level mathematics beyond that, whereas I managed to graduate from college with a bachelor&rsquo;s of science in mathematics.
+I&rsquo;m sure that he could learn more advanced mathematics if he would just put in the effort for learning it, but he doesn&rsquo;t have any interest in doing that (or most academic subjects for that matter).
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-academia-cons" class="outline-2">
+<h2 id="academia-cons"><span class="section-number-2">3.</span> Reasons Why I Don&rsquo;t Want To Work In Academia</h2>
+<div class="outline-text-2" id="text-academia-cons">
+<ul class="org-ul">
+<li><a href="../#fake-research">Most research is fake</a>, and a lot of it is just a status game.</li>
+<li>Most of my time would be spent teaching and grading papers, not researching.</li>
+<li>It would pay a lower salary than being an actuary or something else.</li>
+<li>The odds of gaining a very strong reputation as one of society&rsquo;s greatest intellectuals is very low, especially if I decide to speak the truth, instead of saying things that fit the status quo and popular opinion.</li>
+<li>It doesn&rsquo;t have good job security, and it&rsquo;s very difficult to get tenure.</li>
+<li>It would be much more stressful.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-why-I-thought-software-engineer" class="outline-2">
+<h2 id="why-I-thought-software-engineer"><span class="section-number-2">4.</span> Reasons Why I Thought I Wanted To Be A Software Engineer</h2>
+<div class="outline-text-2" id="text-why-I-thought-software-engineer">
+<ul class="org-ul">
+<li>Computer science was described to me as &ldquo;problem solving&rdquo;, and I love solving problems (and still do), so I thought that I&rsquo;d love it and would be a natural at it.</li>
+<li>It seemed really exciting to know that I could write my own computer programs and watch the computer execute them exactly as told.</li>
+<li>I knew that it would be a good, well-paying career, especially for someone with a personality similar to mine.</li>
+<li>It seemed really appealing to think that someone could theoretically have nothing more than a computer (and a smart brain) and start making lots of money if they made one awesome app that everybody really liked enough to buy.</li>
+<li>Although I was intimidated by computers before I had to start using them everyday during high school, I really started to enjoy them when I was introduced to computer games, Microsoft Office products, programs, etc, and even different operating systems, like Ubuntu and all the other Linux-based operating systems.</li>
+<li>Since <a href="../programming/learned-to-program-worst-way">there were many obstacles to me learning how to program</a> and since I always like to have everything be &ldquo;just right&rdquo; before doing stuff, I always assumed that if only I could just overcome all the barriers, I could start learning programming really quickly, and start working as a software developer.</li>
+<li>I&rsquo;m the kind of person who prefers to use Emacs, Linux, Colemak, and privacy-focused / alternative / FOSS software. I even run my own custom-designed website that I wrote and designed almost entirely by myself.
+<ul class="org-ul">
+<li>I couldn&rsquo;t fathom how someone could enjoy to be so geeky and autistic with his computer, and still just not want to be a programmer.</li>
+</ul></li>
+<li>Since my other major in college was linguistics, I thought that I would be really well-suited towards being a computational linguist, because a person with a Mathematics BS, a Linguistics BA, and a CS minor would probably have near-perfect credentials for being a computational linguist, right?</li>
+<li>Countering the denial of biological realism in algorithms and Artificial Intelligence.</li>
+<li>i</li>
+<li>Since many smart people are able to program, I feel left out by not being able to do it or to able to specialize in it myself.</li>
+<li>There are many unique and original programs that I want to write/code and/or wish existed. I thought that it would be very fitting if I was the one to create them myself.</li>
+<li>With some of my software projects, I envisioned that they could take off and become the basis for creating a new tech startup where I take the lead as the CEO.</li>
+</ul>
+
+<p>
+Since many software engineering jobs have systems where programmers respond to ticket request for new features to be added to the already existing software, this would be very similar to my current website where I have a list of dozens of improvements that I want to add to the website, but I don’t have the time to implement everything as a single person.
+</p>
+</div>
+</div>
+
+<div id="outline-container-actuary-possible-cons" class="outline-2">
+<h2 id="actuary-possible-cons"><span class="section-number-2">5.</span> General Potential Disadvantages Of Being An Actuary</h2>
+<div class="outline-text-2" id="text-actuary-possible-cons">
+<ul class="org-ul">
+<li>You&rsquo;ll have to pass all the exams. They all have passing rates that seem to average at ~40%, and many of the people who do pass are the ones who are taking the exam for their second or third time.</li>
+<li>You&rsquo;ll have to like working with insurance.</li>
+<li>Office politics and corporate environment, although you&rsquo;ll be working alone most of the time.</li>
+<li>Some computer programming will be required, although it&rsquo;ll all be focused around data.</li>
+<li>If you are too obsessed with studying nitty gritty details, then you may not like getting promoted since you&rsquo;ll be looking at data from a higher level from the company&rsquo;s perspective.</li>
+<li>You&rsquo;ll be sitting/standing at desk most of the day.</li>
+<li>My linguistics degree probably won&rsquo;t be applicable to the work that I do (but I still won&rsquo;t regret having worked for it).
+<ul class="org-ul">
+<li>However, linguistics isn&rsquo;t really particularly useful to know in computational linguistics these days, unless one plans to specialize in making computer work well with human languages other than English.
+<ul class="org-ul">
+<li>In which case, this would require that I be fluent in a second language other than English, but the only languages that I have a good shot at for doing that are probably Spanish, French, Mandarin, or Japanese. And I would have to invest a lot of time to become very knowledgeable in those languages in order to obtain reliable job security.</li>
+</ul></li>
+</ul></li>
+<li>What if AI automates much of the actuarial field that reduces the need for actuaries? I do worry about this.
+<ul class="org-ul">
+<li>If it were possible for that to happen, then essentially everybody in society would be facing a midlife crisis in society regarding their job security and secured future (except for software engineers), in which case, the political upheaval would probably be strong enough to motivate everybody receiving UBI.</li>
+<li>I still predict that this is unlikely to happen. General AI is unlikely to become a substitute for human knowledge, even with quantum computing power and increased electricity generation. So it will probably still be necessary for insurance companies to hire actuaries and human brains.</li>
+</ul></li>
+</ul>
+
+<p>
+I hope I don&rsquo;t get stuck with excel, but I&rsquo;ll use it if I have to.
+I&rsquo;ve heard there&rsquo;s better programs out there for doing actuarial work.
+Some of them might even be open-source and able to run on Linux.
+</p>
+
+<p>
+Is it possible that I would&rsquo;ve been really well-suited to become an actuary or some other professional who specializes in statistics, if:
+</p>
+<ol class="org-ol">
+<li>I stayed in the MATH 462 probability and statistics class,</li>
+<li>If I majored in statistics (probably would&rsquo;ve required dropping linguistics major, to avoid burnout), and</li>
+<li>I had my mind set on becoming a statistician and going to graduate school?</li>
+</ol>
+
+<p>
+READ THIS LINK: <a href="https://en.wikipedia.org/wiki/Workplace_politics">https://en.wikipedia.org/wiki/Workplace_politics</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-what-motivates-me" class="outline-2">
+<h2 id="what-motivates-me"><span class="section-number-2">6.</span> What Motivates Me?</h2>
+<div class="outline-text-2" id="text-what-motivates-me">
+<p>
+WHAT IF I INSTEAD THOUGHT OF AN ACTUARY JOB AS &ldquo;THIS IS WHAT I HAVE TO DO TO GET PAID MONEY, AND THIS IS MY ONLY OPTION&rdquo; AS MY MOTIVATOR?
+    (KIND OF LIKE HOW I ENJOY HAVING SEX OR IMAGINING HAVING SEX WITH HALEY IF I IMAGINE HER AS MY ONLY POSSIBLE SEX PARTNER.)
+    OR THINKING ABOUT THAT I ONLY HAVE ONE CHOICE, IN A DETERMINISTIC, CAUSE-AND-EFFECT WORLD.
+</p>
+
+
+<p>
+The ikigai diagram, and how it relates to the various jobs/activities that I could do (for a living).
+</p>
+
+
+<div id="org5a401de" class="figure">
+<p><img src="../images/ikigai-diagram.png" alt="ikigai-diagram.png" />
+</p>
+</div>
+
+<p>
+My identity as an actuary, versus my former identity as a future computer scientist
+</p>
+
+
+<p>
+Since I have personally decided that my purpose in life should be to raise a family with as many children as I can support, this has changed my view on the kind of job that I should have.
+I don&rsquo;t necessarily need to have a job that will change the world.
+Instead I can change the world by spreading my ideas and raising my children, who will also hopefully too many great things to change this world in favor of the value system that I have decided to affirm.
+</p>
+
+
+<p>
+I honestly probably have about as much interest in computer science / programming now as I do for being an engineer or a scientist.
+Which is to say that --------&#x2013;&#x2014;.
+</p>
+
+
+<p>
+Perhaps I can&rsquo;t be motivated to program anything that I&rsquo;m not super passionate about?
+I think I am almost certainly more motivated to do math about things that I&rsquo;m not passionate about, compared to programming that I&rsquo;m not passionate about.
+</p>
+
+<p>
+IMPORTANT QUESTION: What motivates me? It seems that I gain motivation when I imagine the end result and how badly I want to do the work necessary for achieving the end result. And it also seems that I can gain motivation to do something by imagining it as my only choice / option for accomplishing a desire/objective. Oddly however, thinking that I <i>have to</i> do something doesn&rsquo;t motivate as much as thinking that a task is my only option for getting what I want or satisfying my need. This is probably because thinking that I <i>have to</i> do something can make it feel like a chore and/or make the task feel more stressful.
+</p>
+
+<p>
+MAYBE HAVING A STRONG, &ldquo;MUST SAVE THE WORLD&rdquo; VISION FOR BUILDING MY BELIEF NETWORK AND DEBATE SOFTWARE COULD MOTIVATE ME TO CONTINUE LEARNING HOW TO PROGRAM, EVEN WHEN IT&rsquo;S TOUGH FOR ME?
+</p>
+
+<p>
+TRY TO BETTER UNDERSTAND WHAT MOTIVATES YOU, AND TO COMPARE THIS LEVEL OF ENJOYMENT WITH YOUR ESTIMATED ENJOYMENT IN DIFFERENT FIELDS.
+</p>
+</div>
+</div>
+
+<div id="outline-container-actuary-and-my-planned-lifestyle" class="outline-2">
+<h2 id="actuary-and-my-planned-lifestyle"><span class="section-number-2">7.</span> How Would Being An Actuary Fit Into My Planned Lifestyle?</h2>
+<div class="outline-text-2" id="text-actuary-and-my-planned-lifestyle">
+<ul class="org-ul">
+<li>IMPORTANT QUESTION: If I decide to become an actuary, how many months and/or years would it take to study for the actuarial exams and pass them?
+<ul class="org-ul">
+<li>i</li>
+<li>i</li>
+</ul></li>
+<li>If it&rsquo;s best that I move from city to city to boost my salary, this will make it easier for me to donate sperm to multiple different cities.</li>
+<li>i</li>
+<li>i</li>
+</ul>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Proprietary software has its place in a world of selfish people and companies. If human nature determines that proprietary software has to the primary business model for most companies, then so be it. But in a more cooperative world, I would hope that it&rsquo;s possible to create efficient economic models that enable the production of open-source software more often. I might write a section about this sometime on my <a href="../civilization/thoughts-on-economics">thoughts on economics</a> page.
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: Zero Contradictions</p>
+<p class="date">Created: 2023-08-13 Sun 15:06</p>
+</div>
+</body>
+</html>
