@@ -105,12 +105,25 @@ table {
     max-width: 100%;
     font-size: 0.9em;
     margin: 15px auto 15px auto;
+    border-top: solid black 1px;
 }
+
+table, th {
+    border-bottom: solid black 1px;
+}
+
+td, th {
+    padding: 6px;
+}
+
+hr {
+    border: none;
+    border-top: solid black 2px;}
 
 h1 {
     text-align: center;
     font-size: 2.0em;
-    border-top: 2px solid black;
+    border-top: solid black 2px;
     max-width: 100%;
     margin: 20px auto 0;
     padding: 10px 0 0 0;
@@ -118,14 +131,14 @@ h1 {
 
 h2 {
     font-size: 1.6em;
-    border-top: 2px solid black;
+    border-top: solid black 2px;
     margin: 20px 00px 10px 00px;
     padding: 15px 0 0 0;
 }
 
 h3 {
     font-size: 1.25em;
-    border-top: 1px solid black;
+    border-top: solid black 1px;
     margin: 10px 00px 10px 00px;
     padding: 15px 0 0 0;
 }
@@ -164,7 +177,7 @@ header {
     float: left;
     padding: 10px 0;
     text-align: center;
-    border-bottom: 2px solid black
+    border-bottom: solid black 2px
 }
 
 footer {
