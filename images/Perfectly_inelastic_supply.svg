@@ -1,291 +1,83 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   version="1.0"
-   width="350"
-   height="350"
-   id="svg2"
-   sodipodi:version="0.32"
-   inkscape:version="0.91 r13725"
-   sodipodi:docname="Perfectly_inelastic_supply.svg"
-   inkscape:output_extension="org.inkscape.output.svg.inkscape">
-  <metadata
-     id="metadata2314">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <cc:license
-           rdf:resource="http://creativecommons.org/licenses/by-sa/2.5/" />
-        <dc:title>Perfectly Inelastic Supply and Elastic Demand</dc:title>
-        <dc:date>2008-03-18</dc:date>
-        <dc:creator>
-          <cc:Agent>
-            <dc:title>Explodicle</dc:title>
-          </cc:Agent>
-        </dc:creator>
-        <dc:rights>
-          <cc:Agent>
-            <dc:title>Explodicle</dc:title>
-          </cc:Agent>
-        </dc:rights>
-        <dc:publisher>
-          <cc:Agent>
-            <dc:title>Wikimedia Foundation</dc:title>
-          </cc:Agent>
-        </dc:publisher>
-        <dc:language>English</dc:language>
-        <dc:subject>
-          <rdf:Bag>
-            <rdf:li>supply</rdf:li>
-            <rdf:li>demand</rdf:li>
-            <rdf:li>elasticity</rdf:li>
-            <rdf:li>inelastic</rdf:li>
-            <rdf:li>elastic</rdf:li>
-          </rdf:Bag>
-        </dc:subject>
-        <dc:coverage>Completely inelastic supply, such as land or electromagnetic spectrum</dc:coverage>
-        <dc:description>This diagram illustrates the effect of taxation on a market with perfectly inelastic supply and elastic demand. Based on work by Wikipedia user SilverStar</dc:description>
-        <dc:contributor>
-          <cc:Agent>
-            <dc:title>Explodicle, SilverStar</dc:title>
-          </cc:Agent>
-        </dc:contributor>
-      </cc:Work>
-      <cc:License
-         rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
-        <cc:permits
-           rdf:resource="http://web.resource.org/cc/Reproduction" />
-        <cc:permits
-           rdf:resource="http://web.resource.org/cc/Distribution" />
-        <cc:requires
-           rdf:resource="http://web.resource.org/cc/Notice" />
-        <cc:requires
-           rdf:resource="http://web.resource.org/cc/Attribution" />
-        <cc:permits
-           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
-        <cc:requires
-           rdf:resource="http://web.resource.org/cc/ShareAlike" />
-      </cc:License>
-    </rdf:RDF>
-  </metadata>
-  <sodipodi:namedview
-     inkscape:window-height="1143"
-     inkscape:window-width="1600"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     guidetolerance="10.0"
-     gridtolerance="10.0"
-     objecttolerance="10.0"
-     borderopacity="1.0"
-     bordercolor="#666666"
-     pagecolor="#ffffff"
-     id="base"
-     inkscape:zoom="2.64"
-     inkscape:cx="119.84163"
-     inkscape:cy="175.08062"
-     inkscape:window-x="-4"
-     inkscape:window-y="-4"
-     inkscape:current-layer="svg2"
-     showgrid="false" />
-  <defs
-     id="defs4">
-    <pattern
-       inkscape:stockid="Stripes 1:1"
-       id="Strips1_1"
-       patternTransform="matrix(10,0,0,9.7621805,0,3.5512982)"
-       height="1"
-       width="2"
-       patternUnits="userSpaceOnUse"
-       inkscape:collect="always">
-      <rect
-         id="rect3918"
-         height="2"
-         width="1"
-         y="-0.5"
-         x="0"
-         style="fill:black;stroke:none" />
-    </pattern>
-    <inkscape:perspective
-       sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 175 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_z="350 : 175 : 1"
-       inkscape:persp3d-origin="175 : 116.66667 : 1"
-       id="perspective44" />
-    <linearGradient
-       id="linearGradient11858">
-      <stop
-         style="stop-color:lime;stop-opacity:1"
-         offset="0"
-         id="stop11860" />
-      <stop
-         style="stop-color:lime;stop-opacity:0.49803922"
-         offset="1"
-         id="stop11866" />
-    </linearGradient>
-  </defs>
-  <rect
-     style="fill:#001bff;fill-opacity:0.40784314;stroke:none;stroke-width:1.29799998;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     id="rect10141"
-     width="126.85147"
-     height="136.42542"
-     x="19.566425"
-     y="190.9333" />
-  <path
-     id="path2771"
-     style="fill:#ff0000;fill-opacity:0.23923448;fill-rule:evenodd;stroke:none;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="M 18.28125,57.0625 L 19.246515,141.35824 L 146.32473,141.49291 L 146.21546,141.44544 C 130.20117,116.20153 85.72887,69.553291 18.28125,57.0625 z "
-     sodipodi:nodetypes="ccccc" />
-  <path
-     id="path10925"
-     style="fill:#adadad;fill-opacity:0.69411765;fill-rule:evenodd;stroke:none;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="M 146.31173,141.55898 L 19.523493,141.27556 L 19.224346,190.90625 L 146.26188,190.90625 C 146.27707,190.89545 146.29655,190.88555 146.31173,190.87476 L 146.31173,190.52835 L 146.31173,141.55898 z " />
-  <path
-     style="fill:none;fill-rule:evenodd;stroke:#0014ff;stroke-width:1.67265558;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="M 146.32691,87.616999 L 146.32691,327.80248"
-     id="path6263" />
-  <path
-     id="path5447"
-     style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="M 20.075784,57.341476 C 179.18915,90.786606 174.84165,267.69135 321.43782,311.00887" />
-  <text
-     xml:space="preserve"
-     id="text6335"
-     style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-     y="106.50096"
-     x="67.014359"><tspan
-       id="tspan6337"
-       y="106.50096"
-       x="67.014359">Consumer</tspan><tspan
-       id="tspan6339"
-       y="121.50095"
-       x="67.014359">surplus</tspan></text>
-  <text
-     xml:space="preserve"
-     id="text9006"
-     style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-     y="251.396"
-     x="81.332787"><tspan
-       id="tspan9008"
-       y="251.396"
-       x="81.332787">Producer</tspan><tspan
-       id="tspan9010"
-       y="266.396"
-       x="81.332787">surplus</tspan></text>
-  <text
-     xml:space="preserve"
-     id="text9012"
-     style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#0014ff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-     y="96.318939"
-     x="167.43054"><tspan
-       id="tspan9014"
-       y="96.318939"
-       x="167.43054"
-       style="fill:#0014ff;fill-opacity:1">Supply</tspan></text>
-  <text
-     xml:space="preserve"
-     id="text9016"
-     style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-     y="260.26654"
-     x="262.86508"><tspan
-       id="tspan9018"
-       y="260.26654"
-       x="262.86508"
-       style="fill:#ff0000;fill-opacity:1">Demand</tspan><tspan
-       id="tspan9914"
-       y="275.26654"
-       x="262.86508"
-       style="fill:#ff0000;fill-opacity:1" /></text>
-  <text
-     xml:space="preserve"
-     id="text9924"
-     style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-     y="12.499999"
-     x="19.642857"><tspan
-       id="tspan9926"
-       y="12.499999"
-       x="19.642857">Price</tspan></text>
-  <text
-     xml:space="preserve"
-     id="text9928"
-     style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-     y="340.71429"
-     x="324.5"><tspan
-       id="tspan9930"
-       y="340.71429"
-       x="324.5">Quantity</tspan></text>
-  <path
-     id="path11886"
-     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.02037978;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.06113951, 3.06113951;stroke-dashoffset:0;stroke-opacity:1"
-     d="M 20.030742,190.89286 L 246.56383,190.89286" />
-  <text
-     xml:space="preserve"
-     id="text11890"
-     style="font-size:12px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-     y="169.95197"
-     x="244.86664"><tspan
-       id="tspan11892"
-       y="169.95197"
-       x="244.86664">Tax rate</tspan></text>
-  <text
-     xml:space="preserve"
-     id="text12789"
-     style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-     y="138.44672"
-     x="198.88205"><tspan
-       id="tspan12791"
-       y="138.44672"
-       x="198.88205">Market price</tspan></text>
-  <path
-     id="path6258"
-     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.02127647;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.06382982, 3.06382982;stroke-dashoffset:0;stroke-opacity:1"
-     d="M 19.727588,141.34615 L 243.72939,141.34615" />
-  <path
-     id="path9020"
-     style="fill:#ffffff;fill-opacity:1;stroke:#c900c8;stroke-width:1.10000002;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-     d="M 150.01521,141.35405 C 150.01521,143.3265 148.41623,144.92548 146.44378,144.92548 C 144.47133,144.92548 142.87235,143.3265 142.87235,141.35405 C 142.87235,139.3816 144.47133,137.78262 146.44378,137.78262 C 148.41623,137.78262 150.01521,139.3816 150.01521,141.35405 z " />
-  <path
-     d="M 19.152288,19.175041 L 19.152288,327.77664 L 330.78435,327.77664"
-     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     id="path1872" />
-  <path
-     d="M 16.108801,21.122353 L 19.190327,15.784991 L 22.340296,21.124845 L 16.108801,21.122353 z"
-     style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.45954973px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     id="path1874" />
-  <path
-     d="M 329.95908,325.43023 L 334.61454,328.11806 L 329.95691,330.8656 L 329.95908,325.43023 z"
-     style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.40083787px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     id="path1876" />
-  <text
-     xml:space="preserve"
-     id="text15959"
-     style="font-size:12px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-     y="170.23706"
-     x="82.634071"><tspan
-       id="tspan15961"
-       y="170.23706"
-       x="82.634071">Tax revenue</tspan></text>
-  <path
-     d="M 238.71477,147.64292 L 241.7963,142.30555 L 244.94627,147.64541 L 238.71477,147.64292 z"
-     style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.45954973px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     id="path2422" />
-  <path
-     d="M 238.71477,184.58852 L 241.7963,189.92589 L 244.94627,184.58603 L 238.71477,184.58852 z"
-     style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.45954973px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     id="path2424" />
-  <path
-     style="fill:url(#Strips1_1);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.27852046;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-     d="M 241.78125,145.96255 L 241.78125,185.73252"
-     id="path2426" />
+<svg id="svg2" width="350" height="350" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata2314">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by-sa/2.5/"/>
+    <dc:title>Perfectly Inelastic Supply and Elastic Demand</dc:title>
+    <dc:date>2008-03-18</dc:date>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Explodicle</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:rights>
+     <cc:Agent>
+      <dc:title>Explodicle</dc:title>
+     </cc:Agent>
+    </dc:rights>
+    <dc:publisher>
+     <cc:Agent>
+      <dc:title>Wikimedia Foundation</dc:title>
+     </cc:Agent>
+    </dc:publisher>
+    <dc:language>English</dc:language>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>supply</rdf:li>
+      <rdf:li>demand</rdf:li>
+      <rdf:li>elasticity</rdf:li>
+      <rdf:li>inelastic</rdf:li>
+      <rdf:li>elastic</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+    <dc:coverage>Completely inelastic supply, such as land or electromagnetic spectrum</dc:coverage>
+    <dc:description>This diagram illustrates the effect of taxation on a market with perfectly inelastic supply and elastic demand. Based on work by Wikipedia user SilverStar</dc:description>
+    <dc:contributor>
+     <cc:Agent>
+      <dc:title>Explodicle, SilverStar</dc:title>
+     </cc:Agent>
+    </dc:contributor>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+    <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/Attribution"/>
+    <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+    <cc:requires rdf:resource="http://web.resource.org/cc/ShareAlike"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <defs id="defs4">
+  <pattern id="Strips1_1" width="2" height="1" patternTransform="matrix(10 0 0 9.7622 0 3.5513)" patternUnits="userSpaceOnUse">
+   <rect id="rect3918" y="-.5" width="1" height="2"/>
+  </pattern>
+ </defs>
+ <rect id="rect10141" x="19.566" y="190.93" width="126.85" height="136.43" fill="#001bff" fill-opacity=".40784"/>
+ <path id="path2771" d="m18.281 57.062 0.96526 84.296 127.08 0.13467-0.10927-0.04747c-16.014-25.244-60.487-71.892-127.93-84.383z" fill="#f00" fill-opacity=".23923" fill-rule="evenodd"/>
+ <path id="path10925" d="m146.31 141.56-126.79-0.28342-0.29915 49.631h127.04c0.01519-0.0108 0.03467-0.0207 0.04985-0.03149v-0.34641-48.969z" fill="#adadad" fill-opacity=".69412" fill-rule="evenodd"/>
+ <path id="path6263" d="m146.33 87.617v240.19" fill="none" stroke="#0014ff" stroke-width="1.6727"/>
+ <path id="path5447" d="m20.076 57.341c159.11 33.445 154.77 210.35 301.36 253.67" fill="none" stroke="#f00" stroke-width="1px"/>
+ <text id="text6335" x="67.014359" y="106.50096" fill="#000000" font-family="Bitstream Vera Sans" font-size="12px" stroke-width="1px" text-align="center" text-anchor="middle" xml:space="preserve"><tspan id="tspan6337" x="67.014359" y="106.50096">Consumer</tspan><tspan id="tspan6339" x="67.014359" y="121.50095">surplus</tspan></text>
+ <text id="text9006" x="81.332787" y="251.396" fill="#000000" font-family="Bitstream Vera Sans" font-size="12px" stroke-width="1px" text-align="center" text-anchor="middle" xml:space="preserve"><tspan id="tspan9008" x="81.332787" y="251.396">Producer</tspan><tspan id="tspan9010" x="81.332787" y="266.396">surplus</tspan></text>
+ <text id="text9012" x="167.43054" y="96.318939" fill="#0014ff" font-family="Bitstream Vera Sans" font-size="12px" stroke-width="1px" text-align="center" text-anchor="middle" xml:space="preserve"><tspan id="tspan9014" x="167.43054" y="96.318939" fill="#0014ff">Supply</tspan></text>
+ <text id="text9016" x="262.86508" y="260.26654" fill="#ff0000" font-family="Bitstream Vera Sans" font-size="12px" stroke-width="1px" text-align="center" text-anchor="middle" xml:space="preserve"><tspan id="tspan9018" x="262.86508" y="260.26654">Demand</tspan><tspan id="tspan9914" x="262.86508" y="275.26654"/></text>
+ <text id="text9924" x="19.642857" y="12.499999" fill="#000000" font-family="Bitstream Vera Sans" font-size="12px" stroke-width="1px" text-align="center" text-anchor="middle" xml:space="preserve"><tspan id="tspan9926" x="19.642857" y="12.499999">Price</tspan></text>
+ <text id="text9928" x="324.5" y="340.71429" fill="#000000" font-family="Bitstream Vera Sans" font-size="12px" stroke-width="1px" text-align="center" text-anchor="middle" xml:space="preserve"><tspan id="tspan9930" x="324.5" y="340.71429">Quantity</tspan></text>
+ <path id="path11886" d="m20.031 190.89h226.53" fill="none" stroke="#000" stroke-dasharray="3.06113951, 3.06113951" stroke-width="1.0204"/>
+ <text id="text11890" x="244.86664" y="169.95197" fill="#000000" font-family="Bitstream Vera Sans" font-size="12px" stroke-width="1px" xml:space="preserve"><tspan id="tspan11892" x="244.86664" y="169.95197">Tax rate</tspan></text>
+ <text id="text12789" x="198.88205" y="138.44672" fill="#000000" font-family="Bitstream Vera Sans" font-size="12px" stroke-width="1px" text-align="center" text-anchor="middle" xml:space="preserve"><tspan id="tspan12791" x="198.88205" y="138.44672">Market price</tspan></text>
+ <path id="path6258" d="m19.728 141.35h224" fill="none" stroke="#000" stroke-dasharray="3.06382982, 3.06382982" stroke-width="1.0213"/>
+ <path id="path9020" d="m150.02 141.35c0 1.9724-1.599 3.5714-3.5714 3.5714s-3.5714-1.599-3.5714-3.5714 1.599-3.5714 3.5714-3.5714 3.5714 1.599 3.5714 3.5714z" fill="#fff" stroke="#c900c8" stroke-width="1.1"/>
+ <path id="path1872" d="m19.152 19.175v308.6h311.63" fill="none" stroke="#000" stroke-width="1.6"/>
+ <path id="path1874" d="m16.109 21.122 3.0815-5.3374 3.15 5.3399-6.2315-0.002492z" fill-rule="evenodd" stroke="#000" stroke-width=".45955px"/>
+ <path id="path1876" d="m329.96 325.43 4.6555 2.6878-4.6576 2.7475 0.00217-5.4354z" fill-rule="evenodd" stroke="#000" stroke-width=".40084px"/>
+ <text id="text15959" x="82.634071" y="170.23706" fill="#000000" font-family="Bitstream Vera Sans" font-size="12px" stroke-width="1px" text-align="center" text-anchor="middle" xml:space="preserve"><tspan id="tspan15961" x="82.634071" y="170.23706">Tax revenue</tspan></text>
+ <path id="path2422" d="m238.71 147.64 3.0815-5.3374 3.15 5.3399-6.2315-0.00249z" fill-rule="evenodd" stroke="#000" stroke-width=".45955px"/>
+ <path id="path2424" d="m238.71 184.59 3.0815 5.3374 3.15-5.3399-6.2315 0.00249z" fill-rule="evenodd" stroke="#000" stroke-width=".45955px"/>
+ <path id="path2426" d="m241.78 145.96v39.77" fill="url(#Strips1_1)" fill-rule="evenodd" stroke="#000" stroke-width="1.2785"/>
 </svg>
