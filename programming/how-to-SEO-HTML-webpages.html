@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-08-20 Sun 21:11 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>How To Do Effective Search Engine Optimization (SEO) For Websites</title>
+<meta name="author" content="Anonymous" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="/blog-posts.css" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="/"> UP </a>
+ |
+ <a accesskey="H" href="/"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">How To Do Effective Search Engine Optimization (SEO) For Websites</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org07a292e">1. Do you need an SEO expert? - Google Information</a></li>
+<li><a href="#org302282e">2. How to Optimize Blog Posts for Maximum Results</a></li>
+<li><a href="#org90d9069">3. HTML Meta Description Tips</a></li>
+<li><a href="#orgcd6ac1a">4. What To Avoid When Writing HTML Meta Descriptions</a></li>
+<li><a href="#org2b9e8f7">5. The recommended places to add keywords to an HTML website are:</a></li>
+<li><a href="#org8ecf4e5">6. Where To Add Keywords</a></li>
+<li><a href="#org245dd0d">7. The HTML Page</a></li>
+<li><a href="#org3038f76">8. Where The Keywords Are At</a></li>
+<li><a href="#org7321fdd">9. Do Keywords Work?</a></li>
+<li><a href="#org67bd28f">10. Warning – Keyword Stuffing Is Bad</a></li>
+<li><a href="#org38286ae">11. Just Write For Humans, Search Engines Are Smart Enough.</a></li>
+<li><a href="#org16a2e07">12. Why Keywords Still Matter In SEO</a>
+<ul>
+<li><a href="#org9cade39">12.1. Using Keywords Today</a>
+<ul>
+<li><a href="#org6a05bd3">12.1.1. 1. The Keyword meta tag doesn’t hold any weight</a></li>
+<li><a href="#orga33ba26">12.1.2. 2. Defining Keywords Is Still Important</a></li>
+<li><a href="#org6e7116d">12.1.3. 3. Keyword Variety And Context Matter</a></li>
+</ul>
+</li>
+<li><a href="#org4f948c5">12.2. How to Use Keywords In Content</a></li>
+<li><a href="#org10997a8">12.3. How To Tell If Your Content Is Spammy</a></li>
+</ul>
+</li>
+<li><a href="#org6b98918">13. Writing an Effective HTML Page Title</a>
+<ul>
+<li><a href="#orgd25814d">13.1. Understanding The Difference Between a Page Title And a Page Headline</a></li>
+<li><a href="#orgf6804e8">13.2. What You Need To Know About HTML Page Titles</a></li>
+<li><a href="#org38a0db7">13.3. Optimal Title Tag Length</a></li>
+<li><a href="#orgd096d50">13.4. Things To Avoid When Creating HTML Page Titles</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org07a292e" class="outline-2">
+<h2 id="org07a292e"><span class="section-number-2">1.</span> Do you need an SEO expert? - Google Information</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+An SEO expert is someone trained to improve your visibility on search engines. By following this guide, you&rsquo;ll learn enough to be well on your way to an optimized site. In addition to that, you may want to consider hiring an SEO professional that can help you audit your pages.
+</p>
+
+<p>
+Deciding to hire an SEO is a big decision that can potentially improve your site and save time. Make sure to research the potential advantages of hiring an SEO, as well as the damage that an irresponsible SEO can do to your site. Many SEOs and other agencies and consultants provide useful services for website owners, including:
+</p>
+<ul class="org-ul">
+<li>Review of your site content or structure</li>
+<li>Technical advice on website development: for example, hosting, redirects, error pages, use of JavaScript</li>
+<li>Content development</li>
+<li>Management of online business development campaigns</li>
+<li>Keyword research</li>
+<li>SEO training</li>
+<li>Expertise in specific markets and geographies</li>
+</ul>
+
+<p>
+Before beginning your search for an SEO, it&rsquo;s a great idea to become an educated consumer and get familiar with how search engines work. We recommend going through the entirety of this guide and specifically these resources:
+</p>
+<ul class="org-ul">
+<li>How Google crawls, indexes and serves the web</li>
+<li>Search Essentials</li>
+<li>How to hire an SEO</li>
+</ul>
+<p>
+If you&rsquo;re thinking about hiring an SEO, the earlier the better. A great time to hire is when you&rsquo;re considering a site redesign, or planning to launch a new site. That way, you and your SEO can ensure that your site is designed to be search engine-friendly from the bottom up. However, a good SEO can also help improve an existing site.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org302282e" class="outline-2">
+<h2 id="org302282e"><span class="section-number-2">2.</span> How to Optimize Blog Posts for Maximum Results</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Here is a checklist of how to optimize blog posts, also referred to as on-page SEO:
+</p>
+<ul class="org-ul">
+<li>Select a focus keyword. To increase the effectiveness of your post and the probability it will gain traction in the search engines, focus all of the content on one primary keyword or key phrase that you want your post to rank for.</li>
+<li>Keep your content on topic. The tighter and more focused your content it, the better it will work for you in terms of SEO. Be sure to use your target keyword in your content at least once. If you use it multiple times, try using different variations of it and using it in different contexts. (just don’t over use it).</li>
+<li>Write a compelling headline. To improve your chances of ranking in the search engines, your focus keyword should be in an awesome, compelling, attention-getting headline.</li>
+<li>Add an image and optimize it. Posts that have interesting images that enhance the content are clicked on more in social media and are red read more often by visitors. Just remember to optimize images for search engines with a descriptive name, helpful title, and appropriate ALT text (alternative text).</li>
+<li>Add an optimized link. Internal links help both people and search engines discover more of your content, so further your on-page SEO efforts by adding an optimized internal link to another post on the same or a similar topic. Each link should use keyword-rich anchor text and if appropriate, have a keyword-rich HTML title assigned to it.</li>
+<li>Format Post Content. If you want people to read your content, you need to make it seem easy to read. Nothing makes readers click away faster than a giant block of grey text. Utilize short paragraphs separated with a blank space, sub headlines, bold and italic formatting, and bulleted and numbered lists to help people quickly consume your content.</li>
+<li>Use a custom, optimized More tag. Use the WordPress More tag to display only part of your post on your main blog page. The “Read More” link that takes visitors to the full post is customizable, so use it to include a keyword-rich call to action to read the post.</li>
+<li>Add a unique HTML page title. The HTML page title is like the sign on the outside of a building telling people what’s inside. It’s a sign for search engines and people, telling them what your blog post is about. Make sure your title tag is relevant to the blog post, highly focused, and uses your target keyword.</li>
+<li>Add a unique HTML meta description. The HTML meta description is exactly that — a unique, short description of what the blog post is about. Ideally it should include your target keyword and be written so it persuades people to click your link and read the post.</li>
+<li>Define the category. Your blog is like a giant file cabinet for your website, and the categories are like the large drawers. Use categories to organize posts by overall topic to make them easier to find. Ideally your categories would be based on about the top 10 keywords you are targeting with your site as a whole.</li>
+<li>Define the tags. Staying with the file cabinet reference, the tags are like the individual file folders inside the big drawers that separate content into smaller groups — they are secondary keywords and key phrases under the main ones used for categories. Be sure the tags assigned to your post are relevant to the content.</li>
+</ul>
+
+<p>
+By following these on-page optimization tips every time you write and publish a new blog post, you can ensure that your post is ready to attract visitors, and that it is optimized for search engines.
+</p>
+
+<p>
+<a href="https://www.searchenginejournal.com/tagging-seo/427762/#close">https://www.searchenginejournal.com/tagging-seo/427762/#close</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org90d9069" class="outline-2">
+<h2 id="org90d9069"><span class="section-number-2">3.</span> HTML Meta Description Tips</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Before you run off and write descriptions for every one of your web pages and blog posts, here are some tips to help you write effective meta descriptions:
+</p>
+<ul class="org-ul">
+<li>Optimal HTML meta description length is 160 characters. Anything longer will be truncated and not be displayed. Some experts will tell you the meta description can be longer and the added text can help your rankings — but please know that it is not a best practice</li>
+<li>Each page and blog post on your website should have an accurate, focused meta description that is unique to that page or post. Unique descriptions for each page help both search engines and people tell your pages apart, especially when multiple pages from your site are shown on the same search engine results page</li>
+<li>Make sure your description is helpful — that it gives people the information they need to make the decision to click your website link. Think of what might compel them to click and include that in your meta description</li>
+<li>Meta descriptions for blog posts may also include the author’s name, date, or other relevant information — especially for guest posts</li>
+<li>Consider including contact information in the meta description tag for Contact pages</li>
+<li>If keywords or key phrases in your meta description match the same keywords used by the person searching, the keywords will appear bolded in the search engines results page listing. This way people can quickly see that your web page or blog post is relevant to what they are searching for</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgcd6ac1a" class="outline-2">
+<h2 id="orgcd6ac1a"><span class="section-number-2">4.</span> What To Avoid When Writing HTML Meta Descriptions</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>Don&rsquo;t stuff keywords into the meta description tag or use a long list of keywords separated by commas — that approach is pure spam and is completely unhelpful</li>
+<li>Don&rsquo;t write descriptions that are irrelevant to the content on the page</li>
+<li>Don&rsquo;t write really long descriptions just to fit in more keywords</li>
+<li>Don&rsquo;t copy and paste a large block of content from the page or post as the meta description</li>
+<li>Don&rsquo;t use the same description on more than one page or post</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2b9e8f7" class="outline-2">
+<h2 id="org2b9e8f7"><span class="section-number-2">5.</span> The recommended places to add keywords to an HTML website are:</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>Title tag</li>
+<li>The description meta tag</li>
+<li>Keywords meta tag</li>
+<li>JSON-LD</li>
+<li>The first heading</li>
+<li>Within the first 2 paragraphs of the contents</li>
+<li>The file name or URL</li>
+</ul>
+<p>
+How exactly do we put the keywords in? Do keywords really work? What other stuff to look out for? Let us walk through all these concerns in this guide – Read on!
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8ecf4e5" class="outline-2">
+<h2 id="org8ecf4e5"><span class="section-number-2">6.</span> Where To Add Keywords</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+All right, let us now start with a dummy HTML page with the keywords “Aha Ha”. That is not the sound of laughter, but the actual scientific name of an Australian wasp.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org245dd0d" class="outline-2">
+<h2 id="org245dd0d"><span class="section-number-2">7.</span> The HTML Page</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+aha-ha-wasp.html
+</p>
+
+<p>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;
+      Aha ha - The Funky Australian Wasp
+    &lt;/title&gt;
+    &lt;meta name=&ldquo;description&rdquo; content=&ldquo;The Aha ha is an Australian Wasp named by entomologist Arnold Menke as a joke.&rdquo;/&gt;
+    &lt;meta name=&ldquo;keywords&rdquo; content=&ldquo;Aha ha, scientific&rdquo; /&gt;
+    &lt;script type=&ldquo;application/ld+json&rdquo;&gt;
+    {
+      &ldquo;@context&rdquo;: &ldquo;<a href="https://schema.org">https://schema.org</a>&rdquo;,
+      &ldquo;@type&rdquo;: &ldquo;BlogPosting&rdquo;,
+      &ldquo;headline&rdquo;: &ldquo;Aha ha - The Funky Australian Wasp&rdquo;,
+      &ldquo;description&rdquo;: &ldquo;The Aha ha is an Australian Wasp named by entomologist Arnold Menke as a joke.&rdquo;,
+      &ldquo;image&rdquo;: &ldquo;<img src="http://my-site.com/cover.jpg" alt="cover.jpg" />&rdquo;,
+      &ldquo;url&rdquo;: &ldquo;<a href="http://my-site.com/aha-ha-wasp">http://my-site.com/aha-ha-wasp</a>&rdquo;,
+      &ldquo;datePublished&rdquo;: &ldquo;2020-11-12&rdquo;,
+      &ldquo;dateCreated&rdquo;: &ldquo;2020-11-12&rdquo;,
+      &ldquo;dateModified&rdquo;: &ldquo;2020-11-12&rdquo;,
+      &ldquo;publisher&rdquo;: &ldquo;My Site Name&rdquo;,
+      &ldquo;author&rdquo;: {
+        &ldquo;@type&rdquo;: &ldquo;Person&rdquo;,
+        &ldquo;name&rdquo;: &ldquo;John Doe&rdquo;
+      }
+    }
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;AHA HA - WHY SO SERIOUS?&lt;/h1&gt;
+    &lt;p&gt;
+      The Scientific world is not boring. The Aha ha is an Australian Wasp named by entomologist Arnold Menke in 1977 as a joke.
+    &lt;/p&gt;
+    &lt;!&#x2013; REST OF ARTICLE &#x2013;&gt;
+    &lt;p&gt;
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+ 
+</p>
+</div>
+</div>
+<div id="outline-container-org3038f76" class="outline-2">
+<h2 id="org3038f76"><span class="section-number-2">8.</span> Where The Keywords Are At</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Managed to spot the “Aha ha” keywords yet? Here is where they are embedded:
+Where 	Description &amp; Tips
+&lt;title&gt;AHA HA&lt;/title&gt; 	Search engines pick the title up and show it directly on the search results.
+</p>
+
+<p>
+Try to keep it short, less than 70 characters.
+Keep it simple, write for humans. One look and readers know what the page is about.
+</p>
+
+<p>
+&lt;meta name=&ldquo;description&rdquo; content=&ldquo;AHA HA&rdquo;&gt; 	A short description (summary) of the page. Do not write grandmother stories, keep within 150 characters at most.
+&lt;meta name=&ldquo;keywords&rdquo; content=&ldquo;AHA HA&rdquo;&gt; 	This one is optional, it used to be good in the 1990s until people abused it. Most search engines completely ignore this meta tag now.
+&lt;script type=&ldquo;application/ld+json&rdquo;&gt; &#x2026; &lt;/script&gt; 	JSON-LD stands for JavaScript Object Notation for Linked Data. It is something like a “detailed summary” of the page. Not the easiest to understand, just copy the above and change the fields to your own if you want.
+&lt;h1&gt;AHA HA - WHY SO SERIOUS?&lt;/h1&gt; 	The first heading or title of the page. This helps both humans and search engines to establish the subject and context of the contents.
+&lt;p&gt;The AHA HA is&#x2026;&lt;/p&gt; 	The first 2 paragraphs of the text are also good places to include the keywords.
+<a href="http://your-site.com/AHA-HA-wasp.html">http://your-site.com/AHA-HA-wasp.html</a>  Finally, the file name itself or URL.
+</p>
+
+<p>
+Search engines use this to establish what the contents are about, show up in search results directly.
+Keep it as short as possible, to the point. I.E. Do not pad with dates or numbers.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7321fdd" class="outline-2">
+<h2 id="org7321fdd"><span class="section-number-2">9.</span> Do Keywords Work?</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+Putting keywords in a webpage is that easy, but keywords are no longer the “miracle ranking factor” as some may think.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org67bd28f" class="outline-2">
+<h2 id="org67bd28f"><span class="section-number-2">10.</span> Warning – Keyword Stuffing Is Bad</h2>
+<div class="outline-text-2" id="text-10">
+<p>
+Once upon a time in the 1990s, bad code ninjas will just repeat keywords in the “perfect ratio” – Then the articles miraculously rank number one. Today, that is known as “keyword stuffing”, and it is against the quality guidelines of most search engines. See Keyword Stuffing Quality Guideline On Google.
+</p>
+
+<p>
+Yes, keyword stuffing and keyword ratio are things of the past. If you spam keywords, you get penalized instead.
+ 
+</p>
+</div>
+</div>
+<div id="outline-container-org38286ae" class="outline-2">
+<h2 id="org38286ae"><span class="section-number-2">11.</span> Just Write For Humans, Search Engines Are Smart Enough.</h2>
+<div class="outline-text-2" id="text-11">
+<p>
+Right, let this sink in for a minute, we already live in the age of AI – “Hey Google”, “Siri”, “Alexa”. Machines are smart enough to understand voice commands and evaluate content to a certain degree. As you can see from the screenshot, Google figured out all the related search terms for my article “add a box around text in HTML” with very high accuracy.
+</p>
+
+<p>
+If your mindset is still “place keywords in the perfect ratio and in the perfect places”, it’s time to discard that idea. It will not help you to rank by any means. Keywords are only good as the “main topic”, it does help to establish the subject. That’s all.
+</p>
+
+<p>
+There are hundreds of ranking factors today, so what you should be doing – Is not to be overly attached to the idea of “exact keywords” and “keyword ratio”. Focus on the factors that are big winners, focus on the content quality and user experience.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org16a2e07" class="outline-2">
+<h2 id="org16a2e07"><span class="section-number-2">12.</span> Why Keywords Still Matter In SEO</h2>
+<div class="outline-text-2" id="text-12">
+<p>
+You may have heard that while the keyword meta tag used to be super effective and highly regarded, nowadays pretty much all search engines don’t even give the keyword meta tag another thought! A lot of websites, even some top authority sites don’t even bother to use the meta keywords tag anymore for this exact reason.
+</p>
+
+<p>
+But why did it come to this? Why has the keyword meta tag lost its luster?
+</p>
+
+<p>
+Because of keyword abuse (also known as keyword spam). Website owners were stuffing keywords into this meta tag like crazy, sometimes even repeating the same ones over and over, thinking that it would make the page more relevant for that specific keyword.
+</p>
+
+<p>
+Many sites even stuffed keywords into the web page keyword meta tag that didn’t have anything to do with the actual page content. It got out of control and soon the keyword meta tag was no longer a viable way to assess what a web page or blog post was really about.
+</p>
+</div>
+
+<div id="outline-container-org9cade39" class="outline-3">
+<h3 id="org9cade39"><span class="section-number-3">12.1.</span> Using Keywords Today</h3>
+<div class="outline-text-3" id="text-12-1">
+<p>
+A lot of experts will tell you, “Don’t bother the keyword meta tag,” and while that’s true, most people hear, “Don’t bother with keywords.”
+</p>
+
+<p>
+As you can see, there is a problem with the communication and understanding of keyword strategy. So, in this post, I am going to break it down for you and hopefully remove any confusion.
+</p>
+</div>
+
+<div id="outline-container-org6a05bd3" class="outline-4">
+<h4 id="org6a05bd3"><span class="section-number-4">12.1.1.</span> 1. The Keyword meta tag doesn’t hold any weight</h4>
+<div class="outline-text-4" id="text-12-1-1">
+<p>
+Search engines no longer take the keyword meta tag into account when scanning and indexing your site. It does not count toward your search engine rankings, and should not be considered a viable search engine optimization tool.
+</p>
+
+<p>
+But, just because the actual HTML keyword tag doesn’t help your website’s organic rankings, that doesn’t mean you should just ignore keywords all together!
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga33ba26" class="outline-4">
+<h4 id="orga33ba26"><span class="section-number-4">12.1.2.</span> 2. Defining Keywords Is Still Important</h4>
+<div class="outline-text-4" id="text-12-1-2">
+<p>
+Today, search engines and people want the same thing — highly focused, valuable, helpful, relevant, quality content — and writing your content around one target keyword helps achieve that.
+</p>
+
+<p>
+Without a focus, you risk scattered or rambling thoughts, unfocused and meandering paths, and content that is all over the place — content that isn’t very helpful. So…
+</p>
+<ul class="org-ul">
+<li>To build an authority site, you need to research and create a core list of keywords and key phrases your website will focus on and target as a whole</li>
+<li>When creating new content — like blog posts — you must define the primary focus keyword or key phrase for content.</li>
+<li>Keep pages and posts focused on one single keywords and it’s variations. If the content gets too wide or diverse, the page will lose some of its power.</li>
+<li>If you don’t have time to research your core keywords thoroughly and/or don’t have the budget to hire an expert to do it for you, make a list of the core topics your website/blog will focus on and brainstorm all the main keywords and key phrases for those topics. Next, make sure you create pages and posts targeting those words. (Then once you have time/budget, invest in doing the serious research and get a data-driven set of keywords.)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6e7116d" class="outline-4">
+<h4 id="org6e7116d"><span class="section-number-4">12.1.3.</span> 3. Keyword Variety And Context Matter</h4>
+<div class="outline-text-4" id="text-12-1-3">
+<p>
+Taking the time to define the focus keyword for each web page or blog post will help ensure your content stays focused and on topic. But that alone is not enough.
+</p>
+
+<p>
+Your focus keyword or key phrase should be used in different ways and in different contexts throughout the content.
+</p>
+
+<p>
+You want to avoid using the exact same keyword or key phrases over and over or too many times in your content. It’s seriously painful to read a single paragraph, let alone and entire page, of content that repeats the same word(s) over and over again!
+</p>
+
+<p>
+Instead shake it up a bit and use variations, such as changing the grouping or order of words in the key phrase, using it in singular and plural formats, and using in different styles of sentence structures.
+</p>
+
+<p>
+Tip: Think of all the different ways you would use the keyword if you were speaking naturally about it. You’d probably use it in different ways, and you would refer to they word at “it” or “them” etc. sometimes too. The same principles apply when writing — make it sounds natural and not forced.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4f948c5" class="outline-3">
+<h3 id="org4f948c5"><span class="section-number-3">12.2.</span> How to Use Keywords In Content</h3>
+<div class="outline-text-3" id="text-12-2">
+<p>
+Once you have defined your keyword, you want to make sure you use it:
+</p>
+<ul class="org-ul">
+<li>In the URL for the page (whenever possible, easier for blog posts)</li>
+<li>In your page title (HTML title tag) and toward the beginning if possible</li>
+<li>In your page description (HTML meta description)</li>
+<li>In your main page headline (h1) and if possible in at least one sub headline (h2, h3, h4)</li>
+<li>In your page or post content, with it bolded at least once</li>
+<li>In an optimized link, so the keyword appears in the link anchor text and the link title (if appropriate) — great for helping search engines and people access more relevant content on your site</li>
+<li>In an on-topic, optimized image, so the keyword appears in the name of the image and the image alternate (alt) text (as long as it is appropriate for the image)</li>
+</ul>
+
+<p>
+Using your focus keyword in the places listed above is great if it naturally works well. But be careful! Don’t overdo it! If your keyword doesn’t work well in your headline or it doesn’t sound natural in one of the places listed above, don’t force it and stuff it in there anyway — that’s spammy!
+Why WordPress SEO Helps With Keyword Usage
+</p>
+
+<p>
+I know you’re probably pressed for time when publishing new blog posts or working on your website — after all, most of us have business to run, families to care for, and clients to serve. That’s why we love the plugin WordPress SEO by Yoast. If you add your focus keyword, it will check all the core areas you need to use your focus keyword and tell you where it’s missing!
+</p>
+
+<p>
+Here is a screenshot showing an example post that is missing the keyword in the main headline. Notice how the red “NO” shows where my keyword is missing.
+</p>
+
+<p>
+What Not To Do When Using Keywords:
+</p>
+<ul class="org-ul">
+<li>Don&rsquo;t use the exact same keyword or key phrase over and over</li>
+<li>Don&rsquo;t believe that “the more it shows up in your content, the better the SEO results will be”</li>
+<li>Don&rsquo;t put paragraphs of content in your footer that are nothing more than a big list of keywords — it’s so obvious you’re spamming!</li>
+<li>Don&rsquo;t use the title tag and meta description tag as another place to list your keywords</li>
+<li>Don&rsquo;t forget to define a focus keyword for your pages and posts, and use it in the places listed above</li>
+</ul>
+
+<p>
+Remember: Stuffing keywords and key phrases into your content in every single possible spot makes your content not only painful to read, but it is also painfully obvious to your visitors that you wrote the content for the search engines and not for them — and no one likes to feel like second best.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org10997a8" class="outline-3">
+<h3 id="org10997a8"><span class="section-number-3">12.3.</span> How To Tell If Your Content Is Spammy</h3>
+<div class="outline-text-3" id="text-12-3">
+<p>
+If you have optimized your content, but are not sure your keyword usage sounds natural, simply read your content out loud and pay attention to how it feels reading the content, and listen for any weirdness.
+</p>
+<ul class="org-ul">
+<li>You&rsquo;ll quickly be able to see where your content doesn’t feel natural, or where you stumble because it doesn’t easily roll off the tip of your tongue.</li>
+<li>You&rsquo;ll notice where you use a specific word too many times.</li>
+<li>You&rsquo;ll find places in the content that could benefit from some editing and finessing.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6b98918" class="outline-2">
+<h2 id="org6b98918"><span class="section-number-2">13.</span> Writing an Effective HTML Page Title</h2>
+<div class="outline-text-2" id="text-13">
+<p>
+Yesterday I shared with you the importance of your page titles and meta descriptions and showed you some of the ways they are used. Today we’re going to focus on page titles and get into the nitty-gritty that makes them so powerful.
+</p>
+
+<p>
+Creating powerful, client-attracting titles for each of your pages and posts is a low effort, high-impact search engine optimization strategy — as long as you use them the right way — and not a spammy way.
+</p>
+</div>
+
+<div id="outline-container-orgd25814d" class="outline-3">
+<h3 id="orgd25814d"><span class="section-number-3">13.1.</span> Understanding The Difference Between a Page Title And a Page Headline</h3>
+<div class="outline-text-3" id="text-13-1">
+<p>
+A page title is NOT seen on your actual web page. It is an special HTML tag that can be seen in the code of your web page, in search engine results page (SERP) lists, in open browser tabs, and in browser bookmarks lists that is defined in the SEO settings for the page or post. A page title is a short, clear, compelling description of a web page or blog post that helps people and search engines figure out what the page is about.
+</p>
+
+<p>
+A page headline is found in the content of your web page. It is the headline your visitor sees when they visit your web page and it is usually defined in HTML with the H1 (Heading 1) tag. The headline is defined in the content editor for the page.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf6804e8" class="outline-3">
+<h3 id="orgf6804e8"><span class="section-number-3">13.2.</span> What You Need To Know About HTML Page Titles</h3>
+<div class="outline-text-3" id="text-13-2">
+<ul class="org-ul">
+<li>No two pages or posts should use the same title tag. Each HTML title tag should be accurate, relevant, descriptive, and concise, reflecting the focus and content of the single page it is written for. Otherwise search engines, visitors, and potential visitors could get confused.</li>
+<li>Because it is often used for the link text in search results listing, the HTML page title is meant to give users and search engines quick insights into the content of the page. It is often the first piece of information seen by a prospective visitor when reviewing their search results and helps users determine which link they should click on.</li>
+<li>The keywords included in your page title will appear bolded on the search engine results pages if they match the same keywords the user searched for. This makes it easier for users to determine if your web page is a good match for what they are looking for.</li>
+<li>The title tag is an HTML tag that gets inserted into the HTML header of a web page or blog post</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org38a0db7" class="outline-3">
+<h3 id="org38a0db7"><span class="section-number-3">13.3.</span> Optimal Title Tag Length</h3>
+<div class="outline-text-3" id="text-13-3">
+<p>
+Previously, HTML title tags could be as long at 70 characters in length, with best practices saying you should keep it to about 60 characters. But with Google’s redesign things have changed. While the content width of the search results hasn’t changed, the font size for page titles has increased and it is using Arial, a proportionally-spaced typeface.
+</p>
+
+<p>
+So what does that mean for you?
+</p>
+
+<p>
+Proportionately-spaced means that every letter doesn’t use the same amount of horizontal space — so an “i” takes up less space than an “m”. Also capital letters take up more space than lowercase letters, and bold letters take up more space than non-bold letters. This means the character count isn’t consistent for every page title shown in the search results.
+</p>
+
+<p>
+SEO Moz wrote a great post about this, stating that the new optimal page title length for search engines is about 55 characters. If you stick to this average character count, about 95% of your page titles will be displayed in full, with only 5% (1 in 20) of them getting truncated.
+</p>
+
+<p>
+SEO Moz also reminds us that a cut-off page title isn’t the kiss of death — Google still processes keywords beyond the cut-off (including for ranking purposes). Plus, other formats, like vertical results and Google+, may still display your full titles.
+HTML Title Tag Copywriting Tips
+</p>
+
+<p>
+In my last post, explaining what titles and meta descriptions are, I showed you several examples of how they are used. Now it’s time to understand how to write a great title for your web pages and blog posts.
+</p>
+
+<p>
+Here are a few tips:
+</p>
+<ul class="org-ul">
+<li>The title should include your main/focus keyword</li>
+<li>Use geographic or niche specific keywords in your titles whenever possible as long as they make sense</li>
+<li>Your title should be interesting. Make potential visitors want to click your link when they come across your site listed on a search engine results page</li>
+<li>Make sure it is relevant to the content on the page</li>
+<li>Often sites automatically include their brand name at the beginning or end of their page titles, separated from the actual page title with a delimiter like a hyphen, colon, or pipe. If you are going to do this, we recommend putting your brand name at the end of your titles, this way important words aren’t the ones getting cut off. Just remember that your page title now just grew by that many characters in length!</li>
+</ul>
+
+<p>
+If you’re writing an HTML title tag for a new web page or blog post and want to test the length in a search results simulator, SEO Moz provides you a handy title tag preview tool.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd096d50" class="outline-3">
+<h3 id="orgd096d50"><span class="section-number-3">13.4.</span> Things To Avoid When Creating HTML Page Titles</h3>
+<div class="outline-text-3" id="text-13-4">
+<ul class="org-ul">
+<li>Don&rsquo;t stuff keywords into your titles or use a list of keywords in your title — it’s spammy</li>
+<li>Don&rsquo;t write titles that are irrelevant to the content on the page</li>
+<li>Don&rsquo;t write really long titles just to fit more keywords in the title tag — again, spammy</li>
+<li>Don&rsquo;t use the same title on more than one page or post (This is a big no-no)</li>
+</ul>
+
+<p>
+To quickly check and see if you’re using the same HTML page title on multiple pages or posts on your website, type site:yourwebsite.com into the search field of your web browser and hit enter. This will produce a list of all pages or posts on your website that are indexed with the search engines, and show you the page titles and meta descriptions of each.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Anonymous</p>
+<p class="date">Created: 2023-08-20 Sun 21:11</p>
+</div>
+</body>
+</html>
