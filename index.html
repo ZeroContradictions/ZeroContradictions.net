@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -51,6 +52,11 @@
             #right-column {width: 33%;}
             footer {width: 100%; float: left; padding: 20px 0; text-align: center; font-size: 1.25em;}
             hr {border: none; border-top: solid black 2px;}
+
+            .dark-mode {background-color: black; color: white;}
+            .dark-mode hr {border-top: solid white}
+            .dark-mode h1 {border-top: solid white}
+            .dark-mode h2 {border-top: solid white}
         </style>
 
         <!-- Google tag (gtag.js) -->
@@ -61,6 +67,11 @@
             gtag('js', new Date());
 
             gtag('config', 'G-S8XK8JC00G');
+
+            function toggleLightDark() {
+                var element = document.body;
+                element.classList.toggle("dark-mode");
+            }
         </script>
     </head>
 
@@ -72,6 +83,7 @@
             Hello and welcome to my philosophy website. My name is Zero Contradictions, and this place is a hybrid between a blog for my philosophical writings <span style="color:red">(highlighted in red)</span> and a compendium of external links to works by different authors that have influenced my own philosophy and/or are worth reading <span style="color:blue">(highlighted in blue)</span> as well as links to videos, channels, or audio recordings <span style="color:green">(highlighted in green)</span>. If you click one of the links in the navigation bar, then the page will scroll down to that section, which will be in one of the three columns. As per its name, the goal of this website is to create the best philosophy ever with Zero Contradictions, or to at least do my best at that. In a single sentence, my philosophy is based on rationalism and understanding the implications of the subject-object dichotomy and applied evolutionary theory, among other things.
             <br><br>
             NOTE: Many the red link posts written by myself could be expanded, but I'm publishing what I have already written for now for others to read if they'd like. Everything on this website is under copyright, unless specified otherwise. If you want to report any typos or broken links, to ask questions, to give constructive criticism, to suggest some links to add to this home page, or to make a donation, please reach out to me at <a class="ZC-essays" href="misc/contact#contact-ZC">my contact page</a>.
+            <button onclick="toggleLightDark()">Toggle Light/Dark Mode</button>
         </p>
         <div id="category-bar">
             <nav class="navbar">
@@ -133,7 +145,7 @@
         <li><p><a class="ZC-essays" href="epistemology/axiology">Section 5A:</a> Axiology, The Nature of Value</p></li>
         <li><p><a class="ZC-essays" href="civilization/political-philosophy">Section 5B:</a> Political Philosophy</p></li>
         <li><p><a class="ZC-essays" href="civilization/georgism-crash-course">Section 5C:</a> Georgism</p></li>
-        <li><p><a class="ZC-essays" href="civilization/philosophy-of-technology">Section 5D:</a> Technology</p></li>
+        <li><p><a class="ZC-essays" href="civilization/thoughts-on-technology">Section 5D:</a> Technology</p></li>
     </ul>
 </li>
 </ul>
