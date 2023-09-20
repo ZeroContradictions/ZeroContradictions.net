@@ -86,6 +86,7 @@
             NOTE: Many the red link posts written by myself could be expanded, but I'm publishing what I have already written for now for others to read if they'd like. Everything on this website is under copyright, unless specified otherwise. If you want to report any typos or broken links, to ask questions, to give constructive criticism, to suggest some links to add to this home page, or to make a donation, please reach out to me at <a class="ZC-essays" href="misc/contact#contact-ZC">my contact page</a>.
             <button onclick="toggleLightDark()">Toggle Light/Dark Mode</button>
         </p>
+
         <div id="category-bar">
             <nav class="navbar">
                 <ul class="navigation-pages-list">
@@ -167,12 +168,30 @@
     <li><a href="https://www.reddit.com/r/fuckcars/wiki/faq">Why Cars And Car-Centric Urban Planning Suck FAQs</a></li>
     <li><a class="ZC-essays" href="FAQs/morality-FAQs">Morality and Selfishness FAQs</a>
         <p>These are mostly intended to be a set of follow-up questions that people may ask after reading: <a href="https://thewaywardaxolotl.blogspot.com/2020/07/what-is-morality.html">What is Morality?</a></p></li>
+    <li><a href="FAQs/pro-gun-arguments-guide.pdf">Pro-Gun Arguments Guide, 237 pages</a> (Hosted On This Website)
+        <p>This document would be written and formatted much better if I wrote it myself, but it does have comprehensive arguments for supporting gun rights nonetheless.</p></li>
     <li><a class="ZC-essays" href="civilization/case-against-libertarianism">The Case Against Libertarianism and Anarchism</a>
         <p>Libertarianism is unsustainable, incompatible with human nature, and it fails to understand what freedom is and why/when it's desirable.</p></li>
     <li><a class="ZC-essays" href="misc/critiquing-ayn-rands-objectivism">A Rational Critique of Ayn Rand's Objectivism</a>
         <p>Objectivism faces the same problems that most philosophies do: it neglects the implications of the subject-object dichotomy, as well as the implications that evolution, biology, and game-theory have for humanity.</p></li>
     <li><a class="ZC-essays" href="FAQs/philosophy-glossary">Philosophical Terminology And Pragmatosphere Glossary</a>
         <p>This page lists a glossary of terms that are commonly used on this website. The invention of new words for specific concepts leads to faster neurological retrieval of those concepts, and should cause this blog to gain more publicity and notoriety.</p></li>
+    <li>
+        <form role="search" id="form" action="https://www.google.com/search" method="get" target="_blank">
+            <input id="query" type="search" name="q" placeholder="Search this website..." size="50" aria-label="Search through site content">
+            <input type="submit" value="Search">
+        </form>
+        <script>
+            var form = document.querySelector("form");
+
+            form.addEventListener("submit", function(e) {
+                e.preventDefault();
+                var search = form.querySelector("input[type=search]");
+                search.value = "site:https://zerocontradictions.github.io" + search.value;
+                form.submit();
+            });
+        </script>
+    </li>
 </ul>
 
 <h2 id="books">Books Worth Reading</h2>
@@ -184,7 +203,7 @@
         <p>This book debunks popular futurist ideas, using basic physics and economics. It deals with megastructures, space flight, asteroid mining, space colonization and industrialization, robots/AI taking over the world, the Fermi paradox, and the Star Trek worldview. It also describes the real, hidden dangers of modern technology.</p></li>
     <li><a href="https://www.amazon.com/dp/B0BPXJ85W7">Debunking the Selfish Gene by T. K. Van Allen</a>
         <p>This book debunks the Richard Dawkins' concept of the selfish gene, which situates biological purpose in genes, rather than the organism as a whole. The author presents an alternative theory of biological purpose that is more consistent with the evidence: the phenocentric view.</p></li>
-    <li><p><a href="misc/industrial-society-and-its-future-manifesto.html">Industrial Society and Its Future by Ted Kaczynski</a> (Hosted On This Website)</p></li>
+    <li><p><a href="misc/industrial-society-and-its-future-manifesto">Industrial Society and Its Future by Ted Kaczynski</a> (Hosted On This Website)</p></li>
     <li><a href="https://www.goodreads.com/book/show/274827.The_Technological_Society">The Technological Society by Jacques Ellul</a>
         <p>This is the book where Ted Kaczynski got most of his thoughts and philosophy about technology.</p></li>
     <hr>
@@ -652,7 +671,6 @@
     <li><a href="https://stateofthenihil.wordpress.com/2021/12/05/through-the-language-glass-book-summary/">Book Summary: Through the Language Glass</a>
         <p>StateOfTheNihil gives a summary of the book, <em>Through the Language Glass</em>, which is probably worth reading, unless you have a linguistics degree.</p></li>
 </ul>
-
 </div>
 <!--END SECOND COLUMN-->
 
@@ -702,7 +720,11 @@
     <p>TL;DW: The best way to fix the patent system would be to create a system where the government rewards innovators with one-time monetary prizes instead. This is yet another major game-theoretic problem that would be best solved by practical government policies.</p></li>
 <li><a href="https://thewaywardaxolotl.blogspot.com/2019/05/capitalism-and-socialism.html">The Misleading Capitalism & Socialism Dichotomy</a>
     <p>We should view Capitalism and Socialism as complementary social technologies, rather than conflicting ideologies. Each solves different kinds of problems, and we should be discussing the best ways to use both Capitalism and Socialism to make the economy work.</p></li>
-    <li><a class="videos" href="https://www.youtube.com/watch?v=iibsrDXdEos">Net Zero by 2050 Is Not Happening - Caspian Report</a></li>
+    <li><a class="videos" href="https://www.youtube.com/watch?v=F5WuoXOhWtM">Social mobility hasn't really changed in 400 years - Gregory Clark</a></li>
+    <li><a class="videos" href="https://www.youtube.com/watch?v=sgOEGKDVvsg">The Energy Transition Delusion: Inescapable Mineral Realities - Mark Mills</a></li>
+    <!-- <p>Video lecture recently about mining efficiency dropping every decade.</p></li> -->
+
+    <!-- <li><a class="videos" href="https://www.youtube.com/watch?v=iibsrDXdEos">Net Zero by 2050 Is Not Happening - Caspian Report</a></li> -->
     <li><a class="videos" href="https://www.spreaker.com/user/blitheringgenius/thefinancialsystem">Summary Of How The Financial System Works</a>
     <p>BG gives some simple thought experiments for explaining how money is created, how the economy works, how recessions happen, and his analysis of a commonly overlooked contributing factor to the 2008 Great Recession.</p></li>
 <li><a class="ZC-essays" href="civilization/economics">Thoughts on Economics</a></li>
@@ -746,7 +768,7 @@
     <li><a class="ZC-essays" href="civilization/geopolitics">Thoughts on Geopolitics</a></li>
     <li><a class="ZC-essays" href="civilization/democracy">Thoughts on Democracy</a>
         <p>When and when not to use democracy; Why Replacing FPTP will not improve democracy; best types of democratic procedures for different situations; Analysis of presidential, parliamentary, and proportional representation democracies; Why the United States should've switched to a parliamentary democracy in the 1970s; Reason Systems</p></li>
-    <li><a class="ZC-essays" href="civilization/social-justice">Thoughts On "Social Justice"</a>
+    <li><a class="ZC-essays" href="civilization/social-justice">A Rational Analysis of "Social Justice"</a>
         <p>The nature of discrimination, the origin of <del>diversity</del> equal representation, racial "oppression", transgender people, etc.</p></li>
     <li><a href="https://inquisitivebird.substack.com/p/the-rise-of-the-west">The Rise of the West - Patterns in Humanity</a></li>
     <li><a class="ZC-essays" href="civilization/age-of-adulthood">Determining What The Legal Age Of Adulthood Should Be</a>

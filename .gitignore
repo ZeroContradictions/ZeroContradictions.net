@@ -18,5 +18,9 @@
 *.txt
 *.tex
 
+# Include and track robots.txt and friends.txt
+!robots.txt
+!friends.txt
+
 
 sitemap.xml

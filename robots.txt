@@ -1,0 +1,19 @@
+User-agent: *
+Sitemap: https://zerocontradictions.github.io/sitemap.xml
+Disallow: /images/objectivism-belief-map.pdf
+
+User-agent: Googlebot
+Allow: *
+Disallow: eeeeeeeeeeeeeeeeeee
+
+User-agent: ia_archiver
+Disallow: /misc/philosophical-journey
+Disallow: /misc/programming-journey
+Disallow: /misc/actuary-vs-programmer
+
+
+
+
+
+
+i
