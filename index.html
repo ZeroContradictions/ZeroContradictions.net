@@ -177,8 +177,8 @@
     <li><a class="ZC-essays" href="FAQs/philosophy-glossary">Philosophical Terminology And Pragmatosphere Glossary</a>
         <p>This page lists a glossary of terms that are commonly used on this website. The invention of new words for specific concepts leads to faster neurological retrieval of those concepts, and should cause this blog to gain more publicity and notoriety.</p></li>
     <li>
-        <form role="search" id="form" action="https://www.google.com/search" method="get" target="_blank">
-            <input id="query" type="search" name="q" placeholder="Search this website..." size="50" aria-label="Search through site content">
+        <form role="search" id="form" action="https://www.duckduckgo.com" method="get" target="_blank">
+            <input id="query" type="search" name="q" placeholder="Search this website..." size="40" aria-label="Search through site content">
             <input type="submit" value="Search">
         </form>
         <script>
@@ -187,7 +187,7 @@
             form.addEventListener("submit", function(e) {
                 e.preventDefault();
                 var search = form.querySelector("input[type=search]");
-                search.value = "site:https://zerocontradictions.github.io" + search.value;
+                search.value = "site:https://zerocontradictions.github.io " + search.value;
                 form.submit();
             });
         </script>
