@@ -1,5 +1,5 @@
 User-agent: *
-Sitemap: https://zerocontradictions.github.io/sitemap.xml
+Sitemap: https://zerocontradictions.net/sitemap.xml
 Disallow: /images/objectivism-belief-map.pdf
 
 User-agent: ia_archiver

@@ -188,3 +188,28 @@ footer {
     float: left;
     padding: 20px 0;
 }
+
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+    body {
+        color: black;
+        background-color: #F4F5F6;
+    }
+    html {
+        background-color: #808080;
+    }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    hr, h1, h2, h3 {
+        border-top: solid white;
+    }
+    body {
+        color: #F4F5F6;
+        background-color: black;
+    }
+    html {
+        background-color: #111111;
+    }
+}

@@ -11,8 +11,8 @@
         <meta name="theme-color" content="#3e6c09">
         <title>Zero Contradictions Philosophy Home Page</title>
         <meta name="description" content="Zero Contradictions is a philosophy blog, website, and encyclopedia dedicated to solving the greatest problems of the 21st century.">
-        <meta property="og:url" content="https://zerocontradictions.github.io" />
-        <meta property="og:image" content="https://zerocontradictions.github.io/images/georgism-flag.jpg" />
+        <meta property="og:url" content="https://zerocontradictions.net" />
+        <meta property="og:image" content="https://zerocontradictions.net/images/georgism-flag.jpg" />
         <meta property="og:type" content="website" />
         <style>
             /*** reset ***/
@@ -22,6 +22,7 @@
             a {color: #015EF4; font-weight: bold; line-height: 1.3em;}
             a.ZC-essays {color: #EE0534; font-weight: bold; line-height: 1.3em;}
             a.videos {color: #009C00; font-weight: bold; line-height: 1.3em;}
+
             a:hover {text-decoration: underline; text-decoration-thickness: 2px;}
             a:focus {text-decoration: underline; text-decoration-thickness: 3px;}
 
@@ -54,10 +55,8 @@
             footer {width: 100%; float: left; padding: 20px 0; text-align: center; font-size: 1.25em;}
             hr {border: none; border-top: solid black 2px;}
 
-            .dark-mode {background-color: black; color: white;}
-            .dark-mode hr {border-top: solid white;}
-            .dark-mode h1 {border-top: solid white;}
-            .dark-mode h2 {border-top: solid white;}
+            @media (prefers-color-scheme: light) { body {color: black; background-color: #F4F5F6;} }
+            @media (prefers-color-scheme: dark) { body {color: white; background-color: black;} hr, h1, h2 {border-top: solid white;} }
         </style>
 
         <!-- Google tag (gtag.js) -->
@@ -68,11 +67,6 @@
             gtag('js', new Date());
 
             gtag('config', 'G-S8XK8JC00G');
-
-            function toggleLightDark() {
-                var element = document.body;
-                element.classList.toggle("dark-mode");
-            }
         </script>
     </head>
 
@@ -81,10 +75,9 @@
         <h1>Zero Contradictions Philosophy Home Page</h1>
         <p>
             <img src="images/ZC-emblem.svg" alt="Zero Contradictions Emblem">
-            Hello and welcome to my philosophy website. My name is Zero Contradictions, and this place is a hybrid between a blog for my philosophical writings <span style="color:#EE0534">(highlighted in red)</span> and a compendium of external links to works by different authors that have influenced my own philosophy and/or are worth reading <span style="color:#015EF4">(highlighted in blue)</span> as well as links to videos, channels, or audio recordings <span style="color:#009C00">(highlighted in green)</span>. If you click one of the links in the navigation bar, then the page will scroll down to that section, which will be in one of the three columns. As per its name, the goal of this website is to create the most rational philosophy ever with Zero Contradictions, or to at least do my best at that. In a single sentence, my philosophy is based on rationalism and understanding the implications of the subject-object dichotomy and applied evolutionary theory, among other things.
+            Hello and welcome to my philosophy website. My name is Zero Contradictions, and this place is a hybrid between a blog for my philosophical writings <span style="color:#D7042E">(highlighted in red)</span> and a compendium of external links to works by different authors that have influenced my own philosophy and/or are worth reading <span style="color:#0149BC">(highlighted in blue)</span> as well as links to videos, channels, or audio recordings <span style="color:#008000">(highlighted in green)</span>. If you click one of the links in the navigation bar, then the page will scroll down to that section, which will be in one of the three columns. As per its name, the goal of this website is to create the most rational philosophy ever with Zero Contradictions, or to at least do my best at that. In a single sentence, my philosophy is based on rationalism and understanding the implications of the subject-object dichotomy and applied evolutionary theory, among other things.
             <br><br>
-            NOTE: Many the red link posts written by myself could be expanded, but I'm publishing what I have already written for now for others to read if they'd like. Everything on this website is under copyright, unless specified otherwise. If you want to report any typos or broken links, to ask questions, to give constructive criticism, to suggest some links to add to this home page, or to make a donation, please reach out to me at <a class="ZC-essays" href="misc/contact#contact-ZC">my contact page</a>.
-            <button onclick="toggleLightDark()">Toggle Light/Dark Mode</button>
+            NOTE: Many of the red link posts written by myself could be expanded, but I'm publishing what I have already written for now for others to read if they'd like. Everything on this website is under copyright, unless specified otherwise. If you want to report any typos or broken links, to ask questions, to give constructive criticism, to suggest some links to add to this home page, or to make a donation, please reach out to me at <a class="ZC-essays" href="misc/contact#contact-ZC">my contact page</a>. Whether this site displays in light or dark mode depends on your web browser preferences.
         </p>
 
         <div id="category-bar">
@@ -168,12 +161,12 @@
     <li><a href="https://www.reddit.com/r/fuckcars/wiki/faq">Why Cars And Car-Centric Urban Planning Suck FAQs</a></li>
     <li><a class="ZC-essays" href="FAQs/morality-FAQs">Morality and Selfishness FAQs</a>
         <p>These are mostly intended to be a set of follow-up questions that people may ask after reading: <a href="https://thewaywardaxolotl.blogspot.com/2020/07/what-is-morality.html">What is Morality?</a></p></li>
-    <li><a href="FAQs/pro-gun-arguments-guide.pdf">Pro-Gun Arguments Guide, 232 pages</a> (Hosted On This Website)
+    <li><a href="FAQs/pro-gun-arguments-guide.pdf">The Pro-Gun Arguments Guide, 232 pages</a> (Hosted On This Website)
         <p>This document would be written and formatted much better if I wrote it myself, but it does have comprehensive arguments for supporting gun rights nonetheless.</p></li>
+    <li><a href="https://whatisnuclear.com/">What Is Nuclear Energy?</a>
+        <p>This website is maintained by a group of nuclear engineers that aim to educate the advantages and drawbacks of nuclear energy. It explains everything that you could want to know about nuclear energy.</p></li>
     <li><a class="ZC-essays" href="civilization/case-against-libertarianism">The Case Against Libertarianism and Anarchism</a>
         <p>Libertarianism is unsustainable, incompatible with human nature, and it fails to understand what freedom is and why/when it's desirable.</p></li>
-    <li><a class="ZC-essays" href="misc/critiquing-ayn-rands-objectivism">A Rational Critique of Ayn Rand's Objectivism</a>
-        <p>Objectivism faces the same problems that most philosophies do: it neglects the implications of the subject-object dichotomy, as well as the implications that evolution, biology, and game-theory have for humanity.</p></li>
     <li><a class="ZC-essays" href="FAQs/philosophy-glossary">Philosophical Terminology And Pragmatosphere Glossary</a>
         <p>This page lists a glossary of terms that are commonly used on this website. The invention of new words for specific concepts leads to faster neurological retrieval of those concepts, and should cause this blog to gain more publicity and notoriety.</p></li>
     <li>
@@ -187,7 +180,7 @@
             form.addEventListener("submit", function(e) {
                 e.preventDefault();
                 var search = form.querySelector("input[type=search]");
-                search.value = "site:https://zerocontradictions.github.io " + search.value;
+                search.value = "site:https://zerocontradictions.net " + search.value;
                 form.submit();
             });
         </script>
@@ -313,6 +306,7 @@
     <li><a href="https://www.philosophybasics.com/">PhilosophyBasics.com - Luke Mastin</a></li>
     <li><a href="https://www.denizcemonduygu.com/philo/browse/">History of Philosophy: Summarized & Visualized</a></li>
     <li><a href="https://progressandpoverty.substack.com/">Progress & Poverty Substack</a></li>
+    <li><a href="https://www.aporiamagazine.com/">Aporia Magazine</a></li>
     <li><a href="https://seanlast.substack.com/">Ideas and Data (Substack) - Sean Last</a></li>
     <li><a href="https://ideasanddata.wordpress.com/">Ideas and Data (Wordpress) - Sean Last</a></li>
     <li><a href="https://www.emilkirkegaard.com/">Emil O. W. Kirkegaard (Substack)</a></li>
@@ -527,7 +521,8 @@
         <p>This webpage gives a background on human taxonomy and explains how human races can be defined with K-Cluster Analysis with graphs and pictures.</p></li>
     <li><a href="https://abc102.wordpress.com/">Race, Genes, & Intelligence: An Empirical Test of the Genetic Hypothesis</a>
         <p>This four part series definitively clarifies, defines, and argues for the Hereditarian Hypothesis with an empirical analysis of reliable data.</p></li>
-    <li><a href="https://theuntangler.wordpress.com/2022/04/27/collection-of-information-related-to-population-genetics/">Collection of Information Related to Population Genetics - The Untangler</a></li>
+    <li><a href="https://thuletide.wordpress.com/2022/02/15/interactive-3d-principal-component-analysis-of-the-human-race/">Visualized 3D Component Analysis Mapping Of Human Races</a></li>
+    <li><a href="https://theuntangler.wordpress.com/2022/04/27/collection-of-information-related-to-population-genetics/">Collection of Information Related to Population Genetics - The Untangler</a></li>
     <li><a href="https://www.biorxiv.org/content/10.1101/2023.01.23.525248v2">A Harmonized Public Resource of Deeply Sequenced Diverse Human Genomes</a></li>
     <li><a href="https://udel.edu/~mcdonald/mythintro.html">Myths About Human Genetics</a>
         <p>Most human traits are polygenic, and are rarely determined by only one gene. Many of the typical examples used to teach genetic differences in K-12 biology classes also have no scientific basis to back them up.</p></li>
@@ -697,7 +692,7 @@
         <p>Explaining the following and so much more: Addressing the problems, technicalities, and theoretical implementation of Georgism, why Georgism would solve the tragedy of the commons, why there would still be incentives to improve property even if natural resources are owned to everybody, etc.</p></li>
     <li><a href="https://beta.character.ai/chat?char=vlvSPRixp2fFAgYUEQBNNQVG0ziJRug5CytYUcnwF_c">Henry George AI Chatbot for Answering Questions about Georgism</a>
     <li><a href="https://gameofrent.com/content/progress-and-poverty-review">Book Review of Progress and Poverty</a>
-        <p>This is a good review of P&P, aside from its very fallacious arguments against Neo-Malthusianism and Overpopulation concerns, <a class="ZC-essays" href="civilization/georgism-and-population-control">which I debunk here</a>.</p></li>
+        <p>This is a good review of P&P, aside from its fallacious arguments against Neo-Malthusianism and Overpopulation concerns, <a class="ZC-essays" href="civilization/georgism-and-population-control">which I debunk here</a>.</p></li>
     <li><a href="https://gameofrent.com/content/is-land-a-big-deal">Why Land is a Big Deal in the Economy</a></li>
     <li><a href="https://gameofrent.com/content/can-land-be-accurately-assessed">Can Unimproved Land Value be Accurately Assessed Separately From Buildings?</a></li>
     <li><a class="videos" href="https://www.youtube.com/watch?v=of__tpDLtq8">Why McDonalds is a Real Estate Company - Financial Interest</a></li>
@@ -719,7 +714,7 @@
     <p>TL;DW: The best way to fix the patent system would be to create a system where the government rewards innovators with one-time monetary prizes instead. This is yet another major game-theoretic problem that would be best solved by practical government policies.</p></li>
 <li><a href="https://thewaywardaxolotl.blogspot.com/2019/05/capitalism-and-socialism.html">The Misleading Capitalism & Socialism Dichotomy</a>
     <p>We should view Capitalism and Socialism as complementary social technologies, rather than conflicting ideologies. Each solves different kinds of problems, and we should be discussing the best ways to use both Capitalism and Socialism to make the economy work.</p></li>
-    <li><a class="videos" href="https://www.youtube.com/watch?v=F5WuoXOhWtM">Social mobility hasn't really changed in 400 years - Gregory Clark</a></li>
+    <li><a class="videos" href="https://www.youtube.com/watch?v=Eh7X8LBjIO4">Social Mobility Hasn't Really Changed In 400 Years - Gregory Clark</a></li>
     <li><a class="videos" href="https://www.youtube.com/watch?v=sgOEGKDVvsg">The Energy Transition Delusion: Inescapable Mineral Realities - Mark Mills</a></li>
     <!-- <p>Video lecture recently about mining efficiency dropping every decade.</p></li> -->
 
@@ -777,7 +772,7 @@
     <li><a href="https://thewaywardaxolotl.blogspot.com/2017/10/the-case-against-anarchism.html">The Case Against Anarchism</a> | <a class="videos" href="https://www.youtube.com/watch?v=5FVMHxrTC-c">Video Version</a>
         <p>Blithering Genius explains how Anarchism fails to solve problems of cooperation for large-scale societies, ignores the implications of evolutionary theory for human nature. Arbitrary anti-authoritarian morals are not a foundation for a functioning, technologically-advanced, large-scale society.</p></li>
     <li><a href="https://whatisnuclear.com/">What Is Nuclear Energy?</a>
-        <p>This website is maintained by a group of nuclear engineers that aim to educate the advantages and drawbacks of nuclear energy. It explains almost everything that you could want to know about nuclear energy.</p></li>
+        <p>This website is maintained by a group of nuclear engineers that aim to educate the advantages and drawbacks of nuclear energy. It explains everything that you could want to know about nuclear energy.</p></li>
     <li><a class="videos" href="https://www.youtube.com/watch?v=wvQTmTPZix4">The Case for Insect Agriculture</a>
         <p>Insects have many advantages over livestock: they are cheaper, take up less space, are more nutritious, and there are thousands to choose from.</p></li>
     <li><a class="videos" href="https://www.youtube.com/watch?v=tBVXenVpfVM">The Blue Revolution</a>
@@ -884,6 +879,8 @@
 <ul>
     <li><a class="ZC-essays" href="misc/philosophical-journey">My Philosophical And Political Journey</a>
         <p>The evolution of my personal philosophy over the years.</p></li>
+    <li><a class="ZC-essays" href="misc/critiquing-ayn-rands-objectivism">A Rational Critique of Ayn Rand's Objectivism</a>
+        <p>Objectivism faces the same problems that most philosophies do: it neglects the implications of the subject-object dichotomy, as well as the implications that evolution, biology, and game-theory have for humanity.</p></li>
     <li><a href="https://thewaywardaxolotl.blogspot.com/2020/04/the-advice-troll.html">The Advice Troll</a>
         <p>One of the reasons why this blog doesn't have a comments section.</p></li>
     <li><a href="https://www.gwern.net/Search">Internet Search Tips - Gwern</a></li>
@@ -909,7 +906,7 @@
     <li><a class="ZC-essays" href="misc/honest-political-mottos">If Political Ideologies Had Honest Mottos</a></li>
     <li><a class="videos" href="https://www.youtube.com/watch?v=gp64fukhBaU">Top 6 AI Tools To 10x Your Productivity - Improvement Pill</a></li>
     <li><a href="https://claude.ai/chats">Claude AI</a>
-        <p>This is basically ChatGPT but slightly better, if you don't have GPT-4 access. It it's faster, higher-quality, and it has a larger context size.</p></li>
+        <p>This is basically ChatGPT but slightly better, if you don't have GPT-4 access. It's faster, higher-quality, and it has a larger context size.</p></li>
     <li><a href="https://youbroketheinternet.org/">You Broke the Internet: Architecture for a GNU Internet</a></li>
     <li><a href="https://thuletide.wordpress.com/2020/06/07/opsec-infosec-101/">OPSEC / InfoSec 101</a>
         <p>How to not get doxed and how to encrypt your hardware.</p></li>
@@ -918,7 +915,7 @@
         <p>A list of tools that you can use to increase your online privacy</p></li>
     <li><a href="https://tosdr.org/">TOS;DR.org</a>
         <p>A website that summarizes other websites' Terms of Services.</p></li>
-    <li><a href="https://kunimune.home.blog/2019/11/07/introducing-the-danseiji-projections/">Introducing the Danseiji Projections - Justin Kunimune</a>
+    <li><a href="https://kunimune.home.blog/2019/11/07/introducing-the-danseiji-projections/">Introducing the Danseiji Map Projections - Justin Kunimune</a>
     <li><a href="https://kunimune.home.blog/2023/02/11/a-comprehensive-colormap-style-guide/">A Comprehensive Colormap Style Guide - Justin Kunimune</a>
     <li><a class="ZC-essays" href="misc/ideal-measurements-units-standards">Standards, Units, and Measurements In An Ideal World</a>
         <p>Although I wish that we weren't using all these suboptimal standards, they do work for what they accomplish. I just think that they would work better using these ideas instead.</p></li>
