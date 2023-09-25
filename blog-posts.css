@@ -60,6 +60,10 @@ sub {
     bottom: -0.25em;
 }
 
+.timestamp {
+    color: #005500;
+}
+
 #table-of-contents ul {
     margin: 00px 00px 5px 00px;
     font-size: 100%;
