@@ -207,11 +207,19 @@ footer {
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
     hr, h1, h2, h3 {
-        border-top: solid white;
+        border-top-color: white;
     }
     body {
         color: #F4F5F6;
         background-color: black;
+    }
+    a {
+        /* color: #0F6BFF; */
+        color: #5294FF;
+        text-decoration-color: #5294FF;
+    }
+    #table-of-contents ul {
+        text-decoration-color: #5294FF;
     }
     html {
         background-color: #111111;

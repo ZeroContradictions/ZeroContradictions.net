@@ -35,13 +35,13 @@
             h2 {margin: 20px 40px 10px 20px; padding: 15px 0 0 0; border-top: solid black 2px; font-size: 1.6em;}
             h3 {margin: 10px 40px 10px 00px; padding: 0 0 0 0; font-size: 1.25em;}
 
-            /* .navbar Is Used For <nav>;  #category-bar is used for <div> */
+            /* .navbar Is Used For <nav>;  #search-bar is used for <div> */
             nav {list-style-type: none; margin: 0 auto 0 auto; padding: 0; overflow: auto; max-width: 1000px; background-color: #3F5EA2;}
             li.topic-category {display: inline-block; padding: 9px 16px 5px; text-align: center; float: left; font-size: 110%; text-decoration: none;}
             li.topic-category a {text-decoration: none; color: white;}
             li.topic-category:hover {background-color: #5D7DC0; /* border-bottom: 2px solid white; */}
             li#topic-category-current:hover {background-color: #5D7DC0; /* border-bottom: 2px solid white; */}
-            #category-bar {box-sizing: border-box; overflow: auto;}
+            #search-bar {box-sizing: border-box; overflow: auto;}
 
             /** sections **/
             body {background-color: #F4F5F6; font-size: 85%; font-family: Arial, Helvetica, sans-serif; line-height: 1;}
@@ -75,12 +75,26 @@
         <h1>Zero Contradictions Philosophy Home Page</h1>
         <p>
             <img src="images/ZC-emblem.svg" alt="Zero Contradictions Emblem">
-            Hello and welcome to my philosophy website. My name is Zero Contradictions, and this place is a hybrid between a blog for my philosophical writings <span style="color:#D7042E">(highlighted in red)</span> and a compendium of external links to works by different authors that have influenced my own philosophy and/or are worth reading <span style="color:#0149BC">(highlighted in blue)</span> as well as links to videos, channels, or audio recordings <span style="color:#008000">(highlighted in green)</span>. If you click one of the links in the navigation bar, then the page will scroll down to that section, which will be in one of the three columns. As per its name, the goal of this website is to create the most rational philosophy ever with Zero Contradictions, or to at least do my best at that. In a single sentence, my philosophy is based on rationalism and understanding the implications of the subject-object dichotomy and applied evolutionary theory, among other things.
+            Hello and welcome to my philosophy website. My name is Zero Contradictions, and this place is a hybrid between a blog for my own writings <span style="color:#EE0534">(highlighted in red)</span> and a compendium of external links to works by different authors that have influenced my own philosophy and/or are worth reading <span style="color:#015EF4">(highlighted in blue)</span> as well as links to videos, channels, or audio recordings <span style="color:#009C00">(highlighted in green)</span>. If you click one of the links in the navigation bar, then the page will scroll down to that section, which will be in one of the three columns. As per its name, the goal of this website is to create the most rational philosophy ever with Zero Contradictions, or to at least do my best at that. In a single sentence, my philosophy is based on rationalism and understanding the implications of the subject-object dichotomy and applied evolutionary theory, among other things.
             <br><br>
             NOTE: Many of the red link posts written by myself could be expanded, but I'm publishing what I have already written for now for others to read if they'd like. Everything on this website is under copyright, unless specified otherwise. If you want to report any typos or broken links, to ask questions, to give constructive criticism, to suggest some links to add to this home page, or to make a donation, please reach out to me at <a class="ZC-essays" href="misc/contact#contact-ZC">my contact page</a>. Whether this site displays in light or dark mode depends on your web browser preferences.
         </p>
+        <div id="search-bar">
+            <form role="search" id="form" action="https://www.duckduckgo.com" method="get" target="_blank">
+                <input id="query" type="search" name="q" placeholder="Search this website..." size="60" aria-label="Search through site content">
+                <input type="submit" value="Search">
+            </form>
+            <script>
+                var form = document.querySelector("form");
 
-        <div id="category-bar">
+                form.addEventListener("submit", function(e) {
+                    e.preventDefault();
+                    var search = form.querySelector("input[type=search]");
+                    search.value = "site:https://zerocontradictions.net " + search.value;
+                    form.submit();
+                });
+            </script>
+            <br>
             <nav class="navbar">
                 <ul class="navigation-pages-list">
                     <li class="topic-category"><a href="#anthro">Anthropology</a></li>
@@ -169,22 +183,6 @@
         <p>Libertarianism is unsustainable, incompatible with human nature, and it fails to understand what freedom is and why/when it's desirable.</p></li>
     <li><a class="ZC-essays" href="FAQs/philosophy-glossary">Philosophical Terminology And Pragmatosphere Glossary</a>
         <p>This page lists a glossary of terms that are commonly used on this website. The invention of new words for specific concepts leads to faster neurological retrieval of those concepts, and should cause this blog to gain more publicity and notoriety.</p></li>
-    <li>
-        <form role="search" id="form" action="https://www.duckduckgo.com" method="get" target="_blank">
-            <input id="query" type="search" name="q" placeholder="Search this website..." size="40" aria-label="Search through site content">
-            <input type="submit" value="Search">
-        </form>
-        <script>
-            var form = document.querySelector("form");
-
-            form.addEventListener("submit", function(e) {
-                e.preventDefault();
-                var search = form.querySelector("input[type=search]");
-                search.value = "site:https://zerocontradictions.net " + search.value;
-                form.submit();
-            });
-        </script>
-    </li>
 </ul>
 
 <h2 id="books">Books Worth Reading</h2>
