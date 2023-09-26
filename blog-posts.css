@@ -65,7 +65,7 @@ sub {
 }
 
 #table-of-contents ul {
-    margin: 00px 00px 5px 00px;
+    margin: 0px 0px 5px 0px;
     font-size: 100%;
     list-style-type: none;
     font-weight: 600;
@@ -74,21 +74,21 @@ sub {
     text-decoration-thickness: 1px;
 }
 #table-of-contents ul li {
-    margin: 00px 00px 5px 10px;
+    margin: 0px 0px 5px 10px;
 }
 #table-of-contents ul li ul li {
-    margin: 00px 00px 5px 20px;
+    margin: 0px 0px 5px 20px;
 }
 
 ul li, ol li {
-    margin: 00px 00px 05px 20px;
+    margin: 0px 0px 05px 20px;
     line-height: 1.3em;
 }
 
 .figure p, img {
-    img-align: center;
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 100%;
 }
 
@@ -102,7 +102,7 @@ blockquote {
 
 .org-dl {
     line-height: 1.3em;
-    margin: 00px 00px 05px 00px;
+    margin: 0px 0px 05px 0px;
 }
 
 table {
@@ -136,27 +136,27 @@ h1 {
 h2 {
     font-size: 1.6em;
     border-top: solid black 2px;
-    margin: 20px 00px 10px 00px;
+    margin: 20px 0px 10px 0px;
     padding: 15px 0 0 0;
 }
 
 h3 {
     font-size: 1.25em;
     border-top: solid black 1px;
-    margin: 10px 00px 10px 00px;
+    margin: 10px 0px 10px 0px;
     padding: 15px 0 0 0;
 }
 
 h4 {
     font-size: 1.1em;
     font-weight: bold;
-    margin: 10px 00px 10px 00px;
+    margin: 10px 0px 10px 0px;
     padding: 15px 0 0 0;
 }
 
 h5 {
     font-size: 1em;
-    margin: 10px 00px 10px 00px;
+    margin: 10px 0px 10px 0px;
     padding: 15px 0 0 0;
 }
 
@@ -168,8 +168,8 @@ html {
 body {
     font-size: 100%;
     font-family: Arial, Helvetica, sans-serif;
-    color: black; /* font color */
     line-height: 1;
+    color: black; /* font color */
     background-color: #F4F5F6; /* color behind text */
     margin: 0 auto 0 auto;
     padding: 3%;
@@ -180,7 +180,7 @@ body {
 header {
     text-align: center;
     width: 100%;
-    border-bottom: solid black 2px
+    border-bottom: solid black 2px;
     float: left;
     padding: 10px 0;
 }
@@ -196,32 +196,40 @@ footer {
 /* Light Mode */
 @media (prefers-color-scheme: light) {
     body {
-        color: black;
-        background-color: #F4F5F6;
+        color: black; /* font color */
+        background-color: #F4F5F6; /* color behind text */
     }
     html {
         background-color: #808080;
-    }
+    } /* controls background color behind rectangular text body */
 }
 
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
-    hr, h1, h2, h3 {
-        border-top-color: white;
-    }
-    body {
-        color: #F4F5F6;
-        background-color: black;
-    }
     a {
-        /* color: #0F6BFF; */
         color: #5294FF;
         text-decoration-color: #5294FF;
     }
     #table-of-contents ul {
         text-decoration-color: #5294FF;
     }
+    table {
+        border-top-color: white;
+    }
+    table, th {
+        border-bottom-color: white;
+    }
+    hr, h1, h2, h3 {
+        border-top-color: white;
+    }
     html {
         background-color: #111111;
+    }
+    header {
+        border-bottom-color: white;
+    }
+    body {
+        color: #F4F5F6;
+        background-color: black;
     }
 }
