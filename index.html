@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE HTML lang="en">
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
@@ -11,17 +11,17 @@
         <meta name="theme-color" content="#3e6c09">
         <title>Zero Contradictions Philosophy Home Page</title>
         <meta name="description" content="Zero Contradictions is a philosophy blog, website, and encyclopedia dedicated to solving the greatest problems of the 21st century.">
-        <meta property="og:url" content="https://zerocontradictions.net" />
-        <meta property="og:image" content="https://zerocontradictions.net/images/georgism-flag.jpg" />
-        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zerocontradictions.net">
+        <meta property="og:image" content="https://zerocontradictions.net/images/georgism-flag.jpg">
+        <meta property="og:type" content="website">
         <style>
             /*** reset ***/
             html, body, div, span, h1, h2, h3, p, a, img, strong, ol, ul, li { margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline;}
 
             /*** universal ***/
             a {color: #015EF4; font-weight: bold; line-height: 1.3em;}
-            a.ZC-essays {color: #EE0534; font-weight: bold; line-height: 1.3em;}
-            a.videos {color: #009C00; font-weight: bold; line-height: 1.3em;}
+            a.ZC-essays {color: #EE0534;}
+            a.videos {color: #009C00;}
 
             a:hover {text-decoration: underline; text-decoration-thickness: 2px;}
             a:focus {text-decoration: underline; text-decoration-thickness: 3px;}
@@ -32,34 +32,33 @@
             .underline {text-decoration: underline;}
 
             h1 {max-width: 1000px; margin: 20px auto 0; padding: 10px 0 0 0; border-top: solid black 2px; font-size: 2.0em;}
-            h2 {margin: 20px 40px 10px 20px; padding: 15px 0 0 0; border-top: solid black 2px; font-size: 1.6em;}
-            h3 {margin: 10px 40px 10px 00px; padding: 0 0 0 0; font-size: 1.25em;}
+            h2 {margin: 20px 20px 10px 20px; padding: 15px 0 0 0; border-top: solid black 2px; font-size: 1.6em;}
+            h3 {margin: 17px 20px 10px 20px; padding: 12px 0 0 0; border-top: solid black 2px; font-size: 1.25em;}
+            h3.noline {padding: 0 0 0 0; border-top: none;}
+            hr {margin: 0 20px 10px 20px; padding: 0 0 0 0; border: none; border-top: solid black 2px;}
 
-            /* .navbar Is Used For <nav>;  #search-bar is used for <div> */
-            nav {list-style-type: none; margin: 0 auto 0 auto; padding: 0; overflow: auto; max-width: 1000px; background-color: #3F5EA2;}
+            #search-bar {box-sizing: border-box;}
+            nav {max-width: 1000px; list-style-type: none; margin: 0 auto 0 auto; padding: 0; overflow: auto; background-color: #3F5EA2;}
             li.topic-category {display: inline-block; padding: 9px 16px 5px; text-align: center; float: left; font-size: 110%; text-decoration: none;}
             li.topic-category a {text-decoration: none; color: white;}
-            li.topic-category:hover {background-color: #5D7DC0; /* border-bottom: 2px solid white; */}
-            li#topic-category-current:hover {background-color: #5D7DC0; /* border-bottom: 2px solid white; */}
-            #search-bar {box-sizing: border-box; overflow: auto;}
+            li.topic-category:hover {background-color: #5D7DC0;}
+
+            /* You might delete this line */
+            li#topic-category-current:hover {background-color: #5D7DC0;}
 
             /** sections **/
             body {background-color: #F4F5F6; font-size: 85%; font-family: Arial, Helvetica, sans-serif; line-height: 1;}
             header {width: 100%; float: left; padding: 10px 0; text-align: center; border-bottom: solid black 2px;}
-            header p {margin: 0 auto 10px auto; padding: 20px 0; width: 95%; max-width: 1000px; text-align: left;}
-            header p img {float: left; margin: 0 8px 8px 0; max-width: 160px;}
-            #left-column, #middle-column, #right-column {float: left; margin: 00px 0;}
-            #left-column {width: 33%;}
-            #middle-column {width: 33%;}
-            #right-column {width: 33%;}
-            footer {width: 100%; float: left; padding: 20px 0; text-align: center; font-size: 1.25em;}
-            hr {border: none; border-top: solid black 2px;}
+            header p {max-width: 1000px; width: 95%; margin: 0 auto 10px auto; padding: 20px 0; text-align: left;}
+            header p img {max-width: 160px; float: left; margin: 0 8px 8px 0;}
+            #left-column, #middle-column, #right-column {float: left; margin: 0; width: 33%;}
+            footer {width: 100%; float: left; padding: 20px 0; font-size: 1.25em; text-align: center;}
 
             @media (prefers-color-scheme: light) { body {color: black; background-color: #F4F5F6;} }
-            @media (prefers-color-scheme: dark) { body {color: white; background-color: black;} hr, h1, h2 {border-top: solid white;} }
+            @media (prefers-color-scheme: dark) { header {border-bottom-color: white;} body {color: white; background-color: black;} hr, h1, h2, h3 {border-top-color: white;} }
         </style>
 
-        <!-- Google tag (gtag.js) -->
+        <!-- Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8XK8JC00G"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -80,22 +79,7 @@
             NOTE: Many of the red link posts written by myself could be expanded, but I'm publishing what I have already written for now for others to read if they'd like. Everything on this website is under copyright, unless specified otherwise. If you want to report any typos or broken links, to ask questions, to give constructive criticism, to suggest some links to add to this home page, or to make a donation, please reach out to me at <a class="ZC-essays" href="misc/contact#contact-ZC">my contact page</a>. Whether this site displays in light or dark mode depends on your web browser preferences.
         </p>
         <div id="search-bar">
-            <form role="search" id="form" action="https://www.duckduckgo.com" method="get" target="_blank">
-                <input id="query" type="search" name="q" placeholder="Search this website..." size="60" aria-label="Search through site content">
-                <input type="submit" value="Search">
-            </form>
-            <script>
-                var form = document.querySelector("form");
-
-                form.addEventListener("submit", function(e) {
-                    e.preventDefault();
-                    var search = form.querySelector("input[type=search]");
-                    search.value = "site:https://zerocontradictions.net " + search.value;
-                    form.submit();
-                });
-            </script>
-            <br>
-            <nav class="navbar">
+            <nav>
                 <ul class="navigation-pages-list">
                     <li class="topic-category"><a href="#anthro">Anthropology</a></li>
                     <li class="topic-category"><a href="#axiology">Axiology</a></li>
@@ -115,6 +99,23 @@
                     <li class="topic-category"><a href="#misc">Miscellaneous</a></li>
                 </ul>
             </nav>
+            <br>
+            <form role="search" id="form" action="https://www.duckduckgo.com" method="get" target="_blank">
+                <input id="query" type="search" name="q" placeholder="Search this website..." size="67" aria-label="Search through site content">
+                <input type="submit" value="Search">
+            </form>
+            <script>
+                let form = document.querySelector("#form");
+
+                form.addEventListener("submit", function(e) {
+                    e.preventDefault();
+                    let query = form.querySelector("#query");
+                    let copy = query.value;
+                    query.value = "site:https://zerocontradictions.net " + query.value;
+                    form.submit();
+                    query.value = copy;
+                });
+            </script>
         </div>
     </header>
 
@@ -186,8 +187,8 @@
 </ul>
 
 <h2 id="books">Books Worth Reading</h2>
+<h3 class="noline">Human Nature and the Human Condition</h3>
 <ul>
-    <h3>Human Nature and the Human Condition</h3>
     <li><a href="https://www.amazon.com/dp/B078H8KJLK">On the Edge by T. K. Van Allen</a></li>
     <li><a href="https://www.amazon.com/dp/B08TB3DY6G">Immanentizing the Abyss by T. K. Van Allen</a></li>
     <li><a href="https://www.amazon.com/dp/B0BPXKWDVC">Futurist Fantasies by T. K. Van Allen</a>
@@ -197,7 +198,9 @@
     <li><p><a href="misc/industrial-society-and-its-future-manifesto">Industrial Society and Its Future by Ted Kaczynski</a> (Hosted On This Website)</p></li>
     <li><a href="https://www.goodreads.com/book/show/274827.The_Technological_Society">The Technological Society by Jacques Ellul</a>
         <p>This is the book where Ted Kaczynski got most of his thoughts and philosophy about technology.</p></li>
-    <hr>
+</ul>
+<hr>
+<ul>
     <li><a href="https://en.wikipedia.org/wiki/The_Ancestor%27s_Tale">The Ancestor's Tale: A Pilgrimage to the Dawn of Life by Richard Dawkins and Yan Wong</a></li>
     <li><a href="https://en.wikipedia.org/wiki/The_Extended_Phenotype">The Extended Phenotype by Richard Dawkins</a></li>
     <li><a href="https://en.wikipedia.org/wiki/The_Naked_Ape">The Naked Ape: A Zoologist's Study of the Human Animal by Desmond Morris</a></li>
@@ -219,11 +222,11 @@
     <li><a href="https://www.lukemastin.com/history/">Timeline of World History - Luke Mastin</a></li>
     <li><p><a href="https://thewaywardaxolotl.blogspot.com/2016/11/christmas-book-recommendations.html">BG's Book Recommendations</a> | <a class="videos" href="https://www.youtube.com/watch?v=TjkimmGB_yM">Video Version</a></p></li>
     <li><a href="https://emilkirkegaard.dk/en/2023/06/what-are-the-most-important-human-biodiversity-books/">The Most Important Human Biodiversity Books - Survey</a></li>
-    <!-- <li><a href="https://arachnoid.com/">Arachnoid</a></li> -->
     <!-- <li><a href="https://en.wikipedia.org/wiki/The_Blind_Watchmaker">The Blind Watchmaker by Richard Dawkins</a></li> -->
-    <!-- <li><a href="https://en.wikipedia.org/wiki/Guns,_Germs,_and_Steel">Guns, Germs, and Steel by Jared Diamond</a></li> -->
+</ul>
 
-    <hr><h3>Epistemology</h3>
+<h3>Epistemology</h3>
+<ul>
     <li><a href="https://workflowy.com/s/tractatus-logico-phi/mYcZ6Uh97cS7T4ft">Tractatus Logico-Philosophicus by Ludwig Wittgenstein (Improved English Translation Version by Pears and McGuinness)</a></li>
     <li><a href="https://en.wikipedia.org/wiki/Philosophical_Investigations">Philosophical Investigations by Ludwig Wittgenstein</a></li>
     <li><a href="https://www.amazon.com/How-Prove-Structured-Daniel-Velleman/dp/110842418X">How to Prove It by Daniel Velleman</a></li>
@@ -231,13 +234,15 @@
     <li><a href="https://errorstatistics.files.wordpress.com/2020/10/howson-1997-logic-of-induction-.pdf">A Logic of Induction by Colin Howson</a></li>
     <li><a href="https://en.wikipedia.org/wiki/Metaphors_We_Live_By">Metaphors We Live By - George Lakoff and Mark Johnson</a></li>
     <li><a href="https://en.wikipedia.org/wiki/Word_and_Object">Word and Object - Willard Van Orman Quine</a></li>
-    <!-- <hr> -->
+
     <li><a href="https://mathworld.wolfram.com/">Wolfram Math World</a></li>
     <li><a href="https://encyclopediaofmath.org/wiki/Main_Page">The Encyclopedia of Mathematics</a></li>
     <li><a href="http://sheafification.com/the-fast-track/">Sheafification Fast Track: The Optimal Path to Mathematical Mastery</a>
         <p>The author of this website claims that this list of math textbooks is the fastest, most efficient way to learn mathematics and physics from the ground up, and that all mathematics can be reduced down to mechanics, linear algebra, and differential geometry. I haven't read any of these books myself, but I might when I have more time.</p></li>
+</ul>
 
-    <hr><h3>Economics</h3>
+<h3>Economics</h3>
+<ul>
     <li><p><a class="videos" href="https://www.youtube.com/watch?v=zkPGfTEZ_r">Explaining The Economic Calculation Problem: What If There Were No Prices</a></li>
     <li><a href="https://en.wikipedia.org/wiki/The_Wealth_of_Nations">The Wealth of Nations by Adam Smith</a></li>
     <li><a href="https://www.henrygeorge.org/pcontents.htm">Progress and Poverty by Henry George (Modernized Edition, with audiobook)</a></li>
@@ -249,8 +254,10 @@
     <li><a href="https://www.goodreads.com/book/show/2841014-greatest-emancipations">Greatest Emancipations: How the West Abolished Slavery by Jim Powell</a>
         <p>I haven't read this book, and I am somewhat skeptical of it since the author has a Libertarian bias. Nevertheless, this book talks about how slavery was abolished in various different countries, and it argues that there were other factors besides technological ones for why slavery ended.</p></li>
     <li><a href="https://www.amazon.com/Free-Trade-Doesnt-Work-Replace-ebook/dp/B004UI6XL8?ref_=ast_author_mpb">Free Trade Doesn't Work: What Should Replace It and Why by Ian Fletcher</a></li>
+</ul>
 
-    <hr><h3>Finding Books</h3>
+<h3>Finding Books</h3>
+<ul>
     <li><a href="https://annas-archive.org/">Anna's Archive</a>
         <p>Search engine of shadow libraries: books, papers, comics, magazines. (Recommended)</p></li>
     <li><a href="https://en.wikibooks.org/wiki/Main_Page">Wikibooks.org</a></li>
@@ -261,8 +268,10 @@
     <li><a href="https://openlibrary.org/">OpenLibrary.org</a></li>
     <!-- <li><a href="https://vdoc.pub/">vdoc.pub</a></li> -->
     <!-- <li><a href="https://www.druidmagazine.com/">Druid Magazine: Download Magazines in Free Ebooks</a></li> -->
+</ul>
 
-    <hr><h3>Youtube Channels</h3>
+<h3>Youtube Channels</h3>
+<ul>
     <li><p><a class="videos" href="https://www.youtube.com/user/BlitheringGenius">Blithering Genius</a></li>
     <li><a class="videos" href="https://www.youtube.com/c/CityBeautiful/videos">City Beautiful (Urban Planning) by Dave Amos</a></li>
     <li><a class="videos" href="https://www.youtube.com/@WhatifAltHist/videos">WhatIfAltHist by Rudyard Lynch</a></li>
@@ -280,8 +289,8 @@
     <li><a class="videos" href="https://www.youtube.com/playlist?list=PLPKAG94OGEAjB2USr0wu7N-O2Phudv5vX">BG's Playlist of Audiobooks</a></li>
 </ul>
 
+<h3>Other Philosophy</h3>
 <ul>
-    <hr><h3>Other Philosophy</h3>
     <li><a href="https://www.amazon.com/Teaching-Principles-Interactive-Approach-Language/dp/0133925854">Teaching by Principles: An Interactive Approach to Language Pedagogy by H. Douglas Brown and Lee Heekyeong Lee</a></li>
     <li><a href="https://www.amazon.com/Understanding-Second-Language-Acquisition/dp/034090559X">Understanding SLA by Lourdes Ortega</a></li>
     <li><a href="https://www.amazon.com/Introduction-Linguistic-Typology-Viveka-Velupillai/dp/902721199X">Introduction to Linguistic Typology by Velupillai, Viveka (2012)</a></li>
@@ -426,9 +435,8 @@
         <p>Violence is inescapable from life due to the war, disease, and famine that are inevitably caused when a population reaches its carrying capacity. Eliminating violence within a society simply pushes the violence outwards. </p></li>
     <li><a href="https://thewaywardaxolotl.blogspot.com/2015/04/altruism-and-selfishness.html">Why Selfishness Always Beats Altruism</a> | <a class="videos" href="https://www.youtube.com/watch?v=3QoiEMN-dBY">Video Version</a>
         <p>People will use and define "altruism" and "selfishness" in confusing ways, but the most coherent definition of "altruism" always loses to the most coherent definition of "selfishness", energetically, biologically, and psychologically.</p></li>
-
-    <!-- <li><a class="videos" href="https://odysee.com/@BlitheringGenius:2/BiologicalRealism:b">Biological Realism</a> -->
-    <!--     <p>The five main components of biological realism that most people tend to ignore nowadays are: the intrinsic violence and selfishness of life, sex realism, race realism, dysgenics/eugenics, and social/psychological realism.</p></li> -->
+    <li><a class="videos" href="https://odysee.com/@BlitheringGenius:2/BiologicalRealism:b">Biological Realism</a>
+        <p>People ignore many aspects of human biology nowadays for moral reasons: the intrinsic violence and selfishness of life, sex realism, race realism, dysgenics/eugenics, and social/psychological realism. Most ideologies are therefore incongruent with reality.</p></li>
     <li><a class="videos" href="https://www.youtube.com/watch?v=K97OP2p9JTQ">Pathological Altruism</a> | <a href="https://thewaywardaxolotl.blogspot.com/2016/12/pathological-altruism.html">Text Version</a>
         <p>Pathological Altruism is a phenomenon of collective irrationality caused by social delusion, and a virtue-signaling tragedy of the commons.</p></li>
     <li><a href="https://thewaywardaxolotl.blogspot.com/2019/07/kin-selection-theory-is-wrong.html">Why Kin Selection Theory is Wrong</a>
@@ -458,8 +466,10 @@
         <p>A narrative about the Iterated Prisoner's Dilemma, and explaining the rationale for cooperating or defecting on each turn.</p></li>
     <li><a href="https://ncase.me/trust/">Interactive Game: The Evolution of Trust</a>
         <p>This fun Javascript game by Nicky Case is great for better understanding game theory.</p></li>
+</ul>
 
-    <hr><h3>More Topics on Biological Realism</h3>
+<h3>More Topics on Biological Realism</h3>
+<ul>
     <li><a class="ZC-essays" href="FAQs/race-FAQs">Philosophy of Race FAQs</a>
         <p>Addressing the common misconceptions and implications of race, race realism, race-mixing, and ethnostates from a biological realist perspective. Race realism is a scientific position that acknowledges evolutionary differences and does not imply racism nor tribalism.</p></li>
     <li><a class="videos" href="https://www.youtube.com/watch?v=50yEBDbYjQs">The Difference Between Race Realism and Race Idealism</a></li>
@@ -475,14 +485,15 @@
         <p>The key traits that set humans apart from other great apes (bipedalism, tool use, social organization, and a larger brain) are all linked to changes in the human diet and the evolution that resulted from it.</p></li>
     <li><a href="https://thewaywardaxolotl.blogspot.com/2017/09/evolution-and-morality.html">Evolution and Its Implications on Morality</a> | <a class="videos" href="https://www.youtube.com/watch?v=50xqyvU5t34">Video Version</a>
         <p>The simplest resolution to the conflicts between evolution and morality is to discard morality, but unfortunately it is easier for most people to reject the truth about life than to reject morality.</p></li>
-    <hr>
+</ul>
+<hr>
+<ul>
     <li><a class="ZC-essays" href="FAQs/overpopulation-FAQs">Overpopulation and Population Control FAQs</a>
         <p>Everything that was thought impossible, but was possible, only seemed impossible until it actually happened. The same applies to Overpopulation and Neo-Malthusianism.</p></li>
     <li><a class="videos" href="https://www.youtube.com/watch?v=nC1YwNx2eyA">Why Demographic Transition Theory is Wrong</a> | <a href="https://thewaywardaxolotl.blogspot.com/2017/01/demography-and-destiny.html">Text Version</a>
         <p>DTT makes false assumptions, contradicts historical patterns, and ignores population dynamics. There are better explanations for why wealthier countries currently lower fertility rates.</p></li>
-    <li><a href="https://ourworldindata.org/grapher/population?time=0..latest">Interactive Graph of the World Population</a></li>
-        <!--     <p>TBA</p></li> -->
-    <!-- https://ourworldindata.org/ -->
+    <li><a href="https://ourworldindata.org/grapher/population?time=0..latest">Interactive Graph of the World Population</a>
+        <p>This graph shows the estimated human population by continent, country, or region. The graph's timeline can be edited to show any timespan within the last 12000 years.</p></li>
 
     <!-- <li><a class="videos" href="https://www.youtube.com/playlist?list=PLRgTUN1zz_ofJoMx1rB6Z0EA1OwAGDRdR">The Crash Course (Playlist)</a></li> -->
         <!--     <p>TBA</p></li> -->
@@ -542,7 +553,9 @@
     <li><a href="https://en.wikipedia.org/wiki/Recent_human_evolution">Recent Human Evolution - Wikipedia</a>
         <p>This Wikipedia article talks about some ongoing selective pressures on the human genome.</p></li>
     <li><a class="videos" href="https://www.youtube.com/watch?v=yH5Ds4_0lO8">Why The Dyslexic Brain Is Misunderstood</a>
-    <hr>
+</ul>
+<hr>
+<ul>
     <li><a href="https://dissentient.substack.com/p/eugenicist">You're Probably a Eugenicist - Diana Fleischman</a>
         <p>Do you oppose incest? Do you think it's okay to abort fetuses that have severe birth defects? Do you support improving the general welfare and prosperity of humankind? If you answered "yes" to any of these questions, then you're a eugenicist.</p></li>
     <li><a href="https://thewaywardaxolotl.blogspot.com/2020/01/eugenostate-versus-ethnostate.html">Eugenostate Versus Ethnostate</a>
@@ -558,8 +571,8 @@
 </ul>
 
 <h2 id="epistemology">Epistemology</h2>
+<h3 class="noline">Truth and Knowledge</h3>
 <ul>
-    <h3>Truth and Knowledge</h3>
     <li><a href="https://streetepistemology.com/">Street Epistemology</a>
         <p>How to make people question and reflect on their beliefs in a polite, conversational style.</p></li>
     <li><a href="https://brittonicmemetics.wordpress.com/2022/11/17/hard-limits-of-rational-persuasion/">The Hard Limits of Rational Persuasion</a>
@@ -586,8 +599,10 @@
         <p>AntiCitizenX explains propositions, truth values, different types of logic, truth functions, theories of truth, and defends the pragmatic theory of truth.</p></li>
     <li><a href="https://thewaywardaxolotl.blogspot.com/2023/05/what-is-subjectivity.html">What is Subjectivity?</a>
         <p>Concepts are subjective if they are mind-dependent or perspective-dependent, including experience, truth, morality, etc. Subjectivity is not random, arbitrary, nihilistic, nor independent of objective reality. These misconceptions are clarified.</p></li>
+</ul>
 
-    <hr><h3>Other Epistemology Topics</h3>
+<h3>Other Epistemology Topics</h3>
+<ul>
     <li><a href="https://thewaywardaxolotl.blogspot.com/2013/10/caterpillars-and-philosophy.html">Philosophy and Catepillars</a>
         <p>Philosophy has become more important than ever since modern technological society has caused unprecedented evolutionary mismatch.</p></li>
     <li><a href="https://notetoworld.org/index.php?loc=note&key=a915b0bf-ae51-4452-9f03-1b680e6c645d">The Problem of Recognizing Problems</a>
@@ -704,8 +719,10 @@
     <li><a class="videos" href="https://www.youtube.com/watch?v=g9-9CxCxrVE">How We can Make Cities Car-Free</a></li>
     <li><a href="https://ratethelandlord.org/">RateTheLandLord.org</a>
         <p>A community platform that elevates tenant voices to promote landlord accountability. You can rate everything from laundromats to legal firms. It's about time we rated landlords.</p></li>
+</ul>
 
-<hr><h3 id="other-economics">Other Economics Topics</h3>
+<h3 id="other-economics">Other Economics Topics</h3>
+<ul>
 <li><a class="videos" href="https://www.youtube.com/watch?v=j5v8D-alAKE">The Problem of Planned Obsolescence</a>
     <p>Planned Obsolscence is One of Capitalism's Greatest Flaws, and a strong reason to support right to repair and FOSS software.</p></li>
 <li><a class="videos" href="https://www.youtube.com/watch?v=X0uv5jFaJFk">PolyMatter: The Case Against Patents</a>
@@ -778,6 +795,8 @@
     <li><a class="videos" href="https://www.youtube.com/watch?v=tBVXenVpfVM">The Blue Revolution</a>
         <p>Aqua-agriculture may be the future of humanity's food production.</p></li>
     <li><a class="videos" href="https://www.youtube.com/watch?v=wf2PxI1tx5k">How to Kill a Civilization - WhatIfAltHist</a></li>
+    <li><a href="https://ourworldindata.org">Our World In Data</a>
+        <p>This site shows lots of data regarding many different topics pertaining to human civilization. You can browse by topic for lots of things that may peak your interest.</p></li>
 </ul>
 
 <h2 id="axiology">Axiology & Morality</h2>
@@ -823,10 +842,9 @@
     <li><a href="https://www.rethinkstudying.com/book">Actuarial Exam Tactics</a>
         <p>This book has some very well-thought-out and epistemologically sound studying advice. The principles in this book can be used to learn <em>anything</em> more efficiently. It's worth reading even for people who don't plan on becoming actuaries.</p></li>
     <li><a href="https://dilbertblog.typepad.com/the_dilbert_blog/2007/06/the_day_you_bec.html">The Day You Became A Better Writer - Scott Adams</a></li>
-    <li><a href="https://loopspace.mathforge.org/CountingOnMyFingers/NatureOfProof/">Advice for Writing Mathematical Proofs - The Nature of Proof</a></li>
-        <!-- <p>TBA</p></li> -->
+    <li><a href="https://loopspace.mathforge.org/CountingOnMyFingers/NatureOfProof/">Advice for Writing Mathematical Proofs - The Nature of Proof</a><!-- <p>TBA</p> --></li>
     <li><a class="videos" href="https://www.youtube.com/watch?v=q8K19CELk6E">The Best Way to Gain Power in One's Career - Blithering Genius</a></li>
-    <!-- <hr> -->
+
     <li><a class="videos" href="https://www.youtube.com/watch?v=N_jakAtI0Zo">Delayed Gratification - John Stossel</a></li>
     <li><a href="https://waitbutwhy.com/2013/10/why-procrastinators-procrastinate.html">Why Procrastinators Procrastinate - WaitButWhy</a></li>
     <li><a href="https://waitbutwhy.com/2013/11/how-to-beat-procrastination.html">How to Beat Procrastination - WaitButWhy</a></li>
@@ -925,7 +943,7 @@
 
 <footer>
     <a class="ZC-essays" href="misc/philosophical-journey">About</a> | <a class="ZC-essays" href="misc/contact#contact-ZC">Contact</a> | <a class="ZC-essays" href="misc/contact#tip-jar">Donate</a> | <a class="ZC-essays" href="programming/blogging-with-org-mode">Blogging with Org-Mode</a>
-    <br><br><span style="font-size: 0.70em">&#169 2022-2023 Zero Contradictions. All rights reserved.</span>
+    <br><br><span style="font-size: 0.70em">&#169; 2022-2023 Zero Contradictions. All rights reserved.</span>
 </footer>
 
 </body>
