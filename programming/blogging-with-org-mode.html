@@ -1,199 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023-09-26 Tue 17:28 -->
+<!-- 2023 October 03, 10:12 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>How to Design a Blog with Emacs and Org-Mode</title>
 <meta name="author" content="Zero Contradictions" />
 <meta name="description" content="Why the Zero Contradictions blog is designed the way it is, and how it was created using Emacs org-mode, an HTML template, CSS, and other tools." />
 <meta name="generator" content="Org Mode" />
-<style>
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { }
-</style>
-<link rel="stylesheet" type="text/css" href="/blog-posts.css">
+<style> pre.src-bash:before {content: 'bash'; } </style>
 <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8XK8JC00G"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-S8XK8JC00G'); </script>
+<link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
 <div id="org-div-home-and-up">
@@ -201,24 +18,42 @@
  |
  <a accesskey="H" href="/"> HOME </a>
 </div><div id="content" class="content">
+<header>
 <h1 class="title">How to Design a Blog with Emacs and Org-Mode</h1>
-<div id="table-of-contents" role="doc-toc">
+</header><nav id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#design-philosophy">1. Why This Blog Is Designed The Way It Is</a></li>
-<li><a href="#creation-of-HTML-and-CSS-pages">2. How I Created All The HTML And CSS Pages</a></li>
-<li><a href="#how-I-chose-my-name-and-avatar">3. How I Chose My Name And Avatar</a></li>
-<li><a href="#quality-vs-quantity">4. Quality Versus Quantity</a></li>
+<li><a href="#website-design-philosophy">1. Website Design Philosophy</a>
+<ul>
+<li><a href="#writing-advice">1.1. Advice For Writing Content</a></li>
+<li><a href="#quality-vs-quantity">1.2. Quality Versus Quantity</a></li>
+<li><a href="#static-site-generators">1.3. Static Site Generators</a></li>
+</ul>
+</li>
+<li><a href="#org-mode-for-webpages">2. Using Org-Mode To Create Web Pages</a></li>
+<li><a href="#creating-CSS">3. Creating CSS For Webpages</a></li>
+<li><a href="#recommended-tools">4. Suggested / Recommended Tools</a></li>
+<li><a href="#maximizing-SEO">5. Maximizing SEO</a></li>
+<li><a href="#how-I-chose-my-name-and-avatar">6. How I Chose My Name And Avatar</a></li>
 </ul>
 </div>
-</div>
+</nav>
 
-<div id="outline-container-design-philosophy" class="outline-2">
-<h2 id="design-philosophy"><span class="section-number-2">1.</span> Why This Blog Is Designed The Way It Is</h2>
-<div class="outline-text-2" id="text-design-philosophy">
+<div id="outline-container-website-design-philosophy" class="outline-2">
+<h2 id="website-design-philosophy"><span class="section-number-2">1.</span> Website Design Philosophy</h2>
+<div class="outline-text-2" id="text-website-design-philosophy">
 <p>
-This philosophy blog is intended to be organized similarly to the <a href="https://drudgereport.com">Drudge Report</a> and <a href="https://www.philosophybasics.com">PhilosophyBasics.com</a>, but with better and more modern HTML/CSS code.
+When it comes to media, I&rsquo;ve always preferred a minimalist, mostly text-based design, similar to the kind preached by the <a href="https://1mb.club/about">1MB Club</a>.
+Flashy image-loaded designs can&rsquo;t communicate as much distilled, easy-to-digest information, and they also require extra web development and longer loading times.
+It took a lot of work to figure out how to design this website the way I did, so I wanted to document how I did everything.
+Hopefully this will help other people.
+</p>
+
+<p>
+This website&rsquo;s homepage is intended to be organized similarly to the <a href="https://drudgereport.com">Drudge Report</a> and <a href="https://www.philosophybasics.com">PhilosophyBasics.com</a>, but with better and more modern HTML/CSS code.
+The homepage&rsquo;s .html file was created by using <a href="https://www.joshcanhelp.com/the-drudge-report-style-3-column-link-page-template/">this template that I found at joshcanhelp.com</a>.
+I replaced all the old HTML4 code with HTML5 code, and customized it with my own style, formatting, and content.
 </p>
 
 <p>
@@ -228,54 +63,295 @@ The other reason why I don&rsquo;t organize the posts in reverse chronological o
 If I could only publish posts when they were completely &ldquo;finished&rdquo;, then I have would have very little content available for publishing.
 In the future, I might create a tagging system that marks the relevant topics within each post and whether they&rsquo;re &ldquo;complete&rdquo; or not, and/or create a page for listing the posts in reverse chronological order, but I currently have no plans to do that.
 </p>
+</div>
+
+<div id="outline-container-writing-advice" class="outline-3">
+<h3 id="writing-advice"><span class="section-number-3">1.1.</span> Advice For Writing Content</h3>
+<div class="outline-text-3" id="text-writing-advice">
+<p>
+It can be tempting to immediately start writing content that you&rsquo;ve been eagerly waiting to write (as I had done), but you will save time in the long run if you hold off from that and spend a few minutes to read good writing advice and take at least an hour to learn <a href="#maximizing-SEO">good SEO practices</a> first.
+</p>
 
 <p>
-One hope of mine is that the blog&rsquo;s homepage could evolve to be a substitute of sorts for what Youtube used to be like, a place for connecting lots of different niche content creators by links that are all in one place.
-Unfortunately, I didn&rsquo;t start using Youtube until 2016, so I never actually got to experience what Youtube used to be like before 2014, but <a href="https://thewaywardaxolotl.blogspot.com/2017/03/the-normification-of-youtube.html">everybody has said that it used to be so much better than it is now</a>.
+Many people have a tendency to write long sentences with <a href="https://www.grammarbank.com/cohesive-devices.html">cohesive devices</a> that place restrictions on how they write their sentences.
+For such people (including my former self), I recommend taking <a href="https://dilbertblog.typepad.com/the_dilbert_blog/2007/06/the_day_you_bec.html">Scott Adam&rsquo;s Writing Advice</a> to heart.
+Writing shorter sentences is an important key for writing better, especially if the goal is to create information dense content with little fluff.
+<a href="https://www.elevenwriting.com/blog/fluff-writing">Fluff writing</a> makes content longer to read, harder to understand, and it may bore the readers.
 </p>
 </div>
 </div>
 
-<div id="outline-container-creation-of-HTML-and-CSS-pages" class="outline-2">
-<h2 id="creation-of-HTML-and-CSS-pages"><span class="section-number-2">2.</span> How I Created All The HTML And CSS Pages</h2>
-<div class="outline-text-2" id="text-creation-of-HTML-and-CSS-pages">
+
+
+<div id="outline-container-quality-vs-quantity" class="outline-3">
+<h3 id="quality-vs-quantity"><span class="section-number-3">1.2.</span> Quality Versus Quantity</h3>
+<div class="outline-text-3" id="text-quality-vs-quantity">
 <p>
-<a href="../misc/philosophical-journey">My full philosophical and political journey can be read here</a>.
-I never would&rsquo;ve predicted I would be creating a blog one day when I first started typing down my philosophical thoughts in Vim in 2018, but I gradually warmed up to this endeavor as the typed text that I had saved to my hard drive kept growing every day.
-When I saw other philosophy websites like <a href="http://www.justopia.org/">Justopia.org</a>, <a href="https://thewaywardaxolotl.blogspot.com/">The Wayward Axolotl</a>, <a href="https://www.philosophybasics.com/">Philosophy Basics</a>, and others, I finally gained the motivation to start this project.
-So I got the ball rolling with Emacs and made it happen.
+For most topics, I don&rsquo;t understand bloggers who write posts <i>every day</i>.
+For one thing, there&rsquo;s probably a <a href="https://thewaywardaxolotl.blogspot.com/2020/01/are-we-running-out-of-ideas.html">finite amount of good ideas out there to discover</a>, due to the physical materialist nature of the Universe.
+For another thing, it&rsquo;s unusual for someone to observe or brainstorm something really interesting or noteworthy every single day that is worth writing an entire post about.
+Even if someone did write a blog post every day, the average quality of each post would have to be quite low since such a high frequency of content production would require espousing fewer good ideas in each post.
 </p>
-<ol class="org-ol">
-<li>In 2019, I switched from Vim to <a href="../misc/emacs-and-keyboard-setup">Emacs</a>. When I learned how to use <a href="https://en.wikipedia.org/wiki/Org-mode">Org-Mode</a> in 2020, I converted all my old philosophy .txt files into .org files. <a href="https://karl-voit.at/2017/09/23/orgmode-as-markup-only/">Org-mode is now my favorite markup language</a>.</li>
-<li>I used Emacs to export the .org files into .html files, and those are what get displayed on this blog.</li>
-<li>I created the homepage&rsquo;s .html file by using <a href="https://www.joshcanhelp.com/the-drudge-report-style-3-column-link-page-template/">this template that I found at joshcanhelp.com</a>. I customized it with my own style and formatting, and replaced all the old HTML4 code with HTML5 code.</li>
-<li>I created the CSS page by modifying the CSS code embedded inside the .html template that I found, and placing it in a separate .css file.
+
+<p>
+I don&rsquo;t have the time to write a new post each day, but even if I did, eventually hundreds or even thousands of blog posts would accumulate over time.
+If a newcomer came across such a blog for the first time, they would be lost and unsure of where to start reading since it would be difficult to navigate and determine which posts are worth reading.
+</p>
+</div>
+</div>
+
+<div id="outline-container-static-site-generators" class="outline-3">
+<h3 id="static-site-generators"><span class="section-number-3">1.3.</span> Static Site Generators</h3>
+<div class="outline-text-3" id="text-static-site-generators">
+<p>
+Most people who want to start blogging and aren&rsquo;t using a Content Management System like Wordpress or Blogger should consider downloading and using a <a href="https://en.wikipedia.org/wiki/Static_site_generator">static site generator</a> (SSG).
+In my opinion, the main benefit to using SSGs is that they make it possible to use Markdown (or Org-Mode) instead of HTML to create webpages, but <a href="https://pagedart.com/blog/what-is-a-static-site-generator/">they also provide many other benefits</a>.
+</p>
+
+<p>
+Since I already knew how to export my .org files to HTML webpages, I never used a SSG when I created this website, and I still don&rsquo;t.
+The reasons are complicated, but I encountered multiple problems when I last tried to switch to using a SSG in July 2023:
+</p>
 <ul class="org-ul">
-<li>I learned how to read and write some basic CSS from the <a href="https://en.wikibooks.org/wiki/Cascading_Style_Sheets">Cascading Style Sheets Wikibook</a>.</li>
-<li>Every time I had a CSS question that wasn&rsquo;t answered by Wikibooks, I googled it. W3 Schools, GeeksForGeeks, MDN Web Docs, and StackExchange were the most helpful sites.</li>
-<li>My Firefox CSS Viewer browser extension helped me figure out how to custom the CSS.</li>
-<li><a href="https://coolors.co/">coolers.co</a> helped me pick a readable color scheme.</li>
+<li>It would take too much time for me to learn how SSGs work, how to configure them, and how to use them. I already have a system for creating and publishing my webpages that works me.</li>
+<li>I&rsquo;d have to program Emacs keybindings for operating the SSG, lest I would have to use my command terminal to operate the SSG instead, which is inconvenient because then I&rsquo;d have to frequently switch between applications. This would be hard because I&rsquo;m terrible at Elisp (and programming in general).</li>
+<li>Most static site generators use Markdown instead of Org-Mode. Although Hugo is compatible with org-mode, there weren&rsquo;t enough tutorials and documentation for showing how to use Hugo with org-mode when I tried to switch over. It&rsquo;s possible that Hugo may develop better documentation for writing with org-mode in the future.
+<ul class="org-ul">
+<li>Hypothetically, I could switch to using Markdown to write my webpages, but that would take time, it could create confusion and syntax errors if I switch, and most importantly, I&rsquo;d lose the ability to export my .org content to other formats, like .tex, .pdf, .txt, .odt, etc.</li>
 </ul></li>
-<li>I finished copy-editing all my .org files to make the HTML output more readable and presentable.</li>
-<li>I re-learned how to use Git.</li>
-<li>I published this site.</li>
-</ol>
+</ul>
 
 <p>
-If the .org files contain content that I don&rsquo;t want to publish just yet, I can temporarily comment that stuff out before exporting the .org files to .html.
-This facilitates the organization of all my files since I can keep what I&rsquo;m publishing and what I&rsquo;m not publishing all in the same place.
+There are still some benefits for creating and publishing content that SSGs would provide compared to my current system:
+</p>
+<ul class="org-ul">
+<li>SSGs could provide my website with better headers and footers.</li>
+<li>SSGs provide tags for sorting webpages, which makes them easier to navigate.</li>
+<li>SSGs have ways to prevent the website directories from displaying in the URLs.</li>
+<li>It would be easier to create RSS feeds.</li>
+<li>They provide templates for writing webpages.</li>
+<li>They provide text summarizers for writing webpage descriptions and such.</li>
+<li>They could create a search index that readers could use to search my website&rsquo;s content. Thus, the search bar on my homepage wouldn&rsquo;t have to use an external search engine like DuckDuckGo.</li>
+<li>They can create better image galleries.</li>
+<li>There are many other plugins for SSGs that make it easier to create content.</li>
+</ul>
+<p>
+However, even after considering all the benefits that I could potentially gain, I decided that it still wasn&rsquo;t worth it for me to start using a SSG.
+Another thing is that my website doesn&rsquo;t really need some of these features, and I have found other ways to get most of the benefits that SSGs would provide, which I talk about in this article.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org-mode-for-webpages" class="outline-2">
+<h2 id="org-mode-for-webpages"><span class="section-number-2">2.</span> Using Org-Mode To Create Web Pages</h2>
+<div class="outline-text-2" id="text-org-mode-for-webpages">
+<p>
+In my opinion, <a href="https://karl-voit.at/2017/09/23/orgmode-as-markup-only/">org-mode is the best and most versatile markup language there is</a>.
+Resources for learning how to use org-mode syntax include:
+</p>
+<ul class="org-ul">
+<li><a href="http://xahlee.info/emacs/emacs/emacs_org_markup.html">Xah Lee&rsquo;s Org Mode Markup Cheatsheet</a>.</li>
+<li><a href="https://orgmode.org/guide/">The Org-Mode Compact Guide</a>.</li>
+<li><a href="https://orgmode.org/manual/index.html#SEC_Contents">The Org-Mode Manual</a>.</li>
+</ul>
+
+<p>
+System Crafters has also written a <a href="https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/">guide on how to create websites with org-mode</a>, but many people may prefer this guide instead.
+</p>
+
+
+<p>
+MENTION WHAT ORG-MODE VARIABLES YOU INCLUDE IN YOUR <code>.CONFIG.EL</code>, (or ~/.emacs.d/init.el for non-Doom-Emacs users).
 </p>
 
 <p>
-In hindsight, I&rsquo;m actually glad that I decided not to use a SSG.
-The reasons are very complicated, but when I last tried to switch to using a SSG, I found that the amount of time that I would have to dedicate to learning how they work, finding a generator that is compatible with org-mode (and provides proper org-mode documentation), programming Emacs keybindings for operating the SSG, etc actually wasn&rsquo;t worth the benefits that using a SSG would provide.
-For me, there are other ways to get pretty much all the benefits that SSGs would provide, so it&rsquo;s just not worth it for me to start using one.
+Reasons to set org variables in .config.el:
 </p>
+<ul class="org-ul">
+<li>It makes the compilation of your org files less prone to errors.</li>
+<li>It ensures that all org files compile the same way each time, aside from any customizations using local file org variables.</li>
+<li>If you later decide to that you want to change something across <i>all</i> your .org files, it&rsquo;s easier to just edit one file (.config.el) instead of editing every single org file.</li>
+<li>If you&rsquo;re only going to export org file variables for one purpose or similar purposes, then it just makes things easier.
+<ul class="org-ul">
+<li>You don&rsquo;t have to copy as many local org file variables to each new file to do the same things.</li>
+<li>Since there&rsquo;s were lines for setting local org file variables in each org file, it makes org files easier to read and scroll through, especially when viewed in small windows.</li>
+<li>The org files will collectively take up less file space.</li>
+</ul></li>
+<li>i</li>
+<li>i</li>
+</ul>
+
+
+
+<p>
+Org-mode provides two different variables for adding code to the &lt;head&gt; section of HTML files, <code>org-html-head</code> and <code>org-html-head-extra</code>.
+They&rsquo;re also written as <code>#+html-head</code> and <code>#+html-head-extra</code>, when used as local file variables written at the beginning of org files.
+The reason why there&rsquo;s two different variables is because people will often want to embed a lot of code to &lt;head&gt;.
+If there were only one variable for adding code to &lt;head&gt;, someone had assigned a value to <code>org-html-head</code> inside their config.el, and they also tried assigning additional values with <code>#+html-head</code> in their local files, then the values written in the local files would overwrite the values for <code>org-html-head</code> inside their config.el so that they wouldn&rsquo;t display at all.
+Fortunately, the two separate HTML head variables can be used strategically to prevent this.
+In my config.el, I have:
+</p>
+<pre class="example">
+(setq org-html-head-extra "&lt;link rel=\"stylesheet\" type=\"text/css\" href=\"/style.css\"&gt;")
+</pre>
+<p>
+And my local file org variables add the following HTML &lt;head&gt; code to each file:
+</p>
+<pre class="example">
+#+html_head: [Javascript code for adding Google Analytics to the webpage]
+#+html_head: &lt;meta property="og:url" content="[the canonical URL link for this article]"&gt;
+#+html_head: &lt;meta property="og:type" content="article"&gt;
+#+html_head: &lt;meta property="og:image" content="[Link to image file to be shown when sharing the URL on social media]"&gt;
+</pre>
+<p>
+This ensure that all the content that I want to be added to HTML &lt;head&gt; will get included.
+</p>
+
+<p>
+The following is the entirety of the org-mode keywords and values that I include at the beginning of every .org file for controlling the HTML code of my webpages:
+</p>
+<pre class="example">
+#+title: The_Webpage_Title_That_Will_Be_Placed_In_Both_&lt;title&gt;_and_&lt;h1&gt;
+#+subtitle: The_Webpage_Subtitle_That_Will_Be_Placed_In_&lt;subtitle&gt;
+#+author: The Author Name
+#+description: The webpage description (up to 160 characters long). This gets displayed on SERPs and when sharing webpages on social media.
+#+html_head: [Javascript code for adding Google Analytics to the webpage]
+#+html_head: &lt;meta property="og:url" content="[the canonical URL link for this article]"&gt;
+#+html_head: &lt;meta property="og:type" content="article"&gt;
+#+html_head: &lt;meta property="og:image" content="[Link to image file to be shown when sharing the URL on social media]"&gt;
+#+options: ^:nil
+</pre>
+
+<p>
+If I want to export the .org file to LaTeX, I include the following line at the beginning of the .org file so that the page margins don&rsquo;t take up so much space in the resulting .pdf file.
+</p>
+<pre class="example">
+#+latex_header: \makeatletter \@ifpackageloaded{geometry}{\geometry{margin=2.5cm}}{\usepackage[margin=2.5cm]{geometry}} \makeatother
+</pre>
+
+<p>
+When creating links in org-mode, <a href="https://orgmode.org/manual/Publishing-links.html">there are many options</a> and they depend on what you&rsquo;re linking to.
+Since I often want to link to section of my website pages, I always insert the following org syntax under each section heading.
+Without the following syntax, the fragment identifiers will change every time the org-mode code is re-exported to .html.
+</p>
+<pre class="example">
+:PROPERTIES:
+:CUSTOM_ID: Name_Of_Fragment_Identifier
+:END:
+</pre>
+<p>
+This syntax makes it possible to have consistent fragment identifiers once the webpages are published, and users can find them when clicking on links in each webpage&rsquo;s table of contents, and copying the URL.
+</p>
+
+<p>
+When writing paragraphs in org-mode, I prefer to place each sentence on a separate line (i.e. every line ends with a <a href="https://en.wikipedia.org/wiki/Newline">newline character</a>).
+The text will not be displayed as separate paragraphs unless there are at least two newlines between each line.
+The advantage to this is that it makes it easier to easier to rearrange the sentences in my paragraphs, easier to merge and/or divide paragraphs, and easier to convert between paragraphs and bulleted lists (compared to keeping all of a paragraph&rsquo;s sentences on just one line).
+This style for formatting paragraphs and sentences and the <a href="#writing-advice">recommended minimalist writing advice</a> both compliment each other quite well.
+</p>
+
+<p>
+If an .org file contains content that I don&rsquo;t want to publish just yet, I can temporarily comment that text out before exporting the .org files to .html.
+This facilitates the organization of all my files since I can organize all my ideas by file, without having to publish <i>everything</i> that I write.
+</p>
+
+<p>
+People who are using org-mode to create webpages can use the <a href="https://orgmode.org/manual/CSS-support.html">CSS Support section from the Org-Mode manual</a> to inform them of all the ID attributes and classes that are available for tweaking a webpages&rsquo; CSS, using a separate CSS file.
+</p>
+
+
+<p>
+If you would like to overrule the CSS alignment of the tables, you can use ‘&lt;r&gt;’, ‘&lt;c&gt;’ or ‘&lt;l&gt;’ in a special table cookies row of the table.
+You may also combine alignment and field width like this: ‘&lt;r10&gt;’.
+</p>
+</div>
+</div>
+
+<div id="outline-container-creating-CSS" class="outline-2">
+<h2 id="creating-CSS"><span class="section-number-2">3.</span> Creating CSS For Webpages</h2>
+<div class="outline-text-2" id="text-creating-CSS">
+<p>
+I learned how to read and write HTML and CSS from the <a href="https://en.wikibooks.org/wiki/HyperText_Markup_Language">HyperText Markup Language Wikibook</a> and the <a href="https://en.wikibooks.org/wiki/Cascading_Style_Sheets">Cascading Style Sheets Wikibook</a>.
+Those are free resources, however they&rsquo;re not as comprehensive or up-to-date as others.
+Readers who want a more modern and comprehensive resource for CSS should probably read <a href="https://htmlandcssbook.com/b">HTML &amp; CSS by Jon Duckett</a>. Other Notes:
+</p>
+<ul class="org-ul">
+<li>I created the CSS page for my website articles by placing the CSS code embedded inside <a href="https://www.joshcanhelp.com/the-drudge-report-style-3-column-link-page-template/">the .html template</a> that I found into a separate .css file and modifying it. It can be overwhelming to create CSS files from scratch, but online templates can make everything easier.</li>
+<li>Every time I had a CSS question that wasn&rsquo;t answered by Wikibooks, I googled it. W3 Schools, GeeksForGeeks, MDN Web Docs, and StackExchange were the most helpful sites.</li>
+<li>Other resources that may help for creating minimalist designs include the <a href="https://addons.mozilla.org/en-US/firefox/addon/cssviewer-quantum/">CSS Viewer browser extension for Firefox</a> and <a href="https://1mb.club/blog">1MB Club&rsquo;s Blog</a>.</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-recommended-tools" class="outline-2">
+<h2 id="recommended-tools"><span class="section-number-2">4.</span> Suggested / Recommended Tools</h2>
+<div class="outline-text-2" id="text-recommended-tools">
+<ul class="org-ul">
+<li><a href="https://zapier.com/blog/inspect-element-tutorial/#why">Inspect Element</a> is a powerful tool for viewing and experimenting with the source code of webpages.</li>
+<li>Websites like <a href="https://www.deadlinkchecker.com">deadlinkchecker.com</a> can show you which webpages have broken links.</li>
+<li><a href="https://validator.w3.org/nu/">W3&rsquo;s Nu HTML Validator</a> can check the validity of your HTML code, which can improve loading speeds, improve web page displays and accessibility, and boost SEO rankings.</li>
+<li>Google&rsquo;s <a href="https://pagespeed.web.dev/">pagespeed.web.dev</a> can show you how fast it takes for each webpage to load.</li>
+<li><a href="https://coolors.co/">coolers.co</a> can help you pick a color scheme for your website.</li>
+<li><a href="https://webaim.org/resources/contrastchecker/">Web AIM&rsquo;s Contrast Checker</a> can check the color contrasts of whatever color scheme you choose.</li>
+<li><a href="https://realfavicongenerator.net/">realfavicongenerator.net</a> can create all the favicon you&rsquo;d need for your site to have a favicon display on every web browser and platform.</li>
+<li>Your webpages will load faster if you compress your images. I personally use <a href="https://itsfoss.com/curtail-image-compress/">Curtail</a> on Linux, but there are many other applications and websites that can compress images on other platforms.</li>
+<li><a href="https://pagedart.com/">pagedart.com</a> has lots of helpful articles for learning good web development skills.</li>
+<li>I use <a href="https://greggman.github.io/servez/">Servez</a> as my localhost software. There are many reasons to view websites on a localhost, instead of visiting the absolute file paths for each HTML file from the file manager:
+<ul class="org-ul">
+<li>When creating internal links, you don&rsquo;t have to include &ldquo;.html&rdquo; at the end of every webpage link.</li>
+<li>Viewing the website from a local host enables your smartphones and other devices to view what the website looks like, besides just how it looks from the computer that you&rsquo;re developing it on.</li>
+<li>The log enables you to see all the different files that most load, in order for you to view each of your respective webpages.</li>
+<li>If you can get it to work, you can mount all each of the directories containing your blog posts/essays and data files directly after the website&rsquo;s URL.</li>
+<li>Localhost URLs are shorter, which makes them easier to read when the screen width is too small.</li>
+<li>Since the localhost URL doesn&rsquo;t contain the name of your home directory anywhere within its URL string, you won&rsquo;t accidentally dox your first name if you accidentally send your local web development URL, instead of the public server&rsquo;s URL.</li>
+</ul></li>
+</ul>
+
+<p>
+Lastly, if you are looking for a web hosting service, you could use <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site">Github Pages</a> to create a website with free hosting using your Github account.
+</p>
+<ul class="org-ul">
+<li>You can download and use <a href="https://desktop.github.com/">Github Desktop</a> to facilitate committing your website changes to Github if you are unfamiliar with Git.</li>
+<li><a href="https://git-scm.com/book/en/v2">The Pro Git book</a> will teach you how to download, install, and use Git, if you have more advanced version control needs.</li>
+<li><a href="https://www.toptal.com/developers/gitignore">gitignore.io</a> can help you create .gitignore files that will prevent files and directories that you want to private from uploading to the Github directory.</li>
+</ul>
+
+<p>
+<a href="https://systemcrafters.net/publishing-websites-with-org-mode/automated-site-publishing/">https://systemcrafters.net/publishing-websites-with-org-mode/automated-site-publishing/</a>
+System Crafters has also written a <a href="https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/">guide on how to publish org-mode websites</a> with GitHub or SourceHut.
+</p>
+</div>
+</div>
+
+<div id="outline-container-maximizing-SEO" class="outline-2">
+<h2 id="maximizing-SEO"><span class="section-number-2">5.</span> Maximizing SEO</h2>
+<div class="outline-text-2" id="text-maximizing-SEO">
+<ul class="org-ul">
+<li>Basic Advice for SEO
+<ul class="org-ul">
+<li><a href="https://developers.google.com/search/docs/crawling-indexing/links-crawlable#crawlable-links">https://developers.google.com/search/docs/crawling-indexing/links-crawlable#crawlable-links</a></li>
+<li>Advice For Image Alt Text: <a href="https://pagedart.com/blog/image-alt-text-seo-best-practices/">https://pagedart.com/blog/image-alt-text-seo-best-practices/</a></li>
+</ul></li>
+<li>Advice for creating URLs.</li>
+<li>How to setup Google Analytics</li>
+<li>How To Create URL Redirects
+<ul class="org-ul">
+<li>Google Search Console Explains Best URL Redirects, And How To Implement Each Of Them: <a href="https://developers.google.com/search/docs/crawling-indexing/301-redirects">https://developers.google.com/search/docs/crawling-indexing/301-redirects</a></li>
+<li>For Github Pages: <a href="https://superdevresources.com/redirects-jekyll-github-pages/">https://superdevresources.com/redirects-jekyll-github-pages/</a></li>
+<li>Even Wikipedia Explains It Clearly: <a href="https://en.wikipedia.org/wiki/URL_redirection#Example_HTTP_response_for_a_301_redirect">https://en.wikipedia.org/wiki/URL_redirection#Example_HTTP_response_for_a_301_redirect</a></li>
+</ul></li>
+<li>How you created the sitemap</li>
+<li>Guide for creating robots.txt File: <a href="https://www.onely.com/blog/ultimate-guide-to-robots-txt-for-seo">https://www.onely.com/blog/ultimate-guide-to-robots-txt-for-seo</a></li>
+<li>Potential Bots And User-Agents to specify robots.txt rules for: <a href="https://user-agents.net/bots">https://user-agents.net/bots</a> and <a href="https://www.robotstxt.org/db.html">https://www.robotstxt.org/db.html</a></li>
+<li>Regarding HTTP vs HTTPS: <a href="https://1mb.club/blog/https-redirects/">https://1mb.club/blog/https-redirects/</a></li>
+</ul>
 </div>
 </div>
 
 <div id="outline-container-how-I-chose-my-name-and-avatar" class="outline-2">
-<h2 id="how-I-chose-my-name-and-avatar"><span class="section-number-2">3.</span> How I Chose My Name And Avatar</h2>
+<h2 id="how-I-chose-my-name-and-avatar"><span class="section-number-2">6.</span> How I Chose My Name And Avatar</h2>
 <div class="outline-text-2" id="text-how-I-chose-my-name-and-avatar">
 <p>
 I pondered which name I should choose for a long time.
@@ -299,27 +375,11 @@ The emblem and green background are meant to represent the economic ideology kno
 </p>
 </div>
 </div>
-
-<div id="outline-container-quality-vs-quantity" class="outline-2">
-<h2 id="quality-vs-quantity"><span class="section-number-2">4.</span> Quality Versus Quantity</h2>
-<div class="outline-text-2" id="text-quality-vs-quantity">
-<p>
-For most topics, I don&rsquo;t understand bloggers who write posts <i>every day</i>.
-For one thing, there&rsquo;s probably a <a href="https://thewaywardaxolotl.blogspot.com/2020/01/are-we-running-out-of-ideas.html">finite amount of good ideas out there to discover</a>, due to the physical materialist nature of the Universe.
-For another thing, it&rsquo;s unusual for someone to observe or brainstorm something really interesting or noteworthy every single day that is worth writing an entire post about.
-Even if someone did write a blog post every day, the average quality of each post would have to be quite low since such a high frequency of content production would require espousing fewer good ideas in each post.
-</p>
-
-<p>
-I don&rsquo;t have the time to write a new post each day, but even if I did, eventually hundreds or even thousands of blog posts would accumulate over time.
-If a newcomer came across such a blog for the first time, they would be lost and unsure of where to start reading since it would be difficult to navigate and determine which posts are worth reading.
-</p>
-</div>
-</div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: Zero Contradictions</p>
-<p class="date">Created: 2023-09-26 Tue 17:28</p>
+<p class="date">Last Modified: 2023 October 03, 10:12</p>
+
+          <p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>
