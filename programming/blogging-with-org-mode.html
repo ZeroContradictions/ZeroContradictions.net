@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023 October 05, 12:27 -->
+<!-- 2023 October 05, 12:53 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>How to Design a Blog with Emacs and Org-Mode</title>
 <meta name="author" content="Zero Contradictions" />
-<meta name="description" content="Why the Zero Contradictions blog is designed the way it is, and how it was created using Emacs org-mode, an HTML template, CSS, and other tools." />
+<meta name="description" content="Why ZeroContradictions.net is designed the way it is, and how the website was created using Emacs org-mode, CSS, an HTML template, SEO, and other tools." />
 <meta name="generator" content="Org Mode" />
 <style> pre.src-bash:before {content: 'bash'; } </style>
 <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8XK8JC00G"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-S8XK8JC00G'); </script>
@@ -175,6 +175,9 @@ Resources for learning how to use org-mode syntax include:
 <div class="outline-text-3" id="text-setting-up-org-mode-for-blogging">
 <p>
 System Crafters has also written a <a href="https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/">guide on how to setup org-mode for creating websites</a>, but many people may prefer this guide instead.
+Hopefully, this guide will be detailed enough to show other people how to replicate the design process.
+It will assume that that the reader is already familiar with the basics of using Emacs.
+If the user has no interest in using org-mode or Emacs, then most of the CSS, SEO, and Recommended Tools sections of this article may still be of interest to the reader.
 </p>
 
 <p>
@@ -408,6 +411,7 @@ More Advice for SEO:
 <li><a href="https://webaim.org/resources/contrastchecker/">Web AIM&rsquo;s Contrast Checker</a> can check the color contrasts of whatever color scheme you choose.</li>
 <li><a href="https://realfavicongenerator.net/">realfavicongenerator.net</a> can create all the favicon you&rsquo;d need for your site to have a favicon display on every web browser and platform.</li>
 <li>Your webpages will load faster if you compress your images. I personally use <a href="https://itsfoss.com/curtail-image-compress/">Curtail</a> on Linux, but there are many other applications and websites that can compress images on other platforms.</li>
+<li><code>rgrep</code> and <code>wgrep</code> in Emacs make it possible to search and replace regular expressions across many org files simultaneously.</li>
 <li><a href="https://pagedart.com/">pagedart.com</a> has lots of helpful articles for learning good web development skills.</li>
 <li>I use <a href="https://greggman.github.io/servez/">Servez</a> as my localhost software. There are many reasons to view websites on a localhost, instead of visiting the absolute file paths for each HTML file from the file manager:
 <ul class="org-ul">
@@ -436,7 +440,7 @@ System Crafters has also written a <a href="https://systemcrafters.net/publishin
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2023 October 05, 12:27</p>
+<p class="date">Last Modified: 2023 October 05, 12:53</p>
 
           <p class="author">Author: Zero Contradictions</p>
 </div>
