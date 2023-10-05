@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023 October 05, 02:31 -->
+<!-- 2023 October 05, 12:27 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>How to Design a Blog with Emacs and Org-Mode</title>
@@ -31,11 +31,20 @@
 <li><a href="#static-site-generators">1.3. Static Site Generators</a></li>
 </ul>
 </li>
-<li><a href="#org-mode-for-webpages">2. Using Org-Mode To Create Web Pages</a></li>
-<li><a href="#creating-CSS">3. Creating CSS For Webpages</a></li>
-<li><a href="#recommended-tools">4. Suggested / Recommended Tools</a></li>
-<li><a href="#maximizing-SEO">5. Maximizing SEO</a></li>
-<li><a href="#how-I-chose-my-name-and-avatar">6. How I Chose My Name And Avatar</a></li>
+<li><a href="#org-mode-for-webpages">2. Using Org-Mode To Create Web Pages</a>
+<ul>
+<li><a href="#learning-org-mode">2.1. Learning How To Use Org-Mode</a></li>
+<li><a href="#setting-up-org-mode-for-blogging">2.2. Setting Up Org-Mode For Blogging</a></li>
+<li><a href="#advice-for-using-org-mode">2.3. Advice For Using Org-Mode</a></li>
+</ul>
+</li>
+<li><a href="#creating-CSS">3. Creating CSS For Webpages</a>
+<ul>
+<li><a href="#CSS-for-org-mode">3.1. CSS For Org-Mode HTML Exports</a></li>
+</ul>
+</li>
+<li><a href="#search-engine-optimization">4. Search Engine Optimization (SEO)</a></li>
+<li><a href="#recommended-tools">5. Suggested / Recommended Tools</a></li>
 </ul>
 </div>
 </nav>
@@ -77,7 +86,7 @@ It can be tempting to immediately start writing content that you&rsquo;ve been e
 <li>Many people have a tendency to write long sentences with <a href="https://www.grammarbank.com/cohesive-devices.html">cohesive devices</a> that place restrictions on how they write their sentences. For such people (including my former self), I recommend taking <a href="https://dilbertblog.typepad.com/the_dilbert_blog/2007/06/the_day_you_bec.html">Scott Adam&rsquo;s Writing Advice</a> to heart. Writing shorter sentences is an important key for writing better, especially if the goal is to create information dense content with little fluff. <a href="https://www.elevenwriting.com/blog/fluff-writing">Fluff writing</a> makes content longer to read, harder to understand, and it may bore the readers.</li>
 <li>If you need to list a bunch of short ideas, reasons, or arguments in a section, it&rsquo;s a good idea to use bulleted or numbered lists. Paragraphs require adding more cohesive devices and other fluff language compared to lists. As an example, some sections in my <a href="../FAQs/overpopulation-FAQs#effects-on-society">Overpopulation FAQs</a> became more concise and easier to read when written as lists rather than paragraphs.</li>
 <li><a href="https://www.w3schools.com/html/html_quotation_elements.asp">HTML Quotation Elements</a> are a great way to quickly state opposing points of view before addressing them. I&rsquo;ve made my <a href="../civilization/case-against-libertarianism">Case Against Libertarianism essay</a> and other works less wordy by using them.</li>
-<li>Lastly, taking at least an hour to learn <a href="#maximizing-SEO">good SEO practices</a> can save you the trouble of rewriting your content later on, if you want to maximize your number of readers.</li>
+<li>Lastly, taking at least an hour to learn <a href="#search-engine-optimization">good SEO practices</a> can save you the trouble of rewriting your content later on, if you want to maximize your number of readers.</li>
 </ul>
 </div>
 </div>
@@ -145,6 +154,10 @@ Another thing is that my website doesn&rsquo;t really need some of these feature
 <div id="outline-container-org-mode-for-webpages" class="outline-2">
 <h2 id="org-mode-for-webpages"><span class="section-number-2">2.</span> Using Org-Mode To Create Web Pages</h2>
 <div class="outline-text-2" id="text-org-mode-for-webpages">
+</div>
+<div id="outline-container-learning-org-mode" class="outline-3">
+<h3 id="learning-org-mode"><span class="section-number-3">2.1.</span> Learning How To Use Org-Mode</h3>
+<div class="outline-text-3" id="text-learning-org-mode">
 <p>
 In my opinion, <a href="https://karl-voit.at/2017/09/23/orgmode-as-markup-only/">org-mode is the best and most versatile markup language there is</a>.
 Resources for learning how to use org-mode syntax include:
@@ -154,35 +167,84 @@ Resources for learning how to use org-mode syntax include:
 <li><a href="https://orgmode.org/guide/">The Org-Mode Compact Guide</a>.</li>
 <li><a href="https://orgmode.org/manual/index.html#SEC_Contents">The Org-Mode Manual</a>.</li>
 </ul>
+</div>
+</div>
 
+<div id="outline-container-setting-up-org-mode-for-blogging" class="outline-3">
+<h3 id="setting-up-org-mode-for-blogging"><span class="section-number-3">2.2.</span> Setting Up Org-Mode For Blogging</h3>
+<div class="outline-text-3" id="text-setting-up-org-mode-for-blogging">
 <p>
-System Crafters has also written a <a href="https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/">guide on how to create websites with org-mode</a>, but many people may prefer this guide instead.
+System Crafters has also written a <a href="https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/">guide on how to setup org-mode for creating websites</a>, but many people may prefer this guide instead.
 </p>
 
-
 <p>
-MENTION WHAT ORG-MODE VARIABLES YOU INCLUDE IN YOUR <code>.CONFIG.EL</code>, (or ~/.emacs.d/init.el for non-Doom-Emacs users).
-</p>
-
-<p>
-Reasons to set org variables in .config.el:
+Org-mode variables control how the org-mode markup language will be exported to HTML and other formats.
+They can be set either within the file itself as file local variables, or within your <code>.config/doom/config.el</code>, (or ~/.emacs.d/init.el for non-Doom-Emacs users).
+For a complete list of variables controlling how org-mode exports files, see the following links from the Org-Mode Manual:
 </p>
 <ul class="org-ul">
-<li>It makes the compilation of your org files less prone to errors.</li>
-<li>It ensures that all org files compile the same way each time, aside from any customizations using local file org variables.</li>
-<li>If you later decide to that you want to change something across <i>all</i> your .org files, it&rsquo;s easier to just edit one file (.config.el) instead of editing every single org file.</li>
-<li>If you&rsquo;re only going to export org file variables for one purpose or similar purposes, then it just makes things easier.
-<ul class="org-ul">
-<li>You don&rsquo;t have to copy as many local org file variables to each new file to do the same things.</li>
-<li>Since there&rsquo;s were lines for setting local org file variables in each org file, it makes org files easier to read and scroll through, especially when viewed in small windows.</li>
-<li>The org files will collectively take up less file space.</li>
-</ul></li>
-<li>i</li>
-<li>i</li>
+<li><a href="https://orgmode.org/manual/Export-Settings.html">Export Settings</a></li>
+<li><a href="https://orgmode.org/manual/Export-Settings.html">HTML-Specific Export Settings</a></li>
+<li><a href="https://orgmode.org/manual/Publishing-options.html">Property Options For Org-Mode File Exports</a></li>
 </ul>
 
+<p>
+There are multiple reasons to set org variables with <code>config.el</code> instead of within file local variables:
+</p>
+<ul class="org-ul">
+<li>It makes the compilation of your org files less prone to errors, assuming that you export a lot of them.</li>
+<li>It ensures that all org files export the same way each time, aside from any customizations using local file org variables.</li>
+<li>If you later decide to that you want to change something across <i>all</i> your .org files, it&rsquo;s easier to just edit one file (<code>config.el</code>) instead of editing every single org file.</li>
+<li>If you&rsquo;re only going to export org file variables for one purpose or similar purposes, then you don&rsquo;t have to copy as many local org file variables to each new file to do the same things, and the org files will collectively take up less file space. This also gives the beginnings of the org files a cleaner appearance.</li>
+</ul>
 
+<p>
+I have the following settings configured for org-mode in my <code>config.el</code>.
+The user can learn more about what each variable does by pressing <code>SPC h v</code> in Doom-Emacs, or <code>C-h v</code> in regular Emacs.
+</p>
+<pre class="example">
+(setq org-src-fontify-natively t)
+(setq org-hide-emphasis-markers nil) ;; Don't hide the /, *, and _ font formatting characters.
+(setq org-startup-folded t)
+(setq org-startup-truncated nil)
+(setq org-startup-with-inline-images nil)
+(setq org-return-follows-link nil)
 
+(setq org-html-doctype "html5")
+(setq org-html-html5-fancy t)
+(setq org-html-content-class "content")
+(setq org-html-container-element "div")
+(setq org-html-head-include-scripts nil)
+(setq org-html-head-include-default-style nil)
+(setq org-html-head-extra "&lt;link rel=\"stylesheet\" type=\"text/css\" href=\"/style.css\"&gt;")
+(setq org-html-link-home "/")
+(setq org-html-link-up "/")
+
+(setq org-export-with-author t)
+(setq org-export-with-email nil)
+(setq org-export-with-creator nil)
+(setq org-html-metadata-timestamp-format "%Y %B %d, %H:%M")
+(setq org-html-postamble t)
+(setq org-html-postamble-format
+ '(("en" "&lt;p class=\"date\"&gt;Last Modified: %T&lt;/p&gt;\n
+          &lt;p class=\"author\"&gt;Author: %a&lt;/p&gt;"
+  )))
+</pre>
+
+<p>
+And the following is the entirety of the org-mode keywords and values that I include at the beginning of every .org file for controlling the HTML code of my webpages:
+</p>
+<pre class="example">
+#+title: The_Webpage_Title_That_Will_Be_Placed_In_Both_&lt;title&gt;_and_&lt;h1&gt;
+#+subtitle: The_Webpage_Subtitle_That_Will_Be_Placed_In_&lt;subtitle&gt;
+#+author: The Author Name
+#+description: The webpage description (up to 160 characters long).
+#+html_head: [Javascript code for adding Google Analytics to the webpage]
+#+html_head: &lt;meta property="og:url" content="[the canonical URL link for this article]"&gt;
+#+html_head: &lt;meta property="og:type" content="article"&gt;
+#+html_head: &lt;meta property="og:image" content="[Link to image file]"&gt;
+#+options: ^:nil
+</pre>
 <p>
 Org-mode provides two different variables for adding code to the &lt;head&gt; section of HTML files, <code>org-html-head</code> and <code>org-html-head-extra</code>.
 They&rsquo;re also written as <code>#+html-head</code> and <code>#+html-head-extra</code>, when used as local file variables written at the beginning of org files.
@@ -192,43 +254,30 @@ Fortunately, the two separate HTML head variables can be used strategically to p
 In my config.el, I have:
 </p>
 <pre class="example">
-(setq org-html-head-extra "&lt;link rel=\"stylesheet\" type=\"text/css\" href=\"/style.css\"&gt;")
+(setq org-html-head-extra "&lt;link rel~\"stylesheet\" type~\"text/css\" href~\"/style.css\"&gt;")
 </pre>
 <p>
-And my local file org variables add the following HTML &lt;head&gt; code to each file:
+Meanwhile, my local file org variables add the following HTML &lt;head&gt; code to each file:
 </p>
 <pre class="example">
 #+html_head: [Javascript code for adding Google Analytics to the webpage]
 #+html_head: &lt;meta property="og:url" content="[the canonical URL link for this article]"&gt;
 #+html_head: &lt;meta property="og:type" content="article"&gt;
-#+html_head: &lt;meta property="og:image" content="[Link to image file to be shown when sharing the URL on social media]"&gt;
+#+html_head: &lt;meta property="og:image" content="[Link to image file]"&gt;
 </pre>
 <p>
-This ensure that all the content that I want to be added to HTML &lt;head&gt; will get included.
+These settings ensure that all the content that I want to be added to HTML &lt;head&gt; will get included.
 </p>
 
 <p>
-The following is the entirety of the org-mode keywords and values that I include at the beginning of every .org file for controlling the HTML code of my webpages:
+Every time I want to re-export the HTML output from my org file to update my webpages, I press <code>SPC m e h h</code> in Doom-Emacs, which executes the command <code>org-export-dispatch</code>.
 </p>
-<pre class="example">
-#+title: The_Webpage_Title_That_Will_Be_Placed_In_Both_&lt;title&gt;_and_&lt;h1&gt;
-#+subtitle: The_Webpage_Subtitle_That_Will_Be_Placed_In_&lt;subtitle&gt;
-#+author: The Author Name
-#+description: The webpage description (up to 160 characters long). This gets displayed on SERPs and when sharing webpages on social media.
-#+html_head: [Javascript code for adding Google Analytics to the webpage]
-#+html_head: &lt;meta property="og:url" content="[the canonical URL link for this article]"&gt;
-#+html_head: &lt;meta property="og:type" content="article"&gt;
-#+html_head: &lt;meta property="og:image" content="[Link to image file to be shown when sharing the URL on social media]"&gt;
-#+options: ^:nil
-</pre>
+</div>
+</div>
 
-<p>
-If I want to export the .org file to LaTeX, I include the following line at the beginning of the .org file so that the page margins don&rsquo;t take up so much space in the resulting .pdf file.
-</p>
-<pre class="example">
-#+latex_header: \makeatletter \@ifpackageloaded{geometry}{\geometry{margin=2.5cm}}{\usepackage[margin=2.5cm]{geometry}} \makeatother
-</pre>
-
+<div id="outline-container-advice-for-using-org-mode" class="outline-3">
+<h3 id="advice-for-using-org-mode"><span class="section-number-3">2.3.</span> Advice For Using Org-Mode</h3>
+<div class="outline-text-3" id="text-advice-for-using-org-mode">
 <p>
 When creating links in org-mode, <a href="https://orgmode.org/manual/Publishing-links.html">there are many options</a> and they depend on what you&rsquo;re linking to.
 Since I often want to link to section of my website pages, I always insert the following org syntax under each section heading.
@@ -256,14 +305,14 @@ This facilitates the organization of all my files since I can organize all my id
 </p>
 
 <p>
-People who are using org-mode to create webpages can use the <a href="https://orgmode.org/manual/CSS-support.html">CSS Support section from the Org-Mode manual</a> to inform them of all the ID attributes and classes that are available for tweaking a webpages&rsquo; CSS, using a separate CSS file.
+I don&rsquo;t usually export my org files to LaTeX, but I do so when I want to get my works in PDF format.
+When exporting .org files to LaTeX, I include the following line at the beginning of the .org file so that the page margins don&rsquo;t take up so much space in the resulting .pdf file.
 </p>
-
-
-<p>
-If you would like to overrule the CSS alignment of the tables, you can use ‘&lt;r&gt;’, ‘&lt;c&gt;’ or ‘&lt;l&gt;’ in a special table cookies row of the table.
-You may also combine alignment and field width like this: ‘&lt;r10&gt;’.
-</p>
+<pre class="example">
+#+latex_header: \makeatletter \@ifpackageloaded{geometry}{\geometry{margin=2.5cm}}
+{\usepackage[margin=2.5cm]{geometry}} \makeatother
+</pre>
+</div>
 </div>
 </div>
 
@@ -280,12 +329,75 @@ Readers who want a more modern and comprehensive resource for CSS should probabl
 <li>Every time I had a CSS question that wasn&rsquo;t answered by Wikibooks, I googled it. W3 Schools, GeeksForGeeks, MDN Web Docs, and StackExchange were the most helpful sites.</li>
 <li>Other resources that may help for creating minimalist designs include the <a href="https://addons.mozilla.org/en-US/firefox/addon/cssviewer-quantum/">CSS Viewer browser extension for Firefox</a> and <a href="https://1mb.club/blog">1MB Club&rsquo;s Blog</a>.</li>
 <li>There are <a href="https://pagedart.com/blog/how-to-remove-unused-css/#how-to-identify-unused-css/">tools for removing unused CSS</a>, that are worth looking into.</li>
+<li>It&rsquo;s worth looking into <a href="https://mattbrictson.com/blog/css-normalize-and-reset">CSS reset rules and CSS reset files</a>, which are necessary since every web browser has different CSS defaults for HTML elements, which may cause websites without reset rules to have unexpected displays on different web browsers.</li>
+</ul>
+</div>
+
+<div id="outline-container-CSS-for-org-mode" class="outline-3">
+<h3 id="CSS-for-org-mode"><span class="section-number-3">3.1.</span> CSS For Org-Mode HTML Exports</h3>
+<div class="outline-text-3" id="text-CSS-for-org-mode">
+<p>
+People who are using org-mode to create webpages can use the <a href="https://orgmode.org/manual/CSS-support.html">CSS Support section from the Org-Mode manual</a> to inform them of all the ID attributes and classes that are available for tweaking a webpages&rsquo; CSS, using a separate CSS file.
+Alternatively, some users may prefer to use the default org-mode CSS with their files.
+If you wish to use it, you must have the following line in you <code>config.el</code>:
+</p>
+<pre class="example">
+(setq org-html-head-include-default-style t)
+</pre>
+<p>
+Or you could set it with an org local variable by placing the following line in their org file:
+</p>
+<pre class="example">
+#+options: html-style:t
+</pre>
+<p>
+However, the default org-mode CSS has a total of 7.0kB, and it will be included into every HTML file that you export where the <code>html-style</code> variable is turned on.
+It may also complicate or interfere with your own CSS customizations if you link a separate CSS file to your HTML exports.
+My advice is to write your own CSS file, and view the output of the default org-mode CSS and copy the useful parts of it that you want to keep for your own custom CSS file.
+</p>
+
+<p>
+If you would like to overrule the default CSS alignment of the tables, you can use ‘&lt;r&gt;’, ‘&lt;c&gt;’ or ‘&lt;l&gt;’ in a special table cookies row of the table.
+You may also combine alignment and field width like this: ‘&lt;r10&gt;’.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-search-engine-optimization" class="outline-2">
+<h2 id="search-engine-optimization"><span class="section-number-2">4.</span> Search Engine Optimization (SEO)</h2>
+<div class="outline-text-2" id="text-search-engine-optimization">
+<p>
+Search Engine Optimization (SEO) is important if you want more people to discover your content via search engines.
+There are lots of webpages and websites out there about how to improve SEO, but in my opinion, none of them are as clear or as detailed as <a href="https://developers.google.com/search/docs">Google&rsquo;s own SEO Documentation</a>, in most cases.
+In hindsight, I wish I had used Google&rsquo;s Developer Documentation as my go-to source for SEO questions.
+</p>
+
+<p>
+More Advice for SEO:
+</p>
+<ul class="org-ul">
+<li><a href="https://developers.google.com/search/docs/crawling-indexing/url-structure">Advice For Optimizing URL Naming And Structure</a></li>
+<li><a href="https://developers.google.com/search/docs/crawling-indexing/links-crawlable#anchor-text-placement">Advice For Writing Links - Google Search Central</a></li>
+<li><a href="https://pagedart.com/blog/image-alt-text-seo-best-practices/">Advice For Writing Image Alt Text For SEO - Page Dart</a></li>
+<li><a href="https://developers.google.com/search/docs/crawling-indexing/301-redirects">The Best URL Redirects &amp; How To Implement Each of Them - Google Search Central</a></li>
+<li><a href="https://www.onely.com/blog/ultimate-guide-to-xml-sitemaps/">Guide For Explaining How XML Sitemaps And How To Create Them</a></li>
+<li><a href="https://www.onely.com/blog/ultimate-guide-to-robots-txt-for-seo">Guide For Creating robots.txt File</a>
+<ul class="org-ul">
+<li><a href="https://user-agents.net/bots">List of Potential Bots And User-Agents To Specify robots.txt Rules For</a></li>
+<li>In particular, one may want to write robots.txt rule to prevent the Internet Archive bot, <code>ia_archiver</code> from archiving some or all of their webpages.</li>
+</ul></li>
+<li><a href="https://ahrefs.com/blog/how-to-use-google-analytics/#what-is-google-analytics">How To Setup Google Analytics</a>
+<ul class="org-ul">
+<li>For Org-Mode users, you can add Google Analytics to your webpages by using the <code>#+html_head:</code> keyword syntax to include the <code>gtag.js</code> code in the exported HTML output.</li>
+</ul></li>
+<li><a href="https://1mb.club/blog/https-redirects/">When It Makes Sense To Disable HTTPS Auto Redirects - 1MB Club Blog</a></li>
 </ul>
 </div>
 </div>
 
 <div id="outline-container-recommended-tools" class="outline-2">
-<h2 id="recommended-tools"><span class="section-number-2">4.</span> Suggested / Recommended Tools</h2>
+<h2 id="recommended-tools"><span class="section-number-2">5.</span> Suggested / Recommended Tools</h2>
 <div class="outline-text-2" id="text-recommended-tools">
 <ul class="org-ul">
 <li><a href="https://zapier.com/blog/inspect-element-tutorial/#why">Inspect Element</a> is a powerful tool for viewing and experimenting with the source code of webpages.</li>
@@ -318,65 +430,13 @@ Lastly, if you are looking for a web hosting service, you could use <a href="htt
 </ul>
 
 <p>
-<a href="https://systemcrafters.net/publishing-websites-with-org-mode/automated-site-publishing/">https://systemcrafters.net/publishing-websites-with-org-mode/automated-site-publishing/</a>
 System Crafters has also written a <a href="https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/">guide on how to publish org-mode websites</a> with GitHub or SourceHut.
-</p>
-</div>
-</div>
-
-<div id="outline-container-maximizing-SEO" class="outline-2">
-<h2 id="maximizing-SEO"><span class="section-number-2">5.</span> Maximizing SEO</h2>
-<div class="outline-text-2" id="text-maximizing-SEO">
-<ul class="org-ul">
-<li>Basic Advice for SEO
-<ul class="org-ul">
-<li><a href="https://developers.google.com/search/docs/crawling-indexing/links-crawlable#crawlable-links">https://developers.google.com/search/docs/crawling-indexing/links-crawlable#crawlable-links</a></li>
-<li>Advice For Image Alt Text: <a href="https://pagedart.com/blog/image-alt-text-seo-best-practices/">https://pagedart.com/blog/image-alt-text-seo-best-practices/</a></li>
-</ul></li>
-<li>Advice for creating URLs.</li>
-<li>How to setup Google Analytics</li>
-<li>How To Create URL Redirects
-<ul class="org-ul">
-<li>Google Search Console Explains Best URL Redirects, And How To Implement Each Of Them: <a href="https://developers.google.com/search/docs/crawling-indexing/301-redirects">https://developers.google.com/search/docs/crawling-indexing/301-redirects</a></li>
-<li>For Github Pages: <a href="https://superdevresources.com/redirects-jekyll-github-pages/">https://superdevresources.com/redirects-jekyll-github-pages/</a></li>
-<li>Even Wikipedia Explains It Clearly: <a href="https://en.wikipedia.org/wiki/URL_redirection#Example_HTTP_response_for_a_301_redirect">https://en.wikipedia.org/wiki/URL_redirection#Example_HTTP_response_for_a_301_redirect</a></li>
-</ul></li>
-<li>How you created the sitemap</li>
-<li>Guide for creating robots.txt File: <a href="https://www.onely.com/blog/ultimate-guide-to-robots-txt-for-seo">https://www.onely.com/blog/ultimate-guide-to-robots-txt-for-seo</a></li>
-<li>Potential Bots And User-Agents to specify robots.txt rules for: <a href="https://user-agents.net/bots">https://user-agents.net/bots</a> and <a href="https://www.robotstxt.org/db.html">https://www.robotstxt.org/db.html</a></li>
-<li>Regarding HTTP vs HTTPS: <a href="https://1mb.club/blog/https-redirects/">https://1mb.club/blog/https-redirects/</a></li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-how-I-chose-my-name-and-avatar" class="outline-2">
-<h2 id="how-I-chose-my-name-and-avatar"><span class="section-number-2">6.</span> How I Chose My Name And Avatar</h2>
-<div class="outline-text-2" id="text-how-I-chose-my-name-and-avatar">
-<p>
-I pondered which name I should choose for a long time.
-I mostly wanted a original screen name that sounded intelligent, but not arrogant (hopefully).
-It should be unique, so that it&rsquo;s easily recognizable and easier to copyright my work.
-And it should imply a rationalist, philosophical worldview so that people can look at my name and quickly think &ldquo;Okay, this guy prioritizes rationality and philosophy over dogmatism&rdquo;.
-</p>
-
-<p>
-I also like how it gives people multiple options for addressing me.
-Most people call me &ldquo;Zero&rdquo;, but people could also call me &ldquo;ZC&rdquo; by abbreviating my name, or they could say my full name if they&rsquo;d like.
-As a bonus, &ldquo;ZC&rdquo; can even be pronounced [zɛd si] or [zi si] (<a href="https://en.wikipedia.org/wiki/International_Phonetic_Alphabet">IPA</a>), depending on the dialect of English or personal preference.
-I can even use &ldquo;0Contradictions&rdquo; as my X / Twitter handle, since they are limited to 15 characters max.
-</p>
-
-<p>
-As for my profile picture, I wanted a clean, minimalist design.
-I naturally prefer minimalist avatars, and it also gives the benefit of being easily recognizable, great for logos, and being associated with rationality (in my opinion anyway).
-I found my profile picture online from a deleted reddit post, and since the author was anonymous and had deleted their account, I figured that it&rsquo;s fair game for me to claim it as my own.
-The emblem and green background are meant to represent the economic ideology known as <a href="../civilization/georgism-crash-course">Georgism</a>, which I talk about in several of the posts and links on my homepage.
 </p>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2023 October 05, 02:31</p>
+<p class="date">Last Modified: 2023 October 05, 12:27</p>
 
           <p class="author">Author: Zero Contradictions</p>
 </div>
