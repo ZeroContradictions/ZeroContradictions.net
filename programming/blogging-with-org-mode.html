@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023 October 05, 13:15 -->
+<!-- 2023 October 06, 08:56 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>How to Design a Blog with Emacs and Org-Mode</title>
@@ -117,8 +117,16 @@ In my opinion, the main benefit to using SSGs is that they make it possible to u
 </p>
 
 <p>
-Since I already knew how to export my .org files to HTML webpages, I never used a SSG when I created this website, and I still don&rsquo;t.
-The reasons are complicated, but I encountered multiple problems when I last tried to switch to using a SSG in July 2023:
+Org-Mode wasn&rsquo;t specifically designed to be a static site generator, but one can configure it to do many of the key features that a SSG can do.
+<a href="https://taingram.org/blog/org-mode-blog.html">Thomas Ingram</a> and <a href="https://ogbe.net/blog/blogging_with_org">Dennis Ogbe</a> have written their own guides on how to use org-mode as a static site generator for websites.
+Their tutorials are more complex than mine, and their resulting websites have more features (e.g. sitemap and RSS feed generators, blogging templates, more detailed headers and footers, etc).
+There are also other <a href="https://meganrenae21.github.io/Meg-in-Progress/posts/blogging-with-org-mode">guides that show how to set up tagging systems</a> for posts.
+However, I&rsquo;m not experienced enough with Elisp and my website may not need those features, so some people may prefer my simpler tutorial here.
+</p>
+
+<p>
+Since I already knew how to export my .org files to HTML webpages, I never used a different SSG when I created this website, and I still don&rsquo;t.
+The reasons are complicated, but I encountered multiple problems when I last tried to switch to using a more full-fledged SSG in July 2023:
 </p>
 <ul class="org-ul">
 <li>It would take too much time for me to learn how SSGs work, how to configure them, and how to use them. I already have a system for creating and publishing my webpages that works me.</li>
@@ -144,9 +152,8 @@ There are still some benefits for creating and publishing content that SSGs woul
 <li>There are many other plugins for SSGs that make it easier to create content.</li>
 </ul>
 <p>
-However, even after considering all the benefits that I could potentially gain, I decided that it still wasn&rsquo;t worth it for me to start using a SSG.
-Another thing is that my website doesn&rsquo;t really need some of these features, and I have found other ways to get most of the benefits that SSGs would provide, which I talk about in this article.
-Other people may have different experiences that make SSGs more practical for them, and everybody should just use what works best for them.
+However, even after considering all the benefits that I could potentially gain, I decided that it still wasn&rsquo;t worth it for me to stop using my current setup.
+Another thing is that my website doesn&rsquo;t really need some of these features, and I have found other ways to get most of the benefits that other SSGs would provide, which I talk about in this article.
 </p>
 </div>
 </div>
@@ -175,7 +182,6 @@ Resources for learning how to use org-mode syntax include:
 <h3 id="setting-up-org-mode-for-blogging"><span class="section-number-3">2.2.</span> Setting Up Org-Mode For Blogging</h3>
 <div class="outline-text-3" id="text-setting-up-org-mode-for-blogging">
 <p>
-System Crafters has also written a <a href="https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/">guide on how to setup org-mode for creating websites</a>, but many people may prefer this guide instead.
 Hopefully, this guide will be detailed enough to show other people how to replicate the design process.
 It will assume that that the reader is already familiar with the basics of using Emacs.
 If the user has no interest in using org-mode or Emacs, then most of the CSS, SEO, and Recommended Tools sections of this article may still be of interest to the reader.
@@ -441,7 +447,7 @@ System Crafters has also written a <a href="https://systemcrafters.net/publishin
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2023 October 05, 13:15</p>
+<p class="date">Last Modified: 2023 October 06, 08:56</p>
 
           <p class="author">Author: Zero Contradictions</p>
 </div>
