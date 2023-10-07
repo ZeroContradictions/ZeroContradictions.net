@@ -50,9 +50,10 @@
             header {width: 100%; float: left; padding: 0; text-align: center;}
             header p {max-width: 1000px; width: 95%; margin: 0 auto 10px; padding: 15px 0 10px; text-align: left;}
             header p img {max-width: 160px; float: left; margin: 0 8px 8px 0;}
+            footer {width: 100%; float: left; padding: 20px 0; font-size: 1.2em; text-align: center;}
             #left-column, #middle-column, #right-column {float: left; margin: 0; width: 33.33%;}
             @media screen and (max-width: 800px) {#left-column, #middle-column, #right-column {width: 100%;} }
-            footer {width: 100%; float: left; padding: 20px 0; font-size: 1.2em; text-align: center;}
+            /* Display as single column for short screen widths */
 
             @media (prefers-color-scheme: light) {body {color: black; background-color: #F4F5F6;} }
             @media (prefers-color-scheme: dark) {header {border-bottom-color: white;} body {color: white; background-color: black;} hr, h1, h2, h3 {border-top-color: white;} }
@@ -101,7 +102,7 @@
             </nav>
             <br>
             <form role="search" id="form" action="https://www.duckduckgo.com" method="get" target="_blank">
-                <input id="query" type="search" name="q" placeholder="Search this website with DuckDuckGo..." size="67" aria-label="Search through site content">
+                <input id="query" type="search" name="q" placeholder="Search this website with DuckDuckGo..." size="53" aria-label="Search through site content">
                 <input type="submit" value="Search">
             </form>
             <script>
