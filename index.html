@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -17,7 +18,7 @@
         <meta name="google-site-verification" content="BrNWbxL0TJoAI6Qy0kBKIQrNN_eNSuHOb7JqrSYVhOE" />
         <style>
             /*** reset ***/
-            html, body, div, span, h1, h2, h3, p, a, img, strong, ol, ul, li { margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline;}
+            html, body, header, footer, div, span, h1, h2, h3, p, a, img, strong, ol, ul, li {margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline;}
 
             /*** universal ***/
             a {color: #015EF4; font-weight: bold; line-height: 1.3em;}
@@ -28,7 +29,7 @@
             a:focus {text-decoration: underline; text-decoration-thickness: 3px;}
 
             p {line-height: 1.3em;}
-            ul, ol {margin: 0 40px 0 20px; list-style-type: none;}
+            ul, ol {margin: 0 20px; list-style-type: none;}
             ul li {margin-bottom: 0.8em; line-height: 1.3em;}
             .underline {text-decoration: underline;}
 
@@ -46,14 +47,15 @@
 
             /** sections **/
             body {background-color: #F4F5F6; font-size: 85%; font-family: Arial, Helvetica, sans-serif; line-height: 1;}
-            header {width: 100%; float: left; padding: 0px 0; text-align: center;}
+            header {width: 100%; float: left; padding: 0; text-align: center;}
             header p {max-width: 1000px; width: 95%; margin: 0 auto 10px; padding: 15px 0 10px; text-align: left;}
             header p img {max-width: 160px; float: left; margin: 0 8px 8px 0;}
-            #left-column, #middle-column, #right-column {float: left; margin: 0; width: 33%;}
+            #left-column, #middle-column, #right-column {float: left; margin: 0; width: 33.33%;}
+            @media screen and (max-width: 800px) {#left-column, #middle-column, #right-column {width: 100%;} }
             footer {width: 100%; float: left; padding: 20px 0; font-size: 1.2em; text-align: center;}
 
-            @media (prefers-color-scheme: light) { body {color: black; background-color: #F4F5F6;} }
-            @media (prefers-color-scheme: dark) { header {border-bottom-color: white;} body {color: white; background-color: black;} hr, h1, h2, h3 {border-top-color: white;} }
+            @media (prefers-color-scheme: light) {body {color: black; background-color: #F4F5F6;} }
+            @media (prefers-color-scheme: dark) {header {border-bottom-color: white;} body {color: white; background-color: black;} hr, h1, h2, h3 {border-top-color: white;} }
         </style>
 
         <!-- Google Analytics -->

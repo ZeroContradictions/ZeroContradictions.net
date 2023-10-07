@@ -1,5 +1,5 @@
 /*** reset ***/
-html, body, div, span, h1, h2, h3, h4, h5, p, a, img, strong, ol, ul, li {
+html, body, header, footer, div, span, h1, h2, h3, h4, h5, p, a, img, strong, ol, ul, li {
     margin: 0;
     padding: 0;
     border: 0;
@@ -22,7 +22,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 }
 
 #table-of-contents ul {
-    margin: 0px 0px 5px 0px;
+    margin-bottom: 5px;
     list-style-type: none;
     font-weight: 600;
     text-decoration: underline;
@@ -109,7 +109,7 @@ sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 
 ul li, ol li {
-    margin: 0px 0px 05px 20px;
+    margin: 0px 0px 5px 20px;
     line-height: 1.3em;
 }
 
