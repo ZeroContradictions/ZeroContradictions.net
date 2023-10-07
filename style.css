@@ -120,7 +120,10 @@ ul li, ol li {
 
 dt { font-weight: bold; }
 
-blockquote { font-style: italic; }
+blockquote {
+    font-style: italic;
+    margin-right: 0;
+}
 
 pre, code { font-family: 'Inconsolata', sans-serif; }
 
