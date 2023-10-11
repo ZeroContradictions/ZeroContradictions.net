@@ -129,7 +129,7 @@ pre, code { font-family: 'Inconsolata', sans-serif; }
 
 figcaption {
     text-align: center;
-    margin: 10px auto 20px auto;
+    margin: 10px auto 20px;
 }
 
 figcaption, img {
