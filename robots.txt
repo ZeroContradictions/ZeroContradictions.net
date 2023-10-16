@@ -3,4 +3,4 @@ Sitemap: https://zerocontradictions.net/sitemap.xml
 Disallow: /images/objectivism-belief-map.pdf
 
 User-agent: ia_archiver
-Disallow: /misc/philosophical-journey
+Disallow: *
