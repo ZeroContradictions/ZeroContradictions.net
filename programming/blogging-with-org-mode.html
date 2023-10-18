@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023 October 17, 10:34 -->
+<!-- 2023 October 18, 01:29 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>How to Design a Blog with Emacs and Org-Mode</title>
@@ -384,44 +384,65 @@ My advice is to write your own CSS file, and view the output of the default org-
 If you would like to overrule the default CSS alignment of the tables, you can use ‘&lt;r&gt;’, ‘&lt;c&gt;’ or ‘&lt;l&gt;’ in a special table cookies row of the table.
 You may also combine alignment and field width like this: ‘&lt;r10&gt;’.
 </p>
-</div>
-</div>
 
+
+<p>
+The CSS file that I use to style my org-mode generated webpages is available under the CC BY 4.0 license.
+To download the template, just click the link below, and press &ldquo;Ctrl + S&rdquo; to save it.
+</p>
+<p>&emsp;&emsp;<a target="_blank" href="./org-mode-CSS-essays-template.css">Download Zero Contradictions Org-Mode CSS Essays Template</a></p>
+<p>
+Anyone can use this CSS template for their own creations as long as they keep the line that attributes me within the file and summarize what they changed (if anything).
+</p>
+</div>
+</div>
 
 <div id="outline-container-homepage-template" class="outline-3">
 <h3 id="homepage-template"><span class="section-number-3">3.2.</span> Using Zero Contradictions&rsquo; Homepage Template</h3>
 <div class="outline-text-3" id="text-homepage-template">
 <p>
-In the interest of creating a bloat-free Internet, I&rsquo;ve decided to release an HTML template that replicates the layout, design, and functionality of my homepage.
-Although I used this design for my homepage, the end result doesn&rsquo;t necessarily have to be used as a homepage if you don&rsquo;t want it that way.
+In the interest of creating a bloat-free Internet with aesthetic webpages and minimalist designs, I (Zero Contradictions) have decided to release an HTML template that replicates the layout, design, and functionality of my homepage under the <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0</a> license.
+Other people may use this HTML template to create their own webpages if they wish, as long as they leave the attribution text to Zero Contradictions in the footer.
+To download the template, just click the link below, and press &ldquo;Ctrl + S&rdquo; to save it.
 </p>
+<p>&emsp;&emsp;<a target="_blank" href="./homepage-template">Download Zero Contradictions Homepage Template</a></p>
 
 <p>
-Instructions For Customizing It:
+The following bullets are instructions for how to customize and build upon the template:
+Instructions For Customizing The Template:
 </p>
 <ul class="org-ul">
-<li>i</li>
-<li>i</li>
-<li>i</li>
+<li>Open the &ldquo;homepage-template.html&rdquo; file with a plain text editor, such as Notepad.</li>
+<li>[[double square brackets\]] are placed around the text that needs to be changed in the file so it’s easy to find all the meta (unseen on the page) information. To add new links and change the information, you’ll want to have a bit of experience with HTML.</li>
+<li>Start scanning for double brackets and fill in the information as needed. Make sure the &lt;title&gt; text has words that tell search engines what you’ve got going on the page. Fill out those meta tags too, just because.</li>
+<li>If you want to verify your website with Google Search Console, you should visit <a href="https://search.google.com/search-console/welcome">Google Search Console&rsquo;s Welcome page</a>, click URL prefix, enter your website&rsquo;s URL, and follow the instructions for adding the verification meta tag to your homepage.</li>
+<li>Likewise, if you want to add Google Analytics to this page, you should follow <a href="https://ahrefs.com/blog/how-to-use-google-analytics/#what-is-google-analytics">these instructions to setup a Google Analytics account</a> and get the code to be added within this page&rsquo;s &lt;head&gt; tag.</li>
+<li>Unless you&rsquo;re familiar with CSS, just leave everything between the &lt;style&gt; and &lt;/style&gt; tags alone. If you are familiar with CSS, go crazy!</li>
+<li>For the link colors, I&rsquo;ve left two different color schemes to choose from, and I&rsquo;ve explained the pros and cons to both of them inside the template itself. If you want to switch to the other scheme, just uncomment the CSS for the other scheme, and comment out and the CSS for the Cretan color scheme.
+<ul class="org-ul">
+<li>Although the link colors are set up to mimic the functionality of the link colors on ZC&rsquo;s website, you could give different purposes, as long as you change their names (<code>blog-posts</code>, <code>videos</code>) everywhere in the .html file to reflect those purposes.</li>
+</ul></li>
+<li>Now, your header image. Just put the filename of the image you&rsquo;re going to use after src=&ldquo; and make sure the image is placed in the same directory on your host as this file. Type in a description of the image as well while you&rsquo;re at it. The image will resize to 160 pixels wide automatically. Or you can delete the whole img tag if you don’t want to use one.</li>
+<li>Fill out the information for introducing the webpage as you please.</li>
+<li>Next, within &lt;nav&gt; tag, you should fill out the category names for the links that you want to display. You may want to also edit the href attribute values in each &lt;a&gt; tag to help your users navigate the site. The text after each hashtag &lt;#&gt; will be displayed in your website&rsquo;s URLs.</li>
+<li>If you want to keep the Javascript code for searching your website site with DuckDuckGo, you should place the canonical URL for your website on the line with <code>query.value = "site:</code>. Be sure to leave a space before the end quote so that DuckDuckGo can search your website correctly. It may take a few days (possibly weeks) after the website is up and running for DuckDuckGo to index your website, before the search bar works correctly.</li>
+<li>Now, you&rsquo;re ready to plug in your links. Each link is in its own &lt;li&gt; tag to keep them on their own line and to give a little space in between. Just replace the text after href=&ldquo; with the direct URL (including <a href="http://">http://</a>) and replace the next set of brackets with the text you want to appear on the page. You&rsquo;ll notice that the first link in the left column has a paragraph right after it but before the closing tag. Make sure to follow this syntax to keep the spacing kosher.</li>
+<li>Want to add another link? Just copy and paste one of those &lt;li&gt;&#x2026;&lt;/li&gt; rows wherever you want it to be. Deleting a link is the opposite.
+<ul class="org-ul">
+<li>I&rsquo;ve provided many different format styles for the types of links that you may use for this page as you build from this template. There format styles vary across the categories, so just cut and paste which format types you want from the available links.</li>
+</ul></li>
+<li>Add a new separating header with &lt;h2&gt;&#x2026;&lt;/h2&gt; or &lt;h3&gt;&#x2026;&lt;/h3&gt; tags wherever you’d like (but, of course, within one of the columns).
+<ul class="org-ul">
+<li>If you want to add new headers to the navigation bar, then be sure to add list items and links within the &lt;nav&gt; tag accordingly.</li>
+</ul></li>
+<li>Want to add a separator line? Figure out where it should go and place an &lt;hr&gt; right there.</li>
+<li>img tags can also be used in columns, just make sure they are in between the &lt;li&gt; and &lt;/li&gt; tags. Style wise, it&rsquo;s probably better to put img tags in between the &lt;li&gt; and the &lt;a&gt; tags.</li>
+<li>Scroll down to the bottom for the footer links. Don&rsquo;t want any? Just delete them all.</li>
+<li>Other information and advice for customizing the template may be found within the template itself and the advice on Zero Contradictions&rsquo; blogging advice page.</li>
+<li>If you plan to use this template as your homepage, or as the default webpage for a web directory, rename the file to &ldquo;index.html&rdquo; and place it in the home folder of your chosen web host.</li>
 </ul>
-
 <p>
-eeeeeeeeee
-</p>
-
-<p>
-eeeeeeeeee
-</p>
-
-<p>
-eeeeeeeeee
-</p>
-
-
-<p>
-This homepage/webpage template was designed by Zero Contradictions and released under the <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0</a> license.
-Other people may use this template HTML code to create their own webpages if they wish, as long as they leave the attribution text to Zero Contradictions in the footer.
-<a href="https://zerocontradictions.net/programming/blogging-with-org-mode#eeeeeeeeeeeeeeeeeeee">Information and guidelines</a> on how to continue developing from this template can be found here.
+And that&rsquo;s it! To make it live, just copy index.html to a public folder on your web host and check it out. If you already have a website going, be careful where you put this so you don’t overwrite the main site file.
 </p>
 
 <p>
@@ -455,6 +476,10 @@ This template is based on the <a href="https://www.joshcanhelp.com/the-drudge-re
 In general, you should <i>be careful where you find images and other content used within your works and how you source them</i>.
 With the advent in AI technology, there has been a substantial increase in threatened and actual litigation involving CC licensed works, thanks to companies like Pixsy.
 These days, there are more and more bots and companies every day whose job is to scour the web looking for people to litigate against, and they&rsquo;ll only become more powerful, while you probably won&rsquo;t.
+</p>
+
+<p>
+It&rsquo;s recommended that all users of creative commons works follow the <a href="https://wiki.creativecommons.org/wiki/Best_practices_for_attribution">Best Practices For Attribution</a> to protect themselves and share the content that they want to share.
 </p>
 </div>
 </div>
@@ -593,6 +618,7 @@ More Advice for SEO:
 <li><a href="https://user-agents.net/bots">List of Potential Bots And User-Agents To Specify robots.txt Rules For</a></li>
 <li>In particular, one may want to write robots.txt rule to prevent the Internet Archive bot, <code>ia_archiver</code> from archiving some or all of their webpages.</li>
 </ul></li>
+<li><a href="https://search.google.com/search-console/welcome">Google Search Console</a> (GSC). GSC provides many tools for monitoring your website&rsquo;s traffic on Google.</li>
 <li><a href="https://ahrefs.com/blog/how-to-use-google-analytics/#what-is-google-analytics">How To Setup Google Analytics</a>
 <ul class="org-ul">
 <li>For Org-Mode users, you can add Google Analytics to your webpages by using the <code>#+html_head:</code> keyword syntax to include the <code>gtag.js</code> code in the exported HTML output.</li>
@@ -643,7 +669,7 @@ System Crafters has also written a <a href="https://systemcrafters.net/publishin
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2023 October 17, 10:34</p>
+<p class="date">Last Modified: 2023 October 18, 01:29</p>
 
           <p class="author">Author: Zero Contradictions</p>
 </div>
