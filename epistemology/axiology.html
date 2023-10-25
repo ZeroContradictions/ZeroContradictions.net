@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023 October 24, 22:38 -->
+<!-- 2023 October 25, 05:32 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Axiology</title>
 <meta name="author" content="Zero Contradictions" />
 <meta name="description" content="Axiology studies the nature, properties, rationality, judgment, and ranking of values. Axiology has implications for ethics, game theory, and political philosophy." />
 <meta name="generator" content="Org Mode" />
+<style>p.factor {margin-top: 15px; margin-bottom: 0;} label { margin-left: 20px } input { margin-left: 20px } </style>
 <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8XK8JC00G"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-S8XK8JC00G'); </script>
 <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
@@ -40,7 +41,11 @@
 <li><a href="#why-reproduction-is-ultimate">4.1. Reproduction As The Most Fundamental Value For All Life</a></li>
 </ul>
 </li>
-<li><a href="#single-measurements-for-multiple-vars">5. General Single Measurements For Multiple Variables</a></li>
+<li><a href="#single-measurements-for-multiple-vars">5. General Single Measurements For Multiple Variables</a>
+<ul>
+<li><a href="#javascript-applet">5.1. Interactive Javascript Applet</a></li>
+</ul>
+</li>
 <li><a href="#applied-axiology">6. Applied Axiology: Introduction To Ethics, Game Theory, And Political Philosophy</a>
 <ul>
 <li><a href="#definitions">6.1. Important Concepts And Definitions Related To Ethics</a></li>
@@ -200,13 +205,13 @@ It&rsquo;s about learning to live with what you can in the Universe.
 </p>
 
 
-<figure id="org21e181c">
+<figure id="orgcf6bfcb">
 <img src="../images/philosophies-proposed-meanings-of-life.png" alt="The meaning of life, according to different philosophers.">
 
 </figure>
 
 
-<figure id="org0447617">
+<figure id="org881c9a0">
 <img src="../images/existentialism-absurdism-nihilism.jpg" alt="Basic relationships between existentialism, absurdism, and nihilism.">
 
 </figure>
@@ -316,132 +321,181 @@ Examples Of General Variables That Depend On Multiple Component Factors:
 If someone believes that it&rsquo;s possible in any one of these scenarios to create a score, ranking, or category that assigns an overall rating for all the individual components together, then they also have to accept that the same can be done for all the other cases in this list, if they wish to be logically consistent.
 The second way to be logically consistent is to believe that it&rsquo;s never possible to create variables that measure all these characteristics overall, but that is less reasonable because it would require denying knowledge that has predictive and explanatory power.
 </p>
+</div>
 
 
-
-<br>
-<br>
+<div id="outline-container-javascript-applet" class="outline-3">
+<h3 id="javascript-applet"><span class="section-number-3">5.1.</span> Interactive Javascript Applet</h3>
+<div class="outline-text-3" id="text-javascript-applet">
 <p>Select a general variable that is computed from multiple component factors from the drop-down list.</p>
-<select id="label-options">
-  <option value="1">Land Value Appraisal</option>
-  <option value="2">Location Value Appraisal</option>
-  <option value="3">IQ Calculation</option>
-  <option value="4">Language Proficiency Rating</option>
-  <option value="5">Weighted Grading Calculation</option>
+<select id="gFactorSelect">
+  <option>Land Value Appraisal</option>
+  <option>Location Value Appraisal</option>
+  <option>IQ Calculation</option>
+  <option>Language Proficiency Rating</option>
+  <option>Weighted Grading Calculation</option>
 </select>
-<br>
-<br>
-<p>First component label to be displayed...</p>
-<label for="score1">Score (0 to 100):</label>
-<input type="range" id="score1" min="0" max="100" value="50">
-<label for="weight1">Weight (0 to 100):</label>
-<input type="range" id="weight1" min="0" max="100" value="50">
-<br>
-<p>Second component label to be displayed...</p>
-<label for="score2">Score (0 to 100):</label>
-<input type="range" id="score2" min="0" max="100" value="50">
-<label for="weight2">Weight (0 to 100):</label>
-<input type="range" id="weight2" min="0" max="100" value="50">
-<br>
-<p>Third component label to be displayed...</p>
-<label for="score3">Score (0 to 100):</label>
-<input type="range" id="score3" min="0" max="100" value="50">
-<label for="weight3">Weight (0 to 100):</label>
-<input type="range" id="weight3" min="0" max="100" value="50">
-<br>
-<p>Fourth component label to be displayed...</p>
-<label for="score4">Score (0 to 100):</label>
-<input type="range" id="score4" min="0" max="100" value="50">
-<label for="weight4">Weight (0 to 100):</label>
-<input type="range" id="weight4" min="0" max="100" value="50">
-<br>
-<p>Fifth component label to be displayed...</p>
-<label for="score5">Score (0 to 100):</label>
-<input type="range" id="score5" min="0" max="100" value="50">
-<label for="weight5">Weight (0 to 100):</label>
-<input type="range" id="weight5" min="0" max="100" value="50">
-<br>
-<br>
-<p>The g-factor label to be displayed...</p>
-<label for="g_factor">The Computed Score for the g-Factor (between 0 and 100):</label>
-<input type="range" id="g_factor" value="disabled" disabled min="0" max="100">
-<br>
+
+<p class="factor"></p>
+<label for="score1">Score:</label>
+<input class="scoreSlider" id="score1" type="range" min="0" max="100" value="50">
+<label class="scoreDisplay" for="score1"></label>
+<label for="weight1">Weight:</label>
+<input class="weightSlider" id="weight1" type="range" min="0" max="100">
+<label class="weightDisplay" for="weight1"></label>
+
+<p class="factor"></p>
+<label for="score2">Score:</label>
+<input class="scoreSlider" id="score2" type="range" min="0" max="100" value="50">
+<label class="scoreDisplay" for="score2"></label>
+<label for="weight2">Weight:</label>
+<input class="weightSlider" id="weight2" type="range" min="0" max="100">
+<label class="weightDisplay" for="weight2"></label>
+
+<p class="factor"></p>
+<label for="score3">Score:</label>
+<input class="scoreSlider" id="score3" type="range" min="0" max="100" value="50">
+<label class="scoreDisplay" for="score3"></label>
+<label for="weight3">Weight:</label>
+<input class="weightSlider" id="weight3" type="range" min="0" max="100">
+<label class="weightDisplay" for="weight3"></label>
+
+<p class="factor"></p>
+<label for="score4">Score:</label>
+<input class="scoreSlider" id="score4" type="range" min="0" max="100" value="50">
+<label class="scoreDisplay" for="score4"></label>
+<label for="weight4">Weight:</label>
+<input class="weightSlider" id="weight4" type="range" min="0" max="100">
+<label class="weightDisplay" for="weight4"></label>
+
+<p class="factor"></p>
+<label for="score5">Score:</label>
+<input class="scoreSlider" id="score5" type="range" min="0" max="100" value="50">
+<label class="scoreDisplay" for="score5"></label>
+<label for="weight5">Weight:</label>
+<input class="weightSlider" id="weight5" type="range" min="0" max="100">
+<label class="weightDisplay" for="weight5"></label>
+
+<p class="factor"></p>
+<label for="gFactorSlider">Score:</label>
+<input type="range" id="gFactorSlider" disabled min="0" max="100">
+<label id="gFactorDisplay" for="gFactorSlider"></label>
 <br>
 <br>
 
 <script>
-function changeDisplayLabels() {
-var selectedLabelSet = document.getElementById("label-options");
-var labelSet = selectedLabelSet.value;
+  let factors        = document.getElementsByClassName("factor");
+  let scoreSliders   = document.getElementsByClassName("scoreSlider");
+  let scoreDisplays  = document.getElementsByClassName("scoreDisplay");
+  let weightSliders  = document.getElementsByClassName("weightSlider");
+  let weightDisplays = document.getElementsByClassName("weightDisplay");
+  let gFactorSelect  = document.getElementById("gFactorSelect");
+  let gFactorSlider  = document.getElementById("gFactorSlider");
+  let gFactorDisplay = document.getElementById("gFactorDisplay");
 
+  gFactorSelect.addEventListener("input", handleGFactorChange);
 
-// Update The Display Labels For Each Component Factor..
+  for (let i = 0; i < scoreSliders.length; ++i)
+    scoreSliders[i].addEventListener("input", handleScoreChange);
 
+  for (let i = 0; i < weightSliders.length; ++i) {
+    weightSliders[i].addEventListener("input", handleWeightChange);
+    weightSliders[i].value = 100 / weightSliders.length;
+  }
 
-}
+  handleGFactorChange();
+  handleScoreChange();
+  handleWeightChange();
 
-changeDisplayLabels();
+  function handleGFactorChange() {
+    switch (gFactorSelect.value) {
+      case "Land Value Appraisal":
+        factors[0].textContent = "Location Value Appraisal";
+        factors[1].textContent = "Soil / Wind / Solar Quality";
+        factors[2].textContent = "Natural Resources";
+        factors[3].textContent = "Real Estate Area";
+        factors[4].textContent = "Inseparable Improvements to Land";
+        break;
 
-// Scores For Each Component Factor
-const score1 = document.getElementById('score1');
-const score2 = document.getElementById('score2');
-const score3 = document.getElementById('score3');
-const score4 = document.getElementById('score4');
-const score5 = document.getElementById('score5');
+      case "Location Value Appraisal":
+        factors[0].textContent = "Proximity to Shops";
+        factors[1].textContent = "Proximity to Businesses";
+        factors[2].textContent = "Proximity to Schools / Parks";
+        factors[3].textContent = "Proximity to Job Markets";
+        factors[4].textContent = "Proximity to Transportation Networks";
+        break;
 
-// Weights For Each Component Factor
-const weight1 = document.getElementById('weight1');
-const weight2 = document.getElementById('weight2');
-const weight3 = document.getElementById('weight3');
-const weight4 = document.getElementById('weight4');
-const weight5 = document.getElementById('weight5');
+      case "IQ Calculation":
+        factors[0].textContent = "Logical Reasoning";
+        factors[1].textContent = "Visual-Spatial Reasoning";
+        factors[2].textContent = "Verbal Reasoning";
+        factors[3].textContent = "Short-Term Memory";
+        factors[4].textContent = "Mathematical Reasoning";
+        break;
 
-const g_factor = document.getElementById('g_factor');
+      case "Language Proficiency Rating":
+        factors[0].textContent = "Speaking Proficiency";
+        factors[1].textContent = "Reading Proficiency";
+        factors[2].textContent = "Writing Proficiency";
+        factors[3].textContent = "Listening Proficiency";
+        factors[4].textContent = "Vocabulary Proficiency";
+        break;
 
-const scores = [score1, score2, score3, score4, score5];
-const weights = [weight1, weight2, weight3, weight4, weight5];
+      case "Weighted Grading Calculation":
+        factors[0].textContent = "Daily Participation";
+        factors[1].textContent = "Homework Assignments";
+        factors[2].textContent = "Projects";
+        factors[3].textContent = "Tests";
+        factors[4].textContent = "Final Exam";
+        break;
+    }
 
-function updateWeights() {
-  let sum = 0;
-  weights.forEach((weight) => {
-      sum += parseInt(weight.value);
-  });
+    factors[5].textContent = gFactorSelect.value;
+  }
 
-  weights.forEach((weight) => {
-      const newValue = weight.value * (g_factor.value / sum);
-      weight.value = newValue;
-  });
-}
+  function handleScoreChange() {
+    for (let i = 0; i < scoreSliders.length; ++i)
+      scoreDisplays[i].textContent = scoreSliders[i].value;
 
-weights.forEach((weight) => {
-  weight.addEventListener('input', updateWeights);
-});
+    computeGFactor();
+  }
 
-g_factor.addEventListener('input', () => {
-  updateWeights();
-});
+  function handleWeightChange() {
+    let sum = 0;
 
+    for (let i = 0; i < weightSliders.length; ++i)
+        sum += parseInt(weightSliders[i].value);
 
-// Calculate Total Weighted Score
-let total_score = (score1 * weight1) +
-                  (score2 * weight2) +
-                  (score3 * weight3) +
-                  (score4 * weight4) +
-                  (score5 * weight5);
+    let offset = (sum - 100) / (weightSliders.length - 1);
 
-// g-Factor Score
-document.getElementById('g_factor').textContent = total_score;
+    for (let i = 0; i < weightSliders.length; ++i) {
+      if (weightSliders[i] != this)
+        weightSliders[i].value -= offset;
 
-updateWeights();
+      weightDisplays[i].textContent = weightSliders[i].value + "%";
+    }
+
+    computeGFactor();
+  }
+
+  function computeGFactor() {
+    let sum = 0;
+
+    for (let i = 0; i < scoreSliders.length; ++i)
+      sum += scoreSliders[i].value * weightSliders[i].value;
+
+    gFactorDisplay.textContent = gFactorSlider.value = Math.round(sum / 100);
+  }
 </script>
+
 
 
 <p>
 As we see visually with the score and weight sliders:
 </p>
 <ol class="org-ol">
-<li>The weighted ranking of different factors affects the calculation of IQ scores.</li>
-<li>Higher g-factors correlate with higher s-factors and vice versa. Thus even if the calculation of g-factors is subjective, there is still some good basis for it.</li>
+<li>The weighted ranking of different factors affects the calculation of the general single measurement (GSM) scores.</li>
+<li>Higher s-factors tend to correlate with higher g-factors and vice versa. Thus even if the calculation of g-factors is subjective, there is still some good basis for it.</li>
 </ol>
 <p>
 Some g-factor calculations will be better (more fair) than others, but generally speaking, the fairer calculation methods tend to be favored over the biased calculation methods, according to concensus.
@@ -457,6 +511,7 @@ If both of these general measures are based on multiple different factors, and o
 <p>
 <a href="https://en.wikipedia.org/wiki/Goodhart%27s_law">Goodhart&rsquo;s Law</a>, Composition Fallacies, and Division Fallacies are often applicable to many of these phenomena.
 </p>
+</div>
 </div>
 </div>
 
@@ -523,7 +578,7 @@ The &ldquo;Power Process&rdquo; is a term coined by Ted Kaczynski (the Unabomber
 </div>
 </div></div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2023 October 24, 22:38</p>
+<p class="date">Last Modified: 2023 October 25, 05:32</p>
 
           <p class="author">Author: Zero Contradictions</p>
 </div>
