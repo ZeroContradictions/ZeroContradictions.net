@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023 November 04, 05:51 -->
+<!-- 2023 November 04, 12:58 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Axiology</title>
@@ -206,15 +206,17 @@ It&rsquo;s about learning to live with what you can in the Universe.
 </p>
 
 
-<figure id="org462d6a3">
+<figure id="org68ff577">
 <img src="../images/philosophies-proposed-meanings-of-life.png" alt="The meaning of life, according to different philosophers.">
 
+<figcaption><span class="figure-number">Figure 1: </span>The meaning of life, according to different philosophers.</figcaption>
 </figure>
 
 
-<figure id="org268bd40">
+<figure id="org356be64">
 <img src="../images/existentialism-absurdism-nihilism.jpg" alt="Basic relationships between existentialism, absurdism, and nihilism.">
 
+<figcaption><span class="figure-number">Figure 2: </span>The basic relationships between existentialism, absurdism, and nihilism.</figcaption>
 </figure>
 
 <p>
@@ -319,14 +321,11 @@ Examples of g-Factors that depend on multiple s-Factors:
 </ul>
 
 
-<figure id="orgc16ae46">
+<figure id="org5a2648e">
 <img src="../images/s-factors.png" alt="Illustration of s-factors for computing the IQ as a g-factor." width="450">
 
+<figcaption><span class="figure-number">Figure 3: </span>IQ is an example of a g-factor that is calculated based on numerous s-factors that each influence and deviate from the g-factor.</figcaption>
 </figure>
-
-<p>
-As we can see in the image above, IQ is an example of a g-factor that is calculated based on numerous s-factors that each influence and deviate from the g-factor.
-</p>
 </div>
 
 <div id="outline-container-validity-of-g-factors" class="outline-3">
@@ -387,10 +386,10 @@ The justification would most likely be that the assumptions for computing g-fact
 </ul>
 
 
-<figure id="org3e7c96d">
+<figure id="org77c05ba">
 <img src="../images/goodharts-law.jpg" alt="Illustrating how different measurements may yield different results under Goodhart's Law." width="450">
 
-<figcaption><span class="figure-number">Figure 1: </span>According to Goodhart&rsquo;s Law, measurements cease to be good measurements when they become targets. If this happens, different measurements will yield different results.</figcaption>
+<figcaption><span class="figure-number">Figure 4: </span>According to Goodhart&rsquo;s Law, measurements cease to be good measurements when they become targets. If this happens, different measurements will yield different results.</figcaption>
 </figure>
 
 <p>
@@ -416,7 +415,7 @@ For example, some of the most widely accepted guidelines for measuring general l
 Likewise, some notable IQ tests include the <a href="https://www.mensa.org/public/mensa-iq-challenge">Mensa IQ Challenge</a>, the <a href="https://en.wikipedia.org/wiki/Wechsler_Adult_Intelligence_Scale">Wechsler Adult Intelligence Scale</a>, and <a href="https://en.wikipedia.org/wiki/Intelligence_quotient#Current_tests">other tests</a>.
 Some g-factor weightings will be better (more fair) than others, depending on who you ask.
 But generally speaking, it&rsquo;s usually possible to reach a consensus or majority opinion that favors &ldquo;fairer&rdquo; weightings over more biased weightings.
-The weights used for the GM calculations may be subjective or inter-subjective, but they aren&rsquo;t completely arbitrary.
+The weights used for the g-factor calculations may be subjective or inter-subjective, but they aren&rsquo;t completely arbitrary.
 </p>
 </div>
 </div>
@@ -425,195 +424,229 @@ The weights used for the GM calculations may be subjective or inter-subjective, 
 <h3 id="javascript-applet"><span class="section-number-3">5.2.</span> Interactive Javascript Applet</h3>
 <div class="outline-text-3" id="text-javascript-applet">
 <p>
-This JavaScript applet features multiple sliders that can model how different scores and weights for s-factors affect the resulting g-factors.
+This goal of this JavaScript applet is to demonstrate the visual intuition for how land values, IQ scores, language, proficiency, and other g-factors are computed.
+As such, it features multiple sliders that can model how different scores and weights for s-factors affect the resulting g-factors.
 </p>
 
 <p>
-This goal of this applet is to demonstrate the visual intuition for how land values, IQ scores, language, proficiency, and other g-factors are computed.
+<b>Explaining How The Applet Works</b>
 </p>
 
 <p>
-The point that this visual interactive demonstration will convey as that yes, there are many different ways to give a general measurement of something based on multiple different factors, but the bottom line is that the general score, correlates, or it tends to be representative of all the different factors.
+Each slider has some text above it to help us conceptualize each score as an s-factor, and the g-factor label changes to the corresponding text that is selected from the drop down menu.
+A numerical value is displayed to the right of every slider in order to indicate what its value is.
 </p>
-
 
 <p>
-Select a g-factor that is computed from multiple s-factors from the drop-down list.
+The g-factor slider uniquely cannot be changed manually, hence why it is grayed-out.
+The g-factor slider can only increase or decrease in value by changing the scores and/or weights for the s-factors.
 </p>
-<select id="gFactorSelect">
-  <option>Land Value Appraisal</option>
-  <option>Location Value Appraisal</option>
-  <option>IQ Calculation</option>
-  <option>General Language Proficiency</option>
-  <option>Weighted Grading Calculation</option>
-</select>
 
-<p class="factor"></p>
-<label for="score1">Score:</label>
-<input class="scoreSlider" id="score1" type="range" min="0" max="100" value="50">
-<label class="scoreDisplay" for="score1"></label>
-<label for="weight1">Weight:</label>
-<input class="weightSlider" id="weight1" type="range" min="0" max="100">
-<label class="weightDisplay" for="weight1"></label>
+<p>
+The score sliders <i>and</i> the g-factor slider can be anywhere from 0 to 100, while the sum of the values from all the weight sliders <i>always</i> add up to 100, since they are percentages.
+Increasing the weight of one s-factor with a slider will thus decrease the weights of all the other s-factors, starting with the most highly weighted slider.
+As a consequence of the applet&rsquo;s design, this can make it somewhat tedious to <i>precisely</i> allocate the weights for each factor to the exact numeric values that one wants, but this applet still accomplishes its goal at illustrating and modeling the calculation of g-factors using the scores and weights of s-factors.
+</p>
 
-<p class="factor"></p>
-<label for="score2">Score:</label>
-<input class="scoreSlider" id="score2" type="range" min="0" max="100" value="50">
-<label class="scoreDisplay" for="score2"></label>
-<label for="weight2">Weight:</label>
-<input class="weightSlider" id="weight2" type="range" min="0" max="100">
-<label class="weightDisplay" for="weight2"></label>
+<p>
+Using the applet is straight-forward.
+The user begins by selecting a g-factor that is computed from multiple s-factors from the drop-down list.
+And they proceed by changing the scores and weights for the s-factors, while observing how these changes affect the selected g-factor.
+</p>
 
-<p class="factor"></p>
-<label for="score3">Score:</label>
-<input class="scoreSlider" id="score3" type="range" min="0" max="100" value="50">
-<label class="scoreDisplay" for="score3"></label>
-<label for="weight3">Weight:</label>
-<input class="weightSlider" id="weight3" type="range" min="0" max="100">
-<label class="weightDisplay" for="weight3"></label>
+  <select id="gFactorSelect">
+    <option>Land Value Appraisal</option>
+    <option>Location Value Appraisal</option>
+    <option>IQ Calculation</option>
+    <option>General Language Proficiency</option>
+    <option>Weighted Grading Calculation</option>
+  </select>
 
-<p class="factor"></p>
-<label for="score4">Score:</label>
-<input class="scoreSlider" id="score4" type="range" min="0" max="100" value="50">
-<label class="scoreDisplay" for="score4"></label>
-<label for="weight4">Weight:</label>
-<input class="weightSlider" id="weight4" type="range" min="0" max="100">
-<label class="weightDisplay" for="weight4"></label>
+  <p class="factor"></p>
+  <label for="score1">Score:</label>
+  <input class="scoreSlider" id="score1" type="range" min="0" max="100" value="50">
+  <label class="scoreDisplay" for="score1"></label>
+  <label for="weight1">Weight:</label>
+  <input class="weightSlider" id="weight1" type="range" min="0" max="100">
+  <label class="weightDisplay" for="weight1"></label>
 
-<p class="factor"></p>
-<label for="score5">Score:</label>
-<input class="scoreSlider" id="score5" type="range" min="0" max="100" value="50">
-<label class="scoreDisplay" for="score5"></label>
-<label for="weight5">Weight:</label>
-<input class="weightSlider" id="weight5" type="range" min="0" max="100">
-<label class="weightDisplay" for="weight5"></label>
+  <p class="factor"></p>
+  <label for="score2">Score:</label>
+  <input class="scoreSlider" id="score2" type="range" min="0" max="100" value="50">
+  <label class="scoreDisplay" for="score2"></label>
+  <label for="weight2">Weight:</label>
+  <input class="weightSlider" id="weight2" type="range" min="0" max="100">
+  <label class="weightDisplay" for="weight2"></label>
 
-<p class="factor"></p>
-<label for="gFactorSlider">Score:</label>
-<input type="range" id="gFactorSlider" disabled min="0" max="100">
-<label id="gFactorDisplay" for="gFactorSlider"></label>
-<br>
-<br>
+  <p class="factor"></p>
+  <label for="score3">Score:</label>
+  <input class="scoreSlider" id="score3" type="range" min="0" max="100" value="50">
+  <label class="scoreDisplay" for="score3"></label>
+  <label for="weight3">Weight:</label>
+  <input class="weightSlider" id="weight3" type="range" min="0" max="100">
+  <label class="weightDisplay" for="weight3"></label>
 
-<script>
-  let factors        = document.getElementsByClassName("factor");
-  let scoreSliders   = document.getElementsByClassName("scoreSlider");
-  let scoreDisplays  = document.getElementsByClassName("scoreDisplay");
-  let weightSliders  = document.getElementsByClassName("weightSlider");
-  let weightDisplays = document.getElementsByClassName("weightDisplay");
-  let gFactorSelect  = document.getElementById("gFactorSelect");
-  let gFactorSlider  = document.getElementById("gFactorSlider");
-  let gFactorDisplay = document.getElementById("gFactorDisplay");
+  <p class="factor"></p>
+  <label for="score4">Score:</label>
+  <input class="scoreSlider" id="score4" type="range" min="0" max="100" value="50">
+  <label class="scoreDisplay" for="score4"></label>
+  <label for="weight4">Weight:</label>
+  <input class="weightSlider" id="weight4" type="range" min="0" max="100">
+  <label class="weightDisplay" for="weight4"></label>
 
-  gFactorSelect.addEventListener("input", handleGFactorChange);
+  <p class="factor"></p>
+  <label for="score5">Score:</label>
+  <input class="scoreSlider" id="score5" type="range" min="0" max="100" value="50">
+  <label class="scoreDisplay" for="score5"></label>
+  <label for="weight5">Weight:</label>
+  <input class="weightSlider" id="weight5" type="range" min="0" max="100">
+  <label class="weightDisplay" for="weight5"></label>
 
-  for (let i = 0; i < scoreSliders.length; ++i)
-    scoreSliders[i].addEventListener("input", handleScoreChange);
+  <p class="factor"></p>
+  <label for="gFactorSlider">Score:</label>
+  <input type="range" id="gFactorSlider" disabled min="0" max="100">
+  <label id="gFactorDisplay" for="gFactorSlider"></label>
+  <br>
+  <br>
 
-  for (let i = 0; i < weightSliders.length; ++i) {
-    weightSliders[i].addEventListener("input", handleWeightChange);
-    weightSliders[i].value = 100 / weightSliders.length;
-  }
+  <script>
+    let factors        = document.getElementsByClassName("factor");
+    let scoreSliders   = document.getElementsByClassName("scoreSlider");
+    let scoreDisplays  = document.getElementsByClassName("scoreDisplay");
+    let weightSliders  = document.getElementsByClassName("weightSlider");
+    let weightDisplays = document.getElementsByClassName("weightDisplay");
+    let gFactorSelect  = document.getElementById("gFactorSelect");
+    let gFactorSlider  = document.getElementById("gFactorSlider");
+    let gFactorDisplay = document.getElementById("gFactorDisplay");
 
-  handleGFactorChange();
-  handleScoreChange();
-  handleWeightChange();
+    gFactorSelect.addEventListener("input", handleGFactorChange);
 
-  function handleGFactorChange() {
-    switch (gFactorSelect.value) {
-      case "Land Value Appraisal":
-        factors[0].textContent = "Location Value Appraisal";
-        factors[1].textContent = "Soil / Wind / Solar Quality";
-        factors[2].textContent = "Natural Resources";
-        factors[3].textContent = "Real Estate Area";
-        factors[4].textContent = "Inseparable Improvements to Land";
-        break;
-
-      case "Location Value Appraisal":
-        factors[0].textContent = "Proximity to Shops / Businesses";
-        factors[1].textContent = "Proximity to Schools / Parks";
-        factors[2].textContent = "Proximity to Job Markets";
-        factors[3].textContent = "Proximity to Transportation Networks";
-        factors[4].textContent = "Vulnerability to Natural Disasters and Pests/Weeds";
-        break;
-
-      case "IQ Calculation":
-        factors[0].textContent = "Logical Reasoning";
-        factors[1].textContent = "Visual-Spatial Reasoning";
-        factors[2].textContent = "Verbal Reasoning";
-        factors[3].textContent = "Short-Term Memory";
-        factors[4].textContent = "Mathematical Reasoning";
-        break;
-
-      case "General Language Proficiency":
-        factors[0].textContent = "Speaking Proficiency";
-        factors[1].textContent = "Reading Proficiency";
-        factors[2].textContent = "Writing Proficiency";
-        factors[3].textContent = "Listening Proficiency";
-        factors[4].textContent = "Vocabulary Proficiency";
-        break;
-
-      case "Weighted Grading Calculation":
-        factors[0].textContent = "Daily Participation";
-        factors[1].textContent = "Homework Assignments";
-        factors[2].textContent = "Projects";
-        factors[3].textContent = "Tests";
-        factors[4].textContent = "Final Exam";
-        break;
-    }
-
-    factors[5].textContent = gFactorSelect.value;
-  }
-
-  function handleScoreChange() {
     for (let i = 0; i < scoreSliders.length; ++i)
-      scoreDisplays[i].textContent = scoreSliders[i].value;
-
-    computeGFactor();
-  }
-
-  function handleWeightChange() {
-    let sum = 0;
-
-    for (let i = 0; i < weightSliders.length; ++i)
-        sum += parseInt(weightSliders[i].value);
-
-    let offset = (sum - 100) / (weightSliders.length - 1);
+      scoreSliders[i].addEventListener("input", handleScoreChange);
 
     for (let i = 0; i < weightSliders.length; ++i) {
-      if (weightSliders[i] != this)
-        weightSliders[i].value -= offset;
-
-      weightDisplays[i].textContent = weightSliders[i].value + "%";
+      weightSliders[i].addEventListener("input", handleWeightChange);
+      weightSliders[i].value = 100 / weightSliders.length;
     }
 
-    computeGFactor();
-  }
+    handleGFactorChange();
+    handleScoreChange();
+    handleWeightChange();
 
-  function computeGFactor() {
-    let sum = 0;
+    function handleGFactorChange() {
+      switch (gFactorSelect.value) {
+        case "Land Value Appraisal":
+          factors[0].textContent = "Location Value Appraisal";
+          factors[1].textContent = "Soil / Wind / Solar Quality";
+          factors[2].textContent = "Natural Resources";
+          factors[3].textContent = "Real Estate Area";
+          factors[4].textContent = "Inseparable Improvements to Land";
+          break;
 
-    for (let i = 0; i < scoreSliders.length; ++i)
-      sum += scoreSliders[i].value * weightSliders[i].value;
+        case "Location Value Appraisal":
+          factors[0].textContent = "Proximity to Shops / Businesses";
+          factors[1].textContent = "Proximity to Schools / Parks";
+          factors[2].textContent = "Proximity to Job Markets";
+          factors[3].textContent = "Proximity to Transportation Networks";
+          factors[4].textContent = "Vulnerability to Natural Disasters and Pests/Weeds";
+          break;
 
-    gFactorDisplay.textContent = gFactorSlider.value = Math.round(sum / 100);
-  }
-</script>
+        case "IQ Calculation":
+          factors[0].textContent = "Logical Reasoning";
+          factors[1].textContent = "Visual-Spatial Reasoning";
+          factors[2].textContent = "Verbal Reasoning";
+          factors[3].textContent = "Short-Term Memory";
+          factors[4].textContent = "Mathematical Reasoning";
+          break;
 
+        case "General Language Proficiency":
+          factors[0].textContent = "Speaking Proficiency";
+          factors[1].textContent = "Reading Proficiency";
+          factors[2].textContent = "Writing Proficiency";
+          factors[3].textContent = "Listening Proficiency";
+          factors[4].textContent = "Vocabulary Proficiency";
+          break;
+
+        case "Weighted Grading Calculation":
+          factors[0].textContent = "Daily Participation";
+          factors[1].textContent = "Homework Assignments";
+          factors[2].textContent = "Projects";
+          factors[3].textContent = "Tests";
+          factors[4].textContent = "Final Exam";
+          break;
+      }
+
+      factors[5].textContent = gFactorSelect.value;
+    }
+
+    function handleScoreChange() {
+      for (let i = 0; i < scoreSliders.length; ++i)
+        scoreDisplays[i].textContent = scoreSliders[i].value;
+
+      computeGFactor();
+    }
+
+    function handleWeightChange() {
+      let sum = 0;
+
+      for (let i = 0; i < weightSliders.length; ++i)
+          sum += parseInt(weightSliders[i].value);
+
+      let offset = (sum - 100) / (weightSliders.length - 1);
+
+      for (let i = 0; i < weightSliders.length; ++i) {
+        if (weightSliders[i] != this)
+          weightSliders[i].value -= offset;
+
+        weightDisplays[i].textContent = weightSliders[i].value + "%";
+      }
+
+      computeGFactor();
+    }
+
+    function computeGFactor() {
+      let sum = 0;
+for (let i = 0; i < scoreSliders.length; ++i)
+        sum += scoreSliders[i].value * weightSliders[i].value;
+
+      gFactorDisplay.textContent = gFactorSlider.value = Math.round(sum / 100);
+    }
+  </script>
+<p>
+The formula for calculating g-factor is:<br>
+<code>g-factor = score_1 * weight_1 + score_2 * weight_2 + ... + score_5 * weight_5</code>.
+</p>
 
 <p>
-As we see visually with the score and weight sliders:
+This tutorial has some notes and limitations that should be pointed out:
+</p>
+<ul class="org-ul">
+<li>The scores and weights for only five s-factors are displayed here, but there may be far more than just five s-factors for affecting a resulting g-factor in the real world.</li>
+<li>Fewer than five s-factors can be achieved in this demonstration by assigning an s-factor a weight of 0%, which mathematically excludes that s-factor from being used to compute the g-factor.</li>
+<li>All the s-factor and g-factor sliders are limited to values between 0 and 100 in this demonstration. In the real world, these scores often exceed 100 for the units that they use, but it&rsquo;s too cumbersome to represent values that may go scale up to billions of units, especially for demonstration purposes only.</li>
+<li>g-factors and s-factors that have economic values are not displayed as having monetary units (e.g. dollars, euros, yen, etc), whereas they would be labeled and measured with various currencies in the real world.</li>
+</ul>
+
+<p>
+As we can see by interacting with the score and weight sliders, the main takeaways here are:
 </p>
 <ol class="org-ol">
-<li>The weighted ranking of different factors affects the calculation of the general measurement (GM) scores.</li>
-<li>Higher s-factors tend to correlate with higher g-factors and vice versa. Thus even if the calculation of g-factors is subjective, there is still some good basis for it.</li>
+<li>The weighted ranking of different s-factors affects the calculation of the g-factor scores.</li>
+<li>There are indeed many different ways to compute g-factors that are based on multiple different s-factors, but g-factor assessments that that use different weightings tend to correlate with each other.</li>
+<li>Higher s-factors tend to correlate with higher g-factors and vice versa.</li>
+<li>Thus even if the calculation of g-factors is subjective, there is still some good basis for it. Overall, it is possible to create &ldquo;fair&rdquo; g-factors that are representative of all the different s-factors.</li>
 </ol>
 
+<p>
+For IQ (general intelligence) specifically, we should acknowledge that it is estimated to be ~80% inheritable (genetic) and 20% environmental.
+This is different from how IQ is tested and measured, which depends on a weighted and scoring criteria for s-factors.
+</p>
 
 <p>
 Mathematically, we can conceptualize the <a href="https://en.wikipedia.org/wiki/Power_set">power set</a> of s-factors as all the possible sets of s-factors that could be used to compute a g-factor.
 Sometimes, a g-factor in one context can even be an s-factor in another context, and vice versa.
 For example, location value appraisal is a g-factor that is computed based on a location&rsquo;s proximity to shops, markets, transportation networks, etc (among other things), but location value appraisal is also one of the multiple s-factors that are used to compute the land value appraisal g-factor.
+More generally, <a href="../civilization/georgism-crash-course#NRT-bootstrap-prices">prices are a great example of g-factors</a> that depend on other g-factors.
 </p>
 </div>
 </div>
@@ -686,7 +719,7 @@ An assessment or weighting criteria may attempt to estimate a g-factor, but the 
 </div>
 </div></div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2023 November 04, 05:51</p>
+<p class="date">Last Modified: 2023 November 04, 12:58</p>
 
           <p class="author">Author: Zero Contradictions</p>
 </div>
