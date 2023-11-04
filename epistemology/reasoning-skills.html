@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023 October 23, 05:33 -->
+<!-- 2023 November 04, 05:23 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Reasoning Skills</title>
@@ -48,11 +48,7 @@
 <li><a href="#bayes-theorem">4.1. Bayes&rsquo; Theorem</a></li>
 <li><a href="#correlation-and-causation">4.2. Correlation &amp; Causation</a></li>
 <li><a href="#conjunction-fallacy">4.3. The Conjunction Fallacy</a></li>
-<li><a href="#type-1-and-2-errors">4.4. Type I And Type II Errors</a>
-<ul>
-<li><a href="#org65f0a00">4.4.1. Alternate Table In Terms Of True/False Positives/Negatives</a></li>
-</ul>
-</li>
+<li><a href="#type-1-and-2-errors">4.4. Type I And Type II Errors</a></li>
 <li><a href="#regression-to-mean">4.5. Understanding Regression to the Mean</a></li>
 </ul>
 </li>
@@ -75,14 +71,20 @@
 <li><a href="#fallacies">7. Fallacies</a>
 <ul>
 <li><a href="#ad-hominems">7.1. Ad Hominem Fallacies</a></li>
-<li><a href="#appeal-to-authority">7.2. Appeal to Authority</a></li>
-<li><a href="#appeal-to-the-people">7.3. Appeal to the People</a></li>
-<li><a href="#begging-question">7.4. Begging the Question</a></li>
-<li><a href="#category-errors">7.5. Category Errors</a></li>
-<li><a href="#false-equivocation">7.6. False Equivocation</a></li>
-<li><a href="#anecdotal">7.7. Anecdotal</a></li>
-<li><a href="#slippery-slope">7.8. Slippery Slope</a></li>
-<li><a href="#appeal-to-consequences">7.9. Appeal to Consequences</a></li>
+<li><a href="#straw-man-hollow-man">7.2. Straw Man and Hollow Man</a></li>
+<li><a href="#begging-question">7.3. Begging the Question</a></li>
+<li><a href="#anecdotal">7.4. Anecdotal</a></li>
+<li><a href="#false-equivocation">7.5. False Equivocation</a>
+<ul>
+<li><a href="#category-errors">7.5.1. Category Errors</a></li>
+<li><a href="#composition-and-division-fallacies">7.5.2. Composition And Division Fallacies</a></li>
+</ul>
+</li>
+<li><a href="#slippery-slope">7.6. Slippery Slope</a></li>
+<li><a href="#appeal-to-consequences">7.7. Appeal to Consequences</a></li>
+<li><a href="#appeal-to-the-people">7.8. Appeal to the People</a></li>
+<li><a href="#appeal-to-authority">7.9. Appeal to Authority</a></li>
+<li><a href="#vast-literature-fallacy">7.10. The Vast Literature Fallacy</a></li>
 </ul>
 </li>
 <li><a href="#cognitive-biases">8. Cognitive Biases</a>
@@ -96,6 +98,7 @@
 <li><a href="#question-evasion-techniques">9. Question Evasion Techniques</a>
 <ul>
 <li><a href="#tactical-nihilism">9.1. Tactical Nihilism</a></li>
+<li><a href="#tactical-empiricism">9.2. Tactical Empiricism</a></li>
 </ul>
 </li>
 <li><a href="#hierarchy-of-disagreement">10. Graham&rsquo;s Hierarchy Of Disagreement</a></li>
@@ -114,7 +117,7 @@
 <ul>
 <li><a href="#proving-universals">12.5.1. To prove a universal statement (∀x.P(x))</a></li>
 <li><a href="#proving-universals-in-domain">12.5.2. To prove a universal statement (∀x.P(x)) over a restricted domain</a></li>
-<li><a href="#org4ee0294">12.5.3. To prove a universal statement and implication</a></li>
+<li><a href="#org00936fc">12.5.3. To prove a universal statement and implication</a></li>
 </ul>
 </li>
 <li><a href="#existential-quantifier-proof-strategies">12.6. Existential Quantifier Proof Strategies</a>
@@ -316,8 +319,6 @@ Facts about Correlation &amp; Causation
 </div>
 </div>
 
-
-
 <div id="outline-container-type-1-and-2-errors" class="outline-3">
 <h3 id="type-1-and-2-errors"><span class="section-number-3">4.4.</span> Type I And Type II Errors</h3>
 <div class="outline-text-3" id="text-type-1-and-2-errors">
@@ -373,12 +374,10 @@ Every hypothesis test has four possible outcomes:
 <li>If the null hypothesis is true, it&rsquo;s still possible to get values for the mean that are located in those tails, but i</li>
 </ul></li>
 </ul>
-</div>
 
-<div id="outline-container-org65f0a00" class="outline-4">
-<h4 id="org65f0a00"><span class="section-number-4">4.4.1.</span> Alternate Table In Terms Of True/False Positives/Negatives</h4>
-<div class="outline-text-4" id="text-4-4-1">
+
 <p>
+<b>Alternate Table In Terms Of True/False Positives/Negatives</b><br>
 Every hypothesis test has four possible outcomes:
 </p>
 <table>
@@ -417,7 +416,6 @@ Every hypothesis test has four possible outcomes:
 <p>
 <a href="https://www.gwern.net/The-Existential-Risk-of-Mathematical-Error">The Existential Risk of Math Errors - Gwern</a>
 </p>
-</div>
 </div>
 </div>
 
@@ -553,7 +551,7 @@ Conclusions that are made on a definitional basis are more likely to be simple, 
 </p>
 
 
-<figure id="org3d634a2">
+<figure id="org2e8d81a">
 <img src="../images/occams-razor.jpg" alt="Occam's Razor Example" width="450">
 
 </figure>
@@ -687,7 +685,7 @@ Most homo sapiens can pass the mirror test, but a majority of them cannot pass t
 </p>
 
 <p>
-Given the vastness of reality and all there is to know, there is only so much that we humans can learn within our finite lifespans.
+Given the vastness of reality and all there is to know, <a href="https://en.wikipedia.org/wiki/Subject_and_object_(philosophy)">there is only so much that we humans can learn within our finite lifespans</a>.
 That said, one of the first steps someone should make in philosophy/epistemology is to decide which concepts they should learn and which ones they should pursue rational ignorance towards.
 Then they must order the importance of all they wish to learn and learn the most important concepts first.
 </p>
@@ -746,8 +744,7 @@ Generally speaking, it&rsquo;s just a bad idea to assume or side with someone el
 <ul class="org-ul">
 <li><a href="https://en.wikipedia.org/wiki/Formal_fallacy">Formal fallacies</a> are defects in the logical forms of arguments, not the content.</li>
 <li>Informal fallacies are defects in the content of arguments, not the logical forms. These occur when the premises do not support the conclusion.</li>
-<li>The Fallacy Of Composition arises when we <i>assume</i> that the whole has the same properties as its parts. It is an informal fallacy.</li>
-<li>The Fallacy Of Division arises when we <i>assume</i> that the parts of some whole have the same properties as the whole. It is an informal fallacy, and it is the opposite of the fallacy of composition.</li>
+<li>There isn&rsquo;t some precise criterion that separates one fallacy from another. The more important distinction is whether the person is addressing the ideas or not, but it is helpful to give names to the informal fallacies so that the reasoning errors can be more easily identified and corrected.</li>
 </ul>
 
 <p>
@@ -776,30 +773,22 @@ Although pointing out hypocrisy (tu quoque) and conflicts of interest (circumsta
 </div>
 </div>
 
-<div id="outline-container-appeal-to-authority" class="outline-3">
-<h3 id="appeal-to-authority"><span class="section-number-3">7.2.</span> Appeal to Authority</h3>
-<div class="outline-text-3" id="text-appeal-to-authority">
+<div id="outline-container-straw-man-hollow-man" class="outline-3">
+<h3 id="straw-man-hollow-man"><span class="section-number-3">7.2.</span> Straw Man and Hollow Man</h3>
+<div class="outline-text-3" id="text-straw-man-hollow-man">
 <p>
-See: <a href="#rational-ignorance">Rational Ignorance and Appeals to Authority</a>.
-</p>
-</div>
-</div>
-
-<div id="outline-container-appeal-to-the-people" class="outline-3">
-<h3 id="appeal-to-the-people"><span class="section-number-3">7.3.</span> Appeal to the People</h3>
-<div class="outline-text-3" id="text-appeal-to-the-people">
-<p>
-Establishes the truth of some claim P on the basis that a lot of people believe P to be true.
+A Straw Man Fallacy is when a debater refutes an argument different from the one actually under discussion, while not recognizing or acknowledging the distinction.
 </p>
 
 <p>
-Note: It&rsquo;s not possible to make an Appeal to the People Fallacy when dealing with emotional/value knowledge, since that knowledge is supposed to be subjective and can be based on popular consensus.
+The inverse of the Strawman Fallacy, is called the &ldquo;Hollow Man Fallacy&rdquo;, and is sometimes called the &ldquo;Motte And Bailey Fallacy&rdquo;.
+The Hollow Man Fallacy occurs when someone doesn&rsquo;t present a well-defined position that can be critiqued, or when they don&rsquo;t present their true position or beliefs.
 </p>
 </div>
 </div>
 
 <div id="outline-container-begging-question" class="outline-3">
-<h3 id="begging-question"><span class="section-number-3">7.4.</span> Begging the Question</h3>
+<h3 id="begging-question"><span class="section-number-3">7.3.</span> Begging the Question</h3>
 <div class="outline-text-3" id="text-begging-question">
 <p>
 When trying to understand the why the logical form of circular reasoning is invalid, recall that a false statement implying a chain of false statements does not generate a true statement.
@@ -811,24 +800,26 @@ It can be particularly difficult to catch circular reasoning fallacies since all
 </p>
 
 
-<figure id="org1255259">
+<figure id="org2d0c244">
 <img src="../images/circular-reasoning-with-bible-religion-logic.jpg" alt="The Bible and Christian religion are justified with circular reasoning." width="400">
 
 </figure>
 </div>
 </div>
 
-<div id="outline-container-category-errors" class="outline-3">
-<h3 id="category-errors"><span class="section-number-3">7.5.</span> Category Errors</h3>
-<div class="outline-text-3" id="text-category-errors">
-<p>
-<a href="https://en.wikipedia.org/wiki/Category_mistake">Wikipedia: Category Errors</a>
-</p>
+<div id="outline-container-anecdotal" class="outline-3">
+<h3 id="anecdotal"><span class="section-number-3">7.4.</span> Anecdotal</h3>
+<div class="outline-text-3" id="text-anecdotal">
+
+<figure id="org2954643">
+<img src="../images/mountains-of-evidence-vs-one-anecdote.jpg" alt="Sometimes people will ignore mountains of evidence in favor of an anecdote." width="450">
+
+</figure>
 </div>
 </div>
 
 <div id="outline-container-false-equivocation" class="outline-3">
-<h3 id="false-equivocation"><span class="section-number-3">7.6.</span> False Equivocation</h3>
+<h3 id="false-equivocation"><span class="section-number-3">7.5.</span> False Equivocation</h3>
 <div class="outline-text-3" id="text-false-equivocation">
 <p>
 The usage of the False Equivocation Fallacy seems to be strongly affected by <a href="../language/sapir-whorf-theory">the Sapir-Whorf Effect</a>.
@@ -846,21 +837,29 @@ This is a primary reason why False Equivocation Fallacies are so common in polit
 People often use analogies to convey their ideas without checking (or even realizing) that all the necessary conditions for a valid comparison are meant.
 </p>
 </div>
+
+<div id="outline-container-category-errors" class="outline-4">
+<h4 id="category-errors"><span class="section-number-4">7.5.1.</span> Category Errors</h4>
+<div class="outline-text-4" id="text-category-errors">
+<p>
+<a href="https://en.wikipedia.org/wiki/Category_mistake">Wikipedia: Category Errors</a>
+</p>
+</div>
 </div>
 
-<div id="outline-container-anecdotal" class="outline-3">
-<h3 id="anecdotal"><span class="section-number-3">7.7.</span> Anecdotal</h3>
-<div class="outline-text-3" id="text-anecdotal">
-
-<figure id="orgf1fdf9f">
-<img src="../images/mountains-of-evidence-vs-one-anecdote.jpg" alt="Sometimes people will ignore mountains of evidence in favor of an anecdote." width="450">
-
-</figure>
+<div id="outline-container-composition-and-division-fallacies" class="outline-4">
+<h4 id="composition-and-division-fallacies"><span class="section-number-4">7.5.2.</span> Composition And Division Fallacies</h4>
+<div class="outline-text-4" id="text-composition-and-division-fallacies">
+<ul class="org-ul">
+<li>The Fallacy of Composition arises when we <i>assume</i> that the whole has the same properties as its parts. It is an informal fallacy.</li>
+<li>The Fallacy of Division arises when we <i>assume</i> that the parts of some whole have the same properties as the whole. It is an informal fallacy, and it is the opposite of the Fallacy of Composition.</li>
+</ul>
+</div>
 </div>
 </div>
 
 <div id="outline-container-slippery-slope" class="outline-3">
-<h3 id="slippery-slope"><span class="section-number-3">7.8.</span> Slippery Slope</h3>
+<h3 id="slippery-slope"><span class="section-number-3">7.6.</span> Slippery Slope</h3>
 <div class="outline-text-3" id="text-slippery-slope">
 <p>
 Once one event occurs, other related events will follow, and this will eventually lead to undesirable consequences.
@@ -881,7 +880,7 @@ For many leftists, the US will never have enough gun control unless it completel
 </div>
 
 <div id="outline-container-appeal-to-consequences" class="outline-3">
-<h3 id="appeal-to-consequences"><span class="section-number-3">7.9.</span> Appeal to Consequences</h3>
+<h3 id="appeal-to-consequences"><span class="section-number-3">7.7.</span> Appeal to Consequences</h3>
 <div class="outline-text-3" id="text-appeal-to-consequences">
 <p>
 The Appeal to Consequences Fallacy occurs when someone is assuming that the conclusion is bad, without honestly assessing and justifying whether the conclusion is really bad or not.
@@ -906,11 +905,47 @@ Conclusion: Abortion is bad (because it entails eugenics).
 </blockquote>
 
 <p>
-Appealing to Nature regarding the intrinsic selfishness and intrinsic violence of life is not an appeal to consequences. It&rsquo;s just Nature, and nothing can really be done to change the way it is.
+Appealing to Nature regarding the intrinsic selfishness and intrinsic violence of life is not an appeal to consequences.
+It&rsquo;s just Nature, and nothing can really be done to change the way it is.
 </p>
 
 <p>
 Note: I&rsquo;m skeptical that <a href="https://en.wikipedia.org/wiki/Appeal_to_consequences">Appeal to Consequences</a> is a real fallacy in many cases since <a href="../FAQs/morality-FAQs#problems-with-deontological-ethics">we always (inevitably) have to appeal to the consequences on literally everything</a> when arguing in favor of what we believe would be &ldquo;best&rdquo;.
+</p>
+</div>
+</div>
+
+<div id="outline-container-appeal-to-the-people" class="outline-3">
+<h3 id="appeal-to-the-people"><span class="section-number-3">7.8.</span> Appeal to the People</h3>
+<div class="outline-text-3" id="text-appeal-to-the-people">
+<p>
+Establishes the truth of some claim P on the basis that a lot of people believe P to be true.
+</p>
+
+<p>
+Note: It&rsquo;s not possible to make an Appeal to the People Fallacy when dealing with emotional/value knowledge, since that knowledge is supposed to be subjective and can be based on popular consensus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-appeal-to-authority" class="outline-3">
+<h3 id="appeal-to-authority"><span class="section-number-3">7.9.</span> Appeal to Authority</h3>
+<div class="outline-text-3" id="text-appeal-to-authority">
+<p>
+See: <a href="#rational-ignorance">Rational Ignorance and Appeals to Authority</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-vast-literature-fallacy" class="outline-3">
+<h3 id="vast-literature-fallacy"><span class="section-number-3">7.10.</span> The Vast Literature Fallacy</h3>
+<div class="outline-text-3" id="text-vast-literature-fallacy">
+<p>
+The Vast Literature Fallacy is related to the Appeal to Authority Fallacy, but it&rsquo;s difficult since it focuses more on an insistence that people have to read large volumes of content and materials to truly understand (and be inclined to accept) what they are saying.
+</p>
+
+<p>
+The vast literature fallacy is a denial of the limited time and ability of people to acquire knowledge as <a href="https://en.wikipedia.org/wiki/Subject_and_object_(philosophy)">subjects</a>, hence it ignores that the concept of <a href="#rational-ignorance">Rational Ignorance</a>.
 </p>
 </div>
 </div>
@@ -925,7 +960,7 @@ Note: I&rsquo;m skeptical that <a href="https://en.wikipedia.org/wiki/Appeal_to_
 <h3 id="survivorship-bias"><span class="section-number-3">8.1.</span> Survivorship Bias</h3>
 <div class="outline-text-3" id="text-survivorship-bias">
 
-<figure id="org20b4127">
+<figure id="orga05c419">
 <img src="../images/survivorship-bias-planes.png" alt="Understanding survivorship bias improves our ability to build better technologies.">
 
 </figure>
@@ -1047,13 +1082,23 @@ Alice: Wait, you support black, Hispanic and Asian minority activism. You know w
 </p>
 </div>
 </div>
+
+<div id="outline-container-tactical-empiricism" class="outline-3">
+<h3 id="tactical-empiricism"><span class="section-number-3">9.2.</span> Tactical Empiricism</h3>
+<div class="outline-text-3" id="text-tactical-empiricism">
+<p>
+Tactical Empiricism is when a debater expects the opponents to supply large amounts of evidence to support their positions, while not holding themselves to the same standard of ensuring accurate, high-quality information.
+Tactical Empiricism is similar to Tactical Nihilism since both tactics are unfairly selective about the means of knowledge that one must use to defend their arguments.
+</p>
+</div>
+</div>
 </div>
 
 <div id="outline-container-hierarchy-of-disagreement" class="outline-2">
 <h2 id="hierarchy-of-disagreement"><span class="section-number-2">10.</span> Graham&rsquo;s Hierarchy Of Disagreement</h2>
 <div class="outline-text-2" id="text-hierarchy-of-disagreement">
 
-<figure id="org3e4fc3f">
+<figure id="org98cd566">
 <img src="../images/grahams-hierarchy-of-disagreement.png" alt="Graham's Hierarchy of Disagreement Infographic." width="500">
 
 </figure>
@@ -1072,7 +1117,7 @@ Citation: <a href="https://commons.wikimedia.org/wiki/File:Graham%27s_Hierarchy_
 </p>
 
 
-<figure id="org4944233">
+<figure id="orgba20e7d">
 <img src="../images/blooms-taxonomy-1.png" alt="Bloom's Taxonomy Infographic.">
 
 </figure>
@@ -1239,8 +1284,8 @@ Goal: (∀x ∈ A.P (x))
 </ul>
 </div>
 </div>
-<div id="outline-container-org4ee0294" class="outline-4">
-<h4 id="org4ee0294"><span class="section-number-4">12.5.3.</span> To prove a universal statement and implication</h4>
+<div id="outline-container-org00936fc" class="outline-4">
+<h4 id="org00936fc"><span class="section-number-4">12.5.3.</span> To prove a universal statement and implication</h4>
 <div class="outline-text-4" id="text-12-5-3">
 <p>
 Goal: (∀x ∈ A.P (x) → Q(x))
@@ -1298,7 +1343,7 @@ Goal: (∃x.P(x))
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2023 October 23, 05:33</p>
+<p class="date">Last Modified: 2023 November 04, 05:23</p>
 
           <p class="author">Author: Zero Contradictions</p>
 </div>
