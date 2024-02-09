@@ -5,4 +5,4 @@ Hello and welcome to my philosophy website. My name is Zero Contradictions, and 
 
 NOTE: Many of the red link posts written by myself could be expanded, but I'm publishing what I have already written for now for others to read if they'd like. Everything on this website is under copyright, unless specified otherwise. If you want to report any typos or broken links, to ask questions, to give constructive criticism, to suggest some links to add to this home page, or to make a donation, please reach out to me at my contact page. Whether this site displays in light or dark mode depends on your web browser preferences. 
 
-Copyright 2022-2023 Zero Contradictions. All rights reserved.
+Copyright 2022-2024 Zero Contradictions. All rights reserved.
