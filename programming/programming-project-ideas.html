@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2024 March 01, 14:47 -->
+<!-- 2024 March 01, 15:57 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>ZC's Programming Project Ideas</title>
@@ -44,78 +44,107 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#personal-programming-project-ideas">1. Personal Programming Project Ideas</a></li>
-<li><a href="#tasks-for-improving-emacs">2. Emacs Lisp Programming Tasks for Improving Emacs</a>
+<li><a href="#intro">1. Introduction</a></li>
+<li><a href="#personal-programming-project-ideas">2. Personal Programming Project Ideas</a>
 <ul>
-<li><a href="#changes-to-make-to-dired">2.1. Changes That I Want To Make To Dired</a></li>
+<li><a href="#simple-projects">2.1. Relatively Simple Projects</a></li>
+<li><a href="#intermediate-projects">2.2. Intermediate Projects</a></li>
+<li><a href="#advanced-projects">2.3. Advanced Projects</a></li>
 </ul>
 </li>
-<li><a href="#things-to-report-or-program-in-xfce">3. Things To Report Or Program In Xfce</a></li>
+<li><a href="#tasks-for-improving-emacs">3. Emacs Lisp Programming Tasks for Improving Emacs</a>
+<ul>
+<li><a href="#changes-to-make-to-dired">3.1. Changes That I Want To Make To Dired</a></li>
+</ul>
+</li>
+<li><a href="#things-to-report-or-program-in-xfce">4. Things To Report Or Program In Xfce</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-personal-programming-project-ideas" class="outline-2">
-<h2 id="personal-programming-project-ideas"><span class="section-number-2">1.</span> Personal Programming Project Ideas</h2>
-<div class="outline-text-2" id="text-personal-programming-project-ideas">
-<ol class="org-ol">
-<li>Design a web application / software program that could automatically count and generate syllables after specifying all the phonotactical constraints of the language, dialect, and sociolect in sufficient enough detail. This would be a worthwhile investment if there was a need to count and generate syllables for thousands of different languages, dialects, sociolects, et cetera.
-<ul class="org-ul">
-<li>What Python libraries would be needed for doing this?</li>
-</ul></li>
-<li>Build a truth table generator of some sort in various forms in python?</li>
-<li>Read through open tabs on software that uses Python, Gitlab, Emacs coding/debugging stuff, etc.</li>
-<li>Create a gif in Python and Manim to illustrate what the next overpopulation crisis will look like, instead of what cornucopians think it would look like. display it in overpopulation.org section #next-overpop-crisis</li>
-<li>Video based on my paper &ldquo;<a href="../language/math-modeling-phonology.pdf">Mathematical Methods for Modeling Language Phonology</a>&rdquo; (using Manim Python library) For Summer 2023 Math Exposition?</li>
-<li>Create AI software that can take written essays and turn them into educational videos.</li>
-<li>Build an equivalent application to the p7-smash command shell in Rust?</li>
-<li>Write a Python program that retrieves data from your Ebembe Language excel workbook.</li>
-<li>Create an algorithm that figures out which abbreviations are the most intuitive, or tries to figure out how natural language speakers would abbreviate words in their languages (given their specific dialect).
-<ul class="org-ul">
-<li>Abbreviated words seem to be most intuitive when only the first syllable is used, it&rsquo;s clearly identifiable and unlikely to be ambiguous, and it typically features a distinct onset and distinct coda.</li>
-</ul></li>
-<li>Create better screenshot program for Linux, similar to the one on MacOS.</li>
-<li>Create a Python bot for writing Wiktionary entries, using the Ebembe corpus data.
-<ol class="org-ol">
-<li>Practice using Git and Agile Development to do this task.</li>
-<li>Learn how to create neural networks using Python.</li>
-<li>Think of other Lexicography projects that use Python?: <a href="https://dictionaryapi.com/">https://dictionaryapi.com/</a></li>
-</ol></li>
-<li>Install Pi-Hole on Raspberry Pi with touchscreen monitor.</li>
-<li>Learn how to compile applications from source.</li>
-<li>How hard or feasible would it be to program hardware drivers for my ergonomic mouse?</li>
-<li>Learn relevant Python-SQL libraries.</li>
-<li><p>
-Write a python program that automatically re-labels downloaded files to your filename specification standards (this should be straight-forward, as it only involves case-toggling and search-and-replace function calls); store the original filenames somewhere somehow. You can later write a program with similar functionality in Elisp or C, as a later project for those languages.
-</p>
-<ol class="org-ol">
-<li><a href="https://www.freecodecamp.org/news/python-projects-for-beginners/#bulk-file-re-namer-python-project">https://www.freecodecamp.org/news/python-projects-for-beginners/#bulk-file-re-namer-python-project</a></li>
-<li>Learn python mode commands and keybindings</li>
-</ol>
+<div id="outline-container-intro" class="outline-2">
+<h2 id="intro"><span class="section-number-2">1.</span> Introduction</h2>
+<div class="outline-text-2" id="text-intro">
 <p>
-Question: What documentation do I read if I need to read more about how Python works and/or Python&rsquo;s software libraries? And where do I read it?
-</p></li>
-<li>Create a custom Python extension for Ulauncher.</li>
-<li>Tweak DockBarX with Python: <a href="https://github.com/M7S/dockbarx">https://github.com/M7S/dockbarx</a></li>
-<li>Python programming projects for Raspberry Pi: <a href="https://raspberrytips.com/python-projects-on-raspberry-pi/">https://raspberrytips.com/python-projects-on-raspberry-pi/</a></li>
-<li>Create/Train an AI algorithm and/or bot to respond to reddit posts and comments regarding people who ask questions or make arguments that assume these most common misconceptions.</li>
-<li>A data structure could then be invented to store information essential to producing and/or recognizing sounds, which could progress the field of Natural Language Processing.</li>
+There are a lot of ideas out there for beginners&rsquo; programming projects, but I honestly can&rsquo;t be inspired to create any of them since they don&rsquo;t feel original to me.
+If I were to attempt making any of them, I would feel as if I&rsquo;m reinventing the wheel.
+For some reason, doing redundant tasks feels nihilistic to me, sometimes even if it&rsquo;s necessary for training.
+Thus, the purpose of this webpage is to detail a list of original or mostly original programs to create.
+The idea is that the novelty of the programs would inspire their creation, which would help the programmer practice.
+</p>
+
+<p>
+Each of these projects are of varying difficulty.
+I&rsquo;ve tried to sort the projects based on their estimated difficulty, but your mileage may vary.
+None of the ideas below describe in great detail how the final programs should be made or what they should look like, so it&rsquo;s up to the reader to plan these out in greater detail before committing to the project.
+</p>
+</div>
+</div>
+
+<div id="outline-container-personal-programming-project-ideas" class="outline-2">
+<h2 id="personal-programming-project-ideas"><span class="section-number-2">2.</span> Personal Programming Project Ideas</h2>
+<div class="outline-text-2" id="text-personal-programming-project-ideas">
+</div>
+<div id="outline-container-simple-projects" class="outline-3">
+<h3 id="simple-projects"><span class="section-number-3">2.1.</span> Relatively Simple Projects</h3>
+<div class="outline-text-3" id="text-simple-projects">
+<ol class="org-ol">
+<li>Build a truth table generator of some sort in various forms in python?</li>
+<li>Create a gif in Python and Manim to illustrate what the next overpopulation crisis will look like, instead of what cornucopians think it would look like. Display it in the Overpopulation FAQs section: <a href="../FAQs/overpopulation-FAQs#next-overpop-crisis">The Next Overpopulation Crisis</a>.</li>
+<li>Animated Video based on my paper &ldquo;<a href="../language/math-modeling-phonology.pdf">Mathematical Methods for Modeling Language Phonology</a>&rdquo; (using Manim Python library) For Summer 2023 Math Exposition?</li>
+<li>Write a python program that automatically re-labels downloaded files to your filename specification standards (this should be straight-forward, as it only involves case-toggling and search-and-replace function calls); store the original filenames somewhere somehow. You can later write a program with similar functionality in Elisp or C, as a later project for those languages.</li>
+<li>Build an equivalent application to the p7-smash command shell in Rust?</li>
 <li>Edit gThumb&rsquo;s source code so that scrolling on the image will zoom in and out, instead of switching pictures in the images browser (lower panel). Perhaps you could make it toggle for this.</li>
 <li>In Okular, clicking a location in the vertical scroll bar should jump to that page/location in the pdf, not slowly scroll up until it gets to that point.</li>
-<li>Creating a tool that will automatically generate graphics similar to the ones shown in Carneades&rsquo;s Philosophy Youtube videos?</li>
-<li>Improve espeak to make it sound more human/natural? (even if this is far beyond your abilities or free time, you could still figure out what would need to be done to improve it) <a href="https://itsfoss.com/espeak-text-speech-linux/">https://itsfoss.com/espeak-text-speech-linux/</a></li>
-<li>Fine-tweaking the QMK source code for my ZSA Moonlander to do something really specific that I can&rsquo;t program with ZSA&rsquo;s Oryx Webapp.</li>
-<li>Rewrite programs written in OOP code in functional programming or Rust instead.</li>
-<li>A great reddit bot would be one that searches comments for people who spell &lt;should&rsquo;ve&gt;, &lt;would&rsquo;ve&gt;, &lt;could&rsquo;ve&gt;, etc incorrectly and explains what the correct spelling and grammar should be. It would go a long way towards making the grammatically and professionally correct spelling more popular than the ungrammatical, incorrect spelling.
-<ol class="org-ol">
-<li>As well as &lt;shouldn&rsquo;t&rsquo;ve&gt;, &lt;wouldn&rsquo;t&rsquo;ve&gt;, &lt;couldn&rsquo;t&rsquo;ve&gt;, etc</li>
-</ol></li>
 </ol>
 </div>
 </div>
 
+<div id="outline-container-intermediate-projects" class="outline-3">
+<h3 id="intermediate-projects"><span class="section-number-3">2.2.</span> Intermediate Projects</h3>
+<div class="outline-text-3" id="text-intermediate-projects">
+<ol class="org-ol">
+<li>Write a Python program that retrieves data from your Ebembe Language excel workbook.</li>
+<li>Create a Python bot for writing Wiktionary entries, using the Ebembe corpus data.
+<ol class="org-ol">
+<li>Think of other Lexicography projects that use Python?: <a href="https://dictionaryapi.com/">https://dictionaryapi.com/</a>.</li>
+</ol></li>
+<li>Design a web application / software program that could automatically count and generate syllables after specifying all the phonotactical constraints of the language, dialect, and sociolect in sufficient enough detail. This would be a worthwhile investment if there was a need to count and generate syllables for thousands of different languages, dialects, sociolects, et cetera.</li>
+<li>Create better screenshot program for Linux, similar to the one on MacOS.</li>
+<li>Create a custom Python extension for <a href="https://docs.ulauncher.io/en/stable/extensions/tutorial.html">Ulauncher</a>. It should be something that you would use often.</li>
+<li>Tweak DockBarX with Python: <a href="https://github.com/M7S/dockbarx">https://github.com/M7S/dockbarx</a>.</li>
+<li>A reddit bot would that searches comments for people who spell &lt;should&rsquo;ve&gt;, &lt;would&rsquo;ve&gt;, &lt;could&rsquo;ve&gt;, etc incorrectly and explains what the correct spelling and grammar should be. It would go a long way towards making the grammatically and professionally correct spelling more popular than the ungrammatical, incorrect spelling.
+<ol class="org-ol">
+<li>As well as &lt;shouldn&rsquo;t&rsquo;ve&gt;, &lt;wouldn&rsquo;t&rsquo;ve&gt;, &lt;couldn&rsquo;t&rsquo;ve&gt;, etc</li>
+</ol></li>
+<li>Python programming projects for Raspberry Pi: <a href="https://raspberrytips.com/python-projects-on-raspberry-pi/">https://raspberrytips.com/python-projects-on-raspberry-pi/</a>.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-advanced-projects" class="outline-3">
+<h3 id="advanced-projects"><span class="section-number-3">2.3.</span> Advanced Projects</h3>
+<div class="outline-text-3" id="text-advanced-projects">
+<ol class="org-ol">
+<li>A data structure could then be invented to store information essential to producing and/or recognizing sounds, which could progress the field of Natural Language Processing.</li>
+<li>Create/Train an AI algorithm and/or bot to respond to reddit posts and comments regarding people who ask questions or make arguments that assume the <a href="../#FAQs">misconceptions presented in the FAQs</a>.</li>
+<li>Create AI software that can take written essays and turn them into educational videos.</li>
+<li>Creating a tool that will automatically generate graphics similar to the ones shown in <a href="https://www.youtube.com/user/carneadesofcyrene/videos">Carneades&rsquo;s Philosophy YouTube videos</a>?</li>
+<li>Create an algorithm that figures out which abbreviations are the most intuitive, or tries to figure out how natural language speakers would abbreviate words in their languages (given their specific dialect).
+<ul class="org-ul">
+<li>Abbreviated words seem to be most intuitive when only the first syllable is used, it&rsquo;s clearly identifiable and unlikely to be ambiguous, and it typically features a distinct onset and distinct coda.</li>
+</ul></li>
+<li>Improve espeak to make it sound more human/natural? (even if this is far beyond your abilities or free time, you could still figure out what would need to be done to improve it) <a href="https://itsfoss.com/espeak-text-speech-linux/">https://itsfoss.com/espeak-text-speech-linux/</a>.</li>
+<li>Program hardware drivers for my ergonomic mouse?</li>
+<li>Fine-tweaking the QMK source code for my ZSA Moonlander to do something really specific that I can&rsquo;t program with ZSA&rsquo;s Oryx Webapp.</li>
+<li>Rewrite programs written in OOP code in functional programming or Rust instead.</li>
+</ol>
+</div>
+</div>
+</div>
+
 <div id="outline-container-tasks-for-improving-emacs" class="outline-2">
-<h2 id="tasks-for-improving-emacs"><span class="section-number-2">2.</span> Emacs Lisp Programming Tasks for Improving Emacs</h2>
+<h2 id="tasks-for-improving-emacs"><span class="section-number-2">3.</span> Emacs Lisp Programming Tasks for Improving Emacs</h2>
 <div class="outline-text-2" id="text-tasks-for-improving-emacs">
 <ol class="org-ol">
 <li>Any macros to think of, record, and save as future Emacs commands with their own keybindings?
@@ -176,7 +205,7 @@ Question: What documentation do I read if I need to read more about how Python w
 </div>
 
 <div id="outline-container-changes-to-make-to-dired" class="outline-3">
-<h3 id="changes-to-make-to-dired"><span class="section-number-3">2.1.</span> Changes That I Want To Make To Dired</h3>
+<h3 id="changes-to-make-to-dired"><span class="section-number-3">3.1.</span> Changes That I Want To Make To Dired</h3>
 <div class="outline-text-3" id="text-changes-to-make-to-dired">
 <ol class="org-ol">
 <li>Display relative line numbers in dired by default (to make vertical motion easier)</li>
@@ -193,7 +222,7 @@ Question: What documentation do I read if I need to read more about how Python w
 </div>
 
 <div id="outline-container-things-to-report-or-program-in-xfce" class="outline-2">
-<h2 id="things-to-report-or-program-in-xfce"><span class="section-number-2">3.</span> Things To Report Or Program In Xfce</h2>
+<h2 id="things-to-report-or-program-in-xfce"><span class="section-number-2">4.</span> Things To Report Or Program In Xfce</h2>
 <div class="outline-text-2" id="text-things-to-report-or-program-in-xfce">
 <ol class="org-ol">
 <li>Learn how to report issues on Gitlab.</li>
@@ -203,7 +232,7 @@ Question: What documentation do I read if I need to read more about how Python w
 <li>Fix topmenu panel plugin for xfce.</li>
 <li>Create a variant of the Xfce time-out plug-in that counts upward as the minutes and seconds go by (instead of downwards), and when the time is up, the panel icon flashes. The stopwatch continues counting upwards until you click on it or use some chosen keyboard command. If you need/want to work a bit longer, then you can post-pone the time-out, and it will increase the length of the break that you should take to rest your eyes, while accounting for the additional time that you postponed the upwards-counting stopwatch. This behavior makes more sense than the current Xfce time-out plugin because it won&rsquo;t block out the entire screen, will be less annoying, and it makes sense that you should want to take longer breaks that are at least several minutes long if you know that your eyes will need it, and you should take longer breaks if you have been working longer.</li>
 <li>If I&rsquo;m in XfDashboard / Mission Control / Task View, it would be convenient if I could just press one of the numbers on the keyboard to switch to that desktop</li>
-<li>It would be really cool if you could just press a keyboard shortcut to switch two maximized windows between two different monitors.</li>
+<li>It would be cool if you could just press a keyboard shortcut to switch two maximized windows between two different monitors.</li>
 <li>I wish that the windows wouldn&rsquo;t automatically shift to the left monitor when I plug in my second monitor. I also wish that the windows would return to their original positions on the main monitor when the second monitor is unplugged.</li>
 <li>Would it be possible to place the icons from HaikuOS into my main OS? It is possible that they might be the best icons I have ever seen.</li>
 <li>I wish that Thunar would have the name fields be longer by default, without me having to readjust that column&rsquo;s width when resizing the window width.</li>
@@ -227,7 +256,7 @@ Question: What documentation do I read if I need to read more about how Python w
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2024 March 01, 14:47</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2024 March 01, 15:57</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>
