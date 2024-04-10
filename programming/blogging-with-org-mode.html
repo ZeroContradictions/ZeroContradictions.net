@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2024 February 12, 17:31 -->
+<!-- 2024 April 10, 04:14 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>How to Design a Blog with Emacs and Org-Mode</title>
@@ -104,6 +104,7 @@ It can be tempting to immediately start writing content that you&rsquo;ve been e
 <li><a href="https://www.w3schools.com/html/html_quotation_elements.asp">HTML Quotation Elements</a> are a great way to quickly state opposing points of view before addressing them. I&rsquo;ve made my <a href="../civilization/case-against-libertarianism">Case Against Libertarianism essay</a> and other works less wordy by using them.</li>
 <li><a href="https://commons.wikimedia.org/wiki/Main_Page">Wikimedia Commons</a> provides millions of freely usable images that people can use in their works, provided that they respect the terms of the licenses. See my <a href="#copyrighting-and-licensing">section for links for learning more about copyrighting and licensing</a>.</li>
 <li>Lastly, taking at least an hour to learn <a href="#search-engine-optimization">good SEO practices</a> can save you the trouble of rewriting your content later on, if you want to maximize your number of readers.</li>
+<li><a href="https://guzey.com/personal/why-have-a-blog/">Why You Should Start a Blog Right Now - Alex Guzey</a>; This webpage gives encouragement for starting your own blog. It also argues against some common excuses made for why someone shouldn&rsquo;t start a blog.</li>
 </ul>
 </div>
 </div>
@@ -338,6 +339,17 @@ When exporting .org files to LaTeX, I include the following line at the beginnin
 <pre class="example">
 #+latex_header: \makeatletter \@ifpackageloaded{geometry}{\geometry{margin=2.5cm}}
 {\usepackage[margin=2.5cm]{geometry}} \makeatother
+</pre>
+
+<p>
+For people who create YouTube videos to accompany their blogs, <a href="https://www.w3schools.com/html/html_youtube.asp">W3 Schools has a page</a> that details the HTML code for embedding YouTube videos into webpages.
+In org-mode, <code>C-c C-,</code> (or <code>SPC m e h</code> in Doom-Emacs) will execute the command <code>org-export-dispatch</code>, which will insert the lines for exporting the <code>&lt;iframe&gt;</code> HTML code:
+</p>
+<pre class="example">
+#+begin_export html
+&lt;div align="center"&gt;&lt;iframe allow="fullscreen" width="420" height="315"
+src="https://www.youtube.com/embed/VIDEO_TAG_GOES_HERE"&gt;&lt;/iframe&gt;&lt;/div&gt;
+#+end_export
 </pre>
 </div>
 </div>
@@ -627,7 +639,8 @@ More Advice for SEO:
 <ul class="org-ul">
 <li>For Org-Mode users, you can add Google Analytics to your webpages by using the <code>#+html_head:</code> keyword syntax to include the <code>gtag.js</code> code in the exported HTML output.</li>
 </ul></li>
-<li><a href="https://1mb.club/blog/https-redirects/">When It Makes Sense To Disable HTTPS Auto Redirects - 1MB Club Blog</a></li>
+<li><a href="https://1mb.club/blog/https-redirects/">When It Makes Sense To Disable HTTPS Auto Redirects - 1MB Club Blog</a>;
+For my website, I tried to allow HTTP URLs, but this prevented some search engines from indexing my webpages, so I had to disable the HTTP URLs, unfortunately :(</li>
 </ul>
 </div>
 </div>
@@ -676,7 +689,7 @@ System Crafters has also written a <a href="https://systemcrafters.net/publishin
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2024 February 12, 17:31</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2024 April 10, 04:14</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>
