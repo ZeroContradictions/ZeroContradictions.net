@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2024 April 28, 13:37 -->
+<!-- 2024 May 01, 21:57 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>ZC's Programming Project Ideas</title>
@@ -116,8 +116,6 @@ If anybody would like to assist or work together with me on creating some of the
 <li>Write a program with similar functionality in Elisp. (See: <a href="#personal-programming-project-ideas">Changes That I Want To Make To Dired</a>)</li>
 </ul></li>
 <li>Build an interactive truth table generator? Try Javascript.</li>
-<li>Edit gThumb&rsquo;s source code so that scrolling on the image will zoom in and out, instead of switching pictures in the images browser (lower panel). Perhaps you could make it toggle for this.</li>
-<li>In Okular, clicking a location in the vertical scroll bar should jump to that page/location in the pdf, not slowly scroll up until it gets to that point.</li>
 </ol>
 </div>
 </div>
@@ -137,6 +135,7 @@ If anybody would like to assist or work together with me on creating some of the
 </ul></li>
 <li>Design a web application that automatically generates and counts syllables after specifying all the phonotactical constraints of a language, dialect, and sociolect in sufficient detail. Try Javascript.</li>
 <li>Are there any programs out there that can create venn diagrams, based on a given set of set theory propositions? Or a set theory program that states a list of set theory propositions, based on the venn diagrams drawn and defined by the user? Or a program that allows input and output both ways? Try Javascript.</li>
+<li>Create a built-in search webpage and algorithm for website, similar to the one used on <a href="http://xahlee.info/xli_search.html">http://xahlee.info/xli_search.html</a>?</li>
 <li>Create better screenshot program for Linux, similar to the default one on MacOS.</li>
 <li>A reddit bot would that searches comments for people who spell &lt;should&rsquo;ve&gt;, &lt;would&rsquo;ve&gt;, &lt;could&rsquo;ve&gt;, etc incorrectly and explains what the correct spelling and grammar is and why. Mispellings of &lt;shouldn&rsquo;t&rsquo;ve&gt;, &lt;wouldn&rsquo;t&rsquo;ve&gt;, &lt;couldn&rsquo;t&rsquo;ve&gt;, etc should also be corrected.</li>
 <li>Tweak DockBarX with Python: <a href="https://github.com/M7S/dockbarx">https://github.com/M7S/dockbarx</a>.</li>
@@ -190,6 +189,7 @@ If anybody would like to assist or work together with me on creating some of the
 <li>Perhaps I could create a key that can toggle between these two displays?</li>
 </ul></li>
 <li>Modify the Emacs windows &lt;swap-buffers&gt; function to use Colemak homerow letters for swapping buffers between windows instead of Qwerty&rsquo;s homerow letters.</li>
+
 <li>The hybrid relative and absolute numbering should be modified. Since the main motivation and advantage for relative line numbering is to make vertical motion more efficient, there are no advantages for using it for the very top and very bottom line numbers of the screen, since &rsquo;H&rsquo; and &rsquo;L&rsquo; would both be used to navigate to those areas respectively, not numbered motion. In other words, three lines would be displaying absolute line numbers (or just two if the cursor is at the very top or very bottom line of the screen), and all other lines would display relative line numbers.
 <ul class="org-ul">
 <li>That said, absolute numbering should thus be used for the current line, as well as the top line on the screen and the bottom line on the screen.</li>
@@ -200,6 +200,7 @@ If anybody would like to assist or work together with me on creating some of the
 <li>Maybe I want a command that will only toggle between absolute and relative numbers, instead of doom/toggle-line-numbers, which toggles between relative, absolute, and no line numbers.</li>
 </ul></li>
 <li>It would be convenient if there were commands that scroll by the number of visual lines given in the prefix arguments, instead of scrolling by logical lines. This would may scrolling files much easier when long lines are wrapped around the window edge, because then one could just look at the number line and know exactly how many lines to scroll up or down without even thinking about it.</li>
+
 <li>Pressing enter while I&rsquo;m typing a bulleted list should not create a bullet that gets indented on the next line. Instead, it should just create a new bullet that is on the same level as the current one.</li>
 <li>Make the insert state the default starting state for vim after creating a new file? If the file is new, there really isn&rsquo;t anything useful to use the normal state commands on since the file is empty.</li>
 <li>When new sections are added in org-mode, Emacs should automatically insert a blank newline between the sections to help separate things.
@@ -218,10 +219,12 @@ If anybody would like to assist or work together with me on creating some of the
 <li>Configure minibuffer to toggle to not display certain commands and stay blank.</li>
 <li>Configure Emacs to switch to other quote (&rsquo;&rsquo;&ldquo;&rdquo;) when % is pressed.</li>
 <li>Create a command that can re-arrange the items, commas, and spaces within a list each time the command is executed forwards or backwards?</li>
+
 <li>Create a command that only capitalizes the first word and content words, &rsquo;I&rsquo;, and any other words that should be capitalized; but not words like &rsquo;a&rsquo;, &rsquo;an,&rsquo;, &rsquo;the&rsquo;, &rsquo;to&rsquo;, et cetera. It should not affect acronyms.</li>
 <li>Develop an Emacs command tool that can highlight selected uses of the verb &ldquo;to be&rdquo; and its other conjugations. Strictly following <a href="https://en.wikipedia.org/wiki/E-Prime">E-prime</a> is probably a bad idea, but it might strengthen writing in some cases if forms of &ldquo;to be&rdquo; are rewritten to use less frequent and more creative verbs instead.</li>
 <li>Write some minor mode for typing Latin text in Emacs, such that macrons appear over the long vowels (when pressing the vowel key twice) and that latin text is spell checked.</li>
 <li>Typing a vowel&rsquo;s letter twice to put a macron over it, and backspacing will simply delete the macron without deleting the entire letter.</li>
+
 <li>It would be convenient if there was somehow even greater compatibility between PageUp and PageDown buttons in the mouse layer of the ZSA Moonlander and Ctrl+b and Ctrl+f commands for moving back and forward within Emacs buffers.
 <ul class="org-ul">
 <li>For example, I wish that it was still possible to move forward and backwards pages in Firefox using Ctrl+b and Ctrl+f. The main benefit to this is that page navigation would be improved having to switch between the base layer and the mouse layer before and after pressing PageUp and PageDown. Of course, I could also program PageUp and PageDown into the keyboard if I hold a key down or double-tap, but I would dislike the added complexity that this alternative would involve.</li>
@@ -283,22 +286,14 @@ Despite all these issues, I still prefer Xfce as my favorite desktop environment
 I just think that Xfce could be improved.
 It&rsquo;s already improved a lot since I first tried it in 2014.
 </p>
+
 <ol class="org-ol">
-<li>Learn how to report issues on Gitlab.</li>
+<li>Learn how to report issues on Gitlab. Report all of these issues or feature requests to the development team.</li>
 <li>Report bug in xfce-screenshooter to xfce development team</li>
-<li>I wish that the xfce screen timeout timer would always reset upon awakening the computer from sleep/suspend mode, so that it wouldn&rsquo;t be necessary to reset it upon starting the computer again.</li>
-<li>The icons on the desktop still go offscreen when there is a monitor that is smaller than the main monitor placed to the left. This needs to be fixed.</li>
-<li>Fix topmenu panel plugin for xfce.</li>
-<li>Create a variant of the Xfce time-out plug-in that counts upward as the minutes and seconds go by (instead of downwards), and when the time is up, the panel icon flashes. The stopwatch continues counting upwards until you click on it or use some chosen keyboard command. If you need/want to work a bit longer, then you can post-pone the time-out, and it will increase the length of the break that you should take to rest your eyes, while accounting for the additional time that you postponed the upwards-counting stopwatch. This behavior makes more sense than the current Xfce time-out plugin because it won&rsquo;t block out the entire screen, will be less annoying, and it makes sense that you should want to take longer breaks that are at least several minutes long if you know that your eyes will need it, and you should take longer breaks if you have been working longer.</li>
-<li>If I&rsquo;m in XfDashboard / Mission Control / Task View, it would be convenient if I could just press one of the numbers on the keyboard to switch to that desktop.</li>
-<li>It would be convenient if I could just press a keyboard shortcut to switch two maximized windows between two different monitors.</li>
-<li>I wish that the windows wouldn&rsquo;t automatically shift to the left monitor when I plug in my second monitor. I also wish that the windows would return to their original positions on the main monitor when the second monitor is unplugged.</li>
 <li>Is it possible to add the icons from HaikuOS into my main OS? They look great.</li>
-<li>I wish that Thunar would make the name fields longer by default, without me having to readjust that column&rsquo;s width when resizing the window width.</li>
-<li>I wish that Thunar had a viewing option similar to the column view on MacOS Finder: folders are displayed in one column, and the next column(s) displays the contents of the selected folder(s).</li>
-<li>I would prefer Xfce to display the file renaming textbox inside the file manager&rsquo;s window itself on the line of the file to be renamed, instead of opening a new pop-up window that will disappear (in only a few seconds if it&rsquo;s a quick rename, which probably makes things a bit more annoying).</li>
-<li>It would be convenient if Xfce gave the option to eject removable media, after right-clicking icons are displayed on the Desktop, rather than only allowing me to unmount them.</li>
-<li>I wish that Xfce would give the option to select a set of files, right click, and the option to place all the files in a new folder appears in the right-click menu.</li>
+</ol>
+
+<ol class="org-ol">
 <li>I wish Xfce would show the volume meter when I&rsquo;m adjusting the volume, without displaying previous changes in the system volume in the notification center&rsquo;s list of notifications. This is annoying.
 
 <ul class="org-ul">
@@ -307,15 +302,36 @@ It&rsquo;s already improved a lot since I first tried it in 2014.
 <li>Currently, the only way to get rid of it is to turn on &ldquo;Do Not Disturb&rdquo;, which also distracts me, since the notification bell icon is crossed out.</li>
 </ul></li>
 </ul></li>
-<li>I wish &rsquo;SUPER + 1/2/3/4/&#x2026;&rsquo; would switch to that numbered tab in the file manager and maybe just all apps in general.</li>
+<li>I wish that the xfce screen timeout timer would always reset upon awakening the computer from sleep/suspend mode, so that it wouldn&rsquo;t be necessary to reset it upon starting the computer again.</li>
+<li>Create a variant of the Xfce time-out plug-in that counts upward as the minutes and seconds go by (instead of downwards), and when the time is up, the panel icon flashes. The stopwatch continues counting upwards until you click on it or use some chosen keyboard command. If you need/want to work a bit longer, then you can post-pone the time-out, and it will increase the length of the break that you should take to rest your eyes, while accounting for the additional time that you postponed the upwards-counting stopwatch. This behavior makes more sense than the current Xfce time-out plugin because it won&rsquo;t block out the entire screen, will be less annoying, and it makes sense that you should want to take longer breaks that are at least several minutes long if you know that your eyes will need it, and you should take longer breaks if you have been working longer.</li>
+<li>Fix topmenu panel plugin for xfce.</li>
+<li>If I&rsquo;m in XfDashboard / Mission Control / Task View, it would be convenient if I could just press one of the numbers on the keyboard to switch to that desktop.</li>
 <li>How to make scrolling more gradual for every turn of the mouse wheel in Xfce?</li>
+</ol>
+
+<ol class="org-ol">
+<li>The icons on the desktop still go offscreen when there is a monitor that is smaller than the main monitor placed to the left. This needs to be fixed.</li>
+<li>It would be convenient if Xfce gave the option to eject removable media, after right-clicking icons are displayed on the Desktop, rather than only allowing me to unmount them.</li>
+<li>I wish that Xfce would give the option to select a set of files, right click, and the option to place all the files in a new folder appears in the right-click menu.</li>
+</ol>
+
+<ol class="org-ol">
 <li>I wish Xfce would allow users to set default window dimensions for windows from different applications.</li>
+<li>It would be convenient if I could just press a keyboard shortcut to switch two maximized windows between two different monitors.</li>
+<li>I wish that the windows wouldn&rsquo;t automatically shift to the left monitor when I plug in my second monitor. I also wish that the windows would return to their original positions on the main monitor when the second monitor is unplugged.</li>
+</ol>
+
+<ol class="org-ol">
+<li>I wish that Thunar would make the name fields longer by default, without me having to readjust that column&rsquo;s width when resizing the window width.</li>
+<li>I wish that Thunar had a viewing option similar to the column view on MacOS Finder: folders are displayed in one column, and the next column(s) displays the contents of the selected folder(s).</li>
+<li>I would prefer Thunar to display the file renaming textbox inside the file manager&rsquo;s window itself on the line of the file to be renamed, instead of opening a new pop-up window that will disappear (in only a few seconds if it&rsquo;s a quick rename, which probably makes things a bit more annoying).</li>
+<li>I wish &rsquo;SUPER + 1/2/3/4/&#x2026;&rsquo; would switch to that numbered tab in Thunar, and maybe just all apps in general.</li>
 </ol>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2024 April 28, 13:37</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2024 May 01, 21:57</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>
