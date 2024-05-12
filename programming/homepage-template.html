@@ -91,7 +91,9 @@
             Introduction to <a class="blog-posts" href="[[Enter the relative or absolute URL here]]">contact page link</a>.
             Whether this site displays in light or dark mode depends on your web browser preferences.
             <script>
-                document.write("Last Updated: " + document.lastModified +"");
+                const d = new Date(document.lastModified);
+                const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                document.write(`Last Updated: ${d.getFullYear()} ${months[d.getMonth()]} ${String(d.getDate())}`);
             </script>
             <br><br>
             <a property="dct:title" rel="cc:attributionURL" href="https://zerocontradictions.net/programming/homepage-template">Zero Contradictions Homepage Template</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://zerocontradictions.net/">Zero Contradictions</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">CC BY 4.0</a>
