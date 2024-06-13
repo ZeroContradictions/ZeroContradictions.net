@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2024 May 01, 21:57 -->
+<!-- 2024 June 13, 02:42 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>ZC's Programming Project Ideas</title>
@@ -143,6 +143,7 @@ If anybody would like to assist or work together with me on creating some of the
 </div>
 </div>
 
+
 <div id="outline-container-advanced-projects" class="outline-3">
 <h3 id="advanced-projects"><span class="section-number-3">2.3.</span> Advanced Projects</h3>
 <div class="outline-text-3" id="text-advanced-projects">
@@ -189,7 +190,9 @@ If anybody would like to assist or work together with me on creating some of the
 <li>Perhaps I could create a key that can toggle between these two displays?</li>
 </ul></li>
 <li>Modify the Emacs windows &lt;swap-buffers&gt; function to use Colemak homerow letters for swapping buffers between windows instead of Qwerty&rsquo;s homerow letters.</li>
+</ol>
 
+<ol class="org-ol">
 <li>The hybrid relative and absolute numbering should be modified. Since the main motivation and advantage for relative line numbering is to make vertical motion more efficient, there are no advantages for using it for the very top and very bottom line numbers of the screen, since &rsquo;H&rsquo; and &rsquo;L&rsquo; would both be used to navigate to those areas respectively, not numbered motion. In other words, three lines would be displaying absolute line numbers (or just two if the cursor is at the very top or very bottom line of the screen), and all other lines would display relative line numbers.
 <ul class="org-ul">
 <li>That said, absolute numbering should thus be used for the current line, as well as the top line on the screen and the bottom line on the screen.</li>
@@ -200,7 +203,9 @@ If anybody would like to assist or work together with me on creating some of the
 <li>Maybe I want a command that will only toggle between absolute and relative numbers, instead of doom/toggle-line-numbers, which toggles between relative, absolute, and no line numbers.</li>
 </ul></li>
 <li>It would be convenient if there were commands that scroll by the number of visual lines given in the prefix arguments, instead of scrolling by logical lines. This would may scrolling files much easier when long lines are wrapped around the window edge, because then one could just look at the number line and know exactly how many lines to scroll up or down without even thinking about it.</li>
+</ol>
 
+<ol class="org-ol">
 <li>Pressing enter while I&rsquo;m typing a bulleted list should not create a bullet that gets indented on the next line. Instead, it should just create a new bullet that is on the same level as the current one.</li>
 <li>Make the insert state the default starting state for vim after creating a new file? If the file is new, there really isn&rsquo;t anything useful to use the normal state commands on since the file is empty.</li>
 <li>When new sections are added in org-mode, Emacs should automatically insert a blank newline between the sections to help separate things.
@@ -217,6 +222,10 @@ If anybody would like to assist or work together with me on creating some of the
 <div class="outline-text-3" id="text-emacs-intermediate-tasks">
 <ol class="org-ol">
 <li>Configure minibuffer to toggle to not display certain commands and stay blank.</li>
+<li>Modify the org-mode HTML exporter so that clicking a header section will bring that header and it’s section to the top of the page.
+Or other words, every section header will have a URL fragment link that shows that part of the page specifically.
+This would be similar to the functionality that is offered for Gwern&rsquo;s website.
+There could be an option to toggle whether users want this functionality or not shown in their org-mode HTML exports.</li>
 <li>Configure Emacs to switch to other quote (&rsquo;&rsquo;&ldquo;&rdquo;) when % is pressed.</li>
 <li>Create a command that can re-arrange the items, commas, and spaces within a list each time the command is executed forwards or backwards?</li>
 
@@ -331,7 +340,7 @@ It&rsquo;s already improved a lot since I first tried it in 2014.
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2024 May 01, 21:57</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2024 June 13, 02:42</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>
