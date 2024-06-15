@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2024 June 14, 22:40 -->
+<!-- 2024 June 15, 02:23 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Philosophy of Race FAQs</title>
@@ -348,7 +348,7 @@ By contrast, only 2 out of 82 Kenyan children ranging from 18 to 72 months old e
 </ul>
 
 
-<figure id="org8f3aa84">
+<figure id="org1717027">
 <img src="../images/most-important-racial-gene-differences-are-neurological.jpg" alt="The most significant genetic differences between races are mental traits." width="500">
 
 </figure>
@@ -418,7 +418,7 @@ If someone uses words to refer to races or specific colors while continuing to d
 </p>
 
 
-<figure id="org9c0aa23">
+<figure id="org4b8b552">
 <img src="../images/color-spectrum.png" alt="Human races have many similarities to the color spectrum." width="700">
 
 </figure>
@@ -567,25 +567,83 @@ The real intent of making such an argument is to hide the reality that some peop
 <h3 id="genetic-similarity-relatedness"><span class="section-number-3">3.2.</span> What is the difference between genetic similarity and relatedness?</h3>
 <div class="outline-text-3" id="text-genetic-similarity-relatedness">
 <p>
-When talking about genetic similarity and relatedness, there are at least three different concepts to distinguish:
+When talking about genetic similarity and relatedness, there are multiple names and multiple definitions for these concepts.
+These two concepts are often misunderstood or even confused with each other, so we need to define and distinguish these concepts:
 </p>
 <ul class="org-ul">
-<li>Genetic similarity (how many genes two persons share between each other)</li>
-<li>Relatedness, or the <a href="https://en.wikipedia.org/wiki/Legality_of_incest#Degrees_of_relationship">Degree of Consanguinity</a></li>
-<li>The percentage of genes shared by descent <i>from a common ancestor</i>, using only two paths to that common ancestor in a family tree</li>
+<li>Genetic Similarity, or <a href="https://en.wikipedia.org/wiki/Genetic_distance">Genetic Distance</a>.</li>
+<li><a href="https://en.wikipedia.org/wiki/Kin_selection#Hamilton's_rule">Relatedness</a>, or <a href="https://en.wikipedia.org/wiki/Coefficient_of_relationship">Coefficient of Relationship</a>, or the <a href="https://en.wikipedia.org/wiki/Legality_of_incest#Degrees_of_relationship">Degree of Consanguinity</a>.</li>
 </ul>
 
 <p>
-We can formally define &ldquo;relatedness&rdquo; using a mathematical definition: <code>1/(2^c)</code>, where <code>c</code> is the <a href="https://en.wikipedia.org/wiki/Consanguinity">degree of consanguinity</a>.
-This matters because people frequently confuse relatedness with genetic similarity.
-Genetic similarity is &gt;99% for all humans.
+We can formally define &ldquo;relatedness&rdquo; using a mathematical definition: <code>1/(2^c)</code> or equivalently <code>2^(-c)</code>, where <code>c</code> is the <a href="https://en.wikipedia.org/wiki/Consanguinity">degree of consanguinity</a>.
+When thinking about genetic relationships, &ldquo;relatedness&rdquo; usually seems like a clear concept because most people only think about the closest relationship that any two organisms share together, rather than <i>all</i> the relationships that two organisms may share between each other via <i>all</i> their common ancestors.
+Regardless of however &ldquo;relatedness&rdquo; is defined, it becomes clear that using &ldquo;relatedness&rdquo; to talk about anything is meaningless when we consider that there&rsquo;s usually more than one way how two organisms may be related to each other.
+Relatedness is thus <i>not</i> a well-defined concept, as the following text shows:
+</p>
+
+<blockquote>
+<p>
+“Relatedness” is not easy to define.
+<a href="https://en.wikipedia.org/wiki/Kin_selection#Hamilton's_rule">Wikipedia says it is “the probability that at a random locus, the alleles there will be identical by descent”</a>.
+But what does “identical by descent” mean? If we only look back one generation, it seems pretty simple.
+You inherit half your DNA from each parent, so for any given allele of a parent, there is a 50% chance that you have inherited a direct copy of that allele.
+For any given allele of yours, there is a 50% chance that your sibling inherited a direct copy of the same allele from your parents.
+So, by one definition of “relatedness”, you are 0.5 related to your parents and siblings.
+</p>
+
+<p>
+However, if we look further back in time, it is not that simple.
+You had two distinct parents, and probably 4 distinct grandparents and 8 distinct great-grandparents.
+It seems that N generations back, you had 2<sup>N</sup> ancestors.
+But the branches of your ancestor tree start to merge as we look further back in time.
+Ten generations back, you probably didn’t have 2<sup>10</sup> distinct ancestors.
+One hundred generations back, you certainly didn’t have 2<sup>100</sup> distinct ancestors, because that is vastly more people than have ever existed.
+Two people can inherit the same allele from a common ancestor down different pathways of descent.
+</p>
+
+<p>
+For example, suppose that you and your sister both inherited one copy of the sickle-cell allele of the β-globin gene, but your sister inherited her copy from your father, while you inherited your copy from your mother.
+Your mother and father both inherited that allele from a common ancestor six generations back.
+The information of both copies came from the same mutation thousands of years ago, and it came from a common ancestor who lived about 200 years ago, but it arrived in you and your sister by different pathways.
+Are those instances of the allele “identical by descent” or not?
+</p>
+
+<p>
+So, it’s not really clear what “relatedness” means.
+However it is defined, it is not the probability that alleles are identical.
+It could approximate that in special cases, such as a recent mutation.
+It could also be an approximate lower bound on the probability that alleles are shared.
+&#x2013; T. K. Van Allen, Selected to be Numerous?, <i><a href="https://www.amazon.com/dp/B0BPXJ85W7">Debunking the Selfish Gene</a></i>
+</p>
+</blockquote>
+
+<p>
+Genetic similarity is a more meaningful concept than &ldquo;relatedness&rdquo;, but there&rsquo;s multiple ways to measure it:
+</p>
+<blockquote>
+<p>
+Genetic similarity is some metric of shared genetic information.
+There are various ways it could be measured.
+One is the percentage of identical alleles.
+Another is the percentage of coding DNA that is identical.
+It could even be the <a href="https://en.wikipedia.org/wiki/Hamming_distance">Hamming distance</a> between nucleotide sequences.
+Regardless of how it is defined, it should not be confused with relatedness.
+You are 0.5 related to your brother or sister by the simple definition of “relatedness”, but you share more than 50% of your genetic information with them.
+You share most of it with any other human being, and a significant percentage of it with an oyster or an oak tree.
+&#x2013; T. K. Van Allen, Selected to be Numerous?, <i><a href="https://www.amazon.com/dp/B0BPXJ85W7">Debunking the Selfish Gene</a></i>
+</p>
+</blockquote>
+<p>
+By most metrics, genetic similarity is &gt;99% for all humans, and genetic similarity between humans and chimpanzees (or bonobos) is ~98.8%.
+Since humans and other animals have millions of genes, small changes in the percentage of genetic similarity can lead to big changes, even if the organisms or species share a huge amount of genetic information between each other.
 </p>
 
 
 
 
 
-<figure id="org648e2a6">
+<figure id="orgb906eaa">
 <img src="../images/percentage-of-shared-DNA-humans-and-species.jpg" alt="The genetics between Africans and Europeans differs by a total of 0.5%." width="500">
 
 </figure>
@@ -744,7 +802,7 @@ Sometimes, race realists are also labeled &ldquo;Nazis&rdquo; or &ldquo;fascists
 </p>
 
 
-<figure id="org72f374d">
+<figure id="orgc0af333">
 <img src="../images/race-venn-diagram.jpg" alt="Venn diagram of race realists, racists, and race denialists." width="500">
 
 <figcaption><span class="figure-number">Figure 1: </span>A Venn diagram of race realists, racists, and race denialists. | <a href="../#blogroll">Link to Pragmatosphere Blogroll</a>. | <a href="https://akarlin.com/race-denial-vs-racism-a-false-dichotomy/">Original Source</a>.</figcaption>
@@ -873,7 +931,7 @@ In order to ensure a meritocracy, individuals must always be treated based on me
 </p>
 
 
-<figure id="orgd23172a">
+<figure id="org17357fe">
 <img src="../images/race-and-IQ.png" alt="Different races have different normal distributions for their IQ scores. Asians and whites have the highest IQ score distributions, while blacks and Hispanics have the lowest IQ score distributions." width="500">
 
 <figcaption><span class="figure-number">Figure 2: </span>As we can see from these normal curve distributions for IQ, the average black person has a lower IQ than the average white person, but there are still some black people who have higher IQs than most white people, and some white people who have lower IQs than most black people.</figcaption>
@@ -988,7 +1046,7 @@ IQ can be influenced by environmental manipulation, but there are also effective
 </p>
 
 
-<figure id="org394a7f5">
+<figure id="org0ad2532">
 <img src="../images/g-hierarchy.png" alt="The g-factor for measuring intelligence is based on verbal ability, working memory, visual-spatial reasoning, processing speed, and more." width="675">
 
 </figure>
@@ -1176,7 +1234,7 @@ So, there is no mystery about the causal pathway between genetics and social out
 </p>
 
 
-<figure id="org499c159">
+<figure id="orge2bce6f">
 <img src="../images/purely-economic-factors-stonetoss.png" alt="A comicstrip by Stonetoss about traits and genetics in dogs." width="275" style="float: right; margin: 00px 00px 00px 20px;">
 
 </figure>
@@ -1272,7 +1330,7 @@ For differences between groups, it follows that the provably high heritability o
 </p>
 
 
-<figure id="org5a26958">
+<figure id="org11c1955">
 <img src="../images/IQ-heritability-age.png" alt="Data from an exemplary twin study that implies that IQ is based on genetics more than environmental factors." width="675">
 
 <figcaption><span class="figure-number">Figure 3: </span>The results from this exemplary twin study imply that IQ is based on genetics more than environmental factors.</figcaption>
@@ -1560,7 +1618,7 @@ Read More:
 </ul>
 
 
-<figure id="orgebe303b">
+<figure id="orgb943c59">
 <img src="../images/diversity-vs-homicide-rates-maps.png" alt="The homicide rates for different counties in the US strongly correlate with what the most dominant race of the county is." width="500">
 
 </figure>
@@ -1669,7 +1727,7 @@ If race was only about skin color, then it wouldn&rsquo;t be possible to identif
 </p>
 
 
-<figure id="org1881e5c">
+<figure id="orga70fdb2">
 <img src="../images/race-is-only-skin-deep--albino-people-counter-example.png" alt="Albino people all have the same skin color, and yet it's still easy to determine which race an albino person belongs to." width="500">
 
 </figure>
@@ -1731,7 +1789,7 @@ See: <a href="#genetic-similarity-relatedness">What Is The Difference Between Ge
 </p>
 
 
-<figure id="org48509f0">
+<figure id="org6781227">
 <img src="../images/percentage-of-shared-DNA-humans-and-species.jpg" alt="The genetics between Africans and Europeans differs by a total of 0.5%." width="500">
 
 </figure>
@@ -1765,7 +1823,7 @@ The age estimate of several human alleles (genetic variants) from Hawks et al. c
 </p>
 
 
-<figure id="org362686b">
+<figure id="org91d303a">
 <img src="../images/age-estimate-of-ascertained-human-alleles.jpg" alt="Most human allelles originated in the last 20000 to 10000 years.">
 
 </figure>
@@ -1885,7 +1943,7 @@ Shorter Essay 2: <a href="https://thewaywardaxolotl.blogspot.com/2017/12/the-cuc
 </ul>
 
 
-<figure id="orgf405601">
+<figure id="org371d71b">
 <img src="../images/christianity-and-jews-divided-WN-thought.png" alt="White nationalists are divided between those who think that Christianity is a Jewish psyop, and those who proudly value their Christian religion with pride." width="400">
 
 </figure>
@@ -2187,7 +2245,7 @@ These multi-racial dynamics have lead to Asian men and black women being unlikel
 </p>
 
 
-<figure id="org2cbcdc8">
+<figure id="org3a226dc">
 <img src="../images/race-and-sex-dating-preferences.png" alt="race-and-sex-dating-preferences.png" width="500">
 
 <figcaption><span class="figure-number">Figure 4: </span><a href="https://qz.com/149342/the-uncomfortable-racial-preferences-revealed-by-online-dating">The uncomfortable racial preferences revealed by online dating - Quartz</a></figcaption>
@@ -2604,21 +2662,21 @@ However, white Americans overall are still projected to make up over 70% of the 
 </p>
 
 
-<figure id="org7664fea">
+<figure id="org3c73c89">
 <img src="../images/White_America_(of_one_race)_from_1960_to_2020.gif" alt="This timeline map showing the demographics of the United States from 1960 to 2020 clearly shows that the country is gradually becoming less and less white." width="500">
 
 <figcaption><span class="figure-number">Figure 5: </span>White America of one race (or alone) in population number, overall percentage nationally and percentage state wise from 1960 to 2020.</figcaption>
 </figure>
 
 
-<figure id="orgc405fdb">
+<figure id="orgd654739">
 <img src="../images/White_or_European_Canadians_from_2001_to_2016.gif" alt="This timeline map showing the demographics of Canada from 2001 to 2016 clearly shows that the country is gradually becoming less and less white." width="500">
 
 <figcaption><span class="figure-number">Figure 6: </span>White/European Canadians from 2001 to 2016, nationally and provincial in Canada in percentages.</figcaption>
 </figure>
 
 
-<figure id="orga162022">
+<figure id="org1d8b698">
 <img src="../images/white-population-timeline-in-UK-with-projections.png" alt="The white population in the UK is projected to decline to being less than 66% white in 2056." width="500">
 
 <figcaption><span class="figure-number">Figure 7: </span>White population in the UK overtime including projections up to 2056; The UK 2021 census says that the total white population is 81.7%, so it went even lower than the projected rate for when the graph was made.</figcaption>
@@ -2769,7 +2827,7 @@ Links Regarding Anti-White Ideology And Propaganda In The West:
 </ul>
 
 
-<figure id="org7dc0460">
+<figure id="org5fbbcf7">
 <img src="../images/understanding-left-wing-bullshit.png" alt="Left-wing rhetoric is full of terms and euphemisms that are code words for anti-white racism." width="600">
 
 </figure>
@@ -2849,7 +2907,7 @@ It&rsquo;s unclear what percentage of the American and Canadian populations are 
 </div>
 </div></div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2024 June 14, 22:40</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2024 June 15, 02:23</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>
