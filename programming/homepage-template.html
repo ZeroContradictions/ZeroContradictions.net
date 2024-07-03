@@ -33,6 +33,7 @@
             a {color: #015EF4; font-weight: bold; line-height: 1.3em;}
             a.blog-posts {color: #EE0534;}
             a.videos {color: #009C00;}
+            a.hlink {color: black; font-weight: normal; line-height: 1.0em; text-decoration: none;}
 
             /* Alternatively, if you'd prefer a link color set that prioritizes color contrast against the background (for light mode) instead of color contrast between the links, you could try these colors, but they're only designed with light-mode in mind: */
             /* a {color: #0149BC; font-weight: bold; line-height: 1.3em;} */
@@ -52,6 +53,7 @@
             h3 {margin: 17px 20px 10px; padding-top: 12px; border-top: solid black 2px; font-size: 1.25em;}
             h3.noline {padding: 0; border-top: none;}
             hr {margin: 0 20px 10px; padding: 0; border: none; border-top: solid black 2px;}
+            br {display: block; margin: 5px 0;}
 
             #search-bar {box-sizing: border-box;}
             nav {max-width: 1000px; list-style-type: none; margin: 0 auto; padding: 0; overflow: auto; background-color: #3F5EA2;}
@@ -72,7 +74,7 @@
 
             /* Display in light or dark mode depends on the user's web browser preferences. */
             @media (prefers-color-scheme: light) {body {color: black; background-color: #F4F5F6;} }
-            @media (prefers-color-scheme: dark) {header {border-bottom-color: white;} body {color: white; background-color: black;} hr, h1, h2, h3 {border-top-color: white;} }
+            @media (prefers-color-scheme: dark) {header {border-bottom-color: white;} body {color: white; background-color: black;} a.hlink {color: white} hr, h1, h2, h3 {border-top-color: white;} }
         </style>
     </head>
 
@@ -85,9 +87,9 @@
             [[Explain what red links are]] <span style="color:#EE0534">(highlighted in red)</span> [[Explain what blue links are]] <span style="color:#015EF4">(highlighted in blue)</span> as well as [[Explain what blue links are]] <span style="color:#009C00">(highlighted in green)</span>.
             If you click one of the links in the navigation bar, then the page will scroll down to that section (which will be in one of the three columns for displays that are at least 800 pixels wide).
             [[Introduction to website]]
-            <br><br>
+            <br>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            <br><br>
+            <br>
             Introduction to <a class="blog-posts" href="[[Enter the relative or absolute URL here]]">contact page link</a>.
             Whether this site displays in light or dark mode depends on your web browser preferences.
             <script>
@@ -95,7 +97,7 @@
                 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
                 document.write(`Last Updated: ${d.getFullYear()} ${months[d.getMonth()]} ${String(d.getDate())}`);
             </script>
-            <br><br>
+            <br>
             <a property="dct:title" rel="cc:attributionURL" href="https://zerocontradictions.net/programming/homepage-template">Zero Contradictions Homepage Template</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://zerocontradictions.net/">Zero Contradictions</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">CC BY 4.0</a>
             <br>
             Other people may use this HTML template to create their own webpages if they wish, as long as they follow the terms of the CC BY 4.0 license and leave the attribution text to Zero Contradictions in the footer.
@@ -137,7 +139,7 @@
 
 <!--BEGIN FIRST COLUMN-->
 <div id="left-column">
-<h2 id="first-category">1st Category</h2>
+<h2 id="first-category"><a class="hlink" href="#first-category">1st Category</a></h2>
 <ul>
     <li><p>Introduction Text Explaining Category</p></li>
     <li><a class="blog-posts" href="[[Enter the relative or absolute URL here]]">[[Enter the blog post link text here]]</a>
@@ -154,7 +156,7 @@
         <p>This is a paragraph describing the external link above, if necessary.</p></li>
 </ul>
 
-<h2 id="fourth-category">4th Category</h2>
+<h2 id="fourth-category"><a class="hlink" href="#fourth-category">4th Category</a></h2>
 <h3 class="noline">Subcategory 1</h3>
 <ul>
     <li><a class="blog-posts" href="[[Enter the relative or absolute URL here]]">[[Enter the blog post link text here]]</a>
@@ -187,7 +189,7 @@
 
 <!--BEGIN SECOND COLUMN-->
 <div id="middle-column">
-<h2 id="second-category">2nd Category</h2>
+<h2 id="second-category"><a class="hlink" href="#second-category">2nd Category</a></h2>
 <ul>
     <li><p>Introduction Text Explaining Category</p></li>
     <li><a class="blog-posts" href="[[Enter the relative or absolute URL here]]">[[Enter the blog post link text here]]</a>
@@ -204,7 +206,7 @@
         <p>This is a paragraph describing the external link above, if necessary.</p></li>
 </ul>
 
-<h2 id="fifth-category">5th Category</h2>
+<h2 id="fifth-category"><a class="hlink" href="#fifth-category">5th Category</a></h2>
 <ul>
 <li><p>Introduction Text Explaining Category</p></li>
 <li class="underline">Blog Post / Essay Series 1</li>
@@ -228,7 +230,7 @@
 </li>
 </ul>
 
-<h2 id="blogroll">Blogroll</h2>
+<h2 id="blogroll"><a class="hlink" href="#blogroll">Blogroll</a></h2>
 <ul>
     <li><p>Introduction text for blogroll.</p></li>
     <li><a href="[[Enter the blog URL here]]">[[Enter the blog link text here]]</a></li>
@@ -243,7 +245,7 @@
 
 <!--BEGIN THIRD COLUMN-->
 <div id="right-column">
-<h2 id="third-category">3rd Category</h2>
+<h2 id="third-category"><a class="hlink" href="#third-category">3rd Category</a></h2>
 <ul>
     <li><a class="blog-posts" href="[[Enter the relative or absolute URL here]]">[[Enter the blog post link text here]]</a></li>
     <li><a class="blog-posts" href="[[Enter the relative or absolute URL here]]">[[Enter the blog post link text here]]</a></li>
@@ -265,7 +267,7 @@
         <p>This is a paragraph describing the video and text links above, if necessary.</p></li>
 </ul>
 
-<h2 id="misc">Miscellaneous</h2>
+<h2 id="misc"><a class="hlink" href="#misc">Miscellaneous</a></h2>
 <ul>
     <li><a class="blog-posts" href="[[Enter the relative or absolute URL here]]">[[Enter the blog post link text here]]</a></li>
     <li><a class="blog-posts" href="[[Enter the relative or absolute URL here]]">[[Enter the blog post link text here]]</a></li>
@@ -298,8 +300,8 @@
 
 <footer>
     <a class="blog-posts" href="[[Enter the URL here]]">[[Enter the link text here]]</a> | <a class="blog-posts" href="[[Enter the URL here]]">[[Enter the link text here]]</a> | <a class="blog-posts" href="[[Enter the URL here]]">[[Enter the link text here]]</a>
-    <br><br><span style="font-size: 0.90em">&#169; [[Your Name Here]] [[2024 Or Year First Published]].</span>
-    <br><br><span style="font-size: 0.78em">This webpage is based on a template designed by <a href="https://zerocontradictions.net/">Zero Contradictions</a> licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">CC BY 4.0</a>.</span>
+    <br><span style="font-size: 0.78em">This webpage is based on a template designed by <a href="https://zerocontradictions.net/">Zero Contradictions</a> licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">CC BY 4.0</a>.</span>
+    <br><span style="font-size: 0.90em">&#169; [[Your Name Here]] [[2024 Or Year First Published]].</span>
 </footer>
 
 </body>
