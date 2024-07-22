@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2024 May 17, 10:36 -->
+<!-- 2024 July 22, 21:17 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Unix/Linux Commands, Syntax, And Notes</title>
@@ -35,7 +35,7 @@
 </head>
 <body>
 <div id="org-div-home-and-up">
- <a accesskey="h" href="/"> UP </a>
+ <a accesskey="h" href="/directory"> UP </a>
  |
  <a accesskey="H" href="/"> HOME </a>
 </div><div id="content" class="content">
@@ -504,7 +504,6 @@ These are the common top-level directories associated with the root directory:
 </table>
 </div>
 
-
 <div id="outline-container-first-char-of-ls-l" class="outline-3">
 <h3 id="first-char-of-ls-l"><span class="section-number-3">5.1.</span> The First Character of ls -l Output</h3>
 <div class="outline-text-3" id="text-first-char-of-ls-l">
@@ -611,13 +610,13 @@ Distributions customize the manual section to their specifics, which often inclu
 <li>uniq &#x2013; report or filter out repeated lines in a file; -c: print line number and a space before every outputted line</li>
 <li>tr : transliterates the characters in its input; a-z A-Z: convert lowercase letters to uppercase; A-Z a-z: convert uppercase letters to lowercase letters; A-Za-z: all letters</li>
 <li>comm -options file-name-1 file-name-2 : print three columns of output: lines that only occur in file-name-1, lines that only in file-name-2, lines that occurs in both files; -1: suppress column 1; -2: suppress column2; -3 suppress column3; -i: case insensitive comparison</li>
-<li>sed &rsquo;list-of-commands&rsquo; file-names : (Stream EDitor) read lines one at a time from the input files, apply commands from the list (placed within single quotes), in order, to each line and write the edited output to the standard output; -n ’/pattern/p’: only explicitly print patterns with the p command
+<li>sed &rsquo;list-of-commands&rsquo; file-names : (Stream EDitor) read lines one at a time from the input files, apply commands from the list (placed within single quotes), in order, to each line and write the edited output to the standard output; -n &rsquo;/pattern/p&rsquo;: only explicitly print patterns with the p command
 <ul class="org-ul">
-<li>sed ’s/$/\n/’ : prints a newline to the end of each line, thus double spacing a file</li>
-<li>sed -n ’20,30p’ : print lines 20 through 30</li>
-<li>sed ’1,10d’ : delete lines 1 through 10</li>
-<li>sed ’1,/^$/d’ : delete up to and including the first blank line</li>
-<li>sed ’$d’ : delete last line</li>
+<li>sed &rsquo;s/$/\n/&rsquo; : prints a newline to the end of each line, thus double spacing a file</li>
+<li>sed -n &rsquo;20,30p&rsquo; : print lines 20 through 30</li>
+<li>sed &rsquo;1,10d&rsquo; : delete lines 1 through 10</li>
+<li>sed &rsquo;1,/^$/d&rsquo; : delete up to and including the first blank line</li>
+<li>sed &rsquo;$d&rsquo; : delete last line</li>
 </ul></li>
 <li>awk &rsquo;program-name&rsquo; file-names : read lines from an input file and divide them into strings of non-blank characters separated by blanks or tabs. Fields ($1, $2, $NF, $0) apply to the lines like columns; -F@: change the delimiter between fields in any single character (@), like a colon, |, or any other character</li>
 <li>javac buggy-program-name.java &gt; error-log-for-file-name 2&gt;&amp;1 : send both output and the error messages into a file</li>
@@ -961,7 +960,7 @@ case statements:
 <li>Thus, directories can be created that allow users to access files that they know are in the directory, while preventing them from reading what files are in the directory.</li>
 </ul></li>
 <li>The inodes (originally i-nodes and index-nodes) identifies the permissions and dates for the files; The three times/dates in the inode are: the time when the contents of the file were last modified (written), the time that the file was last used (read or executed), and the time that the inode itself was last changed.</li>
-<li>In the context of Unix file systems, “metadata” is information about a file: who owns it, permissions, file type (special, regular, named pipe, etc) and which disk-blocks the file uses, which is all typically contained in the inodes in the on-disk structure.</li>
+<li>In the context of Unix file systems, &ldquo;metadata&rdquo; is information about a file: who owns it, permissions, file type (special, regular, named pipe, etc) and which disk-blocks the file uses, which is all typically contained in the inodes in the on-disk structure.</li>
 <li>The usage time for a file reported by ls -lu reports when the file was last used, not when it was last written to.</li>
 <li>Changing permissions only affects the inode change time, as reported by ls -lc.</li>
 <li>All the directory hiearchy does is provide convenient names for files. The system&rsquo;s internal name for a file is its i-number: the number of the inode holding the file&rsquo;s info.</li>
@@ -1019,7 +1018,7 @@ case statements:
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2024 May 17, 10:36</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2024 July 22, 21:17</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>
