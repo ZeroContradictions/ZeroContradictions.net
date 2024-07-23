@@ -143,7 +143,9 @@ figcaption, img {
 
 .footpara { display: inline; }
 
-.footdef  { margin-bottom: 1em; }
+.footdef { margin-bottom: 1em; }
+
+.footref, .footnum { font-size: 130%; }
 
 .timestamp { color: #005500; }
 
