@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2024 July 22, 21:17 -->
+<!-- 2024 August 09, 07:46 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>How to Design a Blog with Emacs and Org-Mode</title>
@@ -335,12 +335,14 @@ This facilitates the organization of all my files since I can organize all my id
 </p>
 
 <p>
-I don&rsquo;t usually export my org files to LaTeX, but I do so when I want to get my works in PDF format.
-When exporting .org files to LaTeX, I include the following line at the beginning of the .org file so that the page margins don&rsquo;t take up so much space in the resulting .pdf file.
+I don&rsquo;t usually export my org files to LaTeX, but I do so when I want to publish my works in PDF format.
+When exporting .org files to LaTeX, I include the following lines at the beginning of the .org file so that the page margins take up less space in the resulting .pdf file, and so that the output is displayed in a font that is easier to read.
 </p>
 <pre class="example">
-#+latex_header: \makeatletter \@ifpackageloaded{geometry}{\geometry{margin=2.5cm}}
-{\usepackage[margin=2.5cm]{geometry}} \makeatother
+#+latex_header: \makeatletter \@ifpackageloaded{geometry}{\geometry{margin=2.5cm}}{\usepackage[margin=2.5cm]{geometry}} \makeatother
+#+latex_header: \usepackage{helvet}
+#+latex_header: \renewcommand{\familydefault}{\sfdefault}
+#+latex_header: \usepackage{parskip}
 </pre>
 
 <p>
@@ -724,7 +726,7 @@ System Crafters has also written a <a href="https://systemcrafters.net/publishin
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2024 July 22, 21:17</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2024 August 09, 07:46</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>
