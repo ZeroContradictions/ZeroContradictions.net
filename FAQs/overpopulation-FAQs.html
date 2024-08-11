@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2024 August 11, 02:00 -->
+<!-- 2024 August 11, 05:20 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Overpopulation FAQs</title>
@@ -104,11 +104,12 @@
 <li><a href="#safeguards-against-failure-and-abuse">11.7. What safeguards would prevent this system from failing or being abused?</a></li>
 </ul>
 </li>
-<li><a href="#LMPL">12. How Will The Government Determine The Carrying Capacity?</a>
+<li><a href="#LMPL">12. How Will The Government Determine The Carrying Capacity And LMPL?</a>
 <ul>
-<li><a href="#multiple-carrying-capacities">12.1. Calculating multiple different carrying capacities for differing conditions</a></li>
-<li><a href="#PBS">12.2. How would the government determine the appropriate buffer size between the legal maximum population limit and the carrying capacity of the country?</a></li>
-<li><a href="#global-government">12.3. What roles would a global government have in enforcing population control?</a></li>
+<li><a href="#carrying-capacity-model">12.1. Outline For Creating Computer Models To Estimate The Carrying Capacity</a></li>
+<li><a href="#necessary-action">12.2. Necessary Action</a></li>
+<li><a href="#multiple-carrying-capacities">12.3. Calculating multiple different carrying capacities for differing conditions</a></li>
+<li><a href="#global-government">12.4. What roles would a global government have in enforcing population control?</a></li>
 </ul>
 </li>
 <li><a href="#future-predictions">13. Predictions For The Future</a>
@@ -338,7 +339,7 @@ Once the potato was introduced to Ireland, the country had a population explosio
 </p>
 
 
-<figure id="org5429436">
+<figure id="orgb748008">
 <img src="../images/ireland-population-timeline-1100-2000.jpg" alt="The population of Ireland from 1100 to 2000." width="630">
 
 </figure>
@@ -494,7 +495,7 @@ Rising living standards also cause people to live longer lives, which further co
 </p>
 
 
-<figure id="orgca0c23c">
+<figure id="org19b1e87">
 <img src="../images/consumption-of-earths-resources--country-comparison.png" alt="The estimated number of Earths needed to support various lifestyles around the world." width="600">
 
 </figure>
@@ -842,7 +843,7 @@ That is false. There are plenty of signs and examples of overpopulation in vario
 Not even developed countries like the US can guarantee that they won&rsquo;t be facing water shortages in the near future. Just look at this photo of Hoover Dam and Lake Mead:
 </p>
 
-<figure id="orgced9d5b">
+<figure id="orge29a77a">
 <img src="../images/lake-mead-water-levels-2021-07-05.jpg" alt="Water levels at Lake Mead in 2000 vs 2021." width="600">
 
 </figure></li>
@@ -1252,7 +1253,7 @@ Basically, the goal should be to implement anything that makes it easier to have
 </p>
 
 
-<figure id="orge5b4d8d">
+<figure id="org1422cee">
 <img src="../images/unaffordability-and-birth-rate-cycle.jpg" alt="Immigration is a terrible &quot;solution&quot; for countries with low birth rates." width="400">
 
 <figcaption><span class="figure-number">Figure 1: </span>Immigration is a terrible &ldquo;solution&rdquo; for countries with low birth rates. It will only make it harder for the people who already live there.</figcaption>
@@ -1688,7 +1689,7 @@ Since only a finite maximum number of children can be born within each year, thi
 </p>
 
 <p>
-Additionally, the EPC system that we are proposing would provide <a href="#PBS">some amount of buffer room</a> between the Legal Maximum Population Limit (LMPL) and the carrying capacity of the environment to avoid overpopulation, so if the carrying capacity dropped during an emergency, there wouldn&rsquo;t be a need to decide who gets to live and who doesn&rsquo;t, nor would it be necessary to kill off the most elderly members of the society in the event of an overpopulation crisis (when the population is dangerously higher than the carrying capacity).
+Additionally, the EPC system that we are proposing would provide <a href="#necessary-action">some amount of buffer room</a> between the Legal Maximum Population Limit (LMPL) and the carrying capacity of the environment to avoid overpopulation, so if the carrying capacity dropped during an emergency, there wouldn&rsquo;t be a need to decide who gets to live and who doesn&rsquo;t, nor would it be necessary to kill off the most elderly members of the society in the event of an overpopulation crisis (when the population is dangerously higher than the carrying capacity).
 </p>
 </div>
 </div>
@@ -1860,7 +1861,7 @@ Every efficient economy is supposed to display market prices publicly anyway.
 </div>
 
 <div id="outline-container-LMPL" class="outline-2">
-<h2 id="LMPL"><span class="section-number-2">12.</span> How Will The Government Determine The Carrying Capacity?</h2>
+<h2 id="LMPL"><span class="section-number-2">12.</span> How Will The Government Determine The Carrying Capacity And LMPL?</h2>
 <div class="outline-text-2" id="text-LMPL">
 <p>
 LMPL: Legal Maximum Population Limit
@@ -1868,7 +1869,7 @@ LMPL: Legal Maximum Population Limit
 
 <p>
 First, we must recall <a href="../FAQs/overpopulation-FAQs#what-is-overpop">the definition of overpopulation and how it is modeled</a>.
-We shall restate here for convenience.
+We shall restate it here for convenience.
 Overpopulation is determined by at least four parameters (or at least six for humans):
 </p>
 <ul class="org-ul">
@@ -1879,24 +1880,88 @@ Overpopulation is determined by at least four parameters (or at least six for hu
 <li>The technology and substitution options available to those creatures (for humans)</li>
 <li>The distribution of wealth and opportunities (for humans)</li>
 </ul>
-
-
-
 <p>
-If we want to estimate what the carrying capacity of the Earth is, some reasonable calculations to start with would be to multiply the number of people living in the society by the expected consumption of various resources that we would expect of each person for food, water, electricity, living space, etc.
-These calculations could be compared to what we expect the supplies for each of these resources to be, and the resource with the lowest supply would determine what number of people the LMPL should be allocated for the foreseeable future.
-</p>
-
-
-<p>
-For the strongest predictive power, a dynamic population model must be continually updated with new data based on observations and calculations of the environment.
+The most accurate models for calculating overpopulation would use more than 4-6 parameters, especially if additional parameters are created for modeling accessible resources and resource consumption.
+Creating an accurate overpopulation model for today&rsquo;s world is a difficult task because the population, supply of resources, and consumption of resources are each changing faster than ever before in history.
 </p>
 
 <p>
-More parameters would lead to more complex models, but it&rsquo;s best to maximize both simplicity and accuracy. There are trade-offs to both, and some models are better than others, depending on the context.
+Unfortunately, I don&rsquo;t have the time or social connections to create a dynamic overpopulation model for the Earth, since it is such a complex task.
+It would require a lot of data collection and mining.
+For the greatest accuracy, we would also need a team of dedicated mathematicians, geologists, economists, and other experts.
+Nevertheless, I will provide a rough outline for such a model.
+I won&rsquo;t be surprised if making more accurate predictions requires creating an even more complex model than the one I&rsquo;m going to describe.
+</p>
+</div>
+
+<div id="outline-container-carrying-capacity-model" class="outline-3">
+<h3 id="carrying-capacity-model"><span class="section-number-3">12.1.</span> Outline For Creating Computer Models To Estimate The Carrying Capacity</h3>
+<div class="outline-text-3" id="text-carrying-capacity-model">
+<p>
+A good place to start would be to figure out how complex we want the model to be, given our limitations on time and information.
+Given that complexity, we would need to figure out which parameters are the most relevant to the model.
+More parameters would lead to more complex models, but it&rsquo;s best to maximize both simplicity and accuracy.
+There are trade-offs to both, and some models are better than others, depending on the context.
 </p>
 
+<p>
+We also need to define and clarify the variables that need to be regularly updated, calculated, and estimated.
+Many of these variables depend on other variables.
+This is a rough outline:
+</p>
+<ul class="org-ul">
+<li>Overpopulation (boolean data type)</li>
+<li>Given Environment: This could be the Earth. For determining overpopulation on within continents, countries, and regions, we could also define a smaller environment, and investigate the available resources.</li>
+<li>Carrying Capacity of the Given Environment (unsigned integer)
+<ul class="org-ul">
+<li>Food Supply
+<ul class="org-ul">
+<li>Available Farmland</li>
+<li>Agricultural Output</li>
+<li>Et Cetera</li>
+</ul></li>
+<li>Water Supply
+<ul class="org-ul">
+<li>Available Freshwater (in different qualities: cleanliness, pollution levels, salinity levels, temperature, etc)</li>
+<li>Rate of freshwater recycling</li>
+<li>Et Cetera</li>
+</ul></li>
+<li>Supply of Fossil Fuels
+<ul class="org-ul">
+<li>Supply of Oil</li>
+<li>Supply of Coal</li>
+<li>Supply of Natural Gas</li>
+<li>Et Cetera</li>
+</ul></li>
+<li>Supply of Other Resources
+<ul class="org-ul">
+<li>Supply of Phosphorous</li>
+<li>Supply of Iron</li>
+<li>Supply of Copper</li>
+<li>Supply of Rare Earth Metals</li>
+<li>Supply of Helium</li>
+<li>Et Cetera</li>
+</ul></li>
+<li>Renewable Generation Sources And Rates</li>
+<li>Available Inhabitable Living Space</li>
+<li>Important: The Total (Expected) Resource Consumption for each of the variables above.</li>
+</ul></li>
+<li>The population of humans.</li>
+<li>The desired standard of living and lifestyle for each human.</li>
+<li>The rate and effects of climate change.</li>
+<li>Timeframe: Given the information above, will overpopulation occur within the next 5, 10, 20, etc years?</li>
+<li>LMPL: Legal Maximum Population Limit (unsigned integer)</li>
+<li>PBS: Population Buffer Space (unsigned integer)</li>
+</ul>
+<p>
+For the strongest predictive power, the population model must also be continually updated as needed with the latest data, information, and calculations of the Earth.
+</p>
 
+<p>
+As another specification, the variables tracking the consumption of each resource are needed to compute the carrying capacity, since the number of people that we can support depends on how much they consume in resources.
+Hence, the model would need a boolean variable for checking whether the resource consumption of a resource is predicted to exceed its available supply or regeneration rate within the given timeframe.
+If the resource consumption does exceed the resource supply, then the model would need to alert the government to figure out what further actions must be taken for ensuring future prosperity.
+</p>
 
 <p>
 The concept of <a href="https://en.wikipedia.org/wiki/Ecological_overshoot">ecological overshoot</a> requires a time dimension.
@@ -1906,22 +1971,50 @@ If we&rsquo;re only considering the energy resources that humanity has, then 8 b
 There may be enough time for humanity to switch to different energy sources like nuclear energy, but it&rsquo;s not guaranteed, even moreso if we don&rsquo;t act fast enough.
 </p>
 
+<p>
+Like many of the other variables, the timeframe for overpopulation is also complex.
+It makes sense to predict for multiple timeframes (5, 10, 20, etc years), rather than just one.
+We predict that it will be easier to account for the timeframe if population control is implemented, the population stabilizes, and humanity learns from its mistakes.
+</p>
+</div>
+</div>
 
-
-
+<div id="outline-container-necessary-action" class="outline-3">
+<h3 id="necessary-action"><span class="section-number-3">12.2.</span> Necessary Action</h3>
+<div class="outline-text-3" id="text-necessary-action">
+<p>
+Since modern technology depends on a multitude of resources, we would also need to calculate the feasible standard of living for each human if a resource&rsquo;s supply if going to become limited or bottlenecked.
+Some examples:
+</p>
+<ul class="org-ul">
+<li>If the world is bound to run out of oil, <a href="../civilization/technology#after-global-oil-depletion">we have predictions for what will happen</a>.</li>
+<li>If <a href="https://www.youtube.com/watch?v=O0BooiAxQyY">the world is bound to run out of phosphorous</a>, then we need to figure out the most efficient uses of phosphorous. In some cases, we may even need to ration it.</li>
+<li>If <a href="https://en.wikipedia.org/wiki/Water_scarcity">the environment is bound to not have enough freshwater for its population</a>, then we need to figure out the most efficient uses of water, and how to ration it.</li>
+<li>Et Cetera.</li>
+</ul>
 
 <p>
-The hardest factor to consider for overpopulation will be the timeframe since it is very difficult to predict the future, but we predict that it will be easier to account for the timeframe if population control is implemented, the population stabilizes, and humanity learns from its mistakes.
+If things are really bad, the limitation of a resource will limit the population of humans, rather than limiting the average living standard of humans.
+This is where the necessity for population control comes into play.
+<a href="#if-no-pop-regulation">We&rsquo;ve already explained why</a> we desperately don&rsquo;t want the population to exceed the carrying capacity.
+Population Control requires that there be a Legal Maximum Population Limit (LMPL).
+<a href="#multiple-carrying-capacities">The LMPL depends on the type of society</a> and technological complexity that we want to have.
+The population size must be at or below the LMPL, in order for population control to achieve its intended goal.
 </p>
-
 
 <p>
-Societies with low energy-to-desire-satisfaction or resource-to-desire-satisfaction and no substitution options for said energy, societies with greatly unequal distributions of wealth, and societies without low barriers to entry for wealth-creating opportunities are also likely to support far fewer people with the same resources.
+To keep the population below the carrying capacity, we will want to compute a desirable amount of Population Buffer Space (PBS) to keep between the maximum population size (LMPL) and the carrying capacity.
+When in doubt, more buffer space is better than less buffer space since it gives the government more options and flexibility if the future seems particularly uncertain.
 </p>
+
+<p>
+Over time, data from previous decisions, events, and effects pertaining to the carrying capacity and population control would accumulate and provide the government of the current time period with more data for making better decisions on how to estimate the carrying capacity, and how to determine what the LMPL and PBS between the carrying capacity should be.
+</p>
+</div>
 </div>
 
 <div id="outline-container-multiple-carrying-capacities" class="outline-3">
-<h3 id="multiple-carrying-capacities"><span class="section-number-3">12.1.</span> Calculating multiple different carrying capacities for differing conditions</h3>
+<h3 id="multiple-carrying-capacities"><span class="section-number-3">12.3.</span> Calculating multiple different carrying capacities for differing conditions</h3>
 <div class="outline-text-3" id="text-multiple-carrying-capacities">
 <p>
 Although modern civilization has enabled the highest carrying capacity of any other time in human history, the world&rsquo;s carrying capacity is currently declining due to our exhaustion of the Earth&rsquo;s scarce resources.
@@ -1950,28 +2043,11 @@ The LMPL would be determined by the carrying capacity whose conditions we think 
 </div>
 </div>
 
-<div id="outline-container-PBS" class="outline-3">
-<h3 id="PBS"><span class="section-number-3">12.2.</span> How would the government determine the appropriate buffer size between the legal maximum population limit and the carrying capacity of the country?</h3>
-<div class="outline-text-3" id="text-PBS">
-<p>
-PBS: Population Buffer Space
-</p>
-
-<p>
-When in doubt, more buffer space is better than less buffer space since it gives the government more options and flexibility if the future seems particularly uncertain.
-</p>
-
-<p>
-Over time, data from previous decisions, events, and effects pertaining to the carrying capacity and population control would accumulate and provide the government of the current time period with more data for making better decisions on how to estimate the carrying capacity, and how to determine what the LMPL and PBS between the carrying capacity should be.
-</p>
-</div>
-</div>
-
 <div id="outline-container-global-government" class="outline-3">
-<h3 id="global-government"><span class="section-number-3">12.3.</span> What roles would a global government have in enforcing population control?</h3>
+<h3 id="global-government"><span class="section-number-3">12.4.</span> What roles would a global government have in enforcing population control?</h3>
 <div class="outline-text-3" id="text-global-government">
 <p>
-See: <a href="../civilization/political-philosophy#objections-to-global-government">Why it is reasonable to create a global government?</a>
+<i>See: <a href="../civilization/political-philosophy#objections-to-global-government">Why it is reasonable to create a global government?</a></i>
 </p>
 
 <p>
@@ -2145,7 +2221,7 @@ We are referring to a criminal record free of <i>violent</i> crimes. Misdemeanor
 </div>
 </div></div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2024 August 11, 02:00</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2024 August 11, 05:20</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>
