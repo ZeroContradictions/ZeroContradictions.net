@@ -127,6 +127,13 @@ blockquote {
     display: block;
 }
 
+.opponent {
+    border-left: solid #FFCFF1 19px;
+    margin: 8px 0 8px 0;
+    padding: 0 0 0 16px;
+    display: block;
+}
+
 pre, code { font-family: 'Inconsolata', sans-serif; }
 
 figcaption {
