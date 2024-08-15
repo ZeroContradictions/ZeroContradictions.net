@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2024 August 15, 02:28 -->
+<!-- 2024 August 15, 05:26 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>How to Design a Blog with Emacs and Org-Mode</title>
@@ -405,12 +405,29 @@ It may also complicate or interfere with your own CSS customizations if you link
 My advice is to write your own CSS file, and view the output of the default org-mode CSS and copy the useful parts of it that you want to keep for your own custom CSS file.
 </p>
 
+<hr>
 <p>
-If you would like to overrule the default CSS alignment of the tables, you can use ‘&lt;r&gt;&rsquo;, ‘&lt;c&gt;&rsquo; or ‘&lt;l&gt;&rsquo; in a special table cookies row of the table.
-You may also combine alignment and field width like this: ‘&lt;r10&gt;&rsquo;.
+If you would like to overrule the default CSS alignment of the table columns, you can use &rsquo;&lt;r&gt;&rsquo;, &rsquo;&lt;c&gt;&rsquo; or &rsquo;&lt;l&gt;&rsquo; in a special table cookies row of the table.
+You may also combine alignment and field width like this: &rsquo;&lt;r10&gt;&rsquo;.
 </p>
 
+<hr>
+<p>
+Org-mode makes it possible to create custom <a href="https://orgmode.org/worg/org-contrib/org-special-blocks.html">org-special-blocks</a>.
+For all org-mode versions greater than 8.0, their functionality is built into org-mode, so you can start using them right away.
+org-special-blocks<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> have the form of <code>#+begin_X</code> and <code>#+end_X</code>.
+If you&rsquo;d like to create a keybinding for automatically inserting them, you just need to edit the Emacs variable <code>org-structure-template-alist</code> to have the key binding and text that you want these blocks to have.
+In order to customize the CSS of these blocks, you just need to <a href="https://kitchingroup.cheme.cmu.edu/blog/2013/11/30/Custom-directives/">write a CSS class that is the same as the block</a>, and include the CSS properties that you want the output to have.
+You can also write LaTeX code for customizing the LaTeX output of org-special-blocks.
+</p>
 
+<p>
+In my case, I wanted to create an org-special-block to distinguish between: 1. text that I&rsquo;m responding to and/or questions that I&rsquo;m answering, and 2. text that I agree with and/or am quoting in my webpages.
+So I created the opponent block: <code>#+begin_opponent</code> and <code>#+end_opponent</code>, and I edited the CSS file used for all my webpages to control its output.
+For the latter case, I use the standard quote block that&rsquo;s built into org-mode by default: <code>#+begin_quote</code> and <code>#+end_quote</code>, and it has slightly different CSS formatting.
+</p>
+
+<hr>
 <p>
 The CSS file that I use to style my org-mode generated webpages is available under the CC BY 4.0 license.
 To download the template, just click the link below, and press &ldquo;Ctrl + S&rdquo; to save it.
@@ -724,9 +741,19 @@ System Crafters has also written a <a href="https://systemcrafters.net/publishin
 </p>
 </div>
 </div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+I haven&rsquo;t figured out how to control the formatting and syntax highlighting of the text shown in org-special-blocks in org-mode. If you know how, I would appreciate it if you <a href="../misc/contact">contact me</a>.
+</p></div></div>
+
+
 </div>
+</div></div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2024 August 15, 02:28</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2024 August 15, 05:26</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>
