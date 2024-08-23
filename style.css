@@ -164,6 +164,8 @@ table {
     border-collapse: collapse;
 }
 
+.noborders { border: none; }
+
 th, td {
     vertical-align: center;
     padding: 6px;
