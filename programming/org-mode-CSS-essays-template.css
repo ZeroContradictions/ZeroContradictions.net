@@ -39,6 +39,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
     margin: 0 0 5px 20px;
 }
 
+@media screen and (max-width: 21.2cm) { #table-of-contents ul li { margin: 0 0 5px 0; } }
+/* Don't indent TOC when screen width is shorter than max-width of <body> and 3% padding (currently 21.2cm) */
+
 .title {
     text-align: center;
     margin-bottom: .2em;
