@@ -22,27 +22,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 }
 
 #table-of-contents ul {
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
     list-style-type: none;
     font-weight: 600;
     text-decoration: underline;
     color: #0051D4;
     text-decoration-color: #0051D4;
-    text-decoration-thickness: 1px;
+    text-decoration-thickness: 0.0625rem;
 }
 #table-of-contents ul li {
-    margin: 0 0 5px 10px;
+    margin: 0 0 0.3125rem 0.625rem;
 }
 #table-of-contents ul li ul li {
-    margin: 0 0 5px 20px;
+    margin: 0 0 0.3125rem 1.25rem;
 }
 
-@media screen and (max-width: 21.2cm) { #table-of-contents ul li { margin: 0 0 5px 0; } }
+@media screen and (max-width: 21.2cm) { #table-of-contents ul li { margin: 0 0 0.3125rem 0; } }
 /* Don't indent TOC when screen width is shorter than max-width of <body> and 3% padding (currently 21.2cm) */
 
 .title {
     text-align: center;
-    margin-bottom: .2em;
+    margin-bottom: .2rem;
 }
 
 .subtitle {
@@ -52,14 +52,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 }
 
 #content {
-    max-width: 60em;
+    max-width: 60rem;
     margin: auto;
 }
 
 #postamble {
-    padding-top: 10px;
-    margin-top: 10px;
-    border-top: solid black 2px;
+    padding-top: 0.625rem;
+    margin-top: 0.625rem;
+    border-top: solid black 0.125rem;
 }
 p.author, p.date { text-align: center; }
 
@@ -81,23 +81,23 @@ p.author, p.date { text-align: center; }
 .underline { text-decoration: underline; }
 
 p {
-    line-height: 1.3em;
+    line-height: 1.3rem;
     text-align: left;
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
 }
 
 a {
-    line-height: 1.3em;
+    line-height: 1.3rem;
     color: #0051D4;
     text-decoration: none;
 }
 a:hover {
     text-decoration: underline;
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: 0.125rem;
 }
 a:focus {
     text-decoration: underline;
-    text-decoration-thickness: 3px;
+    text-decoration-thickness: 0.1875rem;
 }
 
 sub, sup {
@@ -107,33 +107,33 @@ sub, sup {
     vertical-align: baseline;
 }
 
-sup { top: -0.5em; }
+sup { top: -0.5rem; }
 
-sub { bottom: -0.25em; }
+sub { bottom: -0.25rem; }
 
 ul li, ol li {
-    margin: 0 0 5px 20px;
-    line-height: 1.3em;
+    margin: 0 0 0.3125rem 1.25rem;
+    line-height: 1.3rem;
 }
 
 .org-dl {
-    line-height: 1.3em;
-    margin-bottom: 5px;
+    line-height: 1.3rem;
+    margin-bottom: 0.3125rem;
 }
 
 dt { font-weight: bold; }
 
 blockquote {
-    border-left: solid #AAAAFF 19px;
-    margin: 8px 0 8px 0;
-    padding: 0 0 0 16px;
+    border-left: solid #AAAAFF 1.1875rem;
+    margin: 0.5rem 0 0.5rem 0;
+    padding: 0 0 0 1rem;
     display: block;
 }
 
 .opponent {
-    border-left: solid #FFCFF1 19px;
-    margin: 8px 0 8px 0;
-    padding: 0 0 0 16px;
+    border-left: solid #FFCFF1 1.1875rem;
+    margin: 0.5rem 0 0.5rem 0;
+    padding: 0 0 0 1rem;
     display: block;
 }
 
@@ -141,7 +141,7 @@ pre, code { font-family: 'Inconsolata', sans-serif; }
 
 figcaption {
     text-align: center;
-    margin: 10px auto 20px;
+    margin: 0.625rem auto 1.25rem;
 }
 
 figcaption, img {
@@ -153,7 +153,7 @@ figcaption, img {
 
 .footpara { display: inline; }
 
-.footdef { margin-bottom: 1em; }
+.footdef { margin-bottom: 1rem; }
 
 .footref, .footnum { font-size: 130%; }
 
@@ -161,9 +161,9 @@ figcaption, img {
 
 table {
     max-width: 100%;
-    margin: 15px auto;
-    border-top: solid black 1px;
-    border-bottom: solid black 1px;
+    margin: 0.9375rem auto;
+    border-top: solid black 0.0625rem;
+    border-bottom: solid black 0.0625rem;
     border-collapse: collapse;
 }
 
@@ -171,10 +171,10 @@ table {
 
 th, td {
     vertical-align: center;
-    padding: 6px;
+    padding: 0.375rem;
 }
 
-th { border-bottom: solid black 1px; }
+th { border-bottom: solid black 0.0625rem; }
 
 th.org-left, th.org-center, th.org-right { text-align: center; }
 td.org-right  { text-align: right;  }
@@ -183,40 +183,43 @@ td.org-center { text-align: center; }
 
 hr {
     border: none;
-    border-top: solid black 2px;
+    border-top: solid black 0.125rem;
 }
 
 h1 {
     max-width: 100%;
     margin: 0 auto;
-    padding-top: 10px;
+    padding-top: 0.625rem;
     text-align: center;
-    font-size: 2.0em;
+    font-size: 2.0rem;
 }
 
 h2 {
-    font-size: 1.6em;
-    border-top: solid black 2px;
-    margin: 20px 0 10px;
-    padding-top: 15px;
+    font-size: 1.6rem;
+    border-top: solid black 0.125rem;
+    margin: 1.25rem 0 0.625rem;
+    padding-top: 0.9375rem;
 }
 
 h3 {
-    font-size: 1.25em;
-    border-top: solid black 1px;
-    margin: 10px 0;
-    padding-top: 15px;
+    font-size: 1.25rem;
+    border-top: solid black 0.0625rem;
+    margin: 0.625rem 0;
+    padding-top: 0.9375rem;
 }
 
 h4 {
-    font-size: 1.15em;
+    font-size: 1.15rem;
     font-weight: bold;
-    margin: 10px 0px;
-    padding-top: 15px;
+    margin: 0.625rem 0;
+    padding-top: 0.9375rem;
 }
 
 /** main **/
-html { background-color: #808080; } /* controls background color behind rectangular text body */
+html {
+    font-size: 16px;
+    background-color: #808080;
+} /* controls background color behind rectangular text body */
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -232,19 +235,19 @@ body {
 header {
     width: 100%;
     float: left;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
+    padding-bottom: 0.3125rem;
+    margin-bottom: 0.9375rem;
     text-align: center;
-    border-top: solid black 2px;
-    border-bottom: solid black 2px;
+    border-top: solid black 0.125rem;
+    border-bottom: solid black 0.125rem;
 }
 
 footer {
     width: 100%;
     float: left;
-    padding: 20px 0;
+    padding: 1.25rem 0;
     text-align: center;
-    font-size: 1.25em;
+    font-size: 1.25rem;
 }
 
 /* Light Mode */
