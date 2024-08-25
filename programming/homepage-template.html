@@ -25,48 +25,49 @@
 
         <style>
             /*** reset ***/
-            html, body, header, footer, div, span, h1, h2, h3, p, a, img, strong, ol, ul, li {margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline;}
+            html, body, header, footer, div, br, span, h1, h2, h3, p, a, img, strong, ol, ul, li {margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline;}
 
             /*** universal ***/
 
             /* This link color scheme balances contrast against the background with contrast between the other link color colors. Thus, it looks more colorful and works reasonably well for both light and dark mode. */
-            a {color: #015EF4; font-weight: bold; line-height: 1.3em;}
-            a.blog-posts {color: #EE0534;}
+            a {color: #015EF4; font-weight: bold; font-size: 100%; line-height: 1.1rem;}
+            a.ZC-essays {color: #EE0534;}
             a.videos {color: #009C00;}
-            a.hlink {color: black; font-weight: normal; line-height: 1.0em; text-decoration: none;}
+            a.hlink {color: black; font-weight: normal; font-size: 100%; line-height: 1.0rem; text-decoration: none;}
 
             /* Alternatively, if you'd prefer a link color set that prioritizes color contrast against the background (for light mode) instead of color contrast between the links, you could try these colors, but they're only designed with light-mode in mind: */
-            /* a {color: #0149BC; font-weight: bold; line-height: 1.3em;} */
-            /* a.blog-posts {color: #D7042E; font-weight: bold; line-height: 1.3em;} */
-            /* a.videos {color: #008000; font-weight: bold; line-height: 1.3em;} */
+            /* a {color: #0149BC; font-weight: bold; font-size: 100%; line-height: 1.1rem;} */
+            /* a.blog-posts {color: #D7042E; font-weight: bold; line-height: 1.1rem;} */
+            /* a.videos {color: #008000; font-weight: bold; line-height: 1.1rem;} */
 
-            a:hover {text-decoration: underline; text-decoration-thickness: 2px;}
-            a:focus {text-decoration: underline; text-decoration-thickness: 3px;}
+            a:hover {text-decoration: underline; text-decoration-thickness: 0.125rem;}
+            a:focus {text-decoration: underline; text-decoration-thickness: 0.188rem;}
 
-            p {line-height: 1.3em;}
-            ul, ol {margin: 0 20px; list-style-type: none;}
-            ul li {margin-bottom: 0.8em; line-height: 1.3em;}
+            p {font-size: 0.85rem; line-height: 1.1rem;}
+            ul, ol {margin: 0 1.25rem; list-style-type: none; font-size: 0.85rem;}
+            ul li {margin-bottom: 0.6rem; line-height: 1.1rem; font-size: 0.85rem;}
             .underline {text-decoration: underline;}
 
-            h1 {max-width: 1000px; margin: 20px auto 0; padding-top: 10px; border-top: solid black 2px; font-size: 2.0em;}
-            h2 {margin: 20px 20px 10px; padding-top: 15px; border-top: solid black 2px; font-size: 1.6em;}
-            h3 {margin: 17px 20px 10px; padding-top: 12px; border-top: solid black 2px; font-size: 1.25em;}
+            h1 {max-width: 62.5rem; margin: 1.25rem auto 0; padding-top: 0.625rem; border-top: solid black 0.125rem; font-size: 1.7rem;}
+            h2 {margin: 1.25rem 1.25rem 0.625rem; padding-top: 0.938rem; border-top: solid black 0.125rem; font-size: 1.35rem;}
+            h3 {margin: 1.063rem 1.25rem 0.625rem; padding-top: 0.75rem; border-top: solid black 0.125rem; font-size: 1.063rem;}
             h3.noline {padding: 0; border-top: none;}
-            hr {margin: 0 20px 10px; padding: 0; border: none; border-top: solid black 2px;}
-            br {display: block; margin: 5px 0;}
+            hr {margin: 0 1.25rem 0.625rem; padding: 0; border: none; border-top: solid black 0.125rem;}
+            br {display: block; margin: 0.313rem 0;}
 
             #search-bar {box-sizing: border-box;}
-            nav {max-width: 1000px; list-style-type: none; margin: 0 auto; padding: 0; overflow: auto; background-color: #3F5EA2;}
-            li.topic-category {display: inline-block; padding: 9px 16px 5px; text-align: center; float: left; font-size: 110%; text-decoration: none;}
-            li.topic-category a {text-decoration: none; color: white;}
+            nav {max-width: 62.5rem; list-style-type: none; margin: 0 auto; padding: 0; overflow: auto; background-color: #3F5EA2;}
+            li.topic-category {display: inline-block; padding: 0.563rem 1rem 0.313rem; text-align: center; float: left; font-size: 110%; text-decoration: none;}
+            li.topic-category a {text-decoration: none; color: white; font-size: 110%;}
             li.topic-category:hover {background-color: #5D7DC0;}
 
             /** sections **/
+            html {font-size: 16px;}
             body {background-color: #F4F5F6; font-size: 85%; font-family: Arial, Helvetica, sans-serif; line-height: 1;}
             header {width: 100%; float: left; padding: 0; text-align: center;}
-            header p {max-width: 1000px; width: 95%; margin: 0 auto 10px; padding: 15px 0 10px; text-align: left;}
-            header p img {max-width: 160px; float: left; margin: 10px 8px 8px 0;}
-            footer {width: 100%; float: left; padding: 20px 0; font-size: 1.1em; text-align: center;}
+            header p {max-width: 62.5rem; width: 95%; margin: 0 auto 0.625rem; padding: 0.938rem 0 0.625rem; line-height: 1.2rem; font-size: 1rem; text-align: left;}
+            header p img {max-width: 10rem; float: left; margin: 0.625rem 0.5rem 0.5rem 0;}
+            footer {width: 100%; float: left; padding: 1.25rem 0; font-size: 1.05rem; text-align: center;}
             #left-column, #middle-column, #right-column {float: left; margin: 0; width: 33.33%;}
 
             /* Display as single column for short screen widths */

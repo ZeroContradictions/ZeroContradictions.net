@@ -1,12 +1,14 @@
+/* Zero Contradictions Org-Mode Essays CSS (https://zerocontradictions.net/style.css) © 2024 by Zero Contradictions is licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) */
+
 /*** reset ***/
 html, body, header, footer, div, span, h1, h2, h3, h4, h5, p, a, img, strong, ol, ul, li {
     margin: 0;
     padding: 0;
     border: 0;
     outline: 0;
+    font-size: 100%;
     font-weight: inherit;
     font-style: inherit;
-    font-size: 100%;
     font-family: inherit;
     vertical-align: baseline;
 }
@@ -30,24 +32,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
     text-decoration-color: #0051D4;
     text-decoration-thickness: 0.0625rem;
 }
-#table-of-contents ul li {
-    margin: 0 0 0.3125rem 0.625rem;
-}
-#table-of-contents ul li ul li {
-    margin: 0 0 0.3125rem 1.25rem;
-}
-
-@media screen and (max-width: 21.2cm) { #table-of-contents ul li { margin: 0 0 0.3125rem 0; } }
-/* Don't indent TOC when screen width is shorter than max-width of <body> and 3% padding (currently 21.2cm) */
+#table-of-contents ul li       { margin: 0 0 0.3125rem 0.625rem; }
+#table-of-contents ul li ul li { margin: 0 0 0.3125rem 1.250rem; }
+@media screen and (max-width: 50.085em) { #table-of-contents ul li { margin: 0 0 0.3125rem 0; } }
+/* Don't indent TOC when screen width is shorter than max-width of <body> and 3% padding (currently 50.085em) */
 
 .title {
     text-align: center;
-    margin-bottom: .2rem;
+    margin-bottom: 0.2rem;
 }
 
 .subtitle {
     text-align: center;
-    font-size: medium;
+    font-size: 1rem;
     font-weight: bold;
 }
 
@@ -190,7 +187,6 @@ h1 {
     max-width: 100%;
     margin: 0 auto;
     padding-top: 0.625rem;
-    text-align: center;
     font-size: 2.0rem;
 }
 
@@ -228,7 +224,7 @@ body {
     background-color: #F4F5F6; /* color behind text */
     margin: 0 auto;
     padding: 3%;
-    max-width: 20cm;
+    max-width: 47.25em;
     overflow-x: scroll;
 }
 
