@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2024 August 03, 00:00 -->
+<!-- 2024 September 25, 08:26 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>ZC's Programming Project Ideas</title>
 <meta name="author" content="Zero Contradictions" />
 <meta name="description" content="Zero Contradictions' List of Programming Project Ideas" />
 <meta name="generator" content="Org Mode" />
-<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8XK8JC00G"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-S8XK8JC00G'); </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S8XK8JC00G"></script><script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-S8XK8JC00G');</script>
 <link rel="stylesheet" type="text/css" href="/style.css">
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -188,6 +188,7 @@ But unfortunately, I haven&rsquo;t done this since it would be very difficult to
 <h2 id="tasks-for-improving-emacs"><span class="section-number-2">3.</span> Lisp Programming Tasks for Improving Emacs</h2>
 <div class="outline-text-2" id="text-tasks-for-improving-emacs">
 </div>
+
 <div id="outline-container-emacs-simple-tasks" class="outline-3">
 <h3 id="emacs-simple-tasks"><span class="section-number-3">3.1.</span> Relatively Simple Tasks</h3>
 <div class="outline-text-3" id="text-emacs-simple-tasks">
@@ -198,31 +199,15 @@ But unfortunately, I haven&rsquo;t done this since it would be very difficult to
 <li>Perhaps I could create a key that can toggle between these two displays?</li>
 </ul></li>
 <li>Modify the Emacs windows &lt;swap-buffers&gt; function to use Colemak homerow letters for swapping buffers between windows instead of Qwerty&rsquo;s homerow letters.</li>
-<li>Create a new &ldquo;thoughts-storage&rdquo; file format, and create a major mode for it? Or make it a sub-format of org-mode?</li>
-</ol>
-
-<ol class="org-ol">
-<li>The hybrid relative and absolute numbering should be modified. Since the main motivation and advantage for relative line numbering is to make vertical motion more efficient, there are no advantages for using it for the very top and very bottom line numbers of the screen, since &rsquo;H&rsquo; and &rsquo;L&rsquo; would both be used to navigate to those areas respectively, not numbered motion. In other words, three lines would be displaying absolute line numbers (or just two if the cursor is at the very top or very bottom line of the screen), and all other lines would display relative line numbers.
-<ul class="org-ul">
-<li>That said, absolute numbering should thus be used for the current line, as well as the top line on the screen and the bottom line on the screen.</li>
-</ul></li>
-<li>The line numbering in org-mode should account for when the collapse of &ldquo;:PROPERTIES:&rdquo;, &ldquo;:CUSTOM_ID:&rdquo;, and &ldquo;:END:&rdquo; affect the displayed line numbering.</li>
-<li>Create a function that can toggle whether the line numbering displayed in the left numbering column shows what lines the headers are on in the buffer, or what relative line numbers would have to be entered to navigate to those parts of the buffer, if all the sections, functions, etc remain collapsed.
-<ul class="org-ul">
-<li>Maybe I want a command that will only toggle between absolute and relative numbers, instead of doom/toggle-line-numbers, which toggles between relative, absolute, and no line numbers.</li>
-</ul></li>
-<li>It would be convenient if there were commands that scroll by the number of visual lines given in the prefix arguments, instead of scrolling by logical lines. This would may scrolling files much easier when long lines are wrapped around the window edge, because then one could just look at the number line and know exactly how many lines to scroll up or down without even thinking about it.</li>
-</ol>
-
-<ol class="org-ol">
-<li>Pressing enter while I&rsquo;m typing a bulleted list should not create a bullet that gets indented on the next line. Instead, it should just create a new bullet that is on the same level as the current one.</li>
+<li>When I add a new footnote to the file, the footnote numbering of the org mode file should adjust.</li>
 <li>Make the insert state the default starting state for vim after creating a new file? If the file is new, there really isn&rsquo;t anything useful to use the normal state commands on since the file is empty.</li>
+<li>Pressing enter while I&rsquo;m typing a bulleted list should not create a bullet that gets indented on the next line. Instead, it should just create a new bullet that is on the same level as the current one.</li>
 <li>When new sections are added in org-mode, Emacs should automatically insert a blank newline between the sections to help separate things.
 <ul class="org-ul">
 <li>Perhaps there could even be an option to toggle this in case there are times where it is unfavorable to have a blank newline for separation.</li>
 <li>I don&rsquo;t know when this would be desired though. Maybe to keep information packed and dense, alignment of text, aesthetics, or something else?</li>
 </ul></li>
-<li>When you add a new footnote to the file, the footnote numbering of the org mode file should adjust.</li>
+<li>Create a new &ldquo;thoughts-storage&rdquo; file format, and create a major mode for it? Or make it a sub-format of org-mode?</li>
 </ol>
 </div>
 </div>
@@ -233,7 +218,7 @@ But unfortunately, I haven&rsquo;t done this since it would be very difficult to
 <ol class="org-ol">
 <li>Configure minibuffer to toggle to not display certain commands and stay blank.</li>
 <li>Modify the org-mode HTML exporter so that clicking a header section will bring that header and it&rsquo;s section to the top of the page.
-Or other words, every section header will have a URL fragment link that shows that part of the page specifically.
+In other words, every section header will have a URL fragment link that shows that part of the page specifically.
 This would be similar to the functionality that is offered for Gwern&rsquo;s website.
 There could be an option to toggle whether users want this functionality or not shown in their org-mode HTML exports.</li>
 <li>Configure Emacs to switch to other quote (&rsquo;&rsquo;&ldquo;&rdquo;) when % is pressed.</li>
@@ -249,7 +234,18 @@ There could be an option to toggle whether users want this functionality or not 
 <ul class="org-ul">
 <li>For example, I wish that it was still possible to move forward and backwards pages in Firefox using Ctrl+b and Ctrl+f. The main benefit to this is that page navigation would be improved having to switch between the base layer and the mouse layer before and after pressing PageUp and PageDown. Of course, I could also program PageUp and PageDown into the keyboard if I hold a key down or double-tap, but I would dislike the added complexity that this alternative would involve.</li>
 </ul></li>
-<li>Create a own major Emacs mode to keep track of my own personal streaks for doing certain things everyday?</li>
+<li>Create a own major Emacs mode to keep track of my own personal streaks for doing certain things everyday in a row?</li>
+<li>The hybrid relative and absolute numbering should be modified. Since the main motivation and advantage for relative line numbering is to make vertical motion more efficient, there are no advantages for using it for the very top and very bottom line numbers of the screen, since &rsquo;H&rsquo; and &rsquo;L&rsquo; would both be used to navigate to those areas respectively, not numbered motion. In other words, three lines would be displaying absolute line numbers (or just two if the cursor is at the very top or very bottom line of the screen), and all other lines would display relative line numbers.
+<ul class="org-ul">
+<li>That said, absolute numbering should thus be used for the current line, as well as the top line on the screen and the bottom line on the screen.</li>
+<li>This would require being able to edit C code: <a href="https://github.com/emacs-mirror/emacs/blob/master/src/xdisp.c">https://github.com/emacs-mirror/emacs/blob/master/src/xdisp.c</a></li>
+</ul></li>
+<li>The line numbering in org-mode should account for when the collapse of &ldquo;:PROPERTIES:&rdquo;, &ldquo;:CUSTOM_ID:&rdquo;, and &ldquo;:END:&rdquo; affect the displayed line numbering.</li>
+<li>Create a function that can toggle whether the line numbering displayed in the left numbering column shows what lines the headers are on in the buffer, or what relative line numbers would have to be entered to navigate to those parts of the buffer, if all the sections, functions, etc remain collapsed.
+<ul class="org-ul">
+<li>Maybe I want a command that will only toggle between absolute and relative numbers, instead of doom/toggle-line-numbers, which toggles between relative, absolute, and no line numbers.</li>
+</ul></li>
+<li>It would be convenient if there were commands that scroll by the number of visual lines given in the prefix arguments, instead of scrolling by logical lines. This would may scrolling files much easier when long lines are wrapped around the window edge, because then one could just look at the number line and know exactly how many lines to scroll up or down without even thinking about it.</li>
 </ol>
 </div>
 </div>
@@ -351,7 +347,7 @@ It&rsquo;s already improved a lot since I first tried it in 2014.
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2024 August 03, 00:00</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2024 September 25, 08:26</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>
