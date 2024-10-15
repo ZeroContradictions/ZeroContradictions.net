@@ -204,7 +204,7 @@ h3 {
     padding-top: 0.9375rem;
 }
 
-h4 {
+h4, h5 {
     font-size: 1.15rem;
     font-weight: bold;
     margin: 0.625rem 0;
