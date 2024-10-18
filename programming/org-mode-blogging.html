@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2024 October 18, 22:21 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>How to Design a Blog with Emacs and Org-Mode</title>
+<meta name="author" content="Zero Contradictions" />
+<meta name="description" content="Why ZeroContradictions.net is designed the way it is, and how the website was created using Emacs org-mode, CSS, an HTML template, SEO, and other tools." />
+<meta name="generator" content="Org Mode" />
+<meta property="og:url" content="https://zerocontradictions.net/programming/org-mode-blogging">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://zerocontradictions.net/images/georgism-flag.jpg">
+<style> pre.src-bash:before {content: 'bash'; } </style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S8XK8JC00G"></script><script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-S8XK8JC00G');</script>
+<link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="/directory"> UP </a>
+ |
+ <a accesskey="H" href="/"> HOME </a>
+</div><div id="content" class="content">
+<header>
+<h1 class="title">How to Design a Blog with Emacs and Org-Mode</h1>
+<p class="subtitle" role="doc-subtitle">From <a href="https://landchad.net/">Internet Peasant to Land Chad</a></p>
+</header><nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#website-design-philosophy">1. Website Design Philosophy</a>
+<ul>
+<li><a href="#writing-advice">1.1. Advice For Writing Content</a></li>
+<li><a href="#writing-books">1.2. Writing Books Or Not</a></li>
+<li><a href="#quality-vs-quantity">1.3. Quality Versus Quantity</a></li>
+<li><a href="#static-site-generators">1.4. Static Site Generators</a></li>
+</ul>
+</li>
+<li><a href="#org-mode-for-webpages">2. Using Org-Mode To Create Web Pages</a>
+<ul>
+<li><a href="#learning-org-mode">2.1. Learning How To Use Org-Mode</a></li>
+<li><a href="#setting-up-org-mode-for-blogging">2.2. Setting Up Org-Mode For Blogging</a></li>
+<li><a href="#advice-for-using-org-mode">2.3. Advice For Using Org-Mode</a></li>
+</ul>
+</li>
+<li><a href="#creating-CSS">3. Creating CSS For Webpages</a>
+<ul>
+<li><a href="#CSS-for-org-mode">3.1. CSS For Org-Mode HTML Exports</a></li>
+<li><a href="#homepage-template">3.2. Using Zero Contradictions&rsquo; Homepage Template</a></li>
+</ul>
+</li>
+<li><a href="#copyrighting-and-licensing">4. Copyrighting And Licensing</a>
+<ul>
+<li><a href="#what-is-copyright">4.1. What is Copyright?</a></li>
+<li><a href="#creative-commons-licenses">4.2. Creative Commons Licenses</a></li>
+<li><a href="#cons-of-NC-licenses">4.3. The Cons Of NC Licenses</a></li>
+<li><a href="#CC-license-chooser">4.4. The CC License Chooser</a></li>
+<li><a href="#copyright-enforcement">4.5. Copyright Enforcement</a></li>
+</ul>
+</li>
+<li><a href="#search-engine-optimization">5. Search Engine Optimization (SEO)</a></li>
+<li><a href="#recommended-tools">6. Suggested / Recommended Tools</a></li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-website-design-philosophy" class="outline-2">
+<h2 id="website-design-philosophy"><span class="section-number-2">1.</span> Website Design Philosophy</h2>
+<div class="outline-text-2" id="text-website-design-philosophy">
+<p>
+When it comes to media, I&rsquo;ve always preferred a minimalist, mostly text-based design, similar to the kind advocated by the <a href="https://1mb.club/about">1MB Club</a>.
+Flashy image-loaded designs can&rsquo;t communicate as much distilled, easy-to-digest information, and they also require extra web development and longer loading times.
+It took a lot of work to figure out how to design this website the way I did, so I wanted to document how I did everything.
+Hopefully this will help other people.
+</p>
+
+<p>
+This website&rsquo;s homepage is intended to be organized similarly to the <a href="https://drudgereport.com">Drudge Report</a> and <a href="https://www.philosophybasics.com">PhilosophyBasics.com</a>, but with better and more modern HTML/CSS code.
+The homepage&rsquo;s .html file was created by using <a href="https://www.joshcanhelp.com/the-drudge-report-style-3-column-link-page-template/">this template that I found at joshcanhelp.com</a>.
+I replaced all the old HTML4 code with HTML5 code, and customized it with my own style, formatting, and content.
+</p>
+
+<p>
+Most blogs organize their posts by the date that the posts were published in reverse chronological order.
+That&rsquo;s presumably because the people who habitually read the blogs every time a new post comes out will have already read most or all of the blog&rsquo;s content, but this blog doesn&rsquo;t do that.
+Instead, the <a href="../">home page</a> and <a href="../directory">directory page</a> organize all the links and posts into categories, with short descriptions, so that people who come to this site for the first time will be more likely to read the most important information first.
+The other reason why I don&rsquo;t organize the posts in reverse chronological order is that I am continuously updating the posts whenever I come up with new ideas and I have time to write about them.
+</p>
+</div>
+
+<div id="outline-container-writing-advice" class="outline-3">
+<h3 id="writing-advice"><span class="section-number-3">1.1.</span> Advice For Writing Content</h3>
+<div class="outline-text-3" id="text-writing-advice">
+<p>
+It can be tempting to immediately start writing content that you&rsquo;ve been eagerly waiting to write (as I had done), but you will save time in the long run if you hold off from that and spend a few minutes to read and learn how to utilize good writing advice.
+</p>
+<ul class="org-ul">
+<li>Every post should have a meaningful topic. It&rsquo;s also helpful if everyone else writing about the topic is missing a key point or over-complicating simple things.</li>
+<li>It&rsquo;s important to plan and outline your content <i>before</i> writing it. Many bloggers just write whatever comes off the top of their heads, which causes their posts to lack structure and organization. I was guilty of this myself for some of my essays since I was so eager to put my ideas out there, until I restructured them.</li>
+<li>Many people have a tendency to write long sentences with <a href="https://www.grammarbank.com/cohesive-devices.html">cohesive devices</a> that place restrictions on how they write their sentences. For such people (including my former self), I recommend taking <a href="https://dilbertblog.typepad.com/the_dilbert_blog/2007/06/the_day_you_bec.html">Scott Adam&rsquo;s Writing Advice</a> to heart. Writing shorter sentences is an important key for writing better, especially if the goal is to create information dense content with little fluff. <a href="https://www.elevenwriting.com/blog/fluff-writing">Fluff writing</a> makes content longer to read, harder to understand, and it may bore the readers.</li>
+<li><a href="https://dynomight.net/lists/">Humans are psychologically attracted to reading lists</a> for multiple reasons. Lists are also easier for people to read and follow, rather than reading paragraph after paragraph, if it&rsquo;s possible to format the content that you want to write that way.</li>
+<li>If you need to list a bunch of short ideas, reasons, or arguments in a section, it&rsquo;s a good idea to use bulleted or numbered lists. Paragraphs require adding more cohesive devices and other fluff language compared to lists. As an example, some sections in my <a href="../faqs/overpopulation#effects-on-society">Overpopulation FAQs</a> became more concise and easier to read when written as lists instead of paragraphs.</li>
+<li><a href="https://www.w3schools.com/html/html_quotation_elements.asp">HTML Quotation Elements</a> are a great way to quickly state opposing points of view before addressing them. I&rsquo;ve made my <a href="../civilization/case-against-libertarianism">Case Against Libertarianism essay</a> and other works less wordy by using them.</li>
+<li><a href="https://commons.wikimedia.org/wiki/Main_Page">Wikimedia Commons</a> provides millions of freely usable images that people can use in their works, provided that they respect the terms of the licenses. See my <a href="#copyrighting-and-licensing">section for links for learning more about copyrighting and licensing</a>.</li>
+<li>If you can&rsquo;t find or think of any images to add to your webpages, you should try using an AI image generator to generate images based on what the webpages are about. This will guarantee that every one of your webpages will have an image that fits the content and will attract more readers.</li>
+<li>Lastly, taking at least an hour to learn <a href="#search-engine-optimization">good SEO practices</a> can save you the trouble of rewriting your content later on, if you want to maximize your number of readers.</li>
+<li>If you write, you should think about what you are writing. <a href="https://www.lesswrong.com/posts/PQaZiATafCh7n5Luf/gwern-s-shortform#KAtgQZZyadwMitWtb">You should ask yourself</a>:
+<ul class="org-ul">
+<li>&ldquo;Is this useful for an LLM to learn?&rdquo;</li>
+<li>&ldquo;If I knew for sure that a LLM could write or do this thing in 4 years, would I still be doing it now?&rdquo;</li>
+</ul></li>
+<li><a href="https://guzey.com/personal/why-have-a-blog/">Why You Should Start a Blog Right Now - Alex Guzey</a>; This webpage gives encouragement for starting your own blog. It also argues against some common excuses why someone shouldn&rsquo;t start a blog.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-writing-books" class="outline-3">
+<h3 id="writing-books"><span class="section-number-3">1.2.</span> Writing Books Or Not</h3>
+<div class="outline-text-3" id="text-writing-books">
+<p>
+I agree with many of the arguments that <a href="https://gwern.net/book-writing">Gwern gives for writing webpages instead of books</a>.
+However, it can make sense to write books if you plan strategically to avoid the potential drawbacks.
+In spite of all the drawbacks that Gwern noted, books still have many advantages that Gwern didn&rsquo;t mention:
+</p>
+<ul class="org-ul">
+<li>Books that are composed of shorts essays or concise expository books are probably the best examples of books that paid off (e.g. <i><a href="https://www.amazon.com/dp/B0CRQN9T94">Lucifer&rsquo;s Question</a></i>, <i><a href="https://www.amazon.com/dp/B0BPXJ85W7">Debunking the Selfish Gene</a></i>, <i><a href="https://www.amazon.com/dp/B0BPXKWDVC">Futurist Fantasies</a></i>).</li>
+<li>The nature and formatting of books encourage higher quality, more formal writing, and somewhat greater notability.</li>
+<li>In my experience, people are more likely to cite books when recommending things people should read for learning or studying a topic than they are to cite blog posts.</li>
+<li>Books can be archived in libraries if they&rsquo;re printed out.
+If computers and the infrastructures that they rely on ever collapse, then libraries and printed books will be critical for archiving knowledge that may otherwise be gone forever.</li>
+<li>Ebooks are quite popular these days. Their medium makes it easy for authors to update content for their readers, ebooks are easy to search and navigate, and their formatting enables readers to utilize hyperlinks created by the authors.</li>
+<li>There are lower opportunity costs to writing books and revising when you know how to write well, and you know how to not fall for the sunk cost fallacy.</li>
+<li>A combination of blogging and book writing can compliment each other well.</li>
+<li>There are fewer drawbacks to writing books when you aren&rsquo;t writing them for money, and are okay with not publicizing them much.</li>
+<li>Books are one of the least censored channels for distributing information.</li>
+<li>If the books are reasonably cheap, there&rsquo;s little reason why people would avoid buying them.</li>
+<li>If the books aren&rsquo;t free, it makes sense for people to buy them as gifts to others.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-quality-vs-quantity" class="outline-3">
+<h3 id="quality-vs-quantity"><span class="section-number-3">1.3.</span> Quality Versus Quantity</h3>
+<div class="outline-text-3" id="text-quality-vs-quantity">
+<p>
+For most topics, I don&rsquo;t understand bloggers who write posts <i>every day</i>.
+For one thing, there&rsquo;s probably a <a href="https://thewaywardaxolotl.blogspot.com/2020/01/are-we-running-out-of-ideas.html">finite amount of good ideas out there to discover</a>, due to the physical materialist nature of the Universe.
+For another thing, it&rsquo;s unusual for someone to observe or brainstorm something really interesting or noteworthy every single day that is worth writing an entire post about.
+Even if someone did write a blog post every day, the average quality of each post would have to be quite low since such a high frequency of content production would require espousing fewer good ideas in each post.
+</p>
+
+<p>
+I don&rsquo;t have the time to write a new post each day, but even if I did, eventually hundreds or even thousands of blog posts would accumulate over time.
+If someone came across such a blog for the first time, they would be lost and unsure of where to start reading since it would be difficult to navigate and determine which posts are worth reading.
+</p>
+</div>
+</div>
+
+<div id="outline-container-static-site-generators" class="outline-3">
+<h3 id="static-site-generators"><span class="section-number-3">1.4.</span> Static Site Generators</h3>
+<div class="outline-text-3" id="text-static-site-generators">
+<p>
+Most people who want to start blogging and aren&rsquo;t using a Content Management System like Wordpress or Blogger should consider downloading and using a <a href="https://en.wikipedia.org/wiki/Static_site_generator">static site generator</a> (SSG).
+In my opinion, the main benefit to using SSGs is that they make it possible to use Markdown (or Org-Mode) instead of HTML to create webpages, but <a href="https://pagedart.com/blog/what-is-a-static-site-generator/">they also provide many other benefits</a>.
+</p>
+
+<p>
+Org-Mode wasn&rsquo;t specifically designed to be a static site generator, but one can configure it to do many of the key features that a SSG can do.
+<a href="https://taingram.org/blog/org-mode-blog.html">Thomas Ingram</a> and <a href="https://ogbe.net/blog/blogging_with_org">Dennis Ogbe</a> have written their own guides on how to use org-mode as a static site generator for websites.
+Their tutorials are more complex than mine, and their resulting websites have more features, like sitemap and RSS feed generators, blogging templates, more detailed headers and footers, etc.
+There are also other <a href="https://meganrenae21.github.io/Meg-in-Progress/posts/org-mode-blogging">guides that show how to set up tagging systems</a> for posts.
+However, I&rsquo;m not experienced enough with Elisp and my website may not need those features, so some people may prefer my simpler tutorial here.
+</p>
+
+<hr>
+<p>
+Since I already knew how to export my .org files to HTML webpages, I never used a different SSG when I created this website, and I still don&rsquo;t.
+The reasons are complicated, but I encountered multiple problems when I last tried to switch to using a more full-fledged SSG in July 2023:
+</p>
+<ul class="org-ul">
+<li>It would take too much time for me to learn how SSGs work, how to configure them, and how to use them. I already have a system for creating and publishing my webpages that works for me.</li>
+<li>I&rsquo;d have to program Emacs keybindings for operating the SSG, lest I would have to use my command terminal to operate the SSG instead, which is inconvenient because then I&rsquo;d have to frequently switch between applications. This would be hard because I&rsquo;m terrible at Elisp (and programming in general).</li>
+<li>Most static site generators use Markdown instead of Org-Mode. Although Hugo is compatible with org-mode, there weren&rsquo;t enough tutorials and documentation for showing how to use Hugo with org-mode when I tried to switch over. However, it&rsquo;s possible that Hugo may develop better documentation for writing with org-mode in the future.
+<ul class="org-ul">
+<li>Hypothetically, I could switch to using Markdown to write my webpages, but that would take time, it could create confusion and syntax errors if I switch, and most importantly, I&rsquo;d lose the ability to export my .org content to other formats, like .tex, .pdf, .txt, .odt, etc.</li>
+</ul></li>
+</ul>
+
+<hr>
+<p>
+There are still some benefits for creating and publishing content that SSGs would provide compared to my current system:
+</p>
+<ul class="org-ul">
+<li>SSGs could provide my website with better headers and footers.</li>
+<li>SSGs provide tags for sorting webpages, which makes them easier to navigate.</li>
+<li>SSGs have ways to prevent the website directories from displaying in the URLs.</li>
+<li>It would be easier to create RSS feeds.</li>
+<li>They provide templates for writing webpages.</li>
+<li>They provide text summarizers for writing webpage descriptions and such.</li>
+<li>They could create a search index that readers could use to search my website&rsquo;s content. Thus, the search bar on my homepage wouldn&rsquo;t have to use an external search engine like DuckDuckGo.</li>
+<li>They can create better image galleries.</li>
+<li>There are many other plugins for SSGs that make it easier to create content.</li>
+</ul>
+<p>
+However, even after considering all the benefits that I could potentially gain, I decided that it still wasn&rsquo;t worth it for me to stop using my current setup.
+Another thing is that my website doesn&rsquo;t really need some of these features (even if they&rsquo;d be nice), and I have found other ways to get most of the benefits that other SSGs would provide, which I talk about in this article.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org-mode-for-webpages" class="outline-2">
+<h2 id="org-mode-for-webpages"><span class="section-number-2">2.</span> Using Org-Mode To Create Web Pages</h2>
+<div class="outline-text-2" id="text-org-mode-for-webpages">
+</div>
+<div id="outline-container-learning-org-mode" class="outline-3">
+<h3 id="learning-org-mode"><span class="section-number-3">2.1.</span> Learning How To Use Org-Mode</h3>
+<div class="outline-text-3" id="text-learning-org-mode">
+<p>
+In my opinion, <a href="https://karl-voit.at/2017/09/23/orgmode-as-markup-only/">org-mode is the best and most versatile markup language there is</a>.
+Resources for learning how to use org-mode syntax include:
+</p>
+<ul class="org-ul">
+<li><a href="http://xahlee.info/emacs/emacs/emacs_org_markup.html">Xah Lee&rsquo;s Org Mode Markup Cheatsheet</a>.</li>
+<li><a href="https://orgmode.org/guide/">The Org-Mode Compact Guide</a>.</li>
+<li><a href="https://orgmode.org/manual/index.html#SEC_Contents">The Org-Mode Manual</a>.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-setting-up-org-mode-for-blogging" class="outline-3">
+<h3 id="setting-up-org-mode-for-blogging"><span class="section-number-3">2.2.</span> Setting Up Org-Mode For Blogging</h3>
+<div class="outline-text-3" id="text-setting-up-org-mode-for-blogging">
+<p>
+Hopefully, this guide will be detailed enough to show other people how to replicate the design process.
+It will assume that that the reader is already familiar with the basics of using Emacs.
+If the user has no interest in using org-mode or Emacs, then most of the CSS, SEO, and Recommended Tools sections of this article may still be of interest to the reader.
+</p>
+
+<p>
+Org-mode variables control how the org-mode markup language will be exported to HTML and other formats.
+They can be set either within the file itself as file local variables, or within your <code>.config/doom/config.el</code>, (or ~/.emacs.d/init.el for non-Doom-Emacs users).
+For a complete list of variables controlling how org-mode exports files, see the following links from the Org-Mode Manual:
+</p>
+<ul class="org-ul">
+<li><a href="https://orgmode.org/manual/Export-Settings.html">Export Settings</a></li>
+<li><a href="https://orgmode.org/manual/Export-Settings.html">HTML-Specific Export Settings</a></li>
+<li><a href="https://orgmode.org/manual/Publishing-options.html">Property Options For Org-Mode File Exports</a></li>
+</ul>
+
+<p>
+There are multiple reasons to set org variables with <code>config.el</code> instead of within file local variables:
+</p>
+<ul class="org-ul">
+<li>It makes the compilation of your org files less prone to errors, assuming that you export a lot of them.</li>
+<li>It ensures that all org files export the same way each time, aside from any customizations using local file org variables.</li>
+<li>If you later decide to that you want to change something across <i>all</i> your .org files, it&rsquo;s easier to just edit one file (<code>config.el</code>) instead of editing every single org file.</li>
+<li>If you&rsquo;re only going to export org file variables for one purpose or similar purposes, then you don&rsquo;t have to copy as many local org file variables to each new file to do the same things, and the org files will collectively take up less file space. This also gives the beginnings of the org files a cleaner appearance.</li>
+</ul>
+
+<p>
+I have the following settings configured for org-mode in my <code>config.el</code>.
+The user can learn more about what each variable does by pressing <code>SPC h v</code> in Doom-Emacs, or <code>C-h v</code> in regular Emacs.
+</p>
+<pre class="example">
+(setq org-src-fontify-natively t)
+(setq org-hide-emphasis-markers nil) ;; Don't hide the /, *, and _ font formatting characters.
+(setq org-startup-folded t)
+(setq org-startup-truncated nil)
+(setq org-startup-with-inline-images nil)
+(setq org-return-follows-link nil)
+(setq org-structure-template-alist '(("a" . "export ascii") ("c" . "center") ("C" . "comment") ("e" . "example") ("E" . "export") ("h" . "export html") ("l" . "export latex") ("q" . "quote") ("s" . "src") ("v" . "verse") ("o" . "opponent")))
+
+(setq org-html-doctype "html5")
+(setq org-html-html5-fancy t)
+(setq org-html-content-class "content")
+(setq org-html-container-element "div")
+(setq org-html-head-include-scripts nil)
+(setq org-html-head-include-default-style nil)
+(setq org-html-head-extra "&lt;link rel=\"stylesheet\" type=\"text/css\" href=\"/style.css\"&gt;")
+(setq org-html-link-home "/")
+(setq org-html-link-up "/")
+
+(setq org-export-with-author t)
+(setq org-export-with-email nil)
+(setq org-export-with-creator nil)
+(setq org-html-metadata-timestamp-format "%Y %B %d, %H:%M")
+(setq org-html-postamble t)
+(setq org-html-postamble-format
+ '(("en" "&lt;p class=\"date\"&gt;Last Modified: %T&lt;/p&gt;\n
+          &lt;p class=\"author\"&gt;Author: %a&lt;/p&gt;"
+  )))
+</pre>
+
+<p>
+And the following is the entirety of the org-mode keywords and values that I include at the beginning of every .org file for controlling the HTML code of my webpages:
+</p>
+<pre class="example">
+#+title: The_Webpage_Title_That_Will_Be_Placed_In_Both_&lt;title&gt;_and_&lt;h1&gt;
+#+subtitle: The_Webpage_Subtitle_That_Will_Be_Placed_In_&lt;subtitle&gt;
+#+author: The Author Name
+#+description: The webpage description (up to 160 characters long).
+#+html_head: [Javascript code for adding Google Analytics to the webpage]
+#+html_head: &lt;meta property="og:url" content="[the canonical URL link for this article]"&gt;
+#+html_head: &lt;meta property="og:type" content="article"&gt;
+#+html_head: &lt;meta property="og:image" content="[Link to image file]"&gt;
+#+options: ^:nil
+</pre>
+<p>
+Org-mode provides two different variables for adding code to the &lt;head&gt; section of HTML files, <code>org-html-head</code> and <code>org-html-head-extra</code>.
+They&rsquo;re also written as <code>#+html-head</code> and <code>#+html-head-extra</code>, when used as local file variables written at the beginning of org files.
+The reason why there&rsquo;s two different variables is because people will often want to embed a lot of code to &lt;head&gt;.
+If there were only one variable for adding code to &lt;head&gt;, someone had assigned a value to <code>org-html-head</code> inside their config.el, and they also tried assigning additional values with <code>#+html-head</code> in their local files, then the values written in the local files would overwrite the values for <code>org-html-head</code> inside their config.el so that they wouldn&rsquo;t display at all.
+Fortunately, the two separate HTML head variables can be used strategically to prevent this.
+In my config.el, I have:
+</p>
+<pre class="example">
+(setq org-html-head-extra "&lt;link rel~\"stylesheet\" type~\"text/css\" href~\"/style.css\"&gt;")
+</pre>
+<p>
+Meanwhile, my local file org variables add the following HTML &lt;head&gt; code to each file:
+</p>
+<pre class="example">
+#+html_head: [Javascript code for adding Google Analytics to the webpage]
+#+html_head: &lt;meta property="og:url" content="[the canonical URL link for this article]"&gt;
+#+html_head: &lt;meta property="og:type" content="article"&gt;
+#+html_head: &lt;meta property="og:image" content="[Link to image file]"&gt;
+</pre>
+<p>
+These settings ensure that all the content that I want to be added to HTML &lt;head&gt; will get included.
+</p>
+
+<p>
+Every time I want to re-export the HTML output from my org file to update my webpages, I press <code>SPC m e h h</code> in Doom-Emacs, which executes the command <code>org-export-dispatch</code>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-advice-for-using-org-mode" class="outline-3">
+<h3 id="advice-for-using-org-mode"><span class="section-number-3">2.3.</span> Advice For Using Org-Mode</h3>
+<div class="outline-text-3" id="text-advice-for-using-org-mode">
+<p>
+When creating links in org-mode, <a href="https://orgmode.org/manual/Publishing-links.html">there are many options</a> and they depend on what you&rsquo;re linking to.
+Since I often want to link to section of my website pages, I always insert the following org syntax under each section heading.
+Without the following syntax, the fragment identifiers will change every time the org-mode code is re-exported to .html.
+</p>
+<pre class="example">
+:PROPERTIES:
+:CUSTOM_ID: Name_Of_Fragment_Identifier
+:END:
+</pre>
+<p>
+This syntax makes it possible to have consistent fragment identifiers once the webpages are published, and users can find them when clicking on links in each webpage&rsquo;s table of contents, and copying the URL.
+</p>
+
+<p>
+When writing paragraphs in org-mode, I prefer to place each sentence on a separate line (i.e. every line ends with a <a href="https://en.wikipedia.org/wiki/Newline">newline character</a>).
+The text will not be displayed as separate paragraphs unless there are at least two newlines between each line.
+The advantage to this is that it makes it easier to easier to rearrange the sentences in my paragraphs, easier to merge and/or divide paragraphs, and easier to convert between paragraphs and bulleted lists (compared to keeping all of a paragraph&rsquo;s sentences on just one line).
+This style for formatting paragraphs and sentences and the <a href="#writing-advice">recommended minimalist writing advice</a> both compliment each other quite well.
+</p>
+
+<p>
+If an .org file contains content that I don&rsquo;t want to publish just yet, I can temporarily comment that text out before exporting the .org files to .html.
+This facilitates the organization of all my files since I can organize all my ideas by file, without having to publish <i>everything</i> that I write.
+</p>
+
+<p>
+I don&rsquo;t usually export my org files to LaTeX, but I do so when I want to publish my works in PDF format.
+When exporting .org files to LaTeX, I include the following lines at the beginning of the .org file so that the page margins take up less space in the resulting .pdf file, and so that the output is displayed in a font that is easier to read.
+</p>
+<pre class="example">
+#+latex_header: \makeatletter \@ifpackageloaded{geometry}{\geometry{margin=2.5cm}}{\usepackage[margin=2.5cm]{geometry}} \makeatother
+#+latex_header: \usepackage{helvet}
+#+latex_header: \renewcommand{\familydefault}{\sfdefault}
+#+latex_header: \usepackage{parskip}
+</pre>
+
+<p>
+For people who create YouTube videos to accompany their blogs, <a href="https://www.w3schools.com/html/html_youtube.asp">W3 Schools has a page</a> that details the HTML code for embedding YouTube videos into webpages.
+In org-mode, <code>C-c C-,</code> (or <code>SPC m e h</code> in Doom-Emacs) will execute the command <code>org-export-dispatch</code>, which will insert the lines for exporting the <code>&lt;iframe&gt;</code> HTML code:
+</p>
+<pre class="example">
+#+begin_export html
+&lt;div align="center"&gt;&lt;iframe allow="fullscreen" width="420" height="315"
+src="https://www.youtube.com/embed/VIDEO_TAG_GOES_HERE"&gt;&lt;/iframe&gt;&lt;/div&gt;
+#+end_export
+</pre>
+
+<p>
+If you wish to create a custom, complex table in HTML, then I recommend using <a href="https://www.tablesgenerator.com/html_tables">tablesgenerator.com</a>.
+It provides a GUI for generating HTML/LaTeX/Text/MarkDown/MediaWiki code to create a table with however many rows and columns you want, merging and splitting cells, setting CSS of each table cell, and transposing the table with a single click.
+I personally think it&rsquo;s much easier to create tables this way, rather than having to painstakingly perfect non-WYSIWYG code.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-creating-CSS" class="outline-2">
+<h2 id="creating-CSS"><span class="section-number-2">3.</span> Creating CSS For Webpages</h2>
+<div class="outline-text-2" id="text-creating-CSS">
+<p>
+I learned how to read and write HTML and CSS from the <a href="https://en.wikibooks.org/wiki/HyperText_Markup_Language">HyperText Markup Language Wikibook</a> and the <a href="https://en.wikibooks.org/wiki/Cascading_Style_Sheets">Cascading Style Sheets Wikibook</a>.
+Those are free resources, however they&rsquo;re not as comprehensive or up-to-date as others.
+Readers who want a more modern and comprehensive resource for CSS should probably read <a href="https://htmlandcssbook.com/">HTML &amp; CSS by Jon Duckett</a>. Other Notes:
+</p>
+<ul class="org-ul">
+<li>I created the CSS file for my website articles by placing the CSS code embedded inside <a href="https://www.joshcanhelp.com/the-drudge-report-style-3-column-link-page-template/">the .html template</a> that I found into a separate .css file and modifying it. It can be overwhelming to create CSS files from scratch, but online templates can make everything easier.</li>
+<li>Every time I had a CSS question that wasn&rsquo;t answered by Wikibooks, I googled it. W3 Schools, GeeksForGeeks, MDN Web Docs, and StackExchange were the most helpful sites.</li>
+<li>Other resources that may help for creating minimalist designs include the <a href="https://addons.mozilla.org/en-US/firefox/addon/cssviewer-quantum/">CSS Viewer browser extension for Firefox</a> and <a href="https://1mb.club/blog">1MB Club&rsquo;s Blog</a>.</li>
+<li>There are <a href="https://pagedart.com/blog/how-to-remove-unused-css/#how-to-identify-unused-css/">tools for removing unused CSS</a>, that are worth looking into.</li>
+<li>It&rsquo;s worth looking into <a href="https://mattbrictson.com/blog/css-normalize-and-reset">CSS reset rules and CSS reset files</a>, which are necessary since every web browser has different CSS defaults for HTML elements, which may cause websites without reset rules to have unexpected displays on different web browsers.</li>
+</ul>
+</div>
+
+<div id="outline-container-CSS-for-org-mode" class="outline-3">
+<h3 id="CSS-for-org-mode"><span class="section-number-3">3.1.</span> CSS For Org-Mode HTML Exports</h3>
+<div class="outline-text-3" id="text-CSS-for-org-mode">
+<p>
+People who are using org-mode to create webpages can use the <a href="https://orgmode.org/manual/CSS-support.html">CSS Support section from the Org-Mode manual</a> to inform them of all the ID attributes and classes that are available for tweaking a webpages&rsquo; CSS, using a separate CSS file.
+Alternatively, some users may prefer to use the default org-mode CSS with their files.
+If you wish to use it, you must have the following line in you <code>config.el</code>:
+</p>
+<pre class="example">
+(setq org-html-head-include-default-style t)
+</pre>
+<p>
+Or you could set it with an org local variable by placing the following line in their org file:
+</p>
+<pre class="example">
+#+options: html-style:t
+</pre>
+<p>
+However, the default org-mode CSS has a total of 7.0kB, and it will be included into every HTML file that you export where the <code>html-style</code> variable is turned on.
+It may also complicate or interfere with your own CSS customizations if you link a separate CSS file to your HTML exports.
+My advice is to write your own CSS file, and view the output of the default org-mode CSS and copy the useful parts of it that you want to keep for your own custom CSS file.
+</p>
+
+<hr>
+<p>
+If you would like to overrule the default CSS alignment of the table columns, you can use &rsquo;&lt;r&gt;&rsquo;, &rsquo;&lt;c&gt;&rsquo; or &rsquo;&lt;l&gt;&rsquo; in a special table cookies row of the table.
+You may also combine alignment and field width like this: &rsquo;&lt;r10&gt;&rsquo;.
+</p>
+
+<hr>
+<p>
+Org-mode makes it possible to create custom <a href="https://orgmode.org/worg/org-contrib/org-special-blocks.html">org-special-blocks</a>.
+For all org-mode versions greater than 8.0, their functionality is built into org-mode, so you can start using them right away.
+org-special-blocks<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> have the form of <code>#+begin_X</code> and <code>#+end_X</code>.
+If you&rsquo;d like to create a keybinding for automatically inserting them, you just need to edit the Emacs variable <code>org-structure-template-alist</code> to have the key binding and text that you want these blocks to have.
+In order to customize the CSS of these blocks, you just need to <a href="https://kitchingroup.cheme.cmu.edu/blog/2013/11/30/Custom-directives/">write a CSS class that is the same as the block</a>, and include the CSS properties that you want the output to have.
+You can also write LaTeX code for customizing the LaTeX output of org-special-blocks.
+</p>
+
+<p>
+In my case, I wanted to create an org-special-block to distinguish between: 1. text that I&rsquo;m responding to and/or questions that I&rsquo;m answering, and 2. text that I agree with and/or am quoting in my webpages.
+So I created the opponent block: <code>#+begin_opponent</code> and <code>#+end_opponent</code>, and I edited the CSS file used for all my webpages to control its output.
+For the latter case, I use the standard quote block that&rsquo;s built into org-mode by default: <code>#+begin_quote</code> and <code>#+end_quote</code>, and it has slightly different CSS formatting.
+</p>
+
+<hr>
+<p>
+The CSS file that I use to style my org-mode generated webpages is available under the CC BY 4.0 license.
+To download the template, just click the link below, and press &ldquo;Ctrl + S&rdquo; to save it.
+</p>
+<p>&emsp;&emsp;<a target="_blank" href="../style.css">Download Zero Contradictions Org-Mode Essays CSS Template</a></p>
+<p>
+Anyone can use this CSS template for their own creations as long as they keep the line that attributes me within the file and summarize what they changed (if anything).
+</p>
+</div>
+</div>
+
+<div id="outline-container-homepage-template" class="outline-3">
+<h3 id="homepage-template"><span class="section-number-3">3.2.</span> Using Zero Contradictions&rsquo; Homepage Template</h3>
+<div class="outline-text-3" id="text-homepage-template">
+<p>
+In the interest of creating a bloat-free Internet with aesthetic webpages and minimalist designs, I (Zero Contradictions) have decided to release an HTML template that replicates the layout, design, and functionality of my homepage under the <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0</a> license.
+Other people may use this HTML template to create their own webpages if they wish, as long as they leave the attribution text to Zero Contradictions in the footer.
+To download the template, just click the link below, and press &ldquo;Ctrl + S&rdquo; to save it.
+</p>
+<p>&emsp;&emsp;<a target="_blank" href="./homepage-template">Download Zero Contradictions Homepage Template</a></p>
+
+<p>
+The following bullets are instructions for how to customize and build upon the template:
+Instructions For Customizing The Template:
+</p>
+<ul class="org-ul">
+<li>Open the &ldquo;homepage-template.html&rdquo; file with a plain text editor, such as Notepad.</li>
+<li>[[double square brackets\]] are placed around the text that needs to be changed in the file so it&rsquo;s easy to find all the meta (unseen on the page) information. To add new links and change the information, you&rsquo;ll want to have a bit of experience with HTML.</li>
+<li>Start scanning for double brackets and fill in the information as needed. Make sure the &lt;title&gt; text has words that tell search engines what you&rsquo;ve got going on the page. Fill out those meta tags too, <a href="#search-engine-optimization">for better SEO</a>.</li>
+<li>If you&rsquo;ve chosen a logo or image to represent your website, use <a href="https://realfavicongenerator.net/">realfavicongenerator.net</a> to generate all the favicons needed for this code to be useful. Place the favicons into the website&rsquo;s root folder.</li>
+<li>If you want to verify your website with Google Search Console, you should visit <a href="https://search.google.com/search-console/welcome">Google Search Console&rsquo;s Welcome page</a>, click URL prefix, enter your website&rsquo;s URL, and follow the instructions for adding the verification meta tag to your homepage.</li>
+<li>Likewise, if you want to add Google Analytics to this page, you should follow <a href="https://ahrefs.com/blog/how-to-use-google-analytics/#what-is-google-analytics">these instructions to setup a Google Analytics account</a> and add the provided Javascript code within the page&rsquo;s &lt;head&gt; tag.</li>
+<li>Unless you&rsquo;re familiar with CSS, just leave everything between the &lt;style&gt; and &lt;/style&gt; tags alone. If you are familiar with CSS, go crazy!</li>
+<li>For the link colors, I&rsquo;ve left two different color schemes to choose from, and I&rsquo;ve explained the pros and cons to both of them inside the template itself. If you want to switch to the other scheme, just uncomment the CSS for the other scheme, and comment out and the CSS for the Cretan color scheme.
+<ul class="org-ul">
+<li>Although the link colors are set up to mimic the functionality of the link colors on ZC&rsquo;s website, you could give different purposes, as long as you change their names (<code>blog-posts</code>, <code>videos</code>) everywhere in the .html file to reflect those purposes.</li>
+</ul></li>
+<li>Now, your header image. Just put the filename of the image you&rsquo;re going to use after src=&ldquo; and make sure the image is placed in the same directory on your host as this file. Type in a description of the image as well while you&rsquo;re at it. The image will resize to 160 pixels wide automatically. Or you can delete the whole img tag if you don&rsquo;t want to use one.</li>
+<li>Fill out the information for introducing the webpage as you please.</li>
+<li>Next, within &lt;nav&gt; tag, you should fill out the category names for the links that you want to display. You may want to also edit the href attribute values in each &lt;a&gt; tag to help your users navigate the site. The text after each hashtag &lt;#&gt; will be displayed in your website&rsquo;s URLs.</li>
+<li>If you want to keep the Javascript code for searching your website site with DuckDuckGo, you should place the canonical URL for your website on the line with <code>query.value = "site: "</code>. Be sure to leave a space before the end quote so that DuckDuckGo can search your website correctly. It may take a few days (possibly weeks) after the website is up and running for DuckDuckGo to index your website, before the search bar works correctly.</li>
+<li>Now, you&rsquo;re ready to plug in your links. Each link is in its own &lt;li&gt; tag to keep them on their own line and to give a little space in between. Just replace the text after href=&ldquo; with the direct URL (including <a href="http://">http://</a>) and replace the next set of brackets with the text you want to appear on the page. You&rsquo;ll notice that the first link in the left column has a paragraph right after it but before the closing tag. Make sure to follow this syntax to keep the spacing kosher.</li>
+<li>Want to add another link? Just copy and paste one of those &lt;li&gt;&#x2026;&lt;/li&gt; rows wherever you want it to be. Deleting a link is the opposite.
+<ul class="org-ul">
+<li>I&rsquo;ve provided many different format styles for the types of links that you may use for this page as you build from this template. There format styles vary across the categories, so just cut and paste which format types you want from the available links.</li>
+</ul></li>
+<li>Add a new separating header with &lt;h2&gt;&#x2026;&lt;/h2&gt; or &lt;h3&gt;&#x2026;&lt;/h3&gt; tags wherever you&rsquo;d like (but, of course, within one of the columns).
+<ul class="org-ul">
+<li>If you want to add new headers to the navigation bar, then be sure to add list items and links within the &lt;nav&gt; tag accordingly.</li>
+</ul></li>
+<li>Want to add a separator line? Figure out where it should go and place an &lt;hr&gt; right there.</li>
+<li>img tags can also be used in columns, just make sure they are in between the &lt;li&gt; and &lt;/li&gt; tags. Style wise, it&rsquo;s probably better to put img tags in between the &lt;li&gt; and the &lt;a&gt; tags.</li>
+<li>Scroll down to the bottom for the footer links. Don&rsquo;t want any? Just delete them all.</li>
+<li>Other information and advice for customizing the template may be found within the template itself and the this blogging advice page.</li>
+<li>If you plan to use this template as your homepage, or as the default webpage for a web directory, rename the file to &ldquo;index.html&rdquo; and place it in the home folder of your chosen web host.</li>
+</ul>
+<p>
+And that&rsquo;s it! To make it live, just copy index.html to a public folder on your web host and check it out. If you already have a website going, be careful where you put this so you don&rsquo;t overwrite the main site file.
+</p>
+
+<p>
+Although the terms in the Creative Commons license say that you have to explain what you&rsquo;ve changed, it seems that most people outside of the Wikimedia project don&rsquo;t do that in practice when they change content released under a CC license (although they should).
+For this HTML file, I will let that condition slide.
+Since this file is meant to be a template, it&rsquo;s already easy to figure out what the changes to it were.
+Listing the changes would only make the template inconvenient to use, and the only thing that matters to me is that people attribute me if they decide to use it.
+</p>
+
+<hr>
+<p>
+This template is based on the <a href="https://www.joshcanhelp.com/the-drudge-report-style-3-column-link-page-template/">JoshCanHelp Drudge Report template</a>, which is available in the public domain if you would prefer to create a webpage with a more simplistic design that does not require attributing the original author.
+</p>
+
+<p>
+However, the Zero Contradictions Homepage Template has many advantages over the JoshCanHelp.com template:
+</p>
+<ul class="org-ul">
+<li>Mobile-Friendly Column Layout</li>
+<li>Navigation Bar</li>
+<li>Search Bar</li>
+<li>Light-Dark Mode</li>
+<li>Link Color Scheme</li>
+<li>Different templates for adding links</li>
+<li>Links in Headers</li>
+<li>Javascript &ldquo;Last Updated&rdquo; text</li>
+<li>Relative em units are used instead of absolute px units</li>
+<li>HTML5 instead of HTML4</li>
+<li>Favicon Information</li>
+<li>Modern CSS</li>
+<li>Better And Modernized SEO</li>
+</ul>
+<p>
+All of these features are free with the Zero Contradictions Homepage Template, as long as one follows the terms of the <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0</a> license.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-copyrighting-and-licensing" class="outline-2">
+<h2 id="copyrighting-and-licensing"><span class="section-number-2">4.</span> Copyrighting And Licensing</h2>
+<div class="outline-text-2" id="text-copyrighting-and-licensing">
+</div>
+<div id="outline-container-what-is-copyright" class="outline-3">
+<h3 id="what-is-copyright"><span class="section-number-3">4.1.</span> What is Copyright?</h3>
+<div class="outline-text-3" id="text-what-is-copyright">
+<ul class="org-ul">
+<li><a href="https://copyrightalliance.org/education/copyright-law-explained/copyright-owners-rights/copyright-exclusive-rights/">Copyright Exclusive Rights For U.S. Law</a></li>
+<li><a href="https://www.workmadeforhire.net/the-rest/whats-the-difference-between-copyright-and-creative-commons/">What&rsquo;s the Difference Between Copyright and Creative Commons?</a></li>
+<li><a href="https://copyright.gov/fair-use/">Fair Use - U.S. Copyright Office</a></li>
+</ul>
+
+<p>
+In general, you should <i>be careful where you find images and other content used within your works and how you source them</i>.
+With the advent in AI technology, there has been a substantial increase in threatened and actual litigation involving CC licensed works, thanks to companies like Pixsy.
+These days, there are more and more bots and companies every day whose job is to scour the web looking for people to litigate against, and they&rsquo;ll only become more powerful, while you probably won&rsquo;t.
+</p>
+
+<p>
+It&rsquo;s recommended that all users of creative commons works follow the <a href="https://wiki.creativecommons.org/wiki/Best_practices_for_attribution">Best Practices For Attribution</a> to protect themselves and share the content that they want to share.
+</p>
+</div>
+</div>
+
+<div id="outline-container-creative-commons-licenses" class="outline-3">
+<h3 id="creative-commons-licenses"><span class="section-number-3">4.2.</span> Creative Commons Licenses</h3>
+<div class="outline-text-3" id="text-creative-commons-licenses">
+<p>
+The Creative Commons Licenses are a set of copyright licenses that allow creators to share their work with others while retaining certain rights and control over how their works are used.
+These licenses were designed to facilitate a flexible and legally sound way to grant permissions to the public for using creative works, such as text, images, music, and other intellectual property.
+Creative Commons licenses are widely used to promote collaboration, creativity, and the sharing of knowledge on the internet.
+</p>
+
+<p>
+There are several different Creative Commons licenses, each with different permissions and conditions, represented by a combination of symbols and abbreviations.
+The primary components of these licenses include:
+</p>
+<ul class="org-ul">
+<li>Attribution (BY): This is a common element of all Creative Commons licenses. It requires users to give appropriate credit to the original creator of the work. This credit should include the creator&rsquo;s name or pseudonym and a link to the source if applicable.</li>
+<li>Non-Commercial (NC): This element allows creators to specify that others can use their work, but not for commercial purposes. If the &ldquo;NC&rdquo; element is included, users cannot use the work for profit without obtaining separate permission.</li>
+<li>No Derivatives (ND): Creators can choose to restrict others from creating derivative works based on their original work. If &ldquo;ND&rdquo; is included, users can share and redistribute the work but cannot make changes to it.</li>
+<li>Share Alike (SA): This element permits others to use, modify, and distribute derivative works, but any new works must be released under the same license terms as the original work (or a compatible license). This is sometimes referred to as &ldquo;copyleft&rdquo; and encourages the creation of open and collaborative content.</li>
+</ul>
+
+<p>
+The combination of these elements allows for the creation of various license options, such as:
+</p>
+<ul class="org-ul">
+<li><a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY</a>: This is the most permissive Creative Commons license, allowing others to use, modify, and distribute the work for any purpose, as long as they provide proper attribution to the creator.</li>
+<li><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">CC BY-SA</a>: Similar to CC BY, but it also requires derivative works to be licensed under the same terms (Share Alike).</li>
+<li><a href="https://creativecommons.org/licenses/by-nc/4.0/deed.en">CC BY-NC</a>: Allows others to use and modify the work but not for commercial purposes.</li>
+<li><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">CC BY-NC-SA</a>: Combines attribution, non-commercial use, and share-alike requirements.</li>
+<li><a href="https://creativecommons.org/licenses/by-nd/4.0/deed.en">CC BY-ND</a>: Permits redistribution of the work as-is with proper attribution but without making derivative works.</li>
+<li><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en">CC BY-NC-ND</a>: Permits redistribution of the work as-is with proper attribution but without making derivative works.</li>
+<li><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>: A public domain dedication tool that allows creators to waive all their copyright and related rights in a work.</li>
+</ul>
+
+<p>
+The CC Deeds explain what the licenses allow for licensees and licensors in layman&rsquo;s terms.
+But every creator and user should read the CC licenses&rsquo; legal terms, especially if they are unsure of what they can and cannot do with licensed content.
+</p>
+
+<p>
+Every Creative Commons license requires people to attribute the originals creators of the work, and to state what they changed from the original work.
+The only exceptions are the ND licenses which forbid changes of any kind, and the CC0 license which releases works into the public domain.
+The main difference between the CC0 license and the CC BY 4.0 license is that the CC0 license doesn&rsquo;t require users to attribute the authors or explain what they&rsquo;ve changed from the original work (if anything).
+</p>
+
+<p>
+More Info: <a href="https://creativecommons.org/faq">Creative Commons FAQs</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-cons-of-NC-licenses" class="outline-3">
+<h3 id="cons-of-NC-licenses"><span class="section-number-3">4.3.</span> The Cons Of NC Licenses</h3>
+<div class="outline-text-3" id="text-cons-of-NC-licenses">
+<p>
+I&rsquo;d argue that <a href="https://freedomdefined.org/Licenses/NC">CC BY-SA licenses are usually better than CC BY-SA-NC licenses</a> for most purposes.
+Some additional problems that aren&rsquo;t mentioned in that link include:
+</p>
+<ul class="org-ul">
+<li>There is no clear boundary for what counts as &ldquo;commercial&rdquo; versus &ldquo;non-commercial&rdquo;, so this creates a lot of gray areas for using NC licenses. Does asking for donations, including ads, affiliate links,  and/or other paid business relationships, etc count as &ldquo;commercial&rdquo; activity, or not?</li>
+<li>Content released under NC licenses are incompatible with Wikipedia, other Wikimedia projects, and many other free content projects, large and small.</li>
+<li>Content that is released under CC BY-SA-NC licenses instead of BY-SA licenses are not compatible with being re-released under <a href="https://www.gnu.org/licenses/gpl-3.0.html">GPLv3 licenses</a>. For more info, see: <a href="https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses/">The License Compatibility of CC BY-SA and CC BY-SA-NC Licenses</a>.</li>
+</ul>
+<p>
+In most cases, anyone who is actually trying to unfairly profit from your work is going to balk at the SA clause even if you don&rsquo;t use the NC.
+Meanwhile, including NC gets some harmless sharing caught in the crossfire that could actually help promote you as a content creator.
+</p>
+</div>
+</div>
+
+<div id="outline-container-CC-license-chooser" class="outline-3">
+<h3 id="CC-license-chooser"><span class="section-number-3">4.4.</span> The CC License Chooser</h3>
+<div class="outline-text-3" id="text-CC-license-chooser">
+<p>
+The <a href="https://chooser-beta.creativecommons.org/">Creative Commons License Chooser</a> can help you choose a CC license.
+See: <a href="https://creativecommons.org/faq/#why-should-i-use-the-license-chooser-what-if-i-dont">advantages to using the CC license chooser</a>.
+</p>
+
+<p>
+Before you license anything under CC licensing, you should first confirm that it&rsquo;s appropriate:
+</p>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> I own or have authority to license the work.</li>
+<li class="off"><code>[&#xa0;]</code> have read and understand the terms of the license.</li>
+<li class="off"><code>[&#xa0;]</code> understand that CC licensing is not revocable.</li>
+</ul>
+
+<p>
+The CC license chooser can help generate <a href="https://wiki.creativecommons.org/wiki/CC_REL">Creative Commons Rights Expression Language (CC REL)</a> metadata that can be embedded into your online works, which can help search engines and such more easily identify the licensing of your content.
+</p>
+</div>
+</div>
+
+<div id="outline-container-copyright-enforcement" class="outline-3">
+<h3 id="copyright-enforcement"><span class="section-number-3">4.5.</span> Copyright Enforcement</h3>
+<div class="outline-text-3" id="text-copyright-enforcement">
+<p>
+Here are some links that provide more information on enforcing CC licenses and preventing copyright infringement:
+</p>
+<ul class="org-ul">
+<li><a href="https://creativecommons.org/license-enforcement/">Creative Commons Licensing Enforcement</a></li>
+<li><a href="https://creativecommons.org/license-enforcement/enforcement-principles/">Creative Commons Licensing Enforcement Principles</a></li>
+<li><a href="https://creativecommons.org/misuse-of-works/">What to Do if Your CC-Licensed Work is Misused - Creative Commons</a></li>
+<li><a href="https://sarafhawkins.com/how-to-file-dmca-takedown/">How To File A DMCA Takedown Notice</a></li>
+</ul>
+<p>
+Nothing on this page or website should be considered legal advice.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-search-engine-optimization" class="outline-2">
+<h2 id="search-engine-optimization"><span class="section-number-2">5.</span> Search Engine Optimization (SEO)</h2>
+<div class="outline-text-2" id="text-search-engine-optimization">
+<p>
+Search Engine Optimization (SEO) is important if you want more people to discover your content via search engines.
+There are lots of webpages and websites out there about how to improve SEO, but in my opinion, none of them are as clear or as detailed as <a href="https://developers.google.com/search/docs">Google&rsquo;s own SEO Documentation</a>, in most cases.
+In hindsight, I wish I had used Google&rsquo;s Developer Documentation as my go-to source for SEO questions.
+</p>
+
+<p>
+More Advice for SEO:
+</p>
+<ul class="org-ul">
+<li><a href="https://developers.google.com/search/docs/crawling-indexing/url-structure">Advice For Optimizing URL Naming And Structure</a></li>
+<li><a href="https://developers.google.com/search/docs/crawling-indexing/links-crawlable#anchor-text-placement">Advice For Writing Links - Google Search Central</a></li>
+<li><a href="https://pagedart.com/blog/image-alt-text-seo-best-practices/">Advice For Writing Image Alt Text For SEO - Page Dart</a></li>
+<li><a href="https://developers.google.com/search/docs/crawling-indexing/301-redirects">The Best URL Redirects &amp; How To Implement Each of Them - Google Search Central</a></li>
+<li><a href="https://www.onely.com/blog/ultimate-guide-to-xml-sitemaps/">Guide For Explaining How XML Sitemaps Work And How To Create Them</a></li>
+<li><a href="https://www.onely.com/blog/ultimate-guide-to-robots-txt-for-seo">Guide For Creating robots.txt File</a>
+<ul class="org-ul">
+<li><a href="https://user-agents.net/bots">List of Potential Bots And User-Agents To Specify robots.txt Rules For</a></li>
+<li>In particular, one may want to write robots.txt rule to prevent the Internet Archive bot, <code>ia_archiver</code> from archiving some or all of their webpages.</li>
+</ul></li>
+<li><a href="https://search.google.com/search-console/welcome">Google Search Console</a> (GSC). GSC provides many tools for monitoring your website&rsquo;s traffic on Google.</li>
+<li><a href="https://ahrefs.com/blog/how-to-use-google-analytics/#what-is-google-analytics">How To Setup Google Analytics</a>
+<ul class="org-ul">
+<li>For Org-Mode users, you can add Google Analytics to your webpages by using the <code>#+html_head:</code> keyword syntax to include the <code>gtag.js</code> code in the exported HTML output.</li>
+</ul></li>
+<li><a href="https://1mb.club/blog/https-redirects/">When It Makes Sense To Disable HTTPS Auto Redirects - 1MB Club Blog</a>;
+For my website, I tried to allow HTTP URLs, but this prevented some search engines from indexing my webpages, so I had to disable the HTTP URLs, unfortunately :(</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-recommended-tools" class="outline-2">
+<h2 id="recommended-tools"><span class="section-number-2">6.</span> Suggested / Recommended Tools</h2>
+<div class="outline-text-2" id="text-recommended-tools">
+<ul class="org-ul">
+<li><a href="https://zapier.com/blog/inspect-element-tutorial/#why">Inspect Element</a> is a powerful tool for viewing and experimenting with the source code of webpages.</li>
+<li>Websites like <a href="https://www.deadlinkchecker.com">deadlinkchecker.com</a> can show you which webpages have broken links.</li>
+<li><a href="https://validator.w3.org/nu/">W3&rsquo;s Nu HTML Validator</a> can check the validity of your HTML code, which can improve loading speeds, improve web page displays and accessibility, and boost SEO rankings.</li>
+<li>Google&rsquo;s <a href="https://pagespeed.web.dev/">pagespeed.web.dev</a> can show you how fast it takes for each webpage to load.</li>
+<li><a href="https://coolors.co/">coolers.co</a> can help you pick a color scheme for your website.</li>
+<li><a href="https://webaim.org/resources/contrastchecker/">Web AIM&rsquo;s Contrast Checker</a> can check the color contrasts of whatever color scheme you choose.</li>
+<li><a href="https://www.tablesgenerator.com/html_tables">tablesgenerator.com</a> provides a GUI for generating tables more easily, rather than writing non-WYSIWYG code.</li>
+<li><a href="https://www.remove.bg/">Image Background Remover</a> can help you create images with more interesting and convenient shapes, by removing their backgrounds</li>
+<li><a href="https://realfavicongenerator.net/">realfavicongenerator.net</a> can create all the favicon you&rsquo;d need for your site to have a favicon display on every web browser and platform.</li>
+<li>Your webpages will load faster if you compress your images. I personally use <a href="https://itsfoss.com/curtail-image-compress/">Curtail</a> on Linux, but there are many other applications and websites that can compress images on other platforms.</li>
+<li><code>rgrep</code> and <code>wgrep</code> in Emacs make it possible to search and replace regular expressions across many org files simultaneously.</li>
+<li><a href="https://pagedart.com/">pagedart.com</a> has lots of helpful articles for learning good web development skills.</li>
+<li>I use <a href="https://greggman.github.io/servez/">Servez</a> as my localhost software. There are many reasons to view websites on a localhost, instead of visiting the absolute file paths for each HTML file from the file manager:
+<ul class="org-ul">
+<li>When creating internal links, you don&rsquo;t have to include &ldquo;.html&rdquo; at the end of every webpage link.</li>
+<li>Viewing the website from a local host enables your smartphones and other devices to view what the website looks like, besides just how it looks from the computer that you&rsquo;re developing it on.</li>
+<li>The log enables you to see all the different files that load while the user browses around the localhost webpages.</li>
+<li>If you can get it to work, you can mount each of the directories containing your blog posts/essays and data files directly after the website&rsquo;s URL.</li>
+<li>Localhost URLs are shorter, which makes them easier to read when the screen width is too small.</li>
+<li>Since the localhost URL doesn&rsquo;t contain the name of your home directory anywhere within its URL string, you won&rsquo;t accidentally dox your first name if you accidentally send your local web development URL, instead of the public server&rsquo;s URL.</li>
+</ul></li>
+<li><a href="https://pandoc.org/">Pandoc: A Universal Document Converter</a>: Convert between just about any two file formats.</li>
+</ul>
+
+<hr>
+<p>
+<b>Other Tools</b>
+</p>
+<ul class="org-ul">
+<li><a href="https://gist.github.com/roachhd/779fa77e9b90fe945b0c">Jekyll Quick Reference</a></li>
+<li><a href="https://rentry.co/how">Rentry.co Markdown Cheatsheet</a></li>
+<li><a href="https://euangoddard.github.io/clipboard2markdown/">Paste HTML to Convert to Markdown</a></li>
+<li><a href="https://stackedit.io/">Stack Edit (In-Browser Markdown Editor)</a></li>
+<li><a href="https://www.markdowntoolbox.com/">MarkdownToolbox.com</a>: Lots of tools for converting Markdown into other formats.</li>
+<li><a href="https://bing.com/create">Bing Image Generator</a></li>
+<li><a href="https://designer.microsoft.com/">Microsoft Image Designer</a></li>
+<li><a href="https://brandmark.io/">Brand Mark Logo Designer</a></li>
+<li><a href="https://www.bardeen.ai/">Bardeen AI: Workflow Task Automation Software</a></li>
+<li><a href="https://tinywow.com/">Free AI Writing, PDF, Image, and other Online Tools - TinyWow</a></li>
+<li><a href="https://axiom.ai/">Automate Website Actions With Browser Bots - Axiom AI</a></li>
+<li><a href="https://agentgpt.reworkd.ai/es">AgentGPT: Create AI Agents/ChatBots To Help Your Website&rsquo;s Users</a></li>
+<li><a href="https://www.connectedpapers.com/">Connected Papers: For finding publications related to a given paper</a></li>
+<li><a href="https://consensus.app/">Consensus: For finding out the consensus in a field of literature</a></li>
+<li><a href="https://elicit.com/?workflow=table-of-papers">Elicit: For finding papers on a given topic</a></li>
+<li><a href="https://www.vondy.com/">Vondy: For making bots, automization</a></li>
+</ul>
+
+<hr>
+<p>
+<b>Hosting Service</b><br>
+If you are looking for a web hosting service, you could use <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site">Github Pages</a> to create a website with free hosting using your Github account.
+</p>
+<ul class="org-ul">
+<li>You can download and use <a href="https://desktop.github.com/">Github Desktop</a> to facilitate committing your website changes to Github if you are unfamiliar with Git.</li>
+<li><a href="https://git-scm.com/book/en/v2">The Pro Git book</a> will teach you how to download, install, and use Git, if you have more advanced version control needs.</li>
+<li><a href="https://www.toptal.com/developers/gitignore">gitignore.io</a> can help you create .gitignore files that will prevent files and directories that you want to keep private from uploading to the Github directory.</li>
+</ul>
+<p>
+<a href="https://neocities.org/">Neocities</a> is also a good choice for hosting a custom website for free.
+</p>
+
+<p>
+System Crafters has also written a <a href="https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/">guide on how to publish org-mode websites</a> with GitHub or SourceHut.
+</p>
+
+<hr>
+<p>
+<b>Setting Up A Domain Name</b><br>
+Unfortunately, I don&rsquo;t have any advice to give on this, since I didn&rsquo;t carefully document the considerations that I made or what I did to set up my website&rsquo;s domain name.
+I might write about this in the future when I go through the process of renewing the domain name.
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+I haven&rsquo;t figured out how to control the formatting and syntax highlighting of the text shown in org-special-blocks in org-mode. If you know how, I would appreciate it if you <a href="../misc/contact">contact me</a>.
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="date">Last Modified: 2024 October 18, 22:21</p><p class="author">Author: Zero Contradictions</p>
+</div>
+</body>
+</html>
