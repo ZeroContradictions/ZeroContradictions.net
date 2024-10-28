@@ -142,6 +142,11 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://zerocontradictions.net/faqs/gesellism</loc>
+  <lastmod>2024-10-26</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://zerocontradictions.net/faqs/georgism</loc>
   <lastmod>2024-10-18</lastmod>
   <priority>0.70</priority>
@@ -218,8 +223,13 @@
 </url>
 <url>
   <loc>https://zerocontradictions.net/civilization/wokism</loc>
-  <lastmod>2024-10-18</lastmod>
+  <lastmod>2024-10-28</lastmod>
   <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://zerocontradictions.net/civilization/activism</loc>
+  <lastmod>2024-10-28</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://zerocontradictions.net/misc/case-against-efilism</loc>
