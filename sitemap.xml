@@ -112,6 +112,11 @@
   <priority>0.85</priority>
 </url>
 <url>
+  <loc>https://zerocontradictions.net/civilization/space-colonization</loc>
+  <lastmod>2024-12-15</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
   <loc>https://zerocontradictions.net/civilization/technology</loc>
   <lastmod>2024-10-18</lastmod>
   <priority>0.80</priority>
