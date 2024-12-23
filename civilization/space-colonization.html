@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2024 December 22, 20:24 -->
+<!-- 2024 December 23, 03:04 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>The Limits of Space Colonization</title>
@@ -315,6 +315,51 @@ Estimated Material Weights:
 <p>
 Total Estimated Weight: 98,000-129,000 metric tons
 </p>
+
+<hr>
+<p>
+<b>Commentary</b><br>
+I should&rsquo;ve noticed this earlier, but I later realized that Claude forgot to correctly specify how thick the cylinder hull would need to be to provide sufficient shielding from radiation.
+Claude 3.5 Sonnet stated:
+</p>
+<blockquote>
+<p>
+For radiation shielding, we need to account for both cosmic rays and solar radiation.
+Studies have shown we need approximately 5-7 meters of shielding material to provide protection equivalent to Earth&rsquo;s atmosphere.
+Let&rsquo;s analyze the materials:
+</p>
+
+<p>
+For the main structural hull:
+</p>
+<ul class="org-ul">
+<li>Primary layer: High-strength steel (likely a specialized alloy) for structural integrity</li>
+<li>The steel would need to be roughly 5-10 cm thick to handle the rotational forces</li>
+<li>Steel density is approximately 7,800 kg/m³</li>
+</ul>
+
+<p>
+For radiation shielding:
+</p>
+<ul class="org-ul">
+<li>Multiple layers would be optimal</li>
+<li>Inner layer: Aluminum (2,700 kg/m³) for secondary particle reduction</li>
+<li>Middle layer: Steel or iron for primary radiation absorption</li>
+<li>Outer layer: Regolith (approximately 1,500 kg/m³) for additional protection</li>
+</ul>
+</blockquote>
+<p>
+This drastically changes all the weights and calculations.
+While I&rsquo;m trying to use Claude to provide accurate estimates for these cylinders, I&rsquo;ve noticed that it often forgets to account for certain details, such as the hull thickness that I just mentioned.
+When prompting the same questions at different times, Claude also provides different numbers and calculations.
+Consecutive questions depend on the previous questions, so these inconsistencies make it difficult to get accurate answers.
+Changing just one calculation in a previous question will change all of the following questions.
+</p>
+
+<p>
+Even still, the following calculations made by Claude 3.5 Haiku are still really expensive.
+It should be clear that it will be too costly to build cylinders, even if we assume that the calculations are lower bounds for the actual costs.
+</p>
 </div>
 </div>
 </div>
@@ -394,7 +439,7 @@ Total Estimated Cost Range:
 <p>
 <b>Commentary</b><br>
 We should keep in mind that the estimated $295-793 billion would only be enough to build just <i>one</i> O&rsquo;Neill Cylinder within Earth orbit.
-Given the <a href="#oneill-construction">measurements and design that were specified earlier</a>, a Mars Direct Mission would only be big enough to house an estimated 100-250 people.
+Given the <a href="#proposing-oneill">measurements and design that were specified earlier</a>, a Mars Direct Mission would only be big enough to house an estimated 100-250 people.
 With current technology, space colonization clearly won&rsquo;t be affordable or accessible to most people, nor is it a viable solution to <a href="../faqs/overpopulation">overpopulation</a>.
 </p>
 </div>
@@ -763,6 +808,7 @@ I would like to accomplish that goal if it&rsquo;s possible.
 But at the end of the day, we also have to recognize that we may fail to ever so.
 We live in reality, not a sci-fi fantasy world where humans are invincible.
 There are limits to what humans can do in reality.
+<a href="https://www.youtube.com/watch?v=8HNgIJqeyDw">Sabbine Hossenfelder has reached similar conclusions about Mars colonization</a>.
 </p>
 
 <p>
@@ -799,7 +845,7 @@ If humanity is serious about space colonization, I believe that we should take b
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2024 December 22, 20:24</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2024 December 23, 03:04</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>
