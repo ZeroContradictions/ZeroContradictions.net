@@ -8,10 +8,8 @@
 */.recycle/
 */.git/
 
-
 /images/potential-images
 /potential-topics
-
 
 *.org
 *.tex

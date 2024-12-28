@@ -27,14 +27,14 @@ twitter_username: 0Contradictions
 github_username: ZeroContradictions
 # rss: RSS feed
 
-# Analytics
-analytics:
-  provider: "google-gtag"
-  google:
-    measurement_id: "G-S8XK8JC00G"
-    anonymize_ip: # true, false (default)
+# # Analytics
+# analytics:
+#   provider: "google-gtag"
+#   google:
+#     measurement_id: "G-S8XK8JC00G"
+#     anonymize_ip: # true, false (default)
+# google_analytics: G-S8XK8JC00G
 
-google_analytics: G-S8XK8JC00G
 
 # Build settings
 # theme: minima
