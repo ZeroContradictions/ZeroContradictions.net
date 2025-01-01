@@ -7,4 +7,4 @@ The directory page only displays essays that I wrote myself, hence why it has al
 
 If you want to report any typos or broken links, ask questions, give constructive criticism, make volunteer translations, suggest links to add to this home page, or make a donation, please reach out to me at my contact page. As per its name, the goal of this website is to create the most rational philosophy ever with Zero Contradictions, or to at least do my best at that. In a single sentence, my philosophy is based on rationalism and understanding the implications of the subject-object dichotomy and applied evolutionary theory, among other things.
 
-Copyright 2022-2024 Zero Contradictions. All rights reserved.
+Copyright 2022-2025 Zero Contradictions. All rights reserved.
