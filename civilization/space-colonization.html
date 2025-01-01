@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2025 January 01, 08:47 -->
+<!-- 2025 January 01, 23:50 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>The Limits of Space Colonization</title>
@@ -64,6 +64,10 @@
 </ul>
 </div>
 </nav>
+<hr>
+<p>
+Note: There&rsquo;s more to say, but it takes time to write stuff.
+</p>
 
 <div id="outline-container-intro" class="outline-2">
 <h2 id="intro"><span class="section-number-2">1.</span> Introduction</h2>
@@ -330,6 +334,7 @@ Total Estimated Weight: 98,000-129,000 metric tons
 <p>
 <b>Commentary</b><br>
 I should&rsquo;ve noticed this earlier, but I later realized that Claude forgot to correctly specify how thick the cylinder hull would need to be to provide sufficient shielding from radiation.
+Note that the cylinder may not need extra mass to block radiation if it stays in LEO, but the cylinder would need shielding if it&rsquo;s supposed to be sent to Mars.
 Claude 3.5 Sonnet stated:
 </p>
 <blockquote>
@@ -358,18 +363,6 @@ For radiation shielding:
 <li>Outer layer: Regolith (approximately 1,500 kg/m³) for additional protection</li>
 </ul>
 </blockquote>
-<p>
-This drastically changes all the weights and calculations.
-While I&rsquo;m trying to use Claude to provide accurate estimates for these cylinders, I&rsquo;ve noticed that it often forgets to account for certain details, such as the hull thickness that I just mentioned.
-When prompting the same questions at different times, Claude also provides different numbers and calculations.
-Consecutive questions depend on the previous questions, so these inconsistencies make it difficult to get accurate answers.
-Changing just one calculation in a previous question will change all of the following questions.
-</p>
-
-<p>
-Even still, the following calculations made by Claude 3.5 Haiku are still really expensive.
-It should be clear that it will be too costly to build cylinders, even if we assume that the calculations are lower bounds for the actual costs.
-</p>
 </div>
 </div>
 </div>
@@ -448,10 +441,27 @@ Total Estimated Cost Range:
 <hr>
 <p>
 <b>Commentary</b><br>
-We should keep in mind that the estimated $295-793 billion is probably a huge under-estimate, since the <a href="#oneill-weight">weight calculations</a> didn&rsquo;t correctly account for the thickness of the cylinder hull.
-Even then, that amount of money would only be enough to build just <i>one</i> O&rsquo;Neill Cylinder within Earth orbit.
-Given the <a href="#proposing-oneill">measurements and design that were specified earlier</a>, a Mars Direct Mission would only be big enough to house an estimated 100-250 people.
-With current technology, space colonization clearly won&rsquo;t be affordable or accessible to most people, nor is it a viable solution to <a href="../faqs/overpopulation">overpopulation</a>.
+We should keep in mind that the estimated $295-793 billion is potentially a huge under-estimate, since the <a href="#oneill-weight">weight calculations</a> didn&rsquo;t correctly account for the thickness of the cylinder hull.
+</p>
+
+<p>
+However, retrieving most of the materials for the cylinder from the Moon instead of the Earth could make it much cheaper to build:
+</p>
+<blockquote>
+<p>
+To reduce the mass needed from Earth, most of the repetitive structural members (aluminum) and window panels (glass) must be produced at L5 from lunar material. A further, important saving is made by getting 89% of the mass of needed water from oxygen in the plentiful lunar-surface oxides, bringing only 11% of the water mass as liquid hydrogen from Earth. Of the 500,000-ton total mass (see Table 2) for the Model 1 colony, 98% can be obtained from the Moon. The elements most needed are aluminum, titanium, silicon and oxygen. Lunar surface soil is usable for agriculture, with the addition of nitrates and small amounts of trace elements. The remaining 10000 tons must come from the Earth.
+</p>
+
+<p>
+To bring the total cost within practical limits, we must develop a low-cost method for transporting raw materials from the Moon to the construction site. <i>The discussion of transport methods should be taken as an existence proof rather than as a detailed design</i>. There may very well be better methods than those I have considered; however, it is enough to show two solutions that appear to be workable. Both use the two great advantages of the lunar environment: an excellent vacuum and a very low escape velocity, about 1.5 miles per sec, less than one quarter of the escape velocity from Earth. To bring a kilogram to L5 from the Moon takes less than 5% of the energy needed to take a kilogram from Earth.
+</p>
+
+<p>
+&#x2013; <a href="https://nss.org/the-colonization-of-space-gerard-k-o-neill-physics-today-1974/">Gerard K. O&rsquo;Neill, <i>Physics Today</i>, 1974</a>
+</p>
+</blockquote>
+<p>
+Even then, two cylinders would have to be built to fulfill the original design proposal, and it would still be expensive to build pairs of cylinders and the necessary infrastructure for building them.
 </p>
 </div>
 </div>
@@ -858,9 +868,9 @@ If humanity is serious about space colonization, I believe that we should take b
 <div id="outline-container-elon-musk-commentary" class="outline-2">
 <h2 id="elon-musk-commentary"><span class="section-number-2">10.</span> Commentary On Elon Musk</h2>
 <div class="outline-text-2" id="text-elon-musk-commentary">
-<div class="opponent" id="orgad38f88">
+<div class="opponent" id="orgfb55546">
 <p>
-Why is Elon Musk a fraud? Most people attack his character as a jerk.
+Why is Elon Musk a fraud? Most people who dislike him only attack his character as a jerk.
 </p>
 
 </div>
@@ -1012,7 +1022,7 @@ Elon Musk is the most overrated person on Earth.
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2025 January 01, 08:47</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2025 January 01, 23:50</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>
