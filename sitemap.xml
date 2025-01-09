@@ -218,7 +218,7 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
 	<loc>https://zerocontradictions.net/civilization/democracy</loc>
 	<lastmod>2024-12-15</lastmod>
-	<priority>0.60</priority>
+	<priority>0.80</priority>
 </url>
 <url>
 	<loc>https://zerocontradictions.net/civilization/wokism</loc>
@@ -228,8 +228,19 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
 	<loc>https://zerocontradictions.net/civilization/activism</loc>
 	<lastmod>2024-12-15</lastmod>
+	<priority>0.85</priority>
+</url>
+<url>
+	<loc>https://zerocontradictions.net/civilization/ashkenazi-jewish-IQ</loc>
+	<lastmod>2024-12-15</lastmod>
+	<priority>0.60</priority>
+</url>
+<url>
+	<loc>https://zerocontradictions.net/civilization/r-k-selection-critique</loc>
+	<lastmod>2025-01-09</lastmod>
 	<priority>0.80</priority>
 </url>
+
 <url>
 	<loc>https://zerocontradictions.net/misc/case-against-efilism</loc>
 	<lastmod>2024-12-15</lastmod>
