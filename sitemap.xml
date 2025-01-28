@@ -294,7 +294,12 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
 	<loc>https://zerocontradictions.net/misc/response-to-ratwiki-pragmatosphere-article</loc>
 	<lastmod>2024-12-15</lastmod>
-	<priority>0.50</priority>
+	<priority>0.60</priority>
+</url>
+<url>
+	<loc>https://zerocontradictions.net/misc/response-arctotherium-sexual-PD</loc>
+	<lastmod>2025-01-28</lastmod>
+	<priority>0.80</priority>
 </url>
 <url>
 	<loc>https://zerocontradictions.net/misc/honest-ideologies</loc>
