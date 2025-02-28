@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2025 January 24, 15:59 -->
+<!-- 2025 February 28, 13:16 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>ZC's Programming Project Ideas</title>
@@ -9,27 +9,6 @@
 <meta name="description" content="Zero Contradictions' List of Programming Project Ideas" />
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="/style.css">
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="org-div-home-and-up">
@@ -104,24 +83,16 @@ If anybody would like to assist or work together with me on creating some of the
 <h2 id="personal-programming-project-ideas"><span class="section-number-2">2.</span> Personal Programming Project Ideas</h2>
 <div class="outline-text-2" id="text-personal-programming-project-ideas">
 </div>
-
 <div id="outline-container-simple-projects" class="outline-3">
 <h3 id="simple-projects"><span class="section-number-3">2.1.</span> Relatively Simple Projects</h3>
 <div class="outline-text-3" id="text-simple-projects">
 <ol class="org-ol">
-<li>Create an interactive population dynamics simulator to illustrate to readers how population dynamics work and accompany the <a href="../faqs/overpopulation#next-overpop-crisis">Overpopulation FAQs</a>. Try Javascript.</li>
-<li>I could write some Javascript code to make links on my essay pages red if they are linking within my own site. This would help readers more easily figure out what I&rsquo;m linking to in many cases, and it would make the formatting or color scheme of my essay pages more consistent with the formatting of my homepage.</li>
 <li>Write a program that automatically re-labels downloaded files to your filename specification standards (this should be straight-forward, as it only involves case-toggling and search-and-replace function calls); store the original filenames in a log file.
 <ul class="org-ul">
 <li>Write a program with similar functionality in Elisp. (See: <a href="#personal-programming-project-ideas">Changes That I Want To Make To Dired</a>)</li>
 </ul></li>
-<li>Build an interactive truth table generator? Try Javascript.</li>
-<li>Write some Javascript code to make links red if they are linking within ZC&rsquo;s site, for my HTML pages that are generated from org-mode exports.</li>
+<li>Create an interactive population dynamics simulator to illustrate to readers how population dynamics work and accompany the <a href="../faqs/overpopulation#next-overpop-crisis">Overpopulation FAQs</a>. Try Javascript.</li>
 </ol>
-<p>
-One thing that would really help people read and understand my site more clearly is if all the links in my essay pages were red if they are linking to pages on my site, if links stayed blue if they were linking outside my website, and if links were green if they are videos.
-But unfortunately, I haven&rsquo;t done this since it would be very difficult to implement in org-mode.
-</p>
 </div>
 </div>
 
@@ -145,7 +116,7 @@ But unfortunately, I haven&rsquo;t done this since it would be very difficult to
 <li>The 404 page could feature some JavaScript code that tries to reads the user&rsquo;s input URL suggest pages that might be what the user was looking for.</li>
 <li>Create a web browser extension that can only let you view particular sites within a limited time window, twice, or other parts of the day.</li>
 <li>Create better screenshot program for Linux, similar to the default one on MacOS.</li>
-<li>A reddit bot would that searches comments for people who spell &lt;should&rsquo;ve&gt;, &lt;would&rsquo;ve&gt;, &lt;could&rsquo;ve&gt;, etc incorrectly and explains what the correct spelling and grammar is and why. Mispellings of &lt;shouldn&rsquo;t&rsquo;ve&gt;, &lt;wouldn&rsquo;t&rsquo;ve&gt;, &lt;couldn&rsquo;t&rsquo;ve&gt;, etc should also be corrected.</li>
+<li>A reddit bot would that searches comments for people who spell &lt;should&rsquo;ve&gt;, &lt;would&rsquo;ve&gt;, &lt;could&rsquo;ve&gt;, etc incorrectly and explains what the correct spelling and grammar is and why. Misspellings of &lt;shouldn&rsquo;t&rsquo;ve&gt;, &lt;wouldn&rsquo;t&rsquo;ve&gt;, &lt;couldn&rsquo;t&rsquo;ve&gt;, etc should also be corrected.</li>
 <li>Create a program for <a href="../epistemology/difficult-to-change-minds#hub-and-spoke-networks">mapping out belief networks</a>.</li>
 <li>Tweak DockBarX with Python: <a href="https://github.com/M7S/dockbarx">https://github.com/M7S/dockbarx</a>.</li>
 </ol>
@@ -198,12 +169,6 @@ But unfortunately, I haven&rsquo;t done this since it would be very difficult to
 <h3 id="emacs-simple-tasks"><span class="section-number-3">3.1.</span> Relatively Simple Tasks</h3>
 <div class="outline-text-3" id="text-emacs-simple-tasks">
 <ol class="org-ol">
-<li>Modify insert-from-kill-ring.el so that pressing &rsquo;q&rsquo; and &lt;enter&gt; exits the program by doing nothing.</li>
-<li>Modify insert-from-kill-ring.el to display the first line from each kill-ring entry on only one line. Preceding this, the number of the kill ring entry will be displayed at the beginning of the line in the following format: ##:\t[first_line_of_text_of_kill_ring_entry_#]
-<ul class="org-ul">
-<li>Perhaps I could create a key that can toggle between these two displays?</li>
-</ul></li>
-<li>Modify the Emacs windows &lt;swap-buffers&gt; function to use Colemak homerow letters for swapping buffers between windows instead of Qwerty&rsquo;s homerow letters.</li>
 <li>When I add a new footnote to the file, the footnote numbering of the org mode file should adjust.</li>
 <li>Make the insert state the default starting state for vim after creating a new file? If the file is new, there really isn&rsquo;t anything useful to use the normal state commands on since the file is empty.</li>
 <li>Pressing enter while I&rsquo;m typing a bulleted list should not create a bullet that gets indented on the next line. Instead, it should just create a new bullet that is on the same level as the current one.</li>
@@ -221,25 +186,16 @@ But unfortunately, I haven&rsquo;t done this since it would be very difficult to
 <h3 id="emacs-intermediate-tasks"><span class="section-number-3">3.2.</span> Intermediate Tasks</h3>
 <div class="outline-text-3" id="text-emacs-intermediate-tasks">
 <ol class="org-ol">
-<li>Edit <a href="https://github.com/hexmode/mediawiki-el">mediawiki.el</a> to collapse and expand header sections, similarly to org-mode.
+<li>Edit <a href="https://github.com/hexmode/mediawiki-el">mediawiki.el</a> to collapse and expand header sections (marked by &ldquo;=&rdquo;) by pressing TAB, similarly to org-mode.
 <ul class="org-ul">
 <li>Headers should also appear in imenu.</li>
 <li>Mediawiki mode should allow the spellchecker to be used.</li>
 <li>The mode should also be updated to implement strike-through text using the &lt;s&gt; tags, and any new features Included in this outdated software.</li>
 </ul></li>
-<li>Configure minibuffer to toggle to not display certain commands and stay blank.</li>
-<li>Modify the org-mode HTML exporter so that clicking a header section will bring that header and it&rsquo;s section to the top of the page.
+<li>Modify the org-mode HTML exporter so that in the HTML output, clicking a header section will load the corresponding URL fragment, thus bringing that header and it&rsquo;s section to the top of the page.
 In other words, every section header will have a URL fragment link that shows that part of the page specifically.
 This would be similar to the functionality that is offered for Gwern&rsquo;s website.
 There could be an option to toggle whether users want this functionality or not shown in their org-mode HTML exports.</li>
-<li>Configure Emacs to switch to other quote (&rsquo;&rsquo;&ldquo;&rdquo;) when % is pressed.</li>
-<li>Create a command that can re-arrange the items, commas, and spaces within a list each time the command is executed forwards or backwards?</li>
-<li>Create a command that can convert comma separated lists within a selected region into bulleted lists and vice versa?</li>
-
-<li>Create a command that only capitalizes the first word and content words, &rsquo;I&rsquo;, and any other words that should be capitalized; but not words like &rsquo;a&rsquo;, &rsquo;an,&rsquo;, &rsquo;the&rsquo;, &rsquo;to&rsquo;, et cetera. It should not affect acronyms.</li>
-<li>Develop an Emacs command tool that can highlight selected uses of the verb &ldquo;to be&rdquo; and its other conjugations. Strictly following <a href="https://en.wikipedia.org/wiki/E-Prime">E-prime</a> is probably a bad idea, but it might strengthen writing in some cases if forms of &ldquo;to be&rdquo; are rewritten to use less frequent and more creative verbs instead.</li>
-<li>Write some minor mode for typing Latin text in Emacs, such that macrons appear over the long vowels (when pressing the vowel key twice) and that Latin text is spell checked.</li>
-<li>Typing a vowel&rsquo;s letter twice to put a macron over it, and backspacing will simply delete the macron without deleting the entire letter.</li>
 
 <li>It would be convenient if there was somehow even greater compatibility between PageUp and PageDown buttons in the mouse layer of the ZSA Moonlander and Ctrl+b and Ctrl+f commands for moving back and forward within Emacs buffers.
 <ul class="org-ul">
@@ -256,7 +212,7 @@ There could be an option to toggle whether users want this functionality or not 
 <ul class="org-ul">
 <li>Maybe I want a command that will only toggle between absolute and relative numbers, instead of doom/toggle-line-numbers, which toggles between relative, absolute, and no line numbers.</li>
 </ul></li>
-<li>It would be convenient if there were commands that scroll by the number of visual lines given in the prefix arguments, instead of scrolling by logical lines. This would may scrolling files much easier when long lines are wrapped around the window edge, because then one could just look at the number line and know exactly how many lines to scroll up or down without even thinking about it.</li>
+<li>Create commands that scroll by the number of visual lines given in the prefix arguments, instead of scrolling by logical lines. This would may scrolling files much easier when long lines are wrapped around the window edge, because then one could just look at the number line and know exactly how many lines to scroll up or down without even thinking about it.</li>
 </ol>
 </div>
 </div>
@@ -265,14 +221,7 @@ There could be an option to toggle whether users want this functionality or not 
 <h3 id="emacs-advanced-tasks"><span class="section-number-3">3.3.</span> Advanced Tasks</h3>
 <div class="outline-text-3" id="text-emacs-advanced-tasks">
 <ol class="org-ol">
-<li>For some reason, macros that I save in one session aren&rsquo;t saved for future sessions. I wish I could permanently create the following macros and assign keybindings to them:
-<ul class="org-ul">
-<li>Create a keybinding or macro for double-spacing or single-spacing lines within the region.</li>
-<li>See if I can record macro or some other solution that: 1. double-spaces, 2. single spaces, 3. added dash-bullets to a highlighted region of text.</li>
-<li>If it doesn&rsquo;t work out, maybe I can view the macro code while using edit-kbd-macro, and write equivalent Elisp code that would do the same, or ask ChatGPT?</li>
-</ul></li>
 <li>Has anyone ever created an Emacs command that will display all of someone&rsquo;s keybindings on an image of their keyboard inside an Emacs buffer? If not, would it be worth creating such a thing for my own use? I imagine thousands of other people would find such a program useful since it could help people visualize the most efficient keybindings that they could map onto their keys.</li>
-<li>I wish it was possible to flush-lines in rgrep and multi-occur buffers, but every time I try this, Emacs always returns &ldquo;file is read-only&rdquo;, although it doesn&rsquo;t do that for other editing commands.</li>
 <li>Edit occur to have a <a href="https://en.wikipedia.org/wiki/Key_Word_in_Context">Key Word In Context (KWIC)</a> toggle option that can display the keyword in question at the horizontal center of the screen, vs displaying the beginning of the line containing the keyword?</li>
 <li>Similar to the evil-everywhere package, perhaps someone could create a colemak-everywhere package/module which replaces everywhere where keys were placed to fit Qwerty homerow keys with Colemak homerow keybindings and key presses?</li>
 <li>Org-mode presents doesn&rsquo;t display italicized text correctly in cases where the slashes are before the end of the ending square bracket, <a href="https://zerocontradictions.net/">like in this <i>example</i></a>. &ldquo;Example&rdquo; should be italicized in the previous sentence, but it isn&rsquo;t, although it <i>is</i> italicized correctly in HTML exports.</li>
@@ -283,6 +232,14 @@ There could be an option to toggle whether users want this functionality or not 
 <li>Or maybe there&rsquo;s already packages that do this, that I don&rsquo;t know about?</li>
 </ul></li>
 <li>Create a fully functional Emacspeak module for Doom-Emacs.</li>
+</ol>
+
+
+<p>
+Test These Commands:
+</p>
+<ol class="org-ol">
+<li>I wish it was possible to flush-lines in rgrep and multi-occur buffers, but every time I try this, Emacs always returns &ldquo;file is read-only&rdquo;, although it doesn&rsquo;t do that for other editing commands.</li>
 </ol>
 </div>
 </div>
@@ -358,7 +315,7 @@ It&rsquo;s already improved a lot since I first tried it in 2014.
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2025 January 24, 15:59</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2025 February 28, 13:16</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>
