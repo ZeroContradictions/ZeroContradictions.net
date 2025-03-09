@@ -35,8 +35,6 @@ a {color: #015EF4;}
 			return;
 		}
 
-		const searchTerm = getSearchTermFromUrl(currentUrl);
-
 		const sitemapUrls = await fetchSitemapUrls();
 		const pdfUrls = await fetchPDFs();
 		const imageUrls = await fetchImages();
