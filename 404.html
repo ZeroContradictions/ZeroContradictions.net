@@ -25,155 +25,94 @@ p {font-size: 1.2em;}
 a {color: #015EF4;}
 </style>
 <script>
-document.addEventListener('DOMContentLoaded', suggestPages);
+	document.addEventListener('DOMContentLoaded', suggestPages);
 
-async function suggestPages() {
-	const currentUrl = window.location.pathname;
-	const searchTerm = getSearchTermFromUrl(currentUrl);
+	async function suggestPages() {
+		const currentUrl = window.location.pathname;
 
-	const sitemapUrls = await fetchSitemapUrls();
-	const pdfUrls = await fetchPDFs();
-	const imageUrls = await fetchImages();
-	const allUrls = [...sitemapUrls, ...pdfUrls, ...imageUrls];
+		// Prevent suggestions if the user is on the 404 page itself
+		if (currentUrl === '/404' || currentUrl === '/404.html') {
+			return;
+		}
 
-	const suggestions = getClosestMatches(currentUrl, allUrls);
+		const searchTerm = getSearchTermFromUrl(currentUrl);
 
-	const suggestionBox = document.getElementById('suggestions');
-	if (suggestions.length > 0) {
-		suggestionBox.innerHTML = '<p>Did you mean:</p><ul>' +
-			suggestions.map(s => `<li><a href="${s.url}">${s.url}</a></li>`).join('') +
-			'</ul>';
-	} else {
-		suggestionBox.innerHTML = `
+		const sitemapUrls = await fetchSitemapUrls();
+		const pdfUrls = await fetchPDFs();
+		const imageUrls = await fetchImages();
+		const allUrls = [...sitemapUrls, ...pdfUrls, ...imageUrls];
+
+		const suggestions = getClosestMatches(currentUrl, allUrls);
+
+		const suggestionBox = document.getElementById('suggestions');
+		if (suggestions.length > 0) {
+			suggestionBox.innerHTML = '<p>Did you mean:</p><ul>' +
+				suggestions.map(s => `<li><a href="${s}">${s}</a></li>`).join('') +
+				'</ul>';
+		} else {
+			suggestionBox.innerHTML = `
 			<p>Sorry, we couldn't find any pages related to the given search terms.</p>
 			<p>Please check our <a href="/sitemap">sitemap</a> or use the navigation menu above.</p>
-			`;
-	}
-}
-
-/**
- * Extracts a search term from the URL
- * @param {string} url - The current URL path
- * @return {string} The extracted search term
- */
-function getSearchTermFromUrl(url) {
-	// Remove leading and trailing slashes
-	const cleanUrl = url.replace(/^\/|\/$/g, '');
-
-	// Split by slashes to get path segments
-	const segments = cleanUrl.split('/');
-
-	// Use the last segment as the search term
-	let searchTerm = segments[segments.length - 1];
-
-	// Replace dashes/underscores with spaces, decode URI components
-	searchTerm = decodeURIComponent(searchTerm).replace(/[-_]/g, ' ');
-
-	return searchTerm;
-}
-
-async function fetchSitemapUrls() {
-	try {
-		const response = await fetch('/sitemap.xml');
-		const text = await response.text();
-		const parser = new DOMParser();
-		const xmlDoc = parser.parseFromString(text, 'text/xml');
-		return Array.from(xmlDoc.getElementsByTagName('loc')).map(loc => loc.textContent);
-	} catch (error) {
-		console.error('Error fetching sitemap:', error);
-		return [];
-	}
-}
-
-async function fetchPDFs() {
-	try {
-		const response = await fetch('/pdfs/'); // Assuming directory listing is enabled
-		const text = await response.text();
-		const parser = new DOMParser();
-		const htmlDoc = parser.parseFromString(text, 'text/html');
-		return Array.from(htmlDoc.querySelectorAll('a[href$=".pdf"]')).map(a => a.href);
-	} catch (error) {
-		console.error('Error fetching PDFs:', error);
-		return [];
-	}
-}
-
-async function fetchImages() {
-	try {
-		const response = await fetch('/images/'); // Assuming directory listing is enabled
-		const text = await response.text();
-		const parser = new DOMParser();
-		const htmlDoc = parser.parseFromString(text, 'text/html');
-		return Array.from(htmlDoc.querySelectorAll('a[href$=""]')).map(a => a.href);
-	} catch (error) {
-		console.error('Error fetching Images:', error);
-		return [];
-	}
-}
-
-/**
- * Finds relevant url suggestions based on the search term
- * @param {string} inputUrl - The term to search for
- * @param {Array} urls - Array of url objects with path and title
- * @param {short} maxNumUrls - Maximum limit for URL suggestions to display
- * @return {Array} Array of matching url objects
- */
-function getClosestMatches(inputUrl, urls, maxNumUrls = 5) {
-	if (!inputUrl) return [];
-
-	// Convert input URL to lowercase for case-insensitive matching
-	const term = inputUrl.toLowerCase();
-
-	// Score each url based on relevance to search term
-	const scoredUrls = urls.map(url => {
-		const pathLower = url.path.toLowerCase();
-		const titleLower = url.title.toLowerCase();
-
-		// Calculate match score (basic algorithm)
-		let score = 0;
-
-		// Exact matches in path get highest score
-		if (pathLower.includes(term)) {
-			score += 10;
-			// Higher score for exact segment match
-			if (pathLower.split('/').some(segment => segment === term)) {
-				score += 5;
-			}
+		`;
 		}
+	}
 
-		// Matches in title
-		if (titleLower.includes(term)) {
-			score += 8;
-			// Higher score for exact word match
-			if (titleLower.split(' ').some(word => word === term)) {
-				score += 4;
-			}
+	async function fetchSitemapUrls() {
+		try {
+			const response = await fetch('/sitemap.xml');
+			const text = await response.text();
+			const parser = new DOMParser();
+			const xmlDoc = parser.parseFromString(text, 'text/xml');
+			return Array.from(xmlDoc.getElementsByTagName('loc')).map(loc => loc.textContent);
+		} catch (error) {
+			console.error('Error fetching sitemap:', error);
+			return [];
 		}
+	}
 
-		// Individual word matches
-		const words = term.split(' ');
-		words.forEach(word => {
-			if (word.length < 3) return; // Skip very short words
+	async function fetchPDFs() {
+		try {
+			const response = await fetch('/pdfs/');
+			const text = await response.text();
+			const parser = new DOMParser();
+			const htmlDoc = parser.parseFromString(text, 'text/html');
+			return Array.from(htmlDoc.querySelectorAll('a[href$=".pdf"]')).map(a => a.href);
+		} catch (error) {
+			console.error('Error fetching PDFs:', error);
+			return [];
+		}
+	}
 
-			if (pathLower.includes(word)) {
-				score += 2;
-			}
+	async function fetchImages() {
+		try {
+			const response = await fetch('/images/');
+			const text = await response.text();
+			const parser = new DOMParser();
+			const htmlDoc = parser.parseFromString(text, 'text/html');
+			return Array.from(htmlDoc.querySelectorAll('a[href$=".jpg"], a[href$=".png"], a[href$=".svg"], a[href$=".webp"], a[href$=".gif"], a[href$=".mp3"]'))
+				.map(a => a.href);
+		} catch (error) {
+			console.error('Error fetching Images:', error);
+			return [];
+		}
+	}
 
-			if (titleLower.includes(word)) {
-				score += 3;
-			}
-		});
+	function getClosestMatches(inputUrl, urls, maxNumUrls = 5) {
+		return urls.map(url => ({ url, score: similarity(inputUrl, url) }))
+			.sort((a, b) => b.score - a.score)
+			.slice(0, maxNumUrls)
+			.map(item => item.url);
+	}
 
-		return { ...url, score };
-	});
-
-	// Filter URLs with a score and sort by score (descending)
-	return scoredUrls
-		.filter(url => url.score > 0)
-		.sort((a, b) => b.score - a.score)
-		.slice(0, maxNumUrls); // Return top 5 suggestions
-}
-</script>
+	function similarity(a, b) {
+		let matches = 0;
+		const minLength = Math.min(a.length, b.length);
+		for (let i = 0; i < minLength; i++) {
+			if (a[i] === b[i]) matches++;
+		}
+		return matches / Math.max(a.length, b.length);
+	}
+	</script>
 </head>
 <body>
 <h1>404</h1>
