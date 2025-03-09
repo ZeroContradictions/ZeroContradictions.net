@@ -26,11 +26,12 @@ a {color: #015EF4;}
 #suggestions {text-align: left;}
 </style>
 <script>
-	document.addEventListener('DOMContentLoaded', suggestPages);
+document.addEventListener('DOMContentLoaded', suggestPages);
 
-	async function suggestPages() {
-		const currentUrl = window.location.pathname;
-
+async function suggestPages() {
+    const currentUrl = window.location.pathname;
+    const fragment = window.location.hash; // Capture URI fragment
+    
     // Prevent suggestions if the user is on the 404 page itself
     if (currentUrl === '/404' || currentUrl === '/404.html') {
         return;
@@ -39,14 +40,15 @@ a {color: #015EF4;}
     const sitemapUrls = await fetchSitemapUrls();
     const pdfUrls = await fetchPDFs();
     const imageUrls = await fetchImages();
-    const allUrls = [...sitemapUrls, ...pdfUrls, ...imageUrls];
+    const allUrls = [...sitemapUrls, ...pdfUrls, ...imageUrls].filter(url => url !== '/' && url !== '/directory'); // Exclude homepage and /directory
+
 
     const suggestions = getClosestMatches(currentUrl, allUrls);
 
     const suggestionBox = document.getElementById('suggestions');
     if (suggestions.length > 0) {
         suggestionBox.innerHTML = '<p>Did you mean:</p><ul>' +
-            suggestions.map(s => `<li><a href="${s}">${s}</a></li>`).join('') +
+            suggestions.map(s => `<li><a href="${s}${fragment}">${s}${fragment}</a></li>`).join('') +
             '</ul>';
     } else {
         suggestionBox.innerHTML = `
@@ -97,35 +99,29 @@ async function fetchImages() {
 }
 
 function getClosestMatches(inputUrl, urls, maxNumUrls = 5) {
-    return urls.map(url => ({ url, score: levenshteinDistance(inputUrl, url) }))
-               .sort((a, b) => a.score - b.score)
+    return urls.map(url => ({ url, score: calculateSimilarity(inputUrl, url) }))
+               .filter(item => item.score > 0) // Remove bad matches
+               .sort((a, b) => b.score - a.score)
                .slice(0, maxNumUrls)
                .map(item => item.url);
 }
 
-function levenshteinDistance(a, b) {
-    const matrix = [];
-    for (let i = 0; i <= a.length; i++) {
-        matrix[i] = [i];
-    }
-    for (let j = 0; j <= b.length; j++) {
-        matrix[0][j] = j;
-    }
-    for (let i = 1; i <= a.length; i++) {
-        for (let j = 1; j <= b.length; j++) {
-            if (a[i - 1] === b[j - 1]) {
-                matrix[i][j] = matrix[i - 1][j - 1];
-            } else {
-                matrix[i][j] = Math.min(
-                    matrix[i - 1][j] + 1,
-                    matrix[i][j - 1] + 1,
-                    matrix[i - 1][j - 1] + 1
-                );
-            }
+function calculateSimilarity(a, b) {
+    const pathA = a.toLowerCase().split('/').filter(Boolean);
+    const pathB = b.toLowerCase().split('/').filter(Boolean);
+    
+    let matchScore = 0;
+    pathA.forEach(segment => {
+        if (pathB.includes(segment)) {
+            matchScore += 10; // Boost for matching path segments
+        } else if (pathB.some(part => part.includes(segment))) {
+            matchScore += 5; // Partial matches
         }
-    }
-    return matrix[a.length][b.length];
+    });
+
+    return matchScore;
 }
+
 </script>
 </head>
 <body>
