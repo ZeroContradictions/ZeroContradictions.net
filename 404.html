@@ -47,13 +47,14 @@ async function suggestPages() {
 
     const suggestionBox = document.getElementById('suggestions');
     if (suggestions.length > 0) {
-        suggestionBox.innerHTML = '<p>Did you mean:</p><ul>' +
+        suggestionBox.innerHTML = '<p>Did you mean?:</p><ul>' +
             suggestions.map(s => `<li><a href="${s}${fragment}">${s}${fragment}</a></li>`).join('') +
             '</ul>';
     } else {
         suggestionBox.innerHTML = `
-            <p>Sorry, we couldn't find any pages related to the given search terms.</p>
-            <p>Please check our <a href="/sitemap">sitemap</a> or use the navigation menu above.</p>
+            <p style="text-align: center">Sorry, we couldn't find any pages related to the given search terms.
+            <br>
+            Please check our <a href="/sitemap">sitemap</a> or use the navigation menu above.</p>
         `;
     }
 }

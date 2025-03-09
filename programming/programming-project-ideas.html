@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2025 February 28, 13:16 -->
+<!-- 2025 March 09, 06:02 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>ZC's Programming Project Ideas</title>
@@ -35,7 +35,7 @@
 <li><a href="#emacs-simple-tasks">3.1. Relatively Simple Tasks</a></li>
 <li><a href="#emacs-intermediate-tasks">3.2. Intermediate Tasks</a></li>
 <li><a href="#emacs-advanced-tasks">3.3. Advanced Tasks</a></li>
-<li><a href="#changes-to-make-to-dired">3.4. Changes That I Want To Make To Dired</a></li>
+<li><a href="#dired">3.4. Changes That I Want To Make To Dired</a></li>
 </ul>
 </li>
 <li><a href="#things-to-report-or-program-in-xfce">4. Things To Report Or Program In Xfce</a></li>
@@ -89,9 +89,10 @@ If anybody would like to assist or work together with me on creating some of the
 <ol class="org-ol">
 <li>Write a program that automatically re-labels downloaded files to your filename specification standards (this should be straight-forward, as it only involves case-toggling and search-and-replace function calls); store the original filenames in a log file.
 <ul class="org-ul">
-<li>Write a program with similar functionality in Elisp. (See: <a href="#personal-programming-project-ideas">Changes That I Want To Make To Dired</a>)</li>
+<li>Write a program with similar functionality in Elisp. (See: <a href="#dired">Changes That I Want To Make To Dired</a>)</li>
 </ul></li>
 <li>Create an interactive population dynamics simulator to illustrate to readers how population dynamics work and accompany the <a href="../faqs/overpopulation#next-overpop-crisis">Overpopulation FAQs</a>. Try Javascript.</li>
+<li>A reddit bot would that searches comments for people who spell &lt;should&rsquo;ve&gt;, &lt;would&rsquo;ve&gt;, &lt;could&rsquo;ve&gt;, etc incorrectly and explains what the correct spelling and grammar is and why. Misspellings of &lt;shouldn&rsquo;t&rsquo;ve&gt;, &lt;wouldn&rsquo;t&rsquo;ve&gt;, &lt;couldn&rsquo;t&rsquo;ve&gt;, etc should also be corrected.</li>
 </ol>
 </div>
 </div>
@@ -113,10 +114,8 @@ If anybody would like to assist or work together with me on creating some of the
 <li>Make an interactive JavaScript game or applet that explains the <a href="../civilization/georgism-crash-course#SUOP">SUOP</a>.</li>
 <li>Design a web application that automatically generates and counts syllables after specifying all the phonotactical constraints of a language, dialect, and sociolect in sufficient detail. Try Javascript.</li>
 <li>Create a built-in search webpage and algorithm for this website, similar to the one used on <a href="http://xahlee.info/xli_search.html">http://xahlee.info/xli_search.html</a>?</li>
-<li>The 404 page could feature some JavaScript code that tries to reads the user&rsquo;s input URL suggest pages that might be what the user was looking for.</li>
 <li>Create a web browser extension that can only let you view particular sites within a limited time window, twice, or other parts of the day.</li>
 <li>Create better screenshot program for Linux, similar to the default one on MacOS.</li>
-<li>A reddit bot would that searches comments for people who spell &lt;should&rsquo;ve&gt;, &lt;would&rsquo;ve&gt;, &lt;could&rsquo;ve&gt;, etc incorrectly and explains what the correct spelling and grammar is and why. Misspellings of &lt;shouldn&rsquo;t&rsquo;ve&gt;, &lt;wouldn&rsquo;t&rsquo;ve&gt;, &lt;couldn&rsquo;t&rsquo;ve&gt;, etc should also be corrected.</li>
 <li>Create a program for <a href="../epistemology/difficult-to-change-minds#hub-and-spoke-networks">mapping out belief networks</a>.</li>
 <li>Tweak DockBarX with Python: <a href="https://github.com/M7S/dockbarx">https://github.com/M7S/dockbarx</a>.</li>
 </ol>
@@ -171,13 +170,14 @@ If anybody would like to assist or work together with me on creating some of the
 <ol class="org-ol">
 <li>When I add a new footnote to the file, the footnote numbering of the org mode file should adjust.</li>
 <li>Make the insert state the default starting state for vim after creating a new file? If the file is new, there really isn&rsquo;t anything useful to use the normal state commands on since the file is empty.</li>
-<li>Pressing enter while I&rsquo;m typing a bulleted list should not create a bullet that gets indented on the next line. Instead, it should just create a new bullet that is on the same level as the current one.</li>
 <li>When new sections are added in org-mode, Emacs should automatically insert a blank newline between the sections to help separate things.
 <ul class="org-ul">
 <li>Perhaps there could even be an option to toggle this in case there are times where it is unfavorable to have a blank newline for separation.</li>
 <li>I don&rsquo;t know when this would be desired though. Maybe to keep information packed and dense, alignment of text, aesthetics, or something else?</li>
 </ul></li>
-<li>Create a new &ldquo;thoughts-storage&rdquo; file format, and create a major mode for it? Or make it a sub-format of org-mode?</li>
+<li>Create a new &ldquo;thoughts-storage&rdquo; file format, and create a major mode for it?
+Make it a minor-mode that can be toggled on or off when using org-mode?
+Define a file extension for it, like: &ldquo;.orgt&rdquo;.</li>
 </ol>
 </div>
 </div>
@@ -192,7 +192,7 @@ If anybody would like to assist or work together with me on creating some of the
 <li>Mediawiki mode should allow the spellchecker to be used.</li>
 <li>The mode should also be updated to implement strike-through text using the &lt;s&gt; tags, and any new features Included in this outdated software.</li>
 </ul></li>
-<li>Modify the org-mode HTML exporter so that in the HTML output, clicking a header section will load the corresponding URL fragment, thus bringing that header and it&rsquo;s section to the top of the page.
+<li>Modify the org-mode HTML exporter so that in the HTML output, clicking a header section will load the corresponding URL fragment, thus bringing that header and its section to the top of the page.
 In other words, every section header will have a URL fragment link that shows that part of the page specifically.
 This would be similar to the functionality that is offered for Gwern&rsquo;s website.
 There could be an option to toggle whether users want this functionality or not shown in their org-mode HTML exports.</li>
@@ -221,12 +221,13 @@ There could be an option to toggle whether users want this functionality or not 
 <h3 id="emacs-advanced-tasks"><span class="section-number-3">3.3.</span> Advanced Tasks</h3>
 <div class="outline-text-3" id="text-emacs-advanced-tasks">
 <ol class="org-ol">
-<li>Has anyone ever created an Emacs command that will display all of someone&rsquo;s keybindings on an image of their keyboard inside an Emacs buffer? If not, would it be worth creating such a thing for my own use? I imagine thousands of other people would find such a program useful since it could help people visualize the most efficient keybindings that they could map onto their keys.</li>
+<li>Has anyone ever created an Emacs command that will display all of someone&rsquo;s keybindings on an image of their keyboard inside an Emacs buffer?
+If not, would it be worth creating such a thing for my own use?
+I imagine thousands of other people would find such a program useful since it could help people visualize the most efficient keybindings that they could map onto their keys.</li>
 <li>Edit occur to have a <a href="https://en.wikipedia.org/wiki/Key_Word_in_Context">Key Word In Context (KWIC)</a> toggle option that can display the keyword in question at the horizontal center of the screen, vs displaying the beginning of the line containing the keyword?</li>
 <li>Similar to the evil-everywhere package, perhaps someone could create a colemak-everywhere package/module which replaces everywhere where keys were placed to fit Qwerty homerow keys with Colemak homerow keybindings and key presses?</li>
 <li>Org-mode presents doesn&rsquo;t display italicized text correctly in cases where the slashes are before the end of the ending square bracket, <a href="https://zerocontradictions.net/">like in this <i>example</i></a>. &ldquo;Example&rdquo; should be italicized in the previous sentence, but it isn&rsquo;t, although it <i>is</i> italicized correctly in HTML exports.</li>
 <li>A list of English words (with nouns proceeded by &rsquo;the&rsquo;) piped through DeepL into Spanish or French could be a great way to create a text dictionary. Then I could create a program that creates a new file and places the words side by side separated by some ASCII characters of my choosing, and perhaps even footnotes after a semicolon.</li>
-<li>A command that queries dictionary entries from wiktionary.org.</li>
 <li>Has anyone ever considered editing the <b>info</b> pages for Emacs so that they are displayed with org-mode instead, thus eliminating one less set of keybindings for learning, and also so that the folding headers functionality of org-mode can be gained when reading the <b>info</b> documentation? It shouldn&rsquo;t be too difficult to create a parser that can edit all the <b>info</b> file to make them display in org-mode instead, right?
 <ul class="org-ul">
 <li>Or maybe there&rsquo;s already packages that do this, that I don&rsquo;t know about?</li>
@@ -244,19 +245,18 @@ Test These Commands:
 </div>
 </div>
 
-<div id="outline-container-changes-to-make-to-dired" class="outline-3">
-<h3 id="changes-to-make-to-dired"><span class="section-number-3">3.4.</span> Changes That I Want To Make To Dired</h3>
-<div class="outline-text-3" id="text-changes-to-make-to-dired">
+<div id="outline-container-dired" class="outline-3">
+<h3 id="dired"><span class="section-number-3">3.4.</span> Changes That I Want To Make To Dired</h3>
+<div class="outline-text-3" id="text-dired">
 <ol class="org-ol">
-<li>Display relative line numbers in dired by default (to make vertical motion easier).</li>
 <li>Maybe I could create a user-defined function and command that can automatically format text to fit the requirements outlined in my standard text file formatting standards. (See: <a href="#personal-programming-project-ideas">Relatively Simple Programming Project Ideas</a>)</li>
-<li>When I rename files to similar but different names, how do I stop dired from preventing me from renaming the file since it thinks I am giving it the same name?
-<ul class="org-ul">
-<li>In the suggestions, the old name appears, so when I press enter, dired thinks I am selecting the suggestion, when that&rsquo;s not what I want.</li>
-</ul></li>
 <li>In dired, I wish &rsquo;gg&rsquo; and &rsquo;G&rsquo; would go to the top and bottom of every the directory files list, just as they do when editing text files. This might be resolved with evil-collection.</li>
 <li>Learn how to create symbolic links and hard links in dired.</li>
 <li>Remap the navigation keybindings in info mode so that they are exactly the same as dired-mode? This will generate less confusion.</li>
+<li>When I rename file to a similar but different name, how do I stop dired from preventing me from renaming the file since it thinks I am giving it the same name?
+<ul class="org-ul">
+<li>In the suggestions, the old name appears, so when I press enter, dired thinks I am selecting the suggestion, when that&rsquo;s not what I want.</li>
+</ul></li>
 </ol>
 </div>
 </div>
@@ -315,7 +315,7 @@ It&rsquo;s already improved a lot since I first tried it in 2014.
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2025 February 28, 13:16</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2025 March 09, 06:02</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>
