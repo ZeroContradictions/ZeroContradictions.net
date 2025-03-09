@@ -23,6 +23,7 @@ h1 {
 }
 p {font-size: 1.2em;}
 a {color: #015EF4;}
+#suggestions {text-align: left;}
 </style>
 <script>
 	document.addEventListener('DOMContentLoaded', suggestPages);
@@ -30,93 +31,110 @@ a {color: #015EF4;}
 	async function suggestPages() {
 		const currentUrl = window.location.pathname;
 
-		// Prevent suggestions if the user is on the 404 page itself
-		if (currentUrl === '/404' || currentUrl === '/404.html') {
-			return;
-		}
+    // Prevent suggestions if the user is on the 404 page itself
+    if (currentUrl === '/404' || currentUrl === '/404.html') {
+        return;
+    }
 
-		const sitemapUrls = await fetchSitemapUrls();
-		const pdfUrls = await fetchPDFs();
-		const imageUrls = await fetchImages();
-		const allUrls = [...sitemapUrls, ...pdfUrls, ...imageUrls];
+    const searchTerm = getSearchTermFromUrl(currentUrl);
 
-		const suggestions = getClosestMatches(currentUrl, allUrls);
+    const sitemapUrls = await fetchSitemapUrls();
+    const pdfUrls = await fetchPDFs();
+    const imageUrls = await fetchImages();
+    const allUrls = [...sitemapUrls, ...pdfUrls, ...imageUrls];
 
-		const suggestionBox = document.getElementById('suggestions');
-		if (suggestions.length > 0) {
-			suggestionBox.innerHTML = '<p>Did you mean:</p><ul>' +
-				suggestions.map(s => `<li><a href="${s}">${s}</a></li>`).join('') +
-				'</ul>';
-		} else {
-			suggestionBox.innerHTML = `
-			<p>Sorry, we couldn't find any pages related to the given search terms.</p>
-			<p>Please check our <a href="/sitemap">sitemap</a> or use the navigation menu above.</p>
-		`;
-		}
-	}
+    const suggestions = getClosestMatches(currentUrl, allUrls);
 
-	async function fetchSitemapUrls() {
-		try {
-			const response = await fetch('/sitemap.xml');
-			const text = await response.text();
-			const parser = new DOMParser();
-			const xmlDoc = parser.parseFromString(text, 'text/xml');
-			return Array.from(xmlDoc.getElementsByTagName('loc')).map(loc => loc.textContent);
-		} catch (error) {
-			console.error('Error fetching sitemap:', error);
-			return [];
-		}
-	}
+    const suggestionBox = document.getElementById('suggestions');
+    if (suggestions.length > 0) {
+        suggestionBox.innerHTML = '<p>Did you mean:</p><ul>' +
+            suggestions.map(s => `<li><a href="${s}">${s}</a></li>`).join('') +
+            '</ul>';
+    } else {
+        suggestionBox.innerHTML = `
+            <p>Sorry, we couldn't find any pages related to the given search terms.</p>
+            <p>Please check our <a href="/sitemap">sitemap</a> or use the navigation menu above.</p>
+        `;
+    }
+}
 
-	async function fetchPDFs() {
-		try {
-			const response = await fetch('/pdfs/');
-			const text = await response.text();
-			const parser = new DOMParser();
-			const htmlDoc = parser.parseFromString(text, 'text/html');
-			return Array.from(htmlDoc.querySelectorAll('a[href$=".pdf"]')).map(a => a.href);
-		} catch (error) {
-			console.error('Error fetching PDFs:', error);
-			return [];
-		}
-	}
+async function fetchSitemapUrls() {
+    try {
+        const response = await fetch('/sitemap.xml');
+        const text = await response.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(text, 'text/xml');
+        return Array.from(xmlDoc.getElementsByTagName('loc')).map(loc => loc.textContent);
+    } catch (error) {
+        console.error('Error fetching sitemap:', error);
+        return [];
+    }
+}
 
-	async function fetchImages() {
-		try {
-			const response = await fetch('/images/');
-			const text = await response.text();
-			const parser = new DOMParser();
-			const htmlDoc = parser.parseFromString(text, 'text/html');
-			return Array.from(htmlDoc.querySelectorAll('a[href$=".jpg"], a[href$=".png"], a[href$=".svg"], a[href$=".webp"], a[href$=".gif"], a[href$=".mp3"]'))
-				.map(a => a.href);
-		} catch (error) {
-			console.error('Error fetching Images:', error);
-			return [];
-		}
-	}
+async function fetchPDFs() {
+    try {
+        const response = await fetch('/pdfs/');
+        const text = await response.text();
+        const parser = new DOMParser();
+        const htmlDoc = parser.parseFromString(text, 'text/html');
+        return Array.from(htmlDoc.querySelectorAll('a[href$=".pdf"]')).map(a => a.href);
+    } catch (error) {
+        console.error('Error fetching PDFs:', error);
+        return [];
+    }
+}
 
-	function getClosestMatches(inputUrl, urls, maxNumUrls = 5) {
-		return urls.map(url => ({ url, score: similarity(inputUrl, url) }))
-			.sort((a, b) => b.score - a.score)
-			.slice(0, maxNumUrls)
-			.map(item => item.url);
-	}
+async function fetchImages() {
+    try {
+        const response = await fetch('/images/');
+        const text = await response.text();
+        const parser = new DOMParser();
+        const htmlDoc = parser.parseFromString(text, 'text/html');
+        return Array.from(htmlDoc.querySelectorAll('a[href$=".jpg"], a[href$=".png"], a[href$=".svg"], a[href$=".webp"], a[href$=".gif"], a[href$=".mp3"]'))
+            .map(a => a.href);
+    } catch (error) {
+        console.error('Error fetching Images:', error);
+        return [];
+    }
+}
 
-	function similarity(a, b) {
-		let matches = 0;
-		const minLength = Math.min(a.length, b.length);
-		for (let i = 0; i < minLength; i++) {
-			if (a[i] === b[i]) matches++;
-		}
-		return matches / Math.max(a.length, b.length);
-	}
-	</script>
+function getClosestMatches(inputUrl, urls, maxNumUrls = 5) {
+    return urls.map(url => ({ url, score: levenshteinDistance(inputUrl, url) }))
+               .sort((a, b) => a.score - b.score)
+               .slice(0, maxNumUrls)
+               .map(item => item.url);
+}
+
+function levenshteinDistance(a, b) {
+    const matrix = [];
+    for (let i = 0; i <= a.length; i++) {
+        matrix[i] = [i];
+    }
+    for (let j = 0; j <= b.length; j++) {
+        matrix[0][j] = j;
+    }
+    for (let i = 1; i <= a.length; i++) {
+        for (let j = 1; j <= b.length; j++) {
+            if (a[i - 1] === b[j - 1]) {
+                matrix[i][j] = matrix[i - 1][j - 1];
+            } else {
+                matrix[i][j] = Math.min(
+                    matrix[i - 1][j] + 1,
+                    matrix[i][j - 1] + 1,
+                    matrix[i - 1][j - 1] + 1
+                );
+            }
+        }
+    }
+    return matrix[a.length][b.length];
+}
+</script>
 </head>
 <body>
 <h1>404</h1>
 <p>The requested page could not be found :(
 <div id="suggestions"></div>
-<br><br>You may be able to find the sought page on the <a href="https://zerocontradictions.net/directory">directory page</a>.
+<br><br>You may also be able to find the sought page on the <a href="https://zerocontradictions.net/directory">directory page</a>.
 <br><br>If you believe this is a broken link, please <a href="https://zerocontradictions.net/misc/contact">notify the website administrator</a>.</p>
 </body>
 </html>
