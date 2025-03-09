@@ -341,9 +341,4 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 	<lastmod>2024-05-27</lastmod>
 	<priority>0.70</priority>
 </url>
-<url>
-	<loc>https://zerocontradictions.net/misc/jersey-mikes-advice.pdf</loc>
-	<lastmod>2024-10-18</lastmod>
-	<priority>0.30</priority>
-</url>
 </urlset>
