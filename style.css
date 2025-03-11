@@ -57,7 +57,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 	margin: auto;
 	max-width: 47.25em;
 
-	max-height: 50%;
+	max-height: 90%; /* 94% is maximum that can be shown, due to navigation bar and horizontal scroll bar. */
 	overflow: auto;
 	background: #eee;
 	border: solid black 0.1rem;
