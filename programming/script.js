@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function toggleLightDark() {
-	event.preventDefault(); // Prevents default link behavior
-	var element = document.body;
-	element.classList.toggle("dark-mode");
+    var element = document.body;
+    element.classList.toggle("dark-mode");
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2025 February 24, 06:46 -->
+<!-- 2025 March 11, 09:47 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>How to Design a Blog with Emacs and Org-Mode</title>
@@ -12,13 +12,13 @@
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://zerocontradictions.net/images/georgism-flag.jpg">
 <style> pre.src-bash:before {content: 'bash'; } </style>
-<link rel="stylesheet" type="text/css" href="/style.css">
+<link rel="stylesheet" type="text/css" href="/style.css"><script src="/script.js"></script>
 </head>
 <body>
 <div id="org-div-home-and-up">
- <a accesskey="h" href="/directory"> UP </a>
+ <a accesskey="h" href="#">CONTENTS</a> | <a href="#content"> UP </a>
  |
- <a accesskey="H" href="/"> HOME </a>
+ <a accesskey="H" href="#" onclick="toggleLightDark()"">DARK</a> | <a href="/"> HOME </a>
 </div><div id="content" class="content">
 <header>
 <h1 class="title">How to Design a Blog with Emacs and Org-Mode</h1>
@@ -292,13 +292,14 @@ The user can learn more about what each variable does by pressing <code>SPC h v<
 </pre>
 
 <p>
-And the following is the entirety of the org-mode keywords and values that I include at the beginning of every .org file for controlling the HTML code of my webpages:
+The following is the entirety of the org-mode keywords and values that I include at the beginning of every .org file for controlling the HTML code of my webpages:
 </p>
 <pre class="example">
 #+title: The_Webpage_Title_That_Will_Be_Placed_In_Both_&lt;title&gt;_and_&lt;h1&gt;
 #+subtitle: The_Webpage_Subtitle_That_Will_Be_Placed_In_&lt;subtitle&gt;
 #+author: The Author Name
 #+description: The webpage description (up to 160 characters long).
+#+html_head: &lt;script src="/script.js"&gt;&lt;/script&gt;
 #+html_head: [Javascript code for adding Google Analytics to the webpage]
 #+html_head: &lt;meta property="og:url" content="[the canonical URL link for this article]"&gt;
 #+html_head: &lt;meta property="og:type" content="article"&gt;
@@ -320,6 +321,7 @@ In my config.el, I have:
 Meanwhile, my local file org variables add the following HTML &lt;head&gt; code to each file:
 </p>
 <pre class="example">
+#+html_head: &lt;script src="/script.js"&gt;&lt;/script&gt;
 #+html_head: [Javascript code for adding Google Analytics to the webpage]
 #+html_head: &lt;meta property="og:url" content="[the canonical URL link for this article]"&gt;
 #+html_head: &lt;meta property="og:type" content="article"&gt;
@@ -336,6 +338,7 @@ Every time I want to re-export the HTML output from my org file to update my web
 <p>
 Note: As of 2024 December 15, I disabled Google Analytics from my site, since it didn&rsquo;t really benefit me or my readers to keep using it.
 However, I will continue to show the Google Analytics lines above to help guide people who are interested.
+If you want to link a Javascript file to every HTML export, then adding the <code>&lt;script src="/script.js"&gt;&lt;/script&gt;</code> line to your org-mode files should do the trick.
 </p>
 </div>
 </div>
@@ -826,7 +829,7 @@ I haven&rsquo;t figured out how to control the formatting and syntax highlightin
 </div>
 </div></div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2025 February 24, 06:46</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2025 March 11, 09:47</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>

@@ -6,11 +6,9 @@ permalink: /404
 <head>
 <title>Zero Contradictions 404 Page</title>
 <style media="screen">
-html {background-color: black;}
+html {background-color: #808080;}
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	color: black;
-	background-color: #E9ECF5;
 	text-align: center;
 	margin: 0 auto;
 	padding: 3%;
@@ -24,103 +22,106 @@ h1 {
 p {font-size: 1.2em;}
 a {color: #015EF4;}
 #suggestions {text-align: left;}
+
+@media (prefers-color-scheme: light) {body {color: black; background-color: #F4F5F6;} }
+@media (prefers-color-scheme: dark) {header {border-bottom-color: white;} body {color: white; background-color: black;} a.hlink {color: white} hr, h1, h2, h3 {border-top-color: white;} }
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', suggestPages);
 
 async function suggestPages() {
-    const currentUrl = window.location.pathname;
-    const fragment = window.location.hash; // Capture URI fragment
-    
-    // Prevent suggestions if the user is on the 404 page itself
-    if (currentUrl === '/404' || currentUrl === '/404.html') {
-        return;
-    }
+	const currentUrl = window.location.pathname;
+	const fragment = window.location.hash; // Capture URI fragment
+	
+	// Prevent suggestions if the user is on the 404 page itself
+	if (currentUrl === '/404' || currentUrl === '/404.html') {
+		return;
+	}
 
-    const sitemapUrls = await fetchSitemapUrls();
-    const pdfUrls = await fetchPDFs();
-    const imageUrls = await fetchImages();
-    const allUrls = [...sitemapUrls, ...pdfUrls, ...imageUrls].filter(url => url !== '/' && url !== '/directory'); // Exclude homepage and /directory
+	const sitemapUrls = await fetchSitemapUrls();
+	const pdfUrls = await fetchPDFs();
+	const imageUrls = await fetchImages();
+	const allUrls = [...sitemapUrls, ...pdfUrls, ...imageUrls].filter(url => url !== '/' && url !== '/directory'); // Exclude homepage and /directory
 
 
-    const suggestions = getClosestMatches(currentUrl, allUrls);
+	const suggestions = getClosestMatches(currentUrl, allUrls);
 
-    const suggestionBox = document.getElementById('suggestions');
-    if (suggestions.length > 0) {
-        suggestionBox.innerHTML = '<p>Did you mean?:</p><ul>' +
-            suggestions.map(s => `<li><a href="${s}${fragment}">${s}${fragment}</a></li>`).join('') +
-            '</ul>';
-    } else {
-        suggestionBox.innerHTML = `
-            <p style="text-align: center">Sorry, we couldn't find any pages related to the given search terms.
-            <br>
-            Please check our <a href="/sitemap">sitemap</a> or use the navigation menu above.</p>
-        `;
-    }
+	const suggestionBox = document.getElementById('suggestions');
+	if (suggestions.length > 0) {
+		suggestionBox.innerHTML = '<p>Did you mean?:</p><ul>' +
+			suggestions.map(s => `<li><a href="${s}${fragment}">${s}${fragment}</a></li>`).join('') +
+			'</ul>';
+	} else {
+		suggestionBox.innerHTML = `
+			<p style="text-align: center">Sorry, we couldn't find any pages related to the given search terms.
+			<br>
+			Please check our <a href="/sitemap">sitemap</a> or use the navigation menu above.</p>
+		`;
+	}
 }
 
 async function fetchSitemapUrls() {
-    try {
-        const response = await fetch('/sitemap.xml');
-        const text = await response.text();
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(text, 'text/xml');
-        return Array.from(xmlDoc.getElementsByTagName('loc')).map(loc => loc.textContent);
-    } catch (error) {
-        console.error('Error fetching sitemap:', error);
-        return [];
-    }
+	try {
+		const response = await fetch('/sitemap.xml');
+		const text = await response.text();
+		const parser = new DOMParser();
+		const xmlDoc = parser.parseFromString(text, 'text/xml');
+		return Array.from(xmlDoc.getElementsByTagName('loc')).map(loc => loc.textContent);
+	} catch (error) {
+		console.error('Error fetching sitemap:', error);
+		return [];
+	}
 }
 
 async function fetchPDFs() {
-    try {
-        const response = await fetch('/pdfs/');
-        const text = await response.text();
-        const parser = new DOMParser();
-        const htmlDoc = parser.parseFromString(text, 'text/html');
-        return Array.from(htmlDoc.querySelectorAll('a[href$=".pdf"]')).map(a => a.href);
-    } catch (error) {
-        console.error('Error fetching PDFs:', error);
-        return [];
-    }
+	try {
+		const response = await fetch('/pdfs/');
+		const text = await response.text();
+		const parser = new DOMParser();
+		const htmlDoc = parser.parseFromString(text, 'text/html');
+		return Array.from(htmlDoc.querySelectorAll('a[href$=".pdf"]')).map(a => a.href);
+	} catch (error) {
+		console.error('Error fetching PDFs:', error);
+		return [];
+	}
 }
 
 async function fetchImages() {
-    try {
-        const response = await fetch('/images/');
-        const text = await response.text();
-        const parser = new DOMParser();
-        const htmlDoc = parser.parseFromString(text, 'text/html');
-        return Array.from(htmlDoc.querySelectorAll('a[href$=".jpg"], a[href$=".png"], a[href$=".svg"], a[href$=".webp"], a[href$=".gif"], a[href$=".mp3"]'))
-            .map(a => a.href);
-    } catch (error) {
-        console.error('Error fetching Images:', error);
-        return [];
-    }
+	try {
+		const response = await fetch('/images/');
+		const text = await response.text();
+		const parser = new DOMParser();
+		const htmlDoc = parser.parseFromString(text, 'text/html');
+		return Array.from(htmlDoc.querySelectorAll('a[href$=".jpg"], a[href$=".png"], a[href$=".svg"], a[href$=".webp"], a[href$=".gif"], a[href$=".mp3"]'))
+			.map(a => a.href);
+	} catch (error) {
+		console.error('Error fetching Images:', error);
+		return [];
+	}
 }
 
 function getClosestMatches(inputUrl, urls, maxNumUrls = 5) {
-    return urls.map(url => ({ url, score: calculateSimilarity(inputUrl, url) }))
-               .filter(item => item.score > 0) // Remove bad matches
-               .sort((a, b) => b.score - a.score)
-               .slice(0, maxNumUrls)
-               .map(item => item.url);
+	return urls.map(url => ({ url, score: calculateSimilarity(inputUrl, url) }))
+			   .filter(item => item.score > 0) // Remove bad matches
+			   .sort((a, b) => b.score - a.score)
+			   .slice(0, maxNumUrls)
+			   .map(item => item.url);
 }
 
 function calculateSimilarity(a, b) {
-    const pathA = a.toLowerCase().split('/').filter(Boolean);
-    const pathB = b.toLowerCase().split('/').filter(Boolean);
-    
-    let matchScore = 0;
-    pathA.forEach(segment => {
-        if (pathB.includes(segment)) {
-            matchScore += 10; // Boost for matching path segments
-        } else if (pathB.some(part => part.includes(segment))) {
-            matchScore += 5; // Partial matches
-        }
-    });
+	const pathA = a.toLowerCase().split('/').filter(Boolean);
+	const pathB = b.toLowerCase().split('/').filter(Boolean);
+	
+	let matchScore = 0;
+	pathA.forEach(segment => {
+		if (pathB.includes(segment)) {
+			matchScore += 10; // Boost for matching path segments
+		} else if (pathB.some(part => part.includes(segment))) {
+			matchScore += 5; // Partial matches
+		}
+	});
 
-    return matchScore;
+	return matchScore;
 }
 
 </script>
@@ -129,7 +130,7 @@ function calculateSimilarity(a, b) {
 <h1>404</h1>
 <p>The requested page could not be found :(
 <div id="suggestions"></div>
-<br><br>You may also be able to find the sought page on the <a href="https://zerocontradictions.net/directory">directory page</a>.
+<br><br>You may be able to find the sought page on the <a href="https://zerocontradictions.net/directory">directory page</a>.
 <br><br>If you believe this is a broken link, please <a href="https://zerocontradictions.net/misc/contact">notify the website administrator</a>.</p>
 </body>
 </html>

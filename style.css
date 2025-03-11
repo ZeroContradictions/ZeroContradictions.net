@@ -1,1 +1,319 @@
-html, body, header, footer, div, span, h1, h2, h3, h4, h5, p, a, img, strong, ol, ul, li {margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;font-weight: inherit;font-style: inherit;font-family: inherit;vertical-align: baseline;}article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {display: block;}#org-div-home-and-up {font-size: 110%;font-weight: bold;text-align: right;white-space: nowrap;}#table-of-contents ul {margin-bottom: 0.3125rem;list-style-type: none;font-weight: 600;text-decoration: underline;color: #0051D4;text-decoration-color: #0051D4;text-decoration-thickness: 0.0625rem;}#table-of-contents ul li {margin: 0 0 0.3125rem 0.625rem;}#table-of-contents ul li ul li {margin: 0 0 0.3125rem 1.250rem;}@media screen and (max-width: 50.085em) {#table-of-contents ul li {margin: 0 0 0.3125rem 0;}}.title {text-align: center;margin-bottom: 0.2rem;}.subtitle {text-align: center;font-size: 1rem;font-weight: bold;}#content {max-width: 60rem;margin: auto;}#postamble {padding-top: 0.625rem;margin-top: 0.625rem;border-top: solid black 0.125rem;}p.author, p.date {text-align: center;}.org-left {margin-left: 0;margin-right: auto;text-align: left;}.org-right {margin-left: auto;margin-right: 0;text-align: right;}.org-center {margin-left: auto;margin-right: auto;text-align: center;}.underline {text-decoration: underline;}p {line-height: 1.3rem;text-align: left;margin-bottom: 0.3125rem;}a {line-height: 1.3rem;color: #0051D4;text-decoration: none;}a:hover {text-decoration: underline;text-decoration-thickness: 0.125rem;}a:focus {text-decoration: underline;text-decoration-thickness: 0.1875rem;}sub, sup {font-size: 75%;line-height: 0;position: relative;vertical-align: baseline;}sup {top: -0.5rem;}sub {bottom: -0.25rem;}ul li, ol li {margin: 0 0 0.3125rem 1.25rem;line-height: 1.3rem;}.org-dl {line-height: 1.3rem;margin-bottom: 0.3125rem;}dt {font-weight: bold;}blockquote {border-left: solid #AAAAFF 1.1875rem;margin: 0.5rem 0 0.5rem 0;padding: 0 0 0 1rem;display: block;}.opponent {border-left: solid #FFCFF1 1.1875rem;margin: 0.5rem 0 0.5rem 0;padding: 0 0 0 1rem;display: block;}pre, code {font-family: 'Inconsolata', sans-serif;}figcaption {text-align: center;margin: 0.625rem auto 1.25rem;}figcaption, img {display: block;margin-left: auto;margin-right: auto;max-width: 100%;}.footpara {display: inline;}.footdef {margin-bottom: 1rem;}.footref, .footnum {font-size: 130%;}.timestamp {color: #005500;}table {max-width: 100%;margin: 0.9375rem auto;border-top: solid black 0.0625rem;border-bottom: solid black 0.0625rem;border-collapse: collapse;}.noborders {border: none;}th, td {vertical-align: center;padding: 0.375rem;}th {border-bottom: solid black 0.0625rem;}th.org-left, th.org-center, th.org-right {text-align: center;}td.org-right {text-align: right;}td.org-left {text-align: left;}td.org-center {text-align: center;}hr {border: none;border-top: solid black 0.125rem;}h1 {max-width: 100%;margin: 0 auto;padding-top: 0.625rem;font-size: 2.0rem;}h2 {font-size: 1.6rem;border-top: solid black 0.125rem;margin: 1.25rem 0 0.625rem;padding-top: 0.9375rem;}h3 {font-size: 1.25rem;border-top: solid black 0.0625rem;margin: 0.625rem 0;padding-top: 0.9375rem;}h4, h5 {font-size: 1.15rem;font-weight: bold;margin: 0.625rem 0;padding-top: 0.5rem;}html {font-size: 16px;background-color: #808080;}body {font-family: Arial, Helvetica, sans-serif;line-height: 1;color: black;background-color: #F4F5F6;margin: 0 auto;padding: 3%;max-width: 47.25em;overflow-x: scroll;}header {width: 100%;float: left;padding-bottom: 0.3125rem;margin-bottom: 0.9375rem;text-align: center;border-top: solid black 0.125rem;border-bottom: solid black 0.125rem;}footer {width: 100%;float: left;padding: 1.25rem 0;text-align: center;font-size: 1.25rem;}@media (prefers-color-scheme: light) {html {background-color: #808080;}body {color: black;background-color: #F4F5F6;}}@media (prefers-color-scheme: dark) {html {background-color: #111111;}body {color: #F4F5F6;background-color: black;}a, #table-of-contents ul {color: #5294FF;text-decoration-color: #5294FF;}header, table, hr, h2, h3, #postamble {border-top-color: white;}header, table, th {border-bottom-color: white;}}
+/* Zero Contradictions Org-Mode Essays CSS (https://zerocontradictions.net/programming/style.css) © 2025 by Zero Contradictions is licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) */
+
+/*** reset ***/
+html, body, header, footer, div, span, h1, h2, h3, h4, h5, p, a, img, strong, ol, ul, li {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font-weight: inherit;
+	font-style: inherit;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary { display: block; }
+
+/*** Customizing Org-Mode HTML Output ***/
+#org-div-home-and-up {
+	font-size: 110%;
+	font-weight: bold;
+	height: 1.5em;
+	padding-top: 0.25em; /* Leave some space between top of text and top window border */
+	top: 0; /* Leave some space between top of text and top window border */
+
+	/* /\* Span entire page from left to right. *\/ */
+	/* max-width: 100%; */
+	/* width: 100%; */
+	/* left: 0; */
+
+	position: fixed; /* Keeps #org-div-home-and-up on screen, even after scrolling */
+	z-index: 1000;
+	display: flex;
+	justify-content: space-between; /* Distributes links evenly across width */
+	/* max-width: 47.25em; */ /* doesn't work as intended, since navigation bar passes right <body> border. */
+	max-width: 43em; /* This small max-width prevents the navigation bar from spanning left to right 100%, but this smaller width is necessary for symmetry. */
+	width: 94%; /* Ensures it takes full width of parent (<body>) */
+
+	background: #eee;
+	/* border: solid black 0.1rem; */
+	cursor: pointer;
+}
+
+#org-div-home-and-up a {
+	flex: 1; /* Makes each link take equal space */
+	text-align: center; /* Centers text inside each link */
+}
+
+#table-of-contents {
+	display: none;
+	/* display: block; /\* Remove this later! *\/ */
+	z-index: 999;
+	position: fixed;
+
+	top: 2em; /* Matches height of #org-div-home-and-up */
+	padding: 1em;
+	margin: auto;
+	max-width: 47.25em;
+
+	max-height: 50%;
+	overflow: auto;
+	background: #eee;
+	border: solid black 0.1rem;
+}
+
+#table-of-contents h2 {
+	border-top: 0;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+#table-of-contents ul {
+	margin-bottom: 0.3125rem;
+	list-style-type: none;
+	font-weight: 600;
+	text-decoration: underline;
+	color: #0051D4;
+	text-decoration-color: #0051D4;
+	text-decoration-thickness: 0.0625rem;
+}
+#table-of-contents ul li       { margin: 0 0 0.3125rem 0.625rem; }
+#table-of-contents ul li ul li { margin: 0 0 0.3125rem 1.250rem; }
+
+.title {
+	text-align: center;
+	margin-bottom: 0.2rem;
+}
+
+.subtitle {
+	text-align: center;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+#content {
+	max-width: 60rem;
+	margin: auto;
+}
+
+#postamble {
+	padding-top: 0.625rem;
+	margin-top: 0.625rem;
+	border-top: solid black 0.125rem;
+}
+p.author, p.date { text-align: center; }
+
+.org-left   {
+	margin-left: 0;
+	margin-right: auto;
+	text-align: left;
+}
+.org-right  {
+	margin-left: auto;
+	margin-right: 0;
+	text-align: right;
+}
+.org-center {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.underline { text-decoration: underline; }
+
+p {
+	line-height: 1.3rem;
+	text-align: left;
+	margin-bottom: 0.3125rem;
+}
+
+a {
+	line-height: 1.3rem;
+	color: #0051D4;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+	text-decoration-thickness: 0.125rem;
+}
+a:focus {
+	text-decoration: underline;
+	text-decoration-thickness: 0.1875rem;
+}
+
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup { top: -0.5rem; }
+
+sub { bottom: -0.25rem; }
+
+ul li, ol li {
+	margin: 0 0 0.3125rem 1.25rem;
+	line-height: 1.3rem;
+}
+
+.org-dl {
+	line-height: 1.3rem;
+	margin-bottom: 0.3125rem;
+}
+
+dt { font-weight: bold; }
+
+blockquote {
+	border-left: solid #AAAAFF 1.1875rem;
+	margin: 0.5rem 0 0.5rem 0;
+	padding: 0 0 0 1rem;
+	display: block;
+}
+
+.opponent {
+	border-left: solid #FFCFF1 1.1875rem;
+	margin: 0.5rem 0 0.5rem 0;
+	padding: 0 0 0 1rem;
+	display: block;
+}
+
+pre, code { font-family: 'Inconsolata', sans-serif; }
+
+figcaption {
+	text-align: center;
+	margin: 0.625rem auto 1.25rem;
+}
+
+figcaption, img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+}
+
+.footpara { display: inline; }
+
+.footdef { margin-bottom: 1rem; }
+
+.footref, .footnum { font-size: 130%; }
+
+.timestamp { color: #005500; }
+
+table {
+	max-width: 100%;
+	margin: 0.9375rem auto;
+	border-top: solid black 0.0625rem;
+	border-bottom: solid black 0.0625rem;
+	border-collapse: collapse;
+}
+
+.noborders { border: none; }
+
+th, td {
+	vertical-align: center;
+	padding: 0.375rem;
+}
+
+th { border-bottom: solid black 0.0625rem; }
+
+th.org-left, th.org-center, th.org-right { text-align: center; }
+td.org-right  { text-align: right;  }
+td.org-left   { text-align: left;   }
+td.org-center { text-align: center; }
+
+hr {
+	border: none;
+	border-top: solid black 0.125rem;
+}
+
+h1 {
+	max-width: 100%;
+	margin: 0 auto;
+	padding-top: 0.625rem;
+	font-size: 2.0rem;
+}
+
+h2 {
+	font-size: 1.6rem;
+	border-top: solid black 0.125rem;
+	margin: 1.25rem 0 0.625rem;
+	padding-top: 0.9375rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	border-top: solid black 0.0625rem;
+	margin: 0.625rem 0;
+	padding-top: 0.9375rem;
+}
+
+h4, h5 {
+	font-size: 1.15rem;
+	font-weight: bold;
+	margin: 0.625rem 0;
+	padding-top: 0.5rem;
+}
+
+/** main **/
+html {
+	font-size: 16px;
+	scroll-padding-top: 1.5em; /* Must matches height of #org-div-home-and-up */
+	background-color: #808080;
+} /* controls background color behind rectangular text body */
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1;
+	color: black; /* font color */
+	background-color: #F4F5F6; /* color behind text */
+	margin: 0 auto;
+	padding: 3%;
+	max-width: 47.25em;
+	overflow-x: scroll;
+}
+
+header {
+	width: 100%;
+	float: left;
+	padding-bottom: 0.3125rem;
+	margin-bottom: 0.9375rem;
+	text-align: center;
+	border-top: solid black 0.125rem;
+	border-bottom: solid black 0.125rem;
+}
+
+footer {
+	width: 100%;
+	float: left;
+	padding: 1.25rem 0;
+	text-align: center;
+	font-size: 1.25rem;
+}
+
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+	html { background-color: #808080; }
+	body {
+		color: black;
+		background-color: #F4F5F6;
+	}
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+	html { background-color: #111111; }
+	body {
+		color: #F4F5F6;
+		background-color: black;
+	}
+	a, #table-of-contents ul {
+		color: #5294FF;
+		text-decoration-color: #5294FF;
+	}
+	header, table, hr, h2, h3, #postamble { border-top-color: white; }
+	header, table, th { border-bottom-color: white; }
+}
+
+.dark-mode {background-color: black; color: white;}
+.dark-mode hr, .dark-mode h1, .dark-mode h2 {border-top-color: solid white;}

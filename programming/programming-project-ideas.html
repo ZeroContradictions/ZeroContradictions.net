@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2025 March 09, 06:02 -->
+<!-- 2025 March 11, 09:47 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>ZC's Programming Project Ideas</title>
 <meta name="author" content="Zero Contradictions" />
 <meta name="description" content="Zero Contradictions' List of Programming Project Ideas" />
 <meta name="generator" content="Org Mode" />
-<link rel="stylesheet" type="text/css" href="/style.css">
+<link rel="stylesheet" type="text/css" href="/style.css"><script src="/script.js"></script>
 </head>
 <body>
 <div id="org-div-home-and-up">
- <a accesskey="h" href="/directory"> UP </a>
+ <a accesskey="h" href="#">CONTENTS</a> | <a href="#content"> UP </a>
  |
- <a accesskey="H" href="/"> HOME </a>
+ <a accesskey="H" href="#" onclick="toggleLightDark()"">DARK</a> | <a href="/"> HOME </a>
 </div><div id="content" class="content">
 <header>
 <h1 class="title">ZC&rsquo;s Programming Project Ideas</h1>
@@ -35,7 +35,6 @@
 <li><a href="#emacs-simple-tasks">3.1. Relatively Simple Tasks</a></li>
 <li><a href="#emacs-intermediate-tasks">3.2. Intermediate Tasks</a></li>
 <li><a href="#emacs-advanced-tasks">3.3. Advanced Tasks</a></li>
-<li><a href="#dired">3.4. Changes That I Want To Make To Dired</a></li>
 </ul>
 </li>
 <li><a href="#things-to-report-or-program-in-xfce">4. Things To Report Or Program In Xfce</a></li>
@@ -87,12 +86,17 @@ If anybody would like to assist or work together with me on creating some of the
 <h3 id="simple-projects"><span class="section-number-3">2.1.</span> Relatively Simple Projects</h3>
 <div class="outline-text-3" id="text-simple-projects">
 <ol class="org-ol">
-<li>Write a program that automatically re-labels downloaded files to your filename specification standards (this should be straight-forward, as it only involves case-toggling and search-and-replace function calls); store the original filenames in a log file.
-<ul class="org-ul">
-<li>Write a program with similar functionality in Elisp. (See: <a href="#dired">Changes That I Want To Make To Dired</a>)</li>
-</ul></li>
-<li>Create an interactive population dynamics simulator to illustrate to readers how population dynamics work and accompany the <a href="../faqs/overpopulation#next-overpop-crisis">Overpopulation FAQs</a>. Try Javascript.</li>
-<li>A reddit bot would that searches comments for people who spell &lt;should&rsquo;ve&gt;, &lt;would&rsquo;ve&gt;, &lt;could&rsquo;ve&gt;, etc incorrectly and explains what the correct spelling and grammar is and why. Misspellings of &lt;shouldn&rsquo;t&rsquo;ve&gt;, &lt;wouldn&rsquo;t&rsquo;ve&gt;, &lt;couldn&rsquo;t&rsquo;ve&gt;, etc should also be corrected.</li>
+<li>Create a user-defined elisp command that can automatically format text to fit the requirements outlined in my standard text file formatting standards.</li>
+<li>Create a major Emacs mode to keep track of my own personal streaks for doing certain things everyday in a row?</li>
+<li>Create a minor emacs mode that makes it possible to insert emojis by typing in the Discord names of emojis, given a dictionary file that defines the emoji names for each emoji.</li>
+<li>Write elisp code to display a buffer containing all the emojis that a user could input.
+The user should be able to scroll and search the buffer to find the emoji that that they want to use.
+Clicking on any emoji with the mouse should do some action, like inserting the emoji into another buffer or showing information about the emoji.</li>
+<li>Create a Firefox web browser extension that only lets you view particular sites within a limited time window, once or twice a day during scheduled times.</li>
+<li>[In Progress] A reddit bot would that searches comments for people who spell &lt;should&rsquo;ve&gt;, &lt;would&rsquo;ve&gt;, &lt;could&rsquo;ve&gt;, etc incorrectly and explains what the correct spelling and grammar is and why.
+Misspellings of &lt;shouldn&rsquo;t&rsquo;ve&gt;, &lt;wouldn&rsquo;t&rsquo;ve&gt;, &lt;couldn&rsquo;t&rsquo;ve&gt;, etc should also be corrected.</li>
+<li>Create an interactive population dynamics simulator to illustrate to readers how population dynamics work and accompany the <a href="../faqs/overpopulation#next-overpop-crisis">Overpopulation FAQs</a>.
+Try Javascript.</li>
 </ol>
 </div>
 </div>
@@ -168,16 +172,23 @@ If anybody would like to assist or work together with me on creating some of the
 <h3 id="emacs-simple-tasks"><span class="section-number-3">3.1.</span> Relatively Simple Tasks</h3>
 <div class="outline-text-3" id="text-emacs-simple-tasks">
 <ol class="org-ol">
-<li>When I add a new footnote to the file, the footnote numbering of the org mode file should adjust.</li>
-<li>Make the insert state the default starting state for vim after creating a new file? If the file is new, there really isn&rsquo;t anything useful to use the normal state commands on since the file is empty.</li>
+<li>Create a new &ldquo;thoughts-storage&rdquo; file format, and create a major mode for it?
+Make it a minor-mode that can be toggled on or off when using org-mode?
+Define a file extension for it, like: &ldquo;.orgt&rdquo;.</li>
 <li>When new sections are added in org-mode, Emacs should automatically insert a blank newline between the sections to help separate things.
 <ul class="org-ul">
 <li>Perhaps there could even be an option to toggle this in case there are times where it is unfavorable to have a blank newline for separation.</li>
 <li>I don&rsquo;t know when this would be desired though. Maybe to keep information packed and dense, alignment of text, aesthetics, or something else?</li>
 </ul></li>
-<li>Create a new &ldquo;thoughts-storage&rdquo; file format, and create a major mode for it?
-Make it a minor-mode that can be toggled on or off when using org-mode?
-Define a file extension for it, like: &ldquo;.orgt&rdquo;.</li>
+<li>When I add a new footnote to the file, the footnote numbering of the org mode file should adjust.</li>
+<li>Make the insert state the default starting state for vim after creating a new file? If the file is new, there really isn&rsquo;t anything useful to use the normal state commands on since the file is empty.</li>
+<li>Is it possible for org-mode to export minified output for HTML, LaTeX and other exports?
+If not, perhaps I could program it myself?</li>
+<li>Remap the navigation keybindings in info mode so that they are exactly the same as dired-mode? This will generate less confusion.</li>
+<li>When I rename file to a similar but different name, how do I stop dired from preventing me from renaming the file since it thinks I am giving it the same name?
+<ul class="org-ul">
+<li>In the suggestions, the old name appears, so when I press enter, dired thinks I am selecting the suggestion, when that&rsquo;s not what I want.</li>
+</ul></li>
 </ol>
 </div>
 </div>
@@ -196,23 +207,20 @@ Define a file extension for it, like: &ldquo;.orgt&rdquo;.</li>
 In other words, every section header will have a URL fragment link that shows that part of the page specifically.
 This would be similar to the functionality that is offered for Gwern&rsquo;s website.
 There could be an option to toggle whether users want this functionality or not shown in their org-mode HTML exports.</li>
-
+<li>Create a command that can automatically update all the hyperlinking between org-mode files, when you want to change the name, location, and/or URL of a webpage. It&rsquo;d also be convenient if it would re-compile all the org-mode files that were changed as well, for the directories that are publicly displayed on the Internet.</li>
+<li>It would be convenient if org-mode had a function for converting between header subsections, (short) quote blocks, and the format that has both text and a newline.</li>
 <li>It would be convenient if there was somehow even greater compatibility between PageUp and PageDown buttons in the mouse layer of the ZSA Moonlander and Ctrl+b and Ctrl+f commands for moving back and forward within Emacs buffers.
 <ul class="org-ul">
 <li>For example, I wish that it was still possible to move forward and backwards pages in Firefox using Ctrl+b and Ctrl+f. The main benefit to this is that page navigation would be improved having to switch between the base layer and the mouse layer before and after pressing PageUp and PageDown. Of course, I could also program PageUp and PageDown into the keyboard if I hold a key down or double-tap, but I would dislike the added complexity that this alternative would involve.</li>
 </ul></li>
-<li>Create a major Emacs mode to keep track of my own personal streaks for doing certain things everyday in a row?</li>
-<li>The hybrid relative and absolute numbering should be modified. Since the main motivation and advantage for relative line numbering is to make vertical motion more efficient, there are no advantages for using it for the very top and very bottom line numbers of the screen, since &rsquo;H&rsquo; and &rsquo;L&rsquo; would both be used to navigate to those areas respectively, not numbered motion. In other words, three lines would be displaying absolute line numbers (or just two if the cursor is at the very top or very bottom line of the screen), and all other lines would display relative line numbers.
-<ul class="org-ul">
-<li>That said, absolute numbering should thus be used for the current line, as well as the top line on the screen and the bottom line on the screen.</li>
-<li>This would require being able to edit C code: <a href="https://github.com/emacs-mirror/emacs/blob/master/src/xdisp.c">https://github.com/emacs-mirror/emacs/blob/master/src/xdisp.c</a></li>
-</ul></li>
-<li>The line numbering in org-mode should account for when the collapse of &ldquo;:PROPERTIES:&rdquo;, &ldquo;:CUSTOM_ID:&rdquo;, and &ldquo;:END:&rdquo; affect the displayed line numbering.</li>
-<li>Create a function that can toggle whether the line numbering displayed in the left numbering column shows what lines the headers are on in the buffer, or what relative line numbers would have to be entered to navigate to those parts of the buffer, if all the sections, functions, etc remain collapsed.
-<ul class="org-ul">
-<li>Maybe I want a command that will only toggle between absolute and relative numbers, instead of doom/toggle-line-numbers, which toggles between relative, absolute, and no line numbers.</li>
-</ul></li>
 <li>Create commands that scroll by the number of visual lines given in the prefix arguments, instead of scrolling by logical lines. This would may scrolling files much easier when long lines are wrapped around the window edge, because then one could just look at the number line and know exactly how many lines to scroll up or down without even thinking about it.</li>
+</ol>
+
+<p>
+Test These Commands:
+</p>
+<ol class="org-ol">
+<li>I wish it was possible to flush-lines in rgrep and multi-occur buffers, but every time I try this, Emacs always returns &ldquo;file is read-only&rdquo;, although it doesn&rsquo;t do that for other editing commands.</li>
 </ol>
 </div>
 </div>
@@ -233,30 +241,6 @@ I imagine thousands of other people would find such a program useful since it co
 <li>Or maybe there&rsquo;s already packages that do this, that I don&rsquo;t know about?</li>
 </ul></li>
 <li>Create a fully functional Emacspeak module for Doom-Emacs.</li>
-</ol>
-
-
-<p>
-Test These Commands:
-</p>
-<ol class="org-ol">
-<li>I wish it was possible to flush-lines in rgrep and multi-occur buffers, but every time I try this, Emacs always returns &ldquo;file is read-only&rdquo;, although it doesn&rsquo;t do that for other editing commands.</li>
-</ol>
-</div>
-</div>
-
-<div id="outline-container-dired" class="outline-3">
-<h3 id="dired"><span class="section-number-3">3.4.</span> Changes That I Want To Make To Dired</h3>
-<div class="outline-text-3" id="text-dired">
-<ol class="org-ol">
-<li>Maybe I could create a user-defined function and command that can automatically format text to fit the requirements outlined in my standard text file formatting standards. (See: <a href="#personal-programming-project-ideas">Relatively Simple Programming Project Ideas</a>)</li>
-<li>In dired, I wish &rsquo;gg&rsquo; and &rsquo;G&rsquo; would go to the top and bottom of every the directory files list, just as they do when editing text files. This might be resolved with evil-collection.</li>
-<li>Learn how to create symbolic links and hard links in dired.</li>
-<li>Remap the navigation keybindings in info mode so that they are exactly the same as dired-mode? This will generate less confusion.</li>
-<li>When I rename file to a similar but different name, how do I stop dired from preventing me from renaming the file since it thinks I am giving it the same name?
-<ul class="org-ul">
-<li>In the suggestions, the old name appears, so when I press enter, dired thinks I am selecting the suggestion, when that&rsquo;s not what I want.</li>
-</ul></li>
 </ol>
 </div>
 </div>
@@ -315,7 +299,7 @@ It&rsquo;s already improved a lot since I first tried it in 2014.
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2025 March 09, 06:02</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2025 March 11, 09:47</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>
