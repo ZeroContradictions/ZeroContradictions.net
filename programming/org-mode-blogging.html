@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2025 March 11, 09:47 -->
+<!-- 2025 March 11, 19:35 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>How to Design a Blog with Emacs and Org-Mode</title>
@@ -16,9 +16,9 @@
 </head>
 <body>
 <div id="org-div-home-and-up">
- <a accesskey="h" href="#">CONTENTS</a> | <a href="#content"> UP </a>
+ <a accesskey="h" href="#" id="TOC-link">CONTENTS</a> | <a id="top-link" href="#content"> UP </a>
  |
- <a accesskey="H" href="#" onclick="toggleLightDark()"">DARK</a> | <a href="/"> HOME </a>
+ <a accesskey="H" href="#" id="theme-link">DARK</a> | <a id="home-link" href="/"> HOME </a>
 </div><div id="content" class="content">
 <header>
 <h1 class="title">How to Design a Blog with Emacs and Org-Mode</h1>
@@ -277,8 +277,10 @@ The user can learn more about what each variable does by pressing <code>SPC h v<
 (setq org-html-head-include-scripts nil)
 (setq org-html-head-include-default-style nil)
 (setq org-html-head-extra "&lt;link rel=\"stylesheet\" type=\"text/css\" href=\"/style.css\"&gt;")
-(setq org-html-link-home "/")
-(setq org-html-link-up "/")
+
+;; Four-Button Navigation Bar: TOC, Top (UP), Dark/Light Mode, Home
+(setq org-html-link-up "#\" id=\"TOC-link\"&gt;CONTENTS&lt;/a&gt; | &lt;a id=\"top-link\" href=\"#content")
+(setq org-html-link-home "#\" id=\"theme-link\"&gt;DARK&lt;/a&gt; | &lt;a id=\"home-link\" href=\"/")
 
 (setq org-export-with-author t)
 (setq org-export-with-email nil)
@@ -300,12 +302,12 @@ The following is the entirety of the org-mode keywords and values that I include
 #+author: The Author Name
 #+description: The webpage description (up to 160 characters long).
 #+html_head: &lt;script src="/script.js"&gt;&lt;/script&gt;
-#+html_head: [Javascript code for adding Google Analytics to the webpage]
 #+html_head: &lt;meta property="og:url" content="[the canonical URL link for this article]"&gt;
 #+html_head: &lt;meta property="og:type" content="article"&gt;
 #+html_head: &lt;meta property="og:image" content="[Link to image file]"&gt;
 #+options: ^:nil
 </pre>
+
 <p>
 Org-mode provides two different variables for adding code to the &lt;head&gt; section of HTML files, <code>org-html-head</code> and <code>org-html-head-extra</code>.
 They&rsquo;re also written as <code>#+html-head</code> and <code>#+html-head-extra</code>, when used as local file variables written at the beginning of org files.
@@ -322,11 +324,11 @@ Meanwhile, my local file org variables add the following HTML &lt;head&gt; code 
 </p>
 <pre class="example">
 #+html_head: &lt;script src="/script.js"&gt;&lt;/script&gt;
-#+html_head: [Javascript code for adding Google Analytics to the webpage]
 #+html_head: &lt;meta property="og:url" content="[the canonical URL link for this article]"&gt;
 #+html_head: &lt;meta property="og:type" content="article"&gt;
 #+html_head: &lt;meta property="og:image" content="[Link to image file]"&gt;
 </pre>
+
 <p>
 These settings ensure that all the content that I want to be added to HTML &lt;head&gt; will get included.
 </p>
@@ -829,7 +831,7 @@ I haven&rsquo;t figured out how to control the formatting and syntax highlightin
 </div>
 </div></div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2025 March 11, 09:47</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2025 March 11, 19:35</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>

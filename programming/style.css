@@ -1,4 +1,4 @@
-/* Zero Contradictions Org-Mode Essays CSS (https://zerocontradictions.net/style.css) © 2024 by Zero Contradictions is licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) */
+/* Zero Contradictions Org-Mode Essays CSS (https://zerocontradictions.net/programming/style.css) © 2025 by Zero Contradictions is licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) */
 
 /*** reset ***/
 html, body, header, footer, div, span, h1, h2, h3, h4, h5, p, a, img, strong, ol, ul, li {
@@ -19,8 +19,54 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 #org-div-home-and-up {
 	font-size: 110%;
 	font-weight: bold;
-	text-align: right;
-	white-space: nowrap;
+	height: 1.5em;
+	padding-top: 0.25em; /* Leave some space between top of text and top window border */
+	top: 0; /* Leave some space between top of text and top window border */
+
+	/* /\* Span entire page from left to right. *\/ */
+	/* max-width: 100%; */
+	/* width: 100%; */
+	/* left: 0; */
+
+	position: fixed; /* Keeps #org-div-home-and-up on screen, even after scrolling */
+	z-index: 1000;
+	display: flex;
+	justify-content: space-between; /* Distributes links evenly across width */
+	/* max-width: 47.25em; */ /* doesn't work as intended, since navigation bar passes right <body> border. */
+	max-width: 43em; /* This small max-width prevents the navigation bar from spanning left to right 100%, but this smaller width is necessary for symmetry. */
+	width: 94%; /* Ensures it takes full width of parent (<body>) */
+
+	background: #eee;
+	/* border: solid black 0.1rem; */
+	cursor: pointer;
+}
+
+#org-div-home-and-up a {
+	flex: 1; /* Makes each link take equal space */
+	text-align: center; /* Centers text inside each link */
+}
+
+#table-of-contents {
+	display: none; /* Hide TOC */
+	/* display: block; /\* Show TOC *\/ */
+	z-index: 999;
+	position: fixed;
+
+	top: 2em; /* Match height of #org-div-home-and-up */
+	padding: 1em;
+	margin: auto;
+	max-width: 47.25em;
+
+	max-height: 90%; /* 94% is maximum that can be shown, due to navigation bar and horizontal scroll bar. */
+	overflow: auto;
+	background: #eee;
+	border: solid black 0.1rem;
+}
+
+#table-of-contents h2 {
+	border-top: 0;
+	margin-top: 0;
+	padding-top: 0;
 }
 
 #table-of-contents ul {
@@ -34,8 +80,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 }
 #table-of-contents ul li       { margin: 0 0 0.3125rem 0.625rem; }
 #table-of-contents ul li ul li { margin: 0 0 0.3125rem 1.250rem; }
-@media screen and (max-width: 50.085em) { #table-of-contents ul li { margin: 0 0 0.3125rem 0; } }
-/* Don't indent TOC when screen width is shorter than max-width of <body> and 3% padding (currently 50.085em) */
 
 .title {
 	text-align: center;
@@ -214,6 +258,8 @@ h4, h5 {
 /** main **/
 html {
 	font-size: 16px;
+	/* scroll-padding-top: 1.5rem; /\* Must match height of #org-div-home-and-up *\/ */
+	scroll-padding-top: 2.0rem; /* This is minimum scroll padding for showing top borders after clicking TOC links. */
 	background-color: #808080;
 } /* controls background color behind rectangular text body */
 
@@ -246,26 +292,47 @@ footer {
 	font-size: 1.25rem;
 }
 
-/* Light Mode */
-@media (prefers-color-scheme: light) {
-	html { background-color: #808080; }
-	body {
-		color: black;
-		background-color: #F4F5F6;
-	}
+
+.light-mode {
+	background-color: #808080;
+	color: black;
 }
 
-/* Dark Mode */
-@media (prefers-color-scheme: dark) {
-	html { background-color: #111111; }
-	body {
-		color: #F4F5F6;
-		background-color: black;
-	}
-	a, #table-of-contents ul {
-		color: #5294FF;
-		text-decoration-color: #5294FF;
-	}
-	header, table, hr, h2, h3, #postamble { border-top-color: white; }
-	header, table, th { border-bottom-color: white; }
+.light-mode body {
+	background-color: #F4F5F6;
+}
+
+.light-mode a {
+	color: blue;
+	text-decoration-color: blue;
+}
+
+
+.dark-mode {
+	background-color: #111111;
+	color: white;
+}
+
+.dark-mode body {
+	background-color: black;
+	color: #F4F5F6;
+}
+
+.dark-mode #org-div-home-and-up, .dark-mode #table-of-contents {
+	background-color: #222222;
+	color: #F4F5F6;
+}
+
+.dark-mode a, .dark-mode #table-of-contents ul {
+	color: #5294FF;
+	text-decoration-color: #5294FF;
+}
+
+.dark-mode header, .dark-mode table, .dark-mode hr,
+.dark-mode h2, .dark-mode h3, .dark-mode #postamble {
+	border-top-color: white;
+}
+
+.dark-mode header, .dark-mode table, .dark-mode th {
+	border-bottom-color: white;
 }

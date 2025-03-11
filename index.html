@@ -65,7 +65,7 @@
 
 <body>
 <header>
-	<h1>Zero Contradictions Philosophy Home Page</h1>
+	<h1 id="top">Zero Contradictions Philosophy Home Page</h1>
 	<p><img src="images/ZC-emblem.svg" alt="Zero Contradictions Emblem">
 		Hello and welcome to my philosophy website.
 		My name is Zero Contradictions, and this place is a hybrid between a blog for my own writings <span style="color:#EE0534">(highlighted in red)</span> and a compendium of external links to works by different authors that have influenced my own philosophy and/or are worth reading <span style="color:#015EF4">(highlighted in blue)</span> as well as links to videos, channels, or audio recordings <span style="color:#009C00">(highlighted in green)</span>.
@@ -76,12 +76,6 @@
 			.dark-mode {background-color: black; color: white;}
 			.dark-mode hr, .dark-mode h1, .dark-mode h2 {border-top-color: solid white;}
 		</style>
-		<script>
-			function toggleLightDark() {
-				var element = document.body;
-				element.classList.toggle("dark-mode");
-			}
-		</script>
 		<br>
 		<a class="ZC-essays" href="directory">The directory page</a> only displays essays that I wrote myself, hence why it has almost no blue or green links.
 		Everything on this website is under copyright, unless specified otherwise.
@@ -90,6 +84,11 @@
 		As per its name, the goal of this website is to create the most rational philosophy ever with Zero Contradictions, or to at least do my best at that.
 		In a single sentence, my philosophy is based on rationalism and understanding the implications of the subject-object dichotomy and applied evolutionary theory, among other things.
 		<script>
+			function toggleLightDark() {
+				var element = document.body;
+				element.classList.toggle("dark-mode");
+			}
+
 			const d = new Date(document.lastModified);
 			const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 			document.write(`Last Updated: ${d.getFullYear()} ${months[d.getMonth()]} ${String(d.getDate())}`);
@@ -115,6 +114,7 @@
 				<li class="topic-category"><a href="#programming">Programming</a></li>
 		</ul></nav><br>
 		<form role="search" id="form" action="https://www.duckduckgo.com" method="get" target="_blank">
+			<a href="#top" class="hlink" id="back-to-top" style="font-weight: 600; text-decoration: underline;">Back to Top</a>
 			<input id="query" type="search" name="q" placeholder="Search this website with DuckDuckGo..." size="70" style="max-width: 90%" aria-label="Search through site content">
 			<input type="submit" value="Search">
 		</form>
