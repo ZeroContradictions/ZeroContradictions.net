@@ -59,8 +59,19 @@
 		/* Display as single column for short screen widths */
 
 		@media (prefers-color-scheme: light) {body {color: black; background-color: #F4F5F6;} }
-		@media (prefers-color-scheme: dark) {header {border-bottom-color: white;} body {color: white; background-color: black;} a.hlink {color: white} hr, h1, h2, h3 {border-top-color: white;} }
+		@media (prefers-color-scheme: dark) {header {border-bottom-color: white;} body {color: white; background-color: black;} a.hlink {color: white} hr, h1, h2, h3 {border-top: solid white;} }
+
+		.dark-mode {background-color: black; color: white;}
+		.dark-mode hr, .dark-mode h1, .dark-mode h2, .dark-mode h3 {border-top: solid white;}
+		.dark-mode a.hlink {color: white}
+		.dark-mode .noline {border: none}
 	</style>
+	<script>
+		function toggleLightDark() {
+			var element = document.body;
+			element.classList.toggle("dark-mode");
+		}
+	</script>
 </head>
 
 <body>
@@ -72,10 +83,6 @@
 		If you click one of the links in the navigation bar, then the page will scroll down to that section (which will be in one of the three columns for displays that are at least 800 pixels wide).
 		Whether this site displays in light or dark mode depends on your web browser preferences.
 		<button onclick="toggleLightDark()">Toggle Light/Dark Mode</button>
-		<style>
-			.dark-mode {background-color: black; color: white;}
-			.dark-mode hr, .dark-mode h1, .dark-mode h2 {border-top-color: solid white;}
-		</style>
 		<br>
 		<a class="ZC-essays" href="directory">The directory page</a> only displays essays that I wrote myself, hence why it has almost no blue or green links.
 		Everything on this website is under copyright, unless specified otherwise.
@@ -84,11 +91,6 @@
 		As per its name, the goal of this website is to create the most rational philosophy ever with Zero Contradictions, or to at least do my best at that.
 		In a single sentence, my philosophy is based on rationalism and understanding the implications of the subject-object dichotomy and applied evolutionary theory, among other things.
 		<script>
-			function toggleLightDark() {
-				var element = document.body;
-				element.classList.toggle("dark-mode");
-			}
-
 			const d = new Date(document.lastModified);
 			const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 			document.write(`Last Updated: ${d.getFullYear()} ${months[d.getMonth()]} ${String(d.getDate())}`);
