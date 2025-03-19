@@ -71,13 +71,13 @@
 		#left-column, #middle-column, #right-column {float: left; margin: 0; width: 33.33%;}
 
 		/* Display as single column for short screen widths */
-		@media screen and (max-width: 800px) {#left-column, #middle-column, #right-column {width: 100%;} }
+		@media screen and (max-width: 50em) {#left-column, #middle-column, #right-column {width: 100%;} }
 
-		#form {transition: all 0.3s ease-in-out;}
+		/* #form {transition: all 0.3s ease-in-out;} */
 		#form.sticky {
 			position: fixed;
 			top: 0;
-			left: 0;
+			right: 0;
 			width: 100%;
 			background-color: #eee;
 			padding: 0.5em;
@@ -85,7 +85,7 @@
 			display: flex;
 			justify-content: center;
 			transform: none;
-			transition: top 0.3s ease-in-out;
+			/* transition: top 0.3s ease-in-out; */
 		}
 
 		/* Display in light or dark mode depends on the user's web browser preferences. */
@@ -147,7 +147,7 @@
 		<form role="search" id="form" action="https://www.duckduckgo.com" method="get" target="_blank">
 			<a href="#top" class="hlink" id="back-to-top" style="font-weight: 600; text-decoration: underline; padding-right: 0.25rem;">Back to Top</a>
 			<a class="hlink" id="theme-link" style="font-weight: 600; text-decoration: underline; padding-right: 0.25rem;">Dark Mode</a>
-			<input id="query" type="search" name="q" placeholder="Search this website with DuckDuckGo..." size="70" style="max-width: 90%" aria-label="Search through site content">
+			<input id="query" type="search" name="q" placeholder="Search this website with DuckDuckGo..." size="70" style="max-width: 65%" aria-label="Search through site content">
 			<input type="submit" value="Search">
 		</form>
 		<script>
