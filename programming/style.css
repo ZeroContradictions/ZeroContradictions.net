@@ -19,7 +19,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 #org-div-home-and-up {
 	font-size: 110%;
 	font-weight: bold;
-	height: 1.5rem;
+	height: 2.0rem;
 	padding-top: 0.25rem; /* Leave some space between top of text and top window border */
 	top: 0; /* Leave some space between top of text and top window border */
 
@@ -57,7 +57,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 	z-index: 999;
 	position: fixed;
 
-	top: 1.8em; /* Match height of #org-div-home-and-up plus border of floating-toc */
+	top: 2.3em; /* Match height of #org-div-home-and-up plus border of floating-toc */
 	padding: 1em;
 	margin: auto;
 	max-width: 47.25em;
@@ -185,6 +185,11 @@ blockquote {
 
 pre, code { font-family: 'Inconsolata', sans-serif; }
 
+figure {
+	margin: 0;
+	padding: 0;
+}
+
 figcaption {
 	text-align: center;
 	margin: 0.625rem auto 1.25rem;
@@ -263,8 +268,7 @@ h4, h5 {
 /** main **/
 html {
 	font-size: 16px;
-	/* scroll-padding-top: 1.5rem; /\* Must match height of #org-div-home-and-up *\/ */
-	scroll-padding-top: 2.0rem; /* This is minimum scroll padding for showing top borders after clicking TOC links. */
+	scroll-padding-top: 1.5rem; /* This is minimum scroll padding for showing top borders after clicking TOC links, iff #org-div-home-and-up is displayed. Must match or exceed height of #org-div-home-and-up */
 	background-color: #808080;
 } /* controls background color behind rectangular text body */
 

@@ -324,68 +324,107 @@ document.addEventListener("DOMContentLoaded", function () {
 		let lastX = 0;
 		let lastY = 0;
 
-		// Find all images on the page
-		function collectImages() {
-			images = Array.from(document.querySelectorAll('img:not(.overlay-img)'));
+	// Find all images on the page
+	function collectImages() {
+		images = Array.from(document.querySelectorAll('img:not(.overlay-img)'));
 
-			// Add events to each image
-			images.forEach((img, index) => {
-				if (!img.dataset.galleryInitialized) {
-					// Create wrapper to contain the image and the tooltip
-					const wrapper = document.createElement('div');
-					wrapper.className = 'gallery-img-wrapper';
-					wrapper.style.cssText = `
-		  position: relative;
-		  display: inline-block;
-		  overflow: visible;
-		`;
+		// Add events to each image
+		images.forEach((img, index) => {
+			if (!img.dataset.galleryInitialized) {
+				// Get computed styles of the original image
+				const computedStyle = window.getComputedStyle(img);
+				const displayStyle = computedStyle.display;
+				const marginLeft = computedStyle.marginLeft;
+				const marginRight = computedStyle.marginRight;
+				const textAlign = window.getComputedStyle(img.parentNode).textAlign;
 
-					// Create tooltip
-					const tooltip = document.createElement('div');
-					tooltip.className = 'gallery-tooltip';
-					tooltip.textContent = 'Click to enlarge';
-					tooltip.style.cssText = `
-		  position: absolute;
-		  bottom: 10px;
-		  left: 50%;
-		  transform: translateX(-50%);
-		  background-color: rgba(0, 0, 0, 0.7);
-		  color: white;
-		  padding: 5px 10px;
-		  border-radius: 3px;
-		  font-size: 12px;
-		  opacity: 0;
-		  transition: opacity 0.3s ease;
-		  pointer-events: none;
-		  z-index: 10;
-		`;
+				// Create wrapper to contain the image and the tooltip
+				const wrapper = document.createElement('div');
+				wrapper.className = 'gallery-img-wrapper';
 
-					// Replace image with wrapper
-					const parent = img.parentNode;
-					parent.replaceChild(wrapper, img);
-					wrapper.appendChild(img);
-					wrapper.appendChild(tooltip);
+				// Apply styles that preserve alignment
+				wrapper.style.cssText = `
+		position: relative;
+		display: ${displayStyle === 'inline' ? 'inline-block' : displayStyle};
+		overflow: visible;
+		${marginLeft === marginRight && marginLeft !== '0px' ? `margin-left: ${marginLeft}; margin-right: ${marginRight};` : ''}
+		${textAlign === 'center' ? 'text-align: center;' : ''}
+		vertical-align: middle;
+		width: ${img.style.width || 'auto'};
+	  `;
 
-					// Add hover effects
-					wrapper.addEventListener('mouseenter', function() {
-						tooltip.style.opacity = '1';
-						img.classList.add('zoom-cursor');
-					});
-
-					wrapper.addEventListener('mouseleave', function() {
-						tooltip.style.opacity = '0';
-						img.classList.remove('zoom-cursor');
-					});
-
-					// Add click event
-					wrapper.addEventListener('click', function() {
-						openOverlay(index);
-					});
-
-					img.dataset.galleryInitialized = 'true';
+				// Handle center alignment cases
+				if (marginLeft === 'auto' && marginRight === 'auto') {
+					wrapper.style.marginLeft = 'auto';
+					wrapper.style.marginRight = 'auto';
+					wrapper.style.display = 'block';
 				}
-			});
-		}
+
+				// Create tooltip
+				const tooltip = document.createElement('div');
+				tooltip.className = 'gallery-tooltip';
+				tooltip.textContent = 'Click to enlarge';
+				tooltip.style.cssText = `
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: rgba(0, 0, 0, 0.7);
+		color: white;
+		padding: 5px 10px;
+		border-radius: 3px;
+		font-size: 12px;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+		pointer-events: none;
+		z-index: 10;
+	  `;
+
+				// Clone the original image to preserve all attributes and properties
+				const imgClone = img.cloneNode(true);
+
+				// Copy any inline styles from the original image
+				if (img.getAttribute('style')) {
+					// Remove any position styles that might conflict with our gallery
+					const inlineStyles = img.getAttribute('style')
+						  .split(';')
+						  .filter(style => !style.trim().startsWith('position:'))
+						  .join(';');
+					imgClone.setAttribute('style', inlineStyles);
+				}
+
+				// Preserve class names for any CSS styling
+				imgClone.className = img.className;
+
+				// Replace image with wrapper and use the clone
+				const parent = img.parentNode;
+				parent.replaceChild(wrapper, img);
+				wrapper.appendChild(imgClone);
+				wrapper.appendChild(tooltip);
+
+				// Update the images array to reference the new cloned image
+				images[index] = imgClone;
+
+				// Add hover effects
+				wrapper.addEventListener('mouseenter', function() {
+					tooltip.style.opacity = '1';
+					imgClone.classList.add('zoom-cursor');
+				});
+
+				wrapper.addEventListener('mouseleave', function() {
+					tooltip.style.opacity = '0';
+					imgClone.classList.remove('zoom-cursor');
+				});
+
+				// Add click event
+				wrapper.addEventListener('click', function() {
+					openOverlay(index);
+				});
+
+				imgClone.dataset.galleryInitialized = 'true';
+			}
+		});
+	}
 
 		// Get caption for an image
 		function getImageCaption(imgElement) {
