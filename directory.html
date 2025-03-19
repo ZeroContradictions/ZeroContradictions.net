@@ -47,7 +47,7 @@
 		li.topic-category:hover {background-color: #5D7DC0;}
 
 		/** sections **/
-		html {font-size: 16px;}
+		html {font-size: 16px; scroll-padding-top: 3rem;}
 		body {font-size: 85%; font-family: Arial, Helvetica, sans-serif; line-height: 1;}
 		header {width: 100%; float: left; padding: 0; text-align: center;}
 		header p {max-width: 62.5rem; width: 95%; margin: 0 auto 0.625rem; padding: 0.938rem 0 0.625rem; line-height: 1.2rem; font-size: 1rem; text-align: left;}
@@ -57,20 +57,35 @@
 		@media screen and (max-width: 50em) {#left-column, #middle-column, #right-column {width: 100%;} }
 		/* Display as single column for short screen widths */
 
-		@media (prefers-color-scheme: light) {body {color: black; background-color: #F4F5F6;} }
-		@media (prefers-color-scheme: dark) {header {border-bottom-color: white;} body {color: white; background-color: black;} a.hlink {color: white} hr, h1, h2, h3 {border-top: solid white;} }
+		@media (prefers-color-scheme: light) {body {background-color: #F4F5F6; color: black;} }
+		@media (prefers-color-scheme: dark) {header {border-bottom-color: white;} body {background-color: black; color: white;} a.hlink {color: white} hr, h1, h2, h3 {border-top: solid white;} }
 
-		.dark-mode {background-color: black; color: white;}
+		.light-mode body {background-color: #F4F5F6; color: black;}
+		.light-mode hr, .dark-mode h1, .dark-mode h2, .dark-mode h3 {border-top: solid black;}
+		.light-mode a.hlink {color: black;}
+		.light-mode #form.sticky {background: #eee; color: black;}
+
+		.dark-mode body {background-color: black; color: white;}
 		.dark-mode hr, .dark-mode h1, .dark-mode h2, .dark-mode h3 {border-top: solid white;}
 		.dark-mode a.hlink {color: white}
 		.dark-mode .noline {border: none}
-	</style>
-	<script>
-		function toggleLightDark() {
-			var element = document.body;
-			element.classList.toggle("dark-mode");
+		.dark-mode #form.sticky {background-color: #222222; color: white;}
+
+		#form {transition: all 0.3s ease-in-out;}
+		#form.sticky {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background-color: #eee;
+			padding: 0.5em;
+			box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1);
+			display: flex;
+			justify-content: center;
+			transform: none;
+			transition: top 0.3s ease-in-out;
 		}
-	</script>
+	</style>
 </head>
 
 <body>
@@ -81,8 +96,6 @@
 		Hello and welcome to my philosophy website.
 		My name is Zero Contradictions, and this place is a hybrid between a blog for my own writings <span style="color:#EE0534">(highlighted in red)</span> and a compendium of external links to works by different authors that have influenced my own philosophy and/or are worth reading <span style="color:#015EF4">(highlighted in blue)</span> as well as links to videos, channels, or audio recordings <span style="color:#009C00">(highlighted in green)</span>.
 		If you click one of the links in the navigation bar, then the page will scroll down to that section (which will be in one of the three columns for displays that are at least 800 pixels wide).
-		Whether this site displays in light or dark mode depends on your web browser preferences.
-		<button onclick="toggleLightDark()">Toggle Light/Dark Mode</button>
 		<br>
 		Unlike <a class="ZC-essays" href="/">the homepage</a>, this directory page only lists my own essays and works, as well as a handful of other works that are hosted directly on this site.
 		The number of asterisks (***) inside each link (if any) indicates what I personally consider to be my most original or most important works. I'm more proud of those pages than others.
@@ -111,12 +124,14 @@
 		</nav>
 		<br>
 		<form role="search" id="form" action="https://www.duckduckgo.com" method="get" target="_blank">
-			<a href="#top" class="hlink underline" id="back-to-top" style="font-weight: 600; text-decoration: underline;">Back to Top</a>
+			<a href="#top" class="hlink" id="back-to-top" style="font-weight: 600; text-decoration: underline; padding-right: 0.25rem;">Back to Top</a>
+			<a class="hlink" id="theme-link" style="font-weight: 600; text-decoration: underline; padding-right: 0.25rem;">Dark Mode</a>
 			<input id="query" type="search" name="q" placeholder="Search this website with DuckDuckGo..." size="70" style="max-width: 90%" aria-label="Search through site content">
 			<input type="submit" value="Search">
 		</form>
 		<script>
 			let form = document.querySelector("#form");
+			var lastScrollY = window.scrollY;
 
 			form.addEventListener("submit", function(e) {
 				e.preventDefault();
@@ -125,6 +140,64 @@
 				query.value = "site:https://zerocontradictions.net " + query.value;
 				form.submit();
 				query.value = copy;
+			});
+
+			window.addEventListener("scroll", function () {
+				var currentScrollY = window.scrollY;
+
+				// Show search bar if user scrolls past navigation bar
+				if (window.scrollY > window.innerHeight / 3) {
+					form.classList.add("sticky");
+
+					// Hide search bar when scrolling up, show when scrolling down
+					if (currentScrollY < lastScrollY) {
+						form.style.top = "-3.125em";
+					} else {
+						form.style.top = "0";
+					}
+				} else {
+					form.classList.remove("sticky");
+				}
+
+				lastScrollY = currentScrollY;
+			});
+
+			const themeButton = document.getElementById("theme-link");
+			const htmlElement = document.documentElement;
+			let currentMode = localStorage.getItem("theme") || "auto";
+
+			function applyTheme(mode) {
+				htmlElement.classList.remove("light-mode", "dark-mode");
+
+				if (mode === "dark") {
+					htmlElement.classList.add("dark-mode");
+					themeButton.textContent = "Light Mode";
+					localStorage.setItem("theme", "dark");
+				} else if (mode === "light") {
+					htmlElement.classList.add("light-mode");
+					themeButton.textContent = "Dark Mode";
+					localStorage.setItem("theme", "light");
+				} else {
+					themeButton.textContent = "Dark Mode"; // Default when following system preference
+					localStorage.removeItem("theme"); // Remove manual selection
+				}
+			}
+
+			themeButton.addEventListener("click", (e) => {
+				e.preventDefault(); // Prevents default link behavior
+				currentMode = currentMode === "dark" ? "light" : "dark";
+				applyTheme(currentMode);
+			});
+
+			// Apply saved mode or let the system decide
+			applyTheme(currentMode);
+
+			document.addEventListener("keydown", function (event) {
+				if (event.key.toLowerCase() === "d") {
+					// Toggle dark mode based on current state
+					currentMode = currentMode === "dark" ? "light" : "dark";
+					applyTheme(currentMode);
+				}
 			});
 		</script>
 	</div>
@@ -155,7 +228,7 @@
 	<li><a class="ZC-essays" href="faqs/glossary">Philosophical Terminology And Pragmatosphere Glossary</a></li>
 </ul>
 
-<h2 id="epistemology">Epistemology</h2>
+<h2 id="epistemology"><a class="hlink" href="#epistemology">Epistemology</a></h2>
 <ul>
 	<li><a class="ZC-essays" href="epistemology/academia-critique">A Rational Critique Of Academic Research ***</a>
 		<p>This sequel essay elaborates on the causes of fake academic research and other types of unproductive research: plagiarized, redundant, out-dated, and useless. My solutions for fixing academia are to require a minimum age, overhaul funding with a bounty system, and an improved social structure for organizing research, among other things.</p></li>
