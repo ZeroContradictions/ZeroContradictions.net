@@ -186,7 +186,7 @@ blockquote {
 pre, code { font-family: 'Inconsolata', sans-serif; }
 
 figure {
-	margin: 0;
+	margin: 1rem;
 	padding: 0;
 }
 
