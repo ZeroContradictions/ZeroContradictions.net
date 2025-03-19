@@ -19,8 +19,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 #org-div-home-and-up {
 	font-size: 110%;
 	font-weight: bold;
-	height: 1.5em;
-	padding-top: 0.25em; /* Leave some space between top of text and top window border */
+	height: 1.5rem;
+	padding-top: 0.25rem; /* Leave some space between top of text and top window border */
 	top: 0; /* Leave some space between top of text and top window border */
 
 	/* /\* Span entire page from left to right. *\/ */
@@ -33,12 +33,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 	display: flex;
 	justify-content: space-between; /* Distributes links evenly across width */
 	/* max-width: 47.25em; */ /* doesn't work as intended, since navigation bar passes right <body> border. */
-	max-width: 43em; /* This small max-width prevents the navigation bar from spanning left to right 100%, but this smaller width is necessary for symmetry. */
+	max-width: 43em; /* This small max-width prevents navigation bar from spanning left to right 100%, but this smaller width is necessary for symmetry. */
 	width: 94%; /* Ensures it takes full width of parent (<body>) */
 
 	background: #eee;
 	/* border: solid black 0.1rem; */
 	cursor: pointer;
+
+	transform: none;
 }
 
 #org-div-home-and-up a {
@@ -47,12 +49,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 }
 
 #table-of-contents {
+	display: block !important;
+}
+
+#floating-toc {
 	display: none; /* Hide TOC */
-	/* display: block; /\* Show TOC *\/ */
 	z-index: 999;
 	position: fixed;
 
-	top: 2em; /* Match height of #org-div-home-and-up */
+	top: 1.8em; /* Match height of #org-div-home-and-up plus border of floating-toc */
 	padding: 1em;
 	margin: auto;
 	max-width: 47.25em;
@@ -60,16 +65,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 	max-height: 90%; /* 94% is maximum that can be shown, due to navigation bar and horizontal scroll bar. */
 	overflow: auto;
 	background: #eee;
-	border: solid black 0.1rem;
+	border: solid black 0.1em;
 }
 
-#table-of-contents h2 {
+#table-of-contents h2, #floating-toc h2 {
 	border-top: 0;
 	margin-top: 0;
 	padding-top: 0;
 }
 
-#table-of-contents ul {
+#table-of-contents ul, #floating-toc ul {
 	margin-bottom: 0.3125rem;
 	list-style-type: none;
 	font-weight: 600;
@@ -318,12 +323,12 @@ footer {
 	color: #F4F5F6;
 }
 
-.dark-mode #org-div-home-and-up, .dark-mode #table-of-contents {
+.dark-mode #org-div-home-and-up, .dark-mode #floating-toc {
 	background-color: #222222;
 	color: #F4F5F6;
 }
 
-.dark-mode a, .dark-mode #table-of-contents ul {
+.dark-mode a, .dark-mode #floating-toc ul {
 	color: #5294FF;
 	text-decoration-color: #5294FF;
 }

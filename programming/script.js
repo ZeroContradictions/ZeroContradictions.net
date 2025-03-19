@@ -1,53 +1,62 @@
 /* Zero Contradictions Org-Mode Essays Javascript (https://zerocontradictions.net/programming/script.js) © 2025 by Zero Contradictions is licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) */
 
 document.addEventListener("DOMContentLoaded", function () {
-	var TOC = document.getElementById("table-of-contents");
-	var TOC_button = document.getElementById("TOC-link");
+	let topPanel = document.getElementById("org-div-home-and-up");
+	const originalTOC = document.getElementById("table-of-contents");
+	const TOC_button = document.getElementById("TOC-link");
+	let lastScrollY = window.scrollY;
 
+	// Clone originalTOC
+	if (originalTOC) {
+		var floatingTOC = originalTOC.cloneNode(true);
+		floatingTOC.id = "floating-toc";
+		floatingTOC.style.display = "none";
+
+		// Add floating TOC to body
+		document.body.appendChild(floatingTOC);
+	}
+
+	// Clicking "CONTENTS" button toggles showing or hiding floatingTOC.
+	TOC_button.addEventListener("click", function (event) {
+		event.preventDefault(); // Prevents default link behavior
+		floatingTOC.style.display = floatingTOC.style.display === "none" ? "block" : "none";
+	});
+
+	// Hide floatingTOC when clicking any link inside it
+	floatingTOC.addEventListener("click", function (event) {
+		if (event.target.tagName === "A") {
+			floatingTOC.style.display = "none";
+		}
+	});
+
+	// Hide floatingTOC when clicking outside of it (but not on navigation bar)
+	document.addEventListener("click", function (event) {
+		if (floatingTOC.style.display === "block" &&
+			!floatingTOC.contains(event.target) &&
+			event.target !== TOC_button) {
+			floatingTOC.style.display = "none";
+		}
+	});
+
+	window.addEventListener("scroll", function () {
+		const currentScrollY = window.scrollY;
+
+		if (currentScrollY > lastScrollY) {
+			// Hide topPanel when scrolling down
+			topPanel.style.top = "-10rem";
+			// floatingTOC.style.display = "none"; // Hide TOC
+		} else {
+			// Show topPanel when scrolling up
+			topPanel.style.top = "0";
+		}
+
+		lastScrollY = currentScrollY;
+	});
+
+	// Theme Toggle
 	const themeButton = document.getElementById("theme-link");
 	const htmlElement = document.documentElement;
 	let currentMode = localStorage.getItem("theme") || "auto";
-
-	// Clicking the "CONTENTS" button toggles showing or hiding TOC.
-	TOC_button.addEventListener("click", function (event) {
-		event.preventDefault(); // Prevents default link behavior
-
-		// Use computed style to check actual visibility
-		if (getComputedStyle(TOC).display === "none") {
-			TOC.style.display = "block";
-		} else {
-			TOC.style.display = "none";
-		}
-	});
-
-	// Hide TOC when clicking a link inside it
-	TOC.addEventListener("click", function (event) {
-		if (event.target.tagName === "A") {
-			TOC.style.display = "none";
-		}
-	});
-
-	// Hide TOC when clicking outside of it (but not on navigation bar)
-	document.addEventListener("click", function (event) {
-		if (TOC.style.display === "block" &&
-			!TOC.contains(event.target) &&
-			event.target !== TOC_button) {
-			TOC.style.display = "none";
-		}
-	});
-
-	document.addEventListener("keydown", function (event) {
-		if (event.key.toLowerCase() === "c") {
-			// Toggle TOC visibility
-			if (TOC) {
-				TOC.style.display = TOC.style.display === "none" || TOC.style.display === "" ? "block" : "none";
-			}
-		} else if (event.key.toLowerCase() === "d") {
-			// Toggle dark mode based on current state
-			currentMode = currentMode === "dark" ? "light" : "dark";
-			applyTheme(currentMode);
-		}
-	});
 
 	function applyTheme(mode) {
 		htmlElement.classList.remove("light-mode", "dark-mode");
@@ -72,6 +81,500 @@ document.addEventListener("DOMContentLoaded", function () {
 		applyTheme(currentMode);
 	});
 
-	// Apply saved mode or let the system decide
+	// Apply saved mode or let system decide
 	applyTheme(currentMode);
+
+	// Keyboard Shortcuts
+	document.addEventListener("keydown", function (event) {
+		if (event.key.toLowerCase() === "c") {
+			// Toggle floatingTOC visibility
+			if (floatingTOC) {
+				floatingTOC.style.display = floatingTOC.style.display === "none" ? "block" : "none";
+			}
+		} else if (event.key.toLowerCase() === "d") {
+			// Toggle dark mode based on current state
+			currentMode = currentMode === "dark" ? "light" : "dark";
+			applyTheme(currentMode);
+		}
+	});
+
+	// Image Gallery Viewer with Hover Effects
+	// Create overlay elements
+	const overlay = document.createElement('div');
+	overlay.className = 'image-overlay';
+	overlay.style.cssText = `
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6); /* Less dark background */
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	overflow: hidden;
+  `;
+
+		const imgContainer = document.createElement('div');
+		imgContainer.className = 'overlay-img-container';
+		imgContainer.style.cssText = `
+	position: relative;
+	max-width: 90%;
+	max-height: 90%;
+	overflow: visible;
+  `;
+
+		const overlayImg = document.createElement('img');
+		overlayImg.className = 'overlay-img';
+		overlayImg.style.cssText = `
+	max-width: 100%;
+	max-height: 80vh; /* Reduced to leave room for caption */
+	cursor: grab;
+	transition: transform 0.2s ease;
+  `;
+
+		// Image caption container
+		const captionContainer = document.createElement('div');
+		captionContainer.className = 'caption-container';
+		captionContainer.style.cssText = `
+	position: absolute;
+	top: 100%; // Display captions directly below images
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	color: white;
+	padding: 10px;
+	text-align: center;
+	font-size: 36px;
+  `;
+
+		// Image counter display
+		const imageCounter = document.createElement('div');
+		imageCounter.className = 'image-counter';
+		imageCounter.style.cssText = `
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	background-color: rgba(0, 0, 0, 0.6);
+	color: white;
+	padding: 5px 10px;
+	border-radius: 3px;
+	font-size: 36px;
+	z-index: 1010;
+  `;
+
+		// Close button
+		const closeButton = document.createElement('div');
+		closeButton.className = 'close-button';
+		closeButton.innerHTML = '&#10005;'; // X symbol
+		closeButton.style.cssText = `
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	background-color: rgba(0, 0, 0, 0.6);
+	color: white;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	font-size: 36px;
+	z-index: 1010;
+	transition: background-color 0.3s;
+  `;
+		closeButton.onmouseover = () => closeButton.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+		closeButton.onmouseout = () => closeButton.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+
+		// Help button
+		const helpButton = document.createElement('div');
+		helpButton.className = 'help-button';
+		helpButton.innerHTML = '?'; // Question mark
+		helpButton.style.cssText = `
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background-color: rgba(0, 0, 0, 0.6);
+	color: white;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	font-size: 36px;
+	z-index: 1010;
+	transition: background-color 0.3s;
+  `;
+
+		// Help tooltip
+		const helpTooltip = document.createElement('div');
+		helpTooltip.className = 'help-tooltip';
+		helpTooltip.style.cssText = `
+	position: absolute;
+	bottom: 40px;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+	width: 500px;
+	font-size: 30px;
+	line-height: 1.5;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s, visibility 0.3s;
+	text-align: left;
+  `;
+		helpTooltip.innerHTML = `
+	<strong>Keyboard Shortcuts:</strong><br>
+	← / → : Previous/Next image<br>
+	ESC : Close viewer<br>
+	c : Show Table of Contents<br>
+	d : Dark/Light Mode
+  `;
+	// Space : Reset image size/position<br>
+	// Mouse wheel : Zoom in/out<br>
+	// Drag : Pan image when zoomed<br>
+	// Double-click : Reset size/position
+
+		// Navigation arrows
+		const prevArrow = document.createElement('div');
+		prevArrow.className = 'nav-arrow prev';
+		prevArrow.innerHTML = '&#10094;';
+		prevArrow.style.cssText = `
+	position: absolute;
+	top: 50%;
+	left: 20px;
+	font-size: 40px;
+	color: white;
+	cursor: pointer;
+	user-select: none;
+	opacity: 0.7;
+	transition: opacity 0.2s;
+	z-index: 1010;
+  `;
+		prevArrow.onmouseover = () => prevArrow.style.opacity = '1';
+		prevArrow.onmouseout = () => prevArrow.style.opacity = '0.7';
+
+		const nextArrow = document.createElement('div');
+		nextArrow.className = 'nav-arrow next';
+		nextArrow.innerHTML = '&#10095;';
+		nextArrow.style.cssText = `
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	font-size: 40px;
+	color: white;
+	cursor: pointer;
+	user-select: none;
+	opacity: 0.7;
+	transition: opacity 0.2s;
+	z-index: 1010;
+  `;
+		nextArrow.onmouseover = () => nextArrow.style.opacity = '1';
+		nextArrow.onmouseout = () => nextArrow.style.opacity = '0.7';
+
+		// Help button hover effect
+		helpButton.addEventListener('mouseenter', function() {
+			helpTooltip.style.opacity = '1';
+			helpTooltip.style.visibility = 'visible';
+			helpButton.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+		});
+
+		helpButton.addEventListener('mouseleave', function() {
+			helpTooltip.style.opacity = '0';
+			helpTooltip.style.visibility = 'hidden';
+			helpButton.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+		});
+
+		// Append all elements
+		helpButton.appendChild(helpTooltip);
+		imgContainer.appendChild(overlayImg);
+		imgContainer.appendChild(captionContainer);
+		overlay.appendChild(imgContainer);
+		overlay.appendChild(prevArrow);
+		overlay.appendChild(nextArrow);
+		overlay.appendChild(imageCounter);
+		overlay.appendChild(closeButton);
+		overlay.appendChild(helpButton);
+		document.body.appendChild(overlay);
+
+		// Create custom cursor
+		const cursorCSS = document.createElement('style');
+		cursorCSS.innerHTML = `
+	.zoom-cursor {
+	  cursor: zoom-in;
+	}
+  `;
+		document.head.appendChild(cursorCSS);
+
+		// Variables for image handling
+		let images = [];
+		let currentIndex = 0;
+		let scale = 1;
+		let translateX = 0;
+		let translateY = 0;
+		let isDragging = false;
+		let startX = 0;
+		let startY = 0;
+		let lastX = 0;
+		let lastY = 0;
+
+		// Find all images on the page
+		function collectImages() {
+			images = Array.from(document.querySelectorAll('img:not(.overlay-img)'));
+
+			// Add events to each image
+			images.forEach((img, index) => {
+				if (!img.dataset.galleryInitialized) {
+					// Create wrapper to contain the image and the tooltip
+					const wrapper = document.createElement('div');
+					wrapper.className = 'gallery-img-wrapper';
+					wrapper.style.cssText = `
+		  position: relative;
+		  display: inline-block;
+		  overflow: visible;
+		`;
+
+					// Create tooltip
+					const tooltip = document.createElement('div');
+					tooltip.className = 'gallery-tooltip';
+					tooltip.textContent = 'Click to enlarge';
+					tooltip.style.cssText = `
+		  position: absolute;
+		  bottom: 10px;
+		  left: 50%;
+		  transform: translateX(-50%);
+		  background-color: rgba(0, 0, 0, 0.7);
+		  color: white;
+		  padding: 5px 10px;
+		  border-radius: 3px;
+		  font-size: 12px;
+		  opacity: 0;
+		  transition: opacity 0.3s ease;
+		  pointer-events: none;
+		  z-index: 10;
+		`;
+
+					// Replace image with wrapper
+					const parent = img.parentNode;
+					parent.replaceChild(wrapper, img);
+					wrapper.appendChild(img);
+					wrapper.appendChild(tooltip);
+
+					// Add hover effects
+					wrapper.addEventListener('mouseenter', function() {
+						tooltip.style.opacity = '1';
+						img.classList.add('zoom-cursor');
+					});
+
+					wrapper.addEventListener('mouseleave', function() {
+						tooltip.style.opacity = '0';
+						img.classList.remove('zoom-cursor');
+					});
+
+					// Add click event
+					wrapper.addEventListener('click', function() {
+						openOverlay(index);
+					});
+
+					img.dataset.galleryInitialized = 'true';
+				}
+			});
+		}
+
+		// Get caption for an image
+		function getImageCaption(imgElement) {
+			// First check if the image is inside a figure with a figcaption
+			const figure = findAncestor(imgElement, 'figure');
+			if (figure) {
+				const figcaption = figure.querySelector('figcaption');
+				if (figcaption) {
+					return figcaption.innerHTML;
+				}
+			}
+
+			// Fallback to alt text
+			return imgElement.alt || '';
+		}
+
+		// Helper to find ancestor element
+		function findAncestor(element, tagName) {
+			while (element && element.tagName !== tagName.toUpperCase()) {
+				element = element.parentElement;
+			}
+			return element;
+		}
+
+		// Open the overlay with selected image
+		function openOverlay(index) {
+			currentIndex = index;
+			showImage(currentIndex);
+			overlay.style.display = 'flex';
+			resetImagePosition();
+		}
+
+		// Display the current image
+		function showImage(index) {
+			if (images.length === 0) return;
+
+			// Ensure index is within bounds
+			currentIndex = (index + images.length) % images.length;
+
+			const img = images[currentIndex];
+			overlayImg.src = img.src;
+			overlayImg.alt = img.alt;
+
+			// Update caption
+			const caption = getImageCaption(img);
+			captionContainer.innerHTML = caption;
+			captionContainer.style.display = caption ? 'block' : 'none';
+
+			// Update counter
+			imageCounter.textContent = `${currentIndex + 1} of ${images.length}`;
+
+			// Hide arrows if only one image
+			if (images.length <= 1) {
+				prevArrow.style.display = 'none';
+				nextArrow.style.display = 'none';
+			} else {
+				prevArrow.style.display = 'block';
+				nextArrow.style.display = 'block';
+			}
+		}
+
+		// Reset image position and scale
+		function resetImagePosition() {
+			scale = 1;
+			translateX = 0;
+			translateY = 0;
+			updateImageTransform();
+		}
+
+		// Update image transform based on scale and position
+		function updateImageTransform() {
+			overlayImg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+		}
+
+		// Navigation functions
+		function prevImage() {
+			showImage(currentIndex - 1);
+			resetImagePosition();
+		}
+
+		function nextImage() {
+			showImage(currentIndex + 1);
+			resetImagePosition();
+		}
+
+		// Close the overlay
+		function closeOverlay() {
+			overlay.style.display = 'none';
+		}
+
+		// Event listeners
+		prevArrow.addEventListener('click', prevImage);
+		nextArrow.addEventListener('click', nextImage);
+		closeButton.addEventListener('click', closeOverlay);
+
+		overlay.addEventListener('click', function(e) {
+			if (e.target === overlay) {
+				closeOverlay();
+			}
+		});
+
+		// Keyboard navigation
+		document.addEventListener('keydown', function(e) {
+			if (overlay.style.display === 'none') return;
+
+			switch (e.key) {
+			case 'ArrowLeft':
+				prevImage();
+				break;
+			case 'ArrowRight':
+				nextImage();
+				break;
+			case 'Escape':
+				closeOverlay();
+				break;
+			case ' ': // Space bar
+				e.preventDefault();
+				resetImagePosition();
+				break;
+			}
+		});
+
+		// // Mouse wheel zoom
+		// overlay.addEventListener('wheel', function(e) {
+		// 	if (overlay.style.display === 'none') return;
+		// 	e.preventDefault();
+
+		// 	const delta = e.deltaY * -0.01;
+		// 	const newScale = Math.max(0.1, Math.min(10, scale + delta));
+
+		// 	// Zoom toward cursor position
+		// 	const rect = overlayImg.getBoundingClientRect();
+		// 	const mouseX = e.clientX - rect.left;
+		// 	const mouseY = e.clientY - rect.top;
+
+		// 	const newTranslateX = translateX - (mouseX / scale - mouseX / newScale) * scale;
+		// 	const newTranslateY = translateY - (mouseY / scale - mouseY / newScale) * scale;
+
+		// 	scale = newScale;
+		// 	translateX = newTranslateX;
+		// 	translateY = newTranslateY;
+
+		// 	updateImageTransform();
+		// });
+
+		// // Drag to pan when zoomed in
+		// overlayImg.addEventListener('mousedown', function(e) {
+		// 	if (scale <= 1) return;
+		// 	e.preventDefault();
+
+		// 	isDragging = true;
+		// 	startX = e.clientX;
+		// 	startY = e.clientY;
+		// 	lastX = translateX;
+		// 	lastY = translateY;
+		// 	overlayImg.style.cursor = 'grabbing';
+		// });
+
+		// document.addEventListener('mousemove', function(e) {
+		// 	if (!isDragging) return;
+
+		// 	const dx = e.clientX - startX;
+		// 	const dy = e.clientY - startY;
+
+		// 	translateX = lastX + dx;
+		// 	translateY = lastY + dy;
+
+		// 	updateImageTransform();
+		// });
+
+		// document.addEventListener('mouseup', function() {
+		// 	isDragging = false;
+		// 	overlayImg.style.cursor = 'grab';
+		// });
+
+		// // Double-click to reset
+		// overlayImg.addEventListener('dblclick', resetImagePosition);
+
+		// Initialize by collecting all images
+		collectImages();
+
+		// Re-collect images if DOM changes (for dynamically added images)
+		const observer = new MutationObserver(function(mutations) {
+			mutations.forEach(function(mutation) {
+				if (mutation.type === 'childList') {
+					collectImages();
+				}
+			});
+		});
+
+		observer.observe(document.body, { childList: true, subtree: true });
 });

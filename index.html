@@ -58,20 +58,6 @@
 		@media screen and (max-width: 50em) {#left-column, #middle-column, #right-column {width: 100%;} }
 		/* Display as single column for short screen widths */
 
-		@media (prefers-color-scheme: light) {body {background-color: #F4F5F6; color: black;} }
-		@media (prefers-color-scheme: dark) {header {border-bottom-color: white;} body {background-color: black; color: white;} a.hlink {color: white} hr, h1, h2, h3 {border-top: solid white;} }
-
-		.light-mode body {background-color: #F4F5F6; color: black;}
-		.light-mode hr, .dark-mode h1, .dark-mode h2, .dark-mode h3 {border-top: solid black;}
-		.light-mode a.hlink {color: black;}
-		.light-mode #form.sticky {background: #eee; color: black;}
-
-		.dark-mode body {background-color: black; color: white;}
-		.dark-mode hr, .dark-mode h1, .dark-mode h2, .dark-mode h3 {border-top: solid white;}
-		.dark-mode a.hlink {color: white;}
-		.dark-mode .noline {border: none;}
-		.dark-mode #form.sticky {background-color: #222222; color: white;}
-
 		#form {transition: all 0.3s ease-in-out;}
 		#form.sticky {
 			position: fixed;
@@ -86,6 +72,20 @@
 			transform: none;
 			transition: top 0.3s ease-in-out;
 		}
+
+		@media (prefers-color-scheme: light) {body {background-color: #F4F5F6; color: black;} }
+		@media (prefers-color-scheme: dark) {header {border-bottom-color: white;} body {background-color: black; color: white;} a.hlink {color: white} hr, h1, h2, h3 {border-top: solid white;} }
+
+		.light-mode body {background-color: #F4F5F6; color: black;}
+		.light-mode hr, .dark-mode h1, .dark-mode h2, .dark-mode h3 {border-top: solid black;}
+		.light-mode a.hlink {color: black;}
+		.light-mode #form.sticky {background: #eee; color: black;}
+
+		.dark-mode body {background-color: black; color: white;}
+		.dark-mode hr, .dark-mode h1, .dark-mode h2, .dark-mode h3 {border-top: solid white;}
+		.dark-mode a.hlink {color: white;}
+		.dark-mode .noline {border: none;}
+		.dark-mode #form.sticky {background-color: #222222; color: white;}
 	</style>
 </head>
 
@@ -135,12 +135,12 @@
 			<input type="submit" value="Search">
 		</form>
 		<script>
-			let form = document.querySelector("#form");
+			let form = document.getElementById("form");
 			var lastScrollY = window.scrollY;
 
 			form.addEventListener("submit", function(e) {
 				e.preventDefault();
-				let query = form.querySelector("#query");
+				let query = document.getElementById("query");
 				let copy = query.value;
 				query.value = "site:https://zerocontradictions.net " + query.value;
 				form.submit();
@@ -198,6 +198,9 @@
 			applyTheme(currentMode);
 
 			document.addEventListener("keydown", function (event) {
+				if (event.target.tagName === "INPUT" || event.target.tagName === "TEXTAREA" || event.target.tagName === "SELECT") {
+					return; // Exit early to prevent unintended actions
+				}
 				if (event.key.toLowerCase() === "d") {
 					// Toggle dark mode based on current state
 					currentMode = currentMode === "dark" ? "light" : "dark";
