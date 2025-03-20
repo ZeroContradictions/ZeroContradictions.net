@@ -1,5 +1,4 @@
 /* Zero Contradictions Org-Mode Essays Javascript (https://zerocontradictions.net/programming/script.js) © 2025 by Zero Contradictions is licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) */
-
 document.addEventListener("DOMContentLoaded", function () {
 	let topPanel = document.getElementById("org-div-home-and-up");
 	const originalTOC = document.getElementById("table-of-contents");
