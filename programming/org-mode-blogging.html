@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2025 March 11, 19:35 -->
+<!-- 2025 March 20, 21:39 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>How to Design a Blog with Emacs and Org-Mode</title>
@@ -39,7 +39,8 @@
 <ul>
 <li><a href="#learning-org-mode">2.1. Learning How To Use Org-Mode</a></li>
 <li><a href="#setting-up-org-mode-for-blogging">2.2. Setting Up Org-Mode For Blogging</a></li>
-<li><a href="#advice-for-using-org-mode">2.3. Advice For Using Org-Mode</a></li>
+<li><a href="#local-org-variables">2.3. Local Org-Mode Variables In Files</a></li>
+<li><a href="#advice-for-using-org-mode">2.4. Advice For Using Org-Mode</a></li>
 </ul>
 </li>
 <li><a href="#creating-CSS">3. Creating CSS For Webpages</a>
@@ -96,7 +97,13 @@ It can be tempting to immediately start writing content that you&rsquo;ve been e
 <ul class="org-ul">
 <li>Every post should have a meaningful topic. It&rsquo;s also helpful if everyone else writing about the topic is missing a key point or over-complicating simple things.</li>
 <li>It&rsquo;s important to plan and outline your content <i>before</i> writing it. Many bloggers just write whatever comes off the top of their heads, which causes their posts to lack structure and organization. I was guilty of this myself for some of my essays since I was so eager to put my ideas out there, until I restructured them.</li>
-<li>Many people have a tendency to write long sentences with <a href="https://www.grammarbank.com/cohesive-devices.html">cohesive devices</a> that place restrictions on how they write their sentences. For such people (including my former self), I recommend taking <a href="https://dilbertblog.typepad.com/the_dilbert_blog/2007/06/the_day_you_bec.html">Scott Adam&rsquo;s Writing Advice</a> to heart. Writing shorter sentences is an important key for writing better, especially if the goal is to create information dense content with little fluff. <a href="https://www.elevenwriting.com/blog/fluff-writing">Fluff writing</a> makes content longer to read, harder to understand, and it may bore the readers.</li>
+<li>Many people have a tendency to write long sentences with <a href="https://www.rammarbank.com/cohesive-devices.html">cohesive devices</a> that place restrictions on how they write their sentences.
+For such people (including my former self), I recommend taking <a href="https://dilbertblog.typepad.com/the_dilbert_blog/2007/06/the_day_you_bec.html">Scott Adam&rsquo;s Writing Advice</a> to heart.
+<ul class="org-ul">
+<li>Writing shorter sentences is an important key for writing better, especially if the goal is to create information dense content with little fluff.
+<a href="https://www.elevenwriting.com/blog/fluff-writing">Fluff writing</a> makes content longer to read, harder to understand, and it may bore the readers.</li>
+<li>Also see: <a href="https://dynomight.net/2021/02/07/writing-as-a-craft/#steven-pinker-the-sense-of-style-2014">Steven Pinker&rsquo;s Advice For Writing (English) Sentences</a>.</li>
+</ul></li>
 <li><a href="https://dynomight.net/lists/">Humans are psychologically attracted to reading lists</a> for multiple reasons. Lists are also easier for people to read and follow, rather than reading paragraph after paragraph, if it&rsquo;s possible to format the content that you want to write that way.</li>
 <li>If you need to list a bunch of short ideas, reasons, or arguments in a section, it&rsquo;s a good idea to use bulleted or numbered lists. Paragraphs require adding more cohesive devices and other fluff language compared to lists. As an example, some sections in my <a href="../faqs/overpopulation#effects-on-society">Overpopulation FAQs</a> became more concise and easier to read when written as lists instead of paragraphs.</li>
 <li><a href="https://www.w3schools.com/html/html_quotation_elements.asp">HTML Quotation Elements</a> are a great way to quickly state opposing points of view before addressing them. I&rsquo;ve made my <a href="../civilization/case-against-libertarianism">Case Against Libertarianism essay</a> and other works less wordy by using them.</li>
@@ -109,6 +116,7 @@ It can be tempting to immediately start writing content that you&rsquo;ve been e
 <li>&ldquo;If I knew for sure that a LLM could write or do this thing in 4 years, would I still be doing it now?&rdquo;</li>
 </ul></li>
 <li><a href="https://guzey.com/personal/why-have-a-blog/">Why You Should Start a Blog Right Now - Alex Guzey</a>; This webpage gives encouragement for starting your own blog. It also argues against some common excuses why someone shouldn&rsquo;t start a blog.</li>
+<li><a href="https://dynomight.substack.com/p/centuries">Let&rsquo;s stop counting centuries &#x2013; Dynomight Internet Newsletter</a>.</li>
 </ul>
 </div>
 </div>
@@ -276,7 +284,7 @@ The user can learn more about what each variable does by pressing <code>SPC h v<
 (setq org-html-container-element "div")
 (setq org-html-head-include-scripts nil)
 (setq org-html-head-include-default-style nil)
-(setq org-html-head-extra "&lt;link rel=\"stylesheet\" type=\"text/css\" href=\"/style.css\"&gt;")
+(setq org-html-head-extra "&lt;link rel=\"stylesheet\" type=\"text/css\" href=\"/style.css\"&gt;&lt;script src=\"/script.js\"&gt;&lt;/script&gt;")
 
 ;; Four-Button Navigation Bar: TOC, Top (UP), Dark/Light Mode, Home
 (setq org-html-link-up "#\" id=\"TOC-link\"&gt;CONTENTS&lt;/a&gt; | &lt;a id=\"top-link\" href=\"#content")
@@ -293,6 +301,24 @@ The user can learn more about what each variable does by pressing <code>SPC h v<
   )))
 </pre>
 
+<hr>
+<p>
+The values set for the <code>org-html-link-up</code> and <code>org-html-link-home</code> variables look complicated, and that&rsquo;s because they were never intended to be so complex by the creators of org-mode.
+Both variables were originally intended to only provide two navigation hyperlinks on every HTML exported page.
+However, I wanted to add hyperlinks/buttons for adding a TOC and light/dark mode toggling to every page.
+</p>
+
+<p>
+I managed to make those variables add additional hyperlinks to each page by inserting multiple double quote escape (\&ldquo;) characters.
+I also wrote CSS and JS code to customize <code>#org-div-home-and-up</code> so that it displays as a navigation bar on every page.
+Unfortunately, I can&rsquo;t change the text of the &lt;UP&gt; hyperlink without writing more Javascript code, since it&rsquo;s hardcoded into org-mode.
+</p>
+</div>
+</div>
+
+<div id="outline-container-local-org-variables" class="outline-3">
+<h3 id="local-org-variables"><span class="section-number-3">2.3.</span> Local Org-Mode Variables In Files</h3>
+<div class="outline-text-3" id="text-local-org-variables">
 <p>
 The following is the entirety of the org-mode keywords and values that I include at the beginning of every .org file for controlling the HTML code of my webpages:
 </p>
@@ -301,7 +327,6 @@ The following is the entirety of the org-mode keywords and values that I include
 #+subtitle: The_Webpage_Subtitle_That_Will_Be_Placed_In_&lt;subtitle&gt;
 #+author: The Author Name
 #+description: The webpage description (up to 160 characters long).
-#+html_head: &lt;script src="/script.js"&gt;&lt;/script&gt;
 #+html_head: &lt;meta property="og:url" content="[the canonical URL link for this article]"&gt;
 #+html_head: &lt;meta property="og:type" content="article"&gt;
 #+html_head: &lt;meta property="og:image" content="[Link to image file]"&gt;
@@ -317,13 +342,12 @@ Fortunately, the two separate HTML head variables can be used strategically to p
 In my config.el, I have:
 </p>
 <pre class="example">
-(setq org-html-head-extra "&lt;link rel~\"stylesheet\" type~\"text/css\" href~\"/style.css\"&gt;")
+(setq org-html-head-extra "&lt;link rel~\"stylesheet\" type~\"text/css\" href~\"/style.css\"&gt;&lt;script src=\"/script.js\"&gt;&lt;/script&gt;")
 </pre>
 <p>
 Meanwhile, my local file org variables add the following HTML &lt;head&gt; code to each file:
 </p>
 <pre class="example">
-#+html_head: &lt;script src="/script.js"&gt;&lt;/script&gt;
 #+html_head: &lt;meta property="og:url" content="[the canonical URL link for this article]"&gt;
 #+html_head: &lt;meta property="og:type" content="article"&gt;
 #+html_head: &lt;meta property="og:image" content="[Link to image file]"&gt;
@@ -333,6 +357,7 @@ Meanwhile, my local file org variables add the following HTML &lt;head&gt; code 
 These settings ensure that all the content that I want to be added to HTML &lt;head&gt; will get included.
 </p>
 
+<hr>
 <p>
 Every time I want to re-export the HTML output from my org file to update my webpages, I press <code>SPC m e h h</code> in Doom-Emacs, which executes the command <code>org-export-dispatch</code>.
 </p>
@@ -346,7 +371,7 @@ If you want to link a Javascript file to every HTML export, then adding the <cod
 </div>
 
 <div id="outline-container-advice-for-using-org-mode" class="outline-3">
-<h3 id="advice-for-using-org-mode"><span class="section-number-3">2.3.</span> Advice For Using Org-Mode</h3>
+<h3 id="advice-for-using-org-mode"><span class="section-number-3">2.4.</span> Advice For Using Org-Mode</h3>
 <div class="outline-text-3" id="text-advice-for-using-org-mode">
 <p>
 When creating links in org-mode, <a href="https://orgmode.org/manual/Publishing-links.html">there are many options</a> and they depend on what you&rsquo;re linking to.
@@ -422,7 +447,7 @@ Readers who want a more modern and comprehensive resource for CSS should probabl
 <li>It&rsquo;s also worth using a <a href="https://duckduckgo.com/?q=minify+css&amp;t=lm&amp;ia=answer">CSS Minifier</a> to create the CSS sheet used by your webpages.
 It can help speed load times and reduce the data usage of one&rsquo;s web server.
 It&rsquo;s recommended to keep the easier-to-read CSS (containing all the whitespace and comments) within a separate file, and to run it through the minifier every time you want to change the CSS for your site.
-<a href="https://duckduckgo.com/?t=lm&amp;q=minify+html&amp;ia=web">HTML Minifiers</a> exist too, if you&rsquo;d prefer to use one.</li>
+<a href="https://duckduckgo.com/?t=lm&amp;q=minify+html&amp;ia=web">HTML Minifiers</a> and <a href="https://duckduckgo.com/?t=lm&amp;q=minify+javascript&amp;ia=web">Javascript Minifiers</a> exist too, if you&rsquo;d prefer to use one.</li>
 <li>It&rsquo;s worth looking into <a href="https://mattbrictson.com/blog/css-normalize-and-reset">CSS reset rules and CSS reset files</a>, which are necessary since every web browser has different CSS defaults for HTML elements, which may cause websites without reset rules to have unexpected displays on different web browsers.</li>
 </ul>
 </div>
@@ -481,6 +506,14 @@ To download the template, just click the link below, and press &ldquo;Ctrl + S&r
 <p>
 Anyone can use this CSS template for their own creations as long as they keep the line that attributes me within the file and summarize what they changed (if anything).
 </p>
+
+<hr>
+<p>
+The Javascript file that I use for each of my webpages can also be downloaded as well.
+The <code>script.js</code> file was almost entirely generated by querying ClaudeAI and ChatGPT to create what I wanted, with my own edits mixed in for customization.
+The Javascript file provides easy access to each page&rsquo;s TOC, light/dark mode, an image gallery, and keyboard shortcuts.
+</p>
+<p>&emsp;&emsp;<a target="_blank" href="./script.js">Download Zero Contradictions Javascript Template</a></p>
 </div>
 </div>
 
@@ -831,7 +864,7 @@ I haven&rsquo;t figured out how to control the formatting and syntax highlightin
 </div>
 </div></div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2025 March 11, 19:35</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2025 March 20, 21:39</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>
