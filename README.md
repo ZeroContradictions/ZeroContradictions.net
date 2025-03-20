@@ -1,7 +1,7 @@
 # ZeroContradictions.net
 <!-- **ZeroContradictions/ZeroContradictions.net** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile. -->
 
-Hello and welcome to my philosophy website. My name is Zero Contradictions, and this place is a hybrid between a blog for my own writings (highlighted in red) and a compendium of external links to works by different authors that have influenced my own philosophy and/or are worth reading (highlighted in blue) as well as links to videos, channels, or audio recordings (highlighted in green). If you click one of the links in the navigation bar, then the page will scroll down to that section (which will be in one of the three columns for displays that are at least 800 pixels wide). Whether this site displays in light or dark mode depends on your web browser preferences.
+Hello and welcome to my philosophy website. My name is Zero Contradictions, and this place is a hybrid between a blog for my own writings (highlighted in red) and a compendium of external links to works by different authors that have influenced my own philosophy and/or are worth reading (highlighted in blue) as well as links to videos, channels, or audio recordings (highlighted in green). If you click one of the links in the navigation bar, then the page will scroll down to that section (which will be in one of the three columns for displays that are at least 800 pixels wide).
 
 The directory page only displays essays that I wrote myself, hence why it has almost no blue or green links. Everything on this website is under copyright, unless specified otherwise.
 
