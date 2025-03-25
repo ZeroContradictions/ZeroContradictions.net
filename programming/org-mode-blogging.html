@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2025 March 20, 21:39 -->
+<!-- 2025 March 25, 05:34 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>How to Design a Blog with Emacs and Org-Mode</title>
@@ -32,7 +32,9 @@
 <li><a href="#writing-advice">1.1. Advice For Writing Content</a></li>
 <li><a href="#writing-books">1.2. Writing Books Or Not</a></li>
 <li><a href="#quality-vs-quantity">1.3. Quality Versus Quantity</a></li>
-<li><a href="#static-site-generators">1.4. Static Site Generators</a></li>
+<li><a href="#TOCs">1.4. Displaying Tables of Contents</a></li>
+<li><a href="#distinguishing-hyperlinks">1.5. Styling Links On Webpages</a></li>
+<li><a href="#static-site-generators">1.6. Static Site Generators</a></li>
 </ul>
 </li>
 <li><a href="#org-mode-for-webpages">2. Using Org-Mode To Create Web Pages</a>
@@ -163,8 +165,73 @@ If someone came across such a blog for the first time, they would be lost and un
 </div>
 </div>
 
+
+<div id="outline-container-TOCs" class="outline-3">
+<h3 id="TOCs"><span class="section-number-3">1.4.</span> Displaying Tables of Contents</h3>
+<div class="outline-text-3" id="text-TOCs">
+<p>
+Any book, essay, webpage, or work that&rsquo;s worth writing ought to be accompanied with a table of contents (TOCs), unless the text is short enough to the point where adding a TOC doesn&rsquo;t make sense.
+TOCs tend to improve reader comprehension, since they make it easier for readers to build mental models that summarize and compress the information inside of a written work.
+</p>
+
+<p>
+On 2025 March 12, my website added a navigation bar that displays near the top of every page, which allows easy access to the TOC, without scrolling to the top of the page.
+While I could display the TOC to the left of the content at all times, this wouldn&rsquo;t work on browser windows with small screen widths, and it would disrupt the symmetry of the webpages.
+Additionally, many of the header names within the TOCs are too long to display neatly in the left hand side of webpages.
+I could write Javascript code to collapse the subsections that display in the TOCs with left arrow and down arrow buttons, similar to the Wikipedia Vector 2022 format, but this would add complexity to the pages, and may not be desirable.
+Additionally, many &lt;h2&gt; headers on my webpages would still be too long to display comfortably in the left side bar, especially for the FAQs pages.
+It&rsquo;s also more comfortable to read the TOCs when they are displayed in the center of the screen with the maximum readable page/content widths.
+</p>
+
+<hr>
+<p>
+The main reason why I added the Javascript image gallery to my webpages was to make it easier for users to magnify images which may appear tiny on the webpages.
+I was aiming for an image gallery similar to the kind used on Substack, Wikipedia.org, and Gwern.net.
+</p>
+</div>
+</div>
+
+<div id="outline-container-distinguishing-hyperlinks" class="outline-3">
+<h3 id="distinguishing-hyperlinks"><span class="section-number-3">1.5.</span> Styling Links On Webpages</h3>
+<div class="outline-text-3" id="text-distinguishing-hyperlinks">
+<p>
+<a href="../">My homepage</a> uses three different colors to distinguish the different links on the page.
+The link color scheme doesn&rsquo;t interfere with readability on the home page, since most of the links appear in predictable places on the page, and since the links usually only color the titles of the webpages that they&rsquo;re linking to (or the side hyperlinks).
+The color scheme even improves readability in some ways, since they make the webpage more enjoyable to look at, compared to if there were only one link color among the black/white background.
+It feels reminiscent of the syntax highlighting that&rsquo;s standard among most IDEs and programming text editors.
+</p>
+
+<p>
+I&rsquo;ve considered using the same link color scheme for my content pages, but I decided against it.
+My content pages usually have longer paragraphs where links may appear anywhere inside them, so using two or three different link colors was distracting when reading the paragraphs.
+</p>
+
+<p>
+I&rsquo;ve also considered displaying favicons after hyperlinks, similarly to some webpages on <a href="https://gwern.net/">Gwern.net</a>.
+However, I decided against this since it might:
+</p>
+<ul class="org-ul">
+<li>Increase internet bandwidth usage and webpage response times.
+Including favicons on the page could slow the site down, since favicons would have to be queried and retrieved them from their respective sites, and Javascript code would have to run to include them into the page.</li>
+<li>Negatively impact SEO, due to increasing load times.</li>
+<li>Not benefit most readers.
+Most people rarely click on hyperlinks if they only care about reading the webpage itself, so it&rsquo;s not clear if adding favicons to the site would benefit most readers.</li>
+<li>Distract from the text.</li>
+<li>Make the webpages take up more vertical space.</li>
+<li>Increase the complexity of the site.</li>
+</ul>
+
+<p>
+Additionally, most desktop browsers can already display the URLs where links lead to, when hovering over the hyperlinks.
+For example, Firefox displays the URLs of hyperlinks in the left hand corner.
+Many mobile browsers can also display URLs and webpage previews when pressing and holding on URLs.
+So, the benefit of displaying favicons is lower after considering this.
+</p>
+</div>
+</div>
+
 <div id="outline-container-static-site-generators" class="outline-3">
-<h3 id="static-site-generators"><span class="section-number-3">1.4.</span> Static Site Generators</h3>
+<h3 id="static-site-generators"><span class="section-number-3">1.6.</span> Static Site Generators</h3>
 <div class="outline-text-3" id="text-static-site-generators">
 <p>
 Most people who want to start blogging and aren&rsquo;t using a Content Management System like Wordpress or Blogger should consider downloading and using a <a href="https://en.wikipedia.org/wiki/Static_site_generator">static site generator</a> (SSG).
@@ -864,7 +931,7 @@ I haven&rsquo;t figured out how to control the formatting and syntax highlightin
 </div>
 </div></div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2025 March 20, 21:39</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2025 March 25, 05:34</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>
