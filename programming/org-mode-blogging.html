@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2025 March 25, 08:24 -->
+<!-- 2025 March 26, 18:04 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>How to Design a Blog with Emacs and Org-Mode</title>
@@ -165,7 +165,6 @@ If someone came across such a blog for the first time, they would be lost and un
 </div>
 </div>
 
-
 <div id="outline-container-TOCs" class="outline-3">
 <h3 id="TOCs"><span class="section-number-3">1.4.</span> Displaying Tables of Contents</h3>
 <div class="outline-text-3" id="text-TOCs">
@@ -206,7 +205,32 @@ I&rsquo;ve considered using the same link color scheme for my content pages, but
 My content pages usually have longer paragraphs where links may appear anywhere inside them, so using two or three different link colors was distracting when reading the paragraphs.
 </p>
 
+<hr>
 <p>
+<b>Other Thoughts On Displaying Hyperlink Colors</b><br>
+</p>
+<ul class="org-ul">
+<li>On Wikipedia, only a single link color is used across the entire website, except for:
+<ol class="org-ol">
+<li>Red links which indicate that an article has not been created yet for the text in question.</li>
+<li>Purple links which indicate that a user has already visited the article in question.</li>
+</ol></li>
+<li>This website is not a wiki, so it doesn&rsquo;t make sense for this website to have a link color which covers the function of red links.</li>
+<li>It might be practical for my site to color links purple if a user has already visited the URL within their browser history, both for internal and external links.</li>
+<li>Blue and purple are analogous colors on the color spectrum, so having blue and purple links appear together on a webpage wouldn&rsquo;t be as distracting as blue and red links, which I decided were too distracting while reading.</li>
+<li>However, a user may not have visited all the URL fragments of a webpage on my site, even if they&rsquo;ve read most or all of the text written on the webpage, by reading the webpage from top to bottom, as most readers do.
+<ul class="org-ul">
+<li>Hence, the browser may not know if a user has read a webpage section associated with a URL fragment or not, even if the user has visited the webpage.</li>
+<li>However, the same is true for internal Wikipedia links on Wikipedia, which are colored purple by Wikipedia&rsquo;s CSS.</li>
+<li>The hyperlinks in the TOCs of Wikipedia articles turn purple after a user has clicked on them or visited the corresponding sections.</li>
+</ul></li>
+<li>This website is also much smaller than Wikipedia, which may suggest that the benefits of using purple links may be lower, although it may still be helpful.</li>
+<li>The homepage uses three different link colors, and it&rsquo;s unclear whether it&rsquo;d be a good idea to shade all three link colors as purple, or only some links and not others.</li>
+</ul>
+
+<hr>
+<p>
+<b>Thoughts On Displaying Favicons After Hyperlinks</b><br>
 I&rsquo;ve also considered displaying favicons after hyperlinks, similarly to some webpages on <a href="https://gwern.net/">Gwern.net</a>.
 However, I decided against this since it might:
 </p>
@@ -931,7 +955,7 @@ I haven&rsquo;t figured out how to control the formatting and syntax highlightin
 </div>
 </div></div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2025 March 25, 08:24</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2025 March 26, 18:04</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>
