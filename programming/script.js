@@ -1,5 +1,6 @@
 /* Zero Contradictions Org-Mode Essays Javascript (https://zerocontradictions.net/programming/script.js) © 2025 by Zero Contradictions is licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) */
 document.addEventListener("DOMContentLoaded", function () {
+	// NAVIGATION BAR
 	let topPanel = document.getElementById("org-div-home-and-up");
 	const originalTOC = document.getElementById("table-of-contents");
 	const TOC_button = document.getElementById("TOC-link");
@@ -52,7 +53,91 @@ document.addEventListener("DOMContentLoaded", function () {
 		lastScrollY = currentScrollY;
 	});
 
-	// Theme Toggle
+
+	// FOOTNOTE TOOLTIPS
+	// Create tooltip element
+	const tooltip = document.createElement('div');
+	tooltip.id = 'footnote-tooltip';
+	tooltip.style.cssText = `
+	position: absolute;
+	background-color: #f4f5f6;
+	padding: 0.625rem;
+	border-radius: 0.3125rem;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+	display: none;
+	z-index: 1000;
+	max-width: 24rem;
+	font-size: 100%;
+	line-height: 1.5;
+  `;
+	// border: 1px solid #ccc;
+	document.body.appendChild(tooltip);
+
+	// Select footnote references
+	const footrefs = document.querySelectorAll('a.footref');
+	console.log('Footnote references found:', footrefs.length);
+
+	// Find footnote container within footnotes section
+	const footnoteSection = document.getElementById('footnotes');
+	console.log('Footnote section found:', !!footnoteSection);
+
+	if (footnoteSection) {
+		footrefs.forEach(footref => {
+			// Extract footnote ID from href
+			const footnoteId = footref.getAttribute('href').substring(1);
+			console.log('Processing footnote ID:', footnoteId);
+
+			// Look for specific footnote container using more compatible selector
+			const correspondingFootnoteContainer = Array.from(
+				footnoteSection.querySelectorAll('div.footdef')
+			).find(container => {
+				const footnoteLink = container.querySelector(`a.footnum[id="${footnoteId}"]`);
+				return footnoteLink !== null;
+			});
+
+			console.log('Corresponding footnote container:', correspondingFootnoteContainer);
+
+			// Find footnote paragraph
+			const footnoteParaElement = correspondingFootnoteContainer
+				  ? correspondingFootnoteContainer.closest('.footdef').querySelector('p.footpara')
+				  : null;
+
+			console.log('Footnote paragraph element:', footnoteParaElement);
+
+			if (correspondingFootnoteContainer) {
+				// Find footnote paragraph
+				const footnoteParaElement = correspondingFootnoteContainer.querySelector('p.footpara');
+
+				if (footnoteParaElement) {
+					footref.addEventListener('mouseover', (event) => {
+						console.log('Mouseover triggered');
+						// Calculate tooltip position
+						const rect = event.target.getBoundingClientRect();
+
+						// Position and show tooltip
+						tooltip.innerHTML = footnoteParaElement.innerHTML;
+						tooltip.style.left = `${rect.right + 10}px`;
+						tooltip.style.top = `${window.scrollY + rect.top}px`;
+						tooltip.style.display = 'block';
+					});
+
+					footref.addEventListener('mouseout', () => {
+						tooltip.style.display = 'none';
+					});
+				}
+			}
+		});
+	}
+
+	// Hide tooltip on scroll and resize
+	['scroll', 'resize'].forEach(evt => {
+		window.addEventListener(evt, () => {
+			tooltip.style.display = 'none';
+		});
+	});
+
+
+	// LIGHT/DARK THEME TOGGLE
 	const themeButton = document.getElementById("theme-link");
 	const htmlElement = document.documentElement;
 	let currentMode = localStorage.getItem("theme") || "auto";
@@ -64,13 +149,22 @@ document.addEventListener("DOMContentLoaded", function () {
 			htmlElement.classList.add("dark-mode");
 			themeButton.textContent = "LIGHT";
 			localStorage.setItem("theme", "dark");
+
+			tooltip.style.backgroundColor = '#222222';
+			tooltip.style.color = '#F4F5F6';
 		} else if (mode === "light") {
 			htmlElement.classList.add("light-mode");
 			themeButton.textContent = "DARK";
 			localStorage.setItem("theme", "light");
+
+			tooltip.style.backgroundColor = '#f9f9f9';
+			tooltip.style.color = 'black';
 		} else {
 			themeButton.textContent = "DARK"; // Default when following system preference
 			localStorage.removeItem("theme"); // Remove manual selection
+
+			tooltip.style.backgroundColor = '#222222';
+			tooltip.style.color = '#F4F5F6';
 		}
 	}
 
@@ -83,8 +177,15 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Apply saved mode or let system decide
 	applyTheme(currentMode);
 
-	// Keyboard Shortcuts
+
+	// KEYBOARD SHORTCUTS
 	document.addEventListener("keydown", function (event) {
+		if (event.ctrlKey || event.altKey || event.metaKey) {
+			return; // Exit if Ctrl, Alt, or Meta keys are held down
+		}
+		if (event.target.tagName === "INPUT" || event.target.tagName === "TEXTAREA" || event.target.tagName === "SELECT") {
+			return; // Exit if typing text in fields.
+		}
 		if (event.key.toLowerCase() === "c") {
 			// Toggle floatingTOC visibility
 			if (floatingTOC) {
@@ -97,7 +198,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	});
 
-	// Image Gallery Viewer with Hover Effects
+
+	// IMAGE GALLERY VIEWER WITH HOVER EFFECTS
 	// Create overlay elements
 	const overlay = document.createElement('div');
 	overlay.className = 'image-overlay';

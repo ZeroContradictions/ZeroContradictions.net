@@ -214,8 +214,11 @@
 			applyTheme(currentMode);
 
 			document.addEventListener("keydown", function (event) {
+				if (event.ctrlKey || event.altKey || event.metaKey) {
+					return; // Exit if Ctrl, Alt, or Meta keys are held down
+				}
 				if (event.target.tagName === "INPUT" || event.target.tagName === "TEXTAREA" || event.target.tagName === "SELECT") {
-					return; // Exit early to prevent unintended actions
+					return; // Exit if typing text in fields.
 				}
 				if (event.key.toLowerCase() === "d") {
 					// Toggle dark mode based on current state
