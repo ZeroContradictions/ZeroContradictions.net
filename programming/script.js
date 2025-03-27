@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	// FOOTNOTE TOOLTIPS
 	// Create tooltip element
 	const tooltip = document.createElement('div');
-	tooltip.id = 'footnote-tooltip';
+	// tooltip.id = 'footnote-tooltip'; // This was never used.
 	tooltip.style.cssText = `
 	position: absolute;
 	background-color: #f4f5f6;
@@ -75,17 +75,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Select footnote references
 	const footrefs = document.querySelectorAll('a.footref');
-	console.log('Footnote references found:', footrefs.length);
+	// console.log('Footnote references found:', footrefs.length);
 
 	// Find footnote container within footnotes section
 	const footnoteSection = document.getElementById('footnotes');
-	console.log('Footnote section found:', !!footnoteSection);
+	// console.log('Footnote section found:', !!footnoteSection);
 
 	if (footnoteSection) {
 		footrefs.forEach(footref => {
 			// Extract footnote ID from href
 			const footnoteId = footref.getAttribute('href').substring(1);
-			console.log('Processing footnote ID:', footnoteId);
+			// console.log('Processing footnote ID:', footnoteId);
 
 			// Look for specific footnote container using more compatible selector
 			const correspondingFootnoteContainer = Array.from(
@@ -95,14 +95,14 @@ document.addEventListener("DOMContentLoaded", function () {
 				return footnoteLink !== null;
 			});
 
-			console.log('Corresponding footnote container:', correspondingFootnoteContainer);
+			// console.log('Corresponding footnote container:', correspondingFootnoteContainer);
 
 			// Find footnote paragraph
 			const footnoteParaElement = correspondingFootnoteContainer
 				  ? correspondingFootnoteContainer.closest('.footdef').querySelector('p.footpara')
 				  : null;
 
-			console.log('Footnote paragraph element:', footnoteParaElement);
+			// console.log('Footnote paragraph element:', footnoteParaElement);
 
 			if (correspondingFootnoteContainer) {
 				// Find footnote paragraph
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 				if (footnoteParaElement) {
 					footref.addEventListener('mouseover', (event) => {
-						console.log('Mouseover triggered');
+						// console.log('Mouseover triggered');
 						// Calculate tooltip position
 						const rect = event.target.getBoundingClientRect();
 
