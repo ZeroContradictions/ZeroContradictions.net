@@ -1,4 +1,4 @@
-/* Zero Contradictions Org-Mode Essays Javascript (https://zerocontradictions.net/programming/script.js) © 2025 by Zero Contradictions is licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) */
+/* Zero Contradictions Org-Mode Essays Javascript (https://zerocontradictions.net/programming/script.js) © 2025 by Zero Contradictions is licensed under CC0 1.0 Universal (https://creativecommons.org/publicdomain/zero/1.0/) */
 document.addEventListener("DOMContentLoaded", function () {
 	// NAVIGATION BAR
 	let topPanel = document.getElementById("org-div-home-and-up");
