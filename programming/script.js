@@ -12,6 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		floatingTOC.id = "floating-toc";
 		floatingTOC.style.display = "none";
 
+		// Changing id of <div> in floatingTOC to avoid HTML validation duplicate id error.
+		// Assuming floatingTOC is a DOM element
+		const firstDiv = floatingTOC.querySelector('div');
+		firstDiv.id = 'text-floating-TOC';
+
 		// Add floating TOC to body
 		document.body.appendChild(floatingTOC);
 	}
@@ -228,6 +233,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	const overlayImg = document.createElement('img');
 	overlayImg.className = 'overlay-img';
+	overlayImg.src = '/images/1x1-transparent-pixel.png';
 	overlayImg.style.cssText = `
 	max-width: 100%;
 	max-height: 80vh; /* Reduced to leave room for caption */
