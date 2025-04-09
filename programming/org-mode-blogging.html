@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2025 March 29, 04:52 -->
+<!-- 2025 April 09, 07:53 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>How to Design a Blog with Emacs and Org-Mode</title>
@@ -34,7 +34,8 @@
 <li><a href="#quality-vs-quantity">1.3. Quality Versus Quantity</a></li>
 <li><a href="#TOCs">1.4. Displaying Tables of Contents</a></li>
 <li><a href="#distinguishing-hyperlinks">1.5. Styling Links On Webpages</a></li>
-<li><a href="#static-site-generators">1.6. Static Site Generators</a></li>
+<li><a href="#navigation">1.6. How To Navigate This Site</a></li>
+<li><a href="#static-site-generators">1.7. Static Site Generators</a></li>
 </ul>
 </li>
 <li><a href="#org-mode-for-webpages">2. Using Org-Mode To Create Web Pages</a>
@@ -254,8 +255,57 @@ So, the benefit of displaying favicons is lower after considering this.
 </div>
 </div>
 
+<div id="outline-container-navigation" class="outline-3">
+<h3 id="navigation"><span class="section-number-3">1.6.</span> How To Navigate This Site</h3>
+<div class="outline-text-3" id="text-navigation">
+<p>
+The pages on this site has many similarities to an online encyclopedia.
+</p>
+
+<ul class="org-ul">
+<li>On every page, the navigation bar is displayed any time the user scrolls up.</li>
+<li>When reading the webpages, the reader will often see quote blocks and opponent blocks.
+Quote blocks feature blue coloring on the left side of the block (for indenting the text), and opponent blocks feature pink coloring on the left side of the block (for indenting the text), and</li>
+<li>Quote blocks are used for quoting text that I agree with that supports other text on the page.
+Whereas opponent blocks are used for stating arguments that I&rsquo;m responding to and/or questions that I&rsquo;m answering.</li>
+<li>There are keyboard shortcuts that people can use:
+<ul class="org-ul">
+<li>&ldquo;c&rdquo; : Toggle between showing and hiding TOC.</li>
+<li>&ldquo;d&rdquo; : Toggle between light and dark mode display.</li>
+<li>When using the image viewer:
+<ul class="org-ul">
+<li>← / → : Previous/Next image</li>
+<li>Space : Reset image size/position</li>
+<li>ESC : Close image viewer</li>
+</ul></li>
+</ul></li>
+<li>The image gallery displays on the content pages when clicking on an image file.
+The image gallery is useful for displaying images, magnifying images, navigating between images, and showing image captions and descriptions.</li>
+<li>Hovering over footnote reference numbers displays the corresponding footnotes as tooltips.</li>
+</ul>
+
+<p>
+There are often hatnotes and tail note hyperlinks at the beginning and ends of sections all over this site.
+The purpose of these links is to show additional webpages that readers may be interested in reading.
+This list shows the main types of hyperlink notes that may be shown across the site:
+</p>
+<ul class="org-ul">
+<li>Pre-Reading:</li>
+<li>See:</li>
+<li>See Also:</li>
+<li>Read:</li>
+<li>Read More:</li>
+<li>Video:</li>
+<li>Related Video:</li>
+<li>Related:</li>
+<li>Further Reading:</li>
+<li>Wikipedia:</li>
+</ul>
+</div>
+</div>
+
 <div id="outline-container-static-site-generators" class="outline-3">
-<h3 id="static-site-generators"><span class="section-number-3">1.6.</span> Static Site Generators</h3>
+<h3 id="static-site-generators"><span class="section-number-3">1.7.</span> Static Site Generators</h3>
 <div class="outline-text-3" id="text-static-site-generators">
 <p>
 Most people who want to start blogging and aren&rsquo;t using a Content Management System like Wordpress or Blogger should consider downloading and using a <a href="https://en.wikipedia.org/wiki/Static_site_generator">static site generator</a> (SSG).
@@ -276,9 +326,13 @@ Since I already knew how to export my .org files to HTML webpages, I never used 
 The reasons are complicated, but I encountered multiple problems when I last tried to switch to using a more full-fledged SSG in July 2023:
 </p>
 <ul class="org-ul">
-<li>It would take too much time for me to learn how SSGs work, how to configure them, and how to use them. I already have a system for creating and publishing my webpages that works for me.</li>
-<li>I&rsquo;d have to program Emacs keybindings for operating the SSG, lest I would have to use my command terminal to operate the SSG instead, which is inconvenient because then I&rsquo;d have to frequently switch between applications. This would be hard because I&rsquo;m terrible at Elisp (and programming in general).</li>
-<li>Most static site generators use Markdown instead of Org-Mode. Although Hugo is compatible with org-mode, there weren&rsquo;t enough tutorials and documentation for showing how to use Hugo with org-mode when I tried to switch over. However, it&rsquo;s possible that Hugo may develop better documentation for writing with org-mode in the future.
+<li>It would take too much time for me to learn how SSGs work, how to configure them, and how to use them.
+I already have a system for creating and publishing my webpages that works for me.</li>
+<li>I&rsquo;d have to program Emacs keybindings for operating the SSG, lest I would have to use my command terminal to operate the SSG instead, which is inconvenient because then I&rsquo;d have to frequently switch between applications.
+This would be hard because I&rsquo;m terrible at Elisp (and programming in general).</li>
+<li>Most static site generators use Markdown instead of Org-Mode.
+Although Hugo is compatible with org-mode, there weren&rsquo;t enough tutorials and documentation for showing how to use Hugo with org-mode when I tried to switch over.
+However, it&rsquo;s possible that Hugo may develop better documentation for writing with org-mode in the future.
 <ul class="org-ul">
 <li>Hypothetically, I could switch to using Markdown to write my webpages, but that would take time, it could create confusion and syntax errors if I switch, and most importantly, I&rsquo;d lose the ability to export my .org content to other formats, like .tex, .pdf, .txt, .odt, etc.</li>
 </ul></li>
@@ -295,7 +349,8 @@ There are still some benefits for creating and publishing content that SSGs woul
 <li>It would be easier to create RSS feeds.</li>
 <li>They provide templates for writing webpages.</li>
 <li>They provide text summarizers for writing webpage descriptions and such.</li>
-<li>They could create a search index that readers could use to search my website&rsquo;s content. Thus, the search bar on my homepage wouldn&rsquo;t have to use an external search engine like DuckDuckGo.</li>
+<li>They could create a search index that readers could use to search my website&rsquo;s content.
+Thus, the search bar on my homepage wouldn&rsquo;t have to use an external search engine like Yandex or DuckDuckGo.</li>
 <li>They can create better image galleries.</li>
 <li>There are many other plugins for SSGs that make it easier to create content.</li>
 </ul>
@@ -353,7 +408,8 @@ There are multiple reasons to set org variables with <code>config.el</code> inst
 <li>It makes the compilation of your org files less prone to errors, assuming that you export a lot of them.</li>
 <li>It ensures that all org files export the same way each time, aside from any customizations using local file org variables.</li>
 <li>If you later decide to that you want to change something across <i>all</i> your .org files, it&rsquo;s easier to just edit one file (<code>config.el</code>) instead of editing every single org file.</li>
-<li>If you&rsquo;re only going to export org file variables for one purpose or similar purposes, then you don&rsquo;t have to copy as many local org file variables to each new file to do the same things, and the org files will collectively take up less file space. This also gives the beginnings of the org files a cleaner appearance.</li>
+<li>If you&rsquo;re only going to export org file variables for one purpose or similar purposes, then you don&rsquo;t have to copy as many local org file variables to each new file to do the same things, and the org files will collectively take up less file space.
+This also gives the beginnings of the org files a cleaner appearance.</li>
 </ul>
 
 <p>
@@ -404,6 +460,18 @@ I managed to make those variables add additional hyperlinks to each page by inse
 I also wrote CSS and JS code to customize <code>#org-div-home-and-up</code> so that it displays as a navigation bar on every page.
 Unfortunately, I can&rsquo;t change the text of the &lt;UP&gt; hyperlink without writing more Javascript code, since it&rsquo;s hardcoded into org-mode.
 </p>
+
+<hr>
+<p>
+For some reason, the org-mode HTML exporter inserted role=&ldquo;doc-backlink&rdquo; instead of role=&ldquo;doc-noteref&rdquo; into the footnote reference links, so I had to create a function inside <code>config.el</code> that overrides the normal org-mode exporter behavior:
+</p>
+<pre class="example">
+(defun my/org-html-footnote-reference (footnote-reference _contents info)
+  "Custom footnote reference without role='doc-backlink'."
+  (let ((n (org-export-get-footnote-number footnote-reference info)))
+    (format "&lt;a id=\"fnr.%d\" class=\"footref\" href=\"#fn.%d\" role=\"doc-noteref\"&gt;[%d]&lt;/a&gt;" n n n)))
+(advice-add 'org-html-footnote-reference :override #'my/org-html-footnote-reference)
+</pre>
 </div>
 </div>
 
@@ -576,7 +644,7 @@ You may also combine alignment and field width like this: &rsquo;&lt;r10&gt;&rsq
 <p>
 Org-mode makes it possible to create custom <a href="https://orgmode.org/worg/org-contrib/org-special-blocks.html">org-special-blocks</a>.
 For all org-mode versions greater than 8.0, their functionality is built into org-mode, so you can start using them right away.
-org-special-blocks<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> have the form of <code>#+begin_X</code> and <code>#+end_X</code>.
+org-special-blocks<a id="fnr.1" class="footref" href="#fn.1" role="doc-noteref">[1]</a> have the form of <code>#+begin_X</code> and <code>#+end_X</code>.
 If you&rsquo;d like to create a keybinding for automatically inserting them, you just need to edit the Emacs variable <code>org-structure-template-alist</code> to have the key binding and text that you want these blocks to have.
 In order to customize the CSS of these blocks, you just need to <a href="https://kitchingroup.cheme.cmu.edu/blog/2013/11/30/Custom-directives/">write a CSS class that is the same as the block</a>, and include the CSS properties that you want the output to have.
 You can also write LaTeX code for customizing the LaTeX output of org-special-blocks.
@@ -855,6 +923,7 @@ More Advice for SEO:
 <li>In particular, one may want to write robots.txt rule to prevent the Internet Archive bot, <code>ia_archiver</code> from archiving some or all of their webpages.</li>
 </ul></li>
 <li><a href="https://search.google.com/search-console/welcome">Google Search Console</a> (GSC). GSC provides many tools for monitoring your website&rsquo;s traffic on Google.</li>
+<li><a href="https://www.w3.org/TR/dpub-aria-1.0/">Digital Publishing WAI-ARIA Module 1.0</a>.</li>
 <li><a href="https://ahrefs.com/blog/how-to-use-google-analytics/#what-is-google-analytics">How To Setup Google Analytics</a>
 <ul class="org-ul">
 <li>For Org-Mode users, you can add Google Analytics to your webpages by using the <code>#+html_head:</code> keyword syntax to include the <code>gtag.js</code> code in the exported HTML output.</li>
@@ -956,7 +1025,7 @@ I haven&rsquo;t figured out how to control the formatting and syntax highlightin
 </div>
 </div></div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2025 March 29, 04:52</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2025 April 09, 07:53</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>
