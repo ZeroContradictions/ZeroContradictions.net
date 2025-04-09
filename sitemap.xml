@@ -287,11 +287,6 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 	<priority>0.60</priority>
 </url>
 <url>
-	<loc>https://zerocontradictions.net/programming/programming-project-ideas</loc>
-	<lastmod>2025-03-20</lastmod>
-	<priority>0.60</priority>
-</url>
-<url>
 	<loc>https://zerocontradictions.net/misc/response-to-ratwiki-pragmatosphere-article</loc>
 	<lastmod>2025-03-20</lastmod>
 	<priority>0.60</priority>
