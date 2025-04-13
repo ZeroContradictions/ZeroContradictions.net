@@ -206,7 +206,9 @@ figcaption, img {
 
 .footdef { margin-bottom: 1rem; }
 
-.footref, .footnum { font-size: 130%; }
+.footref, .footnum { font-size: 100%; }
+/* .footref, .footnum { font-size: 130%; } */
+/* Change back to 130% font-size, if you figure out how to get superscripts working again. */
 
 .timestamp { color: #005500; }
 
