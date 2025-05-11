@@ -57,18 +57,7 @@
 		/* Display as single column for short screen widths */
 		@media screen and (max-width: 50em) {#left-column, #middle-column, #right-column {width: 100%;} }
 
-		#form.sticky {
-			position: fixed;
-			top: 0;
-			right: 0;
-			width: 100%;
-			background-color: #eee;
-			padding: 0.25em;
-			box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1);
-			display: flex;
-			justify-content: center;
-			transform: none;
-		}
+		#form.sticky {position: fixed; top: 0; right: 0; width: 100%; background-color: #eee; padding: 0.25em; box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1); display: flex; justify-content: center; transform: none;}
 
 		@media (prefers-color-scheme: light) {body {background-color: #F4F5F6; color: black;} }
 		@media (prefers-color-scheme: dark) {header {border-bottom-color: white;} body {background-color: black; color: white;} a.hlink {color: white} hr, h1, h2, h3 {border-top: solid white;} }
@@ -76,13 +65,13 @@
 		.light-mode body {background-color: #F4F5F6; color: black;}
 		.light-mode hr, .dark-mode h1, .dark-mode h2, .dark-mode h3 {border-top: solid black;}
 		.light-mode a.hlink {color: black;}
-		.light-mode #form.sticky {background: #eee; color: black;}
+		html.light-mode #form.sticky, body.light-mode #form.sticky {background-color: #eee !important; color: black;}
 
 		.dark-mode body {background-color: black; color: white;}
 		.dark-mode hr, .dark-mode h1, .dark-mode h2, .dark-mode h3 {border-top: solid white;}
 		.dark-mode a.hlink {color: white}
 		.dark-mode .noline {border: none}
-		.dark-mode #form.sticky {background-color: #222222; color: white;}
+		html.dark-mode #form.sticky, body.dark-mode #form.sticky {background-color: #222222 !important; color: white;}
 	</style>
 </head>
 
