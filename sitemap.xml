@@ -332,6 +332,11 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 	<priority>0.70</priority>
 </url>
 <url>
+	<loc>https://zerocontradictions.net/misc/efilism-wikipedia-ZC-fork-2025-06-05.pdf</loc>
+	<lastmod>2025-06-05</lastmod>
+	<priority>0.70</priority>
+</url>
+<url>
 	<loc>https://zerocontradictions.net/language/math-modeling-phonology.pdf</loc>
 	<lastmod>2024-05-27</lastmod>
 	<priority>0.70</priority>
