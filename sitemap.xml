@@ -332,6 +332,11 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 	<priority>0.70</priority>
 </url>
 <url>
+	<loc>https://zerocontradictions.net/epistemology/cultural-philistine-transcripts</loc>
+	<lastmod>2025-06-08</lastmod>
+	<priority>0.70</priority>
+</url>
+<url>
 	<loc>https://zerocontradictions.net/misc/efilism-wikipedia-ZC-fork-2025-june.pdf</loc>
 	<lastmod>2025-06-06</lastmod>
 	<priority>0.70</priority>
