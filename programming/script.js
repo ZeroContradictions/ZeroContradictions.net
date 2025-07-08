@@ -416,32 +416,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	.zoom-cursor {
 	  cursor: zoom-in;
 	}
-	.gallery-tooltip {
-	  position: absolute !important;
-	  bottom: 10px !important;
-	  left: 50% !important;
-	  transform: translateX(-50%) !important;
-	  background-color: rgba(0, 0, 0, 0.7) !important;
-	  color: white !important;
-	  padding: 5px 10px !important;
-	  border-radius: 3px !important;
-	  font-size: 12px !important;
-	  opacity: 0 !important;
-	  transition: opacity 0.3s ease !important;
-	  pointer-events: none !important;
-	  z-index: 10 !important;
-	}
-	.gallery-img-wrapper {
-	  position: relative !important;
-	  overflow: visible !important;
-	  vertical-align: middle !important;
-	}
-	.gallery-img-wrapper:hover .gallery-tooltip {
-	  opacity: 1 !important;
-	}
-	.gallery-img-wrapper:hover img {
-	  cursor: zoom-in !important;
-	}
   `;
 	document.head.appendChild(cursorCSS);
 
@@ -474,89 +448,64 @@ document.addEventListener("DOMContentLoaded", function () {
 		// Process only new images that haven't been initialized
 		allImages.forEach((img, index) => {
 			if (!img.dataset.galleryInitialized) {
-				// Skip SVG initialization if we can't display it properly in the overlay
-				if (isSVG(img)) {
-					// Just add a click event to open the SVG in overlay without wrapper modification
-					img.addEventListener('click', function() {
-						openOverlay(images.indexOf(img));
-					});
-					img.style.cursor = 'pointer';
-					img.dataset.galleryInitialized = 'true';
-					if (!images.includes(img)) {
-						images.push(img);
+				// For ALL images (including SVGs), use minimal approach
+				// Don't create wrappers that can interfere with layout
+
+				// Add click event directly to the image
+				img.addEventListener('click', function() {
+					const currentImages = Array.from(document.querySelectorAll('img:not(.overlay-img)'))
+						.filter(i => i.dataset.galleryInitialized === 'true');
+					const imgIndex = currentImages.indexOf(img);
+					openOverlay(imgIndex);
+				});
+
+				// Add hover effects directly to image
+				img.addEventListener('mouseenter', function() {
+					img.style.cursor = 'zoom-in';
+					// Create temporary tooltip
+					if (!img.galleryTooltip) {
+						const tooltip = document.createElement('div');
+						tooltip.className = 'gallery-tooltip-temp';
+						tooltip.textContent = 'Click to enlarge';
+						tooltip.style.cssText = `
+							position: absolute;
+							background-color: rgba(0, 0, 0, 0.7);
+							color: white;
+							padding: 5px 10px;
+							border-radius: 3px;
+							font-size: 12px;
+							pointer-events: none;
+							z-index: 1000;
+							opacity: 0;
+							transition: opacity 0.3s ease;
+						`;
+						document.body.appendChild(tooltip);
+						img.galleryTooltip = tooltip;
 					}
-					return;
-				}
 
-				// Get computed styles of original image
-				const computedStyle = window.getComputedStyle(img);
-				const displayStyle = computedStyle.display;
-				const marginLeft = computedStyle.marginLeft;
-				const marginRight = computedStyle.marginRight;
-				const float = computedStyle.float;
-				const textAlign = window.getComputedStyle(img.parentNode).textAlign;
+					// Position tooltip and show it
+					const rect = img.getBoundingClientRect();
+					const tooltip = img.galleryTooltip;
+					tooltip.style.left = (rect.left + rect.width / 2 - tooltip.offsetWidth / 2) + 'px';
+					tooltip.style.top = (rect.bottom - 30) + 'px';
+					tooltip.style.opacity = '1';
+				});
 
-				// Create wrapper to contain the image and the tooltip
-				const wrapper = document.createElement('div');
-				wrapper.className = 'gallery-img-wrapper';
+				img.addEventListener('mouseleave', function() {
+					img.style.cursor = '';
+					if (img.galleryTooltip) {
+						img.galleryTooltip.style.opacity = '0';
+					}
+				});
 
-				// Apply styles that preserve alignment including float
-				const wrapperStyles = [];
-
-				// Handle display style
-				wrapperStyles.push(`display: ${displayStyle === 'inline' ? 'inline-block' : displayStyle}`);
-
-				// Handle margins
-				if (marginLeft === marginRight && marginLeft !== '0px') {
-					wrapperStyles.push(`margin-left: ${marginLeft}; margin-right: ${marginRight};`);
-				} else {
-					wrapperStyles.push(`margin-left: ${marginLeft}; margin-right: ${marginRight};`);
-				}
-
-				// Handle center alignment cases
-				if (marginLeft === 'auto' && marginRight === 'auto') {
-					wrapperStyles.push('margin-left: auto; margin-right: auto; display: block;');
-				}
-
-				// Handle floating images - this preserves float alignment
-				if (float && float !== 'none') {
-					wrapperStyles.push(`float: ${float};`);
-				}
-
-				// Handle text alignment
-				if (textAlign === 'center') {
-					wrapperStyles.push('text-align: center;');
-				}
-
-				// Width handling
-				if (img.style.width) {
-					wrapperStyles.push(`width: ${img.style.width};`);
-				}
-
-				if (wrapperStyles.length > 0) {
-					wrapper.style.cssText = wrapperStyles.join(';');
-				}
-
-				// Create tooltip
-				const tooltip = document.createElement('div');
-				tooltip.className = 'gallery-tooltip';
-				tooltip.textContent = 'Click to enlarge';
-
-				// Move the original image into the wrapper (don't clone)
-				const parent = img.parentNode;
-				parent.insertBefore(wrapper, img);
-				wrapper.appendChild(img);
-				wrapper.appendChild(tooltip);
-
-				// Add click event to wrapper
-				wrapper.addEventListener('click', function() {
-					openOverlay(images.indexOf(img));
+				// Clean up tooltip when image is removed
+				img.addEventListener('DOMNodeRemoved', function() {
+					if (img.galleryTooltip) {
+						img.galleryTooltip.remove();
+					}
 				});
 
 				img.dataset.galleryInitialized = 'true';
-				if (!images.includes(img)) {
-					images.push(img);
-				}
 			}
 		});
 
