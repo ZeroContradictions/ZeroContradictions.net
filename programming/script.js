@@ -416,6 +416,32 @@ document.addEventListener("DOMContentLoaded", function () {
 	.zoom-cursor {
 	  cursor: zoom-in;
 	}
+	.gallery-tooltip {
+	  position: absolute !important;
+	  bottom: 10px !important;
+	  left: 50% !important;
+	  transform: translateX(-50%) !important;
+	  background-color: rgba(0, 0, 0, 0.7) !important;
+	  color: white !important;
+	  padding: 5px 10px !important;
+	  border-radius: 3px !important;
+	  font-size: 12px !important;
+	  opacity: 0 !important;
+	  transition: opacity 0.3s ease !important;
+	  pointer-events: none !important;
+	  z-index: 10 !important;
+	}
+	.gallery-img-wrapper {
+	  position: relative !important;
+	  overflow: visible !important;
+	  vertical-align: middle !important;
+	}
+	.gallery-img-wrapper:hover .gallery-tooltip {
+	  opacity: 1 !important;
+	}
+	.gallery-img-wrapper:hover img {
+	  cursor: zoom-in !important;
+	}
   `;
 	document.head.appendChild(cursorCSS);
 
@@ -443,11 +469,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Find all images on page
 	function collectImages() {
-		images = Array.from(document.querySelectorAll('img:not(.overlay-img)'));
+		const allImages = Array.from(document.querySelectorAll('img:not(.overlay-img)'));
 
-		// Add events to each image
-		images.forEach((img, index) => {
+		// Process only new images that haven't been initialized
+		allImages.forEach((img, index) => {
 			if (!img.dataset.galleryInitialized) {
+				// Skip SVG initialization if we can't display it properly in the overlay
+				if (isSVG(img)) {
+					// Just add a click event to open the SVG in overlay without wrapper modification
+					img.addEventListener('click', function() {
+						openOverlay(images.indexOf(img));
+					});
+					img.style.cursor = 'pointer';
+					img.dataset.galleryInitialized = 'true';
+					if (!images.includes(img)) {
+						images.push(img);
+					}
+					return;
+				}
+
 				// Get computed styles of original image
 				const computedStyle = window.getComputedStyle(img);
 				const displayStyle = computedStyle.display;
@@ -456,26 +496,12 @@ document.addEventListener("DOMContentLoaded", function () {
 				const float = computedStyle.float;
 				const textAlign = window.getComputedStyle(img.parentNode).textAlign;
 
-				// Skip SVG initialization if we can't display it properly in the overlay
-				if (isSVG(img)) {
-					// Just add a click event to open the SVG in overlay without wrapper modification
-					img.addEventListener('click', function() {
-						openOverlay(index);
-					});
-					img.dataset.galleryInitialized = 'true';
-					return;
-				}
-
 				// Create wrapper to contain the image and the tooltip
 				const wrapper = document.createElement('div');
 				wrapper.className = 'gallery-img-wrapper';
 
 				// Apply styles that preserve alignment including float
-				const wrapperStyles = [
-					'position: relative',
-					'overflow: visible',
-					'vertical-align: middle'
-				];
+				const wrapperStyles = [];
 
 				// Handle display style
 				wrapperStyles.push(`display: ${displayStyle === 'inline' ? 'inline-block' : displayStyle}`);
@@ -507,72 +533,35 @@ document.addEventListener("DOMContentLoaded", function () {
 					wrapperStyles.push(`width: ${img.style.width};`);
 				}
 
-				wrapper.style.cssText = wrapperStyles.join(';');
+				if (wrapperStyles.length > 0) {
+					wrapper.style.cssText = wrapperStyles.join(';');
+				}
 
 				// Create tooltip
 				const tooltip = document.createElement('div');
 				tooltip.className = 'gallery-tooltip';
 				tooltip.textContent = 'Click to enlarge';
-				tooltip.style.cssText = `
-					position: absolute;
-					bottom: 10px;
-					left: 50%;
-					transform: translateX(-50%);
-					background-color: rgba(0, 0, 0, 0.7);
-					color: white;
-					padding: 5px 10px;
-					border-radius: 3px;
-					font-size: 12px;
-					opacity: 0;
-					transition: opacity 0.3s ease;
-					pointer-events: none;
-					z-index: 10;
-				`;
 
-				// Clone original image to preserve all attributes and properties
-				const imgClone = img.cloneNode(true);
-
-				// Copy any inline styles from original image
-				if (img.getAttribute('style')) {
-					// Remove any position styles that might conflict with our gallery
-					const inlineStyles = img.getAttribute('style')
-						.split(';')
-						.filter(style => !style.trim().startsWith('position:'))
-						.join(';');
-					imgClone.setAttribute('style', inlineStyles);
-				}
-
-				// Preserve class names for any CSS styling
-				imgClone.className = img.className;
-
-				// Replace image with wrapper and use the clone
+				// Move the original image into the wrapper (don't clone)
 				const parent = img.parentNode;
-				parent.replaceChild(wrapper, img);
-				wrapper.appendChild(imgClone);
+				parent.insertBefore(wrapper, img);
+				wrapper.appendChild(img);
 				wrapper.appendChild(tooltip);
 
-				// Update images array to reference new cloned image
-				images[index] = imgClone;
-
-				// Add hover effects
-				wrapper.addEventListener('mouseenter', function() {
-					tooltip.style.opacity = '1';
-					imgClone.classList.add('zoom-cursor');
-				});
-
-				wrapper.addEventListener('mouseleave', function() {
-					tooltip.style.opacity = '0';
-					imgClone.classList.remove('zoom-cursor');
-				});
-
-				// Add click event
+				// Add click event to wrapper
 				wrapper.addEventListener('click', function() {
-					openOverlay(index);
+					openOverlay(images.indexOf(img));
 				});
 
-				imgClone.dataset.galleryInitialized = 'true';
+				img.dataset.galleryInitialized = 'true';
+				if (!images.includes(img)) {
+					images.push(img);
+				}
 			}
 		});
+
+		// Update images array to include all initialized images
+		images = allImages.filter(img => img.dataset.galleryInitialized === 'true');
 	}
 
 	// Get caption for an image
