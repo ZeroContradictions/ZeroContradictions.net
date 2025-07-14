@@ -43,6 +43,28 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	});
 
+	// Ensure main content has enough top margin to avoid being covered by topPanel
+	function adjustContentMargin() {
+		if (topPanel) {
+			const topPanelHeight = topPanel.offsetHeight;
+			const mainContent = document.querySelector('main, #content, .content, body > div:first-child');
+
+			if (mainContent) {
+				const currentMarginTop = parseInt(window.getComputedStyle(mainContent).marginTop) || 0;
+				const requiredMargin = Math.max(currentMarginTop, topPanelHeight + 10); // 10px buffer
+				mainContent.style.marginTop = requiredMargin + 'px';
+			} else {
+				// Fallback: add margin to body if no main content container found
+				const currentBodyMarginTop = parseInt(window.getComputedStyle(document.body).marginTop) || 0;
+				const requiredMargin = Math.max(currentBodyMarginTop, topPanelHeight + 10);
+				document.body.style.marginTop = requiredMargin + 'px';
+			}
+		}
+	}
+
+	// Apply margin adjustment after page loads
+	setTimeout(adjustContentMargin, 100);
+
 	window.addEventListener("scroll", function () {
 		const currentScrollY = window.scrollY;
 
@@ -56,6 +78,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 
 		lastScrollY = currentScrollY;
+	});
+
+	// Re-adjust margin on window resize (important for mobile orientation changes)
+	window.addEventListener("resize", function() {
+		setTimeout(adjustContentMargin, 100);
 	});
 
 
