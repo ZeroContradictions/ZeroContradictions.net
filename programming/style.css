@@ -242,7 +242,7 @@ hr {
 h1 {
 	max-width: 100%;
 	margin: 0 auto;
-	padding-top: 1rem;
+	padding-top: 1.1rem; /* Unfortunately, this causes a lot of white space to appear above <h1> on pages, but it's better than having top panel partially cover <h1> on narrow screens, especially mobile devices. Don't change this. */
 	font-size: 2.0rem;
 }
 
