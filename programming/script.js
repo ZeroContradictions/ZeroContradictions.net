@@ -302,7 +302,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	helpButton.style.cssText = `
 	position: fixed;
 	bottom: 20px;
-	right: 20px;
+	left: 20px;
 	background-color: rgba(0, 0, 0, 0.6);
 	color: white;
 	width: 50px;
@@ -322,13 +322,13 @@ document.addEventListener("DOMContentLoaded", function () {
 	helpTooltip.className = 'help-tooltip';
 	helpTooltip.style.cssText = `
 	position: absolute;
-	bottom: 40px;
-	right: 0;
+	bottom: 60px;
+	left: 0;
 	background-color: rgba(0, 0, 0, 0.8);
 	color: white;
 	padding: 10px;
 	border-radius: 5px;
-	width: 500px;
+	width: 400px;
 	font-size: 30px;
 	line-height: 1.5;
 	opacity: 0;
@@ -338,52 +338,65 @@ document.addEventListener("DOMContentLoaded", function () {
   `;
 	helpTooltip.innerHTML = `
 	<strong>Keyboard Shortcuts:</strong><br>
-	← / → : Previous/Next image<br>
-	Space : Reset image size/position<br>
+	← / → : Prev/Next image<br>
+	Space : Reset size/position<br>
 	ESC : Close viewer<br>
-	c : Show Table of Contents<br>
-	d : Dark/Light Mode
+	c : Show TOC<br>
+	d : Dark/Light Mode<br>
+	<strong>Tip:</strong> On narrow screens, rotate device for better image viewing.
   `;
 	// Double-click : Reset size/position<br>
 	// Mouse wheel : Zoom in/out<br>
 	// Drag : Pan image when zoomed
 
-	// Navigation arrows
+	// Navigation arrows - positioned at bottom right
 	const prevArrow = document.createElement('div');
 	prevArrow.className = 'nav-arrow prev';
 	prevArrow.innerHTML = '&#10094;';
 	prevArrow.style.cssText = `
-	position: absolute;
-	top: 50%;
-	left: 20px;
-	font-size: 40px;
+	position: fixed;
+	bottom: 20px;
+	left: 90px;
+	background-color: rgba(0, 0, 0, 0.6);
 	color: white;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	cursor: pointer;
-	user-select: none;
-	opacity: 0.7;
-	transition: opacity 0.2s;
+	font-size: 36px;
 	z-index: 1010;
+	transition: background-color 0.3s;
+	user-select: none;
   `;
-	prevArrow.onmouseover = () => prevArrow.style.opacity = '1';
-	prevArrow.onmouseout = () => prevArrow.style.opacity = '0.7';
+	prevArrow.onmouseover = () => prevArrow.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+	prevArrow.onmouseout = () => prevArrow.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
 
 	const nextArrow = document.createElement('div');
 	nextArrow.className = 'nav-arrow next';
 	nextArrow.innerHTML = '&#10095;';
 	nextArrow.style.cssText = `
-	position: absolute;
-	top: 50%;
-	right: 20px;
-	font-size: 40px;
+	position: fixed;
+	bottom: 20px;
+	left: 150px;
+	background-color: rgba(0, 0, 0, 0.6);
 	color: white;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	cursor: pointer;
-	user-select: none;
-	opacity: 0.7;
-	transition: opacity 0.2s;
+	font-size: 36px;
 	z-index: 1010;
+	transition: background-color 0.3s;
+	user-select: none;
   `;
-	nextArrow.onmouseover = () => nextArrow.style.opacity = '1';
-	nextArrow.onmouseout = () => nextArrow.style.opacity = '0.7';
+	nextArrow.onmouseover = () => nextArrow.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+	nextArrow.onmouseout = () => nextArrow.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
 
 	// Help button hover effect
 	helpButton.addEventListener('mouseenter', function() {
@@ -589,8 +602,8 @@ document.addEventListener("DOMContentLoaded", function () {
 			prevArrow.style.display = 'none';
 			nextArrow.style.display = 'none';
 		} else {
-			prevArrow.style.display = 'block';
-			nextArrow.style.display = 'block';
+			prevArrow.style.display = 'flex';
+			nextArrow.style.display = 'flex';
 		}
 	}
 
