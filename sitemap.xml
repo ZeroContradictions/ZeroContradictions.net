@@ -93,7 +93,7 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
 	<loc>https://zerocontradictions.net/epistemology/evolution</loc>
 	<lastmod>2025-04-09</lastmod>
-	<priority>0.80</priority>
+	<priority>0.85</priority>
 </url>
 <url>
 	<loc>https://zerocontradictions.net/epistemology/axiology</loc>
@@ -128,12 +128,12 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
 	<loc>https://zerocontradictions.net/civilization/climate-change</loc>
 	<lastmod>2025-04-09</lastmod>
-	<priority>0.80</priority>
+	<priority>0.85</priority>
 </url>
 <url>
 	<loc>https://zerocontradictions.net/civilization/case-against-libertarianism</loc>
 	<lastmod>2025-04-09</lastmod>
-	<priority>0.80</priority>
+	<priority>0.85</priority>
 </url>
 <url>
 	<loc>https://zerocontradictions.net/misc/critiquing-ayn-rands-objectivism</loc>
@@ -148,7 +148,7 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
 	<loc>https://zerocontradictions.net/faqs/demurrage</loc>
 	<lastmod>2025-04-29</lastmod>
-	<priority>0.80</priority>
+	<priority>0.85</priority>
 </url>
 <url>
 	<loc>https://zerocontradictions.net/faqs/immigration</loc>
@@ -203,7 +203,7 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
 	<loc>https://zerocontradictions.net/civilization/economics</loc>
 	<lastmod>2025-04-09</lastmod>
-	<priority>0.60</priority>
+	<priority>0.80</priority>
 </url>
 <url>
 	<loc>https://zerocontradictions.net/civilization/bullshit-jobs-critique</loc>
@@ -213,12 +213,12 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
 	<loc>https://zerocontradictions.net/civilization/geopolitics</loc>
 	<lastmod>2025-04-09</lastmod>
-	<priority>0.60</priority>
+	<priority>0.70</priority>
 </url>
 <url>
 	<loc>https://zerocontradictions.net/civilization/democracy</loc>
 	<lastmod>2025-04-09</lastmod>
-	<priority>0.80</priority>
+	<priority>0.85</priority>
 </url>
 <url>
 	<loc>https://zerocontradictions.net/civilization/wokism</loc>
@@ -233,23 +233,23 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
 	<loc>https://zerocontradictions.net/civilization/ashkenazi-jewish-IQ</loc>
 	<lastmod>2025-04-09</lastmod>
-	<priority>0.60</priority>
+	<priority>0.80</priority>
 </url>
 <url>
 	<loc>https://zerocontradictions.net/civilization/r-k-selection-critique</loc>
 	<lastmod>2025-04-09</lastmod>
-	<priority>0.80</priority>
+	<priority>0.85</priority>
 </url>
 
 <url>
 	<loc>https://zerocontradictions.net/misc/case-against-efilism</loc>
 	<lastmod>2025-04-09</lastmod>
-	<priority>0.80</priority>
+	<priority>0.85</priority>
 </url>
 <url>
 	<loc>https://zerocontradictions.net/programming/org-mode-blogging</loc>
 	<lastmod>2025-04-09</lastmod>
-	<priority>0.80</priority>
+	<priority>0.85</priority>
 </url>
 <url>
 	<loc>https://zerocontradictions.net/programming/emacs-and-keyboard-setup</loc>
@@ -269,7 +269,7 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
 	<loc>https://zerocontradictions.net/misc/life-advice</loc>
 	<lastmod>2025-04-09</lastmod>
-	<priority>0.70</priority>
+	<priority>0.80</priority>
 </url>
 <url>
 	<loc>https://zerocontradictions.net/misc/case-against-carnivore-diet</loc>
@@ -279,7 +279,7 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
 	<loc>https://zerocontradictions.net/civilization/lockdowns</loc>
 	<lastmod>2025-04-09</lastmod>
-	<priority>0.70</priority>
+	<priority>0.80</priority>
 </url>
 <url>
 	<loc>https://zerocontradictions.net/misc/philosophical-journey</loc>
@@ -332,8 +332,18 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 	<priority>0.70</priority>
 </url>
 <url>
+	<loc>https://zerocontradictions.net/epistemology/lanza-analysis</loc>
+	<lastmod>2025-07-12</lastmod>
+	<priority>0.80</priority>
+</url>
+<url>
+	<loc>https://zerocontradictions.net/misc/lanzas-pedophilia-essay</loc>
+	<lastmod>2025-07-12</lastmod>
+	<priority>0.80</priority>
+</url>
+<url>
 	<loc>https://zerocontradictions.net/epistemology/cultural-philistine-transcripts</loc>
-	<lastmod>2025-06-08</lastmod>
+	<lastmod>2025-07-12</lastmod>
 	<priority>0.70</priority>
 </url>
 <url>
