@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2025 September 24, 12:29 -->
+<!-- 2025 November 09, 12:32 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>How to Design a Blog with Emacs and Org-Mode</title>
@@ -29,13 +29,14 @@
 <ul>
 <li><a href="#website-design-philosophy">1. Website Design Philosophy</a>
 <ul>
-<li><a href="#writing-advice">1.1. Advice For Writing Content</a></li>
-<li><a href="#writing-books">1.2. Writing Books Or Not</a></li>
-<li><a href="#quality-vs-quantity">1.3. Quality Versus Quantity</a></li>
-<li><a href="#TOCs">1.4. Displaying Tables of Contents</a></li>
-<li><a href="#distinguishing-hyperlinks">1.5. Styling Links On Webpages</a></li>
-<li><a href="#navigation">1.6. How To Navigate This Site</a></li>
-<li><a href="#static-site-generators">1.7. Static Site Generators</a></li>
+<li><a href="#website-format">1.1. Website Format: Minimalist Compendium</a></li>
+<li><a href="#writing-advice">1.2. Advice For Writing Content</a></li>
+<li><a href="#writing-books">1.3. Writing Books Or Not</a></li>
+<li><a href="#quality-vs-quantity">1.4. Quality Versus Quantity</a></li>
+<li><a href="#TOCs">1.5. Displaying Tables of Contents</a></li>
+<li><a href="#distinguishing-hyperlinks">1.6. Styling Links On Webpages</a></li>
+<li><a href="#navigation">1.7. How To Navigate This Site</a></li>
+<li><a href="#static-site-generators">1.8. Static Site Generators</a></li>
 </ul>
 </li>
 <li><a href="#org-mode-for-webpages">2. Using Org-Mode To Create Web Pages</a>
@@ -48,8 +49,9 @@
 </li>
 <li><a href="#creating-CSS">3. Creating CSS For Webpages</a>
 <ul>
-<li><a href="#CSS-for-org-mode">3.1. CSS For Org-Mode HTML Exports</a></li>
-<li><a href="#homepage-template">3.2. Using Zero Contradictions&rsquo; Homepage Template</a></li>
+<li><a href="#how-learned-CSS">3.1. How I Learned And Wrote CSS</a></li>
+<li><a href="#CSS-for-org-mode">3.2. CSS For Org-Mode HTML Exports</a></li>
+<li><a href="#homepage-template">3.3. Using Zero Contradictions&rsquo; Homepage Template</a></li>
 </ul>
 </li>
 <li><a href="#copyrighting-and-licensing">4. Copyrighting And Licensing</a>
@@ -70,6 +72,10 @@
 <div id="outline-container-website-design-philosophy" class="outline-2">
 <h2 id="website-design-philosophy"><span class="section-number-2">1.</span> Website Design Philosophy</h2>
 <div class="outline-text-2" id="text-website-design-philosophy">
+</div>
+<div id="outline-container-website-format" class="outline-3">
+<h3 id="website-format"><span class="section-number-3">1.1.</span> Website Format: Minimalist Compendium</h3>
+<div class="outline-text-3" id="text-website-format">
 <p>
 When it comes to media, I&rsquo;ve always preferred a minimalist, mostly text-based design, similar to the kind advocated by the <a href="https://1mb.club/about">1MB Club</a>.
 Flashy image-loaded designs can&rsquo;t communicate as much distilled, easy-to-digest information, and they also require extra web development and longer loading times.
@@ -83,16 +89,40 @@ The homepage&rsquo;s .html file was created by using <a href="https://www.joshca
 I replaced all the old HTML4 code with HTML5 code, and customized it with my own style, formatting, and content.
 </p>
 
+<hr>
 <p>
 Most blogs organize their posts by the date that the posts were published in reverse chronological order.
 That&rsquo;s presumably because the people who habitually read the blogs every time a new post comes out will have already read most or all of the blog&rsquo;s content, but this blog doesn&rsquo;t do that.
 Instead, the <a href="../">home page</a> and <a href="../directory">directory page</a> organize all the links and posts into categories, with short descriptions, so that people who come to this site for the first time will be more likely to read the most important information first.
 The other reason why I don&rsquo;t organize the posts in reverse chronological order is that I am continuously updating the posts whenever I come up with new ideas and I have time to write about them.
 </p>
+
+<hr>
+
+<p>
+Many people have laudatorily described this site as an <a href="https://en.wikipedia.org/wiki/Encyclopedia">encyclopedia</a>.
+However, the following characteristics of this site disqualify it from being a true encyclopedia:
+</p>
+<ul class="org-ul">
+<li>A majority of the pages pertain to the <a href="https://en.wikipedia.org/wiki/Human_condition">human condition</a> in some way.
+But there isn&rsquo;t an article summarizing every or most topics within the human condition.</li>
+<li>The number of pages on this site (less than 80) is limited.
+An encyclopedia would have hundreds or thousands of articles about topics within its scope.</li>
+<li>Some pages feature my own thoughts and values on topics.
+My beliefs on the human condition are factually correct, at least according to me.
+However, my values and opinions are merely values and opinions.
+It&rsquo;s not encyclopedic when I express my values and preferences.</li>
+<li>The <a href="../#faqs">FAQ-formatted pages</a> on the site are written and formatted as argumentative essays.
+A more encyclopedic style would summarize those topics in a much less argumentative manner.</li>
+</ul>
+<p>
+This website is best described as a <a href="https://en.wikipedia.org/wiki/Compendium">compendium</a> and <a href="https://en.wikipedia.org/wiki/Reference_work">reference work</a>, rather than a blog or encyclopedia.
+</p>
+</div>
 </div>
 
 <div id="outline-container-writing-advice" class="outline-3">
-<h3 id="writing-advice"><span class="section-number-3">1.1.</span> Advice For Writing Content</h3>
+<h3 id="writing-advice"><span class="section-number-3">1.2.</span> Advice For Writing Content</h3>
 <div class="outline-text-3" id="text-writing-advice">
 <p>
 It can be tempting to immediately start writing content that you&rsquo;ve been eagerly waiting to write (as I had done), but you will save time in the long run if you hold off from that and spend a few minutes to read and learn how to utilize good writing advice.
@@ -147,7 +177,7 @@ That&rsquo;s why statistical AI sucks at it.</li>
 </div>
 
 <div id="outline-container-writing-books" class="outline-3">
-<h3 id="writing-books"><span class="section-number-3">1.2.</span> Writing Books Or Not</h3>
+<h3 id="writing-books"><span class="section-number-3">1.3.</span> Writing Books Or Not</h3>
 <div class="outline-text-3" id="text-writing-books">
 <p>
 I agree with many of the arguments that <a href="https://gwern.net/book-writing">Gwern gives for writing webpages instead of books</a>.
@@ -172,7 +202,7 @@ If computers and the infrastructures that they rely on ever collapse, then libra
 </div>
 
 <div id="outline-container-quality-vs-quantity" class="outline-3">
-<h3 id="quality-vs-quantity"><span class="section-number-3">1.3.</span> Quality Versus Quantity</h3>
+<h3 id="quality-vs-quantity"><span class="section-number-3">1.4.</span> Quality Versus Quantity</h3>
 <div class="outline-text-3" id="text-quality-vs-quantity">
 <p>
 For most topics, I don&rsquo;t understand bloggers who write posts <i>every day</i>.
@@ -189,7 +219,7 @@ If someone came across such a blog for the first time, they would be lost and un
 </div>
 
 <div id="outline-container-TOCs" class="outline-3">
-<h3 id="TOCs"><span class="section-number-3">1.4.</span> Displaying Tables of Contents</h3>
+<h3 id="TOCs"><span class="section-number-3">1.5.</span> Displaying Tables of Contents</h3>
 <div class="outline-text-3" id="text-TOCs">
 <p>
 Any book, essay, webpage, or work that&rsquo;s worth writing ought to be accompanied with a table of contents (TOCs), unless the text is short enough to the point where adding a TOC doesn&rsquo;t make sense.
@@ -225,7 +255,7 @@ I was aiming for an image gallery similar to the kind used on Substack.com, Wiki
 </div>
 
 <div id="outline-container-distinguishing-hyperlinks" class="outline-3">
-<h3 id="distinguishing-hyperlinks"><span class="section-number-3">1.5.</span> Styling Links On Webpages</h3>
+<h3 id="distinguishing-hyperlinks"><span class="section-number-3">1.6.</span> Styling Links On Webpages</h3>
 <div class="outline-text-3" id="text-distinguishing-hyperlinks">
 <p>
 <a href="../">My homepage</a> uses three different colors to distinguish the different links on the page.
@@ -289,7 +319,7 @@ So, the benefit of displaying favicons is lower after considering this.
 </div>
 
 <div id="outline-container-navigation" class="outline-3">
-<h3 id="navigation"><span class="section-number-3">1.6.</span> How To Navigate This Site</h3>
+<h3 id="navigation"><span class="section-number-3">1.7.</span> How To Navigate This Site</h3>
 <div class="outline-text-3" id="text-navigation">
 <p>
 I&rsquo;ve done my best to simplify the webpage format and design as much as possible.
@@ -313,7 +343,7 @@ This is an example of a quote block.
 Opponent blocks are used for stating arguments that I&rsquo;m responding to and/or questions that I&rsquo;m answering.
 Opponent blocks feature pink coloring on the left side of the block (for indenting the text).
 </p>
-<div class="opponent" id="org231b6be">
+<div class="opponent" id="org0c304b4">
 <p>
 This is an example of an opponent block.
 </p>
@@ -358,7 +388,7 @@ Despite being an American, I hate the American quotation style.</li>
 </div>
 
 <div id="outline-container-static-site-generators" class="outline-3">
-<h3 id="static-site-generators"><span class="section-number-3">1.7.</span> Static Site Generators</h3>
+<h3 id="static-site-generators"><span class="section-number-3">1.8.</span> Static Site Generators</h3>
 <div class="outline-text-3" id="text-static-site-generators">
 <p>
 Most people who want to start blogging and aren&rsquo;t using a Content Management System like Wordpress or Blogger should consider downloading and using a <a href="https://en.wikipedia.org/wiki/Static_site_generator">static site generator</a> (SSG).
@@ -650,10 +680,15 @@ Occasionally Helpful: <a href="https://orgmode.org/manual/Escape-Character.html"
 <div id="outline-container-creating-CSS" class="outline-2">
 <h2 id="creating-CSS"><span class="section-number-2">3.</span> Creating CSS For Webpages</h2>
 <div class="outline-text-2" id="text-creating-CSS">
+</div>
+<div id="outline-container-how-learned-CSS" class="outline-3">
+<h3 id="how-learned-CSS"><span class="section-number-3">3.1.</span> How I Learned And Wrote CSS</h3>
+<div class="outline-text-3" id="text-how-learned-CSS">
 <p>
 I learned how to read and write HTML and CSS from the <a href="https://en.wikibooks.org/wiki/HyperText_Markup_Language">HyperText Markup Language Wikibook</a> and the <a href="https://en.wikibooks.org/wiki/Cascading_Style_Sheets">Cascading Style Sheets Wikibook</a>.
 Those are free resources, however they&rsquo;re not as comprehensive or up-to-date as others.
-Readers who want a more modern and comprehensive resource for CSS should probably read <a href="https://htmlandcssbook.com/">HTML &amp; CSS by Jon Duckett</a>. Other Notes:
+Readers who want a more modern and comprehensive resource for CSS should probably read <a href="https://htmlandcssbook.com/">HTML &amp; CSS by Jon Duckett</a>.
+Other Notes:
 </p>
 <ul class="org-ul">
 <li>I created the CSS file for my website articles by placing the CSS code embedded inside <a href="https://www.joshcanhelp.com/the-drudge-report-style-3-column-link-page-template/">the .html template</a> that I found into a separate .css file and modifying it. It can be overwhelming to create CSS files from scratch, but online templates can make everything easier.</li>
@@ -667,9 +702,10 @@ It&rsquo;s recommended to keep the easier-to-read CSS (containing all the whites
 <li>It&rsquo;s worth looking into <a href="https://mattbrictson.com/blog/css-normalize-and-reset">CSS reset rules and CSS reset files</a>, which are necessary since every web browser has different CSS defaults for HTML elements, which may cause websites without reset rules to have unexpected displays on different web browsers.</li>
 </ul>
 </div>
+</div>
 
 <div id="outline-container-CSS-for-org-mode" class="outline-3">
-<h3 id="CSS-for-org-mode"><span class="section-number-3">3.1.</span> CSS For Org-Mode HTML Exports</h3>
+<h3 id="CSS-for-org-mode"><span class="section-number-3">3.2.</span> CSS For Org-Mode HTML Exports</h3>
 <div class="outline-text-3" id="text-CSS-for-org-mode">
 <p>
 People who are using org-mode to create webpages can use the <a href="https://orgmode.org/manual/CSS-support.html">CSS Support section from the Org-Mode manual</a> to inform them of all the ID attributes and classes that are available for tweaking a webpages&rsquo; CSS, using a separate CSS file.
@@ -735,7 +771,7 @@ The Javascript file provides light/dark mode, a more accessible TOC, an image ga
 </div>
 
 <div id="outline-container-homepage-template" class="outline-3">
-<h3 id="homepage-template"><span class="section-number-3">3.2.</span> Using Zero Contradictions&rsquo; Homepage Template</h3>
+<h3 id="homepage-template"><span class="section-number-3">3.3.</span> Using Zero Contradictions&rsquo; Homepage Template</h3>
 <div class="outline-text-3" id="text-homepage-template">
 <p>
 In the interest of creating a bloat-free Internet with aesthetic webpages and minimalist designs, I (Zero Contradictions) have decided to release an HTML template that replicates the layout, design, and functionality of my homepage under the <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0</a> license.
@@ -1095,7 +1131,7 @@ I haven&rsquo;t figured out how to control the formatting and syntax highlightin
 </div>
 </div></div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2025 September 24, 12:29</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2025 November 09, 12:32</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>
