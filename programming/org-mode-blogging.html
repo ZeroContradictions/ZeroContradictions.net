@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2025 November 09, 12:32 -->
+<!-- 2026 January 31, 17:33 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>How to Design a Blog with Emacs and Org-Mode</title>
@@ -31,12 +31,13 @@
 <ul>
 <li><a href="#website-format">1.1. Website Format: Minimalist Compendium</a></li>
 <li><a href="#writing-advice">1.2. Advice For Writing Content</a></li>
-<li><a href="#writing-books">1.3. Writing Books Or Not</a></li>
-<li><a href="#quality-vs-quantity">1.4. Quality Versus Quantity</a></li>
-<li><a href="#TOCs">1.5. Displaying Tables of Contents</a></li>
-<li><a href="#distinguishing-hyperlinks">1.6. Styling Links On Webpages</a></li>
-<li><a href="#navigation">1.7. How To Navigate This Site</a></li>
-<li><a href="#static-site-generators">1.8. Static Site Generators</a></li>
+<li><a href="#cunninghams-law">1.3. Cunningham&rsquo;s Law</a></li>
+<li><a href="#writing-books">1.4. Writing Books Or Not</a></li>
+<li><a href="#quality-vs-quantity">1.5. Quality Versus Quantity</a></li>
+<li><a href="#TOCs">1.6. Displaying Tables of Contents</a></li>
+<li><a href="#distinguishing-hyperlinks">1.7. Styling Links On Webpages</a></li>
+<li><a href="#navigation">1.8. How To Navigate This Site</a></li>
+<li><a href="#static-site-generators">1.9. Static Site Generators</a></li>
 </ul>
 </li>
 <li><a href="#org-mode-for-webpages">2. Using Org-Mode To Create Web Pages</a>
@@ -147,11 +148,9 @@ Lists are also easier for people to read and follow, rather than reading paragra
 Paragraphs require adding more cohesive devices and other fluff language compared to lists.
 As an example, some sections in my <a href="../faqs/overpopulation#effects-on-society">Overpopulation FAQs</a> became more concise and easier to read when written as lists instead of paragraphs.</li>
 <li><a href="https://en.wikipedia.org/wiki/Rule_of_three_(writing)">Wikipedia: Rule of three</a>.</li>
-<li><a href="https://www.w3schools.com/html/html_quotation_elements.asp">HTML Quotation Elements</a> are a great way to quickly state opposing points of view before addressing them.
-I&rsquo;ve made my <a href="../civilization/case-against-libertarianism">Case Against Libertarianism essay</a> and other works less wordy by using a related concept that I refer to as &ldquo;<a href="#navigation">opponent blocks</a>&rdquo;.</li>
 <li><a href="https://commons.wikimedia.org/wiki/Main_Page">Wikimedia Commons</a> provides millions of freely usable images that people can use in their works, provided that they respect the terms of the licenses.
 See my <a href="#copyrighting-and-licensing">section for links for learning more about copyrighting and licensing</a>.</li>
-<li>If you can&rsquo;t find or think of any images to add to your webpages, you should try using an AI image generator to generate images based on what the webpages are about.
+<li>If you can&rsquo;t find or think of any images to add to your webpages, you could try using an AI image generator to generate images based on what the webpages are about.
 This will guarantee that every one of your webpages will have an image that fits the content and will attract more readers.</li>
 <li>Lastly, taking at least an hour to learn <a href="#search-engine-optimization">good SEO practices</a> can save you the trouble of rewriting your content later on, if you want to maximize your number of readers.</li>
 <li>If you write, you should think about what you are writing.
@@ -176,8 +175,54 @@ That&rsquo;s why statistical AI sucks at it.</li>
 </div>
 </div>
 
+<div id="outline-container-cunninghams-law" class="outline-3">
+<h3 id="cunninghams-law"><span class="section-number-3">1.3.</span> Cunningham&rsquo;s Law</h3>
+<div class="outline-text-3" id="text-cunninghams-law">
+<p>
+To a great extent, <a href="https://en.wikipedia.org/wiki/Ward_Cunningham#%22Cunningham's_Law%22">Cunningham&rsquo;s Law</a> describes how a lot of the text on my site was written.
+As anybody who&rsquo;s browsed my site can probably tell, <a href="../misc/contact#FAQs-pages-are-best">I like to write FAQs pages</a>.
+I&rsquo;ve found that arguing with people has enabled me to write about all sorts of things that I otherwise never would&rsquo;ve thought of.
+It&rsquo;s why so many of my pages are written in a persuasive or argumentative style and format.
+</p>
+
+<p>
+For writers who are struggling with finding stuff to write about, Cunningham&rsquo;s Law is effective for finding things to write about:
+</p>
+<ol class="org-ol">
+<li>People don&rsquo;t like seeing wrong information.
+Wrong information triggers emotions.</li>
+<li>Wrong information can serve as a writing prompt.</li>
+</ol>
+
+<p>
+If you do decide to apply Cunningham&rsquo;s Law to help you write, I&rsquo;ve found that <a href="https://www.w3schools.com/html/html_quotation_elements.asp">HTML quotation elements</a> are a great way to quickly state opposing points of view before addressing them.
+I&rsquo;ve made my <a href="../civilization/case-against-libertarianism">Case Against Libertarianism essay</a> and other works less wordy by using a related concept that I refer to as &ldquo;<a href="#navigation">opponent blocks</a>&rdquo;.
+</p>
+
+<blockquote>
+<p>
+It always seemed to me that much if not most of great writing is a result of having a great social network that enables amazing conversations with interesting people.
+</p>
+
+<p>
+But now, great writing is also possible as a result of having amazing conversations with ChatGPT.
+</p>
+
+<p>
+This doesn&rsquo;t mean that everyone is capable of producing great writing.
+Most people, I believe, cannot have amazing conversations with ChatGPT.
+But still, this ability is much more common than having a great social network full of interesting people.
+</p>
+
+<p>
+&#x2013; Piotr Pachota, <a href="https://substack.com/@transhumanista/note/c-206646631">Substack Note</a>
+</p>
+</blockquote>
+</div>
+</div>
+
 <div id="outline-container-writing-books" class="outline-3">
-<h3 id="writing-books"><span class="section-number-3">1.3.</span> Writing Books Or Not</h3>
+<h3 id="writing-books"><span class="section-number-3">1.4.</span> Writing Books Or Not</h3>
 <div class="outline-text-3" id="text-writing-books">
 <p>
 I agree with many of the arguments that <a href="https://gwern.net/book-writing">Gwern gives for writing webpages instead of books</a>.
@@ -202,7 +247,7 @@ If computers and the infrastructures that they rely on ever collapse, then libra
 </div>
 
 <div id="outline-container-quality-vs-quantity" class="outline-3">
-<h3 id="quality-vs-quantity"><span class="section-number-3">1.4.</span> Quality Versus Quantity</h3>
+<h3 id="quality-vs-quantity"><span class="section-number-3">1.5.</span> Quality Versus Quantity</h3>
 <div class="outline-text-3" id="text-quality-vs-quantity">
 <p>
 For most topics, I don&rsquo;t understand bloggers who write posts <i>every day</i>.
@@ -219,7 +264,7 @@ If someone came across such a blog for the first time, they would be lost and un
 </div>
 
 <div id="outline-container-TOCs" class="outline-3">
-<h3 id="TOCs"><span class="section-number-3">1.5.</span> Displaying Tables of Contents</h3>
+<h3 id="TOCs"><span class="section-number-3">1.6.</span> Displaying Tables of Contents</h3>
 <div class="outline-text-3" id="text-TOCs">
 <p>
 Any book, essay, webpage, or work that&rsquo;s worth writing ought to be accompanied with a table of contents (TOCs), unless the text is short enough to the point where adding a TOC doesn&rsquo;t make sense.
@@ -255,7 +300,7 @@ I was aiming for an image gallery similar to the kind used on Substack.com, Wiki
 </div>
 
 <div id="outline-container-distinguishing-hyperlinks" class="outline-3">
-<h3 id="distinguishing-hyperlinks"><span class="section-number-3">1.6.</span> Styling Links On Webpages</h3>
+<h3 id="distinguishing-hyperlinks"><span class="section-number-3">1.7.</span> Styling Links On Webpages</h3>
 <div class="outline-text-3" id="text-distinguishing-hyperlinks">
 <p>
 <a href="../">My homepage</a> uses three different colors to distinguish the different links on the page.
@@ -319,7 +364,7 @@ So, the benefit of displaying favicons is lower after considering this.
 </div>
 
 <div id="outline-container-navigation" class="outline-3">
-<h3 id="navigation"><span class="section-number-3">1.7.</span> How To Navigate This Site</h3>
+<h3 id="navigation"><span class="section-number-3">1.8.</span> How To Navigate This Site</h3>
 <div class="outline-text-3" id="text-navigation">
 <p>
 I&rsquo;ve done my best to simplify the webpage format and design as much as possible.
@@ -343,7 +388,7 @@ This is an example of a quote block.
 Opponent blocks are used for stating arguments that I&rsquo;m responding to and/or questions that I&rsquo;m answering.
 Opponent blocks feature pink coloring on the left side of the block (for indenting the text).
 </p>
-<div class="opponent" id="org0c304b4">
+<div class="opponent" id="org2acfaf3">
 <p>
 This is an example of an opponent block.
 </p>
@@ -388,7 +433,7 @@ Despite being an American, I hate the American quotation style.</li>
 </div>
 
 <div id="outline-container-static-site-generators" class="outline-3">
-<h3 id="static-site-generators"><span class="section-number-3">1.8.</span> Static Site Generators</h3>
+<h3 id="static-site-generators"><span class="section-number-3">1.9.</span> Static Site Generators</h3>
 <div class="outline-text-3" id="text-static-site-generators">
 <p>
 Most people who want to start blogging and aren&rsquo;t using a Content Management System like Wordpress or Blogger should consider downloading and using a <a href="https://en.wikipedia.org/wiki/Static_site_generator">static site generator</a> (SSG).
@@ -1131,7 +1176,7 @@ I haven&rsquo;t figured out how to control the formatting and syntax highlightin
 </div>
 </div></div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2025 November 09, 12:32</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2026 January 31, 17:33</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>

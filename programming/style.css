@@ -263,6 +263,7 @@ h3 {
 h4, h5 {
 	font-size: 1.15rem;
 	font-weight: bold;
+	border-top: solid black 0.0625rem;
 	margin: 0.625rem 0;
 	padding-top: 0.5rem;
 }
