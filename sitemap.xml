@@ -232,7 +232,12 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 </url>
 <url>
 	<loc>https://zerocontradictions.net/civilization/activism</loc>
-	<lastmod>2025-04-09</lastmod>
+	<lastmod>2026-03-02</lastmod>
+	<priority>0.85</priority>
+</url>
+<url>
+	<loc>https://zerocontradictions.net/civilization/cancel-culture</loc>
+	<lastmod>2025-03-02</lastmod>
 	<priority>0.85</priority>
 </url>
 <url>
