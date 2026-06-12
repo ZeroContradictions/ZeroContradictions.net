@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 535 440" style="enable-background:new 0 0 535 440;" width="535" height="440" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000;}
+	.st1{fill:#FBE52F;stroke:#000;}
+	.st2{fill:#9ECAED;stroke:#000;}
+	.st3{font-family:'LiberationSans','Arial','Sans';}
+	.st4{font-size:12px;}
+	.st5{fill:none;}
+	.st8{font-size:9px;}
+	.st9{font-size:11px;}
+</style>
+<g id="graph">
+	<line class="st0" x1="50.5" y1="337.4" x2="530.9" y2="337.4"/>
+	<polyline class="st0" points="50.1,53.7 53.9,53.7 53.9,337.4 	"/>
+	<line class="st0" x1="53.9" y1="110.4" x2="50.1" y2="110.4"/>
+	<line class="st0" x1="53.9" y1="167.5" x2="50.1" y2="167.5"/>
+	<line class="st0" x1="53.9" y1="224.2" x2="50.1" y2="224.2"/>
+	<line class="st0" x1="53.9" y1="281" x2="50.1" y2="281"/>
+	<rect x="70.4" y="90.5" class="st1" width="64" height="246.9"/>
+	<rect x="70.4" y="53.7" class="st2" width="64" height="36.8"/>
+	<rect x="165.9" y="53.7" class="st2" width="64" height="71.1"/>
+	<rect x="165.9" y="266.9" class="st2" width="64" height="70.5"/>
+	<rect x="165.9" y="195.5" class="st1" width="64" height="71.4"/>
+	<rect x="165.9" y="124.8" class="st1" width="64" height="70.8"/>
+	<rect x="260.8" y="302.2" class="st2" width="64" height="35.3"/>
+	<rect x="260.8" y="207.4" class="st2" width="64" height="94.8"/>
+	<rect x="260.8" y="126.5" class="st1" width="64" height="80.9"/>
+	<rect x="260.8" y="84.3" class="st1" width="64" height="42.1"/>
+	<rect x="260.8" y="72.1" class="st1" width="64" height="12.2"/>
+	<rect x="260.8" y="53.7" class="st2" width="64" height="18.4"/>
+	<rect x="356.9" y="252.9" class="st2" width="64" height="84.6"/>
+	<rect x="356.9" y="53.7" class="st1" width="64" height="199.2"/>
+	<rect x="453" y="297.2" class="st2" width="64" height="40.2"/>
+	<rect x="453" y="53.7" class="st1" width="64" height="243.6"/>
+</g>
+<g id="text">
+	<text transform="matrix(1 0 0 1 82 75)" class="st3 st4">Female</text>
+	<text transform="matrix(1 0 0 1 278 66)" class="st3 st4">Other</text>
+	<text transform="matrix(1 0 0 1 279 83)" class="st3 st4">Ph.D</text>
+	<text transform="matrix(1 0 0 1 271 109)" class="st3 st4">Masters</text>
+	<text transform="matrix(1 0 0 1 274 156)"><tspan x="0" y="0" class="st3 st9">Under-</tspan><tspan x="-5.3" y="14.4" class="st3 st9">graduate</tspan><tspan x="-0.3" y="28.8" class="st3 st9">degree</tspan></text>
+	<text transform="matrix(1 0 0 1 261 258)" class="st3 st4">Secondary</text>
+	<text transform="matrix(1 0 0 1 359 157)" class="st3 st9">No partner</text>
+	<text transform="matrix(1 0 0 1 375 291)"><tspan x="0" y="0" class="st3 st4">Have</tspan><tspan x="-5" y="14.4" class="st3 st4">partner</tspan></text>
+	<text transform="matrix(1 0 0 1 477 171)"><tspan x="0" y="0" class="st3 st4">No</tspan><tspan x="-14.7" y="14.4" class="st3 st4">Children</tspan></text>
+	<text transform="matrix(1 0 0 1 471 313)"><tspan x="0" y="0" class="st3 st4">Have</tspan><tspan x="-7" y="14.4" class="st3 st4">children</tspan></text>
+	<text transform="matrix(1 0 0 1 272 323)" class="st3 st4">Primary</text>
+	<text transform="matrix(1 0 0 1 89.3714 217.2083)" class="st3 st4">Male</text>
+	<text transform="matrix(1 0 0 1 82.3635 353.301)" class="st3 st4">Gender</text>
+	<text transform="matrix(1 0 0 1 187 353)" class="st3 st4">Age</text>
+	<text transform="matrix(1 0 0 1 13 57)" class="st3 st4">100%</text>
+	<text transform="matrix(1 0 0 1 31 171)" class="st3 st4">60</text>
+	<text transform="matrix(1 0 0 1 31 114)" class="st3 st4">80</text>
+	<text transform="matrix(1 0 0 1 31 227)" class="st3 st4">40</text>
+	<text transform="matrix(1 0 0 1 31 284)" class="st3 st4">20</text>
+	<text transform="matrix(1 0 0 1 38 341)" class="st3 st4">0</text>
+	<text transform="matrix(1 0 0 1 266 353)" class="st3 st4">Education</text>
+	<text transform="matrix(1 0 0 1 356 353)" class="st3 st4">Relationship</text>
+	<text transform="matrix(1 0 0 1 467 353)" class="st3 st4">Family</text>
+	<text transform="matrix(1 0 0 1 183 92)" class="st3 st4">31-85</text>
+	<text transform="matrix(1 0 0 1 182 234)" class="st3 st4">18-22</text>
+	<text transform="matrix(1 0 0 1 183 163)" class="st3 st4">23-30</text>
+	<text transform="matrix(1 0 0 1 188 305)" class="st3 st4">&lt;18</text>
+	<text transform="matrix(1 0 0 1 60 24)" class="st3 st4">Self-reported “occasional” or “regular” contributors to Wikipedia (n=43,793)</text>
+	<rect x="6.7" y="365.4" class="st5" width="524.1" height="70.6"/>
+	<text transform="matrix(1 0 0 1 6.7395 374.1325)"><tspan x="0" y="0" class="st3 st8">Note:</tspan><tspan x="28.7" y="0" class="st3 st8"> </tspan><tspan x="32.1" y="0" class="st3 st8">Data</tspan><tspan x="57.5" y="0" class="st3 st8"> </tspan><tspan x="60.9" y="0" class="st3 st8">for</tspan><tspan x="74.9" y="0" class="st3 st8"> </tspan><tspan x="78.4" y="0" class="st3 st8">age</tspan><tspan x="98.4" y="0" class="st3 st8"> </tspan><tspan x="101.9" y="0" class="st3 st8">category</tspan><tspan x="147.9" y="0" class="st3 st8"> </tspan><tspan x="151.4" y="0" class="st3 st8">also</tspan><tspan x="173.4" y="0" class="st3 st8"> </tspan><tspan x="176.8" y="0" class="st3 st8">includes</tspan><tspan x="220.9" y="0" class="st3 st8"> </tspan><tspan x="224.3" y="0" class="st3 st8">respondents</tspan><tspan x="290.4" y="0" class="st3 st8"> </tspan><tspan x="293.8" y="0" class="st3 st8">who</tspan><tspan x="315.8" y="0" class="st3 st8"> </tspan><tspan x="319.3" y="0" class="st3 st8">were</tspan><tspan x="345.3" y="0" class="st3 st8"> </tspan><tspan x="348.8" y="0" class="st3 st8">not</tspan><tspan x="365.4" y="0" class="st3 st8"> </tspan><tspan x="368.9" y="0" class="st3 st8">contributors</tspan><tspan x="431.6" y="0" class="st3 st8"> </tspan><tspan x="435" y="0" class="st3 st8">but</tspan><tspan x="451.7" y="0" class="st3 st8"> </tspan><tspan x="455" y="0" class="st3 st8">who</tspan><tspan x="477" y="0" class="st3 st8"> </tspan><tspan x="480.6" y="0" class="st3 st8">did</tspan><tspan x="496.7" y="0" class="st3 st8"> </tspan><tspan x="500.1" y="0" class="st3 st8">read </tspan><tspan x="0" y="14.4" class="st3 st8">Wikipedia.</tspan><tspan x="55.4" y="14.4" class="st3 st8"> </tspan><tspan x="62.1" y="14.4" class="st3 st8">Average</tspan><tspan x="106.8" y="14.4" class="st3 st8"> </tspan><tspan x="113.6" y="14.4" class="st3 st8">age</tspan><tspan x="133.6" y="14.4" class="st3 st8"> </tspan><tspan x="140.4" y="14.4" class="st3 st8">for</tspan><tspan x="154.4" y="14.4" class="st3 st8"> </tspan><tspan x="161.2" y="14.4" class="st3 st8">contributors</tspan><tspan x="223.9" y="14.4" class="st3 st8"> </tspan><tspan x="230.6" y="14.4" class="st3 st8">is</tspan><tspan x="239.3" y="14.4" class="st3 st8"> </tspan><tspan x="246.1" y="14.4" class="st3 st8">26.8</tspan><tspan x="269.4" y="14.4" class="st3 st8"> </tspan><tspan x="276.2" y="14.4" class="st3 st8">(vs</tspan><tspan x="292.2" y="14.4" class="st3 st8"> </tspan><tspan x="299" y="14.4" class="st3 st8">23.3</tspan><tspan x="322.3" y="14.4" class="st3 st8"> </tspan><tspan x="329.1" y="14.4" class="st3 st8">for</tspan><tspan x="343.1" y="14.4" class="st3 st8"> </tspan><tspan x="349.9" y="14.4" class="st3 st8">readers).</tspan><tspan x="397.9" y="14.4" class="st3 st8"> </tspan><tspan x="404.7" y="14.4" class="st3 st8">“Regular”</tspan><tspan x="454.7" y="14.4" class="st3 st8"> </tspan><tspan x="461.4" y="14.4" class="st3 st8">contributors</tspan><tspan x="0" y="28.8" class="st3 st8">include</tspan><tspan x="38" y="28.8" class="st3 st8"> </tspan><tspan x="46.6" y="28.8" class="st3 st8">authors,</tspan><tspan x="90" y="28.8" class="st3 st8"> </tspan><tspan x="98.6" y="28.8" class="st3 st8">editors</tspan><tspan x="134.6" y="28.8" class="st3 st8"> </tspan><tspan x="143.1" y="28.8" class="st3 st8">and</tspan><tspan x="163.2" y="28.8" class="st3 st8"> </tspan><tspan x="171.8" y="28.8" class="st3 st8">administrators.</tspan><tspan x="250.4" y="28.8" class="st3 st4"> </tspan><tspan x="259" y="28.8" class="st3 st8">“Occasional”</tspan><tspan x="335" y="28.8" class="st3 st8">contributors</tspan><tspan x="397.7" y="28.8" class="st3 st8"> </tspan><tspan x="406.2" y="28.8" class="st3 st8">include</tspan><tspan x="444.3" y="28.8" class="st3 st8"> </tspan><tspan x="452.9" y="28.8" class="st3 st8">readers</tspan><tspan x="502" y="28.8" class="st3 st8">who </tspan><tspan x="0" y="43.2" class="st3 st8">occasionally contribute as authors or editors.</tspan><tspan x="0" y="57.6" class="st3 st8">Source: “Wikipedia Survey - First Results”, UNU-MERIT, April 2009</tspan></text>
+</g>
+</svg>
