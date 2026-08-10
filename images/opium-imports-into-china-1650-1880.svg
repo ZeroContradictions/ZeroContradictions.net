@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-300 0 16800 10000" width="336" height="200">
+	<g stroke-linejoin="round" fill="none">
+		<path stroke="#b3b3b3" stroke-width="28" d="M8838 9230h-6997v-7793h13995v7793Zm-6997-7794v7793m2799-7793v7793m2799-7793v7793m2798-7793v7793m2799-7793v7793m2800-7793v7793m0 0h-13995m13995-1114h-13995m13995-1113h-13995m13995-1114h-13995m13995-1112h-13995m13995-1114h-13995m13995-1113h-13995m13995-1113h-13995m0 7943v-150m0 150v-150m2799 150v-150m0 150v-150m2799 150v-150m0 150v-150m2798 150v-150m0 150v-150m2799 150v-150m0 150v-150m2800 150v-150m0 150v-150m-13995 0h13995m-14145 0h150m-150 0h150m-150-1114h150m-150 0h150m-150-1113h150m-150 0h150m-150-1114h150m-150 0h150m-150-1112h150m-150 0h150m-150-1114h150m-150 0h150m-150-1113h150m-150 0h150m-150-1113h150m-150 0h150m0 7793v-7793"/>
+		<path stroke="#00f" stroke-width="80" d="m1841 9163 4422 41 2575-69 1399-234 1232-68 728-1160 167-1279 56-14 1344-1866 224-739 728-1783"/>
+	</g>
+	<g font-family="sans-serif" font-size="500" font-weight="400">
+		<switch transform="translate(8806,790)" text-anchor="middle" font-size="600">
+			<text systemLanguage="en">Opium imports into China 1650–1880</text>
+			<text systemLanguage="es">Importaciones de opio a China 1650–1880</text>
+			<text systemLanguage="de">Opiumimport nach China 1650–1880</text>
+			<text systemLanguage="nl">Opium import in China 1650–1880</text>
+		</switch>
+		<switch transform="translate(-200,9797)">
+			<text systemLanguage="en">year</text>
+			<text systemLanguage="es">año</text>
+			<text systemLanguage="de">Jahr</text>
+			<text systemLanguage="nl">jaar</text>
+		</switch>
+		<g text-anchor="middle">
+			<text x="1820" y="9797">1650</text>
+			<text x="4619" y="9797">1700</text>
+			<text x="7418" y="9797">1750</text>
+			<text x="10217" y="9797">1800</text>
+			<text x="13016" y="9797">1850</text>
+			<text x="15815" y="9797">1900</text>
+		</g>
+		<switch transform="translate(100,5287) rotate(-90)" text-anchor="middle">
+			<text systemLanguage="en">tonnes / year</text>
+			<text systemLanguage="es">toneladas / año</text>
+			<text systemLanguage="de">Tonnen / Jahr</text>
+			<text systemLanguage="nl">tons / jaar</text>
+		</switch>
+		<g text-anchor="end">
+			<text x="1600" y="9350">0</text>
+			<text x="1600" y="8236">1000</text>
+			<text x="1600" y="7123">2000</text>
+			<text x="1600" y="6009">3000</text>
+			<text x="1600" y="4896">4000</text>
+			<text x="1600" y="3782">5000</text>
+			<text x="1600" y="2669">6000</text>
+			<text x="1600" y="1556">7000</text>
+		</g>
+		<text x="2000" y="9000" fill="#00f">1650: 50 t</text>
+		<text x="11700" y="9000" fill="#00f">1822: 347 t</text>
+		<text x="11700" y="1900" fill="#00f">1880: 6500 t</text>
+	</g>
+</svg>
