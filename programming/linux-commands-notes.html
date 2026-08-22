@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2026 May 01, 21:33 -->
+<!-- 2026 August 20, 16:35 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Unix/Linux Commands, Syntax, And Notes</title>
@@ -45,31 +45,28 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#UNIX-syntax">1. UNIX / Linux Metacharacters And Syntax</a>
+<li><a href="#UNIX-syntax">1. UNIX / Linux Metacharacters And Syntax</a></li>
+<li><a href="#unix-control-characters">2. UNIX Control Characters</a></li>
+<li><a href="#UNIX-commands-to-remember">3. UNIX Commands To Remember</a></li>
+<li><a href="#command-description-syntax">4. Command Description Syntax</a></li>
+<li><a href="#fundamental-UNIX-commands">5. Fundamental Unix Commands To Remember</a></li>
+<li><a href="#file-system-root-directories">6. Root Directories In The File System</a>
 <ul>
-<li><a href="#unix-control-characters">1.1. UNIX Control Characters</a></li>
+<li><a href="#first-char-of-ls-l">6.1. The First Character of ls -l Output</a></li>
 </ul>
 </li>
-<li><a href="#UNIX-commands-to-remember">2. UNIX Commands To Remember</a></li>
-<li><a href="#command-description-syntax">3. Command Description Syntax</a></li>
-<li><a href="#fundamental-UNIX-commands">4. Fundamental Unix Commands To Remember</a></li>
-<li><a href="#file-system-root-directories">5. Root Directories In The File System</a>
+<li><a href="#man-manual-sections">7. Man Manual Sections</a></li>
+<li><a href="#file-system-and-secruity-commands">8. File Systems And Security Commands</a></li>
+<li><a href="#filters-pipes-and-redirection">9. Filters, Pipes, And Redirection</a></li>
+<li><a href="#shell-scripting">10. Shell Scripting</a></li>
+<li><a href="#fedora-yum-RPM-commands">11. Fedora Yum RPM Commands</a></li>
+<li><a href="#linux-commands-to-be-installed">12. Special Linux Commands To Be Installed</a>
 <ul>
-<li><a href="#first-char-of-ls-l">5.1. The First Character of ls -l Output</a></li>
+<li><a href="#improved-UNIX-utilities">12.1. List Of Improved UNIX Utilities Vs Common Standards</a></li>
 </ul>
 </li>
-<li><a href="#man-manual-sections">6. Man Manual Sections</a></li>
-<li><a href="#file-system-and-secruity-commands">7. File Systems And Security Commands</a></li>
-<li><a href="#filters-pipes-and-redirection">8. Filters, Pipes, And Redirection</a></li>
-<li><a href="#shell-scripting">9. Shell Scripting</a></li>
-<li><a href="#fedora-yum-RPM-commands">10. Fedora Yum RPM Commands</a></li>
-<li><a href="#linux-commands-to-be-installed">11. Special Linux Commands To Be Installed</a>
-<ul>
-<li><a href="#improved-UNIX-utilities">11.1. List Of Improved UNIX Utilities Vs Common Standards</a></li>
-</ul>
-</li>
-<li><a href="#common-linux-commands-not-listed">12. Summary Of Common Linux Commands Not Listed Above</a></li>
-<li><a href="#UNIX-notes">13. UNIX Notes</a></li>
+<li><a href="#common-linux-commands-not-listed">13. Summary Of Common Linux Commands Not Listed Above</a></li>
+<li><a href="#UNIX-notes">14. UNIX Notes</a></li>
 </ul>
 </div>
 </nav>
@@ -120,10 +117,11 @@
 <li>&#x2013; : used to precede words that are used as a command&rsquo;s option. Without &#x2013;, the string of characters forming the word could be perceived as a long list of individual-character-options.</li>
 </ul>
 </div>
+</div>
 
-<div id="outline-container-unix-control-characters" class="outline-3">
-<h3 id="unix-control-characters"><span class="section-number-3">1.1.</span> UNIX Control Characters</h3>
-<div class="outline-text-3" id="text-unix-control-characters">
+<div id="outline-container-unix-control-characters" class="outline-2">
+<h2 id="unix-control-characters"><span class="section-number-2">2.</span> UNIX Control Characters</h2>
+<div class="outline-text-2" id="text-unix-control-characters">
 <ul class="org-ul">
 <li>ctrl + c = stop command</li>
 <li>ctrl + u = kill line</li>
@@ -135,10 +133,9 @@
 </ul>
 </div>
 </div>
-</div>
 
 <div id="outline-container-UNIX-commands-to-remember" class="outline-2">
-<h2 id="UNIX-commands-to-remember"><span class="section-number-2">2.</span> UNIX Commands To Remember</h2>
+<h2 id="UNIX-commands-to-remember"><span class="section-number-2">3.</span> UNIX Commands To Remember</h2>
 <div class="outline-text-2" id="text-UNIX-commands-to-remember">
 <ul class="org-ul">
 <li>find directory-name -name &ldquo;search-name&rdquo; -print : recursively find file-name in directory-name; find is slower than locate since it traverses directory tree instead of a database</li>
@@ -187,7 +184,7 @@
 </div>
 
 <div id="outline-container-command-description-syntax" class="outline-2">
-<h2 id="command-description-syntax"><span class="section-number-2">3.</span> Command Description Syntax</h2>
+<h2 id="command-description-syntax"><span class="section-number-2">4.</span> Command Description Syntax</h2>
 <div class="outline-text-2" id="text-command-description-syntax">
 <p>
 Built-in usage help and man pages commonly employ a small syntax to describe the valid command form:
@@ -205,7 +202,7 @@ Notice that these characters have different meanings than when used directly in 
 </div>
 
 <div id="outline-container-fundamental-UNIX-commands" class="outline-2">
-<h2 id="fundamental-UNIX-commands"><span class="section-number-2">4.</span> Fundamental Unix Commands To Remember</h2>
+<h2 id="fundamental-UNIX-commands"><span class="section-number-2">5.</span> Fundamental Unix Commands To Remember</h2>
 <div class="outline-text-2" id="text-fundamental-UNIX-commands">
 <ul class="org-ul">
 <li>ls -lhStuciaFG file-path
@@ -321,7 +318,7 @@ Notice that these characters have different meanings than when used directly in 
 </div>
 
 <div id="outline-container-file-system-root-directories" class="outline-2">
-<h2 id="file-system-root-directories"><span class="section-number-2">5.</span> Root Directories In The File System</h2>
+<h2 id="file-system-root-directories"><span class="section-number-2">6.</span> Root Directories In The File System</h2>
 <div class="outline-text-2" id="text-file-system-root-directories">
 <table>
 
@@ -505,7 +502,7 @@ These are the common top-level directories associated with the root directory:
 </div>
 
 <div id="outline-container-first-char-of-ls-l" class="outline-3">
-<h3 id="first-char-of-ls-l"><span class="section-number-3">5.1.</span> The First Character of ls -l Output</h3>
+<h3 id="first-char-of-ls-l"><span class="section-number-3">6.1.</span> The First Character of ls -l Output</h3>
 <div class="outline-text-3" id="text-first-char-of-ls-l">
 <p>
 In the &rsquo;ls -l&rsquo; output, the first character can be any of these:
@@ -524,7 +521,7 @@ In the &rsquo;ls -l&rsquo; output, the first character can be any of these:
 </div>
 
 <div id="outline-container-man-manual-sections" class="outline-2">
-<h2 id="man-manual-sections"><span class="section-number-2">6.</span> Man Manual Sections</h2>
+<h2 id="man-manual-sections"><span class="section-number-2">7.</span> Man Manual Sections</h2>
 <div class="outline-text-2" id="text-man-manual-sections">
 <p>
 The standard sections of the manual include:
@@ -546,7 +543,7 @@ Distributions customize the manual section to their specifics, which often inclu
 </div>
 
 <div id="outline-container-file-system-and-secruity-commands" class="outline-2">
-<h2 id="file-system-and-secruity-commands"><span class="section-number-2">7.</span> File Systems And Security Commands</h2>
+<h2 id="file-system-and-secruity-commands"><span class="section-number-2">8.</span> File Systems And Security Commands</h2>
 <div class="outline-text-2" id="text-file-system-and-secruity-commands">
 <ul class="org-ul">
 <li>cd - : toggle between two directories</li>
@@ -603,7 +600,7 @@ Distributions customize the manual section to their specifics, which often inclu
 </div>
 
 <div id="outline-container-filters-pipes-and-redirection" class="outline-2">
-<h2 id="filters-pipes-and-redirection"><span class="section-number-2">8.</span> Filters, Pipes, And Redirection</h2>
+<h2 id="filters-pipes-and-redirection"><span class="section-number-2">9.</span> Filters, Pipes, And Redirection</h2>
 <div class="outline-text-2" id="text-filters-pipes-and-redirection">
 <ul class="org-ul">
 <li>tee [file-name] : copy standard input directly into standard output (unbuffered) and optionally another file.</li>
@@ -632,7 +629,7 @@ Distributions customize the manual section to their specifics, which often inclu
 </div>
 
 <div id="outline-container-shell-scripting" class="outline-2">
-<h2 id="shell-scripting"><span class="section-number-2">9.</span> Shell Scripting</h2>
+<h2 id="shell-scripting"><span class="section-number-2">10.</span> Shell Scripting</h2>
 <div class="outline-text-2" id="text-shell-scripting">
 <ul class="org-ul">
 <li>set : display the values of all defined variables</li>
@@ -718,7 +715,7 @@ case statements:
 </div>
 
 <div id="outline-container-fedora-yum-RPM-commands" class="outline-2">
-<h2 id="fedora-yum-RPM-commands"><span class="section-number-2">10.</span> Fedora Yum RPM Commands</h2>
+<h2 id="fedora-yum-RPM-commands"><span class="section-number-2">11.</span> Fedora Yum RPM Commands</h2>
 <div class="outline-text-2" id="text-fedora-yum-RPM-commands">
 <ul class="org-ul">
 <li>sudo yum update</li>
@@ -744,7 +741,7 @@ case statements:
 </div>
 
 <div id="outline-container-linux-commands-to-be-installed" class="outline-2">
-<h2 id="linux-commands-to-be-installed"><span class="section-number-2">11.</span> Special Linux Commands To Be Installed</h2>
+<h2 id="linux-commands-to-be-installed"><span class="section-number-2">12.</span> Special Linux Commands To Be Installed</h2>
 <div class="outline-text-2" id="text-linux-commands-to-be-installed">
 <ul class="org-ul">
 <li>finger : user information lookup program
@@ -782,7 +779,7 @@ case statements:
 </div>
 
 <div id="outline-container-improved-UNIX-utilities" class="outline-3">
-<h3 id="improved-UNIX-utilities"><span class="section-number-3">11.1.</span> List Of Improved UNIX Utilities Vs Common Standards</h3>
+<h3 id="improved-UNIX-utilities"><span class="section-number-3">12.1.</span> List Of Improved UNIX Utilities Vs Common Standards</h3>
 <div class="outline-text-3" id="text-improved-UNIX-utilities">
 <ul class="org-ul">
 <li>Doom-Emacs Versus Emacs</li>
@@ -799,7 +796,7 @@ case statements:
 </div>
 
 <div id="outline-container-common-linux-commands-not-listed" class="outline-2">
-<h2 id="common-linux-commands-not-listed"><span class="section-number-2">12.</span> Summary Of Common Linux Commands Not Listed Above</h2>
+<h2 id="common-linux-commands-not-listed"><span class="section-number-2">13.</span> Summary Of Common Linux Commands Not Listed Above</h2>
 <div class="outline-text-2" id="text-common-linux-commands-not-listed">
 <ul class="org-ul">
 <li>apropos : finds online manual pages for a specified keyword</li>
@@ -904,7 +901,7 @@ case statements:
 </div>
 
 <div id="outline-container-UNIX-notes" class="outline-2">
-<h2 id="UNIX-notes"><span class="section-number-2">13.</span> UNIX Notes</h2>
+<h2 id="UNIX-notes"><span class="section-number-2">14.</span> UNIX Notes</h2>
 <div class="outline-text-2" id="text-UNIX-notes">
 <ul class="org-ul">
 <li>Any commands stored in .bash_profile in the user&rsquo;s login directory will be executed when the user logs in, before printing the first prompt.</li>
@@ -1018,7 +1015,7 @@ case statements:
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2026 May 01, 21:33</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2026 August 20, 16:35</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>
