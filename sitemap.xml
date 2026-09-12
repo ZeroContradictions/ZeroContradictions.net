@@ -13,7 +13,7 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
 	<loc>https://zerocontradictions.net/directory</loc>
 	<lastmod>2025-04-09</lastmod>
-	<priority>0.95</priority>
+	<priority>1.00</priority>
 </url>
 <url>
 	<loc>https://zerocontradictions.net/civilization/georgism-crash-course</loc>
@@ -178,7 +178,7 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
 	<loc>https://zerocontradictions.net/language/morphological-typology</loc>
 	<lastmod>2025-04-09</lastmod>
-	<priority>0.70</priority>
+	<priority>0.60</priority>
 </url>
 <url>
 	<loc>https://zerocontradictions.net/language/etymology-heuristics</loc>
@@ -358,18 +358,18 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 </url>
 <url>
 	<loc>https://zerocontradictions.net/epistemology/lanza-analysis</loc>
-	<lastmod>2025-07-12</lastmod>
-	<priority>0.80</priority>
+	<lastmod>2026-09-06</lastmod>
+	<priority>0.85</priority>
 </url>
 <url>
 	<loc>https://zerocontradictions.net/misc/lanzas-pedophilia-essay</loc>
-	<lastmod>2025-07-12</lastmod>
-	<priority>0.80</priority>
+	<lastmod>2026-09-05</lastmod>
+	<priority>0.85</priority>
 </url>
 <url>
 	<loc>https://zerocontradictions.net/epistemology/cultural-philistine-transcripts</loc>
-	<lastmod>2025-07-12</lastmod>
-	<priority>0.70</priority>
+	<lastmod>2026-09-06</lastmod>
+	<priority>0.85</priority>
 </url>
 <url>
 	<loc>https://zerocontradictions.net/misc/efilism-wikipedia-ZC-fork.pdf</loc>
@@ -379,6 +379,6 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
 	<loc>https://zerocontradictions.net/language/math-modeling-phonology.pdf</loc>
 	<lastmod>2024-05-27</lastmod>
-	<priority>0.70</priority>
+	<priority>0.50</priority>
 </url>
 </urlset>
