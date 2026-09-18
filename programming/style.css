@@ -234,6 +234,12 @@ td.org-right  { text-align: right;  }
 td.org-left   { text-align: left;   }
 td.org-center { text-align: center; }
 
+audio {
+	width: 100%;
+	display: block;
+	margin: 10px 0;
+}
+
 hr {
 	border: none;
 	border-top: solid black 0.125rem;
