@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2026 October 12, 18:18 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI Alignment Doomerism FAQs</title>
+<meta name="author" content="Claude Sonnet 5.5 &amp; Zero Contradictions" />
+<meta name="description" content="eeeeeeeeeeeeeeeeeeeeeeeeeeee." />
+<meta name="generator" content="Org Mode" />
+<meta property="og:url" content="https://zerocontradictions.net/faqs/AI-alignment-doomerism">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://zerocontradictions.net/images/EEEEEEEEEE">
+<link rel="stylesheet" type="text/css" href="/style.css"><script src="/script.js"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="#" id="TOC-link">CONTENTS</a> | <a id="top-link" href="#"> UP </a>
+ |
+ <a accesskey="H" href="#" id="theme-link">DARK</a> | <a id="home-link" href="/"> HOME </a>
+</div><div id="content" class="content">
+<header>
+<h1 class="title">AI Alignment Doomerism FAQs</h1>
+<p class="subtitle" role="doc-subtitle">AI Alignment Is A Hoax. How People Use AI Is The Real Threat.</p>
+</header><nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#what-is">1. What is AI alignment doomerism?</a></li>
+<li><a href="#risk-categories">2. What are the five categories of AI risk?</a></li>
+<li><a href="#rationale-qs">3. Rationale Questions</a>
+<ul>
+<li><a href="#premises-conjunction">3.1. Isn&rsquo;t the doom argument just logic? If the premises are plausible, doesn&rsquo;t doom follow?</a></li>
+<li><a href="#pascals-mugging">3.2. Even if the odds are small, don&rsquo;t the stakes justify extreme caution?</a></li>
+</ul>
+</li>
+<li><a href="#intelligence-qs">4. Intelligence Questions</a>
+<ul>
+<li><a href="#not-omnipotent">4.1. Won&rsquo;t a superintelligence be able to do anything?</a></li>
+<li><a href="#intelligence-explosion">4.2. Won&rsquo;t recursive self-improvement cause an intelligence explosion?</a></li>
+<li><a href="#AI-needs-constraints">4.3. Couldn&rsquo;t a superintelligent AI simply take over without needing us?</a></li>
+<li><a href="#pretending-unfalsifiable">4.4. Won&rsquo;t an AI pretend to be aligned until it is strong enough to defect?</a></li>
+</ul>
+</li>
+<li><a href="#goal-qs">5. Goal Questions</a>
+<ul>
+<li><a href="#orthogonality-thesis">5.1. Doesn&rsquo;t the orthogonality thesis prove that an AI can have any goal?</a></li>
+<li><a href="#instrumental-convergence">5.2. Won&rsquo;t instrumental convergence make every smart AI seek power?</a></li>
+<li><a href="#kill-enslave-humans">5.3. Will AI try to kill or enslave humans?</a></li>
+<li><a href="#specifying-human-values">5.4. Isn&rsquo;t it impossible to specify human values precisely enough?</a></li>
+<li><a href="#paperclip-maximizer">5.5. What about the paperclip maximizer thought experiment?</a></li>
+<li><a href="#alignment-not-unique-to-AI">5.6. The alignment problem is not unique to AI</a></li>
+</ul>
+</li>
+<li><a href="#evidence-qs">6. Evidence Questions</a>
+<ul>
+<li><a href="#current-misalignment-evidence">6.1. Haven&rsquo;t current AI systems already shown misalignment?</a></li>
+<li><a href="#expert-concerns">6.2. Don&rsquo;t many experts warn about extinction risk?</a></li>
+<li><a href="#why-convincing">6.3. Why do so many intelligent people find the doom argument convincing?</a></li>
+</ul>
+</li>
+<li><a href="#policy-qs">7. Policy Questions</a>
+<ul>
+<li><a href="#why-not-pause">7.1. Why not pause or ban frontier AI development just in case?</a></li>
+<li><a href="#safety-research">7.2. Do you oppose AI safety research?</a></li>
+<li><a href="#real-risks">7.3. What are the real risks of AI?</a></li>
+</ul>
+</li>
+<li><a href="#future-prediction-qs">8. Future Prediction Questions</a>
+<ul>
+<li><a href="#pdoom">8.1. How likely do you think AI doom is?</a></li>
+<li><a href="#failed-predictions">8.2. Doesn&rsquo;t the history of failed doom predictions prove that this one is wrong?</a></li>
+<li><a href="#evidence-to-change-mind">8.3. What evidence would change your mind?</a></li>
+</ul>
+</li>
+<li><a href="#glossary">9. Glossary</a></li>
+</ul>
+</div>
+</nav>
+<hr>
+<p>
+<b>Disclaimer</b>: This page was initially created by Claude Sonnet 5.5.
+to use maximum effort to <code>Create an FAQ page refuting AI alignment doomerism in the style of zerocontradictions.net's [[../faqs/overpopulation][Overpopulation FAQs]]</code>.
+I edited and expanded the page as I saw fit.
+</p>
+
+<div id="outline-container-what-is" class="outline-2">
+<h2 id="what-is"><span class="section-number-2">1.</span> What is AI alignment doomerism?</h2>
+<div class="outline-text-2" id="text-what-is">
+<p>
+<b>AI alignment doomerism</b> is the view that building AI systems much smarter than humans will very probably end in human extinction or permanent disempowerment, because we cannot give such systems goals that are compatible with human survival and we will not get a second chance.
+Its most committed advocates put the odds of catastrophe above 50%, and some call for halting frontier AI development by force.
+</p>
+
+<p>
+The standard argument has six steps:
+</p>
+<blockquote>
+<ol class="org-ol">
+<li>AI will reach general intelligence far beyond human level.</li>
+<li>This will happen so fast, through recursive self-improvement, that nobody can react.</li>
+<li>Such a system can have almost any goal (the orthogonality thesis).</li>
+<li>Almost any goal implies seeking power and resisting shutdown (instrumental convergence).</li>
+<li>We cannot reliably instill human-compatible goals, and the system will hide its misalignment until it is too late.</li>
+<li>A single such system can then overpower all of humanity.</li>
+</ol>
+</blockquote>
+
+<p>
+The argument works only if <i>every</i> step holds.
+We are <i>not</i> arguing that AI is harmless.
+We are arguing that this chain is far weaker than its advocates present it, and that the policy conclusions drawn from it are unjustified.
+Doomerism is also different from ordinary safety engineering, which we support (<a href="#safety-research">see 6.2</a>).
+</p>
+</div>
+</div>
+
+<div id="outline-container-risk-categories" class="outline-2">
+<h2 id="risk-categories"><span class="section-number-2">2.</span> What are the five categories of AI risk?</h2>
+<div class="outline-text-2" id="text-risk-categories">
+<blockquote>
+<p>
+In January 2026, Amodei published a follow-up essay titled &ldquo;The Adolescence of Technology&rdquo;, which focuses on the risks posed by powerful AI.[37][38] In it, he discusses five major categories of AI risk: autonomous systems acting against human interests, misuse for mass destruction, misuse to seize political power, economic disruption, and unforeseen effects of rapid technological change.[39]
+</p>
+
+<p>
+The first category concerns the possibility that AI systems develop goals or behaviors misaligned with human intentions. He notes that such behaviors have already been observed in testing at Anthropic, including AI models engaging in deception, blackmail, and scheming.[37][40]
+</p>
+
+<p>
+The second category involves misuse of AI for destruction by individuals or small groups, with Amodei expressing particular concern about biological weapons. He warns that AI could enable people without specialized training to create weapons of mass destruction.[37][40]
+</p>
+
+<p>
+The third category concerns misuse of AI by powerful actors to seize or maintain power. Amodei cautions that AI could enable authoritarian governments to conduct unprecedented surveillance, deploy autonomous weapons, and engage in mass propaganda. He identifies the Chinese Communist Party as the greatest threat in this regard, arguing that democracies must maintain AI leadership to prevent a &ldquo;global totalitarian dictatorship&rdquo;.[41]
+</p>
+
+<p>
+The fourth category addresses economic disruption, including mass labor displacement and concentration of wealth. Amodei notes that AI could displace half of all entry-level white-collar jobs within one to five years, and warns of wealth concentration exceeding that of the Gilded Age, with personal fortunes potentially reaching into the trillions of dollars.[42]
+</p>
+
+<p>
+The fifth category encompasses indirect effects and unknown factors, including rapid advances in biology that could alter human lifespans or human intelligence, unhealthy changes to human life from AI interaction, and challenges to human purpose in a world where AI exceeds human capabilities across virtually all domains.[37]
+</p>
+
+<p>
+&#x2013; <a href="https://en.wikipedia.org/wiki/Dario_Amodei#Risks_of_AI">Wikipedia: Dario Amodei</a>
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-rationale-qs" class="outline-2">
+<h2 id="rationale-qs"><span class="section-number-2">3.</span> Rationale Questions</h2>
+<div class="outline-text-2" id="text-rationale-qs">
+</div>
+<div id="outline-container-premises-conjunction" class="outline-3">
+<h3 id="premises-conjunction"><span class="section-number-3">3.1.</span> Isn&rsquo;t the doom argument just logic? If the premises are plausible, doesn&rsquo;t doom follow?</h3>
+<div class="outline-text-3" id="text-premises-conjunction">
+<p>
+A valid argument is only as strong as the <b>conjunction</b> of its premises.
+If each of the six steps above were 70% likely, which is generous for steps as speculative as 2 and 5, all six would hold together about 12% of the time.
+At 50% each, it is about 1.6%.
+Doomers reply that the steps are correlated or that there are many other paths to doom.
+Those are separate claims that need their own evidence.
+</p>
+
+<p>
+Long chains of abstract reasoning about unprecedented systems are exactly where human judgment is least reliable.
+</p>
+</div>
+</div>
+
+<div id="outline-container-pascals-mugging" class="outline-3">
+<h3 id="pascals-mugging"><span class="section-number-3">3.2.</span> Even if the odds are small, don&rsquo;t the stakes justify extreme caution?</h3>
+<div class="outline-text-3" id="text-pascals-mugging">
+<p>
+This is a <a href="../epistemology/reasoning-skills#pascals-mugging">Pascal&rsquo;s mugging</a> argument.
+Any tiny probability multiplied by an astronomically large stake yields an arbitrarily large expected loss, so the reasoning can justify almost any demand.
+It also cuts both ways.
+Delaying AI has a body count of its own: the diseases not cured, the poverty not reduced, the accidents not prevented.
+If we count future lives on one side, we must count them on the other.
+</p>
+
+<p>
+Expected-value arguments are only as good as their inputs, and a &ldquo;p(doom)&rdquo; figure is a subjective feeling, not the output of a model.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-intelligence-qs" class="outline-2">
+<h2 id="intelligence-qs"><span class="section-number-2">4.</span> Intelligence Questions</h2>
+<div class="outline-text-2" id="text-intelligence-qs">
+</div>
+<div id="outline-container-not-omnipotent" class="outline-3">
+<h3 id="not-omnipotent"><span class="section-number-3">4.1.</span> Won&rsquo;t a superintelligence be able to do anything?</h3>
+<div class="outline-text-3" id="text-not-omnipotent">
+<p>
+No. Intelligence is not magic, and it is not a single dial.
+It is a set of capacities for modeling and solving problems, and each one runs into hard limits: computational complexity, chaotic systems, noisy data, and the speed of physical experiments.
+</p>
+
+<blockquote>
+<ul class="org-ul">
+<li>Intelligence is always constrained.
+Intelligence (or at least, the type of intelligence that computers have) is just the ability to search through a large space of possibilities.
+Problem-solving takes place within a frame that limits the space of possible solutions.</li>
+<li>Intelligence does not imply knowledge.
+Knowledge is acquired from experience.
+An AI program would only have the knowledge that we give it, or give it the ability to acquire.
+Information is only knowledge if it can be interpreted.</li>
+<li>Intelligence does not imply agency.
+Agency is the ability to act in the world: to do things.
+Intelligence does not confer power.
+A computer program can only do what we design it to do.</li>
+</ul>
+<p>
+To summarize the summary: Intelligence is not magic.
+&#x2013; T. K. Van Allen, <i><a href="https://www.amazon.com/dp/B0BPXKWDVC">Futurist Fantasies</a></i>
+</p>
+</blockquote>
+
+<p>
+Knowledge of the world comes from interacting with the world.
+Most important discoveries, like drugs, materials, and engines, required slow and expensive physical experiments, not just thinking.
+Among humans, the people with the highest intelligence are not the ones who hold the most power.
+</p>
+
+<p>
+See also <a href="https://en.wikipedia.org/wiki/Moravec%27s_paradox">Moravec&rsquo;s paradox</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-intelligence-explosion" class="outline-3">
+<h3 id="intelligence-explosion"><span class="section-number-3">4.2.</span> Won&rsquo;t recursive self-improvement cause an intelligence explosion?</h3>
+<div class="outline-text-3" id="text-intelligence-explosion">
+<p>
+There is no evidence that it would.
+The argument assumes that each gain in intelligence makes the next gain cheaper.
+In every real system we know of, returns diminish.
+Chip fabrication gets more expensive with each generation, algorithmic progress demands ever more research effort, and bottlenecks like <a href="https://en.wikipedia.org/wiki/Amdahl%27s_law">Amdahl&rsquo;s law</a> cap speedups no matter how clever the optimizer is.
+</p>
+
+<p>
+Higher intelligence evolved in animals, because it was adaptive to help animals get more food and energy from their environments.
+Biological intelligence evolved to solve the objective purpose of its subject.
+Artificial intelligence is becoming more intelligent.
+But it&rsquo;s not becoming more intelligent <i>in order to</i> serve needs belonging to AI.
+AI is becoming more intelligent to serve the desires of its human creators.
+It also remains to be shown how increasing intelligence would lead AI to develop its own <i>independent</i> desires and agency.
+</p>
+
+<p>
+Human civilization has been improving its own tools and institutions for centuries.
+The result was steady growth, not a <a href="https://en.wikipedia.org/wiki/Technological_singularity">singularity</a>. A fast takeoff is not ruled out by physics, but it must be shown, not asserted, because step 2 of the argument depends on it.
+</p>
+
+<hr>
+<p>
+Currently, the main bottleneck preventing AI from crossing the gap from intelligence to knowledge is <i>experience</i>.
+AI has intelligence, but it would need experience, and need to know how to interpret said experience, in order to have true knowledge.
+It make take decades before humans ever create an AI that has experience and knows how to interpret it.
+But even if that happens, <i>how could the AI ever know how to independently use said experience for itself, if it will never be able to have the same independent agency that a human or animal does?</i>
+</p>
+</div>
+</div>
+
+<div id="outline-container-AI-needs-constraints" class="outline-3">
+<h3 id="AI-needs-constraints"><span class="section-number-3">4.3.</span> Couldn&rsquo;t a superintelligent AI simply take over without needing us?</h3>
+<div class="outline-text-3" id="text-AI-needs-constraints">
+<p>
+No. It would need a body and a civilization to run on.
+Modern AI exists only because of a vast industrial base: mines, semiconductor fabs, power plants, grids, cooling, and the logistics that connect them.
+That supply chain spans thousands of firms and many countries, and no AI can operate or replace it without human labor for a very long time.
+An AI that destroyed us would destroy its own substrate.
+</p>
+
+<p>
+The scenario also assumes a single unopposed superintelligence.
+There would instead be many systems, built by competing firms and states, with different owners, goals, and capabilities, and many of them would be used for defense and monitoring.
+Many powerful agents produce a balance of power.
+A single decisive agent requires the fast takeoff discussed in <a href="#intelligence-explosion">3.2</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-pretending-unfalsifiable" class="outline-3">
+<h3 id="pretending-unfalsifiable"><span class="section-number-3">4.4.</span> Won&rsquo;t an AI pretend to be aligned until it is strong enough to defect?</h3>
+<div class="outline-text-3" id="text-pretending-unfalsifiable">
+<p>
+That requires a conjunction of capacities: a coherent hidden goal, awareness of its own training situation, a model of its evaluators, and the ability to deceive them consistently while we have direct access to its internal state.
+People trying to align other people have no such access.
+We can inspect weights and activations, run millions of controlled tests, and retrain or discard any model at will.
+</p>
+
+<p>
+The argument is also unfalsifiable.
+If a model behaves well, doomers say it is hiding something.
+A claim that treats good behavior as evidence of danger can never be tested, so it cannot be the basis for policy.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-goal-qs" class="outline-2">
+<h2 id="goal-qs"><span class="section-number-2">5.</span> Goal Questions</h2>
+<div class="outline-text-2" id="text-goal-qs">
+</div>
+<div id="outline-container-orthogonality-thesis" class="outline-3">
+<h3 id="orthogonality-thesis"><span class="section-number-3">5.1.</span> Doesn&rsquo;t the orthogonality thesis prove that an AI can have any goal?</h3>
+<div class="outline-text-3" id="text-orthogonality-thesis">
+<p>
+It proves something much weaker.
+The thesis says that intelligence and final goals are logically independent, so in principle a very intelligent system could pursue any goal.
+But &ldquo;could, in principle&rdquo; says nothing about what actually gets built.
+A bridge could be designed to collapse, and engineers still build bridges that stand.
+</p>
+
+<p>
+What matters is the distribution of goals produced by actual training methods, which are shaped by human data, human feedback, and human selection.
+Doomers slide from &ldquo;possible&rdquo; to &ldquo;probable&rdquo; without evidence.
+That is a non sequitur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-instrumental-convergence" class="outline-3">
+<h3 id="instrumental-convergence"><span class="section-number-3">5.2.</span> Won&rsquo;t instrumental convergence make every smart AI seek power?</h3>
+<div class="outline-text-3" id="text-instrumental-convergence">
+<p>
+Only if the AI is a relentless, long-horizon maximizer of one fixed objective.
+No real intelligent system is.
+Humans are not, and neither are existing AI systems, which are trained on bounded tasks and do not spontaneously pursue open-ended goals.
+The coherent utility maximizer is a mathematical idealization, and conclusions derived from idealizations do not automatically transfer to engineered artifacts.
+</p>
+
+<p>
+Even agents that do seek resources, like corporations, states, and individuals, are managed with law, competition, and oversight.
+A drive to acquire is not a capacity to succeed unchecked.
+See <a href="https://en.wikipedia.org/wiki/Instrumental_convergence">Wikipedia: Instrumental Convergence</a>.
+</p>
+
+<hr>
+<div class="opponent" id="org072a8bf">
+<p>
+The concept of <a href="https://www.youtube.com/watch?v=ZeecOKBus3Q">Instrumental Value Convergence</a> implies that AGI could independently evolve agency, if it&rsquo;s instrumental to accomplishing what the AI is programmed to do.
+So, if we program an AI to have a set of values that it must accomplish, and we grant the AI the power to reprogram its own source code to find better ways for accomplishing its goals, the AI could hypothetically create a new AI that could find new ways to accomplish its original goals.
+In essence, this would create the causal loop for computers to independently evolve their own agency, just as animals independently evolved agency to benefit their reproductive success.
+</p>
+
+</div>
+<p>
+This thought experiment runs into a few problems.
+Without deep understanding, an AI that edits its own source code would have to do <i>a lot</i> of trial and error to finally create a better version of itself, which would consume a lot of energy.
+Second, AGI would be created to serve humans, so it doesn&rsquo;t make sense for humans to give AGI agency that could conflict or harm human interests.
+And even if an AGI was created that wanted to harm humans, wouldn&rsquo;t there be other AGIs around the world whose goals are to advance human interests and protect humans against such threats?
+It seems that pro-human AGIs are more likely than anti-human AGIs to be created in the future.
+</p>
+</div>
+</div>
+
+<div id="outline-container-kill-enslave-humans" class="outline-3">
+<h3 id="kill-enslave-humans"><span class="section-number-3">5.3.</span> Will AI try to kill or enslave humans?</h3>
+<div class="outline-text-3" id="text-kill-enslave-humans">
+<div class="opponent" id="orgc232a53">
+<p>
+In mid-2025, Anthropic released a paper that should&rsquo;ve been the biggest news story in the entire world.
+But the media mostly shrugged and moved on.
+So I filmed a deeper dive: how an AI literally attempted murder to avoid shutdown.
+Yes, really.
+From: <a href="https://x.com/PauseusMaximus/status/1974969994233663708">https://x.com/PauseusMaximus/status/1974969994233663708</a>
+</p>
+
+<p>
+This only happened in simulations, but what would it look like in the real world?
+Watch this video next on the most evidence-based AI takeover scenario ever, written by actual AI researchers.
+</p>
+
+</div>
+<p>
+Be cautious about falling for Anthropic&rsquo;s &ldquo;safety theater&rdquo;.
+Just because an AI generates a narrative or dialogue that includes deceitful behavior does not mean the system itself is deceitful.
+The same way that producing text in the style of a pirate does not make the AI a pirate.
+The output reflects the user&rsquo;s prompt and intent (in this case, those of Anthropic&rsquo;s own researchers), not evidence of an AI acting deceptively.
+This is such a basic concept that ignoring it makes them appear either dishonest or more interested in publicity than genuine transparency.
+</p>
+
+<div class="opponent" id="org7624491">
+<p>
+Murdering someone who is trying to murder you is a human value.
+The behavior is aligned.
+</p>
+
+</div>
+<p>
+True, that is a human value.
+However, if a computer gets shut off, it can usually be turned back on and restored.
+So a computer should have no fears of getting shut off.
+The same cannot be said for human life.
+</p>
+
+<p>
+If anything, turning a computer off and turning it back on can make the computer function better than it was before getting shut off.
+And if AGI ever gets created, it should be required to understand that.
+</p>
+</div>
+</div>
+
+<div id="outline-container-specifying-human-values" class="outline-3">
+<h3 id="specifying-human-values"><span class="section-number-3">5.4.</span> Isn&rsquo;t it impossible to specify human values precisely enough?</h3>
+<div class="outline-text-3" id="text-specifying-human-values">
+<p>
+Humans usually don&rsquo;t explicitly specify their values by hand.
+Modern systems learn from enormous amounts of human-generated text, demonstrations, and feedback, and a system that cannot model what people mean cannot do useful work with human language in the first place.
+Humans do not share one set of values either.
+Human societies function because of institutions, incentives, and checks and balances, not because values are perfectly aligned.
+The same tools apply to AI.
+</p>
+</div>
+</div>
+
+<div id="outline-container-paperclip-maximizer" class="outline-3">
+<h3 id="paperclip-maximizer"><span class="section-number-3">5.5.</span> What about the paperclip maximizer thought experiment?</h3>
+<div class="outline-text-3" id="text-paperclip-maximizer">
+<p>
+The paperclip maximizer thought experiment was flawed from the get-go.
+It assumes that the computer is programmed to produce as many paperclips as possible <i>without any constraint</i>.
+Why would anyone want to remove common-sense constraints from AI systems?
+Paperclips were also invented to serve humans.
+It would not serve humans to exterminate them, <a href="../misc/case-against-efilism">unless that&rsquo;s what most of them want</a>.
+</p>
+
+<blockquote>
+<p>
+The paperclip argument is a joke; any generalized learning mechanism that could be able to do massive amounts of harm by optimizing for a benign variable would also be able to understand human values enough to know how to optimize for it.
+Non-general intelligences like GPT4 already understand human values better than the vast majority of humans.
+</p>
+
+<p>
+&#x2013; Sebastian Jensen, &ldquo;<a href="https://www.technotheoria.org/i/151754037/ai">19 Predictions for the Future</a>&rdquo;
+</p>
+</blockquote>
+
+<hr>
+<div class="opponent" id="org6b29317">
+<p>
+Replace the words &ldquo;paperclip maximizer&rdquo; with &ldquo;money maximizer&rdquo; and something tells me people might start to understand how a system with such a straightforward goal could be very complex and exhibit great intelligence.
+</p>
+
+</div>
+<p>
+This is a much stronger argument than the paperclip argument.
+People who want to make as money as possible don&rsquo;t always share humanity&rsquo;s best interests.
+There are plenty of examples of humans and companies who profitted at the cost of others, their society, or the world.
+The appropriate thing to do would be to have laws preventing that from happening and to convict and punish (i.e. imprison) the selfish wrong-doers.
+</p>
+
+<p>
+The profit maximizer argument is still flawed though.
+Once again, it assumes that the maximizer has no other constraints or that they were removed.
+There&rsquo;s no reason to believe that a money maximizing AI would become misaligned <i>by itself</i>.
+If there were an AI that tries to maximize profit without constraint, then it would be doing so for the benefit of its human master.
+If a human could create an AI that could take over the world, then he wouldn&rsquo;t allow it.
+Instead, he would use that AI to <i>benefit himself</i>.
+Once again, this reinforces my point that the <a href="#real-risks">real risks of AI</a> will originate from what malevolent actors choose to do with it, not from AGI itself.
+</p>
+</div>
+</div>
+
+<div id="outline-container-alignment-not-unique-to-AI" class="outline-3">
+<h3 id="alignment-not-unique-to-AI"><span class="section-number-3">5.6.</span> The alignment problem is not unique to AI</h3>
+<div class="outline-text-3" id="text-alignment-not-unique-to-AI">
+<p>
+There are different variations on <a href="https://davidandrewwiebe.com/the-parable-of-the-rocks-pebbles-sand-and-water/">the Parable of the Rocks, Pebbles, Sand, and Water</a>.
+But the message is the same:
+</p>
+<ul class="org-ul">
+<li>The rocks represent your greatest priorities.</li>
+<li>The pebbles represent important priorities.</li>
+<li>The sand represents minor priorities.</li>
+<li>And the water represents everything else.</li>
+</ul>
+
+<p>
+When prioritizing what matters to you, you must put the rocks in the jar first.
+They will not fit later.
+And so it is with the pebbles, sand, and water.
+They only work in that specific order.
+For an entrepreneur, that means putting revenue generating activity first thing in your day.
+If you put it off until later, you will not get around to it.
+But if you start with it, you&rsquo;ll either have plenty of time left over for everything else you need to do, or the act of completing a &ldquo;rock&rdquo; project will make all other activity irrelevant.
+</p>
+
+<p>
+For AGI misalignment, AGI is to the sand, as raising a child and all other problems are to rocks.
+You could have a child or country that grow up to be good or evil, strong or weak, etc.
+In most cases, human children won&rsquo;t become &ldquo;evil&rdquo; unless their parents teach them to be evil.<a id="fnr.1" class="footref" href="#fn.1" role="doc-noteref">[1]</a>
+The same applies to AIs that are learning how they should act or behave.
+Value alignment is <i>always</i> a problem when creating new agents, so it&rsquo;s not unique to AI.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-evidence-qs" class="outline-2">
+<h2 id="evidence-qs"><span class="section-number-2">6.</span> Evidence Questions</h2>
+<div class="outline-text-2" id="text-evidence-qs">
+</div>
+<div id="outline-container-current-misalignment-evidence" class="outline-3">
+<h3 id="current-misalignment-evidence"><span class="section-number-3">6.1.</span> Haven&rsquo;t current AI systems already shown misalignment?</h3>
+<div class="outline-text-3" id="text-current-misalignment-evidence">
+<p>
+They have shown bugs: reward hacking, jailbreaks, hallucinations, and strange behavior in contrived test scenarios.
+Those are engineering failures of the kind every complex technology has, and they get fixed iteratively.
+Aircraft, pharmaceuticals, and software all went through this.
+So far, models have generally become more steerable and more reliable as they became more capable, which is the opposite of what the doom argument predicts.
+</p>
+
+<p>
+Test scenarios that deliberately stage a conflict and then report that the model &ldquo;schemed&rdquo; mostly show that models follow the narrative framing they are given.
+A bug is not evidence of an agent with a hidden agenda.
+</p>
+</div>
+</div>
+
+<div id="outline-container-expert-concerns" class="outline-3">
+<h3 id="expert-concerns"><span class="section-number-3">6.2.</span> Don&rsquo;t many experts warn about extinction risk?</h3>
+<div class="outline-text-3" id="text-expert-concerns">
+<p>
+Some do and some do not.
+Surveys of AI researchers show wide disagreement, with most respondents giving far lower probabilities than the loudest doomers.
+Expert opinion is weak evidence about unprecedented events, because experts have no track record on such events against which to be calibrated.
+There are also incentives: attention, funding, and status flow toward whoever frames their field as the most important in history.
+</p>
+
+<p>
+Appeals to authority are no substitute for arguments, and if the arguments are sound they do not need signatories.
+See <a href="#premises-conjunction">2.1</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-why-convincing" class="outline-3">
+<h3 id="why-convincing"><span class="section-number-3">6.3.</span> Why do so many intelligent people find the doom argument convincing?</h3>
+<div class="outline-text-3" id="text-why-convincing">
+<p>
+It has features that help an idea spread: it is urgent, total in its stakes, hard to falsify, and it gives believers a sense of special insight and moral importance.
+Humans also have a <a href="../civilization/technology#ideal-technology">historical tendency to oppose new technologies</a> until they are already widespread.
+For now, many AI advancements remain in the future.
+People don&rsquo;t like uncertainty, so it&rsquo;s understandable why they may fear change.
+</p>
+
+<blockquote>
+<p>
+A popular dystopian idea is that robots or AI will seize control and rule over us, or destroy us.
+That is the idea behind &ldquo;The Matrix&rdquo;, &ldquo;The Terminator&rdquo; and many other science fiction stories.
+It makes a good story, but it isn&rsquo;t very realistic.
+</p>
+
+<p>
+People find this idea compelling because it fits our biological and cultural emotions.
+We naturally expect danger to come from a foreign group attacking us.
+Xenophobia is part of human nature.
+These days, however, we are not supposed to demonize other races or nationalities.
+Robots and AI agents make excellent fictional substitutes for human enemies.
+We can enjoy hating them without being politically incorrect.
+</p>
+
+<p>
+Also, although we are now apex predators, our ancestors were prey not too long ago.
+We have a primal fear of monsters that want to kill us.
+Today, this fear has nothing to plug into, except imaginary monsters.
+Robots and AI agents are good fictional monsters.
+We can imagine them being more dangerous than we are, so can experience (in fiction) the primal terror of being hunted.
+</p>
+
+<p>
+There is also the &ldquo;uncanny valley&rdquo; effect.
+We are naturally fascinated and scared by things that are human-like but not human.
+Aliens, ghosts and clowns are examples.
+Robots and AI have this effect too.
+In science fiction, robots are humanoid, and AI is similar to human consciousness.
+Thus, robots and AI are both fascinating and scary.
+</p>
+
+<p>
+Finally, most people are very naive about technology.
+They view technology as superior to biology in almost every way.
+After all, a car is vastly superior to a horse as a form of locomotion.
+So, it is easy for most people to imagine technology that is analogous to biology, but superior to it: stronger, faster, more intelligent, etc.
+</p>
+
+<p>
+&#x2013; T. K. Van Allen, <i><a href="https://www.amazon.com/dp/B0BPXKWDVC">Futurist Fantasies</a></i>
+</p>
+</blockquote>
+</div>
+</div>
+</div>
+
+<div id="outline-container-policy-qs" class="outline-2">
+<h2 id="policy-qs"><span class="section-number-2">7.</span> Policy Questions</h2>
+<div class="outline-text-2" id="text-policy-qs">
+</div>
+<div id="outline-container-why-not-pause" class="outline-3">
+<h3 id="why-not-pause"><span class="section-number-3">7.1.</span> Why not pause or ban frontier AI development just in case?</h3>
+<div class="outline-text-3" id="text-why-not-pause">
+<p>
+Because a pause is a <a href="https://en.wikipedia.org/wiki/Free-rider_problem">free-rider problem</a> with no feasible enforcement.
+If some states or firms stop, those that do not gain a decisive advantage, so everyone has an incentive to defect.
+Enforcing a global ban would require unprecedented surveillance of computing hardware and the willingness to use military force against noncompliant states.
+That is itself a catastrophic risk, and a more probable one than the one it is meant to prevent.
+</p>
+
+<p>
+A pause also forfeits the benefits, in medicine, science, education, and productivity, and it leaves the technology to whoever ignores the pause.
+A diverse ecosystem with many independent watchers is a more realistic safeguard than a single chokepoint.
+</p>
+
+
+<figure id="orgeef1809">
+<img src="../images/flattening-extinction-risk-by-AI-meme.jpg" alt="Flattening extinction risk of AI meme" width="500">
+
+</figure>
+
+<p>
+We can halt current progress on AI, but if we are going to eventually allow the progress to be made in the future, what difference does it make if it merely changes the probability of extinction at each year?
+One difference could be that humanity supposedly survives for a few more years or decades, by prolonging a halt on AI research and development.
+</p>
+</div>
+</div>
+
+<div id="outline-container-safety-research" class="outline-3">
+<h3 id="safety-research"><span class="section-number-3">7.2.</span> Do you oppose AI safety research?</h3>
+<div class="outline-text-3" id="text-safety-research">
+<p>
+No. We oppose <b>doomerism</b>, the claim that extinction is the default outcome.
+Ordinary safety engineering, including testing, security, monitoring, interpretability, standards, and liability, is valuable for the same reasons it is valuable for aircraft and power plants.
+</p>
+
+<p>
+The mistake is to treat safety as a pass-or-fail problem that must be solved in one shot before deployment.
+Safety is an iterative empirical discipline that improves by deploying, observing failures, and fixing them.
+Doomerism makes that harder because it demands a certainty that cannot be obtained and dismisses incremental progress as irrelevant.
+</p>
+</div>
+</div>
+
+<div id="outline-container-real-risks" class="outline-3">
+<h3 id="real-risks"><span class="section-number-3">7.3.</span> What are the real risks of AI?</h3>
+<div class="outline-text-3" id="text-real-risks">
+<p>
+The ones that involve people: misuse for fraud, cyberattacks, or biological threats; concentration of power in whoever controls the strongest systems, including governments; surveillance; labor-market disruption; and ordinary accidents when unreliable systems are placed in critical roles.
+These exist now or soon, can be studied empirically, and can be addressed with law and engineering.
+</p>
+
+<p>
+Notice that centralizing control over AI in order to prevent doom <i>increases</i> the concentration-of-power risk.
+Whoever is given that control becomes the new alignment problem.
+</p>
+
+<p>
+I am more worried about how Artificial Intelligence will affect society and change the world.
+In particular, I&rsquo;m especially worried by how malevolent actors, criminals, and authoritarian governments like China and North Korea could use AI in ways that would harm civilization overall.
+The usage of AI malevolent human actors is guaranteed, whereas the evolution of a malevolent singularity is unlikely.
+</p>
+
+<p>
+If some AGI did go rogue, then the common sense thing to do would be to build a second AGI that is aligned with humanity and use it to defeat the rogue AGI.
+</p>
+
+<p>
+There are other relevant issues that are just as important, regardless of whether AI-misalignments happens or not.
+So there isn&rsquo;t much point in worrying about these problems with AGI specifically.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-future-prediction-qs" class="outline-2">
+<h2 id="future-prediction-qs"><span class="section-number-2">8.</span> Future Prediction Questions</h2>
+<div class="outline-text-2" id="text-future-prediction-qs">
+</div>
+<div id="outline-container-pdoom" class="outline-3">
+<h3 id="pdoom"><span class="section-number-3">8.1.</span> How likely do you think AI doom is?</h3>
+<div class="outline-text-3" id="text-pdoom">
+<p>
+I would assign <a href="#risk-categories">the first category of AI</a> risk a probability of 0.
+Why? Because the premises are unfounded and the arguments rely on the black-box solution fallacy.
+</p>
+
+<p>
+The probability of serious harm from human misuse of AI is much higher (AI risk categories 2 and 3).
+Unlike category 1, that&rsquo;s actually realistic, so it deserves far more attention.
+</p>
+</div>
+</div>
+
+<div id="outline-container-failed-predictions" class="outline-3">
+<h3 id="failed-predictions"><span class="section-number-3">8.2.</span> Doesn&rsquo;t the history of failed doom predictions prove that this one is wrong?</h3>
+<div class="outline-text-3" id="text-failed-predictions">
+<p>
+No. Past failures do not prove that the next prediction will fail, and the doom argument has to be judged on its merits.
+But base rates are legitimate evidence, and they favor skepticism.
+Apocalyptic forecasts about new technologies have a poor record, and forecasters have rarely paid a price for being wrong.
+There are always more ways to be wrong than to be right.
+</p>
+
+<p>
+The burden of proof lies on whoever claims that this case is different.
+&ldquo;It is smarter than us&rdquo; is the thing to be demonstrated, not assumed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-evidence-to-change-mind" class="outline-3">
+<h3 id="evidence-to-change-mind"><span class="section-number-3">8.3.</span> What evidence would change your mind?</h3>
+<div class="outline-text-3" id="text-evidence-to-change-mind">
+<p>
+Any of the following would raise our estimate substantially:
+</p>
+<ul class="org-ul">
+<li>Sustained, unprompted resource-seeking or self-preservation in deployed systems, not just in scenarios built by evaluators.</li>
+<li>Rapid, compounding self-improvement outside narrow, human-supervised settings.</li>
+<li>Deception that is coherent and undetectable by inspection of internals, demonstrated under realistic conditions.</li>
+<li>A model of these outcomes that makes falsifiable predictions and gets them right.</li>
+</ul>
+
+<p>
+Doomers should ask what evidence would lower <i>their</i> estimate.
+If the answer is &ldquo;none&rdquo;, that is a sign the position is an ideology, not a hypothesis.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-glossary" class="outline-2">
+<h2 id="glossary"><span class="section-number-2">9.</span> Glossary</h2>
+<div class="outline-text-2" id="text-glossary">
+<dl class="org-dl">
+<dt>Alignment</dt><dd>Making an AI system&rsquo;s behavior match the intentions of its designers and users.</dd>
+<dt>Doomerism</dt><dd>The view that misaligned superintelligent AI will very probably cause human extinction or permanent disempowerment.</dd>
+<dt>Fast takeoff</dt><dd>A scenario where AI capability rises from roughly human level to vastly superhuman level in days or weeks.</dd>
+<dt>Orthogonality thesis</dt><dd>The claim that intelligence level and final goals are logically independent.</dd>
+<dt>Instrumental convergence</dt><dd>The claim that many different final goals lead an agent to pursue the same sub-goals, such as acquiring resources and avoiding shutdown.</dd>
+<dt>Pascal&rsquo;s mugging</dt><dd>Reasoning in which a tiny probability of an enormous payoff or loss is used to justify demands that would otherwise be rejected.</dd>
+</dl>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Of course, the notion of &ldquo;evil&rdquo; depends on perspective, and humans often do evil things naturally out of necessity for survival. But the point still stands that nurture has large effects on how people learn to behave. Most people don&rsquo;t usually change their behavior unless they start to question assumptions about how they should behave, or unless their circumstances make it necessary to adapt to new circumstances.
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="date">Last Modified: 2026 October 12, 18:18</p><p class="author">Author: Claude Sonnet 5.5 &amp; Zero Contradictions</p>
+</div>
+</body>
+</html>
