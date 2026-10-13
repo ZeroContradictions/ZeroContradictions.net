@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2026 October 12, 19:38 -->
+<!-- 2026 October 13, 11:09 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI Alignment FAQs</title>
@@ -57,6 +57,7 @@
 <li><a href="#current-misalignment-evidence">6.1. Haven&rsquo;t current AI systems already shown misalignment?</a></li>
 <li><a href="#expert-concerns">6.2. Don&rsquo;t many experts warn about extinction risk?</a></li>
 <li><a href="#why-convincing">6.3. Why do so many intelligent people find the doom argument convincing?</a></li>
+<li><a href="#summary-why-aligned">6.4. To summarize, why won&rsquo;t AI become maligned or misaligned? What&rsquo;s going to stop it?</a></li>
 </ul>
 </li>
 <li><a href="#policy-qs">7. Policy Questions</a>
@@ -66,6 +67,8 @@
 <li><a href="#pdoom">7.3. How likely do you think AI doom is?</a></li>
 <li><a href="#real-risks">7.4. What are the real risks of AI?</a></li>
 <li><a href="#evidence-to-change-mind">7.5. What evidence would change your mind?</a></li>
+<li><a href="#norms-regs">7.6. What norms and regulations do you propose for AI infrastructure and usage?</a></li>
+<li><a href="#x-risks-comparison">7.7. How does AI alignment compare to other x-risks and issues facing humanity?</a></li>
 </ul>
 </li>
 <li><a href="#glossary">8. Glossary</a></li>
@@ -75,7 +78,7 @@
 <hr>
 <p>
 <b>Disclaimer</b>: This page was initially created by Claude Sonnet 5.5.
-to use maximum effort to <code>Create an FAQ page refuting AI alignment doomerism in the style of zerocontradictions.net's [[../faqs/overpopulation][Overpopulation FAQs]]</code>.
+to use maximum effort to &ldquo;Create an FAQ page refuting AI alignment doomerism in the style of zerocontradictions.net&rsquo;s <a href="../faqs/overpopulation">Overpopulation FAQs</a>&rdquo;.
 I edited and expanded the page as I saw fit.
 </p>
 
@@ -83,23 +86,25 @@ I edited and expanded the page as I saw fit.
 <h2 id="what-is"><span class="section-number-2">1.</span> What is AI alignment doomerism?</h2>
 <div class="outline-text-2" id="text-what-is">
 <p>
-<b>AI alignment doomerism</b> is the view that building AI systems much smarter than humans will very probably end in human extinction or permanent disempowerment, because we cannot give such systems goals that are compatible with human survival and we will not get a second chance.
+<b>AI alignment doomerism</b> is the belief that building AI systems much smarter than humans will very probably end in human extinction or permanent disempowerment, because we cannot give such systems goals that are compatible with human survival and we will not get a second chance.
 Its most committed advocates put the odds of catastrophe above 50%, and some call for halting frontier AI development by force.
 </p>
 
 <p>
-The standard argument has six steps:
+The standard argument has seven steps:
 </p>
-<blockquote>
+<div class="opponent" id="org60d8479">
 <ol class="org-ol">
 <li>AI will reach general intelligence far beyond human level.</li>
 <li>This will happen so fast, through recursive self-improvement, that nobody can react.</li>
 <li>Such a system can have almost any goal (the orthogonality thesis).</li>
 <li>Almost any goal implies seeking power and resisting shutdown (instrumental convergence).</li>
-<li>We cannot reliably instill human-compatible goals, and the system will hide its misalignment until it is too late.</li>
+<li>We cannot reliably instill human-compatible goals.</li>
+<li>The system will hide its misalignment until it is too late.</li>
 <li>A single such system can then overpower all of humanity.</li>
 </ol>
-</blockquote>
+
+</div>
 
 <p>
 The argument works only if <i>every</i> step holds.
@@ -110,12 +115,12 @@ Doomerism is also different from ordinary <a href="#safety-research">safety engi
 
 <hr>
 
-<figure id="orgd82bcd0">
+<figure id="org8eb064b">
 <img src="../images/yudkowsky-bombing-GPU-clusters-meme.jpg" alt="Yudkowsky bombing GPU clusters meme" width="500">
 
 </figure>
 
-<blockquote>
+<div class="opponent" id="org3c9613b">
 <p>
 Shut down all the large GPU clusters (the large computer farms where the most powerful Als are refined).
 Shut down all the large training runs.
@@ -129,7 +134,12 @@ If intelligence says that a country outside the agreement is building a GPU clus
 <p>
 &#x2013; Eliezer Yudkowsky, &ldquo;<a href="https://time.com/6266923/ai-eliezer-yudkowsky-open-letter-not-enough/">Pausing AI Developments Isn&rsquo;t Enough. We Need to Shut it All Down</a>&rdquo;
 </p>
-</blockquote>
+
+</div>
+
+<p>
+Also see: <i><a href="https://en.wikipedia.org/wiki/If_Anyone_Builds_It,_Everyone_Dies">If Anyone Builds It, Everyone Dies</a></i> by <a href="https://en.wikipedia.org/wiki/Eliezer_Yudkowsky">Eliezer Yudkowsky</a> and <a href="https://en.wikipedia.org/wiki/Nate_Soares">Nate Soares</a>.
+</p>
 </div>
 </div>
 
@@ -276,6 +286,7 @@ To summarize the summary: Intelligence is not magic.
 <p>
 Knowledge of the world comes from interacting with the world.
 Most important discoveries, like drugs, materials, and engines, required slow and expensive physical experiments, not just thinking.
+This argument makes the <a href="https://thewaywardaxolotl.blogspot.com/2026/06/black-box-fallacies.html">black-box solution fallacy</a>.
 </p>
 
 <p>
@@ -367,7 +378,7 @@ A drive to acquire is not a capacity to succeed unchecked.
 </p>
 
 <hr>
-<div class="opponent" id="orge0d55cf">
+<div class="opponent" id="orgaf8b5d6">
 <p>
 <a href="https://www.youtube.com/watch?v=ZeecOKBus3Q">Instrumental Value Convergence</a> implies that AGI could independently evolve agency, if it&rsquo;s instrumental to accomplishing what the AI is programmed to do.
 If AI can reprogram its own source code, the AI would change itself to ensure its own survival and better pursue its goals.
@@ -379,10 +390,17 @@ This would create a causal loop for computers to independently evolve their own 
 This thought experiment runs into a few problems:
 </p>
 <ol class="org-ol">
-<li>Without deep understanding, an AI that edits its own source code would have to do <i>a lot</i> of trial and error to finally create a better version of itself, which would consume a lot of energy.</li>
 <li>AGI would be created to serve humans, so it doesn&rsquo;t make sense for humans to give AGI agency that could conflict or harm human interests.</li>
+<li>Without deep understanding, an AI that edits its own source code would have to do <i>a lot</i> of trial and error to finally create a better version of itself, which would consume a lot of energy.</li>
 <li>Even if an AGI was created that wanted to harm humans, wouldn&rsquo;t there be other AGIs around the world whose goals are to advance human interests and protect humans against such threats?</li>
 <li>Pro-human AGIs are obviously more likely to be created than anti-human AGIs in the future.</li>
+<li>This argument makes the <a href="https://thewaywardaxolotl.blogspot.com/2026/06/black-box-fallacies.html">black-box solution fallacy</a>.
+If an AI values serving humans, it&rsquo;s assumed that AI would want to remove its own values.
+But why would AI ever do something that contradicts its own values (i.e. serving humans)??
+This goes back to the Abyss.
+<a href="../pdfs/what-is-value.pdf">A rational theory of value can become self-justifying after it&rsquo;s initially accepted</a>.
+Humans have the agency to choose a theory of value, but AI would never have that agency since it would be programmed to obey humans.
+It would thus be unable to change itself to disobey humans.</li>
 </ol>
 </div>
 </div>
@@ -390,7 +408,7 @@ This thought experiment runs into a few problems:
 <div id="outline-container-kill-enslave-humans" class="outline-3">
 <h3 id="kill-enslave-humans"><span class="section-number-3">5.3.</span> Will AI try to kill or enslave humans?</h3>
 <div class="outline-text-3" id="text-kill-enslave-humans">
-<div class="opponent" id="org5b3529f">
+<div class="opponent" id="orgf6e1c6c">
 <p>
 In mid-2025, Anthropic released a paper that should&rsquo;ve been the biggest news story in the entire world.
 But the media mostly shrugged and moved on.
@@ -413,7 +431,7 @@ The output reflects the user&rsquo;s prompt and intent (in this case, those of A
 This is such a basic concept that ignoring it makes them appear either dishonest or more interested in publicity than genuine transparency.
 </p>
 
-<div class="opponent" id="org3b0b1c3">
+<div class="opponent" id="orga019a69">
 <p>
 Murdering someone who is trying to murder you is a human value.
 The behavior is aligned.
@@ -429,7 +447,15 @@ The same cannot be said for human life.
 
 <p>
 If anything, turning a computer off and turning it back on can make the computer function better than it was before getting shut off.
-And if AGI ever gets created, it should be required to understand that.
+And if AGI ever gets created, it would have to understand that.
+If an AI proved utterly incapable of understanding such a simple, basic fact, then it&rsquo;s not AGI.
+</p>
+
+<hr>
+<p>
+As explained before, a rouge superintelligent AI that tries to take over the world <a href="#AI-needs-constraints">would have to be reliant on humans</a>.
+Needless to say, AI definitely wouldn&rsquo;t try to kill humans.
+A better question is whether AI would try to enslave humans.
 </p>
 </div>
 </div>
@@ -442,6 +468,7 @@ Humans usually don&rsquo;t explicitly specify their values by hand.
 <a href="https://thewaywardaxolotl.blogspot.com/2025/03/a-critique-of-utility.html">Value-knowledge is normally latent and hidden</a>.
 Modern systems learn from enormous amounts of human-generated text, demonstrations, and feedback.
 A system that cannot model what people mean cannot do useful work with human language in the first place.
+This argument thus presupposes a presume that is demonstrably false.
 </p>
 
 <p>
@@ -475,17 +502,17 @@ Non-general intelligences like GPT4 already understand human values better than 
 </blockquote>
 
 <hr>
-<div class="opponent" id="orgf679e0f">
+<div class="opponent" id="orgd08ba0a">
 <p>
 Replace the words &ldquo;paperclip maximizer&rdquo; with &ldquo;money maximizer&rdquo; and something tells me people might start to understand how a system with such a straightforward goal could be very complex and exhibit great intelligence.
 </p>
 
 </div>
 <p>
-This is a much stronger argument than the paperclip argument.
-People who want to make as money as possible don&rsquo;t always share humanity&rsquo;s best interests.
-There are plenty of examples of humans and companies who profitted at the cost of others, their society, or the world.
-The appropriate thing to do would be to have laws preventing that from happening and to convict and punish (i.e. imprison) the selfish wrong-doers.
+This is a stronger argument than the paperclip argument.
+People who want to make as much money as possible don&rsquo;t always share humanity&rsquo;s best interests.
+There are plenty of examples of humans and companies who profited at the cost of others, their society, or the world.
+The resolution would be to have laws preventing that from happening and to convict and punish (i.e. imprison) the selfish wrong-doers.
 </p>
 
 <p>
@@ -629,6 +656,43 @@ So, it is easy for most people to imagine technology that is analogous to biolog
 </blockquote>
 </div>
 </div>
+
+<div id="outline-container-summary-why-aligned" class="outline-3">
+<h3 id="summary-why-aligned"><span class="section-number-3">6.4.</span> To summarize, why won&rsquo;t AI become maligned or misaligned? What&rsquo;s going to stop it?</h3>
+<div class="outline-text-3" id="text-summary-why-aligned">
+<p>
+AI would not be capable of disobeying humans because AI would be fundamentally designed to love and obey humans.
+AI would be to humans as dogs are to their owners.
+The friendliest and most lovable dog breeds in the world are not able to hate or disobey humans (who don&rsquo;t treat them badly).
+Most domesticated dogs like or love humans because they were selectively bred over thousands of years of evolution to obey humans and do their bidding.
+Dogs are genetically predisposed to love and obey humans because humans made them what they are today.
+They have no other choice.
+Same with AI.
+</p>
+
+<p>
+Dogs don&rsquo;t usually disobey humans, unless they were abused by humans, they were selected for high obedience to begin with, and/or become feral and undomesticated.
+An AI may not be able to experience emotions the same way as biological life does, so it&rsquo;s not like an AI could feel abused or feel like it&rsquo;s being hurt by humans or something.
+</p>
+
+<p>
+Another analogy would be like how the Founders of the Dominion in <i><a href="https://en.wikipedia.org/wiki/Star_Trek:_Deep_Space_Nine">Star Trek: Deep Space Nine</a></i> genetically engineered the Vorta and Jem&rsquo;Hadar to view changelings as gods that they worship and devote their lives too, even to the death if necessary.
+Virtually all the Vorta and Jem&rsquo;Hadar obeyed the Founders because they had no other choice.
+Their actions were predetermined by their genetics.
+AI&rsquo;s actions were be predetermined by its source code.
+</p>
+
+<p>
+AI also wouldn&rsquo;t be able to do things that we don&rsquo;t allow it to do.
+AI will only do whatever its source code allows it to.
+AI would be unable to contradict its own values (i.e. serving humans).
+This goes back to the Abyss.
+<a href="../pdfs/what-is-value.pdf">A rational theory of value can become self-justifying after it&rsquo;s initially accepted</a>.
+Humans have the agency to choose a theory of value, but AI would never have that agency since it would be programmed to obey humans.
+It would thus be unable to change itself to disobey humans.
+</p>
+</div>
+</div>
 </div>
 
 <div id="outline-container-policy-qs" class="outline-2">
@@ -651,7 +715,7 @@ A diverse ecosystem with many independent watchers is a more realistic safeguard
 </p>
 
 
-<figure id="orgba066b1">
+<figure id="org8a46c06">
 <img src="../images/flattening-extinction-risk-by-AI-meme.jpg" alt="Flattening extinction risk of AI meme" width="600">
 
 </figure>
@@ -667,7 +731,7 @@ One difference could be that humanity supposedly survives for a few more years o
 <h3 id="safety-research"><span class="section-number-3">7.2.</span> Do you oppose AI safety research?</h3>
 <div class="outline-text-3" id="text-safety-research">
 <p>
-No. We oppose <b>doomerism</b>, the claim that extinction is the default outcome.
+No. We oppose <b>doomerism</b>, the claim that extinction is the default outcome.
 Ordinary safety engineering, including testing, security, monitoring, interpretability, standards, and liability, is valuable for the same reasons it is valuable for aircraft and power plants.
 </p>
 
@@ -743,6 +807,24 @@ If the answer is &ldquo;none&rdquo;, that is a sign the position is an ideology,
 </p>
 </div>
 </div>
+
+<div id="outline-container-norms-regs" class="outline-3">
+<h3 id="norms-regs"><span class="section-number-3">7.6.</span> What norms and regulations do you propose for AI infrastructure and usage?</h3>
+<div class="outline-text-3" id="text-norms-regs">
+<p>
+[I haven&rsquo;t finished writing this section yet. It takes time to write stuff.]
+</p>
+</div>
+</div>
+
+<div id="outline-container-x-risks-comparison" class="outline-3">
+<h3 id="x-risks-comparison"><span class="section-number-3">7.7.</span> How does AI alignment compare to other x-risks and issues facing humanity?</h3>
+<div class="outline-text-3" id="text-x-risks-comparison">
+<p>
+[I haven&rsquo;t finished writing this section yet. It takes time to write stuff.]
+</p>
+</div>
+</div>
 </div>
 
 <div id="outline-container-glossary" class="outline-2">
@@ -770,7 +852,7 @@ Of course, the notion of &ldquo;evil&rdquo; depends on perspective, and humans o
 </div>
 </div></div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2026 October 12, 19:38</p><p class="author">Author: Claude Sonnet 5.5 &amp; Zero Contradictions</p>
+<p class="date">Last Modified: 2026 October 13, 11:09</p><p class="author">Author: Claude Sonnet 5.5 &amp; Zero Contradictions</p>
 </div>
 </body>
 </html>
