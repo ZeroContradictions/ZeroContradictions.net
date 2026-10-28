@@ -499,8 +499,8 @@ document.addEventListener("DOMContentLoaded", function () {
 					// Position tooltip and show it
 					const rect = img.getBoundingClientRect();
 					const tooltip = img.galleryTooltip;
-					tooltip.style.left = (rect.left + rect.width / 2 - tooltip.offsetWidth / 2) + 'px';
-					tooltip.style.top = (rect.bottom - 30) + 'px';
+					tooltip.style.left = (rect.left + window.scrollX + rect.width / 2 - tooltip.offsetWidth / 2) + 'px';
+					tooltip.style.top = (rect.bottom + window.scrollY - tooltip.offsetHeight) + 'px';
 					tooltip.style.opacity = '1';
 				});
 
