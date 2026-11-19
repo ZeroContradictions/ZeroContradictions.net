@@ -6,6 +6,50 @@ document.addEventListener("DOMContentLoaded", function () {
 	const TOC_button = document.getElementById("TOC-link");
 	let lastScrollY = window.scrollY;
 
+	// Make fragment navigation leave room for the navigation bar,
+	// so the section heading lands right below it.
+	function updateScrollPadding() {
+		document.documentElement.style.scrollPaddingTop = topPanel.offsetHeight + "px";
+	}
+	updateScrollPadding();
+	window.addEventListener("resize", updateScrollPadding);
+	window.addEventListener("load", updateScrollPadding);
+
+	// Tracks a jump to a section, during which the navigation bar must stay visible.
+	let navigatingToSection = false;
+	let navigationTimer = null;
+
+	function endNavigationSoon() {
+		clearTimeout(navigationTimer);
+		navigationTimer = setTimeout(function () {
+			navigatingToSection = false;
+			lastScrollY = window.scrollY;
+		}, 150);
+	}
+
+	function startSectionNavigation() {
+		navigatingToSection = true;
+		topPanel.style.top = "0";
+		updateScrollPadding();
+		endNavigationSoon();
+	}
+
+	// Section navigation via any in-page link (including clicking the same link twice)
+	document.addEventListener("click", function (event) {
+		const link = event.target.closest && event.target.closest('a[href^="#"]');
+		if (link && link.getAttribute("href").length > 1) {
+			startSectionNavigation();
+		}
+	});
+
+	// Section navigation via back/forward or manual URL fragment change
+	window.addEventListener("hashchange", startSectionNavigation);
+
+	// Page opened with a fragment in the URL
+	if (window.location.hash) {
+		startSectionNavigation();
+	}
+
 	// Clone originalTOC
 	if (originalTOC) {
 		var floatingTOC = originalTOC.cloneNode(true);
@@ -46,7 +90,11 @@ document.addEventListener("DOMContentLoaded", function () {
 	window.addEventListener("scroll", function () {
 		const currentScrollY = window.scrollY;
 
-		if (currentScrollY > lastScrollY) {
+		if (navigatingToSection) {
+			// Keep the navigation bar visible while jumping to a section
+			topPanel.style.top = "0";
+			endNavigationSoon();
+		} else if (currentScrollY > lastScrollY) {
 			// Hide topPanel when scrolling down
 			topPanel.style.top = "-10rem";
 			// floatingTOC.style.display = "none"; // Hide TOC
@@ -470,52 +518,6 @@ document.addEventListener("DOMContentLoaded", function () {
 						.filter(i => i.dataset.galleryInitialized === 'true');
 					const imgIndex = currentImages.indexOf(img);
 					openOverlay(imgIndex);
-				});
-
-				// Add hover effects directly to image
-				img.addEventListener('mouseenter', function() {
-					img.style.cursor = 'zoom-in';
-					// Create temporary tooltip
-					if (!img.galleryTooltip) {
-						const tooltip = document.createElement('div');
-						tooltip.className = 'gallery-tooltip-temp';
-						tooltip.textContent = 'Click to enlarge';
-						tooltip.style.cssText = `
-							position: absolute;
-							background-color: rgba(0, 0, 0, 0.7);
-							color: white;
-							padding: 5px 10px;
-							border-radius: 3px;
-							font-size: 12px;
-							pointer-events: none;
-							z-index: 1000;
-							opacity: 0;
-							transition: opacity 0.3s ease;
-						`;
-						document.body.appendChild(tooltip);
-						img.galleryTooltip = tooltip;
-					}
-
-					// Position tooltip and show it
-					const rect = img.getBoundingClientRect();
-					const tooltip = img.galleryTooltip;
-					tooltip.style.left = (rect.left + window.scrollX + rect.width / 2 - tooltip.offsetWidth / 2) + 'px';
-					tooltip.style.top = (rect.bottom + window.scrollY - tooltip.offsetHeight) + 'px';
-					tooltip.style.opacity = '1';
-				});
-
-				img.addEventListener('mouseleave', function() {
-					img.style.cursor = '';
-					if (img.galleryTooltip) {
-						img.galleryTooltip.style.opacity = '0';
-					}
-				});
-
-				// Clean up tooltip when image is removed
-				img.addEventListener('DOMNodeRemoved', function() {
-					if (img.galleryTooltip) {
-						img.galleryTooltip.remove();
-					}
 				});
 
 				img.dataset.galleryInitialized = 'true';
