@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2026 October 04, 12:31 -->
+<!-- 2026 November 21, 13:28 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Axiology</title>
@@ -45,7 +45,7 @@
 <li><a href="#aesthetics">4.4. Aesthetics</a></li>
 </ul>
 </li>
-<li><a href="#g-s-factors">5. g-Factors and s-Factors</a>
+<li><a href="#g-s-factors">5. g-Factors and s-Factors: Weighted Averages</a>
 <ul>
 <li><a href="#g-s-factors-rationale">5.1. Name And Rationale Of Factors</a></li>
 <li><a href="#g-s-factors-examples">5.2. Examples Of Factors</a></li>
@@ -209,7 +209,7 @@ Note: If I ever have the time to add more content to this post, I will create so
 </p>
 
 
-<figure id="org2908ee7">
+<figure id="org1b1f491">
 <img src="../images/biden-dementia-comic.png" alt="Biden Dementia Comic" width="450">
 
 </figure>
@@ -275,14 +275,14 @@ It&rsquo;s about learning to live with what you can in the Universe.
 </p>
 
 
-<figure id="org2aa0b44">
+<figure id="org4ab3107">
 <img src="../images/philosophies-proposed-meanings-of-life.png" alt="The meaning of life, according to different philosophers." width="700">
 
 <figcaption><span class="figure-number">Figure 1: </span>The meaning of life, according to different philosophers.</figcaption>
 </figure>
 
 
-<figure id="org9b934cc">
+<figure id="org4b6d7ec">
 <img src="../images/existentialism-absurdism-nihilism.jpg" alt="Basic relationships between existentialism, absurdism, and nihilism." width="756">
 
 <figcaption><span class="figure-number">Figure 2: </span>The basic relationships between existentialism, absurdism, and nihilism.</figcaption>
@@ -333,6 +333,14 @@ Read More: <a href="https://thewaywardaxolotl.blogspot.com/2020/04/toward-ration
 
 <p>
 Also see: <a href="../epistemology/lanza-analysis">Adam Lanza &amp; Eulavism</a>.
+</p>
+
+<hr>
+<p>
+Value exist in the Abyss, so every perspective has the burden of proof for justifying their values.
+However, values also depend on knowledge and truth, and truth is depend on reality and perspective.
+The burden of proof for truth <i>fall</i> on people who make falsifiable claims, especially baseless unfalsifiable claims.
+So, even the burden of proof for justifying values can still de facto end up on some people more than others, in practice, especially during debates.
 </p>
 </div>
 </div>
@@ -450,15 +458,20 @@ See: <a href="https://en.wikipedia.org/wiki/Aesthetics">Wikipedia: Aesthetics</a
 </div>
 
 <div id="outline-container-g-s-factors" class="outline-2">
-<h2 id="g-s-factors"><span class="section-number-2">5.</span> g-Factors and s-Factors</h2>
+<h2 id="g-s-factors"><span class="section-number-2">5.</span> g-Factors and s-Factors: Weighted Averages</h2>
 <div class="outline-text-2" id="text-g-s-factors">
 </div>
 <div id="outline-container-g-s-factors-rationale" class="outline-3">
 <h3 id="g-s-factors-rationale"><span class="section-number-3">5.1.</span> Name And Rationale Of Factors</h3>
 <div class="outline-text-3" id="text-g-s-factors-rationale">
 <p>
-In many cases, it&rsquo;s useful to have a single rating that works as a general measurement for multiple specific measurements overall.
-In spite of the dense amount of compressed information that these general measurements provide, their calculations and ratings will always be subjective and debatable, especially for contentious topics like IQ scores and real estate values.
+A weighted average is a single number or value that best represents a set of data, when each data point is assigned different &ldquo;weights&rdquo; or importance.
+The most common weighted average is the <a href="https://en.wikipedia.org/wiki/Weighted_arithmetic_mean">weighted arithmetic mean</a>, which is similar to an ordinary arithmetic mean except some data points contribute more than others.
+</p>
+
+<p>
+In many cases, it&rsquo;s useful to have a single rating that works as a weighted average for multiple specific measurements overall.
+In spite of the dense amount of compressed information that these weighted averages provide, their calculations and ratings will always be subjective and debatable, especially for contentious topics like IQ scores and real estate values.
 g-factors are <i>indirect</i> measurements of s-factors.
 When the s-factors that are used to calculate the g-factor correlate more closely together, the g-factor tends to be a better approximation for the s-factors.
 Even when this is not the case, g-factors are still a better approximation of s-factors than having no data at all.
@@ -489,7 +502,7 @@ Examples of g-Factors that depend on multiple s-Factors:
 </ul>
 
 
-<figure id="org0e69f68">
+<figure id="org58750e8">
 <img src="../images/s-factors.png" alt="Illustration of s-factors for computing the IQ as a g-factor." width="450">
 
 <figcaption><span class="figure-number">Figure 3: </span>IQ is an example of a g-factor that is calculated based on numerous s-factors that each influence and deviate from the g-factor. From Veritasium&rsquo;s <a href="https://www.youtube.com/watch?v=FkKPsLxgpuY&amp;t=410s">IQ Video</a>.</figcaption>
@@ -570,7 +583,7 @@ The justification would most likely be that the assumptions for computing g-fact
 
 
 
-<figure id="orgda8442d">
+<figure id="orgc43d346">
 <img src="../images/goodharts-law.jpg" alt="Illustrating how different measurements may yield different results under Goodhart's Law." width="450">
 
 <figcaption><span class="figure-number">Figure 4: </span>According to Goodhart&rsquo;s Law, measurements cease to be good measurements when they become targets. If this happens, different measurements will yield different results.</figcaption>
@@ -732,7 +745,7 @@ And they proceed by changing the scores and weights for the s-factors, while obs
         factors[1].textContent = "Proximity to Schools / Parks";
         factors[2].textContent = "Proximity to Job Markets";
         factors[3].textContent = "Proximity to Transportation Networks";
-        factors[4].textContent = "Vulnerability to Natural Disasters and Pests/Weeds";
+        factors[4].textContent = "Invulnerability to Natural Disasters and Pests/Weeds";
         break;
 
       case "IQ Calculation":
@@ -810,7 +823,14 @@ This tutorial has some notes and limitations that should be pointed out:
 <li>Fewer than five s-factors can be achieved in this demonstration by assigning an s-factor a weight of 0%, which mathematically excludes that s-factor from being used to compute the g-factor.</li>
 <li>All the s-factor and g-factor sliders are limited to values between 0 and 100 in this demonstration. In the real world, these scores often exceed 100 for the units that they use, but it&rsquo;s too cumbersome to represent values that may go scale up to billions of units, especially for demonstration purposes only.</li>
 <li>g-factors and s-factors that have economic values are not displayed as having monetary units (e.g. dollars, euros, yen, etc), whereas they would be labeled and measured with various currencies in the real world.</li>
+<li>There are other ways how the calculation of g-factors using s-factors can be far more complicated than what this applet shows:
+<ul class="org-ul">
+<li>Some things may correlate negatively, rather than positively.</li>
+<li>There could be more layers (intermediate s/g-factors) before the calculation of the final g-factor.</li>
+</ul></li>
 </ul>
+
+
 
 <p>
 As we can see by interacting with the score and weight sliders, the main takeaways here are:
@@ -868,7 +888,7 @@ The Javascript code for the g-Factors and s-Factors applet was designed by <a hr
 </div>
 </div></div>
 <div id="postamble" class="status">
-<p class="date">Last Modified: 2026 October 04, 12:31</p><p class="author">Author: Zero Contradictions</p>
+<p class="date">Last Modified: 2026 November 21, 13:28</p><p class="author">Author: Zero Contradictions</p>
 </div>
 </body>
 </html>
